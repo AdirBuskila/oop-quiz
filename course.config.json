@@ -1,0 +1,98 @@
+{
+  "slug": "oop",
+  "titleHe": "תכנות מונחה עצמים",
+  "descriptionHe": "תרגול מבחנים - תכנות מונחה עצמים",
+  "accent": "#38bdf8",
+  "accent2": "#7c3aed",
+  "sourceFolder": "C:/Users/Adir/Desktop/BSC/שנה א/סמסטר ב/תכנות מונחה עצמים",
+  "topics": [
+    [
+      "cpp_basics_refs",
+      "הפניות והעמסת פונקציות"
+    ],
+    [
+      "classes_ctor_dtor",
+      "מחלקות, בנאים והורסים"
+    ],
+    [
+      "copy_control",
+      "בנאי העתקה והשמה"
+    ],
+    [
+      "const_references",
+      "const והפניות"
+    ],
+    [
+      "friend_this_static",
+      "friend, this ו-static"
+    ],
+    [
+      "composition",
+      "הכלה וסדר אתחול"
+    ],
+    [
+      "operator_overloading",
+      "העמסת אופרטורים"
+    ],
+    [
+      "operator_conversions",
+      "אופרטורי המרה"
+    ],
+    [
+      "inheritance_access",
+      "ירושה והרשאות גישה"
+    ],
+    [
+      "construction_order",
+      "סדר בנייה והריסה"
+    ],
+    [
+      "virtual_polymorphism",
+      "וירטואליות ופולימורפיזם"
+    ],
+    [
+      "abstract_multiple",
+      "מופשטות וירושה מרובה"
+    ],
+    [
+      "templates",
+      "תבניות"
+    ],
+    [
+      "stl_exceptions",
+      "STL ושגיאות"
+    ]
+  ],
+  "briefs": [],
+  "needHelp": [
+    {
+      "id": "copy_control",
+      "titleHe": "בנאי העתקה והשמה",
+      "icon": "📋",
+      "topic": "copy_control",
+      "entryLabelHe": "צריך עזרה בבנאי העתקה והשמה?"
+    },
+    {
+      "id": "virtual",
+      "titleHe": "פונקציות וירטואליות ופולימורפיזם",
+      "icon": "🎭",
+      "topic": "virtual_polymorphism",
+      "entryLabelHe": "צריך עזרה בוירטואליות ופולימורפיזם?"
+    },
+    {
+      "id": "ctor_order",
+      "titleHe": "סדר בנייה והריסה",
+      "icon": "🏗️",
+      "topic": "construction_order",
+      "entryLabelHe": "צריך עזרה בסדר בנייה והריסה?"
+    },
+    {
+      "id": "operators",
+      "titleHe": "העמסת אופרטורים והמרות",
+      "icon": "➕",
+      "topic": "operator_overloading",
+      "entryLabelHe": "צריך עזרה בהעמסת אופרטורים והמרות?"
+    }
+  ],
+  "storePrefix": "oop"
+}
