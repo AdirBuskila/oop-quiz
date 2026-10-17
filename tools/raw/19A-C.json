@@ -1,0 +1,834 @@
+{
+ "examCode": "19A-C",
+ "examLabel": "2019 סמסטר א מועד ג",
+ "year": 2019,
+ "examDate": "27.05.2019",
+ "sourceFile": "2019/סמ׳ א מועד ג + פתרון.pdf",
+ "keyFile": "2019/סמ׳ א מועד ג + פתרון.pdf (official correct options highlighted in yellow)",
+ "questions": [
+  {
+   "num": 1,
+   "topic": "operator_overloading",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה\n```text\n1. X x;\n2. ++x;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שלא מקבל פרמטרים במחלקה `X`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שלא מקבל פרמטרים מחוץ למחלקה `X`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שמקבל פרמטר אחד במחלקה `X`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שמקבל פרמטר אחד מחוץ למחלקה `X`"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "ההגדרה `++x` היא פעולה מסוג prefix. כדי שתתקמפל צריך `operator++` שמופעל על האובייקט עצמו. כפונקציה חברה זה אופרטור ללא פרמטרים (תשובה א). אופרטור חבר עם פרמטר אחד (ג) הוא צורת ה-postfix `x++` ולא `++x`. אופרטור חיצוני ללא פרמטרים (ב) אינו חוקי. הערה: בהרצה גם אופרטור חיצוני `operator++(X&)` עם פרמטר אחד (ד) מתקמפל, אבל הדף הרשמי מסמן את א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ compile tests: a (member operator++()) compiles; b (free, no parameter) does not; c (member taking one parameter = postfix form) does not; d (free operator++(X&), one parameter) ALSO compiles, so d is arguably correct too. Key kept as printed."
+  },
+  {
+   "num": 2,
+   "topic": "operator_conversions",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:\n```text\n1. X x;\n2. int n = x;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר בנאי (constructor) במחלקה `X`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר פונקציה שאיננה בנאי במחלקה `X`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר פונקציה חברה במחלקה `X`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להגדיר פונקציה במחלקה `int`"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`int n = x;` דורש המרה מ-`X` ל-`int`. מי שמגדיר זאת הוא אופרטור המרה (`operator int()`) בתוך `X`, כלומר פונקציה שאינה בנאי (תשובה ב). בנאי ב-`X` מייצר `X` מ-משהו ולא להפך. פונקציה חברה רגילה לא נקראת אוטומטית, ולא ניתן להגדיר פונקציה בתוך הטיפוס `int`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests: only a conversion operator (`operator int()`) makes `int n = x;` compile; a constructor, a plain member function and nothing in int do not. Agrees."
+  },
+  {
+   "num": 3,
+   "topic": "classes_ctor_dtor",
+   "question": "בקטע הקוד הבא, קומפילציה של אילו פונקציות גורמת לשגיאות?\n```text\n1.  class C {\n2.  public:\n3.      int x;\n4.      void f() {\n5.          x = 1;\n6.          y = 2;\n7.      }\n8.  private:\n9.      int y;\n10. }\n11. void g() {\n12.     C c;\n13.     c.x = 1;\n14.     c.y = 2;\n15. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף פונקציה, הקומפילציה מצליחה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הפונקציה `f` בלבד"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הפונקציה `g` בלבד"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הפונקציות `f` ו-`g`"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ב-`f` הגישה ל-`y` תקינה, כי פונקציה חברה ניגשת גם לשדות `private` של המחלקה שלה (גם אם `y` מוצהר אחרי הפונקציה). ב-`g` הגישה `c.x` תקינה (`public`) אבל `c.y` שגויה מכיוון ש-`y` הוא `private` וגישה מחוץ למחלקה אסורה. לכן רק `g` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run (lines tagged; the class-closing `;` after line 10 added so only real errors show): only line 14 (`c.y` from outside) fails. Agrees."
+  },
+  {
+   "num": 4,
+   "topic": "const_references",
+   "question": "מה הטיפוס של `this` בפונקציה `f` במחלקה הבאה?\n```cpp\nclass A { void f() const {…} };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`A*`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`const A&`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`const A*`"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בפונקציה חברה `const`, הטיפוס של `this` הוא מצביע לאובייקט קבוע: `const A*` (תשובה ד). `A*` הוא הטיפוס בפונקציה רגילה, ו-`this` הוא מצביע ולא הפניה (ג שגויה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ static_assert on decltype(this) inside a const member: only const A* accepted. Agrees."
+  },
+  {
+   "num": 5,
+   "topic": "inheritance_access",
+   "question": "אילו שורות בתכנית הבאה גורמות לשגיאת קומפילציה?\n```text\n1    class A { public: int I;};\n2    class B : protected A { private: int J;};\n3    void main () {\n4      A t;\n5      B tt;\n6      t.I = 3;\n7      tt.I = 3;\n8    }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 2 ו-6"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 2 ו-5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורה 7"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בירושה `protected` החבר הציבורי `I` של `A` הופך ל-`protected` ב-`B`, ולכן `tt.I` בשורה 7 אסור מחוץ למחלקה. `t.I` (שורה 6) תקין כי `t` מטיפוס `A`. השורות 2 ו-5 תקינות. לכן רק שורה 7 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run (lines tagged): only line 7 fails. Agrees."
+  },
+  {
+   "num": 6,
+   "topic": "friend_this_static",
+   "question": "מה צריך להיכתב בשורה 4 כדי שהתכנית הבאה תתקמפל ותדפיס 1:\n```text\n1. #include <iostream>\n2. class X {\n3.     X& f() {\n4.         return _____;\n5.     }\n6. };\n7. void main() {\n8.     X x;\n9.     std::cout << (&x == x.f());\n10. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`new X`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`X()`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`this`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`*this`"
+    }
+   ],
+   "confidence": "low",
+   "explanation": "השאלה לא נפתרת כפי שהודפסה: בשורה 9 משווים `&x`, שהוא מצביע `X*`, עם `x.f()`, שהוא הפניה `X&` לאובייקט, ואין השוואה כזאת. לכן בכל אחת מארבע האפשרויות התכנית לא מתקמפלת. עם ההשוואה המתוקנת `&x == &x.f()` האפשרות `*this` מדפיסה 1. אין סימון בדף ולכן השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Held. No option is highlighted on the paper. clang++: with each of the four options the program fails to compile, because `&x == x.f()` compares an `X*` with an `X&`. (With the repaired comparison `&x == &x.f()` and `*this` it prints 1.)",
+   "hold": "no-key: no highlighted option on the paper, and as printed none of the four options compiles (`&x == x.f()` compares X* with X&)."
+  },
+  {
+   "num": 7,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\ntemplate<int N> class X {\npublic:\nX() { ++d; }\nstatic int d;\n};\ntemplate<int N> int X<N>::d = 0;\nvoid main() {\nX<0> a, b;\nX<1> c;\nstd::cout << a.d << b.d << c.d;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`000`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`123`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`221`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`333`"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "לכל מופע של התבנית יש משתנה סטטי `d` משלו. `a` ו-`b` הם `X<0>` וחולקים `d` שהגיע ל-2, ו-`c` הוא `X<1>` עם `d` שהגיע ל-1. הפלט `221` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run printed 221. Agrees."
+  },
+  {
+   "num": 8,
+   "topic": "operator_overloading",
+   "question": "מה נכון לגבי הגדרת האופרטור `>>` עבור המחלקה `X`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת בתוך `X`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת מחוץ ל-`X` ובהכרח צריכה להיות מוגדרת כ-`friend` ב-`X`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת מחוץ ל-`X` ולא בהכרח צריכה להיות מוגדרת כ-`friend` ב-`X`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת גם בתוך `X` וגם מחוץ ל-`X`"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "האופרטור `>>` לקריאה מ-`cin` (`cin >> x`) חייב להיות פונקציה חיצונית, כי האופרנד השמאלי הוא `istream` ולא `X`. אם הפונקציה משתמשת רק בחברים ציבוריים לא חייבים להצהיר עליה כ-`friend` (תשובה ג). `friend` נחוץ רק לגישה לחברים פרטיים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile tests (istream >>): a member form does not make `cin >> x` compile; a free function over public members compiles without friend. Agrees."
+  },
+  {
+   "num": 9,
+   "topic": "classes_ctor_dtor",
+   "question": "מה נכון לגבי השדה `f` במחלקה `X`:\n```cpp\nclass X {\nprivate:\nint f;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מכל מקום בתכנית"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקה `X`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` אבל לא מ-`X` עצמה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מתוך המחלקות שיורשות מהמחלקה `X` וגם מ-`X` עצמה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שדה `private` נגיש רק מתוך המחלקה עצמה (ומחברים שהוכרזו `friend`). מחלקות יורשות אינן ניגשות אליו, ובוודאי שלא קוד חיצוני. לכן התשובה ב. התשובות ג ו-ד שגויות כי מחלקה יורשת אינה ניגשת לשדה פרטי של הבסיס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests: access from outside fails, from inside X compiles, from a derived class fails. Agrees."
+  },
+  {
+   "num": 10,
+   "topic": "abstract_multiple",
+   "question": "נתונות הגדרות של 5 רשומות:\n```cpp\nclass A { public: int x; };\nclass B : public virtual A {};\nclass C : public virtual A {};\nclass D : public A {};\nclass E : public B, public C, public D {};\n```\nכמה שדות מטיפוס `int` קיימים באובייקט מטיפוס `E`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`B` ו-`C` יורשות את `A` ירושה וירטואלית ולכן חולקות עותק אחד של `x` ב-`E`, ו-`D` יורשת את `A` ירושה רגילה ומוסיפה עותק נוסף. סך הכול שני שדות `int` (תשובה ב). בהרצה הכתובות של `e.B::x` ושל `e.C::x` זהות, ושל `e.D::x` שונה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: &e.B::x == &e.C::x and &e.D::x differs -> 2. Agrees."
+  },
+  {
+   "num": 11,
+   "topic": "inheritance_access",
+   "question": "בתכנית מוגדרות שתי מחלקות `X` ו-`Y`. מה ניתן להגיד על היחס ביניהן בהנחה הקטע הקוד הבא מתקמפל:\n```text\n1. Y y;\n2. X &x = y;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "המחלקה `X` יורשת מהמחלקה `Y`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "המחלקה `Y` יורשת מהמחלקה `X`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "במחלקה `X` יש שדה מטיפוס `Y`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "במחלקה `Y` יש שדה מטיפוס `X`"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "השורה `X &x = y;` מתקמפלת רק אם אפשר להמיר את `Y` ל-`X&`, וזה חוקי כשהמחלקה `Y` יורשת מ-`X` (תשובה ב). שדה מטיפוס אחר בתוך המחלקה לא יוצר המרה, וכיוון הירושה ההפוך (א) לא מתקמפל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests of the four relations: only 'Y derives from X' lets `X &x = y;` compile. Agrees."
+  },
+  {
+   "num": 12,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית\n```cpp\nint funC(int i=10) {return i+1;}\nint funC() {return 8;}\n#include <iostream>\nvoid main () { int j= 8; std::cout << funC() << funC(j); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`89`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`88`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`99`"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הקריאה `funC()` עמומה: גם `funC(int i=10)` (עם ערך ברירת מחדל) וגם `funC()` מתאימות בלי ארגומנטים. הקומפיילר לא יכול לבחור ולכן התכנית לא מתקמפלת (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++: call to funC() is ambiguous. Agrees."
+  },
+  {
+   "num": 13,
+   "topic": "stl_exceptions",
+   "question": "בתכנית מוגדר משתנה `v` מטיפוס `vector<int>`. איזו מהטענות נכונה?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`v.begin()==v.end()` אם כמות האיברים בווקטור היא 0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`v.begin()==v.end()` אם כמות האיברים בווקטור היא 1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "כמות האיברים בווקטור מוחזרת ע\"י `v.capacity`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בווקטור ריק `begin()==end()`, ולכן הטענה הראשונה נכונה (תשובה א). בווקטור עם איבר אחד הם שונים (ב שגויה). `capacity` היא הקיבולת ולא מספר האיברים, ומספר האיברים נתון ב-`size()` (ג שגויה, וגם נכתבה בלי סוגריים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: begin()==end() is true for an empty vector, false for a vector of one element; capacity() is not the element count. Agrees."
+  },
+  {
+   "num": 14,
+   "topic": "const_references",
+   "question": "מה ניתן לכתוב כך שהקוד יעבור קומפילציה\n```cpp\nclass A {\nint K ;\nconst int* f(const int *k) const { return _____; }\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`this->K`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`K+*k`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`&K`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`*k`"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה `f` היא `const`, ולכן `K` בתוכה הוא `const int`. הביטוי `&K` הוא `const int*`, בדיוק טיפוס ההחזרה, ומתקמפל (תשובה ג). `this->K`, `K+*k` ו-`*k` הם `int` ולא מצביע, ולכן שגיאת המרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile test of each option: only `&K` compiles. Agrees."
+  },
+  {
+   "num": 15,
+   "topic": "templates",
+   "question": "אילו שורות בתכנית הבאה לא עוברות קומפילציה?\n```text\n1. template<typename T> class X {};\n2. void main() {\n3.     X x;\n4.     X x(int);\n5.     X x<int>;\n6.     X<int> x;\n7. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורה 4"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 4 ו-5"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 3, 4 ו-5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "תבנית מחלקה חייבת לקבל ארגומנט תבנית כדי ליצור משתנה. שורה 3 (`X x;`) שגויה כי חסר `<int>`. שורה 4 (`X x(int);`) שגויה מאותה סיבה, ושורה 5 (`X x<int>;`) היא תחביר לא חוקי. שורה 6 (`X<int> x;`) תקינה. לכן שורות 3, 4 ו-5 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile test of each statement alone: lines 3, 4 and 5 fail, line 6 compiles. Agrees."
+  },
+  {
+   "num": 16,
+   "topic": "friend_this_static",
+   "question": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:\n```text\n1. class X {\n2.     friend class Y;\n3.     int a;\n4.     void f(Y y) { y.a = 1; }\n5. };\n6. class Y {\n7.     int a;\n8.     void f(X x) { x.a = 1; }\n9. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 8"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 4 ו-8"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בשורה 4 הפונקציה `f` מקבלת `Y` לפי ערך בעוד `Y` עדיין לא מוגדרת (רק הוצהרה כ-friend), ולכן הטיפוס אינו שלם והשורה שגויה. בשורה 8 `Y` היא חברה (friend) של `X` ולכן יכולה לגשת ל-`x.a`, והשורה תקינה. רק שורה 4 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run (lines tagged): only line 4 fails (Y is incomplete where `f(Y y)` is defined by value); line 8 is fine because X declared Y a friend. Agrees."
+  },
+  {
+   "num": 17,
+   "topic": "cpp_basics_refs",
+   "question": "נתונות הגדרה של פונקציית `main` והגדרה של פונקציה `f` בה הושמט טיפוס החזרה:\n```cpp\n___ f() {\nstatic int x = 0;\nreturn x;\n}\nvoid main() { f() = 5; }\n```\nמה צריך להיות הטיפוס שהפונקציה `f` מחזירה כדי שהתוכנית תעבור קומפילציה?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`int`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`int*`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`int&`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`T`"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "השמה `f() = 5;` דורשת ש-`f()` תחזיר ערך שמאלי (lvalue). רק הפניה `int&` להחזרת `x` (משתנה סטטי שחי אחרי היציאה) עושה זאת (תשובה ג). `int` ו-`int*` מחזירים ערך זמני שאי אפשר להשים אליו, ו-`T` אינו טיפוס מוגדר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile test: only int& makes `f() = 5;` compile. Agrees."
+  },
+  {
+   "num": 18,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nclass A {\npublic:\n  virtual void f() { std::cout << \"A\"; }\n};\nclass B : public A {\npublic:\n  void f() { std::cout << \"B\"; }\n};\nvoid g(A a) { a.f(); }\nint main() {\n  B b;\n  g(b);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`B`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`AB`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`BA`"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`g` מקבלת `A` לפי ערך, ולכן האובייקט `b` נחתך (slicing) ל-`A`, והקריאה `a.f()` מופעלת על אובייקט מטיפוס `A`. מודפס `A` (תשובה א). `B` היה מודפס רק אילו `g` הייתה מקבלת הפניה או מצביע.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run printed A (slicing). Agrees."
+  },
+  {
+   "num": 19,
+   "topic": "inheritance_access",
+   "question": "כמה שורות בתכנית לא עוברות קומפילציה?\n```cpp\nclass A {};\nclass B : public A {};\nvoid main() {\nA a, *p;\nB b, *q;\np = &b;\nq = &a;\na = b;\nb = a;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`p = &b` תקין (מצביע לנגזרת הומר למצביע לבסיס). `q = &a` שגוי (אין המרה מבסיס לנגזרת). `a = b` תקין (slicing). `b = a` שגוי (אין השמה של `A` ל-`B`). שתי שורות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run (lines tagged): `q = &a;` and `b = a;` fail. Agrees."
+  },
+  {
+   "num": 20,
+   "topic": "const_references",
+   "question": "נתונות 4 טענות לגבי הפונקציה `f` במחלקה הבאה:\n```cpp\nclass A { public: void f() const {…} …};\n```\n(1) את הפונקציה אפשר להפעיל על אובייקט שהוגדר כ-`const`\n(2) את הפונקציה אפשר להפעיל על אובייקט שלא הוגדר כ-`const`\n(3) בפונקציה אפשר לשנות שדות שמסומנים כ-`const`\n(4) בפונקציה אפשר לשנות שדות שלא מסומנים כ-`const`\nכמה מהטענות נכונות?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "4"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "פונקציה `const` אפשר להפעיל על אובייקט `const` וגם על אובייקט רגיל (טענות 1 ו-2 נכונות). בפונקציה `const` אי אפשר לשנות שדה רגיל (4 שגויה) ואי אפשר לשנות שדה `const` בשום מקרה (3 שגויה). שתי טענות נכונות (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests: statements 1 and 2 hold; 3 and 4 are errors. Agrees."
+  },
+  {
+   "num": 21,
+   "topic": "operator_overloading",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:\n```text\nX x;\n2 << x;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `<<` שמקבל פרמטר מטיפוס `int`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `<<` שמקבל שני פרמטרים: מטיפוס `int` ומטיפוס `X`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר מחוץ למחלקה `X` אופרטור `<<` שמקבל פרמטר מטיפוס `int` ופרמטר מטיפוס `X`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות (א) ו-(ג) נכונות"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בביטוי `2 << x` האופרנד השמאלי הוא `int`, ולכן לא ניתן להגדיר את האופרטור בתוך `X` (אופרטור חבר נקרא על האופרנד השמאלי). צריך אופרטור חיצוני שמקבל `(int, X)` (תשובה ג). אופרטור חבר עם שני פרמטרים אינו חוקי לאופרטור בינארי, ולכן ב ו-א אינן נכונות, וגם ד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile tests: a member operator<<(int) does not make `2 << x` compile (x would have to be the left operand); a two-parameter member is illegal; only the free operator<<(int, X) works. Agrees.",
+   "lockOrder": true
+  },
+  {
+   "num": 22,
+   "topic": "composition",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nint n = 0;\nclass A {\npublic:\nA() : y(++n), x(++n) { std::cout << x << y; }\nint x;\nint y;\n};\nvoid main() { A a; }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`11`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`12`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`21`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`22`"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "השדות מאותחלים לפי סדר ההצהרה במחלקה (קודם `x` ואז `y`) ולא לפי סדר רשימת האיתחול. `x` מקבל 1 ו-`y` מקבל 2, והפלט `12` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run printed 12 (declaration order: x before y). Agrees."
+  },
+  {
+   "num": 23,
+   "topic": "const_references",
+   "question": "כמה שורות בקטע תכנית לא עוברות קומפילציה?\n```cpp\nint a = 42, *p;\nconst int b = 24, *q;\np = &a;\np = &b;\nq = &a;\nq = &b;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`p` הוא `int*` ולא יכול להצביע על `b` הקבוע (שורה `p = &b` שגויה). `q` הוא `const int*` ויכול להצביע גם על `a` וגם על `b`. שורה אחת (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run (lines tagged): only `p = &b;` fails. Agrees."
+  },
+  {
+   "num": 24,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\n#include <vector>\nvoid main() {\nstd::vector<int> v;\nv.push_back(1);\nv.push_back(4);\nstd::vector<int>::iterator it = v.begin();\nint n = *(it++);\nstd::cout << n;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`2`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`4`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`5`"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`it++` מחזיר את הערך הקודם של האיטרטור (שמצביע על האיבר הראשון), ולכן `*(it++)` הוא `1`. הפלט `1` (תשובה א). הערך 4 הוא האיבר שהאיטרטור מצביע עליו אחרי ההגדלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run printed 1. Agrees."
+  },
+  {
+   "num": 25,
+   "topic": "abstract_multiple",
+   "question": "בתכנית מוגדרות שלוש מחלקות:\n```cpp\nclass X {\npublic:\nvirtual void f() = 0;\n};\nclass Y : public X {\nvoid f() { }\n};\nclass Z : public Y {};\n```\nאיזו מהטענות נכונה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוס `Y` אבל לא מטיפוסים `X` ו-`Z`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוסים `Y` ו-`Z` אבל לא מטיפוס `X`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוסים `X`, `Y` ו-`Z`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן ליצור אובייקט מטיפוסים `X`, `Y` ו-`Z`"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`X` מופשטת (`f()=0`) ולא ניתן ליצור ממנה אובייקט. `Y` דורסת את `f` ולכן אינה מופשטת, ו-`Z` יורשת את המימוש של `Y` ולכן גם היא ניתנת ליצירה. התשובה היא ב. הגדרת `f` ב-`Y` בלי `public` לא משפיעה על היכולת ליצור אובייקט.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests: X is abstract (fails); Y and Z compile. Agrees."
+  }
+ ]
+}
