@@ -3,6 +3,118 @@ window.CC_QUIZ = {
   "generated": "tools/build_questions.py",
   "exams": [
    {
+    "examCode": "18A-A",
+    "examLabel": "2018 סמסטר א מועד א",
+    "year": 2018,
+    "source": "exam",
+    "examDate": "06.02.2018"
+   },
+   {
+    "examCode": "18A-B",
+    "examLabel": "2018 סמסטר א מועד ב",
+    "year": 2018,
+    "source": "exam",
+    "examDate": "13.03.2018"
+   },
+   {
+    "examCode": "18A-C",
+    "examLabel": "2018 סמסטר א מועד ג",
+    "year": 2018,
+    "source": "exam",
+    "examDate": "17.05.2018"
+   },
+   {
+    "examCode": "19A-A",
+    "examLabel": "2019 סמסטר א מועד א",
+    "year": 2019,
+    "source": "exam",
+    "examDate": "27.02.2019"
+   },
+   {
+    "examCode": "19A-B",
+    "examLabel": "2019 סמסטר א מועד ב",
+    "year": 2019,
+    "source": "exam",
+    "examDate": "28.03.2019"
+   },
+   {
+    "examCode": "19A-C",
+    "examLabel": "2019 סמסטר א מועד ג",
+    "year": 2019,
+    "source": "exam",
+    "examDate": "27.05.2019"
+   },
+   {
+    "examCode": "20B-A",
+    "examLabel": "2020 סמסטר ב מועד א",
+    "year": 2020,
+    "source": "exam",
+    "examDate": "2020"
+   },
+   {
+    "examCode": "21B-A",
+    "examLabel": "2021 סמסטר ב מועד א",
+    "year": 2021,
+    "source": "exam",
+    "examDate": "24.06.2021"
+   },
+   {
+    "examCode": "21B-B",
+    "examLabel": "2021 סמסטר ב מועד ב",
+    "year": 2021,
+    "source": "exam",
+    "examDate": "26.07.2021"
+   },
+   {
+    "examCode": "21S-B",
+    "examLabel": "2021 סמסטר קיץ מועד ב",
+    "year": 2021,
+    "source": "exam",
+    "examDate": "07.11.2021"
+   },
+   {
+    "examCode": "22B-A",
+    "examLabel": "2022 סמסטר ב מועד א",
+    "year": 2022,
+    "source": "exam",
+    "examDate": "19.06.2022"
+   },
+   {
+    "examCode": "22B-B",
+    "examLabel": "2022 סמסטר ב מועד ב",
+    "year": 2022,
+    "source": "exam",
+    "examDate": "19.07.2022"
+   },
+   {
+    "examCode": "22S-B",
+    "examLabel": "2022 סמסטר קיץ מועד ב",
+    "year": 2022,
+    "source": "exam",
+    "examDate": "25.10.2022"
+   },
+   {
+    "examCode": "23B-A",
+    "examLabel": "2023 סמסטר ב מועד א",
+    "year": 2023,
+    "source": "exam",
+    "examDate": "22.06.2023"
+   },
+   {
+    "examCode": "23B-B",
+    "examLabel": "2023 סמסטר ב מועד ב",
+    "year": 2023,
+    "source": "exam",
+    "examDate": "13.07.2023"
+   },
+   {
+    "examCode": "23S-A",
+    "examLabel": "2023 סמסטר קיץ מועד א",
+    "year": 2023,
+    "source": "exam",
+    "examDate": "13.09.2023"
+   },
+   {
     "examCode": "25S-A",
     "examLabel": "2025 סמסטר קיץ מועד א",
     "year": 2025,
@@ -103,13 +215,85 @@ window.CC_QUIZ = {
    }
   ],
   "counts": {
-   "total": 16,
-   "unique": 16,
-   "contexts": 1,
+   "total": 327,
+   "unique": 303,
+   "contexts": 10,
    "math": 0
   }
  },
  "contexts": {
+  "18A-A-notes": {
+   "kind": "text",
+   "title": "הוראות לנבחן",
+   "text": "בכל אחת מהשאלות להלן עליך לסמן את התשובה הנכונה ביותר.",
+   "id": "18A-A-notes",
+   "textHtml": "בכל אחת מהשאלות להלן עליך לסמן את התשובה הנכונה ביותר.",
+   "titleHtml": "הוראות לנבחן"
+  },
+  "18A-B-notes": {
+   "kind": "text",
+   "title": "הוראות לנבחן",
+   "text": "בכל אחת מהשאלות להלן עליך לסמן את התשובה הנכונה ביותר.",
+   "id": "18A-B-notes",
+   "textHtml": "בכל אחת מהשאלות להלן עליך לסמן את התשובה הנכונה ביותר.",
+   "titleHtml": "הוראות לנבחן"
+  },
+  "18A-C-notes": {
+   "kind": "text",
+   "title": "הוראות לנבחן",
+   "text": "בכל אחת מהשאלות להלן עליך לסמן את התשובה הנכונה ביותר.",
+   "id": "18A-C-notes",
+   "textHtml": "בכל אחת מהשאלות להלן עליך לסמן את התשובה הנכונה ביותר.",
+   "titleHtml": "הוראות לנבחן"
+  },
+  "19A-A-notes": {
+   "kind": "text",
+   "title": "הוראות לנבחן",
+   "text": "בכל אחת מהשאלות להלן עליך לסמן את התשובה הנכונה ביותר.",
+   "id": "19A-A-notes",
+   "textHtml": "בכל אחת מהשאלות להלן עליך לסמן את התשובה הנכונה ביותר.",
+   "titleHtml": "הוראות לנבחן"
+  },
+  "21B-A-notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`. בנוסף לכך בכל השאלות מהסוג הזה ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```",
+   "id": "21B-A-notes",
+   "textHtml": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה <code class=\"tok\" dir=\"ltr\">main</code>. בנוסף לכך בכל השאלות מהסוג הזה ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק.<br>בכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.<br>בכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.<br>כאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.<br>בכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.<br>בכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;</code></pre>",
+   "titleHtml": "הערות משותפות לגבי התוכן של כל השאלות"
+  },
+  "21B-B-notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`. בנוסף לכך בכל השאלות מהסוג הזה ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```",
+   "id": "21B-B-notes",
+   "textHtml": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה <code class=\"tok\" dir=\"ltr\">main</code>. בנוסף לכך בכל השאלות מהסוג הזה ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק.<br>בכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.<br>בכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.<br>כאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.<br>בכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.<br>בכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;</code></pre>",
+   "titleHtml": "הערות משותפות לגבי התוכן של כל השאלות"
+  },
+  "21S-B-notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`. בנוסף לכך בכל השאלות מהסוג הזה ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```",
+   "id": "21S-B-notes",
+   "textHtml": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה <code class=\"tok\" dir=\"ltr\">main</code>. בנוסף לכך בכל השאלות מהסוג הזה ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק.<br>בכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.<br>בכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.<br>כאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.<br>בכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.<br>בכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;</code></pre>",
+   "titleHtml": "הערות משותפות לגבי התוכן של כל השאלות"
+  },
+  "22B-A-notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`.\nבכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט `#include` בתחילת קטע הקוד/התכנית.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```\nבכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-`#include` הנדרשים להרצת קטע הקוד.",
+   "id": "22B-A-notes",
+   "textHtml": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה <code class=\"tok\" dir=\"ltr\">main</code>.<br>בכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט <code class=\"tok\" dir=\"ltr\">#include</code> בתחילת קטע הקוד/התכנית.<br>בכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.<br>בכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.<br>כאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.<br>בכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.<br>בכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;</code></pre>בכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-<code class=\"tok\" dir=\"ltr\">#include</code> הנדרשים להרצת קטע הקוד.",
+   "titleHtml": "הערות משותפות לגבי התוכן של כל השאלות"
+  },
+  "22B-B-notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`.\nבכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט `#include` בתחילת קטע הקוד/התכנית.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```\nבכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-`#include` הנדרשים להרצת קטע הקוד.",
+   "id": "22B-B-notes",
+   "textHtml": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה <code class=\"tok\" dir=\"ltr\">main</code>.<br>בכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט <code class=\"tok\" dir=\"ltr\">#include</code> בתחילת קטע הקוד/התכנית.<br>בכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.<br>בכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.<br>כאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.<br>בכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.<br>בכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;</code></pre>בכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-<code class=\"tok\" dir=\"ltr\">#include</code> הנדרשים להרצת קטע הקוד.",
+   "titleHtml": "הערות משותפות לגבי התוכן של כל השאלות"
+  },
   "25S-A-notes": {
    "kind": "text",
    "title": "הערות משותפות לגבי התוכן של כל השאלות",
@@ -120,6 +304,14546 @@ window.CC_QUIZ = {
   }
  },
  "questions": [
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:\n```cpp\n1. int x = 5;\n2. int *p;\n3. int *q = &x;\n4. int &r;\n5. int &s = x;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 3",
+     "html": "שורה 3"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 2 ו-4",
+     "html": "שורות 2 ו-4"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "רק שורה 4 גורמת לשגיאה: `int &r;` מצהירה על הפניה בלי אתחול, וזה אסור. שורה 2 (מצביע לא מאותחל) ושורה 5 (הפניה מאותחלת ב-`x`) תקינות.\nלכן התשובה היא שורה 4 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c (highlight). clang++ run (snippet wrapped in a function): the only error is line 4 (`int &r;` reference without initializer). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q1",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. int x = 5;\n2. int *p;\n3. int *q = &amp;x;\n4. int &amp;r;\n5. int &amp;s = x;</code></pre>",
+   "explanationHtml": "רק שורה 4 גורמת לשגיאה: <code class=\"tok\" dir=\"ltr\">int &amp;r;</code> מצהירה על הפניה בלי אתחול, וזה אסור. שורה 2 (מצביע לא מאותחל) ושורה 5 (הפניה מאותחלת ב-<code class=\"tok\" dir=\"ltr\">x</code>) תקינות.<br>לכן התשובה היא שורה 4 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "aecfeede8cf62440"
+  },
+  {
+   "num": 2,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nvoid f(int x = 4, int y = 5) { std::cout << x << y; }\nvoid main() { f(3); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`45`",
+     "html": "<code class=\"tok\" dir=\"ltr\">45</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`35`",
+     "html": "<code class=\"tok\" dir=\"ltr\">35</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`33`",
+     "html": "<code class=\"tok\" dir=\"ltr\">33</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בקריאה `f(3)` הפרמטר `x` מקבל 3 והפרמטר `y` לוקח את ערך ברירת המחדל 5, ולכן מודפס `35` (תשובה ג). התשובה `45` מניחה שערך ברירת המחדל של `x` נשאר בתוקף.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run (`void main` rewritten to `int main`, which Visual Studio accepts): prints 35. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q2",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nvoid f(int x = 4, int y = 5) { std::cout &lt;&lt; x &lt;&lt; y; }\nvoid main() { f(3); }</code></pre>",
+   "explanationHtml": "בקריאה <code class=\"tok\" dir=\"ltr\">f(3)</code> הפרמטר <code class=\"tok\" dir=\"ltr\">x</code> מקבל 3 והפרמטר <code class=\"tok\" dir=\"ltr\">y</code> לוקח את ערך ברירת המחדל 5, ולכן מודפס <code class=\"tok\" dir=\"ltr\">35</code> (תשובה ג). התשובה <code class=\"tok\" dir=\"ltr\">45</code> מניחה שערך ברירת המחדל של <code class=\"tok\" dir=\"ltr\">x</code> נשאר בתוקף.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "30bf3758501d54a6"
+  },
+  {
+   "num": 3,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nclass X {\npublic:\n    X(int n) : n(n) { }\n    ~X() { std::cout << n; }\nprivate:\n    int n;\n};\nvoid main() {\n    static X a(1);\n    X b(2);\n    X c(3);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`132`",
+     "html": "<code class=\"tok\" dir=\"ltr\">132</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`231`",
+     "html": "<code class=\"tok\" dir=\"ltr\">231</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`321`",
+     "html": "<code class=\"tok\" dir=\"ltr\">321</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "המשתנים המקומיים נהרסים בסדר הפוך לסדר היצירה: קודם `c` (3) ואז `b` (2). המשתנה הסטטי `a` נהרס רק בסיום התכנית, אחרון (1).\nהפלט הוא `321` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: prints 321 (c, then b at the end of main, then the static a at program exit). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "d",
+   "id": "18A-A-Q3",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    X(int n) : n(n) { }\n    ~X() { std::cout &lt;&lt; n; }\nprivate:\n    int n;\n};\nvoid main() {\n    static X a(1);\n    X b(2);\n    X c(3);\n}</code></pre>",
+   "explanationHtml": "המשתנים המקומיים נהרסים בסדר הפוך לסדר היצירה: קודם <code class=\"tok\" dir=\"ltr\">c</code> (3) ואז <code class=\"tok\" dir=\"ltr\">b</code> (2). המשתנה הסטטי <code class=\"tok\" dir=\"ltr\">a</code> נהרס רק בסיום התכנית, אחרון (1).<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">321</code> (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "beceeddd57392784"
+  },
+  {
+   "num": 4,
+   "topic": "classes_ctor_dtor",
+   "question": "נתונה המחלקה\n```cpp\n1. class X {};\n2. void main() {\n3.     X a;\n4.     X b();\n5.     X c = X;\n6.     X d = X();\n7. }\n```\nאילו שורות אינן יוצרות אובייקט מטיפוס `X` (עקב שגיאת קומפילציה או מסיבה אחרת)?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורות 3 ו-5",
+     "html": "שורות 3 ו-5"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 4 ו-6",
+     "html": "שורות 4 ו-6"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 4 ו-5",
+     "html": "שורות 4 ו-5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 5 ו-6",
+     "html": "שורות 5 ו-6"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "- שורה 3: `X a;` יוצרת אובייקט.\n- שורה 4: `X b();` היא הצהרה על פונקציה בשם `b` שמחזירה `X`, ולא אובייקט.\n- שורה 5: `X c = X;` שגיאת קומפילציה, כי `X` הוא שם של טיפוס ולא ביטוי.\n- שורה 6: `X d = X();` יוצרת אובייקט.\nהשורות שלא יוצרות אובייקט הן 4 ו-5 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: line 5 is a compile error; line 4 declares a function `b` (static_assert that decltype(b) is a function type passes), so no object; lines 3 and 6 create objects. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q4",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "נתונה המחלקה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. class X {};\n2. void main() {\n3.     X a;\n4.     X b();\n5.     X c = X;\n6.     X d = X();\n7. }</code></pre>אילו שורות אינן יוצרות אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">X</code> (עקב שגיאת קומפילציה או מסיבה אחרת)?<br>",
+   "explanationHtml": "- שורה 3: <code class=\"tok\" dir=\"ltr\">X a;</code> יוצרת אובייקט.<br>- שורה 4: <code class=\"tok\" dir=\"ltr\">X b();</code> היא הצהרה על פונקציה בשם <code class=\"tok\" dir=\"ltr\">b</code> שמחזירה <code class=\"tok\" dir=\"ltr\">X</code>, ולא אובייקט.<br>- שורה 5: <code class=\"tok\" dir=\"ltr\">X c = X;</code> שגיאת קומפילציה, כי <code class=\"tok\" dir=\"ltr\">X</code> הוא שם של טיפוס ולא ביטוי.<br>- שורה 6: <code class=\"tok\" dir=\"ltr\">X d = X();</code> יוצרת אובייקט.<br>השורות שלא יוצרות אובייקט הן 4 ו-5 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3a03600c7aaec623"
+  },
+  {
+   "num": 5,
+   "topic": "friend_this_static",
+   "question": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:\n```cpp\n 1. class X {\n 2.     friend void f(X x);\n 3. public:\n 4.     int a;\n 5. private:\n 6.     int b;\n 7. };\n 8. void f(X x) {\n 9.     x.a = 1;\n10.     x.b = 1;\n11. }\n12. void f(X x, int k) {\n13.     x.a = 1;\n14.     x.b = 1;\n15. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 10",
+     "html": "שורה 10"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 14",
+     "html": "שורה 14"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 10 ו-14",
+     "html": "שורות 10 ו-14"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`f(X x)` מוצהרת כ-friend ולכן מותרת בה גישה לשדה הפרטי `b` (שורה 10 תקינה). ההעמסה `f(X x, int k)` היא פונקציה אחרת שאינה friend, ולכן הגישה ל-`b` בשורה 14 גורמת לשגיאה.\nהתשובה היא שורה 14 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: only line 14 is an error (the overload `f(X, int)` is not a friend). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q5",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code> 1. class X {\n 2.     friend void f(X x);\n 3. public:\n 4.     int a;\n 5. private:\n 6.     int b;\n 7. };\n 8. void f(X x) {\n 9.     x.a = 1;\n10.     x.b = 1;\n11. }\n12. void f(X x, int k) {\n13.     x.a = 1;\n14.     x.b = 1;\n15. }</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">f(X x)</code> מוצהרת כ-friend ולכן מותרת בה גישה לשדה הפרטי <code class=\"tok\" dir=\"ltr\">b</code> (שורה 10 תקינה). ההעמסה <code class=\"tok\" dir=\"ltr\">f(X x, int k)</code> היא פונקציה אחרת שאינה friend, ולכן הגישה ל-<code class=\"tok\" dir=\"ltr\">b</code> בשורה 14 גורמת לשגיאה.<br>התשובה היא שורה 14 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "24cd7d3667914024"
+  },
+  {
+   "num": 6,
+   "topic": "const_references",
+   "question": "מה צריך להיות הטיפוס של המשתנה המקומי `x` בפונקציה `f` כדי שהמחלקה תעבור קומפילציה:\n```cpp\nclass X {\npublic:\n    void f() const {\n        ____ x = this;\n    }\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`X`",
+     "html": "<code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`X*`",
+     "html": "<code class=\"tok\" dir=\"ltr\">X*</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`const X *`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const X *</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`const X &`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const X &amp;</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בתוך מתודה שהיא `const` הטיפוס של `this` הוא `const X *`. רק הטיפוס הזה מתקבל בהצבה `x = this`. הטיפוסים `X` ו-`X*` מורידים את ה-const, והפניה `const X &` לא יכולה להיקשר למצביע.\nהתשובה היא `const X *` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: of the four, only `const X *` compiles (in a const method `this` is `const X*`). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q6",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "מה צריך להיות הטיפוס של המשתנה המקומי <code class=\"tok\" dir=\"ltr\">x</code> בפונקציה <code class=\"tok\" dir=\"ltr\">f</code> כדי שהמחלקה תעבור קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    void f() const {\n        ____ x = this;\n    }\n};</code></pre>",
+   "explanationHtml": "בתוך מתודה שהיא <code class=\"tok\" dir=\"ltr\">const</code> הטיפוס של <code class=\"tok\" dir=\"ltr\">this</code> הוא <code class=\"tok\" dir=\"ltr\">const X *</code>. רק הטיפוס הזה מתקבל בהצבה <code class=\"tok\" dir=\"ltr\">x = this</code>. הטיפוסים <code class=\"tok\" dir=\"ltr\">X</code> ו-<code class=\"tok\" dir=\"ltr\">X*</code> מורידים את ה-const, והפניה <code class=\"tok\" dir=\"ltr\">const X &amp;</code> לא יכולה להיקשר למצביע.<br>התשובה היא <code class=\"tok\" dir=\"ltr\">const X *</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "affe60bc5863b333"
+  },
+  {
+   "num": 7,
+   "topic": "const_references",
+   "question": "נתונה התכנית הבאה:\n```cpp\n1. void main() {\n2.     int n = 5;\n3.     ____ p = &n;\n4.     p = &n;\n5.     *p = 5;\n6. }\n```\nמה צריך להיות הטיפוס של המשתנה `p` כדי ששורה 5 תעבור קומפילציה אבל שורה 4 לא תעבור קומפילציה?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`int*`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int*</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`const int *`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const int *</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`int * const`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int * const</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`const int * const`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const int * const</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "רוצים שהשמה ל-`p` (שורה 4) תיכשל אבל השמה ל-`*p` (שורה 5) תצליח: המצביע עצמו קבוע, והערך שאליו הוא מצביע ניתן לשינוי. זה בדיוק `int * const`.\n- `int*`: שתי השורות תקינות.\n- `const int *`: שורה 5 נכשלת.\n- `const int * const`: שתי השורות נכשלות.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: with `int * const` line 4 fails and line 5 compiles; `int*` compiles both, `const int *` fails only line 5, `const int * const` fails both. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q7",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "נתונה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. void main() {\n2.     int n = 5;\n3.     ____ p = &amp;n;\n4.     p = &amp;n;\n5.     *p = 5;\n6. }</code></pre>מה צריך להיות הטיפוס של המשתנה <code class=\"tok\" dir=\"ltr\">p</code> כדי ששורה 5 תעבור קומפילציה אבל שורה 4 לא תעבור קומפילציה?<br>",
+   "explanationHtml": "רוצים שהשמה ל-<code class=\"tok\" dir=\"ltr\">p</code> (שורה 4) תיכשל אבל השמה ל-<code class=\"tok\" dir=\"ltr\">*p</code> (שורה 5) תצליח: המצביע עצמו קבוע, והערך שאליו הוא מצביע ניתן לשינוי. זה בדיוק <code class=\"tok\" dir=\"ltr\">int * const</code>.<br>- <code class=\"tok\" dir=\"ltr\">int*</code>: שתי השורות תקינות.<br>- <code class=\"tok\" dir=\"ltr\">const int *</code>: שורה 5 נכשלת.<br>- <code class=\"tok\" dir=\"ltr\">const int * const</code>: שתי השורות נכשלות.<br>התשובה היא תשובה ג.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f01064275fd7ea8b"
+  },
+  {
+   "num": 8,
+   "topic": "operator_overloading",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:\n```cpp\nX x;\nx = 5;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר בנאי (constructor) במחלקה `X`",
+     "html": "להגדיר בנאי (constructor) במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר פונקציה שאיננה בנאי המקבלת פרמטר אחד במחלקה `X`",
+     "html": "להגדיר פונקציה שאיננה בנאי המקבלת פרמטר אחד במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר פונקציה המקבלת פרמטר אחד מחוץ למחלקה `X`",
+     "html": "להגדיר פונקציה המקבלת פרמטר אחד מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "כדי ש-`x = 5` תתקמפל צריך אופרטור השמה שמקבל `int`, כלומר פונקציית חבר שאינה בנאי ומקבלת פרמטר אחד (תשובה ב). בנאי `X(int)` לבדו לא מספיק, כי אז גם נעלם בנאי ברירת המחדל ו-`X x;` נכשל. את `operator=` אי אפשר להגדיר מחוץ למחלקה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: a member `operator=(int)` makes it compile; only a constructor `X(int)` is not enough (then `X x;` has no default constructor), and `operator=` cannot be a free function. Option b is loosely worded (it means the member assignment operator). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "b",
+   "id": "18A-A-Q8",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>X x;\nx = 5;</code></pre>",
+   "explanationHtml": "כדי ש-<code class=\"tok\" dir=\"ltr\">x = 5</code> תתקמפל צריך אופרטור השמה שמקבל <code class=\"tok\" dir=\"ltr\">int</code>, כלומר פונקציית חבר שאינה בנאי ומקבלת פרמטר אחד (תשובה ב). בנאי <code class=\"tok\" dir=\"ltr\">X(int)</code> לבדו לא מספיק, כי אז גם נעלם בנאי ברירת המחדל ו-<code class=\"tok\" dir=\"ltr\">X x;</code> נכשל. את <code class=\"tok\" dir=\"ltr\">operator=</code> אי אפשר להגדיר מחוץ למחלקה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "26aae750fc923133"
+  },
+  {
+   "num": 9,
+   "topic": "operator_overloading",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה\n```cpp\nX x;\nx++;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שלא מקבל פרמטרים במחלקה `X`",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">++</code> שלא מקבל פרמטרים במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שלא מקבל פרמטרים מחוץ למחלקה `X`",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">++</code> שלא מקבל פרמטרים מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שמקבל פרמטר אחד במחלקה `X`",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">++</code> שמקבל פרמטר אחד במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שמקבל פרמטר אחד מחוץ למחלקה `X`",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">++</code> שמקבל פרמטר אחד מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הביטוי `x++` (פוסטפיקס) מתקמפל כשמוגדר אופרטור `++` כפונקציית חבר עם פרמטר `int` אחד, שמשמש רק להבחנה (תשובה ג). אופרטור חבר בלי פרמטרים הוא הפרפיקס `++x`. פונקציה חיצונית עם פרמטר אחד (`X&`) היא גם פרפיקס, ופוסטפיקס חיצוני דורש שני פרמטרים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: the postfix `x++` compiles with member `operator++(int)` (one parameter). A member with no parameters is the prefix form and does not match `x++`. A free function with one parameter of type X only defines the prefix form. Agrees with the key.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q9",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>X x;\nx++;</code></pre>",
+   "explanationHtml": "הביטוי <code class=\"tok\" dir=\"ltr\">x++</code> (פוסטפיקס) מתקמפל כשמוגדר אופרטור <code class=\"tok\" dir=\"ltr\">++</code> כפונקציית חבר עם פרמטר <code class=\"tok\" dir=\"ltr\">int</code> אחד, שמשמש רק להבחנה (תשובה ג). אופרטור חבר בלי פרמטרים הוא הפרפיקס <code class=\"tok\" dir=\"ltr\">++x</code>. פונקציה חיצונית עם פרמטר אחד (<code class=\"tok\" dir=\"ltr\">X&amp;</code>) היא גם פרפיקס, ופוסטפיקס חיצוני דורש שני פרמטרים.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "e9d7e50e38ba12cc"
+  },
+  {
+   "num": 10,
+   "topic": "inheritance_access",
+   "question": "מה נכון לגבי השדה `f` במחלקה `Y`:\n```cpp\nclass X {\npublic:\n    int f;\n};\nclass Y : protected X {};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מכל מקום בתכנית",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מכל מקום בתכנית"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקות `X` ו-`Y`",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקות <code class=\"tok\" dir=\"ltr\">X</code> ו-<code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקה `X` אבל לא מתוך המחלקה `Y`",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקה <code class=\"tok\" dir=\"ltr\">X</code> אבל לא מתוך המחלקה <code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מהמחלקה `Y` ומכל מחלקה שיורשת מ-`Y`",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מהמחלקה <code class=\"tok\" dir=\"ltr\">Y</code> ומכל מחלקה שיורשת מ-<code class=\"tok\" dir=\"ltr\">Y</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בירושה `protected` השדה הציבורי `f` נעשה מוגן ב-`Y`. לכן `Y` וכל מחלקה שיורשת ממנה יכולות לגשת אליו, ואילו קוד חיצוני כמו `main` לא יכול.\nהתשובה היא תשובה ד. תשובה א שגויה כי השדה כבר לא ציבורי דרך `Y`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: with protected inheritance `f` is protected in `Y`, so `Y` and its derived classes reach it, `main` does not. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "d",
+   "id": "18A-A-Q10",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "מה נכון לגבי השדה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה <code class=\"tok\" dir=\"ltr\">Y</code>:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    int f;\n};\nclass Y : protected X {};</code></pre>",
+   "explanationHtml": "בירושה <code class=\"tok\" dir=\"ltr\">protected</code> השדה הציבורי <code class=\"tok\" dir=\"ltr\">f</code> נעשה מוגן ב-<code class=\"tok\" dir=\"ltr\">Y</code>. לכן <code class=\"tok\" dir=\"ltr\">Y</code> וכל מחלקה שיורשת ממנה יכולות לגשת אליו, ואילו קוד חיצוני כמו <code class=\"tok\" dir=\"ltr\">main</code> לא יכול.<br>התשובה היא תשובה ד. תשובה א שגויה כי השדה כבר לא ציבורי דרך <code class=\"tok\" dir=\"ltr\">Y</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fb8a0cfc7ee9050a"
+  },
+  {
+   "num": 11,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\nclass X {\npublic:\n    X() { std::cout << 1; }\n    ~X() { std::cout << 2; }\n};\nclass Y : public X {\npublic:\n    Y() { std::cout << 3; }\n    ~Y() { std::cout << 4; }\n};\nvoid main() {\n    Y y;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`34`",
+     "html": "<code class=\"tok\" dir=\"ltr\">34</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1342`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1342</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`3124`",
+     "html": "<code class=\"tok\" dir=\"ltr\">3124</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בבנייה הבסיס נבנה לפני הנגזרת: `1` ואז `3`. בהריסה הסדר הפוך: קודם ההורס של `Y` (`4`) ואז של `X` (`2`).\nהפלט הוא `1342` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: prints 1342. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "b",
+   "id": "18A-A-Q11",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    X() { std::cout &lt;&lt; 1; }\n    ~X() { std::cout &lt;&lt; 2; }\n};\nclass Y : public X {\npublic:\n    Y() { std::cout &lt;&lt; 3; }\n    ~Y() { std::cout &lt;&lt; 4; }\n};\nvoid main() {\n    Y y;\n}</code></pre>",
+   "explanationHtml": "בבנייה הבסיס נבנה לפני הנגזרת: <code class=\"tok\" dir=\"ltr\">1</code> ואז <code class=\"tok\" dir=\"ltr\">3</code>. בהריסה הסדר הפוך: קודם ההורס של <code class=\"tok\" dir=\"ltr\">Y</code> (<code class=\"tok\" dir=\"ltr\">4</code>) ואז של <code class=\"tok\" dir=\"ltr\">X</code> (<code class=\"tok\" dir=\"ltr\">2</code>).<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">1342</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1c62d83ed8f05d8e"
+  },
+  {
+   "num": 12,
+   "topic": "inheritance_access",
+   "question": "מה נכון לגבי השדה `f` במחלקה `X`:\n```cpp\nclass X {\nprotected:\n    int f;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מכל מקום בתכנית",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מכל מקום בתכנית"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקה `X`",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` אבל לא מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> אבל לא מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` וגם מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> וגם מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שדה `protected` נגיש מתוך המחלקה עצמה ומתוך מחלקות שיורשות ממנה, אבל לא מקוד חיצוני. לכן תשובה ד נכונה. תשובה ג שגויה כי גם `X` עצמה יכולה לגשת לשדה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: access from `X` and from a derived class compiles, access from `main` and from an unrelated class does not. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "d",
+   "id": "18A-A-Q12",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "מה נכון לגבי השדה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה <code class=\"tok\" dir=\"ltr\">X</code>:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\nprotected:\n    int f;\n};</code></pre>",
+   "explanationHtml": "שדה <code class=\"tok\" dir=\"ltr\">protected</code> נגיש מתוך המחלקה עצמה ומתוך מחלקות שיורשות ממנה, אבל לא מקוד חיצוני. לכן תשובה ד נכונה. תשובה ג שגויה כי גם <code class=\"tok\" dir=\"ltr\">X</code> עצמה יכולה לגשת לשדה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c720b540f6b85a0b"
+  },
+  {
+   "num": 13,
+   "topic": "stl_exceptions",
+   "question": "למה משמשת המחלקה `CArchive` של MFC?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לציור על המסך",
+     "html": "לציור על המסך"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשמירה לקובץ",
+     "html": "לשמירה לקובץ"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לטעינה מקובץ",
+     "html": "לטעינה מקובץ"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות ב’ וג’ נכונות",
+     "html": "תשובות ב’ וג’ נכונות"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "`CArchive` ב-MFC משמשת לסידור (serialization): גם לכתיבה לקובץ וגם לקריאה ממנו. לכן תשובות ב’ וג’ נכונות (תשובה ד), לפי המפתח הרשמי.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "note": "Official key d (highlight). MFC concept question, no code to run; not verified by compile (MFC is not available here).",
+   "contextId": "18A-A-notes",
+   "correctId": "d",
+   "id": "18A-A-Q13",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "lockOrder": true,
+   "questionHtml": "למה משמשת המחלקה <code class=\"tok\" dir=\"ltr\">CArchive</code> של MFC?<br>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">CArchive</code> ב-MFC משמשת לסידור (serialization): גם לכתיבה לקובץ וגם לקריאה ממנו. לכן תשובות ב’ וג’ נכונות (תשובה ד), לפי המפתח הרשמי.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "dedupKey": "b4d62a9e363a5d54"
+  },
+  {
+   "num": 14,
+   "topic": "stl_exceptions",
+   "question": "למה משמשת המחלקה `CFile` של MFC?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לציור על המסך",
+     "html": "לציור על המסך"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשמירה לקובץ",
+     "html": "לשמירה לקובץ"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לטעינה מקובץ",
+     "html": "לטעינה מקובץ"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות ב’ וג’ נכונות",
+     "html": "תשובות ב’ וג’ נכונות"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "`CFile` ב-MFC היא מחלקה לגישה לקבצים, ומשמשת גם לכתיבה לקובץ וגם לקריאה ממנו. לכן תשובות ב’ וג’ נכונות (תשובה ד), לפי המפתח הרשמי.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "note": "Official key d (highlight). MFC concept question, no code to run; not verified by compile (MFC is not available here).",
+   "contextId": "18A-A-notes",
+   "correctId": "d",
+   "id": "18A-A-Q14",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "lockOrder": true,
+   "questionHtml": "למה משמשת המחלקה <code class=\"tok\" dir=\"ltr\">CFile</code> של MFC?<br>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">CFile</code> ב-MFC היא מחלקה לגישה לקבצים, ומשמשת גם לכתיבה לקובץ וגם לקריאה ממנו. לכן תשובות ב’ וג’ נכונות (תשובה ד), לפי המפתח הרשמי.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "dedupKey": "f805520132a0eb83"
+  },
+  {
+   "num": 15,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\nclass X {\npublic:\n    virtual void f() { std:: cout << 1; }\n};\nclass Y : public X {\npublic:\n    void f() { std::cout << 2; }\n};\nvoid main() {\n    Y y;\n    X *p = &y;\n    p->f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">2</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`21`",
+     "html": "<code class=\"tok\" dir=\"ltr\">21</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`f` וירטואלית, ולכן הקריאה דרך מצביע `X*` לאובייקט מטיפוס `Y` מפעילה את הגרסה של `Y`. הפלט הוא `2` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: prints 2 (dynamic dispatch). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "b",
+   "id": "18A-A-Q15",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    virtual void f() { std:: cout &lt;&lt; 1; }\n};\nclass Y : public X {\npublic:\n    void f() { std::cout &lt;&lt; 2; }\n};\nvoid main() {\n    Y y;\n    X *p = &amp;y;\n    p-&gt;f();\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">f</code> וירטואלית, ולכן הקריאה דרך מצביע <code class=\"tok\" dir=\"ltr\">X*</code> לאובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code> מפעילה את הגרסה של <code class=\"tok\" dir=\"ltr\">Y</code>. הפלט הוא <code class=\"tok\" dir=\"ltr\">2</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "9059c232d7797694"
+  },
+  {
+   "num": 16,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\nclass X {\npublic:\n    X() { std::cout << 1; }\n    ~X() { std::cout << 2; }\n};\nclass Y : public X {\npublic:\n    Y() { std::cout << 3; }\n    ~Y() { std::cout << 4; }\n};\nvoid main() {\n    X *x = new Y;\n    delete x;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`32`",
+     "html": "<code class=\"tok\" dir=\"ltr\">32</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`13`",
+     "html": "<code class=\"tok\" dir=\"ltr\">13</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`132`",
+     "html": "<code class=\"tok\" dir=\"ltr\">132</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`1342`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1342</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההורס של `X` אינו וירטואלי, ולכן `delete x` דרך מצביע `X*` מפעיל רק את `~X`. הבנאים רצו לפי הסדר `1` ואז `3`, וההורס מדפיס `2`: הפלט `132` (תשובה ג). מבחינה פורמלית זו התנהגות לא מוגדרת, אך זה מה שהקוד מדפיס. ההורס `~Y` לא רץ, ולכן `1342` שגויה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: prints 132 (the destructor of X is not virtual, so only ~X runs; formally undefined behaviour, but this is what the run prints). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q16",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    X() { std::cout &lt;&lt; 1; }\n    ~X() { std::cout &lt;&lt; 2; }\n};\nclass Y : public X {\npublic:\n    Y() { std::cout &lt;&lt; 3; }\n    ~Y() { std::cout &lt;&lt; 4; }\n};\nvoid main() {\n    X *x = new Y;\n    delete x;\n}</code></pre>",
+   "explanationHtml": "ההורס של <code class=\"tok\" dir=\"ltr\">X</code> אינו וירטואלי, ולכן <code class=\"tok\" dir=\"ltr\">delete x</code> דרך מצביע <code class=\"tok\" dir=\"ltr\">X*</code> מפעיל רק את <code class=\"tok\" dir=\"ltr\">~X</code>. הבנאים רצו לפי הסדר <code class=\"tok\" dir=\"ltr\">1</code> ואז <code class=\"tok\" dir=\"ltr\">3</code>, וההורס מדפיס <code class=\"tok\" dir=\"ltr\">2</code>: הפלט <code class=\"tok\" dir=\"ltr\">132</code> (תשובה ג). מבחינה פורמלית זו התנהגות לא מוגדרת, אך זה מה שהקוד מדפיס. ההורס <code class=\"tok\" dir=\"ltr\">~Y</code> לא רץ, ולכן <code class=\"tok\" dir=\"ltr\">1342</code> שגויה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "dd142a77ad7ca441"
+  },
+  {
+   "num": 17,
+   "topic": "inheritance_access",
+   "question": "מה צריך להופיע במקום הריק בשורה 8 כדי שהתכנית הבאה תדפיס 12:\n```cpp\n 1. #include <iostream>\n 2. class X {\n 3. public:\n 4.     void f() { std::cout << 1; }\n 5. };\n 6. class Y : public X {\n 7. public:\n 8.     void f() { ______; std::cout << 2; }\n 9. };\n10. void main() {\n11.     Y y;\n12.     y.f();\n13. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`this()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">this()</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`X::f()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">X::f()</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`this->f()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">this-&gt;f()</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`x.f()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">x.f()</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "כדי לקרוא לגרסה של המחלקה הבסיסית צריך לציין אותה במפורש: `X::f()`. הפלט הוא `12` (תשובה ב).\n- `this()` ו-`x.f()` לא מתקמפלות.\n- `this->f()` קוראת שוב ל-`Y::f` ונכנסת לרקורסיה אינסופית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: with `X::f()` it prints 12; `this()` and `x.f()` do not compile and `this->f()` recurses forever. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "b",
+   "id": "18A-A-Q17",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "מה צריך להופיע במקום הריק בשורה 8 כדי שהתכנית הבאה תדפיס 12:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code> 1. #include &lt;iostream&gt;\n 2. class X {\n 3. public:\n 4.     void f() { std::cout &lt;&lt; 1; }\n 5. };\n 6. class Y : public X {\n 7. public:\n 8.     void f() { ______; std::cout &lt;&lt; 2; }\n 9. };\n10. void main() {\n11.     Y y;\n12.     y.f();\n13. }</code></pre>",
+   "explanationHtml": "כדי לקרוא לגרסה של המחלקה הבסיסית צריך לציין אותה במפורש: <code class=\"tok\" dir=\"ltr\">X::f()</code>. הפלט הוא <code class=\"tok\" dir=\"ltr\">12</code> (תשובה ב).<br>- <code class=\"tok\" dir=\"ltr\">this()</code> ו-<code class=\"tok\" dir=\"ltr\">x.f()</code> לא מתקמפלות.<br>- <code class=\"tok\" dir=\"ltr\">this-&gt;f()</code> קוראת שוב ל-<code class=\"tok\" dir=\"ltr\">Y::f</code> ונכנסת לרקורסיה אינסופית.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "bd0cf7851211e495"
+  },
+  {
+   "num": 18,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <vector>\n#include <iostream>\nvoid main() {\n    std::vector<int> v;\n    v.push_back(0);\n    v.push_back(1);\n    v.push_back(2);\n    v.erase(v.begin());\n    std::cout << v[1];\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "התכנית מחוללת שגיאת זמן ריצה",
+     "html": "התכנית מחוללת שגיאת זמן ריצה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התכנית מדפיסה `1`",
+     "html": "התכנית מדפיסה <code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית מדפיסה `2`",
+     "html": "התכנית מדפיסה <code class=\"tok\" dir=\"ltr\">2</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "אחרי שלוש ההוספות הווקטור הוא `0 1 2`. `erase(v.begin())` מוחק את האיבר הראשון, ונשאר `1 2`. לכן `v[1]` הוא `2` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: prints 2. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "d",
+   "id": "18A-A-Q18",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\n#include &lt;iostream&gt;\nvoid main() {\n    std::vector&lt;int&gt; v;\n    v.push_back(0);\n    v.push_back(1);\n    v.push_back(2);\n    v.erase(v.begin());\n    std::cout &lt;&lt; v[1];\n}</code></pre>",
+   "explanationHtml": "אחרי שלוש ההוספות הווקטור הוא <code class=\"tok\" dir=\"ltr\">0 1 2</code>. <code class=\"tok\" dir=\"ltr\">erase(v.begin())</code> מוחק את האיבר הראשון, ונשאר <code class=\"tok\" dir=\"ltr\">1 2</code>. לכן <code class=\"tok\" dir=\"ltr\">v[1]</code> הוא <code class=\"tok\" dir=\"ltr\">2</code> (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "012d0b5d3233aba3"
+  },
+  {
+   "num": 20,
+   "topic": "const_references",
+   "question": "הסרה של איזה שדה מתוך המחלקה הבאה תגרום לתכנית לעבור קומפילציה?\n```cpp\nclass X {\n    int a;\n    int *b;\n    int &c;\n};\nvoid main() {\n    X x;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "קטע הקוד עובר קומפילציה כמו שהוא כתוב",
+     "html": "קטע הקוד עובר קומפילציה כמו שהוא כתוב"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`int a`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int a</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`int *b`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int *b</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`int &c`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int &amp;c</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "לשדה מסוג הפניה (`int &c`) אין ערך התחלתי, ולכן בנאי ברירת המחדל שהקומפיילר היה יוצר נמחק והשורה `X x;` נכשלת. הסרת `int &c` פותרת את הבעיה (תשובה ד). הסרת `a` או `b` לא עוזרת, כי ההפניה נשארת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: removing `int &c` makes it compile; the reference member has no initializer, so the default constructor is deleted. Removing a or b does not help. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "d",
+   "id": "18A-A-Q20",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "הסרה של איזה שדה מתוך המחלקה הבאה תגרום לתכנית לעבור קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\n    int a;\n    int *b;\n    int &amp;c;\n};\nvoid main() {\n    X x;\n}</code></pre>",
+   "explanationHtml": "לשדה מסוג הפניה (<code class=\"tok\" dir=\"ltr\">int &amp;c</code>) אין ערך התחלתי, ולכן בנאי ברירת המחדל שהקומפיילר היה יוצר נמחק והשורה <code class=\"tok\" dir=\"ltr\">X x;</code> נכשלת. הסרת <code class=\"tok\" dir=\"ltr\">int &amp;c</code> פותרת את הבעיה (תשובה ד). הסרת <code class=\"tok\" dir=\"ltr\">a</code> או <code class=\"tok\" dir=\"ltr\">b</code> לא עוזרת, כי ההפניה נשארת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c8416e14f903e6e8"
+  },
+  {
+   "num": 21,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <vector>\n#include <iostream>\nvoid main() {\n    std::vector<int> v;\n    v.push_back(0);\n    v.insert(v.begin(), 1);\n    std::cout << v[1];\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "התכנית מחוללת שגיאת זמן ריצה",
+     "html": "התכנית מחוללת שגיאת זמן ריצה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התכנית מדפיסה `0`",
+     "html": "התכנית מדפיסה <code class=\"tok\" dir=\"ltr\">0</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית מדפיסה `1`",
+     "html": "התכנית מדפיסה <code class=\"tok\" dir=\"ltr\">1</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "אחרי `push_back(0)` הווקטור הוא `0`. `insert(v.begin(), 1)` מוסיף `1` בתחילתו, והווקטור הוא `1 0`. לכן `v[1]` הוא `0` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: prints 0 (v becomes 1, 0). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q21",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\n#include &lt;iostream&gt;\nvoid main() {\n    std::vector&lt;int&gt; v;\n    v.push_back(0);\n    v.insert(v.begin(), 1);\n    std::cout &lt;&lt; v[1];\n}</code></pre>",
+   "explanationHtml": "אחרי <code class=\"tok\" dir=\"ltr\">push_back(0)</code> הווקטור הוא <code class=\"tok\" dir=\"ltr\">0</code>. <code class=\"tok\" dir=\"ltr\">insert(v.begin(), 1)</code> מוסיף <code class=\"tok\" dir=\"ltr\">1</code> בתחילתו, והווקטור הוא <code class=\"tok\" dir=\"ltr\">1 0</code>. לכן <code class=\"tok\" dir=\"ltr\">v[1]</code> הוא <code class=\"tok\" dir=\"ltr\">0</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "9495ffbee70cddf2"
+  },
+  {
+   "num": 22,
+   "topic": "operator_overloading",
+   "question": "מה צריך להיות הטיפוס שמחזירה הפונקציה בשורה 3 כדי שהתכנית הבאה תעבור קומפילציה?\n```cpp\n1. #include <iostream>\n2. class X {};\n3. _____ operator<<(std::ostream &os, X x) {...}\n4. void main() {\n5.     X x;\n6.     std::cout << x << x;\n7. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`int`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`void`",
+     "html": "<code class=\"tok\" dir=\"ltr\">void</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`X`",
+     "html": "<code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`std::ostream&`",
+     "html": "<code class=\"tok\" dir=\"ltr\">std::ostream&amp;</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בביטוי `std::cout << x << x` התוצאה של ההדפסה הראשונה היא האופרנד השמאלי של השנייה, ולכן האופרטור חייב להחזיר `std::ostream&`. בכל טיפוס אחר (`int`, `void`, `X`) ההדפסה השנייה לא מתקמפלת. התשובה היא ד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run (body `{...}` replaced by a matching return statement for each option): only `std::ostream&` compiles, because the result of the first `<<` is the left operand of the second. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "d",
+   "id": "18A-A-Q22",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה צריך להיות הטיפוס שמחזירה הפונקציה בשורה 3 כדי שהתכנית הבאה תעבור קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. #include &lt;iostream&gt;\n2. class X {};\n3. _____ operator&lt;&lt;(std::ostream &amp;os, X x) {...}\n4. void main() {\n5.     X x;\n6.     std::cout &lt;&lt; x &lt;&lt; x;\n7. }</code></pre>",
+   "explanationHtml": "בביטוי <code class=\"tok\" dir=\"ltr\">std::cout &lt;&lt; x &lt;&lt; x</code> התוצאה של ההדפסה הראשונה היא האופרנד השמאלי של השנייה, ולכן האופרטור חייב להחזיר <code class=\"tok\" dir=\"ltr\">std::ostream&amp;</code>. בכל טיפוס אחר (<code class=\"tok\" dir=\"ltr\">int</code>, <code class=\"tok\" dir=\"ltr\">void</code>, <code class=\"tok\" dir=\"ltr\">X</code>) ההדפסה השנייה לא מתקמפלת. התשובה היא ד.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "e55d8f5ef86482c2"
+  },
+  {
+   "num": 23,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\ntemplate<typename T> int f() {\n    static int x = 0;\n    ++x;\n    return x;\n}\nint main() {\n    int a = f<int>();\n    int b = f<int>();\n    double c = f<double>();\n    std::cout << a << b << c;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`000`",
+     "html": "<code class=\"tok\" dir=\"ltr\">000</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`111`",
+     "html": "<code class=\"tok\" dir=\"ltr\">111</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`121`",
+     "html": "<code class=\"tok\" dir=\"ltr\">121</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "לכל מופע של התבנית (`int`, `double`) יש משתנה סטטי `x` משלו. שתי הקריאות ל-`f<int>` מחזירות 1 ואז 2, והקריאה היחידה ל-`f<double>` מחזירה 1.\nהפלט הוא `121` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: prints 121 (each instantiation has its own static x). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "c",
+   "id": "18A-A-Q23",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\ntemplate&lt;typename T&gt; int f() {\n    static int x = 0;\n    ++x;\n    return x;\n}\nint main() {\n    int a = f&lt;int&gt;();\n    int b = f&lt;int&gt;();\n    double c = f&lt;double&gt;();\n    std::cout &lt;&lt; a &lt;&lt; b &lt;&lt; c;\n}</code></pre>",
+   "explanationHtml": "לכל מופע של התבנית (<code class=\"tok\" dir=\"ltr\">int</code>, <code class=\"tok\" dir=\"ltr\">double</code>) יש משתנה סטטי <code class=\"tok\" dir=\"ltr\">x</code> משלו. שתי הקריאות ל-<code class=\"tok\" dir=\"ltr\">f&lt;int&gt;</code> מחזירות 1 ואז 2, והקריאה היחידה ל-<code class=\"tok\" dir=\"ltr\">f&lt;double&gt;</code> מחזירה 1.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">121</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ed301b3cfd2722ad"
+  },
+  {
+   "num": 24,
+   "topic": "const_references",
+   "question": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?\n```cpp\n 1. class X {\n 2. public:\n 3.     int x;\n 4.     const int y;\n 5.     X() : x(1), y(1) {}\n 6.     void g() const {\n 7.         x = 1;\n 8.         y = 1;\n 9.     }\n10. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 7",
+     "html": "שורה 7"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 8",
+     "html": "שורה 8"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 7 ו-8",
+     "html": "שורות 7 ו-8"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "במתודה `const` אי אפשר לשנות שדות. שורה 7 משנה את `x`, ושורה 8 משנה את `y` (שהוא גם `const`), ושתיהן שגיאות.\nהתשובה היא שורות 7 ו-8 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: errors on lines 7 and 8. Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "d",
+   "id": "18A-A-Q24",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code> 1. class X {\n 2. public:\n 3.     int x;\n 4.     const int y;\n 5.     X() : x(1), y(1) {}\n 6.     void g() const {\n 7.         x = 1;\n 8.         y = 1;\n 9.     }\n10. };</code></pre>",
+   "explanationHtml": "במתודה <code class=\"tok\" dir=\"ltr\">const</code> אי אפשר לשנות שדות. שורה 7 משנה את <code class=\"tok\" dir=\"ltr\">x</code>, ושורה 8 משנה את <code class=\"tok\" dir=\"ltr\">y</code> (שהוא גם <code class=\"tok\" dir=\"ltr\">const</code>), ושתיהן שגיאות.<br>התשובה היא שורות 7 ו-8 (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "b49656a0a91c6803"
+  },
+  {
+   "num": 25,
+   "topic": "const_references",
+   "question": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?\n```cpp\n 1. class X {\n 2. public:\n 3.     int x;\n 4.     int *p;\n 5.     X() : x(1), p(&x) {}\n 6.     void g() const {\n 7.         p = &x;\n 8.         *p = 1;\n 9.     }\n10. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 7",
+     "html": "שורה 7"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 8",
+     "html": "שורה 8"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 7 ו-8",
+     "html": "שורות 7 ו-8"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "במתודה `const` המצביע `p` הופך ל-`int * const`: אי אפשר לשנות אותו, ולכן שורה 7 (`p = &x`) שגויה. שורה 8 (`*p = 1`) כותבת לערך שהמצביע מצביע עליו, והוא אינו `const`, ולכן תקינה.\nהתשובה היא שורה 7 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: only line 7 fails (p becomes `int* const`; `*p = 1` writes through the pointer and is legal). Agrees.",
+   "contextId": "18A-A-notes",
+   "correctId": "b",
+   "id": "18A-A-Q25",
+   "examCode": "18A-A",
+   "examLabel": "2018 סמסטר א מועד א",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code> 1. class X {\n 2. public:\n 3.     int x;\n 4.     int *p;\n 5.     X() : x(1), p(&amp;x) {}\n 6.     void g() const {\n 7.         p = &amp;x;\n 8.         *p = 1;\n 9.     }\n10. };</code></pre>",
+   "explanationHtml": "במתודה <code class=\"tok\" dir=\"ltr\">const</code> המצביע <code class=\"tok\" dir=\"ltr\">p</code> הופך ל-<code class=\"tok\" dir=\"ltr\">int * const</code>: אי אפשר לשנות אותו, ולכן שורה 7 (<code class=\"tok\" dir=\"ltr\">p = &amp;x</code>) שגויה. שורה 8 (<code class=\"tok\" dir=\"ltr\">*p = 1</code>) כותבת לערך שהמצביע מצביע עליו, והוא אינו <code class=\"tok\" dir=\"ltr\">const</code>, ולכן תקינה.<br>התשובה היא שורה 7 (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4bd24a88e66de285"
+  },
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "נתונות הגדרה של פונקציית `main` והגדרה של פונקציה `f` בה הושמט טיפוס החזרה:\n```cpp\n___ f() {\n    static int x = 0;\n    return x;\n}\nvoid main() { f() = 5; }\n```\nמה צריך להיות הטיפוס שהפונקציה `f` מחזירה כדי שהתוכנית תעבור קומפילציה?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`int`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`int*`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int*</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`int&`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int&amp;</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`T`",
+     "html": "<code class=\"tok\" dir=\"ltr\">T</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההשמה `f() = 5` דורשת שהקריאה תחזיר ערך שמאלי (lvalue). רק הפניה (`int&`) מקיימת זאת, והיא מצביעה על המשתנה הסטטי `x`. החזרה לפי ערך (`int`) מחזירה זמני שאי אפשר להשים אליו, ב-`int*` ה-`return x` לא מתקמפל, ו-`T` אינו מוגדר.\nהתשובה היא `int&` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: only `int&` compiles (`f() = 5` needs an lvalue); `int` and `int*` are rejected, `T` is undeclared. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "c",
+   "id": "18A-B-Q1",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "נתונות הגדרה של פונקציית <code class=\"tok\" dir=\"ltr\">main</code> והגדרה של פונקציה <code class=\"tok\" dir=\"ltr\">f</code> בה הושמט טיפוס החזרה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>___ f() {\n    static int x = 0;\n    return x;\n}\nvoid main() { f() = 5; }</code></pre>מה צריך להיות הטיפוס שהפונקציה <code class=\"tok\" dir=\"ltr\">f</code> מחזירה כדי שהתוכנית תעבור קומפילציה?<br>",
+   "explanationHtml": "ההשמה <code class=\"tok\" dir=\"ltr\">f() = 5</code> דורשת שהקריאה תחזיר ערך שמאלי (lvalue). רק הפניה (<code class=\"tok\" dir=\"ltr\">int&amp;</code>) מקיימת זאת, והיא מצביעה על המשתנה הסטטי <code class=\"tok\" dir=\"ltr\">x</code>. החזרה לפי ערך (<code class=\"tok\" dir=\"ltr\">int</code>) מחזירה זמני שאי אפשר להשים אליו, ב-<code class=\"tok\" dir=\"ltr\">int*</code> ה-<code class=\"tok\" dir=\"ltr\">return x</code> לא מתקמפל, ו-<code class=\"tok\" dir=\"ltr\">T</code> אינו מוגדר.<br>התשובה היא <code class=\"tok\" dir=\"ltr\">int&amp;</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ae2818ff1155fdad"
+  },
+  {
+   "num": 2,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nclass X {\npublic:\n    int f;\n};\nvoid g(X x) { x.f = 5; }\nvoid main() {\n    X x;\n    x.f = 3;\n    g(x);\n    std::cout << x.f;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`3`",
+     "html": "<code class=\"tok\" dir=\"ltr\">3</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`5`",
+     "html": "<code class=\"tok\" dir=\"ltr\">5</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`g` מקבלת את `x` לפי ערך, כלומר עותק, ולכן השינוי ל-5 נעשה על העותק בלבד. ב-`main` נשאר `x.f` = 3.\nהפלט הוא `3` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: prints 3 (`g` gets a copy). Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q2",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    int f;\n};\nvoid g(X x) { x.f = 5; }\nvoid main() {\n    X x;\n    x.f = 3;\n    g(x);\n    std::cout &lt;&lt; x.f;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">g</code> מקבלת את <code class=\"tok\" dir=\"ltr\">x</code> לפי ערך, כלומר עותק, ולכן השינוי ל-5 נעשה על העותק בלבד. ב-<code class=\"tok\" dir=\"ltr\">main</code> נשאר <code class=\"tok\" dir=\"ltr\">x.f</code> = 3.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">3</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "546432d58c56420f"
+  },
+  {
+   "num": 3,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nclass X {\npublic: X(int n) { std::cout << n; }\n};\nX a(1);\nvoid main() {\n    X a(2);\n    X b(3);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`23`",
+     "html": "<code class=\"tok\" dir=\"ltr\">23</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`231`",
+     "html": "<code class=\"tok\" dir=\"ltr\">231</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`321`",
+     "html": "<code class=\"tok\" dir=\"ltr\">321</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "המשתנה הגלובלי `a(1)` נבנה לפני תחילת `main` ומדפיס `1`. אחר כך נבנים המקומיים בסדר ההצהרה: `a(2)` ואז `b(3)`. הבנאי מדפיס, וההורס לא מדפיס כלום.\nהפלט הוא `123` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: prints 123 (the global is constructed before main, then the locals in order). Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "a",
+   "id": "18A-B-Q3",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic: X(int n) { std::cout &lt;&lt; n; }\n};\nX a(1);\nvoid main() {\n    X a(2);\n    X b(3);\n}</code></pre>",
+   "explanationHtml": "המשתנה הגלובלי <code class=\"tok\" dir=\"ltr\">a(1)</code> נבנה לפני תחילת <code class=\"tok\" dir=\"ltr\">main</code> ומדפיס <code class=\"tok\" dir=\"ltr\">1</code>. אחר כך נבנים המקומיים בסדר ההצהרה: <code class=\"tok\" dir=\"ltr\">a(2)</code> ואז <code class=\"tok\" dir=\"ltr\">b(3)</code>. הבנאי מדפיס, וההורס לא מדפיס כלום.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">123</code> (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "261384e41d99f88b"
+  },
+  {
+   "num": 4,
+   "topic": "const_references",
+   "question": "אילו שורות גורמות לשגיאת קומפילציה במחלקה הבאה:\n```cpp\n1. class X {\n2. public:\n3.     X() : x(1) {}\n4.     X(int a) { x = 1; }\n5.     X(int a, int b) { }\n6.     const int x;\n7. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורה 3",
+     "html": "שורה 3"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 5",
+     "html": "שורה 5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 4 ו-5",
+     "html": "שורות 4 ו-5"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "- שורה 3: `X() : x(1) {}` תקינה, כי השדה ה-`const` מאותחל ברשימת האתחול.\n- שורה 4: `x = 1` בגוף הבנאי היא השמה לשדה `const`, שגיאה.\n- שורה 5: הבנאי לא מאתחל את `x`, ולשדה `const` חייב להיות אתחול, שגיאה.\nהתשובה היא שורות 4 ו-5 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: errors on lines 4 (assignment to a const member in the body) and 5 (const member not initialized); line 3 is fine. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "d",
+   "id": "18A-B-Q4",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "אילו שורות גורמות לשגיאת קומפילציה במחלקה הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. class X {\n2. public:\n3.     X() : x(1) {}\n4.     X(int a) { x = 1; }\n5.     X(int a, int b) { }\n6.     const int x;\n7. };</code></pre>",
+   "explanationHtml": "- שורה 3: <code class=\"tok\" dir=\"ltr\">X() : x(1) {}</code> תקינה, כי השדה ה-<code class=\"tok\" dir=\"ltr\">const</code> מאותחל ברשימת האתחול.<br>- שורה 4: <code class=\"tok\" dir=\"ltr\">x = 1</code> בגוף הבנאי היא השמה לשדה <code class=\"tok\" dir=\"ltr\">const</code>, שגיאה.<br>- שורה 5: הבנאי לא מאתחל את <code class=\"tok\" dir=\"ltr\">x</code>, ולשדה <code class=\"tok\" dir=\"ltr\">const</code> חייב להיות אתחול, שגיאה.<br>התשובה היא שורות 4 ו-5 (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "642d7778e0d93210"
+  },
+  {
+   "num": 5,
+   "topic": "friend_this_static",
+   "question": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:\n```cpp\n1. class X {\n2.     friend class Y;\n3.     int a;\n4.     void f(Y y) { y.a = 1; }\n5. };\n6. class Y {\n7.     int a;\n8.     void f(X x) { x.a = 1; }\n9. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 8",
+     "html": "שורה 8"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 4 ו-8",
+     "html": "שורות 4 ו-8"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בשורה 4 השם `Y` עדיין לא מוכר (המחלקה `Y` מוגדרת רק אחרי `X`), ולכן `void f(Y y)` לא מתקמפל. שורה 8 תקינה: `Y` היא friend של `X`, ולכן יש לה גישה ל-`x.a`.\nהתשובה היא שורה 4 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: only line 4 is an error (`Y` is not a complete type there, and X is not a friend of Y); line 8 is fine because Y is X's friend. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q5",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. class X {\n2.     friend class Y;\n3.     int a;\n4.     void f(Y y) { y.a = 1; }\n5. };\n6. class Y {\n7.     int a;\n8.     void f(X x) { x.a = 1; }\n9. };</code></pre>",
+   "explanationHtml": "בשורה 4 השם <code class=\"tok\" dir=\"ltr\">Y</code> עדיין לא מוכר (המחלקה <code class=\"tok\" dir=\"ltr\">Y</code> מוגדרת רק אחרי <code class=\"tok\" dir=\"ltr\">X</code>), ולכן <code class=\"tok\" dir=\"ltr\">void f(Y y)</code> לא מתקמפל. שורה 8 תקינה: <code class=\"tok\" dir=\"ltr\">Y</code> היא friend של <code class=\"tok\" dir=\"ltr\">X</code>, ולכן יש לה גישה ל-<code class=\"tok\" dir=\"ltr\">x.a</code>.<br>התשובה היא שורה 4 (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "27a55f0facf48816"
+  },
+  {
+   "num": 6,
+   "topic": "friend_this_static",
+   "question": "מה צריך להיכתב בשורה 3 כדי שהתכנית הבאה תתקמפל ותדפיס 1:\n```cpp\n#include <iostream>\nclass X {\npublic:\n    X& f() { return _____; }\n};\nvoid main() {\n    X x;\n    std::cout << (&x == &x.f());\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`new X`",
+     "html": "<code class=\"tok\" dir=\"ltr\">new X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`X()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">X()</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`this`",
+     "html": "<code class=\"tok\" dir=\"ltr\">this</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`*this`",
+     "html": "<code class=\"tok\" dir=\"ltr\">*this</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה מחזירה `X&`, ולכן צריך להחזיר את האובייקט עצמו ולא מצביע אליו: `*this`. התנאי `&x == &x.f()` נכון והפלט הוא `1`.\n`new X` ו-`this` הם מצביעים, ו-`X()` הוא זמני שאי אפשר לקשור להפניה לא-const.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: only `*this` compiles and prints 1; `new X` and `this` are pointers, `X()` is a temporary that cannot bind to `X&`. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "d",
+   "id": "18A-B-Q6",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה צריך להיכתב בשורה 3 כדי שהתכנית הבאה תתקמפל ותדפיס 1:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    X&amp; f() { return _____; }\n};\nvoid main() {\n    X x;\n    std::cout &lt;&lt; (&amp;x == &amp;x.f());\n}</code></pre>",
+   "explanationHtml": "הפונקציה מחזירה <code class=\"tok\" dir=\"ltr\">X&amp;</code>, ולכן צריך להחזיר את האובייקט עצמו ולא מצביע אליו: <code class=\"tok\" dir=\"ltr\">*this</code>. התנאי <code class=\"tok\" dir=\"ltr\">&amp;x == &amp;x.f()</code> נכון והפלט הוא <code class=\"tok\" dir=\"ltr\">1</code>.<br><code class=\"tok\" dir=\"ltr\">new X</code> ו-<code class=\"tok\" dir=\"ltr\">this</code> הם מצביעים, ו-<code class=\"tok\" dir=\"ltr\">X()</code> הוא זמני שאי אפשר לקשור להפניה לא-const.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "232e9204eef375d7"
+  },
+  {
+   "num": 7,
+   "topic": "operator_overloading",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:\n```cpp\nX x;\n2 << x;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `<<` שמקבל פרמטר מטיפוס `int`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">&lt;&lt;</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">int</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `<<` שמקבל שני פרמטרים: מטיפוס `int` ומטיפוס `X`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">&lt;&lt;</code> שמקבל שני פרמטרים: מטיפוס <code class=\"tok\" dir=\"ltr\">int</code> ומטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר מחוץ למחלקה `X` אופרטור `<<` שמקבל פרמטר מטיפוס `int` ופרמטר מטיפוס `X`",
+     "html": "להגדיר מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">&lt;&lt;</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">int</code> ופרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות (א) ו-(ג) נכונות",
+     "html": "תשובות (א) ו-(ג) נכונות"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בביטוי `2 << x` האופרנד השמאלי הוא `int`, ולכן אופרטור חבר במחלקה `X` לא יכול לטפל בו (פונקציית חבר נקראת על האופרנד השמאלי). צריך פונקציה חיצונית `operator<<(int, X)`.\nהתשובה היא ג. תשובה ד שגויה כי א אינה נכונה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: a free `operator<<(int, X)` compiles; a member `operator<<(int)` makes `x << 2` work, not `2 << x`; a member with two parameters is invalid. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "c",
+   "lockOrder": true,
+   "id": "18A-B-Q7",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>X x;\n2 &lt;&lt; x;</code></pre>",
+   "explanationHtml": "בביטוי <code class=\"tok\" dir=\"ltr\">2 &lt;&lt; x</code> האופרנד השמאלי הוא <code class=\"tok\" dir=\"ltr\">int</code>, ולכן אופרטור חבר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> לא יכול לטפל בו (פונקציית חבר נקראת על האופרנד השמאלי). צריך פונקציה חיצונית <code class=\"tok\" dir=\"ltr\">operator&lt;&lt;(int, X)</code>.<br>התשובה היא ג. תשובה ד שגויה כי א אינה נכונה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fcac9265e8327ae9"
+  },
+  {
+   "num": 8,
+   "topic": "operator_conversions",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:\n```cpp\nX x = 5;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר בנאי (constructor) במחלקה `X`",
+     "html": "להגדיר בנאי (constructor) במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר אופרטור השמה (`=`) במחלקה `X`",
+     "html": "להגדיר אופרטור השמה (<code class=\"tok\" dir=\"ltr\">=</code>) במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר אופרטור השמה (`=`) מחוץ למחלקה `X`",
+     "html": "להגדיר אופרטור השמה (<code class=\"tok\" dir=\"ltr\">=</code>) מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "השורה `X x = 5;` היא אתחול ולא השמה, ולכן אופרטור `=` לא רלוונטי. כדי שהיא תתקמפל צריך בנאי המרה `X(int)`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: `X x = 5;` compiles with a converting constructor `X(int)`; an `operator=` (member or free) does not help, it is initialization, not assignment. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "a",
+   "id": "18A-B-Q8",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "אופרטורי המרה",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>X x = 5;</code></pre>",
+   "explanationHtml": "השורה <code class=\"tok\" dir=\"ltr\">X x = 5;</code> היא אתחול ולא השמה, ולכן אופרטור <code class=\"tok\" dir=\"ltr\">=</code> לא רלוונטי. כדי שהיא תתקמפל צריך בנאי המרה <code class=\"tok\" dir=\"ltr\">X(int)</code>.<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8b8111e7d080f77f"
+  },
+  {
+   "num": 9,
+   "topic": "operator_overloading",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה\n```cpp\nX x;\nx(5);\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר בנאי (constructor) שמקבל פרמטר אחד",
+     "html": "להגדיר בנאי (constructor) שמקבל פרמטר אחד"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר אופרטור `()` שמקבל פרמטר אחד",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">()</code> שמקבל פרמטר אחד"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר פונקציה מחוץ למחלקה `X` שמקבלת פרמטר אחד",
+     "html": "להגדיר פונקציה מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code> שמקבלת פרמטר אחד"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן לעשות דבר כדי שקטע הקוד יעבור קומפילציה",
+     "html": "לא ניתן לעשות דבר כדי שקטע הקוד יעבור קומפילציה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הביטוי `x(5)` קורא לאובייקט `x` כמו לפונקציה, ולכן צריך להגדיר במחלקה אופרטור קריאה `operator()` שמקבל פרמטר אחד.\nהתשובה היא תשובה ב. בנאי לא עוזר כי `x` כבר נוצר, ופונקציה חיצונית אינה מאפשרת את התחביר `x(5)`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: a member `operator()(int)` makes `x(5)` compile; a constructor or a free function does not. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q9",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>X x;\nx(5);</code></pre>",
+   "explanationHtml": "הביטוי <code class=\"tok\" dir=\"ltr\">x(5)</code> קורא לאובייקט <code class=\"tok\" dir=\"ltr\">x</code> כמו לפונקציה, ולכן צריך להגדיר במחלקה אופרטור קריאה <code class=\"tok\" dir=\"ltr\">operator()</code> שמקבל פרמטר אחד.<br>התשובה היא תשובה ב. בנאי לא עוזר כי <code class=\"tok\" dir=\"ltr\">x</code> כבר נוצר, ופונקציה חיצונית אינה מאפשרת את התחביר <code class=\"tok\" dir=\"ltr\">x(5)</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "695a1aa0c08303d9"
+  },
+  {
+   "num": 10,
+   "topic": "inheritance_access",
+   "question": "מה נכון לגבי השדה `f` במחלקה `X`:\n```cpp\nclass X {\npublic:\n    int f;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מכל מקום בתכנית",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מכל מקום בתכנית"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקה `X`",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` אבל לא מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> אבל לא מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מתוך המחלקות שיורשות מהמחלקה `X` וגם מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> וגם מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שדה `public` נגיש מכל מקום בתכנית, גם מ-`main`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: a public field is reachable from `main`. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "a",
+   "id": "18A-B-Q10",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "מה נכון לגבי השדה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה <code class=\"tok\" dir=\"ltr\">X</code>:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    int f;\n};</code></pre>",
+   "explanationHtml": "שדה <code class=\"tok\" dir=\"ltr\">public</code> נגיש מכל מקום בתכנית, גם מ-<code class=\"tok\" dir=\"ltr\">main</code>.<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "45e73b9c199a7c72"
+  },
+  {
+   "num": 11,
+   "topic": "inheritance_access",
+   "question": "מה נכון לגבי השדה `f` במחלקה `X`:\n```cpp\nclass X {\nprivate:\n    int f;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מכל מקום בתכנית",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מכל מקום בתכנית"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקה `X`",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` אבל לא מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> אבל לא מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מתוך המחלקות שיורשות מהמחלקה `X` וגם מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> וגם מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שדה `private` נגיש רק מתוך המחלקה עצמה (ומ-friend), ולא ממחלקות יורשות.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: access from `X` compiles; from `main` or a derived class it does not. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q11",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "מה נכון לגבי השדה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה <code class=\"tok\" dir=\"ltr\">X</code>:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\nprivate:\n    int f;\n};</code></pre>",
+   "explanationHtml": "שדה <code class=\"tok\" dir=\"ltr\">private</code> נגיש רק מתוך המחלקה עצמה (ומ-friend), ולא ממחלקות יורשות.<br>התשובה היא תשובה ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d88260b06613b000"
+  },
+  {
+   "num": 12,
+   "topic": "stl_exceptions",
+   "question": "למה משמשת המחלקה `CPaintDC` של MFC?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לציור על המסך",
+     "html": "לציור על המסך"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשמירה לקובץ",
+     "html": "לשמירה לקובץ"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לטעינה מקובץ",
+     "html": "לטעינה מקובץ"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות ב’ וג’ נכונות",
+     "html": "תשובות ב’ וג’ נכונות"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "`CPaintDC` ב-MFC היא הקשר התקן (device context) שמשמש לציור על המסך בתוך הטיפול ב-`OnPaint`. התשובה היא א, לפי המפתח הרשמי.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "note": "Official key a (highlight). MFC concept question, no code to run; not verified by compile (MFC is not available here).",
+   "contextId": "18A-B-notes",
+   "correctId": "a",
+   "id": "18A-B-Q12",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "lockOrder": true,
+   "questionHtml": "למה משמשת המחלקה <code class=\"tok\" dir=\"ltr\">CPaintDC</code> של MFC?<br>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">CPaintDC</code> ב-MFC היא הקשר התקן (device context) שמשמש לציור על המסך בתוך הטיפול ב-<code class=\"tok\" dir=\"ltr\">OnPaint</code>. התשובה היא א, לפי המפתח הרשמי.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "dedupKey": "26ba99aad4befe4f"
+  },
+  {
+   "num": 13,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\nclass X {\npublic:\n    void f() { std:: cout << 1; }\n};\nclass Y : public X {\npublic:\n    virtual void f() { std::cout << 2; }\n};\nvoid main() {\n    Y y;\n    X *p = &y;\n    p->f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">2</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`21`",
+     "html": "<code class=\"tok\" dir=\"ltr\">21</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה `f` ב-`X` אינה וירטואלית (ה-`virtual` מופיע רק ב-`Y`). לכן הקריאה דרך מצביע `X*` נקשרת בזמן הקומפילציה ל-`X::f`.\nהפלט הוא `1` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: prints 1 (`f` is not virtual in X, so the call is bound statically to X::f). Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "a",
+   "id": "18A-B-Q13",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    void f() { std:: cout &lt;&lt; 1; }\n};\nclass Y : public X {\npublic:\n    virtual void f() { std::cout &lt;&lt; 2; }\n};\nvoid main() {\n    Y y;\n    X *p = &amp;y;\n    p-&gt;f();\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> ב-<code class=\"tok\" dir=\"ltr\">X</code> אינה וירטואלית (ה-<code class=\"tok\" dir=\"ltr\">virtual</code> מופיע רק ב-<code class=\"tok\" dir=\"ltr\">Y</code>). לכן הקריאה דרך מצביע <code class=\"tok\" dir=\"ltr\">X*</code> נקשרת בזמן הקומפילציה ל-<code class=\"tok\" dir=\"ltr\">X::f</code>.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">1</code> (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "47ceaab6e2301a8b"
+  },
+  {
+   "num": 14,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\nclass X {\npublic:\n    X() { std::cout << 1; }\n    ~X() { std::cout << 2; }\n};\nclass Y : public X{\npublic:\n    Y() { std::cout << 3; }\n    ~Y() { std::cout << 4; }\n};\nvoid main() {\n    X *x = new Y;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`34`",
+     "html": "<code class=\"tok\" dir=\"ltr\">34</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`13`",
+     "html": "<code class=\"tok\" dir=\"ltr\">13</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`134`",
+     "html": "<code class=\"tok\" dir=\"ltr\">134</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`1342`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1342</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "האובייקט נוצר ב-`new Y`, ולכן הבנאים רצים בסדר `1` ואז `3`. אין `delete`, ולכן ההורסים לא רצים בכלל.\nהפלט הוא `13` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: prints 13 (no delete, so no destructor runs). Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q14",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    X() { std::cout &lt;&lt; 1; }\n    ~X() { std::cout &lt;&lt; 2; }\n};\nclass Y : public X{\npublic:\n    Y() { std::cout &lt;&lt; 3; }\n    ~Y() { std::cout &lt;&lt; 4; }\n};\nvoid main() {\n    X *x = new Y;\n}</code></pre>",
+   "explanationHtml": "האובייקט נוצר ב-<code class=\"tok\" dir=\"ltr\">new Y</code>, ולכן הבנאים רצים בסדר <code class=\"tok\" dir=\"ltr\">1</code> ואז <code class=\"tok\" dir=\"ltr\">3</code>. אין <code class=\"tok\" dir=\"ltr\">delete</code>, ולכן ההורסים לא רצים בכלל.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">13</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2a7239b990954285"
+  },
+  {
+   "num": 15,
+   "topic": "stl_exceptions",
+   "question": "ב-MFC איזו פונקציה נקראת בעקבות קריאה לפונקציה `Invalidate`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`OnInitDialog`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnInitDialog</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`OnPaint`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnPaint</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`OnLButtonDown`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnLButtonDown</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`OnMouseMove`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnMouseMove</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "קריאה ל-`Invalidate` מסמנת את החלון כדורש ציור מחדש, ו-MFC קוראת בעקבות זה ל-`OnPaint`. התשובה היא ב, לפי המפתח הרשמי.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "note": "Official key b (highlight). MFC concept question, no code to run; not verified by compile (MFC is not available here).",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q15",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "ב-MFC איזו פונקציה נקראת בעקבות קריאה לפונקציה <code class=\"tok\" dir=\"ltr\">Invalidate</code>?<br>",
+   "explanationHtml": "קריאה ל-<code class=\"tok\" dir=\"ltr\">Invalidate</code> מסמנת את החלון כדורש ציור מחדש, ו-MFC קוראת בעקבות זה ל-<code class=\"tok\" dir=\"ltr\">OnPaint</code>. התשובה היא ב, לפי המפתח הרשמי.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "dedupKey": "163150ef7a4a44be"
+  },
+  {
+   "num": 16,
+   "topic": "abstract_multiple",
+   "question": "בתכנית מוגדרות שלוש מחלקות:\n```cpp\nclass X {\npublic:\n    virtual void f() = 0;\n};\nclass Y : public X {\n    void f() { }\n};\nclass Z : public Y {};\n```\nאיזו מהטענות נכונה:\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוס `Y` אבל לא מטיפוסים `X` ו-`Z`",
+     "html": "ניתן ליצור אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code> אבל לא מטיפוסים <code class=\"tok\" dir=\"ltr\">X</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוסים `Y` ו-`Z` אבל לא מטיפוס `X`",
+     "html": "ניתן ליצור אובייקט מטיפוסים <code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code> אבל לא מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוסים `X`, `Y` ו-`Z`",
+     "html": "ניתן ליצור אובייקט מטיפוסים <code class=\"tok\" dir=\"ltr\">X</code>, <code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן ליצור אובייקט מטיפוסים `X`, `Y` ו-`Z`",
+     "html": "לא ניתן ליצור אובייקט מטיפוסים <code class=\"tok\" dir=\"ltr\">X</code>, <code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`X` אבסטרקטית בגלל `= 0`, ולכן אי אפשר ליצור ממנה אובייקט. `Y` ממשת את `f`, ולכן אפשר ליצור ממנה אובייקט, וכך גם מ-`Z` שיורשת ממנה.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: `X x;` fails (abstract), `Y y;` and `Z z;` compile. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q16",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "בתכנית מוגדרות שלוש מחלקות:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    virtual void f() = 0;\n};\nclass Y : public X {\n    void f() { }\n};\nclass Z : public Y {};</code></pre>איזו מהטענות נכונה:<br>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">X</code> אבסטרקטית בגלל <code class=\"tok\" dir=\"ltr\">= 0</code>, ולכן אי אפשר ליצור ממנה אובייקט. <code class=\"tok\" dir=\"ltr\">Y</code> ממשת את <code class=\"tok\" dir=\"ltr\">f</code>, ולכן אפשר ליצור ממנה אובייקט, וכך גם מ-<code class=\"tok\" dir=\"ltr\">Z</code> שיורשת ממנה.<br>התשובה היא תשובה ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3bbf5083f5be7689"
+  },
+  {
+   "num": 17,
+   "topic": "templates",
+   "question": "אילו שורות בתכנית הבאה לא עוברות קומפילציה\n```cpp\n1. template<typename T> void f(T t) {}\n2. void main() {\n3.     f(4);\n4.     f(int);\n5.     f<int>();\n6.     f<int>(4);\n7. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 4 ו-5",
+     "html": "שורות 4 ו-5"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 3, 4 ו-5",
+     "html": "שורות 3, 4 ו-5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 3 ו-4",
+     "html": "שורות 3 ו-4"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "- שורה 3: `f(4)` תקינה, `T` מוסק כ-`int`.\n- שורה 4: `f(int)` מעבירה טיפוס במקום ערך, שגיאה.\n- שורה 5: `f<int>()` חסר ארגומנט, שגיאה.\n- שורה 6: `f<int>(4)` תקינה.\nהתשובה היא שורות 4 ו-5 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: errors on lines 4 (`f(int)` passes a type) and 5 (`f<int>()` has no argument); lines 3 and 6 compile. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q17",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "אילו שורות בתכנית הבאה לא עוברות קומפילציה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. template&lt;typename T&gt; void f(T t) {}\n2. void main() {\n3.     f(4);\n4.     f(int);\n5.     f&lt;int&gt;();\n6.     f&lt;int&gt;(4);\n7. }</code></pre>",
+   "explanationHtml": "- שורה 3: <code class=\"tok\" dir=\"ltr\">f(4)</code> תקינה, <code class=\"tok\" dir=\"ltr\">T</code> מוסק כ-<code class=\"tok\" dir=\"ltr\">int</code>.<br>- שורה 4: <code class=\"tok\" dir=\"ltr\">f(int)</code> מעבירה טיפוס במקום ערך, שגיאה.<br>- שורה 5: <code class=\"tok\" dir=\"ltr\">f&lt;int&gt;()</code> חסר ארגומנט, שגיאה.<br>- שורה 6: <code class=\"tok\" dir=\"ltr\">f&lt;int&gt;(4)</code> תקינה.<br>התשובה היא שורות 4 ו-5 (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0917b3791f5f5d8d"
+  },
+  {
+   "num": 18,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <vector>\n#include <iostream>\nvoid main() {\n    std::vector<int> v;\n    v.push_back(0);\n    v.push_back(1);\n    v.push_back(2);\n    v.insert(v.begin() + 1, 9);\n    for (int i = 0; i < v.size(); ++i) std::cout << v[i];\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`9012`",
+     "html": "<code class=\"tok\" dir=\"ltr\">9012</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`0912`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0912</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`0192`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0192</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`0129`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0129</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "אחרי שלוש ההוספות הווקטור הוא `0 1 2`. `insert(v.begin() + 1, 9)` מוסיף 9 לפני האיבר באינדקס 1, ומתקבל `0 9 1 2`.\nהפלט הוא `0912` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: prints 0912. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q18",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\n#include &lt;iostream&gt;\nvoid main() {\n    std::vector&lt;int&gt; v;\n    v.push_back(0);\n    v.push_back(1);\n    v.push_back(2);\n    v.insert(v.begin() + 1, 9);\n    for (int i = 0; i &lt; v.size(); ++i) std::cout &lt;&lt; v[i];\n}</code></pre>",
+   "explanationHtml": "אחרי שלוש ההוספות הווקטור הוא <code class=\"tok\" dir=\"ltr\">0 1 2</code>. <code class=\"tok\" dir=\"ltr\">insert(v.begin() + 1, 9)</code> מוסיף 9 לפני האיבר באינדקס 1, ומתקבל <code class=\"tok\" dir=\"ltr\">0 9 1 2</code>.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">0912</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fe3ff997813e5960"
+  },
+  {
+   "num": 19,
+   "topic": "cpp_basics_refs",
+   "question": "איזו שורה בתכנית הבאה לא עוברת קומפילציה:\n```cpp\n1. void main() {\n2.     int n;\n3.     int &m;\n4.     int *k;\n5. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "כל השורות עוברות קומפילציה",
+     "html": "כל השורות עוברות קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 2",
+     "html": "שורה 2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 3",
+     "html": "שורה 3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "רק שורה 3 שגויה: הפניה (`int &m;`) חייבת להיות מאותחלת. משתנה `int` ומצביע בלי אתחול מתקמפלים.\nהתשובה היא שורה 3 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: only line 3 (`int &m;`, reference without initializer) is an error. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "c",
+   "id": "18A-B-Q19",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "איזו שורה בתכנית הבאה לא עוברת קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. void main() {\n2.     int n;\n3.     int &amp;m;\n4.     int *k;\n5. }</code></pre>",
+   "explanationHtml": "רק שורה 3 שגויה: הפניה (<code class=\"tok\" dir=\"ltr\">int &amp;m;</code>) חייבת להיות מאותחלת. משתנה <code class=\"tok\" dir=\"ltr\">int</code> ומצביע בלי אתחול מתקמפלים.<br>התשובה היא שורה 3 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "359b52b64e4e0a96"
+  },
+  {
+   "num": 20,
+   "topic": "stl_exceptions",
+   "question": "ציור של איזו צורה באמצעות MFC דורש קריאה לשתי פונקציות?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "קו",
+     "html": "קו"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "מלבן",
+     "html": "מלבן"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אליפסה",
+     "html": "אליפסה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "לפי המפתח הרשמי, ציור קו ב-MFC דורש שתי פונקציות: `MoveTo` להזזת נקודת ההתחלה ו-`LineTo` לציור הקו. מלבן ואליפסה מצוירים בפונקציה אחת. התשובה היא א.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "note": "Official key a (highlight). MFC concept question, no code to run; not verified by compile (MFC is not available here).",
+   "contextId": "18A-B-notes",
+   "correctId": "a",
+   "id": "18A-B-Q20",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "ציור של איזו צורה באמצעות MFC דורש קריאה לשתי פונקציות?<br>",
+   "explanationHtml": "לפי המפתח הרשמי, ציור קו ב-MFC דורש שתי פונקציות: <code class=\"tok\" dir=\"ltr\">MoveTo</code> להזזת נקודת ההתחלה ו-<code class=\"tok\" dir=\"ltr\">LineTo</code> לציור הקו. מלבן ואליפסה מצוירים בפונקציה אחת. התשובה היא א.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "dedupKey": "90acb10d9f6a041e"
+  },
+  {
+   "num": 21,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\n#include <vector>\nvoid main() {\n    std::vector<int> v;\n    v.push_back(1);\n    v.push_back(4);\n    std::vector<int>::iterator it = v.begin();\n    int n = *(it++);\n    std::cout << n;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">2</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`4`",
+     "html": "<code class=\"tok\" dir=\"ltr\">4</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`5`",
+     "html": "<code class=\"tok\" dir=\"ltr\">5</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "האופרטור `it++` מחזיר את הערך הישן של האיטרטור, ולכן `*(it++)` הוא האיבר הראשון, `1`, ורק אחר כך האיטרטור מתקדם.\nהפלט הוא `1` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: prints 1 (post-increment returns the old iterator). Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "a",
+   "id": "18A-B-Q21",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\n#include &lt;vector&gt;\nvoid main() {\n    std::vector&lt;int&gt; v;\n    v.push_back(1);\n    v.push_back(4);\n    std::vector&lt;int&gt;::iterator it = v.begin();\n    int n = *(it++);\n    std::cout &lt;&lt; n;\n}</code></pre>",
+   "explanationHtml": "האופרטור <code class=\"tok\" dir=\"ltr\">it++</code> מחזיר את הערך הישן של האיטרטור, ולכן <code class=\"tok\" dir=\"ltr\">*(it++)</code> הוא האיבר הראשון, <code class=\"tok\" dir=\"ltr\">1</code>, ורק אחר כך האיטרטור מתקדם.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">1</code> (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "48540ddda1c795bd"
+  },
+  {
+   "num": 22,
+   "topic": "operator_overloading",
+   "question": "מה צריך לעשות כדי שהתכנית הבאה תעבור קומפילציה?\n```cpp\nclass X{};\nclass Y{};\nvoid main() {\n    X x;\n    Y y;\n    x + y;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `+` שמקבל פרמטר מטיפוס `Y`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר במחלקה `Y` אופרטור `+` שמקבל פרמטר מטיפוס `X`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">Y</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `+` שמקבל פרמטר מטיפוס `X` ופרמטר מטיפוס `Y`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">X</code> ופרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להגדיר במחלקה `Y` אופרטור `+` שמקבל פרמטר מטיפוס `X` ופרמטר מטיפוס `Y`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">Y</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">X</code> ופרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בביטוי `x + y` האופרנד השמאלי הוא `x` מטיפוס `X`, ולכן אופרטור `+` חבר ב-`X` שמקבל פרמטר `Y` מתאים. אופרטור חבר מקבל רק פרמטר אחד (הנוסף הוא `this`), ולכן אפשרויות עם שני פרמטרים שגויות, ואופרטור ב-`Y` מתאים לביטוי `y + x`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: member `X::operator+(Y)` compiles; `Y::operator+(X)` is the wrong direction and a member operator+ with two parameters is invalid. Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "a",
+   "id": "18A-B-Q22",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה צריך לעשות כדי שהתכנית הבאה תעבור קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X{};\nclass Y{};\nvoid main() {\n    X x;\n    Y y;\n    x + y;\n}</code></pre>",
+   "explanationHtml": "בביטוי <code class=\"tok\" dir=\"ltr\">x + y</code> האופרנד השמאלי הוא <code class=\"tok\" dir=\"ltr\">x</code> מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>, ולכן אופרטור <code class=\"tok\" dir=\"ltr\">+</code> חבר ב-<code class=\"tok\" dir=\"ltr\">X</code> שמקבל פרמטר <code class=\"tok\" dir=\"ltr\">Y</code> מתאים. אופרטור חבר מקבל רק פרמטר אחד (הנוסף הוא <code class=\"tok\" dir=\"ltr\">this</code>), ולכן אפשרויות עם שני פרמטרים שגויות, ואופרטור ב-<code class=\"tok\" dir=\"ltr\">Y</code> מתאים לביטוי <code class=\"tok\" dir=\"ltr\">y + x</code>.<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a5eb14edb0880655"
+  },
+  {
+   "num": 23,
+   "topic": "operator_overloading",
+   "question": "מה צריך לעשות כדי שהתכנית הבאה תעבור קומפילציה?\n```cpp\n#include <iostream>\nclass X{};\nvoid main() {\n    X x;\n    std::cout << x;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר פונקציה חדשה במחלקה `X`",
+     "html": "להגדיר פונקציה חדשה במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר פונקציה חדשה מחוץ למחלקה שאיננה חברה של המחלקה `X`",
+     "html": "להגדיר פונקציה חדשה מחוץ למחלקה שאיננה חברה של המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר פונקציה חדשה מחוץ למחלקה שהיא חברה של המחלקה `X`",
+     "html": "להגדיר פונקציה חדשה מחוץ למחלקה שהיא חברה של המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "ההדפסה `std::cout << x` דורשת פונקציה `operator<<` שהאופרנד השמאלי שלה הוא `ostream`, ולכן היא לא יכולה להיות חבר ב-`X`. צריך פונקציה חיצונית. בתכנית הזו פונקציה חיצונית רגילה מספיקה, כי אין גישה לשדות פרטיים (פונקציה friend עובדת גם כן).\nהתשובה לפי המפתח היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: a free `operator<<(ostream&, const X&)` compiles, with or without friend (so option c also works for this program; the key marks only b and the instructions ask for the best answer). A member function cannot do it (it would need `x << cout`).",
+   "contextId": "18A-B-notes",
+   "correctId": "b",
+   "id": "18A-B-Q23",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה צריך לעשות כדי שהתכנית הבאה תעבור קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X{};\nvoid main() {\n    X x;\n    std::cout &lt;&lt; x;\n}</code></pre>",
+   "explanationHtml": "ההדפסה <code class=\"tok\" dir=\"ltr\">std::cout &lt;&lt; x</code> דורשת פונקציה <code class=\"tok\" dir=\"ltr\">operator&lt;&lt;</code> שהאופרנד השמאלי שלה הוא <code class=\"tok\" dir=\"ltr\">ostream</code>, ולכן היא לא יכולה להיות חבר ב-<code class=\"tok\" dir=\"ltr\">X</code>. צריך פונקציה חיצונית. בתכנית הזו פונקציה חיצונית רגילה מספיקה, כי אין גישה לשדות פרטיים (פונקציה friend עובדת גם כן).<br>התשובה לפי המפתח היא ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "04b9bdc10317002a"
+  },
+  {
+   "num": 24,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\ntemplate<typename T> class X {\npublic:\n    static int x;\n    X() { std::cout << ++x; }\n};\ntemplate<typename T> int X<T>::x = 0;\nvoid main() {\n    X<int> a;\n    X<int> b;\n    X<double> c;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`000`",
+     "html": "<code class=\"tok\" dir=\"ltr\">000</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`111`",
+     "html": "<code class=\"tok\" dir=\"ltr\">111</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`121`",
+     "html": "<code class=\"tok\" dir=\"ltr\">121</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שדה סטטי בתבנית משותף לכל האובייקטים של אותו מופע של התבנית. `X<int>` מדפיסה `1` ו-`2`, ו-`X<double>` היא מופע נפרד עם ספירה משלו ומדפיסה `1`.\nהפלט הוא `121` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: prints 121 (each instantiation has its own static). Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "c",
+   "id": "18A-B-Q24",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\ntemplate&lt;typename T&gt; class X {\npublic:\n    static int x;\n    X() { std::cout &lt;&lt; ++x; }\n};\ntemplate&lt;typename T&gt; int X&lt;T&gt;::x = 0;\nvoid main() {\n    X&lt;int&gt; a;\n    X&lt;int&gt; b;\n    X&lt;double&gt; c;\n}</code></pre>",
+   "explanationHtml": "שדה סטטי בתבנית משותף לכל האובייקטים של אותו מופע של התבנית. <code class=\"tok\" dir=\"ltr\">X&lt;int&gt;</code> מדפיסה <code class=\"tok\" dir=\"ltr\">1</code> ו-<code class=\"tok\" dir=\"ltr\">2</code>, ו-<code class=\"tok\" dir=\"ltr\">X&lt;double&gt;</code> היא מופע נפרד עם ספירה משלו ומדפיסה <code class=\"tok\" dir=\"ltr\">1</code>.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">121</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4421be2c0bbc3882"
+  },
+  {
+   "num": 25,
+   "topic": "const_references",
+   "question": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?\n```cpp\n 1. class X {\n 2. public:\n 3.     int x;\n 4.     const int y;\n 5.     X() : x(1), y(1) {}\n 6.     void g() {\n 7.         x = 1;\n 8.         y = 1;\n 9.     }\n10. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 7",
+     "html": "שורה 7"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 8",
+     "html": "שורה 8"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 7 ו-8",
+     "html": "שורות 7 ו-8"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "המתודה `g` אינה `const`, ולכן שורה 7 (`x = 1`) תקינה. שורה 8 (`y = 1`) משנה שדה `const`, שגיאה.\nהתשובה היא שורה 8 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: only line 8 fails (`y` is const; `g` is not a const method so `x = 1` is fine). Agrees.",
+   "contextId": "18A-B-notes",
+   "correctId": "c",
+   "id": "18A-B-Q25",
+   "examCode": "18A-B",
+   "examLabel": "2018 סמסטר א מועד ב",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code> 1. class X {\n 2. public:\n 3.     int x;\n 4.     const int y;\n 5.     X() : x(1), y(1) {}\n 6.     void g() {\n 7.         x = 1;\n 8.         y = 1;\n 9.     }\n10. };</code></pre>",
+   "explanationHtml": "המתודה <code class=\"tok\" dir=\"ltr\">g</code> אינה <code class=\"tok\" dir=\"ltr\">const</code>, ולכן שורה 7 (<code class=\"tok\" dir=\"ltr\">x = 1</code>) תקינה. שורה 8 (<code class=\"tok\" dir=\"ltr\">y = 1</code>) משנה שדה <code class=\"tok\" dir=\"ltr\">const</code>, שגיאה.<br>התשובה היא שורה 8 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "edb9eeaefe26be4b"
+  },
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "נתונות הגדרה של פונקציית `main` והגדרה של פונקציה `f` בה הושמט טיפוס החזרה:\n```cpp\n___ f() {\n    static int x = 0;\n    return x;\n}\nvoid main() { f() = 5; }\n```\nמה צריך להיות הטיפוס שהפונקציה `f` מחזירה כדי שהתוכנית תעבור קומפילציה?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`int`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`int*`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int*</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`int&`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int&amp;</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`T`",
+     "html": "<code class=\"tok\" dir=\"ltr\">T</code>"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההשמה `f() = 5` דורשת שהקריאה תחזיר ערך שמאלי, ולכן הפונקציה חייבת להחזיר הפניה: `int&`. החזרה לפי ערך מחזירה זמני שאי אפשר להשים אליו, ב-`int*` ה-`return x` לא מתקמפל, ו-`T` אינו מוגדר.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: only `int&` compiles. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "c",
+   "id": "18A-C-Q1",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "נתונות הגדרה של פונקציית <code class=\"tok\" dir=\"ltr\">main</code> והגדרה של פונקציה <code class=\"tok\" dir=\"ltr\">f</code> בה הושמט טיפוס החזרה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>___ f() {\n    static int x = 0;\n    return x;\n}\nvoid main() { f() = 5; }</code></pre>מה צריך להיות הטיפוס שהפונקציה <code class=\"tok\" dir=\"ltr\">f</code> מחזירה כדי שהתוכנית תעבור קומפילציה?<br>",
+   "explanationHtml": "ההשמה <code class=\"tok\" dir=\"ltr\">f() = 5</code> דורשת שהקריאה תחזיר ערך שמאלי, ולכן הפונקציה חייבת להחזיר הפניה: <code class=\"tok\" dir=\"ltr\">int&amp;</code>. החזרה לפי ערך מחזירה זמני שאי אפשר להשים אליו, ב-<code class=\"tok\" dir=\"ltr\">int*</code> ה-<code class=\"tok\" dir=\"ltr\">return x</code> לא מתקמפל, ו-<code class=\"tok\" dir=\"ltr\">T</code> אינו מוגדר.<br>התשובה היא תשובה ג.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ae2818ff1155fdad"
+  },
+  {
+   "num": 2,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nclass X {\npublic:\n    int f;\n};\nvoid g(X *x) { x->f = 5; }\nvoid main() {\n    X x;\n    x.f = 3;\n    g(x);\n    std::cout << x.f;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`3`",
+     "html": "<code class=\"tok\" dir=\"ltr\">3</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`5`",
+     "html": "<code class=\"tok\" dir=\"ltr\">5</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה `g` מקבלת מצביע `X*`, אבל הקריאה `g(x)` מעבירה אובייקט `X` ולא את כתובתו. אין המרה מאובייקט למצביע, ולכן יש שגיאת קומפילציה. אילו הקריאה הייתה `g(&x)` היה מודפס `5`.\nהתשובה היא שהתכנית לא עוברת קומפילציה (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: `g(x)` passes an `X` where `X*` is expected, a compile error. The student boxed b (reading the call as `g(&x)`, which is handwritten next to the code, not printed); the printed call is `g(x);`.",
+   "contextId": "18A-C-notes",
+   "correctId": "a",
+   "id": "18A-C-Q2",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    int f;\n};\nvoid g(X *x) { x-&gt;f = 5; }\nvoid main() {\n    X x;\n    x.f = 3;\n    g(x);\n    std::cout &lt;&lt; x.f;\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">g</code> מקבלת מצביע <code class=\"tok\" dir=\"ltr\">X*</code>, אבל הקריאה <code class=\"tok\" dir=\"ltr\">g(x)</code> מעבירה אובייקט <code class=\"tok\" dir=\"ltr\">X</code> ולא את כתובתו. אין המרה מאובייקט למצביע, ולכן יש שגיאת קומפילציה. אילו הקריאה הייתה <code class=\"tok\" dir=\"ltr\">g(&amp;x)</code> היה מודפס <code class=\"tok\" dir=\"ltr\">5</code>.<br>התשובה היא שהתכנית לא עוברת קומפילציה (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0ec5edb17645de4c"
+  },
+  {
+   "num": 3,
+   "topic": "copy_control",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nclass X {\npublic: X(int n) { std::cout << n; }\n};\nX a(1);\nvoid main() {\n    X a(2);\n    X b = a;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`122`",
+     "html": "<code class=\"tok\" dir=\"ltr\">122</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה הגלובלי `a(1)` נבנה לפני `main` ומדפיס `1`. ב-`main` נבנה `a(2)` ומדפיס `2`. השורה `X b = a` יוצרת עותק בעזרת בנאי ההעתקה שהקומפיילר מייצר, והוא לא מדפיס כלום.\nהפלט הוא `12` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: prints 12 (global a(1), local a(2); `X b = a` uses the implicit copy constructor, which prints nothing). The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "c",
+   "id": "18A-C-Q3",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic: X(int n) { std::cout &lt;&lt; n; }\n};\nX a(1);\nvoid main() {\n    X a(2);\n    X b = a;\n}</code></pre>",
+   "explanationHtml": "המשתנה הגלובלי <code class=\"tok\" dir=\"ltr\">a(1)</code> נבנה לפני <code class=\"tok\" dir=\"ltr\">main</code> ומדפיס <code class=\"tok\" dir=\"ltr\">1</code>. ב-<code class=\"tok\" dir=\"ltr\">main</code> נבנה <code class=\"tok\" dir=\"ltr\">a(2)</code> ומדפיס <code class=\"tok\" dir=\"ltr\">2</code>. השורה <code class=\"tok\" dir=\"ltr\">X b = a</code> יוצרת עותק בעזרת בנאי ההעתקה שהקומפיילר מייצר, והוא לא מדפיס כלום.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">12</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "89b09cd4b78e8e43"
+  },
+  {
+   "num": 4,
+   "topic": "const_references",
+   "question": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?\n```cpp\n1. class X {\n2. public:\n3.     X() : x(*this) {}\n4.     X(int a) { x = this; }\n5.     X(int a, int b) { }\n6.     X &x;\n7. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורה 3",
+     "html": "שורה 3"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 5",
+     "html": "שורה 5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 4 ו-5",
+     "html": "שורות 4 ו-5"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "- שורה 3: `x(*this)` מאתחל את שדה ההפניה, תקין.\n- שורה 4: שדה ההפניה לא מאותחל ברשימת האתחול, ובנוסף `x = this` מנסה להשים מצביע להפניה. שגיאה.\n- שורה 5: שדה ההפניה לא מאותחל, שגיאה.\nהתשובה היא שורות 4 ו-5 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: errors on lines 4 (reference member left uninitialized, and `x = this` assigns a pointer to a reference) and 5 (reference member not initialized); line 3 is fine. The student boxed b.",
+   "contextId": "18A-C-notes",
+   "correctId": "d",
+   "id": "18A-C-Q4",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. class X {\n2. public:\n3.     X() : x(*this) {}\n4.     X(int a) { x = this; }\n5.     X(int a, int b) { }\n6.     X &amp;x;\n7. };</code></pre>",
+   "explanationHtml": "- שורה 3: <code class=\"tok\" dir=\"ltr\">x(*this)</code> מאתחל את שדה ההפניה, תקין.<br>- שורה 4: שדה ההפניה לא מאותחל ברשימת האתחול, ובנוסף <code class=\"tok\" dir=\"ltr\">x = this</code> מנסה להשים מצביע להפניה. שגיאה.<br>- שורה 5: שדה ההפניה לא מאותחל, שגיאה.<br>התשובה היא שורות 4 ו-5 (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "9a83f5c00df36642"
+  },
+  {
+   "num": 5,
+   "topic": "friend_this_static",
+   "question": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:\n```cpp\n1. class X {\n2.     friend class Y;\n3.     int a;\n4.     void f(Y y) { y.a = 1; }\n5. };\n6. class Y {\n7.     int a;\n8.     void f(X x) { x.a = 1; }\n9. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 8",
+     "html": "שורה 8"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 4 ו-8",
+     "html": "שורות 4 ו-8"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בשורה 4 המחלקה `Y` עדיין לא מוכרת (היא מוגדרת רק אחרי `X`), ולכן `void f(Y y)` לא מתקמפל. שורה 8 תקינה: `Y` היא friend של `X`, ולכן יש לה גישה ל-`x.a`.\nהתשובה היא שורה 4 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: only line 4 is an error (`Y` is not a complete type there); line 8 is fine because Y is X's friend. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "b",
+   "id": "18A-C-Q5",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. class X {\n2.     friend class Y;\n3.     int a;\n4.     void f(Y y) { y.a = 1; }\n5. };\n6. class Y {\n7.     int a;\n8.     void f(X x) { x.a = 1; }\n9. };</code></pre>",
+   "explanationHtml": "בשורה 4 המחלקה <code class=\"tok\" dir=\"ltr\">Y</code> עדיין לא מוכרת (היא מוגדרת רק אחרי <code class=\"tok\" dir=\"ltr\">X</code>), ולכן <code class=\"tok\" dir=\"ltr\">void f(Y y)</code> לא מתקמפל. שורה 8 תקינה: <code class=\"tok\" dir=\"ltr\">Y</code> היא friend של <code class=\"tok\" dir=\"ltr\">X</code>, ולכן יש לה גישה ל-<code class=\"tok\" dir=\"ltr\">x.a</code>.<br>התשובה היא שורה 4 (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "27a55f0facf48816"
+  },
+  {
+   "num": 6,
+   "topic": "friend_this_static",
+   "question": "מה צריך להיכתב בשורה 3 כדי שהתכנית הבאה תתקמפל ותדפיס 1:\n```cpp\n#include <iostream>\nclass X {\npublic:\n    X& f() { return _____; }\n};\nvoid main() {\n    X x;\n    std::cout << (&x == &x.f());\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`new X`",
+     "html": "<code class=\"tok\" dir=\"ltr\">new X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`X()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">X()</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`this`",
+     "html": "<code class=\"tok\" dir=\"ltr\">this</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`*this`",
+     "html": "<code class=\"tok\" dir=\"ltr\">*this</code>"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה מחזירה `X&`, ולכן צריך להחזיר את האובייקט עצמו: `*this`. התנאי `&x == &x.f()` נכון, והפלט הוא `1`. `new X` ו-`this` הם מצביעים, ו-`X()` הוא זמני שאי אפשר לקשור להפניה לא-const.\nהתשובה היא תשובה ד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: only `*this` compiles and prints 1. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "d",
+   "id": "18A-C-Q6",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה צריך להיכתב בשורה 3 כדי שהתכנית הבאה תתקמפל ותדפיס 1:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    X&amp; f() { return _____; }\n};\nvoid main() {\n    X x;\n    std::cout &lt;&lt; (&amp;x == &amp;x.f());\n}</code></pre>",
+   "explanationHtml": "הפונקציה מחזירה <code class=\"tok\" dir=\"ltr\">X&amp;</code>, ולכן צריך להחזיר את האובייקט עצמו: <code class=\"tok\" dir=\"ltr\">*this</code>. התנאי <code class=\"tok\" dir=\"ltr\">&amp;x == &amp;x.f()</code> נכון, והפלט הוא <code class=\"tok\" dir=\"ltr\">1</code>. <code class=\"tok\" dir=\"ltr\">new X</code> ו-<code class=\"tok\" dir=\"ltr\">this</code> הם מצביעים, ו-<code class=\"tok\" dir=\"ltr\">X()</code> הוא זמני שאי אפשר לקשור להפניה לא-const.<br>התשובה היא תשובה ד.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "232e9204eef375d7"
+  },
+  {
+   "num": 7,
+   "topic": "operator_overloading",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:\n```cpp\nX x;\n2 + x;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `+` שמקבל פרמטר מטיפוס `int`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">int</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `+` שמקבל שני פרמטרים: מטיפוס `int` ומטיפוס `X`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל שני פרמטרים: מטיפוס <code class=\"tok\" dir=\"ltr\">int</code> ומטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר מחוץ למחלקה `X` אופרטור `+` שמקבל פרמטר מטיפוס `int` ופרמטר מטיפוס `X`",
+     "html": "להגדיר מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">int</code> ופרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות (א) ו-(ג) נכונות",
+     "html": "תשובות (א) ו-(ג) נכונות"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בביטוי `2 + x` האופרנד השמאלי הוא `int`, ולכן אופרטור חבר ב-`X` לא יכול לטפל בו (פונקציית חבר נקראת על האופרנד השמאלי). צריך פונקציה חיצונית `operator+(int, X)`.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: a free `operator+(int, X)` compiles; a member `operator+(int)` serves `x + 2`, not `2 + x`; a member with two parameters is invalid. The student boxed b.",
+   "contextId": "18A-C-notes",
+   "correctId": "c",
+   "lockOrder": true,
+   "id": "18A-C-Q7",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>X x;\n2 + x;</code></pre>",
+   "explanationHtml": "בביטוי <code class=\"tok\" dir=\"ltr\">2 + x</code> האופרנד השמאלי הוא <code class=\"tok\" dir=\"ltr\">int</code>, ולכן אופרטור חבר ב-<code class=\"tok\" dir=\"ltr\">X</code> לא יכול לטפל בו (פונקציית חבר נקראת על האופרנד השמאלי). צריך פונקציה חיצונית <code class=\"tok\" dir=\"ltr\">operator+(int, X)</code>.<br>התשובה היא תשובה ג.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "6b11f74ca19b0fb3"
+  },
+  {
+   "num": 8,
+   "topic": "operator_conversions",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:\n```cpp\nclass X {};\nX x(5);\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר בנאי (constructor) במחלקה `X`",
+     "html": "להגדיר בנאי (constructor) במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר אופרטור השמה (`=`) במחלקה `X`",
+     "html": "להגדיר אופרטור השמה (<code class=\"tok\" dir=\"ltr\">=</code>) במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר אופרטור השמה (`=`) מחוץ למחלקה `X`",
+     "html": "להגדיר אופרטור השמה (<code class=\"tok\" dir=\"ltr\">=</code>) מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "כדי ש-`X x(5);` יתקמפל צריך בנאי שמקבל `int`. אופרטורי השמה לא רלוונטיים, כי זו הגדרה של אובייקט חדש.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: `X x(5);` compiles with a constructor `X(int)`; assignment operators do not help. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "a",
+   "id": "18A-C-Q8",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "אופרטורי המרה",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {};\nX x(5);</code></pre>",
+   "explanationHtml": "כדי ש-<code class=\"tok\" dir=\"ltr\">X x(5);</code> יתקמפל צריך בנאי שמקבל <code class=\"tok\" dir=\"ltr\">int</code>. אופרטורי השמה לא רלוונטיים, כי זו הגדרה של אובייקט חדש.<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1126df350f5adf2d"
+  },
+  {
+   "num": 9,
+   "topic": "copy_control",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה\n```cpp\nclass X {};\nX x, y(x);\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר בנאי (constructor) שמקבל פרמטר אחד",
+     "html": "להגדיר בנאי (constructor) שמקבל פרמטר אחד"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר אופרטור `()` שמקבל פרמטר אחד",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">()</code> שמקבל פרמטר אחד"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר פונקציה מחוץ למחלקה `X` שמקבלת פרמטר אחד",
+     "html": "להגדיר פונקציה מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code> שמקבלת פרמטר אחד"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית עוברת קומפילציה כמו שהיא כתובה",
+     "html": "התכנית עוברת קומפילציה כמו שהיא כתובה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "השורה `X x, y(x);` יוצרת את `y` כעותק של `x`, וזה מתבצע בבנאי ההעתקה שהקומפיילר מייצר אוטומטית. לכן הקוד מתקמפל כמו שהוא כתוב.\nהתשובה היא תשובה ד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: `X x, y(x);` already compiles (y is copy-constructed with the implicit copy constructor). The student boxed b and c.",
+   "contextId": "18A-C-notes",
+   "correctId": "d",
+   "id": "18A-C-Q9",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {};\nX x, y(x);</code></pre>",
+   "explanationHtml": "השורה <code class=\"tok\" dir=\"ltr\">X x, y(x);</code> יוצרת את <code class=\"tok\" dir=\"ltr\">y</code> כעותק של <code class=\"tok\" dir=\"ltr\">x</code>, וזה מתבצע בבנאי ההעתקה שהקומפיילר מייצר אוטומטית. לכן הקוד מתקמפל כמו שהוא כתוב.<br>התשובה היא תשובה ד.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "7a77f07f0828a213"
+  },
+  {
+   "num": 10,
+   "topic": "inheritance_access",
+   "question": "מה נכון לגבי השדה `f` במחלקה `X`:\n```cpp\nclass X {\npublic:\n    int f;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מכל מקום בתכנית",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מכל מקום בתכנית"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקה `X`",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` אבל לא מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> אבל לא מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מתוך המחלקות שיורשות מהמחלקה `X` וגם מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> וגם מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "שדה `public` נגיש מכל מקום בתכנית, גם מ-`main`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: a public field is reachable from `main`. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "a",
+   "id": "18A-C-Q10",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "מה נכון לגבי השדה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה <code class=\"tok\" dir=\"ltr\">X</code>:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    int f;\n};</code></pre>",
+   "explanationHtml": "שדה <code class=\"tok\" dir=\"ltr\">public</code> נגיש מכל מקום בתכנית, גם מ-<code class=\"tok\" dir=\"ltr\">main</code>.<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "45e73b9c199a7c72"
+  },
+  {
+   "num": 11,
+   "topic": "inheritance_access",
+   "question": "מה נכון לגבי השדה `f` במחלקה `X`:\n```cpp\nclass X {\n    int f;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מכל מקום בתכנית",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מכל מקום בתכנית"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקה `X`",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` אבל לא מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> אבל לא מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מתוך המחלקות שיורשות מהמחלקה `X` וגם מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> וגם מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "במחלקה (`class`) ברירת המחדל היא `private`. שדה פרטי נגיש רק מתוך המחלקה עצמה (ומ-friend), ולא ממחלקות יורשות.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: the default access of a class is private; `X` reaches `f`, `main` and a derived class do not. The student's box agrees (the student also wrote `private:` next to the code; it is not printed).",
+   "contextId": "18A-C-notes",
+   "correctId": "b",
+   "id": "18A-C-Q11",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "מה נכון לגבי השדה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה <code class=\"tok\" dir=\"ltr\">X</code>:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\n    int f;\n};</code></pre>",
+   "explanationHtml": "במחלקה (<code class=\"tok\" dir=\"ltr\">class</code>) ברירת המחדל היא <code class=\"tok\" dir=\"ltr\">private</code>. שדה פרטי נגיש רק מתוך המחלקה עצמה (ומ-friend), ולא ממחלקות יורשות.<br>התשובה היא תשובה ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "50afb3cf87f504f1"
+  },
+  {
+   "num": 12,
+   "topic": "stl_exceptions",
+   "question": "איזו פונקציה **לא** נקראת בעקבות פתיחת חלון באמצעות MFC?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`OnInitDialog`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnInitDialog</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`OnPaint`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnPaint</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`OnLButtonDown`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnLButtonDown</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות א' וב' נכונות",
+     "html": "תשובות א' וב' נכונות"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "בפתיחת חלון דיאלוג ב-MFC נשלחת ההודעה `WM_INITDIALOG`, ולכן נקראת `OnInitDialog`, ומיד אחריה `WM_PAINT` כדי לצייר את החלון, ולכן נקראת `OnPaint`. `OnLButtonDown` נקראת רק כשהמשתמש לוחץ על כפתור העכבר השמאלי, ולא בעקבות פתיחת החלון. לכן הפונקציה שלא נקראת היא `OnLButtonDown` (תשובה ג). תשובה ד שגויה כי `OnInitDialog` ו-`OnPaint` כן נקראות.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): MFC framework fact, cannot be run. Opening a dialog sends WM_INITDIALOG (OnInitDialog) and WM_PAINT (OnPaint); OnLButtonDown needs a mouse click -> c. No official source; the student's boxes (c and d) are not a key.",
+   "contextId": "18A-C-notes",
+   "correctId": "c",
+   "lockOrder": true,
+   "id": "18A-C-Q12",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "איזו פונקציה <strong>לא</strong> נקראת בעקבות פתיחת חלון באמצעות MFC?<br>",
+   "explanationHtml": "בפתיחת חלון דיאלוג ב-MFC נשלחת ההודעה <code class=\"tok\" dir=\"ltr\">WM_INITDIALOG</code>, ולכן נקראת <code class=\"tok\" dir=\"ltr\">OnInitDialog</code>, ומיד אחריה <code class=\"tok\" dir=\"ltr\">WM_PAINT</code> כדי לצייר את החלון, ולכן נקראת <code class=\"tok\" dir=\"ltr\">OnPaint</code>. <code class=\"tok\" dir=\"ltr\">OnLButtonDown</code> נקראת רק כשהמשתמש לוחץ על כפתור העכבר השמאלי, ולא בעקבות פתיחת החלון. לכן הפונקציה שלא נקראת היא <code class=\"tok\" dir=\"ltr\">OnLButtonDown</code> (תשובה ג). תשובה ד שגויה כי <code class=\"tok\" dir=\"ltr\">OnInitDialog</code> ו-<code class=\"tok\" dir=\"ltr\">OnPaint</code> כן נקראות.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_",
+   "dedupKey": "37524d4a5b5c43e3"
+  },
+  {
+   "num": 13,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\nclass X {\npublic: virtual void f() { std:: cout << 1; }\n};\nclass Y : public X {\npublic: virtual void f() { std::cout << 2; }\n};\nvoid main() {\n    Y y;\n    X *p = &y;\n    p->f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">2</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`21`",
+     "html": "<code class=\"tok\" dir=\"ltr\">21</code>"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה `f` וירטואלית ב-`X`, ולכן הקריאה דרך מצביע `X*` לאובייקט מטיפוס `Y` מפעילה את `Y::f`.\nהפלט הוא `2` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: prints 2 (virtual dispatch). The student boxed a.",
+   "contextId": "18A-C-notes",
+   "correctId": "b",
+   "id": "18A-C-Q13",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic: virtual void f() { std:: cout &lt;&lt; 1; }\n};\nclass Y : public X {\npublic: virtual void f() { std::cout &lt;&lt; 2; }\n};\nvoid main() {\n    Y y;\n    X *p = &amp;y;\n    p-&gt;f();\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> וירטואלית ב-<code class=\"tok\" dir=\"ltr\">X</code>, ולכן הקריאה דרך מצביע <code class=\"tok\" dir=\"ltr\">X*</code> לאובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code> מפעילה את <code class=\"tok\" dir=\"ltr\">Y::f</code>.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">2</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "9fc550f71a4cd940"
+  },
+  {
+   "num": 14,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\nclass X {\npublic:\n    X() { std::cout << 1; }\n    ~X() { std::cout << 2; }\n};\nclass Y : public X{\npublic:\n    Y() { std::cout << 3; }\n    ~Y() { std::cout << 4; }\n};\nvoid main() {\n    X *x = new Y;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`34`",
+     "html": "<code class=\"tok\" dir=\"ltr\">34</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`13`",
+     "html": "<code class=\"tok\" dir=\"ltr\">13</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`134`",
+     "html": "<code class=\"tok\" dir=\"ltr\">134</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`1342`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1342</code>"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האובייקט נוצר ב-`new Y`, ולכן הבנאים רצים בסדר `1` ואז `3`. אין `delete`, ולכן ההורסים לא רצים.\nהפלט הוא `13` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: prints 13 (no delete). The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "b",
+   "id": "18A-C-Q14",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X {\npublic:\n    X() { std::cout &lt;&lt; 1; }\n    ~X() { std::cout &lt;&lt; 2; }\n};\nclass Y : public X{\npublic:\n    Y() { std::cout &lt;&lt; 3; }\n    ~Y() { std::cout &lt;&lt; 4; }\n};\nvoid main() {\n    X *x = new Y;\n}</code></pre>",
+   "explanationHtml": "האובייקט נוצר ב-<code class=\"tok\" dir=\"ltr\">new Y</code>, ולכן הבנאים רצים בסדר <code class=\"tok\" dir=\"ltr\">1</code> ואז <code class=\"tok\" dir=\"ltr\">3</code>. אין <code class=\"tok\" dir=\"ltr\">delete</code>, ולכן ההורסים לא רצים.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">13</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2a7239b990954285"
+  },
+  {
+   "num": 15,
+   "topic": "stl_exceptions",
+   "question": "ב-MFC איזו פונקציה נקראת בעקבות קריאה לפונקציה `Invalidate`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`OnInitDialog`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnInitDialog</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`OnPaint`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnPaint</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`OnLButtonDown`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnLButtonDown</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`OnMouseMove`",
+     "html": "<code class=\"tok\" dir=\"ltr\">OnMouseMove</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "קריאה ל-`Invalidate` מסמנת את החלון כדורש ציור מחדש, ו-MFC קוראת בעקבות זה ל-`OnPaint`. התשובה היא ב, לפי המפתח הרשמי של שאלה זהה.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי של שאלה זהה)_",
+   "note": "Key transferred from the official highlighted key of 18A-B Q15 (same stem and options); MFC question, cannot be run. The student's box on this scan agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "b",
+   "id": "18A-C-Q15",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "ב-MFC איזו פונקציה נקראת בעקבות קריאה לפונקציה <code class=\"tok\" dir=\"ltr\">Invalidate</code>?<br>",
+   "explanationHtml": "קריאה ל-<code class=\"tok\" dir=\"ltr\">Invalidate</code> מסמנת את החלון כדורש ציור מחדש, ו-MFC קוראת בעקבות זה ל-<code class=\"tok\" dir=\"ltr\">OnPaint</code>. התשובה היא ב, לפי המפתח הרשמי של שאלה זהה.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי של שאלה זהה)_",
+   "dedupKey": "163150ef7a4a44be"
+  },
+  {
+   "num": 16,
+   "topic": "abstract_multiple",
+   "question": "בתכנית מוגדרות שלוש מחלקות:\n```cpp\nclass X {\npublic:\n    virtual void f() = 0;\n};\nclass Y : public X {\n    void f() { }\n};\nclass Z : public Y {};\n```\nאיזו מהטענות נכונה:\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוס `Y` אבל לא מטיפוסים `X` ו-`Z`",
+     "html": "ניתן ליצור אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code> אבל לא מטיפוסים <code class=\"tok\" dir=\"ltr\">X</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוסים `Y` ו-`Z` אבל לא מטיפוס `X`",
+     "html": "ניתן ליצור אובייקט מטיפוסים <code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code> אבל לא מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוסים `X`, `Y` ו-`Z`",
+     "html": "ניתן ליצור אובייקט מטיפוסים <code class=\"tok\" dir=\"ltr\">X</code>, <code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן ליצור אובייקט מטיפוסים `X`, `Y` ו-`Z`",
+     "html": "לא ניתן ליצור אובייקט מטיפוסים <code class=\"tok\" dir=\"ltr\">X</code>, <code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code>"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`X` אבסטרקטית בגלל `= 0`, ולכן אי אפשר ליצור ממנה אובייקט. `Y` ממשת את `f`, ולכן אפשר ליצור ממנה אובייקט, וכך גם מ-`Z` שיורשת ממנה.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: `X x;` fails (abstract), `Y y;` and `Z z;` compile. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "b",
+   "id": "18A-C-Q16",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "בתכנית מוגדרות שלוש מחלקות:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    virtual void f() = 0;\n};\nclass Y : public X {\n    void f() { }\n};\nclass Z : public Y {};</code></pre>איזו מהטענות נכונה:<br>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">X</code> אבסטרקטית בגלל <code class=\"tok\" dir=\"ltr\">= 0</code>, ולכן אי אפשר ליצור ממנה אובייקט. <code class=\"tok\" dir=\"ltr\">Y</code> ממשת את <code class=\"tok\" dir=\"ltr\">f</code>, ולכן אפשר ליצור ממנה אובייקט, וכך גם מ-<code class=\"tok\" dir=\"ltr\">Z</code> שיורשת ממנה.<br>התשובה היא תשובה ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3bbf5083f5be7689"
+  },
+  {
+   "num": 17,
+   "topic": "templates",
+   "question": "אילו שורות בתכנית הבאה לא עוברות קומפילציה\n```cpp\n1. template<typename T> class X {};\n2. void main() {\n3.     X x;\n4.     X x(int);\n5.     X x<int>;\n6.     X<int> x;\n7. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 4 ו-5",
+     "html": "שורות 4 ו-5"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 3, 4 ו-5",
+     "html": "שורות 3, 4 ו-5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`X` היא תבנית מחלקה, ולכן חייבים לציין את הארגומנט שלה: `X<int>`.\n- שורה 3: `X x;` בלי ארגומנט, שגיאה.\n- שורה 4: `X x(int);` בלי ארגומנט, שגיאה.\n- שורה 5: `X x<int>;` תחביר שגוי, שגיאה.\n- שורה 6: `X<int> x;` תקינה.\nהתשובה היא שורות 3, 4 ו-5 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (each of lines 3-6 compiled on its own): lines 3 (no template argument), 4 and 5 are errors; line 6 compiles. The student boxed b.",
+   "contextId": "18A-C-notes",
+   "correctId": "c",
+   "id": "18A-C-Q17",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "אילו שורות בתכנית הבאה לא עוברות קומפילציה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. template&lt;typename T&gt; class X {};\n2. void main() {\n3.     X x;\n4.     X x(int);\n5.     X x&lt;int&gt;;\n6.     X&lt;int&gt; x;\n7. }</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">X</code> היא תבנית מחלקה, ולכן חייבים לציין את הארגומנט שלה: <code class=\"tok\" dir=\"ltr\">X&lt;int&gt;</code>.<br>- שורה 3: <code class=\"tok\" dir=\"ltr\">X x;</code> בלי ארגומנט, שגיאה.<br>- שורה 4: <code class=\"tok\" dir=\"ltr\">X x(int);</code> בלי ארגומנט, שגיאה.<br>- שורה 5: <code class=\"tok\" dir=\"ltr\">X x&lt;int&gt;;</code> תחביר שגוי, שגיאה.<br>- שורה 6: <code class=\"tok\" dir=\"ltr\">X&lt;int&gt; x;</code> תקינה.<br>התשובה היא שורות 3, 4 ו-5 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "57f4e5e28d65c1f5"
+  },
+  {
+   "num": 18,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <vector>\n#include <iostream>\nvoid main() {\n    std::vector<int> v;\n    v.push_back(0);\n    v.push_back(1);\n    v.push_back(2);\n    v.insert(v.end(), 9);\n    for (int i = 0; i < v.size(); ++i) std::cout << v[i];\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`9012`",
+     "html": "<code class=\"tok\" dir=\"ltr\">9012</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`0912`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0912</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`0192`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0192</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`0129`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0129</code>"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "אחרי שלוש ההוספות הווקטור הוא `0 1 2`. `insert(v.end(), 9)` מוסיף את 9 בסוף, ומתקבל `0 1 2 9`.\nהפלט הוא `0129` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: prints 0129. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "d",
+   "id": "18A-C-Q18",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\n#include &lt;iostream&gt;\nvoid main() {\n    std::vector&lt;int&gt; v;\n    v.push_back(0);\n    v.push_back(1);\n    v.push_back(2);\n    v.insert(v.end(), 9);\n    for (int i = 0; i &lt; v.size(); ++i) std::cout &lt;&lt; v[i];\n}</code></pre>",
+   "explanationHtml": "אחרי שלוש ההוספות הווקטור הוא <code class=\"tok\" dir=\"ltr\">0 1 2</code>. <code class=\"tok\" dir=\"ltr\">insert(v.end(), 9)</code> מוסיף את 9 בסוף, ומתקבל <code class=\"tok\" dir=\"ltr\">0 1 2 9</code>.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">0129</code> (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "dfdb119234dccca6"
+  },
+  {
+   "num": 19,
+   "topic": "cpp_basics_refs",
+   "question": "איזו שורה בתכנית הבאה לא עוברת קומפילציה:\n```cpp\n1. void main() {\n2.     int n;\n3.     int &m;\n4.     int *k;\n5. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "כל השורות עוברות קומפילציה",
+     "html": "כל השורות עוברות קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 2",
+     "html": "שורה 2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 3",
+     "html": "שורה 3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "רק שורה 3 שגויה: הפניה (`int &m;`) חייבת להיות מאותחלת. משתנה `int` ומצביע בלי אתחול מתקמפלים.\nהתשובה היא שורה 3 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: only line 3 is an error. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "c",
+   "id": "18A-C-Q19",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "איזו שורה בתכנית הבאה לא עוברת קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. void main() {\n2.     int n;\n3.     int &amp;m;\n4.     int *k;\n5. }</code></pre>",
+   "explanationHtml": "רק שורה 3 שגויה: הפניה (<code class=\"tok\" dir=\"ltr\">int &amp;m;</code>) חייבת להיות מאותחלת. משתנה <code class=\"tok\" dir=\"ltr\">int</code> ומצביע בלי אתחול מתקמפלים.<br>התשובה היא שורה 3 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "359b52b64e4e0a96"
+  },
+  {
+   "num": 20,
+   "topic": "stl_exceptions",
+   "question": "ציור של איזו צורה באמצעות MFC דורש קריאה לשתי פונקציות?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "קו",
+     "html": "קו"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "מלבן",
+     "html": "מלבן"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אליפסה",
+     "html": "אליפסה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "לפי המפתח הרשמי של שאלה זהה, ציור קו ב-MFC דורש שתי פונקציות: `MoveTo` להזזת נקודת ההתחלה ו-`LineTo` לציור הקו. התשובה היא א.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי של שאלה זהה)_",
+   "note": "Key transferred from the official highlighted key of 18A-B Q20 (same stem and options); MFC question, cannot be run. The student's box on this scan agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "a",
+   "id": "18A-C-Q20",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "ציור של איזו צורה באמצעות MFC דורש קריאה לשתי פונקציות?<br>",
+   "explanationHtml": "לפי המפתח הרשמי של שאלה זהה, ציור קו ב-MFC דורש שתי פונקציות: <code class=\"tok\" dir=\"ltr\">MoveTo</code> להזזת נקודת ההתחלה ו-<code class=\"tok\" dir=\"ltr\">LineTo</code> לציור הקו. התשובה היא א.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי של שאלה זהה)_",
+   "dedupKey": "90acb10d9f6a041e"
+  },
+  {
+   "num": 21,
+   "topic": "inheritance_access",
+   "question": "בתכנית מוגדרות שתי מחלקות `X` ו-`Y`. מה ניתן להגיד על היחס ביניהן בהנחה הקטע הקוד הבא מתקמפל:\n```cpp\n1. Y y;\n2. X &x = y;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "המחלקה `X` יורשת מהמחלקה `Y`",
+     "html": "המחלקה <code class=\"tok\" dir=\"ltr\">X</code> יורשת מהמחלקה <code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "המחלקה `Y` יורשת מהמחלקה `X`",
+     "html": "המחלקה <code class=\"tok\" dir=\"ltr\">Y</code> יורשת מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "במחלקה `X` יש שדה מטיפוס `Y`",
+     "html": "במחלקה <code class=\"tok\" dir=\"ltr\">X</code> יש שדה מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "במחלקה `Y` יש שדה מטיפוס `X`",
+     "html": "במחלקה <code class=\"tok\" dir=\"ltr\">Y</code> יש שדה מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "כדי ש-`X &x = y;` יתקמפל, צריך שאפשר יהיה להמיר אובייקט `Y` להפניה ל-`X`. זה קורה כש-`Y` יורשת מ-`X` (המרה מנגזרת לבסיס). אם ל-`X` או ל-`Y` רק יש שדה מהטיפוס של השנייה, אין המרה כזו.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: `X &x = y;` compiles when Y derives from X; it fails when X derives from Y or when either class merely holds a field of the other type (a conversion operator in Y could also make it compile, but that is not among the options). The student boxed a.",
+   "contextId": "18A-C-notes",
+   "correctId": "b",
+   "id": "18A-C-Q21",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בתכנית מוגדרות שתי מחלקות <code class=\"tok\" dir=\"ltr\">X</code> ו-<code class=\"tok\" dir=\"ltr\">Y</code>. מה ניתן להגיד על היחס ביניהן בהנחה הקטע הקוד הבא מתקמפל:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. Y y;\n2. X &amp;x = y;</code></pre>",
+   "explanationHtml": "כדי ש-<code class=\"tok\" dir=\"ltr\">X &amp;x = y;</code> יתקמפל, צריך שאפשר יהיה להמיר אובייקט <code class=\"tok\" dir=\"ltr\">Y</code> להפניה ל-<code class=\"tok\" dir=\"ltr\">X</code>. זה קורה כש-<code class=\"tok\" dir=\"ltr\">Y</code> יורשת מ-<code class=\"tok\" dir=\"ltr\">X</code> (המרה מנגזרת לבסיס). אם ל-<code class=\"tok\" dir=\"ltr\">X</code> או ל-<code class=\"tok\" dir=\"ltr\">Y</code> רק יש שדה מהטיפוס של השנייה, אין המרה כזו.<br>התשובה היא תשובה ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "75f9c030d43901b7"
+  },
+  {
+   "num": 22,
+   "topic": "operator_overloading",
+   "question": "מה צריך לעשות כדי שהתכנית הבאה תעבור קומפילציה?\n```cpp\nclass X{};\nclass Y{};\nvoid main() {\n    X x;\n    Y y;\n    x + y;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `+` שמקבל פרמטר מטיפוס `Y`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר במחלקה `Y` אופרטור `+` שמקבל פרמטר מטיפוס `X`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">Y</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `+` שמקבל פרמטר מטיפוס `X` ופרמטר מטיפוס `Y`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">X</code> ופרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להגדיר במחלקה `Y` אופרטור `+` שמקבל פרמטר מטיפוס `X` ופרמטר מטיפוס `Y`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">Y</code> אופרטור <code class=\"tok\" dir=\"ltr\">+</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">X</code> ופרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code>"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בביטוי `x + y` האופרנד השמאלי הוא `x` מטיפוס `X`, ולכן אופרטור `+` חבר ב-`X` שמקבל פרמטר `Y` מתאים. אופרטור חבר מקבל פרמטר אחד בלבד (השני הוא `this`), ואופרטור ב-`Y` מתאים לביטוי `y + x`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: member `X::operator+(Y)` compiles; the others do not. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "a",
+   "id": "18A-C-Q22",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה צריך לעשות כדי שהתכנית הבאה תעבור קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X{};\nclass Y{};\nvoid main() {\n    X x;\n    Y y;\n    x + y;\n}</code></pre>",
+   "explanationHtml": "בביטוי <code class=\"tok\" dir=\"ltr\">x + y</code> האופרנד השמאלי הוא <code class=\"tok\" dir=\"ltr\">x</code> מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>, ולכן אופרטור <code class=\"tok\" dir=\"ltr\">+</code> חבר ב-<code class=\"tok\" dir=\"ltr\">X</code> שמקבל פרמטר <code class=\"tok\" dir=\"ltr\">Y</code> מתאים. אופרטור חבר מקבל פרמטר אחד בלבד (השני הוא <code class=\"tok\" dir=\"ltr\">this</code>), ואופרטור ב-<code class=\"tok\" dir=\"ltr\">Y</code> מתאים לביטוי <code class=\"tok\" dir=\"ltr\">y + x</code>.<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a5eb14edb0880655"
+  },
+  {
+   "num": 23,
+   "topic": "operator_overloading",
+   "question": "מה צריך לעשות כדי שהתכנית הבאה תעבור קומפילציה?\n```cpp\n#include <iostream>\nclass X{};\nvoid main() {\n    X x;\n    std::cin >> x;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר פונקציה חדשה במחלקה `X`",
+     "html": "להגדיר פונקציה חדשה במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר פונקציה חדשה מחוץ למחלקה שאיננה חברה של המחלקה `X`",
+     "html": "להגדיר פונקציה חדשה מחוץ למחלקה שאיננה חברה של המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר פונקציה חדשה מחוץ למחלקה שהיא חברה של המחלקה `X`",
+     "html": "להגדיר פונקציה חדשה מחוץ למחלקה שהיא חברה של המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "הביטוי `std::cin >> x` דורש `operator>>` שהאופרנד השמאלי שלה הוא `istream`, ולכן היא לא יכולה להיות חבר ב-`X`. צריך פונקציה חיצונית. כאן פונקציה חיצונית רגילה מספיקה, כי אין גישה לשדות פרטיים (פונקציה friend עובדת גם כן). התשובה ב נבחרה בהתאם למפתח של שאלה דומה במבחן אחר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key b by analogy with the official key of 18A-B Q23 (same options, `cout <<`); the clang++ run shows that a free non-friend `operator>>(istream&, X&)` compiles, and so does a friend one (option c), while a member function does not. The student's box agrees with b.",
+   "contextId": "18A-C-notes",
+   "correctId": "b",
+   "id": "18A-C-Q23",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה צריך לעשות כדי שהתכנית הבאה תעבור קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass X{};\nvoid main() {\n    X x;\n    std::cin &gt;&gt; x;\n}</code></pre>",
+   "explanationHtml": "הביטוי <code class=\"tok\" dir=\"ltr\">std::cin &gt;&gt; x</code> דורש <code class=\"tok\" dir=\"ltr\">operator&gt;&gt;</code> שהאופרנד השמאלי שלה הוא <code class=\"tok\" dir=\"ltr\">istream</code>, ולכן היא לא יכולה להיות חבר ב-<code class=\"tok\" dir=\"ltr\">X</code>. צריך פונקציה חיצונית. כאן פונקציה חיצונית רגילה מספיקה, כי אין גישה לשדות פרטיים (פונקציה friend עובדת גם כן). התשובה ב נבחרה בהתאם למפתח של שאלה דומה במבחן אחר.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "946aaff850baf599"
+  },
+  {
+   "num": 24,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nint x = 0;\ntemplate<typename T> class X {\npublic:\n    X() { std::cout << ++x; }\n};\nvoid main() {\n    X<int> a;\n    X<int> b;\n    X<double> c;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`000`",
+     "html": "<code class=\"tok\" dir=\"ltr\">000</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`111`",
+     "html": "<code class=\"tok\" dir=\"ltr\">111</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`121`",
+     "html": "<code class=\"tok\" dir=\"ltr\">121</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "כאן `x` הוא משתנה גלובלי יחיד ולא שדה סטטי של התבנית, ולכן כל שלושת האובייקטים (גם מופעים שונים של התבנית) מגדילים אותו. מודפס `1`, `2`, `3`.\nהפלט הוא `123` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: prints 123 (here `x` is one global variable, not a static member of the template, so all instantiations share it). The student boxed c.",
+   "contextId": "18A-C-notes",
+   "correctId": "d",
+   "id": "18A-C-Q24",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nint x = 0;\ntemplate&lt;typename T&gt; class X {\npublic:\n    X() { std::cout &lt;&lt; ++x; }\n};\nvoid main() {\n    X&lt;int&gt; a;\n    X&lt;int&gt; b;\n    X&lt;double&gt; c;\n}</code></pre>",
+   "explanationHtml": "כאן <code class=\"tok\" dir=\"ltr\">x</code> הוא משתנה גלובלי יחיד ולא שדה סטטי של התבנית, ולכן כל שלושת האובייקטים (גם מופעים שונים של התבנית) מגדילים אותו. מודפס <code class=\"tok\" dir=\"ltr\">1</code>, <code class=\"tok\" dir=\"ltr\">2</code>, <code class=\"tok\" dir=\"ltr\">3</code>.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">123</code> (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8d24c79f120f201e"
+  },
+  {
+   "num": 25,
+   "topic": "const_references",
+   "question": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?\n```cpp\n 1. class X {\n 2. public:\n 3.     int x;\n 4.     const int y;\n 5.     X() : x(1), y(1) {}\n 6.     void g() {\n 7.         x = 1;\n 8.         y = 1;\n 9.     }\n10. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 7",
+     "html": "שורה 7"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 8",
+     "html": "שורה 8"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 7 ו-8",
+     "html": "שורות 7 ו-8"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המתודה `g` אינה `const`, ולכן שורה 7 (`x = 1`) תקינה. שורה 8 (`y = 1`) משנה שדה `const`, שגיאה.\nהתשובה היא שורה 8 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run: only line 8 fails. The student's box agrees.",
+   "contextId": "18A-C-notes",
+   "correctId": "c",
+   "id": "18A-C-Q25",
+   "examCode": "18A-C",
+   "examLabel": "2018 סמסטר א מועד ג",
+   "year": 2018,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "אילו שורות במחלקה הבאה גורמות לשגיאת קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code> 1. class X {\n 2. public:\n 3.     int x;\n 4.     const int y;\n 5.     X() : x(1), y(1) {}\n 6.     void g() {\n 7.         x = 1;\n 8.         y = 1;\n 9.     }\n10. };</code></pre>",
+   "explanationHtml": "המתודה <code class=\"tok\" dir=\"ltr\">g</code> אינה <code class=\"tok\" dir=\"ltr\">const</code>, ולכן שורה 7 (<code class=\"tok\" dir=\"ltr\">x = 1</code>) תקינה. שורה 8 (<code class=\"tok\" dir=\"ltr\">y = 1</code>) משנה שדה <code class=\"tok\" dir=\"ltr\">const</code>, שגיאה.<br>התשובה היא שורה 8 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "edb9eeaefe26be4b"
+  },
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "מה גורם לשגיאת קומפילציה\n```cpp\n1. int x = 5;\n2. int &r = x;\n3. r = 7;\n4. int &s = x;\n5. s = 7\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 2 ו-4",
+     "html": "שורות 2 ו-4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורה 5",
+     "html": "שורה 5"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הקוד מתקמפל: `r` ו-`s` הן הפניות מאותחלות ל-`x`, וההשמות דרכן תקינות. (בשורה 5 מודפס בדף `s = 7` בלי נקודה-פסיק, כנראה טעות דפוס, ואם משלימים אותה אין שגיאה באף שורה.)\nהתשובה היא אף שורה (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: the snippet is printed with no `;` after `s = 7` on line 5 (a typo; with the `;` added there is no error on any line). Agrees with the key on that reading.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "id": "19A-A-Q1",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה גורם לשגיאת קומפילציה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. int x = 5;\n2. int &amp;r = x;\n3. r = 7;\n4. int &amp;s = x;\n5. s = 7</code></pre>",
+   "explanationHtml": "הקוד מתקמפל: <code class=\"tok\" dir=\"ltr\">r</code> ו-<code class=\"tok\" dir=\"ltr\">s</code> הן הפניות מאותחלות ל-<code class=\"tok\" dir=\"ltr\">x</code>, וההשמות דרכן תקינות. (בשורה 5 מודפס בדף <code class=\"tok\" dir=\"ltr\">s = 7</code> בלי נקודה-פסיק, כנראה טעות דפוס, ואם משלימים אותה אין שגיאה באף שורה.)<br>התשובה היא אף שורה (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "30bfc5a8f0d44d76"
+  },
+  {
+   "num": 2,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התוכנית\n```cpp\n#include <iostream>\nint & f(int &x, int  y) { x=--y; return x; }\nvoid main() { int x=4; std::cout << f(x,x)++ ; std::cout << ++x;}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`45`",
+     "html": "<code class=\"tok\" dir=\"ltr\">45</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`44`",
+     "html": "<code class=\"tok\" dir=\"ltr\">44</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`35`",
+     "html": "<code class=\"tok\" dir=\"ltr\">35</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בקריאה `f(x,x)` הפרמטר `x` הוא הפניה ל-`x` של `main`, ו-`y` הוא עותק. `x = --y` נותן `y` = 3 ו-`x` = 3, והפונקציה מחזירה הפניה ל-`x`. הביטוי `f(x,x)++` מדפיס את הערך 3 ואז מגדיל את `x` ל-4. אחר כך `++x` מדפיס 5.\nהפלט הוא `35` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: prints 35 (y is a copy: x = 3, f returns x, post-increment prints 3, then ++x prints 5). Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "d",
+   "id": "19A-A-Q2",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התוכנית<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nint &amp; f(int &amp;x, int  y) { x=--y; return x; }\nvoid main() { int x=4; std::cout &lt;&lt; f(x,x)++ ; std::cout &lt;&lt; ++x;}</code></pre>",
+   "explanationHtml": "בקריאה <code class=\"tok\" dir=\"ltr\">f(x,x)</code> הפרמטר <code class=\"tok\" dir=\"ltr\">x</code> הוא הפניה ל-<code class=\"tok\" dir=\"ltr\">x</code> של <code class=\"tok\" dir=\"ltr\">main</code>, ו-<code class=\"tok\" dir=\"ltr\">y</code> הוא עותק. <code class=\"tok\" dir=\"ltr\">x = --y</code> נותן <code class=\"tok\" dir=\"ltr\">y</code> = 3 ו-<code class=\"tok\" dir=\"ltr\">x</code> = 3, והפונקציה מחזירה הפניה ל-<code class=\"tok\" dir=\"ltr\">x</code>. הביטוי <code class=\"tok\" dir=\"ltr\">f(x,x)++</code> מדפיס את הערך 3 ואז מגדיל את <code class=\"tok\" dir=\"ltr\">x</code> ל-4. אחר כך <code class=\"tok\" dir=\"ltr\">++x</code> מדפיס 5.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">35</code> (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4c436a7cb927f112"
+  },
+  {
+   "num": 3,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התוכנית\n```cpp\nint funC(int i=10) {return i+1;}\nint funC() {return 8;}\n#include <iostream>\nvoid main () { std::cout << funC() << funC(8); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`89`",
+     "html": "<code class=\"tok\" dir=\"ltr\">89</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`88`",
+     "html": "<code class=\"tok\" dir=\"ltr\">88</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`99`",
+     "html": "<code class=\"tok\" dir=\"ltr\">99</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הקריאה `funC()` דו-משמעית: היא מתאימה גם ל-`funC()` וגם ל-`funC(int i=10)` עם ערך ברירת המחדל. הקומפיילר מדווח על שגיאה.\nהתשובה היא שהתכנית לא עוברת קומפילציה (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: `funC()` is ambiguous between `funC()` and `funC(int i=10)`: compile error. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "id": "19A-A-Q3",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התוכנית<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int funC(int i=10) {return i+1;}\nint funC() {return 8;}\n#include &lt;iostream&gt;\nvoid main () { std::cout &lt;&lt; funC() &lt;&lt; funC(8); }</code></pre>",
+   "explanationHtml": "הקריאה <code class=\"tok\" dir=\"ltr\">funC()</code> דו-משמעית: היא מתאימה גם ל-<code class=\"tok\" dir=\"ltr\">funC()</code> וגם ל-<code class=\"tok\" dir=\"ltr\">funC(int i=10)</code> עם ערך ברירת המחדל. הקומפיילר מדווח על שגיאה.<br>התשובה היא שהתכנית לא עוברת קומפילציה (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a18f3fff590993e4"
+  },
+  {
+   "num": 4,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nusing namespace std;\nint &f(int &i)\n{\n    static int r = 0;\n    r+=i;\n    return r;\n}\nvoid main()\n{\n    int i = 5;\n    f(i) += i;\n    cout << f(i) << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`5`",
+     "html": "<code class=\"tok\" dir=\"ltr\">5</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`10`",
+     "html": "<code class=\"tok\" dir=\"ltr\">10</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`15`",
+     "html": "<code class=\"tok\" dir=\"ltr\">15</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`20`",
+     "html": "<code class=\"tok\" dir=\"ltr\">20</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "המשתנה `r` סטטי ושומר את ערכו בין קריאות. הקריאה הראשונה מוסיפה 5 ל-`r` (5) ומחזירה הפניה אליו, ו-`+= i` מעלה אותו ל-10. הקריאה השנייה מוסיפה עוד 5 ומדפיסה 15.\nהפלט הוא `15` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: prints 15 (r = 5, then `+= i` makes it 10, the second call adds 5 more). Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "c",
+   "id": "19A-A-Q4",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\nint &amp;f(int &amp;i)\n{\n    static int r = 0;\n    r+=i;\n    return r;\n}\nvoid main()\n{\n    int i = 5;\n    f(i) += i;\n    cout &lt;&lt; f(i) &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "המשתנה <code class=\"tok\" dir=\"ltr\">r</code> סטטי ושומר את ערכו בין קריאות. הקריאה הראשונה מוסיפה 5 ל-<code class=\"tok\" dir=\"ltr\">r</code> (5) ומחזירה הפניה אליו, ו-<code class=\"tok\" dir=\"ltr\">+= i</code> מעלה אותו ל-10. הקריאה השנייה מוסיפה עוד 5 ומדפיסה 15.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">15</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3e7617c8f96aac83"
+  },
+  {
+   "num": 5,
+   "topic": "friend_this_static",
+   "question": "נתונות הגדרות של מחלקות `A` ו-`B`:\n```cpp\nclass A { … };\nclass B { friend class A; …};\n```\nמשמעות הגדרות היא:\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "למחלקה `A` מותר לגשת לכל משתני המחלקה `B`",
+     "html": "למחלקה <code class=\"tok\" dir=\"ltr\">A</code> מותר לגשת לכל משתני המחלקה <code class=\"tok\" dir=\"ltr\">B</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "למחלקה `B` מותר לגשת לכל משתני המחלקה `A`",
+     "html": "למחלקה <code class=\"tok\" dir=\"ltr\">B</code> מותר לגשת לכל משתני המחלקה <code class=\"tok\" dir=\"ltr\">A</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "למחלקה `A` מותר לגשת לכל משתני המחלקה `B` ולהיפך",
+     "html": "למחלקה <code class=\"tok\" dir=\"ltr\">A</code> מותר לגשת לכל משתני המחלקה <code class=\"tok\" dir=\"ltr\">B</code> ולהיפך"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "למחלקה `A` מותר לגשת למשתני המחלקה `B` שמוגדרים `public` ו-`protected` אבל לא `private`",
+     "html": "למחלקה <code class=\"tok\" dir=\"ltr\">A</code> מותר לגשת למשתני המחלקה <code class=\"tok\" dir=\"ltr\">B</code> שמוגדרים <code class=\"tok\" dir=\"ltr\">public</code> ו-<code class=\"tok\" dir=\"ltr\">protected</code> אבל לא <code class=\"tok\" dir=\"ltr\">private</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההצהרה `friend class A;` בתוך `B` נותנת למחלקה `A` גישה לכל החברים של `B`, כולל הפרטיים. הידידות חד-כיוונית, ולכן ל-`B` אין גישה אוטומטית לחברי `A`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: with `friend class A;` inside B, A's members read B's private fields; B cannot read A's private fields. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "id": "19A-A-Q5",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "נתונות הגדרות של מחלקות <code class=\"tok\" dir=\"ltr\">A</code> ו-<code class=\"tok\" dir=\"ltr\">B</code>:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A { … };\nclass B { friend class A; …};</code></pre>משמעות הגדרות היא:<br>",
+   "explanationHtml": "ההצהרה <code class=\"tok\" dir=\"ltr\">friend class A;</code> בתוך <code class=\"tok\" dir=\"ltr\">B</code> נותנת למחלקה <code class=\"tok\" dir=\"ltr\">A</code> גישה לכל החברים של <code class=\"tok\" dir=\"ltr\">B</code>, כולל הפרטיים. הידידות חד-כיוונית, ולכן ל-<code class=\"tok\" dir=\"ltr\">B</code> אין גישה אוטומטית לחברי <code class=\"tok\" dir=\"ltr\">A</code>.<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1a3ecd33494ab171"
+  },
+  {
+   "num": 6,
+   "topic": "classes_ctor_dtor",
+   "question": "הנח שהוגדרה מחלקה בשם `A` (בעלת בנאי ברירת מחדל (default constructor)) והתבונן במשפט הבא:\n```cpp\nA *a = new A;\n```\nמתי ייקרא ההורס (destructor) של המחלקה `A`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "בעקבות הפעלת אופרטור `delete` על ההמשתנה `a`",
+     "html": "בעקבות הפעלת אופרטור <code class=\"tok\" dir=\"ltr\">delete</code> על ההמשתנה <code class=\"tok\" dir=\"ltr\">a</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בסוף תחום ההגדרה בו הוגדר המשתנה `a`",
+     "html": "בסוף תחום ההגדרה בו הוגדר המשתנה <code class=\"tok\" dir=\"ltr\">a</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תשובות (א) ו-(ב) נכונות",
+     "html": "תשובות (א) ו-(ב) נכונות"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "עבור אובייקט שנוצר ב-`new`, ההורס נקרא רק כשמפעילים `delete`. כשהמצביע `a` יוצא מהתחום האובייקט לא נהרס (דליפת זיכרון).\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: the destructor message appears only after `delete a`; a pointer leaving its scope destroys nothing. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "lockOrder": true,
+   "id": "19A-A-Q6",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "הנח שהוגדרה מחלקה בשם <code class=\"tok\" dir=\"ltr\">A</code> (בעלת בנאי ברירת מחדל (default constructor)) והתבונן במשפט הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>A *a = new A;</code></pre>מתי ייקרא ההורס (destructor) של המחלקה <code class=\"tok\" dir=\"ltr\">A</code>?<br>",
+   "explanationHtml": "עבור אובייקט שנוצר ב-<code class=\"tok\" dir=\"ltr\">new</code>, ההורס נקרא רק כשמפעילים <code class=\"tok\" dir=\"ltr\">delete</code>. כשהמצביע <code class=\"tok\" dir=\"ltr\">a</code> יוצא מהתחום האובייקט לא נהרס (דליפת זיכרון).<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8ff79a182cdd749f"
+  },
+  {
+   "num": 7,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nusing namespace std;\nclass X {\npublic:\n    X(int i) { n = i;  cout << i; }\n    ~X() { cout << n; }\n    int n;\n};\nint f() {\n    X x1(1);\n    return x1.n;\n}\nX x2(2);\nint main() {\n    X x3(3);\n    cout << f();\n    static X x4(4);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`231114342`",
+     "html": "<code class=\"tok\" dir=\"ltr\">231114342</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`23411142`",
+     "html": "<code class=\"tok\" dir=\"ltr\">23411142</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`23114342`",
+     "html": "<code class=\"tok\" dir=\"ltr\">23114342</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הסדר: המשתנה הגלובלי `x2(2)` נבנה קודם (2), ואז `x3(3)` ב-`main` (3). הקריאה ל-`f` בונה את `x1` (1), מעתיקה את `n`, והורסת את `x1` (1) לפני שהערך המוחזר מודפס (1). אחר כך נבנה הסטטי `x4(4)` (4). בסיום `main` נהרס `x3` (3), ואחריו הסטטי `x4` (4) והגלובלי `x2` (2), בסדר הפוך לבנייה.\nהפלט הוא `231114342` (תשובה א). בדף לא סומנה תשובה לשאלה זו, והתשובה נקבעה מהרצת הקוד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No highlight on the paper for this question. Key derived from the clang++ run: 231114342 (x2, x3, then f: x1 ctor 1, x1 dtor 1, prints 1; x4 ctor 4; at exit x3, x4, x2 destroyed: 3 4 2). Option a matches exactly.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "id": "19A-A-Q7",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\nclass X {\npublic:\n    X(int i) { n = i;  cout &lt;&lt; i; }\n    ~X() { cout &lt;&lt; n; }\n    int n;\n};\nint f() {\n    X x1(1);\n    return x1.n;\n}\nX x2(2);\nint main() {\n    X x3(3);\n    cout &lt;&lt; f();\n    static X x4(4);\n}</code></pre>",
+   "explanationHtml": "הסדר: המשתנה הגלובלי <code class=\"tok\" dir=\"ltr\">x2(2)</code> נבנה קודם (2), ואז <code class=\"tok\" dir=\"ltr\">x3(3)</code> ב-<code class=\"tok\" dir=\"ltr\">main</code> (3). הקריאה ל-<code class=\"tok\" dir=\"ltr\">f</code> בונה את <code class=\"tok\" dir=\"ltr\">x1</code> (1), מעתיקה את <code class=\"tok\" dir=\"ltr\">n</code>, והורסת את <code class=\"tok\" dir=\"ltr\">x1</code> (1) לפני שהערך המוחזר מודפס (1). אחר כך נבנה הסטטי <code class=\"tok\" dir=\"ltr\">x4(4)</code> (4). בסיום <code class=\"tok\" dir=\"ltr\">main</code> נהרס <code class=\"tok\" dir=\"ltr\">x3</code> (3), ואחריו הסטטי <code class=\"tok\" dir=\"ltr\">x4</code> (4) והגלובלי <code class=\"tok\" dir=\"ltr\">x2</code> (2), בסדר הפוך לבנייה.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">231114342</code> (תשובה א). בדף לא סומנה תשובה לשאלה זו, והתשובה נקבעה מהרצת הקוד.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "5b8b21757b8eb94e"
+  },
+  {
+   "num": 8,
+   "topic": "classes_ctor_dtor",
+   "question": "איזו מהפונקציות הבאות לא קיימת במחלקה שמוגדרת באופן הבא: `A{};`\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "בנאי (constructor)",
+     "html": "בנאי (constructor)"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אופרטור השמה (`=`)",
+     "html": "אופרטור השמה (<code class=\"tok\" dir=\"ltr\">=</code>)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אופרטור השוואה (`==`)",
+     "html": "אופרטור השוואה (<code class=\"tok\" dir=\"ltr\">==</code>)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הורס (destructor)",
+     "html": "הורס (destructor)"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הקומפיילר מייצר למחלקה ריקה בנאי, אופרטור השמה והורס. הוא לא מייצר אופרטור השוואה `==`, ולכן `a == b` לא מתקמפל.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run on `class A{};`: construction, assignment and destruction compile; `a == b` does not. Agrees (the paper prints `A{};` without `class`).",
+   "contextId": "19A-A-notes",
+   "correctId": "c",
+   "id": "19A-A-Q8",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "איזו מהפונקציות הבאות לא קיימת במחלקה שמוגדרת באופן הבא: <code class=\"tok\" dir=\"ltr\">A{};</code><br>",
+   "explanationHtml": "הקומפיילר מייצר למחלקה ריקה בנאי, אופרטור השמה והורס. הוא לא מייצר אופרטור השוואה <code class=\"tok\" dir=\"ltr\">==</code>, ולכן <code class=\"tok\" dir=\"ltr\">a == b</code> לא מתקמפל.<br>התשובה היא תשובה ג.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f443cca0b54d3921"
+  },
+  {
+   "num": 9,
+   "topic": "copy_control",
+   "question": "באיזה מקרה **לא** נקרא בנאי העתקה (copy constructor) של מחלקה `A`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "כאשר פונקציה מחזירה אובייקט מטיפוס `A`.",
+     "html": "כאשר פונקציה מחזירה אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">A</code>."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "כאשר לפונקציה מועבר ארגומנט (פרמטר) מטיפוס `A`.",
+     "html": "כאשר לפונקציה מועבר ארגומנט (פרמטר) מטיפוס <code class=\"tok\" dir=\"ltr\">A</code>."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "כאשר מתבצעת השמה בין אובייקטים מטיפוס `A`.",
+     "html": "כאשר מתבצעת השמה בין אובייקטים מטיפוס <code class=\"tok\" dir=\"ltr\">A</code>."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בכל המקרים שמופיעים בתשובות (א)-(ג) נקרא בנאי העתקה",
+     "html": "בכל המקרים שמופיעים בתשובות (א)-(ג) נקרא בנאי העתקה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בנאי העתקה נקרא בהעברת אובייקט לפי ערך, ובהחזרת אובייקט לפי ערך (אלא אם הקומפיילר מבטל את ההעתקה). השמה בין אובייקטים קיימים קוראת לאופרטור ההשמה ולא לבנאי ההעתקה.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run with a counting copy constructor: passing by value and (with -fno-elide-constructors) returning by value call it; assignment `a = b` calls only operator=. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "c",
+   "lockOrder": true,
+   "id": "19A-A-Q9",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "באיזה מקרה <strong>לא</strong> נקרא בנאי העתקה (copy constructor) של מחלקה <code class=\"tok\" dir=\"ltr\">A</code>?<br>",
+   "explanationHtml": "בנאי העתקה נקרא בהעברת אובייקט לפי ערך, ובהחזרת אובייקט לפי ערך (אלא אם הקומפיילר מבטל את ההעתקה). השמה בין אובייקטים קיימים קוראת לאופרטור ההשמה ולא לבנאי ההעתקה.<br>התשובה היא תשובה ג.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "07d5557beb6d37e1"
+  },
+  {
+   "num": 10,
+   "topic": "const_references",
+   "question": "```cpp\nclass A {\n  int K ;\n  int* f(const int *k) const { return _____; }\n};\n```\nמה ניתן לכתוב ב-`_____` כך שהקוד יעבור קומפילציה\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`this->K`",
+     "html": "<code class=\"tok\" dir=\"ltr\">this-&gt;K</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`K+k`",
+     "html": "<code class=\"tok\" dir=\"ltr\">K+k</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`new int(*k+K)`",
+     "html": "<code class=\"tok\" dir=\"ltr\">new int(*k+K)</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`k`",
+     "html": "<code class=\"tok\" dir=\"ltr\">k</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה מחזירה `int*` והיא `const`, ולכן `K` הוא `const int` בתוכה. רק `new int(*k+K)` מחזיר `int*`. הביטוי `this->K` הוא `int`, ואילו `K+k` ו-`k` הם `const int*` שלא ניתן להמיר ל-`int*`.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: only `new int(*k+K)` compiles (returns `int*`); `this->K` is an int, `K+k` and `k` are `const int*` and cannot convert to `int*`. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "c",
+   "id": "19A-A-Q10",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\n  int K ;\n  int* f(const int *k) const { return _____; }\n};</code></pre>מה ניתן לכתוב ב-<code class=\"tok\" dir=\"ltr\">_____</code> כך שהקוד יעבור קומפילציה<br>",
+   "explanationHtml": "הפונקציה מחזירה <code class=\"tok\" dir=\"ltr\">int*</code> והיא <code class=\"tok\" dir=\"ltr\">const</code>, ולכן <code class=\"tok\" dir=\"ltr\">K</code> הוא <code class=\"tok\" dir=\"ltr\">const int</code> בתוכה. רק <code class=\"tok\" dir=\"ltr\">new int(*k+K)</code> מחזיר <code class=\"tok\" dir=\"ltr\">int*</code>. הביטוי <code class=\"tok\" dir=\"ltr\">this-&gt;K</code> הוא <code class=\"tok\" dir=\"ltr\">int</code>, ואילו <code class=\"tok\" dir=\"ltr\">K+k</code> ו-<code class=\"tok\" dir=\"ltr\">k</code> הם <code class=\"tok\" dir=\"ltr\">const int*</code> שלא ניתן להמיר ל-<code class=\"tok\" dir=\"ltr\">int*</code>.<br>התשובה היא תשובה ג.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a66a22fbe5801d28"
+  },
+  {
+   "num": 11,
+   "topic": "const_references",
+   "question": "למשתני מחלקה שמוגדרים כ-`const` ניתן לבצע **השמה**:\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מכל מקום בתכנית במידה והם מוגדרים כ-`public`",
+     "html": "מכל מקום בתכנית במידה והם מוגדרים כ-<code class=\"tok\" dir=\"ltr\">public</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "רק מתוך פונקציות המוגדרות באותה מחלקה",
+     "html": "רק מתוך פונקציות המוגדרות באותה מחלקה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "רק מתוך בנאי שמוגדר באותה מחלקה",
+     "html": "רק מתוך בנאי שמוגדר באותה מחלקה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שדה `const` אי אפשר להשים אליו מאף מקום, לא מ-`main`, לא ממתודה ולא מגוף הבנאי. אפשר רק לאתחל אותו ברשימת האתחול של הבנאי.\nהתשובה היא אף תשובה אינה נכונה (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: assignment to a const member fails in main, in a member function and in a constructor body (only initialization in the init list is allowed). Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "d",
+   "id": "19A-A-Q11",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "למשתני מחלקה שמוגדרים כ-<code class=\"tok\" dir=\"ltr\">const</code> ניתן לבצע <strong>השמה</strong>:<br>",
+   "explanationHtml": "שדה <code class=\"tok\" dir=\"ltr\">const</code> אי אפשר להשים אליו מאף מקום, לא מ-<code class=\"tok\" dir=\"ltr\">main</code>, לא ממתודה ולא מגוף הבנאי. אפשר רק לאתחל אותו ברשימת האתחול של הבנאי.<br>התשובה היא אף תשובה אינה נכונה (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d5702f14208b75cb"
+  },
+  {
+   "num": 12,
+   "topic": "composition",
+   "question": "בשאלה זו הנח שלא ניתן לאתחל שדות במקום הגדרתם.\nשלוש תלמידות נשאלו מתי רשימת אתחול של בנאי מחלקה לא יכולה להיות ריקה? הן השיבו:\nתלמידה 1: כאשר במחלקה קיים שדה שמוגדר כ-`const`.\nתלמידה 2: כאשר במחלקה קיים שדה הפנייה (reference).\nתלמידה 3: כאשר המחלקה יורשת ממחלקה אחרת, בה אין בנאי ברירת מחדל.\nכמה מהתלמידות צדקו?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`0`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">2</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`3`",
+     "html": "<code class=\"tok\" dir=\"ltr\">3</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שלושת המקרים דורשים רשימת אתחול: שדה `const` חייב אתחול, שדה הפניה חייב אתחול, ומחלקת בסיס בלי בנאי ברירת מחדל דורשת קריאה מפורשת לבנאי שלה. כל שלוש התלמידות צדקו.\nהתשובה היא `3` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: with an empty init list each of the three situations fails to compile. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "d",
+   "id": "19A-A-Q12",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הכלה וסדר אתחול",
+   "questionHtml": "בשאלה זו הנח שלא ניתן לאתחל שדות במקום הגדרתם.<br>שלוש תלמידות נשאלו מתי רשימת אתחול של בנאי מחלקה לא יכולה להיות ריקה? הן השיבו:<br>תלמידה 1: כאשר במחלקה קיים שדה שמוגדר כ-<code class=\"tok\" dir=\"ltr\">const</code>.<br>תלמידה 2: כאשר במחלקה קיים שדה הפנייה (reference).<br>תלמידה 3: כאשר המחלקה יורשת ממחלקה אחרת, בה אין בנאי ברירת מחדל.<br>כמה מהתלמידות צדקו?<br>",
+   "explanationHtml": "שלושת המקרים דורשים רשימת אתחול: שדה <code class=\"tok\" dir=\"ltr\">const</code> חייב אתחול, שדה הפניה חייב אתחול, ומחלקת בסיס בלי בנאי ברירת מחדל דורשת קריאה מפורשת לבנאי שלה. כל שלוש התלמידות צדקו.<br>התשובה היא <code class=\"tok\" dir=\"ltr\">3</code> (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8503cf83f051140e"
+  },
+  {
+   "num": 13,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התוכנית\n```cpp\n#include <iostream>\nclass A {\npublic:\n    A() { std::cout << \"a\"; }\n    ~A() { std::cout << \"A\"; }\n};\nclass B {\npublic:\n    B() { std::cout << \"b\"; }\n    ~B() { std::cout << \"B\"; }\n};\nclass C {\npublic:\n    C() { std::cout << \"c\"; }\n    ~C() { std::cout << \"C\"; }\n};\nA a;\nint main() {\n    C c;\n    B b;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`cba`",
+     "html": "<code class=\"tok\" dir=\"ltr\">cba</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`abc`",
+     "html": "<code class=\"tok\" dir=\"ltr\">abc</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`cbaBCA`",
+     "html": "<code class=\"tok\" dir=\"ltr\">cbaBCA</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`acbBCA`",
+     "html": "<code class=\"tok\" dir=\"ltr\">acbBCA</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "המשתנה הגלובלי `a` נבנה לפני `main` (`a`). בתוך `main` נבנים `c` ואז `b`. ההריסה בסדר הפוך: `b` (`B`), `c` (`C`), ובסוף הגלובלי (`A`).\nהפלט הוא `acbBCA` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: prints acbBCA (global a first; locals c, b; destroyed b, c, then the global). Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "d",
+   "id": "19A-A-Q13",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התוכנית<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass A {\npublic:\n    A() { std::cout &lt;&lt; \"a\"; }\n    ~A() { std::cout &lt;&lt; \"A\"; }\n};\nclass B {\npublic:\n    B() { std::cout &lt;&lt; \"b\"; }\n    ~B() { std::cout &lt;&lt; \"B\"; }\n};\nclass C {\npublic:\n    C() { std::cout &lt;&lt; \"c\"; }\n    ~C() { std::cout &lt;&lt; \"C\"; }\n};\nA a;\nint main() {\n    C c;\n    B b;\n}</code></pre>",
+   "explanationHtml": "המשתנה הגלובלי <code class=\"tok\" dir=\"ltr\">a</code> נבנה לפני <code class=\"tok\" dir=\"ltr\">main</code> (<code class=\"tok\" dir=\"ltr\">a</code>). בתוך <code class=\"tok\" dir=\"ltr\">main</code> נבנים <code class=\"tok\" dir=\"ltr\">c</code> ואז <code class=\"tok\" dir=\"ltr\">b</code>. ההריסה בסדר הפוך: <code class=\"tok\" dir=\"ltr\">b</code> (<code class=\"tok\" dir=\"ltr\">B</code>), <code class=\"tok\" dir=\"ltr\">c</code> (<code class=\"tok\" dir=\"ltr\">C</code>), ובסוף הגלובלי (<code class=\"tok\" dir=\"ltr\">A</code>).<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">acbBCA</code> (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "bccd1fe6fbdb1fe6"
+  },
+  {
+   "num": 14,
+   "topic": "const_references",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nusing namespace std;\nclass X {\npublic:\n    X(int i=0) : n(i) { }\n    void f() const { cout << n; }\n    void f() { cout << n*2; }\n    int n;\n};\nint main() {\n    X x1(2);\n    const X x2(3);\n    x1.f();\n    x2.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`43`",
+     "html": "<code class=\"tok\" dir=\"ltr\">43</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`34`",
+     "html": "<code class=\"tok\" dir=\"ltr\">34</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`26`",
+     "html": "<code class=\"tok\" dir=\"ltr\">26</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`42`",
+     "html": "<code class=\"tok\" dir=\"ltr\">42</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בעומס יתר לפי `const`, אובייקט לא-const קורא לגרסה הלא-const (`n*2`), ואובייקט `const` קורא לגרסת ה-`const`. `x1.f()` מדפיס 4, ו-`x2.f()` מדפיס 3.\nהפלט הוא `43` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: prints 43 (non-const object picks the non-const f: 2*2; the const object picks the const f: 3). Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "id": "19A-A-Q14",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\nclass X {\npublic:\n    X(int i=0) : n(i) { }\n    void f() const { cout &lt;&lt; n; }\n    void f() { cout &lt;&lt; n*2; }\n    int n;\n};\nint main() {\n    X x1(2);\n    const X x2(3);\n    x1.f();\n    x2.f();\n}</code></pre>",
+   "explanationHtml": "בעומס יתר לפי <code class=\"tok\" dir=\"ltr\">const</code>, אובייקט לא-const קורא לגרסה הלא-const (<code class=\"tok\" dir=\"ltr\">n*2</code>), ואובייקט <code class=\"tok\" dir=\"ltr\">const</code> קורא לגרסת ה-<code class=\"tok\" dir=\"ltr\">const</code>. <code class=\"tok\" dir=\"ltr\">x1.f()</code> מדפיס 4, ו-<code class=\"tok\" dir=\"ltr\">x2.f()</code> מדפיס 3.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">43</code> (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "dfbbc3a91ba43534"
+  },
+  {
+   "num": 15,
+   "topic": "inheritance_access",
+   "question": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:\n```cpp\n 1. #include <iostream>\n 2. using namespace std;\n 3. class X {\n 4. public:\n 5.     X(int i = 0) : nx(i) {}\n 6.     void f() { cout << nx; }\n 7.     int nx;\n 8. };\n 9. class Y : public X {\n10. public:\n11.     Y(int i = 0, int j = 0) : X(i),ny(j) {}\n12.     void h() {\n13.       this->X::f();\n14.       cout << ny; }\n15.     int ny;\n16. };\n17. int main() {\n18.     Y y1(2);\n19.     y1.X::f();\n20.     X::f();\n21.     y1.f();\n22.     y1.X::h();\n23. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורות 13,19,20,21,22",
+     "html": "שורות 13,19,20,21,22"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 13,19,20,22",
+     "html": "שורות 13,19,20,22"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 13,20,22",
+     "html": "שורות 13,20,22"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 20 ו-22",
+     "html": "שורות 20 ו-22"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "- שורה 13: `this->X::f()` תקינה.\n- שורה 19: `y1.X::f()` תקינה.\n- שורה 20: `X::f()` ב-`main` קוראת לפונקציה לא סטטית בלי אובייקט, שגיאה.\n- שורה 21: `y1.f()` תקינה, כי `f` עוברת בירושה.\n- שורה 22: `y1.X::h()` שגויה, כי `h` שייכת ל-`Y` ולא ל-`X`.\nהתשובה היא שורות 20 ו-22 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: errors on lines 20 (`X::f()` without an object) and 22 (`h` is not a member of X); lines 13, 19 and 21 compile. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "d",
+   "id": "19A-A-Q15",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code> 1. #include &lt;iostream&gt;\n 2. using namespace std;\n 3. class X {\n 4. public:\n 5.     X(int i = 0) : nx(i) {}\n 6.     void f() { cout &lt;&lt; nx; }\n 7.     int nx;\n 8. };\n 9. class Y : public X {\n10. public:\n11.     Y(int i = 0, int j = 0) : X(i),ny(j) {}\n12.     void h() {\n13.       this-&gt;X::f();\n14.       cout &lt;&lt; ny; }\n15.     int ny;\n16. };\n17. int main() {\n18.     Y y1(2);\n19.     y1.X::f();\n20.     X::f();\n21.     y1.f();\n22.     y1.X::h();\n23. }</code></pre>",
+   "explanationHtml": "- שורה 13: <code class=\"tok\" dir=\"ltr\">this-&gt;X::f()</code> תקינה.<br>- שורה 19: <code class=\"tok\" dir=\"ltr\">y1.X::f()</code> תקינה.<br>- שורה 20: <code class=\"tok\" dir=\"ltr\">X::f()</code> ב-<code class=\"tok\" dir=\"ltr\">main</code> קוראת לפונקציה לא סטטית בלי אובייקט, שגיאה.<br>- שורה 21: <code class=\"tok\" dir=\"ltr\">y1.f()</code> תקינה, כי <code class=\"tok\" dir=\"ltr\">f</code> עוברת בירושה.<br>- שורה 22: <code class=\"tok\" dir=\"ltr\">y1.X::h()</code> שגויה, כי <code class=\"tok\" dir=\"ltr\">h</code> שייכת ל-<code class=\"tok\" dir=\"ltr\">Y</code> ולא ל-<code class=\"tok\" dir=\"ltr\">X</code>.<br>התשובה היא שורות 20 ו-22 (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0ae394a8b5d005be"
+  },
+  {
+   "num": 16,
+   "topic": "construction_order",
+   "question": "מה יודפס עבור הקוד\n```cpp\n#include <iostream>\nclass A {\npublic:\n    A(int) {std::cout << \" A int \";}\n    A() {std::cout << \"A empty \";}\n    virtual ~A() {std::cout << \" destroy A\";}\n};\nclass B : public A{\npublic:\n    B(int):A() {std::cout << \"B int \";}\n    B() {std::cout << \"B empty \";}\n    virtual ~B() {std::cout << \" destroy B\";}\n};\nB b(3);\nvoid main() { A a(3); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A empty B int A int destroy A destroy B destroy A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A empty B int A int destroy A destroy B destroy A</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`A int A int destroy B destroy A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A int A int destroy B destroy A</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`B int A int destroy A destroy B`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B int A int destroy A destroy B</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`A int B int destroy A destroy B destroy A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A int B int destroy A destroy B destroy A</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "המשתנה הגלובלי `b(3)` נבנה לפני `main`: קודם הבסיס `A()` מדפיס `A empty`, ואז `B int`. ב-`main` נבנה `A a(3)` ומדפיס `A int`, ובסוף `main` ההורס שלו מדפיס `destroy A`. בסיום התכנית נהרס הגלובלי: `destroy B` ואז `destroy A`.\nהפלט הוא הפלט שבתשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run (curly quotes of the source replaced by ASCII quotes): the output, with runs of spaces collapsed, is exactly option a. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "id": "19A-A-Q16",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה יודפס עבור הקוד<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass A {\npublic:\n    A(int) {std::cout &lt;&lt; \" A int \";}\n    A() {std::cout &lt;&lt; \"A empty \";}\n    virtual ~A() {std::cout &lt;&lt; \" destroy A\";}\n};\nclass B : public A{\npublic:\n    B(int):A() {std::cout &lt;&lt; \"B int \";}\n    B() {std::cout &lt;&lt; \"B empty \";}\n    virtual ~B() {std::cout &lt;&lt; \" destroy B\";}\n};\nB b(3);\nvoid main() { A a(3); }</code></pre>",
+   "explanationHtml": "המשתנה הגלובלי <code class=\"tok\" dir=\"ltr\">b(3)</code> נבנה לפני <code class=\"tok\" dir=\"ltr\">main</code>: קודם הבסיס <code class=\"tok\" dir=\"ltr\">A()</code> מדפיס <code class=\"tok\" dir=\"ltr\">A empty</code>, ואז <code class=\"tok\" dir=\"ltr\">B int</code>. ב-<code class=\"tok\" dir=\"ltr\">main</code> נבנה <code class=\"tok\" dir=\"ltr\">A a(3)</code> ומדפיס <code class=\"tok\" dir=\"ltr\">A int</code>, ובסוף <code class=\"tok\" dir=\"ltr\">main</code> ההורס שלו מדפיס <code class=\"tok\" dir=\"ltr\">destroy A</code>. בסיום התכנית נהרס הגלובלי: <code class=\"tok\" dir=\"ltr\">destroy B</code> ואז <code class=\"tok\" dir=\"ltr\">destroy A</code>.<br>הפלט הוא הפלט שבתשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "95155e717c14b283"
+  },
+  {
+   "num": 17,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התוכנית\n```cpp\n#include <iostream>\nclass A {\npublic: void f() { std::cout << \"A\"; }\n};\nclass B : public A {\npublic: void f() { std::cout << \"B\"; }\n};\nvoid g(A &a) { a.f(); }\nint main() {\n    B b;\n    g(b);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`B`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`AB`",
+     "html": "<code class=\"tok\" dir=\"ltr\">AB</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`BA`",
+     "html": "<code class=\"tok\" dir=\"ltr\">BA</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה `f` אינה וירטואלית, לכן הקריאה דרך הפניה מטיפוס `A&` נקשרת סטטית ל-`A::f`.\nהפלט הוא `A` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: prints A (`f` is not virtual, so the call through `A&` binds to A::f). Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "id": "19A-A-Q17",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התוכנית<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass A {\npublic: void f() { std::cout &lt;&lt; \"A\"; }\n};\nclass B : public A {\npublic: void f() { std::cout &lt;&lt; \"B\"; }\n};\nvoid g(A &amp;a) { a.f(); }\nint main() {\n    B b;\n    g(b);\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> אינה וירטואלית, לכן הקריאה דרך הפניה מטיפוס <code class=\"tok\" dir=\"ltr\">A&amp;</code> נקשרת סטטית ל-<code class=\"tok\" dir=\"ltr\">A::f</code>.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">A</code> (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1ce812c8d7fc199d"
+  },
+  {
+   "num": 18,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התוכנית\n```cpp\n#include <iostream>\nclass B{\npublic:\n    void disp() { std::cout<<\"B\"; }\n};\nclass D:public B{\npublic:\n    void disp() { std::cout<<\"D\"; }\n};\nvoid main(){\n    D d;\n    d.disp();\n    D *pd=&d;\n    pd->disp();\n    B *pb=pd;\n    pb->disp();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`DDB`",
+     "html": "<code class=\"tok\" dir=\"ltr\">DDB</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`DDD`",
+     "html": "<code class=\"tok\" dir=\"ltr\">DDD</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`BBB`",
+     "html": "<code class=\"tok\" dir=\"ltr\">BBB</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בקריאות דרך `d` ודרך `pd` (טיפוס `D`) נבחרת `D::disp`. הקריאה דרך `pb` מטיפוס `B*` נקשרת ל-`B::disp`, כי הפונקציה אינה וירטואלית.\nהפלט הוא `DDB` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: prints DDB (static binding by pointer type). Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "b",
+   "id": "19A-A-Q18",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התוכנית<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass B{\npublic:\n    void disp() { std::cout&lt;&lt;\"B\"; }\n};\nclass D:public B{\npublic:\n    void disp() { std::cout&lt;&lt;\"D\"; }\n};\nvoid main(){\n    D d;\n    d.disp();\n    D *pd=&amp;d;\n    pd-&gt;disp();\n    B *pb=pd;\n    pb-&gt;disp();\n}</code></pre>",
+   "explanationHtml": "בקריאות דרך <code class=\"tok\" dir=\"ltr\">d</code> ודרך <code class=\"tok\" dir=\"ltr\">pd</code> (טיפוס <code class=\"tok\" dir=\"ltr\">D</code>) נבחרת <code class=\"tok\" dir=\"ltr\">D::disp</code>. הקריאה דרך <code class=\"tok\" dir=\"ltr\">pb</code> מטיפוס <code class=\"tok\" dir=\"ltr\">B*</code> נקשרת ל-<code class=\"tok\" dir=\"ltr\">B::disp</code>, כי הפונקציה אינה וירטואלית.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">DDB</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f9d8df444c75a4df"
+  },
+  {
+   "num": 19,
+   "topic": "copy_control",
+   "question": "בקטע הקוד הבא:\n```cpp\n#include <iostream>\nusing namespace std;\nclass X {\npublic:\n    X(int i = 0) { p = new(int);\n                   *p = i;\n    }\n    ~X() { delete p; }\n    int* p;\n};\n\nint main() {\n    X x1(1);\n    X x2(2);\n    x2 = x1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מתקבלת שגיאה בזמן ביצוע שורת קוד של ה-constructor",
+     "html": "מתקבלת שגיאה בזמן ביצוע שורת קוד של ה-constructor"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "מתקבלת שגיאה בזמן ביצוע שורת קוד של ה-destructor",
+     "html": "מתקבלת שגיאה בזמן ביצוע שורת קוד של ה-destructor"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "מתקבלת שגיאה בזמן ביצוע שורת קוד של הפונקציה `main`",
+     "html": "מתקבלת שגיאה בזמן ביצוע שורת קוד של הפונקציה <code class=\"tok\" dir=\"ltr\">main</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא מתקבלת שגיאה",
+     "html": "לא מתקבלת שגיאה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההשמה `x2 = x1` היא השמה רדודה: המצביע `p` מועתק, כך שהבלוק של `x2` דולף ושני האובייקטים מצביעים לאותו בלוק. בסוף `main` ההורס של כל אחד מהם מבצע `delete` לאותו בלוק, וההרצה קורסת בתוך ההורס.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: the default assignment copies the pointer, so at the end both objects `delete` the same block; the double delete aborts the program from inside the destructor. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "b",
+   "id": "19A-A-Q19",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\nclass X {\npublic:\n    X(int i = 0) { p = new(int);\n                   *p = i;\n    }\n    ~X() { delete p; }\n    int* p;\n};\n\nint main() {\n    X x1(1);\n    X x2(2);\n    x2 = x1;\n}</code></pre>",
+   "explanationHtml": "ההשמה <code class=\"tok\" dir=\"ltr\">x2 = x1</code> היא השמה רדודה: המצביע <code class=\"tok\" dir=\"ltr\">p</code> מועתק, כך שהבלוק של <code class=\"tok\" dir=\"ltr\">x2</code> דולף ושני האובייקטים מצביעים לאותו בלוק. בסוף <code class=\"tok\" dir=\"ltr\">main</code> ההורס של כל אחד מהם מבצע <code class=\"tok\" dir=\"ltr\">delete</code> לאותו בלוק, וההרצה קורסת בתוך ההורס.<br>התשובה היא תשובה ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3840c57cfc26a74d"
+  },
+  {
+   "num": 20,
+   "topic": "friend_this_static",
+   "question": "נתונה מחלקה `C` בה יש 3 משתני מחלקה שמוגדרים כ-`public`, `protected` ו-`private`. למי מבין הבאים יש גישה למספר גדול יותר של משתנים במחלקה `C`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "למחלקה `D` שיורשת מ-`C` ירושת `public`",
+     "html": "למחלקה <code class=\"tok\" dir=\"ltr\">D</code> שיורשת מ-<code class=\"tok\" dir=\"ltr\">C</code> ירושת <code class=\"tok\" dir=\"ltr\">public</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לפונקציה `F` שמוגדרת כ-`friend` במחלקה `C`",
+     "html": "לפונקציה <code class=\"tok\" dir=\"ltr\">F</code> שמוגדרת כ-<code class=\"tok\" dir=\"ltr\">friend</code> במחלקה <code class=\"tok\" dir=\"ltr\">C</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "למחלקה `X` שמוגדרת כ-`friend` במחלקה `C`",
+     "html": "למחלקה <code class=\"tok\" dir=\"ltr\">X</code> שמוגדרת כ-<code class=\"tok\" dir=\"ltr\">friend</code> במחלקה <code class=\"tok\" dir=\"ltr\">C</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התשובות (ב) ו-(ג) נכונות.",
+     "html": "התשובות (ב) ו-(ג) נכונות."
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "מחלקה יורשת בירושה ציבורית רואה את החברים הציבוריים והמוגנים (2 מתוך 3). פונקציה ידידה ומחלקה ידידה רואות את כולם (3 מתוך 3).\nלכן תשובות ב ו-ג נכונות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: the derived class reaches 2 of the 3 fields (public, protected); a friend function and a friend class reach all 3. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "d",
+   "lockOrder": true,
+   "id": "19A-A-Q20",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "נתונה מחלקה <code class=\"tok\" dir=\"ltr\">C</code> בה יש 3 משתני מחלקה שמוגדרים כ-<code class=\"tok\" dir=\"ltr\">public</code>, <code class=\"tok\" dir=\"ltr\">protected</code> ו-<code class=\"tok\" dir=\"ltr\">private</code>. למי מבין הבאים יש גישה למספר גדול יותר של משתנים במחלקה <code class=\"tok\" dir=\"ltr\">C</code>?<br>",
+   "explanationHtml": "מחלקה יורשת בירושה ציבורית רואה את החברים הציבוריים והמוגנים (2 מתוך 3). פונקציה ידידה ומחלקה ידידה רואות את כולם (3 מתוך 3).<br>לכן תשובות ב ו-ג נכונות (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "81be5ab64ca2630b"
+  },
+  {
+   "num": 21,
+   "topic": "copy_control",
+   "question": "מהי ההצהרה הנכונה ביותר (שתואמת את התנהגות הטיפוס `int`) של אופרטור השמה (`=`) עבור המחלקה `C`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`C &operator=( const C & )`",
+     "html": "<code class=\"tok\" dir=\"ltr\">C &amp;operator=( const C &amp; )</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`const C &operator=( const C & )`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const C &amp;operator=( const C &amp; )</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`const C &operator=( C & )`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const C &amp;operator=( C &amp; )</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`const C &operator=( const C & ) const`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const C &amp;operator=( const C &amp; ) const</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "כדי להתנהג כמו `int` (שבו `(a = b) = c` ו-`a = b = c` חוקיים), אופרטור ההשמה מקבל `const C &` ומחזיר `C &` לא קבועה. החזרת `const C &` חוסמת את `(a = b) = c`, פרמטר לא קבוע לא מקבל אובייקט `const`, ואופרטור `const` לא יכול לשנות את האובייקט.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: like `int`, the chained forms `(a = b) = c` and `a = b = c` compile only with a non-const reference result; the other declarations return const (no `(a = b) = c`) or are const members that cannot modify the object. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "id": "19A-A-Q21",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "מהי ההצהרה הנכונה ביותר (שתואמת את התנהגות הטיפוס <code class=\"tok\" dir=\"ltr\">int</code>) של אופרטור השמה (<code class=\"tok\" dir=\"ltr\">=</code>) עבור המחלקה <code class=\"tok\" dir=\"ltr\">C</code>?<br>",
+   "explanationHtml": "כדי להתנהג כמו <code class=\"tok\" dir=\"ltr\">int</code> (שבו <code class=\"tok\" dir=\"ltr\">(a = b) = c</code> ו-<code class=\"tok\" dir=\"ltr\">a = b = c</code> חוקיים), אופרטור ההשמה מקבל <code class=\"tok\" dir=\"ltr\">const C &amp;</code> ומחזיר <code class=\"tok\" dir=\"ltr\">C &amp;</code> לא קבועה. החזרת <code class=\"tok\" dir=\"ltr\">const C &amp;</code> חוסמת את <code class=\"tok\" dir=\"ltr\">(a = b) = c</code>, פרמטר לא קבוע לא מקבל אובייקט <code class=\"tok\" dir=\"ltr\">const</code>, ואופרטור <code class=\"tok\" dir=\"ltr\">const</code> לא יכול לשנות את האובייקט.<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "7d79525fde76f41c"
+  },
+  {
+   "num": 22,
+   "topic": "templates",
+   "question": "נתון קטע תכנית:\n```cpp\n1. template<typename T> void f(T t) { int n = t; }\n2. template<typename T> void g(int n) { T t = n; }\n3. int main() {\n4.     f(5);\n5.     g(5);\n6. }\n```\nאילו שורות גורמות לשגיאת קומפילציה?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 5",
+     "html": "שורה 5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 4 ו-5",
+     "html": "שורות 4 ו-5"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בקריאה `f(5)` הטיפוס `T` מוסק כ-`int`, והקוד תקין. בקריאה `g(5)` אין פרמטר מטיפוס `T`, ולכן הקומפיילר לא יכול להסיק אותו, והשורה שגויה.\nהתשובה היא שורה 5 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: line 5 fails (`T` cannot be deduced for `g`); line 4 compiles. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "c",
+   "id": "19A-A-Q22",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "נתון קטע תכנית:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>1. template&lt;typename T&gt; void f(T t) { int n = t; }\n2. template&lt;typename T&gt; void g(int n) { T t = n; }\n3. int main() {\n4.     f(5);\n5.     g(5);\n6. }</code></pre>אילו שורות גורמות לשגיאת קומפילציה?<br>",
+   "explanationHtml": "בקריאה <code class=\"tok\" dir=\"ltr\">f(5)</code> הטיפוס <code class=\"tok\" dir=\"ltr\">T</code> מוסק כ-<code class=\"tok\" dir=\"ltr\">int</code>, והקוד תקין. בקריאה <code class=\"tok\" dir=\"ltr\">g(5)</code> אין פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">T</code>, ולכן הקומפיילר לא יכול להסיק אותו, והשורה שגויה.<br>התשובה היא שורה 5 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "94893128a6624951"
+  },
+  {
+   "num": 23,
+   "topic": "templates",
+   "question": "נתון קטע תכנית:\n```cpp\ntemplate<typename T> void f() {}\ntemplate<typename T> class X { friend void f<T>(); };\n```\nאיזו מהטענות נכונה?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הפונקציה `f<double>` היא חברה של המחלקה `X<double>`",
+     "html": "הפונקציה <code class=\"tok\" dir=\"ltr\">f&lt;double&gt;</code> היא חברה של המחלקה <code class=\"tok\" dir=\"ltr\">X&lt;double&gt;</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הפונקציה `f<int>` היא חברה של המחלקה `X<double>`",
+     "html": "הפונקציה <code class=\"tok\" dir=\"ltr\">f&lt;int&gt;</code> היא חברה של המחלקה <code class=\"tok\" dir=\"ltr\">X&lt;double&gt;</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תשובות (א) ו-(ב) נכונות",
+     "html": "תשובות (א) ו-(ב) נכונות"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההצהרה `friend void f<T>();` בתוך `X<T>` מצהירה על ידידות לאותו מופע של התבנית `f` עם אותו `T`. לכן `f<double>` היא חברה של `X<double>`, ו-`f<int>` אינה חברה של `X<double>`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: with a private field added to X and f reading it, `f<double>` can read `X<double>`'s field and `f<int>` cannot. Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "a",
+   "lockOrder": true,
+   "id": "19A-A-Q23",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "נתון קטע תכנית:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template&lt;typename T&gt; void f() {}\ntemplate&lt;typename T&gt; class X { friend void f&lt;T&gt;(); };</code></pre>איזו מהטענות נכונה?<br>",
+   "explanationHtml": "ההצהרה <code class=\"tok\" dir=\"ltr\">friend void f&lt;T&gt;();</code> בתוך <code class=\"tok\" dir=\"ltr\">X&lt;T&gt;</code> מצהירה על ידידות לאותו מופע של התבנית <code class=\"tok\" dir=\"ltr\">f</code> עם אותו <code class=\"tok\" dir=\"ltr\">T</code>. לכן <code class=\"tok\" dir=\"ltr\">f&lt;double&gt;</code> היא חברה של <code class=\"tok\" dir=\"ltr\">X&lt;double&gt;</code>, ו-<code class=\"tok\" dir=\"ltr\">f&lt;int&gt;</code> אינה חברה של <code class=\"tok\" dir=\"ltr\">X&lt;double&gt;</code>.<br>התשובה היא תשובה א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "759ee32e6e4ba174"
+  },
+  {
+   "num": 24,
+   "topic": "templates",
+   "question": "נתונות מחלקה `X` ומחלקה `Y` שיורשת מ-`X`. כמו כן, נתונה תבנית מחלקה `A<T>`.\nאיזו מהטענות נכונה?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ניתן לבצע השמה ממשתנה מטיפוס `A<Y>` למשתנה מטיפוס `A<X>`",
+     "html": "ניתן לבצע השמה ממשתנה מטיפוס <code class=\"tok\" dir=\"ltr\">A&lt;Y&gt;</code> למשתנה מטיפוס <code class=\"tok\" dir=\"ltr\">A&lt;X&gt;</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ניתן לבצע השמה ממשתנה מטיפוס `A<X>` למשתנה מטיפוס `A<Y>`",
+     "html": "ניתן לבצע השמה ממשתנה מטיפוס <code class=\"tok\" dir=\"ltr\">A&lt;X&gt;</code> למשתנה מטיפוס <code class=\"tok\" dir=\"ltr\">A&lt;Y&gt;</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תשובות (א) ו-(ב) נכונות",
+     "html": "תשובות (א) ו-(ב) נכונות"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שני מופעים שונים של תבנית (`A<X>` ו-`A<Y>`) הם טיפוסים לא קשורים, גם אם `Y` יורשת מ-`X`. אין המרה או השמה ביניהם, בשני הכיוונים.\nהתשובה היא אף תשובה אינה נכונה (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: `A<X> = A<Y>` and `A<Y> = A<X>` both fail (different, unrelated instantiations). Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "d",
+   "lockOrder": true,
+   "id": "19A-A-Q24",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "נתונות מחלקה <code class=\"tok\" dir=\"ltr\">X</code> ומחלקה <code class=\"tok\" dir=\"ltr\">Y</code> שיורשת מ-<code class=\"tok\" dir=\"ltr\">X</code>. כמו כן, נתונה תבנית מחלקה <code class=\"tok\" dir=\"ltr\">A&lt;T&gt;</code>.<br>איזו מהטענות נכונה?<br>",
+   "explanationHtml": "שני מופעים שונים של תבנית (<code class=\"tok\" dir=\"ltr\">A&lt;X&gt;</code> ו-<code class=\"tok\" dir=\"ltr\">A&lt;Y&gt;</code>) הם טיפוסים לא קשורים, גם אם <code class=\"tok\" dir=\"ltr\">Y</code> יורשת מ-<code class=\"tok\" dir=\"ltr\">X</code>. אין המרה או השמה ביניהם, בשני הכיוונים.<br>התשובה היא אף תשובה אינה נכונה (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a69003dc6fa11ecb"
+  },
+  {
+   "num": 25,
+   "topic": "stl_exceptions",
+   "question": "איזו פעולה איטרטור (iterator) לא יודע לעשות (כלומר לא מוגדרת במחלקה שלו)?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התקדמות לאיבר הבא",
+     "html": "התקדמות לאיבר הבא"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הסרת האיבר המוצבע",
+     "html": "הסרת האיבר המוצבע"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "איחזור ערך האיבר המוצבע",
+     "html": "איחזור ערך האיבר המוצבע"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "השוואה עם איטרטור אחר",
+     "html": "השוואה עם איטרטור אחר"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "איטרטור יודע להתקדם (`++it`), לאחזר את הערך (`*it`) ולהשוות (`==`). הסרת האיבר נעשית דרך המכל, `v.erase(it)`, ואינה פעולה של האיטרטור.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: `++it`, `*it` and `it == it2` compile on a vector iterator; `it.erase()` does not (removal is done by the container, `v.erase(it)`). Agrees.",
+   "contextId": "19A-A-notes",
+   "correctId": "b",
+   "id": "19A-A-Q25",
+   "examCode": "19A-A",
+   "examLabel": "2019 סמסטר א מועד א",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "איזו פעולה איטרטור (iterator) לא יודע לעשות (כלומר לא מוגדרת במחלקה שלו)?<br>",
+   "explanationHtml": "איטרטור יודע להתקדם (<code class=\"tok\" dir=\"ltr\">++it</code>), לאחזר את הערך (<code class=\"tok\" dir=\"ltr\">*it</code>) ולהשוות (<code class=\"tok\" dir=\"ltr\">==</code>). הסרת האיבר נעשית דרך המכל, <code class=\"tok\" dir=\"ltr\">v.erase(it)</code>, ואינה פעולה של האיטרטור.<br>התשובה היא תשובה ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2bd45ee4db41b06f"
+  },
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית\n```cpp\n#include <iostream>\nint f(char c, int i) {return i++;}\nint &f(int &i, char c) {return ++i;}\nvoid main() {int x=4; std::cout << f(x,'x'); std::cout<< f('x',x); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`45`",
+     "html": "<code class=\"tok\" dir=\"ltr\">45</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`44`",
+     "html": "<code class=\"tok\" dir=\"ltr\">44</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`55`",
+     "html": "<code class=\"tok\" dir=\"ltr\">55</code>"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שתי הקריאות: `f(x,'x')` מתאימה במדויק ל-`f(int&, char)` (הפניה ל-`x`), שמעלה את `x` ל-5 ומחזירה אותו. `f('x',x)` מתאימה במדויק ל-`f(char, int)`, שמחזירה את `i++` כלומר 5 (הערך לפני ההגדלה).\nהפלט הוא `55` (תשובה ד). `45` ו-`44` מניחים שאחת הקריאות נבחרת אחרת, והתכנית כן עוברת קומפילציה כי אין עמימות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run printed 55. Agrees.",
+   "id": "19A-B-Q1",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nint f(char c, int i) {return i++;}\nint &amp;f(int &amp;i, char c) {return ++i;}\nvoid main() {int x=4; std::cout &lt;&lt; f(x,'x'); std::cout&lt;&lt; f('x',x); }</code></pre>",
+   "explanationHtml": "שתי הקריאות: <code class=\"tok\" dir=\"ltr\">f(x,'x')</code> מתאימה במדויק ל-<code class=\"tok\" dir=\"ltr\">f(int&amp;, char)</code> (הפניה ל-<code class=\"tok\" dir=\"ltr\">x</code>), שמעלה את <code class=\"tok\" dir=\"ltr\">x</code> ל-5 ומחזירה אותו. <code class=\"tok\" dir=\"ltr\">f('x',x)</code> מתאימה במדויק ל-<code class=\"tok\" dir=\"ltr\">f(char, int)</code>, שמחזירה את <code class=\"tok\" dir=\"ltr\">i++</code> כלומר 5 (הערך לפני ההגדלה).<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">55</code> (תשובה ד). <code class=\"tok\" dir=\"ltr\">45</code> ו-<code class=\"tok\" dir=\"ltr\">44</code> מניחים שאחת הקריאות נבחרת אחרת, והתכנית כן עוברת קומפילציה כי אין עמימות.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "e3979464c68859b9"
+  },
+  {
+   "num": 2,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית\n```cpp\nint funC(int i=10) {return i+1;}\nint funC() {return 8;}\n#include <iostream>\nvoid main () { int j= 8; std::cout << funcC() << funC(j); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`89`",
+     "html": "<code class=\"tok\" dir=\"ltr\">89</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`88`",
+     "html": "<code class=\"tok\" dir=\"ltr\">88</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`99`",
+     "html": "<code class=\"tok\" dir=\"ltr\">99</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בקוד כתוב `funcC()` (עם c נוסף) ואילו הפונקציה מוגדרת בשם `funC`. השם `funcC` לא מוכר, ולכן שגיאת קומפילציה (תשובה א). גם אם מתקנים את שגיאת ההקלדה, הקריאה `funC()` עמומה בין `funC(int i=10)` לבין `funC()`, ולכן הקוד לא מתקמפל בכל מקרה. הפלטים `89`, `88` ו-`99` מניחים שהתכנית מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++: compile error (funcC undeclared). With the typo fixed the call funC() is still ambiguous (also a compile error). Agrees.",
+   "id": "19A-B-Q2",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int funC(int i=10) {return i+1;}\nint funC() {return 8;}\n#include &lt;iostream&gt;\nvoid main () { int j= 8; std::cout &lt;&lt; funcC() &lt;&lt; funC(j); }</code></pre>",
+   "explanationHtml": "בקוד כתוב <code class=\"tok\" dir=\"ltr\">funcC()</code> (עם c נוסף) ואילו הפונקציה מוגדרת בשם <code class=\"tok\" dir=\"ltr\">funC</code>. השם <code class=\"tok\" dir=\"ltr\">funcC</code> לא מוכר, ולכן שגיאת קומפילציה (תשובה א). גם אם מתקנים את שגיאת ההקלדה, הקריאה <code class=\"tok\" dir=\"ltr\">funC()</code> עמומה בין <code class=\"tok\" dir=\"ltr\">funC(int i=10)</code> לבין <code class=\"tok\" dir=\"ltr\">funC()</code>, ולכן הקוד לא מתקמפל בכל מקרה. הפלטים <code class=\"tok\" dir=\"ltr\">89</code>, <code class=\"tok\" dir=\"ltr\">88</code> ו-<code class=\"tok\" dir=\"ltr\">99</code> מניחים שהתכנית מתקמפלת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0524ce9e48b52ef2"
+  },
+  {
+   "num": 3,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nusing namespace std;\nvoid f(int i, double j) { cout << i << j << endl; }\nvoid f(double i, int j) { cout << j << i << endl; }\nvoid main() {\nint i = 1, j = 2;\nf(i, j);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`21`",
+     "html": "<code class=\"tok\" dir=\"ltr\">21</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`1221`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1221</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הקריאה `f(i, j)` עם שני `int` דורשת המרה אחת בכל אחת משתי ההעמסות: בהעמסה הראשונה `j` הופך ל-`double`, בשנייה `i` הופך ל-`double`. אף העמסה לא טובה יותר בשני הארגומנטים, ולכן הקריאה עמומה (ambiguous) והתכנית לא מתקמפלת (תשובה ד). `12`, `21` ו-`1221` מניחים שנבחרה העמסה אחת או ששתיהן רצות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++: call to 'f' is ambiguous. Agrees.",
+   "id": "19A-B-Q3",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\nvoid f(int i, double j) { cout &lt;&lt; i &lt;&lt; j &lt;&lt; endl; }\nvoid f(double i, int j) { cout &lt;&lt; j &lt;&lt; i &lt;&lt; endl; }\nvoid main() {\nint i = 1, j = 2;\nf(i, j);\n}</code></pre>",
+   "explanationHtml": "הקריאה <code class=\"tok\" dir=\"ltr\">f(i, j)</code> עם שני <code class=\"tok\" dir=\"ltr\">int</code> דורשת המרה אחת בכל אחת משתי ההעמסות: בהעמסה הראשונה <code class=\"tok\" dir=\"ltr\">j</code> הופך ל-<code class=\"tok\" dir=\"ltr\">double</code>, בשנייה <code class=\"tok\" dir=\"ltr\">i</code> הופך ל-<code class=\"tok\" dir=\"ltr\">double</code>. אף העמסה לא טובה יותר בשני הארגומנטים, ולכן הקריאה עמומה (ambiguous) והתכנית לא מתקמפלת (תשובה ד). <code class=\"tok\" dir=\"ltr\">12</code>, <code class=\"tok\" dir=\"ltr\">21</code> ו-<code class=\"tok\" dir=\"ltr\">1221</code> מניחים שנבחרה העמסה אחת או ששתיהן רצות.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4fc235de8c9aede6"
+  },
+  {
+   "num": 4,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nusing namespace std;\nclass X {\npublic:\nX(int i) { n=i; }\nint & f() { return n; }\nprivate:\nint n;\n};\nint main() {\nX x1(5);\nint &j = x1.f();\nj += 2;\ncout << j << x1.f() << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`57`",
+     "html": "<code class=\"tok\" dir=\"ltr\">57</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`77`",
+     "html": "<code class=\"tok\" dir=\"ltr\">77</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`75`",
+     "html": "<code class=\"tok\" dir=\"ltr\">75</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית גורמת לשגיאת קומפילציה/זמן ריצה",
+     "html": "התכנית גורמת לשגיאת קומפילציה/זמן ריצה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`f` מחזירה הפניה ל-`n`, ו-`j` הוא כינוי ל-`n` של `x1`. הפעולה `j += 2` משנה את `n` ל-7, ולכן גם `j` וגם `x1.f()` מציגים 7. הפלט הוא `77` (תשובה ב). `57` ו-`75` מניחים ש-`j` הוא עותק ולא הפניה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run printed 77. Agrees.",
+   "id": "19A-B-Q4",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\nclass X {\npublic:\nX(int i) { n=i; }\nint &amp; f() { return n; }\nprivate:\nint n;\n};\nint main() {\nX x1(5);\nint &amp;j = x1.f();\nj += 2;\ncout &lt;&lt; j &lt;&lt; x1.f() &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">f</code> מחזירה הפניה ל-<code class=\"tok\" dir=\"ltr\">n</code>, ו-<code class=\"tok\" dir=\"ltr\">j</code> הוא כינוי ל-<code class=\"tok\" dir=\"ltr\">n</code> של <code class=\"tok\" dir=\"ltr\">x1</code>. הפעולה <code class=\"tok\" dir=\"ltr\">j += 2</code> משנה את <code class=\"tok\" dir=\"ltr\">n</code> ל-7, ולכן גם <code class=\"tok\" dir=\"ltr\">j</code> וגם <code class=\"tok\" dir=\"ltr\">x1.f()</code> מציגים 7. הפלט הוא <code class=\"tok\" dir=\"ltr\">77</code> (תשובה ב). <code class=\"tok\" dir=\"ltr\">57</code> ו-<code class=\"tok\" dir=\"ltr\">75</code> מניחים ש-<code class=\"tok\" dir=\"ltr\">j</code> הוא עותק ולא הפניה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "5d65e6688e4264cf"
+  },
+  {
+   "num": 5,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nclass A {\npublic:\n  virtual void f() { std::cout << \"A\"; }\n};\nclass B : public A {\npublic:\n  void f() { std::cout << \"B\"; }\n};\nvoid g(A a) { a.f(); }\nint main() {\n  B b;\n  g(b);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`B`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`AB`",
+     "html": "<code class=\"tok\" dir=\"ltr\">AB</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`BA`",
+     "html": "<code class=\"tok\" dir=\"ltr\">BA</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה `g` מקבלת `A` לפי ערך, ולכן `b` מועתק ל-`A` ונחתך (slicing): נשאר אובייקט מטיפוס `A` בלבד. הקריאה `a.f()` על אובייקט (לא על הפניה או מצביע) נפתרת לפי הטיפוס `A`, ולכן מודפס `A` (תשובה א). הדפסת `B` הייתה קורית רק אם `g` הייתה מקבלת הפניה או מצביע.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run printed A (slicing). Agrees.",
+   "id": "19A-B-Q5",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass A {\npublic:\n  virtual void f() { std::cout &lt;&lt; \"A\"; }\n};\nclass B : public A {\npublic:\n  void f() { std::cout &lt;&lt; \"B\"; }\n};\nvoid g(A a) { a.f(); }\nint main() {\n  B b;\n  g(b);\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">g</code> מקבלת <code class=\"tok\" dir=\"ltr\">A</code> לפי ערך, ולכן <code class=\"tok\" dir=\"ltr\">b</code> מועתק ל-<code class=\"tok\" dir=\"ltr\">A</code> ונחתך (slicing): נשאר אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">A</code> בלבד. הקריאה <code class=\"tok\" dir=\"ltr\">a.f()</code> על אובייקט (לא על הפניה או מצביע) נפתרת לפי הטיפוס <code class=\"tok\" dir=\"ltr\">A</code>, ולכן מודפס <code class=\"tok\" dir=\"ltr\">A</code> (תשובה א). הדפסת <code class=\"tok\" dir=\"ltr\">B</code> הייתה קורית רק אם <code class=\"tok\" dir=\"ltr\">g</code> הייתה מקבלת הפניה או מצביע.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "81a08ad7aeef774c"
+  },
+  {
+   "num": 6,
+   "topic": "inheritance_access",
+   "question": "נתונות הגדרות של שתי מחלקות:\n```cpp\nclass A {…};\nclass B : private A { void f() {...} …};\n```\nלאילו משתנים של המחלקה `A` הפונקציה `f` יכולה לגשת?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "רק לאלו שמוגדרים `public`",
+     "html": "רק לאלו שמוגדרים <code class=\"tok\" dir=\"ltr\">public</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "רק לאלו שמוגדרים `protected`",
+     "html": "רק לאלו שמוגדרים <code class=\"tok\" dir=\"ltr\">protected</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תשובות (א) ו-(ב) נכונות",
+     "html": "תשובות (א) ו-(ב) נכונות"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "פונקציה של `B` יכולה לגשת לחברי `public` ול-`protected` של הבסיס `A`, גם בירושה `private` (הירושה רק משנה את הנגישות מבחוץ). לכן שתי הטענות א ו-ב נכונות, והתשובה היא ג. חברי `private` של `A` אינם נגישים ל-`B` בשום סוג ירושה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ (compile test, class B : private A): B::f reaches public and protected members of A, not private. Agrees.",
+   "lockOrder": true,
+   "id": "19A-B-Q6",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "נתונות הגדרות של שתי מחלקות:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {…};\nclass B : private A { void f() {...} …};</code></pre>לאילו משתנים של המחלקה <code class=\"tok\" dir=\"ltr\">A</code> הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> יכולה לגשת?",
+   "explanationHtml": "פונקציה של <code class=\"tok\" dir=\"ltr\">B</code> יכולה לגשת לחברי <code class=\"tok\" dir=\"ltr\">public</code> ול-<code class=\"tok\" dir=\"ltr\">protected</code> של הבסיס <code class=\"tok\" dir=\"ltr\">A</code>, גם בירושה <code class=\"tok\" dir=\"ltr\">private</code> (הירושה רק משנה את הנגישות מבחוץ). לכן שתי הטענות א ו-ב נכונות, והתשובה היא ג. חברי <code class=\"tok\" dir=\"ltr\">private</code> של <code class=\"tok\" dir=\"ltr\">A</code> אינם נגישים ל-<code class=\"tok\" dir=\"ltr\">B</code> בשום סוג ירושה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8aa299f559e14839"
+  },
+  {
+   "num": 7,
+   "topic": "const_references",
+   "question": "מה הטיפוס של `this` בפונקציה `f` במחלקה הבאה?\n```cpp\nclass A { void f() const {…} };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`A*`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A*</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`const A&`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const A&amp;</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`const A*`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const A*</code>"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בפונקציה חברה שמוגדרת `const`, `this` הוא מצביע לאובייקט קבוע: `const A*`. לכן התשובה ד. `A*` הוא הטיפוס של `this` בפונקציה שאינה `const`, `this` הוא מצביע ולא הפניה (ג שגויה), ו-`A` לבדו אינו מצביע.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ static_assert on decltype(this) inside a const member: const A* accepted, A*, A& and A rejected. Agrees.",
+   "id": "19A-B-Q7",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "מה הטיפוס של <code class=\"tok\" dir=\"ltr\">this</code> בפונקציה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A { void f() const {…} };</code></pre>",
+   "explanationHtml": "בפונקציה חברה שמוגדרת <code class=\"tok\" dir=\"ltr\">const</code>, <code class=\"tok\" dir=\"ltr\">this</code> הוא מצביע לאובייקט קבוע: <code class=\"tok\" dir=\"ltr\">const A*</code>. לכן התשובה ד. <code class=\"tok\" dir=\"ltr\">A*</code> הוא הטיפוס של <code class=\"tok\" dir=\"ltr\">this</code> בפונקציה שאינה <code class=\"tok\" dir=\"ltr\">const</code>, <code class=\"tok\" dir=\"ltr\">this</code> הוא מצביע ולא הפניה (ג שגויה), ו-<code class=\"tok\" dir=\"ltr\">A</code> לבדו אינו מצביע.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ed1f9a51016b104c"
+  },
+  {
+   "num": 8,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\ntemplate<int N> class X {\npublic:\nX() { ++d; }\nstatic int d;\n};\ntemplate<int N> int X<N>::d = 0;\nvoid main() {\nX<0> a, b;\nX<1> c;\nstd::cout << a.d << b.d << c.d;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`000`",
+     "html": "<code class=\"tok\" dir=\"ltr\">000</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`221`",
+     "html": "<code class=\"tok\" dir=\"ltr\">221</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`333`",
+     "html": "<code class=\"tok\" dir=\"ltr\">333</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "לכל מופע של התבנית (`X<0>`, `X<1>`) יש משתנה סטטי `d` נפרד. `a` ו-`b` הם מטיפוס `X<0>` ולכן חולקים את אותו `d`, שגדל ל-2. `c` מטיפוס `X<1>` ויש לו `d` משלו, שגדל ל-1. ההדפסה היא `a.d` אחרי שנבנו כולם: `2`, `2`, `1`, כלומר `221` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run printed 221. Agrees.",
+   "id": "19A-B-Q8",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\ntemplate&lt;int N&gt; class X {\npublic:\nX() { ++d; }\nstatic int d;\n};\ntemplate&lt;int N&gt; int X&lt;N&gt;::d = 0;\nvoid main() {\nX&lt;0&gt; a, b;\nX&lt;1&gt; c;\nstd::cout &lt;&lt; a.d &lt;&lt; b.d &lt;&lt; c.d;\n}</code></pre>",
+   "explanationHtml": "לכל מופע של התבנית (<code class=\"tok\" dir=\"ltr\">X&lt;0&gt;</code>, <code class=\"tok\" dir=\"ltr\">X&lt;1&gt;</code>) יש משתנה סטטי <code class=\"tok\" dir=\"ltr\">d</code> נפרד. <code class=\"tok\" dir=\"ltr\">a</code> ו-<code class=\"tok\" dir=\"ltr\">b</code> הם מטיפוס <code class=\"tok\" dir=\"ltr\">X&lt;0&gt;</code> ולכן חולקים את אותו <code class=\"tok\" dir=\"ltr\">d</code>, שגדל ל-2. <code class=\"tok\" dir=\"ltr\">c</code> מטיפוס <code class=\"tok\" dir=\"ltr\">X&lt;1&gt;</code> ויש לו <code class=\"tok\" dir=\"ltr\">d</code> משלו, שגדל ל-1. ההדפסה היא <code class=\"tok\" dir=\"ltr\">a.d</code> אחרי שנבנו כולם: <code class=\"tok\" dir=\"ltr\">2</code>, <code class=\"tok\" dir=\"ltr\">2</code>, <code class=\"tok\" dir=\"ltr\">1</code>, כלומר <code class=\"tok\" dir=\"ltr\">221</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8fe33cbba196fde2"
+  },
+  {
+   "num": 9,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nclass B\n{ public: virtual void disp() { std::cout<<\"B\"; } };\nclass D : public B\n{ public:\n  void disp()\n{ std::cout<<\"D\"; } };\nvoid main(){\n    D d;\n    d.disp();\n    D *pd=&d;\n    pd->disp();\n    B *pb=pd;\n    pb->disp();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`DDB`",
+     "html": "<code class=\"tok\" dir=\"ltr\">DDB</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`DDD`",
+     "html": "<code class=\"tok\" dir=\"ltr\">DDD</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`BBB`",
+     "html": "<code class=\"tok\" dir=\"ltr\">BBB</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`disp` וירטואלית ב-`B` ו-`D` דורסת אותה. הקריאה דרך האובייקט `d.disp()` מדפיסה `D`, דרך מצביע `D*` מדפיסה `D`, ודרך מצביע `B*` שמצביע על אובייקט מטיפוס `D` נבחרת הגרסה לפי הטיפוס הדינמי, כלומר `D`. הפלט `DDD` (תשובה ג). `DDB` ו-`BBB` מניחים שאין קריאה וירטואלית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run printed DDD. Agrees.",
+   "id": "19A-B-Q9",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass B\n{ public: virtual void disp() { std::cout&lt;&lt;\"B\"; } };\nclass D : public B\n{ public:\n  void disp()\n{ std::cout&lt;&lt;\"D\"; } };\nvoid main(){\n    D d;\n    d.disp();\n    D *pd=&amp;d;\n    pd-&gt;disp();\n    B *pb=pd;\n    pb-&gt;disp();\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">disp</code> וירטואלית ב-<code class=\"tok\" dir=\"ltr\">B</code> ו-<code class=\"tok\" dir=\"ltr\">D</code> דורסת אותה. הקריאה דרך האובייקט <code class=\"tok\" dir=\"ltr\">d.disp()</code> מדפיסה <code class=\"tok\" dir=\"ltr\">D</code>, דרך מצביע <code class=\"tok\" dir=\"ltr\">D*</code> מדפיסה <code class=\"tok\" dir=\"ltr\">D</code>, ודרך מצביע <code class=\"tok\" dir=\"ltr\">B*</code> שמצביע על אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">D</code> נבחרת הגרסה לפי הטיפוס הדינמי, כלומר <code class=\"tok\" dir=\"ltr\">D</code>. הפלט <code class=\"tok\" dir=\"ltr\">DDD</code> (תשובה ג). <code class=\"tok\" dir=\"ltr\">DDB</code> ו-<code class=\"tok\" dir=\"ltr\">BBB</code> מניחים שאין קריאה וירטואלית.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "77076a142c4f3c4e"
+  },
+  {
+   "num": 10,
+   "topic": "abstract_multiple",
+   "question": "נתונות הגדרות של 5 רשומות:\n```cpp\nstruct A { int x; };\nstruct B : virtual A {};\nstruct C : virtual A {};\nstruct D : A {};\nstruct E : B, C, D {};\n```\nכמה שדות מטיפוס `int` קיימים באובייקט מטיפוס `E`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ל-`B` ול-`C` יש בסיס וירטואלי `A` משותף, ולכן הם תורמים ל-`E` עותק אחד של `A::x`. `D` יורשת את `A` ירושה רגילה ומוסיפה עותק נוסף. בסך הכול שני שדות `int` (תשובה ב). בהרצה הכתובות של `e.B::x` ושל `e.C::x` זהות, וזו של `e.D::x` שונה; הגישה הפשוטה `e.x` עמומה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: &e.B::x == &e.C::x (shared virtual A) and &e.D::x differs -> 2 distinct int fields; plain e.x is ambiguous. Agrees.",
+   "id": "19A-B-Q10",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "נתונות הגדרות של 5 רשומות:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct A { int x; };\nstruct B : virtual A {};\nstruct C : virtual A {};\nstruct D : A {};\nstruct E : B, C, D {};</code></pre>כמה שדות מטיפוס <code class=\"tok\" dir=\"ltr\">int</code> קיימים באובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">E</code>?",
+   "explanationHtml": "ל-<code class=\"tok\" dir=\"ltr\">B</code> ול-<code class=\"tok\" dir=\"ltr\">C</code> יש בסיס וירטואלי <code class=\"tok\" dir=\"ltr\">A</code> משותף, ולכן הם תורמים ל-<code class=\"tok\" dir=\"ltr\">E</code> עותק אחד של <code class=\"tok\" dir=\"ltr\">A::x</code>. <code class=\"tok\" dir=\"ltr\">D</code> יורשת את <code class=\"tok\" dir=\"ltr\">A</code> ירושה רגילה ומוסיפה עותק נוסף. בסך הכול שני שדות <code class=\"tok\" dir=\"ltr\">int</code> (תשובה ב). בהרצה הכתובות של <code class=\"tok\" dir=\"ltr\">e.B::x</code> ושל <code class=\"tok\" dir=\"ltr\">e.C::x</code> זהות, וזו של <code class=\"tok\" dir=\"ltr\">e.D::x</code> שונה; הגישה הפשוטה <code class=\"tok\" dir=\"ltr\">e.x</code> עמומה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "867871c0befce2bb"
+  },
+  {
+   "num": 11,
+   "topic": "inheritance_access",
+   "question": "אילו שורות בתכנית הבאה גורמות לשגיאת קומפילציה?\n```text\n1    class A { public: int I;};\n2    class B : protected A { private: int J;};\n3    void main () {\n4      A t;\n5      B tt;\n6      t.I = 3;\n7      tt.I = 3;\n8    }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 2 ו-6",
+     "html": "שורות 2 ו-6"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 2 ו-5",
+     "html": "שורות 2 ו-5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורה 7",
+     "html": "שורה 7"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ב-`B` הירושה היא `protected`, ולכן החבר הציבורי `I` של `A` הופך ל-`protected` ב-`B` ואי אפשר לגשת אליו מחוץ למחלקה. שורה 6 (`t.I`, אובייקט מטיפוס `A`) תקינה. שורה 7 (`tt.I`) שגויה. שורות 2 ו-5 תקינות. לכן רק שורה 7 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run (lines tagged): only line 7 fails (protected inheritance hides I). Agrees.",
+   "id": "19A-B-Q11",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "אילו שורות בתכנית הבאה גורמות לשגיאת קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1    class A { public: int I;};\n2    class B : protected A { private: int J;};\n3    void main () {\n4      A t;\n5      B tt;\n6      t.I = 3;\n7      tt.I = 3;\n8    }</code></pre>",
+   "explanationHtml": "ב-<code class=\"tok\" dir=\"ltr\">B</code> הירושה היא <code class=\"tok\" dir=\"ltr\">protected</code>, ולכן החבר הציבורי <code class=\"tok\" dir=\"ltr\">I</code> של <code class=\"tok\" dir=\"ltr\">A</code> הופך ל-<code class=\"tok\" dir=\"ltr\">protected</code> ב-<code class=\"tok\" dir=\"ltr\">B</code> ואי אפשר לגשת אליו מחוץ למחלקה. שורה 6 (<code class=\"tok\" dir=\"ltr\">t.I</code>, אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">A</code>) תקינה. שורה 7 (<code class=\"tok\" dir=\"ltr\">tt.I</code>) שגויה. שורות 2 ו-5 תקינות. לכן רק שורה 7 (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8e36376895aebd0b"
+  },
+  {
+   "num": 12,
+   "topic": "friend_this_static",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <iostream>\nstatic int K = 1;\nstruct A {\nstatic int K;\n    A(){K++;}\n};\nint A::K = 1;\nvoid main () {\nA a;\nA *b=&a;\nA &c=*b;\nstd::cout << K << c.K << A::K;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`132`",
+     "html": "<code class=\"tok\" dir=\"ltr\">132</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`211`",
+     "html": "<code class=\"tok\" dir=\"ltr\">211</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`122`",
+     "html": "<code class=\"tok\" dir=\"ltr\">122</code>"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בתוך `main` השם `K` מתייחס למשתנה הגלובלי, שנשאר 1. `c.K` ו-`A::K` הם אותו משתנה סטטי של `A`, שהתחיל ב-1 ועלה ל-2 כשנבנה `a`. הפלט `1` ואז `2` ואז `2`, כלומר `122` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run printed 122. Agrees.",
+   "id": "19A-B-Q12",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nstatic int K = 1;\nstruct A {\nstatic int K;\n    A(){K++;}\n};\nint A::K = 1;\nvoid main () {\nA a;\nA *b=&amp;a;\nA &amp;c=*b;\nstd::cout &lt;&lt; K &lt;&lt; c.K &lt;&lt; A::K;\n}</code></pre>",
+   "explanationHtml": "בתוך <code class=\"tok\" dir=\"ltr\">main</code> השם <code class=\"tok\" dir=\"ltr\">K</code> מתייחס למשתנה הגלובלי, שנשאר 1. <code class=\"tok\" dir=\"ltr\">c.K</code> ו-<code class=\"tok\" dir=\"ltr\">A::K</code> הם אותו משתנה סטטי של <code class=\"tok\" dir=\"ltr\">A</code>, שהתחיל ב-1 ועלה ל-2 כשנבנה <code class=\"tok\" dir=\"ltr\">a</code>. הפלט <code class=\"tok\" dir=\"ltr\">1</code> ואז <code class=\"tok\" dir=\"ltr\">2</code> ואז <code class=\"tok\" dir=\"ltr\">2</code>, כלומר <code class=\"tok\" dir=\"ltr\">122</code> (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "11e2723e6a1e2486"
+  },
+  {
+   "num": 13,
+   "topic": "const_references",
+   "question": "מה ניתן לכתוב כך שהקוד יעבור קומפילציה\n```cpp\nclass A {\nint K ;\nconst int* f(const int *k) const { return _____; }\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`this->K`",
+     "html": "<code class=\"tok\" dir=\"ltr\">this-&gt;K</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`K+*k`",
+     "html": "<code class=\"tok\" dir=\"ltr\">K+*k</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`&K`",
+     "html": "<code class=\"tok\" dir=\"ltr\">&amp;K</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`*k`",
+     "html": "<code class=\"tok\" dir=\"ltr\">*k</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה `f` היא `const`, ולכן בתוכה `K` נחשב `const int`. הביטוי `&K` הוא `const int*`, בדיוק טיפוס ההחזרה, ולכן מתקמפל (תשובה ג). `this->K` ו-`*k` הם `int` ולא מצביע, ו-`K+*k` הוא `int`. כל אחד מהם גורם לשגיאת המרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile test of each option: only `&K` compiles. Agrees.",
+   "id": "19A-B-Q13",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "מה ניתן לכתוב כך שהקוד יעבור קומפילציה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\nint K ;\nconst int* f(const int *k) const { return _____; }\n};</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> היא <code class=\"tok\" dir=\"ltr\">const</code>, ולכן בתוכה <code class=\"tok\" dir=\"ltr\">K</code> נחשב <code class=\"tok\" dir=\"ltr\">const int</code>. הביטוי <code class=\"tok\" dir=\"ltr\">&amp;K</code> הוא <code class=\"tok\" dir=\"ltr\">const int*</code>, בדיוק טיפוס ההחזרה, ולכן מתקמפל (תשובה ג). <code class=\"tok\" dir=\"ltr\">this-&gt;K</code> ו-<code class=\"tok\" dir=\"ltr\">*k</code> הם <code class=\"tok\" dir=\"ltr\">int</code> ולא מצביע, ו-<code class=\"tok\" dir=\"ltr\">K+*k</code> הוא <code class=\"tok\" dir=\"ltr\">int</code>. כל אחד מהם גורם לשגיאת המרה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "dcae96461591eff4"
+  },
+  {
+   "num": 14,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include  <iostream>\nclass A {\npublic:\nA(int) {std::cout << \" A int \";}\nA() {std::cout << \"A empty \";}\n~A() {std::cout << \" destroy A\";}\n};\nclass B : public A{\npublic:\nB(int) {std::cout << \"B int \";}\nB() {std::cout << \"B empty \";}\n~B() {std::cout << \" destroy B\";}\n};\nvoid main() {\nB *b;\nA a(3);\nb = new B();\nA *ap=b;\ndelete ap;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A int B empty destroy A destroy B destroy B`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A int B empty destroy A destroy B destroy B</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`A int A empty B empty  destroy A destroy A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A int A empty B empty  destroy A destroy A</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`B int A int destroy A destroy B`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B int A int destroy A destroy B</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`A int B int destroy A destroy B destroy A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A int B int destroy A destroy B destroy A</code>"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`A a(3)` מדפיס ` A int `. `new B()` בונה קודם את הבסיס בבנאי ברירת המחדל שלו (כי `B()` לא מציין בנאי אחר): `A empty `, ואז `B empty `. `delete ap` על מצביע `A*` כשההורס אינו וירטואלי מפעיל רק את `~A`: ` destroy A`. בסוף `main` נהרס `a`: ` destroy A`. הפלט הוא ` A int A empty B empty  destroy A destroy A` (תשובה ב). `~B` לא רץ בכלל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run printed ` A int A empty B empty  destroy A destroy A`. Agrees. (The exam prints curly quotes in the string literals; straight quotes were used to compile.)",
+   "id": "19A-B-Q14",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include  &lt;iostream&gt;\nclass A {\npublic:\nA(int) {std::cout &lt;&lt; \" A int \";}\nA() {std::cout &lt;&lt; \"A empty \";}\n~A() {std::cout &lt;&lt; \" destroy A\";}\n};\nclass B : public A{\npublic:\nB(int) {std::cout &lt;&lt; \"B int \";}\nB() {std::cout &lt;&lt; \"B empty \";}\n~B() {std::cout &lt;&lt; \" destroy B\";}\n};\nvoid main() {\nB *b;\nA a(3);\nb = new B();\nA *ap=b;\ndelete ap;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">A a(3)</code> מדפיס <code class=\"tok\" dir=\"ltr\"> A int </code>. <code class=\"tok\" dir=\"ltr\">new B()</code> בונה קודם את הבסיס בבנאי ברירת המחדל שלו (כי <code class=\"tok\" dir=\"ltr\">B()</code> לא מציין בנאי אחר): <code class=\"tok\" dir=\"ltr\">A empty </code>, ואז <code class=\"tok\" dir=\"ltr\">B empty </code>. <code class=\"tok\" dir=\"ltr\">delete ap</code> על מצביע <code class=\"tok\" dir=\"ltr\">A*</code> כשההורס אינו וירטואלי מפעיל רק את <code class=\"tok\" dir=\"ltr\">~A</code>: <code class=\"tok\" dir=\"ltr\"> destroy A</code>. בסוף <code class=\"tok\" dir=\"ltr\">main</code> נהרס <code class=\"tok\" dir=\"ltr\">a</code>: <code class=\"tok\" dir=\"ltr\"> destroy A</code>. הפלט הוא <code class=\"tok\" dir=\"ltr\"> A int A empty B empty  destroy A destroy A</code> (תשובה ב). <code class=\"tok\" dir=\"ltr\">~B</code> לא רץ בכלל.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "50f08759ad7ca7e9"
+  },
+  {
+   "num": 15,
+   "topic": "abstract_multiple",
+   "question": "בקטע הקוד הבא:\n```text\n1.  #include <iostream>\n2.  using namespace std;\n3.  class X {\n4.  public:\n5.   X(int i = 0) { nx = i; }\n6.   virtual void f() = 0;\n7.   int nx;\n8.  };\n9.  class Y : public X {\n10.  public:\n11.   Y(int i = 0, int j=0) : X(i), ny(j) { }\n12.   virtual void f() { cout << \"Y\" << ny; }\n13.   int ny;\n14.  };\n15.  int main() {\n16.   X *x[2];\n17.   x[0] = new X(1);\n18.   x[1] = new Y(2, 3);\n19.   X x2(2);\n20.  }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מתקבלת שגיאת קומפילציה בשורות 16,17,18,19",
+     "html": "מתקבלת שגיאת קומפילציה בשורות 16,17,18,19"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "מתקבלת שגיאת קומפילציה בשורות 17,18,19",
+     "html": "מתקבלת שגיאת קומפילציה בשורות 17,18,19"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "מתקבלת שגיאת קומפילציה בשורות 17,19",
+     "html": "מתקבלת שגיאת קומפילציה בשורות 17,19"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא מתקבלת שגיאת קומפילציה",
+     "html": "לא מתקבלת שגיאת קומפילציה"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`X` מופשטת (`f()=0`), ולכן אסור ליצור ממנה אובייקט: שורה 17 (`new X(1)`) ושורה 19 (`X x2(2)`) הן שגיאות. מצביע ל-`X` (שורה 16) תקין, ו-`new Y(2,3)` (שורה 18) תקין כי `Y` ממשת את `f`. התשובה היא שורות 17,19 (ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run (lines tagged): errors on 17 and 19 only (abstract X). Agrees.",
+   "id": "19A-B-Q15",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1.  #include &lt;iostream&gt;\n2.  using namespace std;\n3.  class X {\n4.  public:\n5.   X(int i = 0) { nx = i; }\n6.   virtual void f() = 0;\n7.   int nx;\n8.  };\n9.  class Y : public X {\n10.  public:\n11.   Y(int i = 0, int j=0) : X(i), ny(j) { }\n12.   virtual void f() { cout &lt;&lt; \"Y\" &lt;&lt; ny; }\n13.   int ny;\n14.  };\n15.  int main() {\n16.   X *x[2];\n17.   x[0] = new X(1);\n18.   x[1] = new Y(2, 3);\n19.   X x2(2);\n20.  }</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">X</code> מופשטת (<code class=\"tok\" dir=\"ltr\">f()=0</code>), ולכן אסור ליצור ממנה אובייקט: שורה 17 (<code class=\"tok\" dir=\"ltr\">new X(1)</code>) ושורה 19 (<code class=\"tok\" dir=\"ltr\">X x2(2)</code>) הן שגיאות. מצביע ל-<code class=\"tok\" dir=\"ltr\">X</code> (שורה 16) תקין, ו-<code class=\"tok\" dir=\"ltr\">new Y(2,3)</code> (שורה 18) תקין כי <code class=\"tok\" dir=\"ltr\">Y</code> ממשת את <code class=\"tok\" dir=\"ltr\">f</code>. התשובה היא שורות 17,19 (ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "255ef49f8b1a582d"
+  },
+  {
+   "num": 16,
+   "topic": "composition",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nusing namespace std;\nclass X {\npublic:\nX(int i = 0) : nx(i) { cout << 1; }\nint nx;\n};\nclass Y {\npublic:\nY(int i = 0) : ny(i) { onx=X(i); }\nint ny;\nX onx;\n};\nint main() {\nY y1(2);\ny1.onx.nx = 3;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`11`",
+     "html": "<code class=\"tok\" dir=\"ltr\">11</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`13`",
+     "html": "<code class=\"tok\" dir=\"ltr\">13</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`111`",
+     "html": "<code class=\"tok\" dir=\"ltr\">111</code>"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בבנאי של `Y`, השדה `onx` נבנה קודם ברשימת האיתחול בבנאי ברירת המחדל של `X` (מדפיס `1`), ואז `X(i)` יוצר זמני שמדפיס `1` נוסף, ומועתק ל-`onx`. בסך הכול `11` (תשובה ב). השורה `y1.onx.nx = 3` לא מדפיסה דבר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run printed 11. Agrees.",
+   "id": "19A-B-Q16",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הכלה וסדר אתחול",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\nclass X {\npublic:\nX(int i = 0) : nx(i) { cout &lt;&lt; 1; }\nint nx;\n};\nclass Y {\npublic:\nY(int i = 0) : ny(i) { onx=X(i); }\nint ny;\nX onx;\n};\nint main() {\nY y1(2);\ny1.onx.nx = 3;\n}</code></pre>",
+   "explanationHtml": "בבנאי של <code class=\"tok\" dir=\"ltr\">Y</code>, השדה <code class=\"tok\" dir=\"ltr\">onx</code> נבנה קודם ברשימת האיתחול בבנאי ברירת המחדל של <code class=\"tok\" dir=\"ltr\">X</code> (מדפיס <code class=\"tok\" dir=\"ltr\">1</code>), ואז <code class=\"tok\" dir=\"ltr\">X(i)</code> יוצר זמני שמדפיס <code class=\"tok\" dir=\"ltr\">1</code> נוסף, ומועתק ל-<code class=\"tok\" dir=\"ltr\">onx</code>. בסך הכול <code class=\"tok\" dir=\"ltr\">11</code> (תשובה ב). השורה <code class=\"tok\" dir=\"ltr\">y1.onx.nx = 3</code> לא מדפיסה דבר.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "beff5f68ae900937"
+  },
+  {
+   "num": 17,
+   "topic": "const_references",
+   "question": "נתונות 4 טענות לגבי הפונקציה `f` במחלקה הבאה:\n```cpp\nclass A { public: void f() const {…} …};\n```\n(1) את הפונקציה אפשר להפעיל על אובייקט שהוגדר כ-`const`\n(2) את הפונקציה אפשר להפעיל על אובייקט שלא הוגדר כ-`const`\n(3) בפונקציה אפשר לשנות שדות שמסומנים כ-`const`\n(4) בפונקציה אפשר לשנות שדות שלא מסומנים כ-`const`\nכמה מהטענות נכונות?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "4",
+     "html": "4"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "פונקציה `const` אפשר להפעיל גם על אובייקט `const` וגם על אובייקט רגיל, ולכן טענות 1 ו-2 נכונות. בתוך פונקציה `const` אי אפשר לשנות אף שדה (גם לא שדה שאינו `const`, אלא אם הוא `mutable`), ולכן טענה 4 שגויה, וגם טענה 3 שגויה (שדה `const` אי אפשר לשנות בשום פונקציה). בסך הכול שתי טענות (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests: statements 1 and 2 hold; modifying a const field (3) or a plain field inside a const member (4) is an error. Agrees.",
+   "id": "19A-B-Q17",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "נתונות 4 טענות לגבי הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A { public: void f() const {…} …};</code></pre>(1) את הפונקציה אפשר להפעיל על אובייקט שהוגדר כ-<code class=\"tok\" dir=\"ltr\">const</code><br>(2) את הפונקציה אפשר להפעיל על אובייקט שלא הוגדר כ-<code class=\"tok\" dir=\"ltr\">const</code><br>(3) בפונקציה אפשר לשנות שדות שמסומנים כ-<code class=\"tok\" dir=\"ltr\">const</code><br>(4) בפונקציה אפשר לשנות שדות שלא מסומנים כ-<code class=\"tok\" dir=\"ltr\">const</code><br>כמה מהטענות נכונות?",
+   "explanationHtml": "פונקציה <code class=\"tok\" dir=\"ltr\">const</code> אפשר להפעיל גם על אובייקט <code class=\"tok\" dir=\"ltr\">const</code> וגם על אובייקט רגיל, ולכן טענות 1 ו-2 נכונות. בתוך פונקציה <code class=\"tok\" dir=\"ltr\">const</code> אי אפשר לשנות אף שדה (גם לא שדה שאינו <code class=\"tok\" dir=\"ltr\">const</code>, אלא אם הוא <code class=\"tok\" dir=\"ltr\">mutable</code>), ולכן טענה 4 שגויה, וגם טענה 3 שגויה (שדה <code class=\"tok\" dir=\"ltr\">const</code> אי אפשר לשנות בשום פונקציה). בסך הכול שתי טענות (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c61179edd76de202"
+  },
+  {
+   "num": 18,
+   "topic": "const_references",
+   "question": "כמה שורות בקטע תכנית לא עוברות קומפילציה?\n```cpp\nint a = 42, *p;\nconst int b = 24, *q;\np = &a;\np = &b;\nq = &a;\nq = &b;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`p` הוא `int*` ו-`q` הוא `const int*`. `p = &a` תקין. `p = &b` שגוי, כי `b` קבוע ו-`int*` אינו יכול להצביע על קבוע. `q = &a` ו-`q = &b` תקינים (מצביע לקבוע יכול להצביע גם על לא קבוע). שורה אחת (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run (lines tagged): only `p = &b;` fails. Agrees.",
+   "id": "19A-B-Q18",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "כמה שורות בקטע תכנית לא עוברות קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int a = 42, *p;\nconst int b = 24, *q;\np = &amp;a;\np = &amp;b;\nq = &amp;a;\nq = &amp;b;</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">p</code> הוא <code class=\"tok\" dir=\"ltr\">int*</code> ו-<code class=\"tok\" dir=\"ltr\">q</code> הוא <code class=\"tok\" dir=\"ltr\">const int*</code>. <code class=\"tok\" dir=\"ltr\">p = &amp;a</code> תקין. <code class=\"tok\" dir=\"ltr\">p = &amp;b</code> שגוי, כי <code class=\"tok\" dir=\"ltr\">b</code> קבוע ו-<code class=\"tok\" dir=\"ltr\">int*</code> אינו יכול להצביע על קבוע. <code class=\"tok\" dir=\"ltr\">q = &amp;a</code> ו-<code class=\"tok\" dir=\"ltr\">q = &amp;b</code> תקינים (מצביע לקבוע יכול להצביע גם על לא קבוע). שורה אחת (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4cc73c9e553bdcf5"
+  },
+  {
+   "num": 19,
+   "topic": "inheritance_access",
+   "question": "כמה שורות בתכנית לא עוברות קומפילציה?\n```cpp\nclass A {};\nclass B : public A {};\nvoid main() {\nA a, *p;\nB b, *q;\np = &b;\nq = &a;\na = b;\nb = a;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`p = &b` תקין (מצביע לנגזרת הומר למצביע לבסיס). `q = &a` שגוי (אין המרה מבסיס לנגזרת). `a = b` תקין (slicing). `b = a` שגוי (אין השמה של `A` לתוך `B`). שתי שורות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run (lines tagged): `q = &a;` and `b = a;` fail. Agrees.",
+   "id": "19A-B-Q19",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "כמה שורות בתכנית לא עוברות קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {};\nclass B : public A {};\nvoid main() {\nA a, *p;\nB b, *q;\np = &amp;b;\nq = &amp;a;\na = b;\nb = a;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">p = &amp;b</code> תקין (מצביע לנגזרת הומר למצביע לבסיס). <code class=\"tok\" dir=\"ltr\">q = &amp;a</code> שגוי (אין המרה מבסיס לנגזרת). <code class=\"tok\" dir=\"ltr\">a = b</code> תקין (slicing). <code class=\"tok\" dir=\"ltr\">b = a</code> שגוי (אין השמה של <code class=\"tok\" dir=\"ltr\">A</code> לתוך <code class=\"tok\" dir=\"ltr\">B</code>). שתי שורות (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c4fe2e013fef6c69"
+  },
+  {
+   "num": 20,
+   "topic": "abstract_multiple",
+   "question": "כמה מהשורות 7-9 עוברות קומפילציה ומשימות 42 לשדה `x` של המחלקה `C` במשתנה `d`?\n```text\n1. class A { public: int x; };\n2. class B : public A {};\n3. class C : public A {};\n4. class D : public B, public C {};\n5. void main() {\n6.     D d;\n7.     d.C::x = 42;\n8.     ((C)d).x = 42;\n9.     ((C*)&d)->x = 42;\n10. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שורה 7: `d.C::x` מציין במפורש את ה-`x` של התת-אובייקט `C` בתוך `d`, ולכן תקינה ומשנה אותו. שורה 9: ההמרה ל-`C*` מצביעה על התת-אובייקט `C` של `d`, ולכן גם היא תקינה ומשנה אותו. שורה 8: `(C)d` יוצר עותק זמני, ושינוי שדה שלו אינו חוקי (clang מדווח `expression is not assignable`), ובכל מקרה לא היה משנה את `d`. לכן 2 שורות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: line 7 and line 9 compile and set the C::x subobject of d to 42; line 8 does not compile under clang++ (assignment to a member of a temporary copy `(C)d`: expression is not assignable), and would only change a copy anyway. -> 2. Agrees.",
+   "id": "19A-B-Q20",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "כמה מהשורות 7-9 עוברות קומפילציה ומשימות 42 לשדה <code class=\"tok\" dir=\"ltr\">x</code> של המחלקה <code class=\"tok\" dir=\"ltr\">C</code> במשתנה <code class=\"tok\" dir=\"ltr\">d</code>?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1. class A { public: int x; };\n2. class B : public A {};\n3. class C : public A {};\n4. class D : public B, public C {};\n5. void main() {\n6.     D d;\n7.     d.C::x = 42;\n8.     ((C)d).x = 42;\n9.     ((C*)&amp;d)-&gt;x = 42;\n10. }</code></pre>",
+   "explanationHtml": "שורה 7: <code class=\"tok\" dir=\"ltr\">d.C::x</code> מציין במפורש את ה-<code class=\"tok\" dir=\"ltr\">x</code> של התת-אובייקט <code class=\"tok\" dir=\"ltr\">C</code> בתוך <code class=\"tok\" dir=\"ltr\">d</code>, ולכן תקינה ומשנה אותו. שורה 9: ההמרה ל-<code class=\"tok\" dir=\"ltr\">C*</code> מצביעה על התת-אובייקט <code class=\"tok\" dir=\"ltr\">C</code> של <code class=\"tok\" dir=\"ltr\">d</code>, ולכן גם היא תקינה ומשנה אותו. שורה 8: <code class=\"tok\" dir=\"ltr\">(C)d</code> יוצר עותק זמני, ושינוי שדה שלו אינו חוקי (clang מדווח <code class=\"tok\" dir=\"ltr\">expression is not assignable</code>), ובכל מקרה לא היה משנה את <code class=\"tok\" dir=\"ltr\">d</code>. לכן 2 שורות (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "804dd9733979873e"
+  },
+  {
+   "num": 21,
+   "topic": "composition",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nint n = 0;\nclass A {\npublic:\nA() : y(++n), x(++n) { std::cout << x << y; }\nint x;\nint y;\n};\nvoid main() { A a; }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`11`",
+     "html": "<code class=\"tok\" dir=\"ltr\">11</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`21`",
+     "html": "<code class=\"tok\" dir=\"ltr\">21</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`22`",
+     "html": "<code class=\"tok\" dir=\"ltr\">22</code>"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "השדות מאותחלים לפי סדר ההצהרה במחלקה ולא לפי סדר רשימת האיתחול: קודם `x` (מקבל 1) ואז `y` (מקבל 2). ההדפסה `x` ואז `y`: `12` (תשובה ב). `21` הייתה נכונה אילו האיתחול היה לפי סדר הרשימה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run printed 12 (members are initialised in declaration order, x before y). Agrees.",
+   "id": "19A-B-Q21",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הכלה וסדר אתחול",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nint n = 0;\nclass A {\npublic:\nA() : y(++n), x(++n) { std::cout &lt;&lt; x &lt;&lt; y; }\nint x;\nint y;\n};\nvoid main() { A a; }</code></pre>",
+   "explanationHtml": "השדות מאותחלים לפי סדר ההצהרה במחלקה ולא לפי סדר רשימת האיתחול: קודם <code class=\"tok\" dir=\"ltr\">x</code> (מקבל 1) ואז <code class=\"tok\" dir=\"ltr\">y</code> (מקבל 2). ההדפסה <code class=\"tok\" dir=\"ltr\">x</code> ואז <code class=\"tok\" dir=\"ltr\">y</code>: <code class=\"tok\" dir=\"ltr\">12</code> (תשובה ב). <code class=\"tok\" dir=\"ltr\">21</code> הייתה נכונה אילו האיתחול היה לפי סדר הרשימה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "6107c2c03f624a49"
+  },
+  {
+   "num": 22,
+   "topic": "operator_overloading",
+   "question": "באילו מקרים ניתן להגדיר אופרטור בינארי בתוך המחלקה `X`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "כאשר `X` הוא הטיפוס של האופרנד השמאלי אבל לא הימני",
+     "html": "כאשר <code class=\"tok\" dir=\"ltr\">X</code> הוא הטיפוס של האופרנד השמאלי אבל לא הימני"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "כאשר `X` הוא הטיפוס של האופרנד הימני אבל לא השמאלי",
+     "html": "כאשר <code class=\"tok\" dir=\"ltr\">X</code> הוא הטיפוס של האופרנד הימני אבל לא השמאלי"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "כאשר `X` הוא הטיפוס של האופרנד השמאלי",
+     "html": "כאשר <code class=\"tok\" dir=\"ltr\">X</code> הוא הטיפוס של האופרנד השמאלי"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "כאשר `X` הוא הטיפוס של האופרנד הימני",
+     "html": "כאשר <code class=\"tok\" dir=\"ltr\">X</code> הוא הטיפוס של האופרנד הימני"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "אופרטור בינארי שמוגדר כפונקציה חברה ב-`X` נקרא על האופרנד השמאלי, ולכן האופרנד השמאלי חייב להיות מטיפוס `X` (התשובה ג). הטיפוס של האופרנד הימני אינו מוגבל. בהרצה `x + 1` ו-`x + x` מתקמפלים, ו-`1 + x` לא.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile tests with a member operator+: `x + 1` and `x + x` compile, `1 + x` does not. Agrees.",
+   "id": "19A-B-Q22",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "באילו מקרים ניתן להגדיר אופרטור בינארי בתוך המחלקה <code class=\"tok\" dir=\"ltr\">X</code>?",
+   "explanationHtml": "אופרטור בינארי שמוגדר כפונקציה חברה ב-<code class=\"tok\" dir=\"ltr\">X</code> נקרא על האופרנד השמאלי, ולכן האופרנד השמאלי חייב להיות מטיפוס <code class=\"tok\" dir=\"ltr\">X</code> (התשובה ג). הטיפוס של האופרנד הימני אינו מוגבל. בהרצה <code class=\"tok\" dir=\"ltr\">x + 1</code> ו-<code class=\"tok\" dir=\"ltr\">x + x</code> מתקמפלים, ו-<code class=\"tok\" dir=\"ltr\">1 + x</code> לא.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d8b6eaa521d50d4c"
+  },
+  {
+   "num": 23,
+   "topic": "operator_overloading",
+   "question": "מה נכון לגבי הגדרת האופרטור `<<` עבור המחלקה `X`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת בתוך `X`",
+     "html": "הפונקציה צריכה להיות מוגדרת בתוך <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת מחוץ ל-`X` ובהכרח צריכה להיות מוגדרת כ-`friend` ב-`X`",
+     "html": "הפונקציה צריכה להיות מוגדרת מחוץ ל-<code class=\"tok\" dir=\"ltr\">X</code> ובהכרח צריכה להיות מוגדרת כ-<code class=\"tok\" dir=\"ltr\">friend</code> ב-<code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת מחוץ ל-`X` ולא בהכרח צריכה להיות מוגדרת כ-`friend` ב-`X`",
+     "html": "הפונקציה צריכה להיות מוגדרת מחוץ ל-<code class=\"tok\" dir=\"ltr\">X</code> ולא בהכרח צריכה להיות מוגדרת כ-<code class=\"tok\" dir=\"ltr\">friend</code> ב-<code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת גם בתוך `X` וגם מחוץ ל-`X`",
+     "html": "הפונקציה צריכה להיות מוגדרת גם בתוך <code class=\"tok\" dir=\"ltr\">X</code> וגם מחוץ ל-<code class=\"tok\" dir=\"ltr\">X</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "האופרטור `<<` לפלט (`cout << x`) חייב להיות פונקציה חיצונית, כי האופרנד השמאלי הוא `ostream`. אם הפונקציה משתמשת רק בחברים ציבוריים אין צורך ב-`friend` (תשובה ג). `friend` נדרש רק כשצריך גישה לחברים פרטיים. גרסה חברה בתוך `X` הייתה מאפשרת רק `x << cout`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile tests: a member operator<< does not make `cout << x` compile; a free function using only public members compiles without friend. Agrees.",
+   "id": "19A-B-Q23",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה נכון לגבי הגדרת האופרטור <code class=\"tok\" dir=\"ltr\">&lt;&lt;</code> עבור המחלקה <code class=\"tok\" dir=\"ltr\">X</code>?",
+   "explanationHtml": "האופרטור <code class=\"tok\" dir=\"ltr\">&lt;&lt;</code> לפלט (<code class=\"tok\" dir=\"ltr\">cout &lt;&lt; x</code>) חייב להיות פונקציה חיצונית, כי האופרנד השמאלי הוא <code class=\"tok\" dir=\"ltr\">ostream</code>. אם הפונקציה משתמשת רק בחברים ציבוריים אין צורך ב-<code class=\"tok\" dir=\"ltr\">friend</code> (תשובה ג). <code class=\"tok\" dir=\"ltr\">friend</code> נדרש רק כשצריך גישה לחברים פרטיים. גרסה חברה בתוך <code class=\"tok\" dir=\"ltr\">X</code> הייתה מאפשרת רק <code class=\"tok\" dir=\"ltr\">x &lt;&lt; cout</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8669afc93bb7c1b5"
+  },
+  {
+   "num": 24,
+   "topic": "inheritance_access",
+   "question": "נתונה תכנית עם קטעי קוד מושמטים. חלק מהקטעים המושמטים מסומנים בספרות רומיות I, II ו-III.\n```text\n1. class A {...};\n2. class B : public A {… I ...};\n3. class C : public B {… II ...};\n4. void main() { … III ... }\n```\nבשורה 2 החלפנו את המילה `public` ב-`protected` וכעת יש בתכנית שורת קוד שלא עוברת קומפילציה באחד מהקטעים המושמטים. מה נכון לגבי הימצאות השורה שגורמת לשגיאת קומפילציה?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "היא יכולה להימצא בקטע I",
+     "html": "היא יכולה להימצא בקטע I"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "היא יכולה להימצא בקטע II אבל לא בקטעים I ו-III",
+     "html": "היא יכולה להימצא בקטע II אבל לא בקטעים I ו-III"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "היא יכולה להימצא בקטע III אבל לא בקטעים I ו-II",
+     "html": "היא יכולה להימצא בקטע III אבל לא בקטעים I ו-II"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "היא יכולה להימצא בקטעים II ו-III אבל לא בקטע I",
+     "html": "היא יכולה להימצא בקטעים II ו-III אבל לא בקטע I"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בירושה `protected` חברי `public` של `A` הופכים ל-`protected` ב-`B`. בתוך `B` (קטע I) וגם בתוך `C` שיורשת מ-`B` (קטע II) עדיין אפשר לגשת אליהם. רק מחוץ למחלקות, ב-`main` (קטע III), הגישה נחסמת. לכן השגיאה יכולה להופיע רק בקטע III (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile tests with class B : protected A: access to A's public member compiles inside B (I) and inside C (II), fails in main (III). Agrees.",
+   "lockOrder": true,
+   "id": "19A-B-Q24",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "נתונה תכנית עם קטעי קוד מושמטים. חלק מהקטעים המושמטים מסומנים בספרות רומיות I, II ו-III.<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1. class A {...};\n2. class B : public A {… I ...};\n3. class C : public B {… II ...};\n4. void main() { … III ... }</code></pre>בשורה 2 החלפנו את המילה <code class=\"tok\" dir=\"ltr\">public</code> ב-<code class=\"tok\" dir=\"ltr\">protected</code> וכעת יש בתכנית שורת קוד שלא עוברת קומפילציה באחד מהקטעים המושמטים. מה נכון לגבי הימצאות השורה שגורמת לשגיאת קומפילציה?",
+   "explanationHtml": "בירושה <code class=\"tok\" dir=\"ltr\">protected</code> חברי <code class=\"tok\" dir=\"ltr\">public</code> של <code class=\"tok\" dir=\"ltr\">A</code> הופכים ל-<code class=\"tok\" dir=\"ltr\">protected</code> ב-<code class=\"tok\" dir=\"ltr\">B</code>. בתוך <code class=\"tok\" dir=\"ltr\">B</code> (קטע I) וגם בתוך <code class=\"tok\" dir=\"ltr\">C</code> שיורשת מ-<code class=\"tok\" dir=\"ltr\">B</code> (קטע II) עדיין אפשר לגשת אליהם. רק מחוץ למחלקות, ב-<code class=\"tok\" dir=\"ltr\">main</code> (קטע III), הגישה נחסמת. לכן השגיאה יכולה להופיע רק בקטע III (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "572a5a8065152cca"
+  },
+  {
+   "num": 25,
+   "topic": "stl_exceptions",
+   "question": "ידוע שטיפוס המשתנה `v` הוא `vector<int>` וכן ש-`v.size()==0`. מה מהבאים נכון?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "בהכרח `v.end()==v.begin()+0`",
+     "html": "בהכרח <code class=\"tok\" dir=\"ltr\">v.end()==v.begin()+0</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בהכרח `v.end()==v.begin()+1`",
+     "html": "בהכרח <code class=\"tok\" dir=\"ltr\">v.end()==v.begin()+1</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בהכרח `v.begin()==v.end()+1`",
+     "html": "בהכרח <code class=\"tok\" dir=\"ltr\">v.begin()==v.end()+1</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בווקטור ריק `begin()` ו-`end()` שווים, ולכן `v.end()==v.begin()+0` נכון תמיד (תשובה א). `v.begin()+1` הוא מעבר לסוף, כך ששתי הטענות האחרות שגויות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: v.end()==v.begin()+0 is true for an empty vector. Agrees.",
+   "id": "19A-B-Q25",
+   "examCode": "19A-B",
+   "examLabel": "2019 סמסטר א מועד ב",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "ידוע שטיפוס המשתנה <code class=\"tok\" dir=\"ltr\">v</code> הוא <code class=\"tok\" dir=\"ltr\">vector&lt;int&gt;</code> וכן ש-<code class=\"tok\" dir=\"ltr\">v.size()==0</code>. מה מהבאים נכון?",
+   "explanationHtml": "בווקטור ריק <code class=\"tok\" dir=\"ltr\">begin()</code> ו-<code class=\"tok\" dir=\"ltr\">end()</code> שווים, ולכן <code class=\"tok\" dir=\"ltr\">v.end()==v.begin()+0</code> נכון תמיד (תשובה א). <code class=\"tok\" dir=\"ltr\">v.begin()+1</code> הוא מעבר לסוף, כך ששתי הטענות האחרות שגויות.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a34db2b71187adf9"
+  },
+  {
+   "num": 1,
+   "topic": "operator_overloading",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה\n```text\n1. X x;\n2. ++x;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שלא מקבל פרמטרים במחלקה `X`",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">++</code> שלא מקבל פרמטרים במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שלא מקבל פרמטרים מחוץ למחלקה `X`",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">++</code> שלא מקבל פרמטרים מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שמקבל פרמטר אחד במחלקה `X`",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">++</code> שמקבל פרמטר אחד במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להגדיר אופרטור `++` שמקבל פרמטר אחד מחוץ למחלקה `X`",
+     "html": "להגדיר אופרטור <code class=\"tok\" dir=\"ltr\">++</code> שמקבל פרמטר אחד מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "ההגדרה `++x` היא פעולה מסוג prefix. כדי שתתקמפל צריך `operator++` שמופעל על האובייקט עצמו. כפונקציה חברה זה אופרטור ללא פרמטרים (תשובה א). אופרטור חבר עם פרמטר אחד (ג) הוא צורת ה-postfix `x++` ולא `++x`. אופרטור חיצוני ללא פרמטרים (ב) אינו חוקי. הערה: בהרצה גם אופרטור חיצוני `operator++(X&)` עם פרמטר אחד (ד) מתקמפל, אבל הדף הרשמי מסמן את א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ compile tests: a (member operator++()) compiles; b (free, no parameter) does not; c (member taking one parameter = postfix form) does not; d (free operator++(X&), one parameter) ALSO compiles, so d is arguably correct too. Key kept as printed.",
+   "id": "19A-C-Q1",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1. X x;\n2. ++x;</code></pre>",
+   "explanationHtml": "ההגדרה <code class=\"tok\" dir=\"ltr\">++x</code> היא פעולה מסוג prefix. כדי שתתקמפל צריך <code class=\"tok\" dir=\"ltr\">operator++</code> שמופעל על האובייקט עצמו. כפונקציה חברה זה אופרטור ללא פרמטרים (תשובה א). אופרטור חבר עם פרמטר אחד (ג) הוא צורת ה-postfix <code class=\"tok\" dir=\"ltr\">x++</code> ולא <code class=\"tok\" dir=\"ltr\">++x</code>. אופרטור חיצוני ללא פרמטרים (ב) אינו חוקי. הערה: בהרצה גם אופרטור חיצוני <code class=\"tok\" dir=\"ltr\">operator++(X&amp;)</code> עם פרמטר אחד (ד) מתקמפל, אבל הדף הרשמי מסמן את א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0f4a6de400947d56"
+  },
+  {
+   "num": 2,
+   "topic": "operator_conversions",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:\n```text\n1. X x;\n2. int n = x;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר בנאי (constructor) במחלקה `X`",
+     "html": "להגדיר בנאי (constructor) במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר פונקציה שאיננה בנאי במחלקה `X`",
+     "html": "להגדיר פונקציה שאיננה בנאי במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר פונקציה חברה במחלקה `X`",
+     "html": "להגדיר פונקציה חברה במחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להגדיר פונקציה במחלקה `int`",
+     "html": "להגדיר פונקציה במחלקה <code class=\"tok\" dir=\"ltr\">int</code>"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`int n = x;` דורש המרה מ-`X` ל-`int`. מי שמגדיר זאת הוא אופרטור המרה (`operator int()`) בתוך `X`, כלומר פונקציה שאינה בנאי (תשובה ב). בנאי ב-`X` מייצר `X` מ-משהו ולא להפך. פונקציה חברה רגילה לא נקראת אוטומטית, ולא ניתן להגדיר פונקציה בתוך הטיפוס `int`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests: only a conversion operator (`operator int()`) makes `int n = x;` compile; a constructor, a plain member function and nothing in int do not. Agrees.",
+   "id": "19A-C-Q2",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "אופרטורי המרה",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1. X x;\n2. int n = x;</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">int n = x;</code> דורש המרה מ-<code class=\"tok\" dir=\"ltr\">X</code> ל-<code class=\"tok\" dir=\"ltr\">int</code>. מי שמגדיר זאת הוא אופרטור המרה (<code class=\"tok\" dir=\"ltr\">operator int()</code>) בתוך <code class=\"tok\" dir=\"ltr\">X</code>, כלומר פונקציה שאינה בנאי (תשובה ב). בנאי ב-<code class=\"tok\" dir=\"ltr\">X</code> מייצר <code class=\"tok\" dir=\"ltr\">X</code> מ-משהו ולא להפך. פונקציה חברה רגילה לא נקראת אוטומטית, ולא ניתן להגדיר פונקציה בתוך הטיפוס <code class=\"tok\" dir=\"ltr\">int</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "283835e01a43d7bd"
+  },
+  {
+   "num": 3,
+   "topic": "classes_ctor_dtor",
+   "question": "בקטע הקוד הבא, קומפילציה של אילו פונקציות גורמת לשגיאות?\n```text\n1.  class C {\n2.  public:\n3.      int x;\n4.      void f() {\n5.          x = 1;\n6.          y = 2;\n7.      }\n8.  private:\n9.      int y;\n10. }\n11. void g() {\n12.     C c;\n13.     c.x = 1;\n14.     c.y = 2;\n15. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף פונקציה, הקומפילציה מצליחה",
+     "html": "אף פונקציה, הקומפילציה מצליחה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הפונקציה `f` בלבד",
+     "html": "הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> בלבד"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הפונקציה `g` בלבד",
+     "html": "הפונקציה <code class=\"tok\" dir=\"ltr\">g</code> בלבד"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הפונקציות `f` ו-`g`",
+     "html": "הפונקציות <code class=\"tok\" dir=\"ltr\">f</code> ו-<code class=\"tok\" dir=\"ltr\">g</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ב-`f` הגישה ל-`y` תקינה, כי פונקציה חברה ניגשת גם לשדות `private` של המחלקה שלה (גם אם `y` מוצהר אחרי הפונקציה). ב-`g` הגישה `c.x` תקינה (`public`) אבל `c.y` שגויה מכיוון ש-`y` הוא `private` וגישה מחוץ למחלקה אסורה. לכן רק `g` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run (lines tagged; the class-closing `;` after line 10 added so only real errors show): only line 14 (`c.y` from outside) fails. Agrees.",
+   "id": "19A-C-Q3",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "בקטע הקוד הבא, קומפילציה של אילו פונקציות גורמת לשגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1.  class C {\n2.  public:\n3.      int x;\n4.      void f() {\n5.          x = 1;\n6.          y = 2;\n7.      }\n8.  private:\n9.      int y;\n10. }\n11. void g() {\n12.     C c;\n13.     c.x = 1;\n14.     c.y = 2;\n15. }</code></pre>",
+   "explanationHtml": "ב-<code class=\"tok\" dir=\"ltr\">f</code> הגישה ל-<code class=\"tok\" dir=\"ltr\">y</code> תקינה, כי פונקציה חברה ניגשת גם לשדות <code class=\"tok\" dir=\"ltr\">private</code> של המחלקה שלה (גם אם <code class=\"tok\" dir=\"ltr\">y</code> מוצהר אחרי הפונקציה). ב-<code class=\"tok\" dir=\"ltr\">g</code> הגישה <code class=\"tok\" dir=\"ltr\">c.x</code> תקינה (<code class=\"tok\" dir=\"ltr\">public</code>) אבל <code class=\"tok\" dir=\"ltr\">c.y</code> שגויה מכיוון ש-<code class=\"tok\" dir=\"ltr\">y</code> הוא <code class=\"tok\" dir=\"ltr\">private</code> וגישה מחוץ למחלקה אסורה. לכן רק <code class=\"tok\" dir=\"ltr\">g</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "91908da24e4db6c9"
+  },
+  {
+   "num": 4,
+   "topic": "const_references",
+   "question": "מה הטיפוס של `this` בפונקציה `f` במחלקה הבאה?\n```cpp\nclass A { void f() const {…} };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`A*`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A*</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`const A&`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const A&amp;</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`const A*`",
+     "html": "<code class=\"tok\" dir=\"ltr\">const A*</code>"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בפונקציה חברה `const`, הטיפוס של `this` הוא מצביע לאובייקט קבוע: `const A*` (תשובה ד). `A*` הוא הטיפוס בפונקציה רגילה, ו-`this` הוא מצביע ולא הפניה (ג שגויה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ static_assert on decltype(this) inside a const member: only const A* accepted. Agrees.",
+   "id": "19A-C-Q4",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "מה הטיפוס של <code class=\"tok\" dir=\"ltr\">this</code> בפונקציה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A { void f() const {…} };</code></pre>",
+   "explanationHtml": "בפונקציה חברה <code class=\"tok\" dir=\"ltr\">const</code>, הטיפוס של <code class=\"tok\" dir=\"ltr\">this</code> הוא מצביע לאובייקט קבוע: <code class=\"tok\" dir=\"ltr\">const A*</code> (תשובה ד). <code class=\"tok\" dir=\"ltr\">A*</code> הוא הטיפוס בפונקציה רגילה, ו-<code class=\"tok\" dir=\"ltr\">this</code> הוא מצביע ולא הפניה (ג שגויה).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ed1f9a51016b104c"
+  },
+  {
+   "num": 5,
+   "topic": "inheritance_access",
+   "question": "אילו שורות בתכנית הבאה גורמות לשגיאת קומפילציה?\n```text\n1    class A { public: int I;};\n2    class B : protected A { private: int J;};\n3    void main () {\n4      A t;\n5      B tt;\n6      t.I = 3;\n7      tt.I = 3;\n8    }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 2 ו-6",
+     "html": "שורות 2 ו-6"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 2 ו-5",
+     "html": "שורות 2 ו-5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורה 7",
+     "html": "שורה 7"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בירושה `protected` החבר הציבורי `I` של `A` הופך ל-`protected` ב-`B`, ולכן `tt.I` בשורה 7 אסור מחוץ למחלקה. `t.I` (שורה 6) תקין כי `t` מטיפוס `A`. השורות 2 ו-5 תקינות. לכן רק שורה 7 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run (lines tagged): only line 7 fails. Agrees.",
+   "id": "19A-C-Q5",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "אילו שורות בתכנית הבאה גורמות לשגיאת קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1    class A { public: int I;};\n2    class B : protected A { private: int J;};\n3    void main () {\n4      A t;\n5      B tt;\n6      t.I = 3;\n7      tt.I = 3;\n8    }</code></pre>",
+   "explanationHtml": "בירושה <code class=\"tok\" dir=\"ltr\">protected</code> החבר הציבורי <code class=\"tok\" dir=\"ltr\">I</code> של <code class=\"tok\" dir=\"ltr\">A</code> הופך ל-<code class=\"tok\" dir=\"ltr\">protected</code> ב-<code class=\"tok\" dir=\"ltr\">B</code>, ולכן <code class=\"tok\" dir=\"ltr\">tt.I</code> בשורה 7 אסור מחוץ למחלקה. <code class=\"tok\" dir=\"ltr\">t.I</code> (שורה 6) תקין כי <code class=\"tok\" dir=\"ltr\">t</code> מטיפוס <code class=\"tok\" dir=\"ltr\">A</code>. השורות 2 ו-5 תקינות. לכן רק שורה 7 (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8e36376895aebd0b"
+  },
+  {
+   "num": 6,
+   "topic": "friend_this_static",
+   "question": "מה צריך להיכתב בשורה 4 כדי שהתכנית הבאה תתקמפל ותדפיס 1:\n```text\n1. #include <iostream>\n2. class X {\n3.     X& f() {\n4.         return _____;\n5.     }\n6. };\n7. void main() {\n8.     X x;\n9.     std::cout << (&x == x.f());\n10. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`new X`",
+     "html": "<code class=\"tok\" dir=\"ltr\">new X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`X()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">X()</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`this`",
+     "html": "<code class=\"tok\" dir=\"ltr\">this</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`*this`",
+     "html": "<code class=\"tok\" dir=\"ltr\">*this</code>"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "התשובה היא `*this` (תשובה ד): הפונקציה מחזירה `X&`, ורק `*this` הוא האובייקט `x` עצמו, ולכן רק איתו הכתובת של התוצאה שווה ל-`&x` ומודפס 1. `this` ו-`new X` הם מצביעים (`X*`) ולא אובייקט, ו-`X()` הוא אובייקט זמני שאי אפשר לקשור להפניה שאינה `const` (וגם הוא אינו `x`). הערה: הקוד כפי שהודפס אינו מתקמפל עם אף אחת מהאפשרויות, כי `f` פרטית (ברירת המחדל ב-`class`) ובשורה 9 משווים `X*` עם `X&`. בגרסה המתוקנת (`public:` והשוואה `&x == &x.f()`) רק `*this` מתקמפלת ומדפיסה 1 בהרצת clang++, וזו כוונת השאלה. בדף לא סומנה תשובה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): no highlight; as printed nothing compiles (f is private, and `&x == x.f()` compares X* with X&). Every reasonable repair points to d: only `*this` binds to the return type X& and refers to x; with `public:` and `&x == &x.f()` clang++ compiles only `*this` and prints 1 (this/new X: X* to X&, X(): temporary to non-const X&). Shipped with a note.",
+   "id": "19A-C-Q6",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה צריך להיכתב בשורה 4 כדי שהתכנית הבאה תתקמפל ותדפיס 1:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1. #include &lt;iostream&gt;\n2. class X {\n3.     X&amp; f() {\n4.         return _____;\n5.     }\n6. };\n7. void main() {\n8.     X x;\n9.     std::cout &lt;&lt; (&amp;x == x.f());\n10. }</code></pre>",
+   "explanationHtml": "התשובה היא <code class=\"tok\" dir=\"ltr\">*this</code> (תשובה ד): הפונקציה מחזירה <code class=\"tok\" dir=\"ltr\">X&amp;</code>, ורק <code class=\"tok\" dir=\"ltr\">*this</code> הוא האובייקט <code class=\"tok\" dir=\"ltr\">x</code> עצמו, ולכן רק איתו הכתובת של התוצאה שווה ל-<code class=\"tok\" dir=\"ltr\">&amp;x</code> ומודפס 1. <code class=\"tok\" dir=\"ltr\">this</code> ו-<code class=\"tok\" dir=\"ltr\">new X</code> הם מצביעים (<code class=\"tok\" dir=\"ltr\">X*</code>) ולא אובייקט, ו-<code class=\"tok\" dir=\"ltr\">X()</code> הוא אובייקט זמני שאי אפשר לקשור להפניה שאינה <code class=\"tok\" dir=\"ltr\">const</code> (וגם הוא אינו <code class=\"tok\" dir=\"ltr\">x</code>). הערה: הקוד כפי שהודפס אינו מתקמפל עם אף אחת מהאפשרויות, כי <code class=\"tok\" dir=\"ltr\">f</code> פרטית (ברירת המחדל ב-<code class=\"tok\" dir=\"ltr\">class</code>) ובשורה 9 משווים <code class=\"tok\" dir=\"ltr\">X*</code> עם <code class=\"tok\" dir=\"ltr\">X&amp;</code>. בגרסה המתוקנת (<code class=\"tok\" dir=\"ltr\">public:</code> והשוואה <code class=\"tok\" dir=\"ltr\">&amp;x == &amp;x.f()</code>) רק <code class=\"tok\" dir=\"ltr\">*this</code> מתקמפלת ומדפיסה 1 בהרצת clang++, וזו כוונת השאלה. בדף לא סומנה תשובה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "bbc106b42a1d6e64"
+  },
+  {
+   "num": 7,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\ntemplate<int N> class X {\npublic:\nX() { ++d; }\nstatic int d;\n};\ntemplate<int N> int X<N>::d = 0;\nvoid main() {\nX<0> a, b;\nX<1> c;\nstd::cout << a.d << b.d << c.d;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`000`",
+     "html": "<code class=\"tok\" dir=\"ltr\">000</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`221`",
+     "html": "<code class=\"tok\" dir=\"ltr\">221</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`333`",
+     "html": "<code class=\"tok\" dir=\"ltr\">333</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "לכל מופע של התבנית יש משתנה סטטי `d` משלו. `a` ו-`b` הם `X<0>` וחולקים `d` שהגיע ל-2, ו-`c` הוא `X<1>` עם `d` שהגיע ל-1. הפלט `221` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run printed 221. Agrees.",
+   "id": "19A-C-Q7",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\ntemplate&lt;int N&gt; class X {\npublic:\nX() { ++d; }\nstatic int d;\n};\ntemplate&lt;int N&gt; int X&lt;N&gt;::d = 0;\nvoid main() {\nX&lt;0&gt; a, b;\nX&lt;1&gt; c;\nstd::cout &lt;&lt; a.d &lt;&lt; b.d &lt;&lt; c.d;\n}</code></pre>",
+   "explanationHtml": "לכל מופע של התבנית יש משתנה סטטי <code class=\"tok\" dir=\"ltr\">d</code> משלו. <code class=\"tok\" dir=\"ltr\">a</code> ו-<code class=\"tok\" dir=\"ltr\">b</code> הם <code class=\"tok\" dir=\"ltr\">X&lt;0&gt;</code> וחולקים <code class=\"tok\" dir=\"ltr\">d</code> שהגיע ל-2, ו-<code class=\"tok\" dir=\"ltr\">c</code> הוא <code class=\"tok\" dir=\"ltr\">X&lt;1&gt;</code> עם <code class=\"tok\" dir=\"ltr\">d</code> שהגיע ל-1. הפלט <code class=\"tok\" dir=\"ltr\">221</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8fe33cbba196fde2"
+  },
+  {
+   "num": 8,
+   "topic": "operator_overloading",
+   "question": "מה נכון לגבי הגדרת האופרטור `>>` עבור המחלקה `X`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת בתוך `X`",
+     "html": "הפונקציה צריכה להיות מוגדרת בתוך <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת מחוץ ל-`X` ובהכרח צריכה להיות מוגדרת כ-`friend` ב-`X`",
+     "html": "הפונקציה צריכה להיות מוגדרת מחוץ ל-<code class=\"tok\" dir=\"ltr\">X</code> ובהכרח צריכה להיות מוגדרת כ-<code class=\"tok\" dir=\"ltr\">friend</code> ב-<code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת מחוץ ל-`X` ולא בהכרח צריכה להיות מוגדרת כ-`friend` ב-`X`",
+     "html": "הפונקציה צריכה להיות מוגדרת מחוץ ל-<code class=\"tok\" dir=\"ltr\">X</code> ולא בהכרח צריכה להיות מוגדרת כ-<code class=\"tok\" dir=\"ltr\">friend</code> ב-<code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הפונקציה צריכה להיות מוגדרת גם בתוך `X` וגם מחוץ ל-`X`",
+     "html": "הפונקציה צריכה להיות מוגדרת גם בתוך <code class=\"tok\" dir=\"ltr\">X</code> וגם מחוץ ל-<code class=\"tok\" dir=\"ltr\">X</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "האופרטור `>>` לקריאה מ-`cin` (`cin >> x`) חייב להיות פונקציה חיצונית, כי האופרנד השמאלי הוא `istream` ולא `X`. אם הפונקציה משתמשת רק בחברים ציבוריים לא חייבים להצהיר עליה כ-`friend` (תשובה ג). `friend` נחוץ רק לגישה לחברים פרטיים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile tests (istream >>): a member form does not make `cin >> x` compile; a free function over public members compiles without friend. Agrees.",
+   "id": "19A-C-Q8",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה נכון לגבי הגדרת האופרטור <code class=\"tok\" dir=\"ltr\">&gt;&gt;</code> עבור המחלקה <code class=\"tok\" dir=\"ltr\">X</code>?",
+   "explanationHtml": "האופרטור <code class=\"tok\" dir=\"ltr\">&gt;&gt;</code> לקריאה מ-<code class=\"tok\" dir=\"ltr\">cin</code> (<code class=\"tok\" dir=\"ltr\">cin &gt;&gt; x</code>) חייב להיות פונקציה חיצונית, כי האופרנד השמאלי הוא <code class=\"tok\" dir=\"ltr\">istream</code> ולא <code class=\"tok\" dir=\"ltr\">X</code>. אם הפונקציה משתמשת רק בחברים ציבוריים לא חייבים להצהיר עליה כ-<code class=\"tok\" dir=\"ltr\">friend</code> (תשובה ג). <code class=\"tok\" dir=\"ltr\">friend</code> נחוץ רק לגישה לחברים פרטיים.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a93b6a42264d70f3"
+  },
+  {
+   "num": 9,
+   "topic": "classes_ctor_dtor",
+   "question": "מה נכון לגבי השדה `f` במחלקה `X`:\n```cpp\nclass X {\nprivate:\nint f;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מכל מקום בתכנית",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מכל מקום בתכנית"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקה `X`",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` אבל לא מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> אבל לא מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לשדה `f` אפשר לגשת מתוך המחלקות שיורשות מהמחלקה `X` וגם מ-`X` עצמה",
+     "html": "לשדה <code class=\"tok\" dir=\"ltr\">f</code> אפשר לגשת מתוך המחלקות שיורשות מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code> וגם מ-<code class=\"tok\" dir=\"ltr\">X</code> עצמה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שדה `private` נגיש רק מתוך המחלקה עצמה (ומחברים שהוכרזו `friend`). מחלקות יורשות אינן ניגשות אליו, ובוודאי שלא קוד חיצוני. לכן התשובה ב. התשובות ג ו-ד שגויות כי מחלקה יורשת אינה ניגשת לשדה פרטי של הבסיס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests: access from outside fails, from inside X compiles, from a derived class fails. Agrees.",
+   "id": "19A-C-Q9",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "מה נכון לגבי השדה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה <code class=\"tok\" dir=\"ltr\">X</code>:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\nprivate:\nint f;\n};</code></pre>",
+   "explanationHtml": "שדה <code class=\"tok\" dir=\"ltr\">private</code> נגיש רק מתוך המחלקה עצמה (ומחברים שהוכרזו <code class=\"tok\" dir=\"ltr\">friend</code>). מחלקות יורשות אינן ניגשות אליו, ובוודאי שלא קוד חיצוני. לכן התשובה ב. התשובות ג ו-ד שגויות כי מחלקה יורשת אינה ניגשת לשדה פרטי של הבסיס.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d88260b06613b000"
+  },
+  {
+   "num": 10,
+   "topic": "abstract_multiple",
+   "question": "נתונות הגדרות של 5 רשומות:\n```cpp\nclass A { public: int x; };\nclass B : public virtual A {};\nclass C : public virtual A {};\nclass D : public A {};\nclass E : public B, public C, public D {};\n```\nכמה שדות מטיפוס `int` קיימים באובייקט מטיפוס `E`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`B` ו-`C` יורשות את `A` ירושה וירטואלית ולכן חולקות עותק אחד של `x` ב-`E`, ו-`D` יורשת את `A` ירושה רגילה ומוסיפה עותק נוסף. סך הכול שני שדות `int` (תשובה ב). בהרצה הכתובות של `e.B::x` ושל `e.C::x` זהות, ושל `e.D::x` שונה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: &e.B::x == &e.C::x and &e.D::x differs -> 2. Agrees.",
+   "id": "19A-C-Q10",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "נתונות הגדרות של 5 רשומות:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A { public: int x; };\nclass B : public virtual A {};\nclass C : public virtual A {};\nclass D : public A {};\nclass E : public B, public C, public D {};</code></pre>כמה שדות מטיפוס <code class=\"tok\" dir=\"ltr\">int</code> קיימים באובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">E</code>?",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">B</code> ו-<code class=\"tok\" dir=\"ltr\">C</code> יורשות את <code class=\"tok\" dir=\"ltr\">A</code> ירושה וירטואלית ולכן חולקות עותק אחד של <code class=\"tok\" dir=\"ltr\">x</code> ב-<code class=\"tok\" dir=\"ltr\">E</code>, ו-<code class=\"tok\" dir=\"ltr\">D</code> יורשת את <code class=\"tok\" dir=\"ltr\">A</code> ירושה רגילה ומוסיפה עותק נוסף. סך הכול שני שדות <code class=\"tok\" dir=\"ltr\">int</code> (תשובה ב). בהרצה הכתובות של <code class=\"tok\" dir=\"ltr\">e.B::x</code> ושל <code class=\"tok\" dir=\"ltr\">e.C::x</code> זהות, ושל <code class=\"tok\" dir=\"ltr\">e.D::x</code> שונה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fbd8201be264e1c4"
+  },
+  {
+   "num": 11,
+   "topic": "inheritance_access",
+   "question": "בתכנית מוגדרות שתי מחלקות `X` ו-`Y`. מה ניתן להגיד על היחס ביניהן בהנחה הקטע הקוד הבא מתקמפל:\n```text\n1. Y y;\n2. X &x = y;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "המחלקה `X` יורשת מהמחלקה `Y`",
+     "html": "המחלקה <code class=\"tok\" dir=\"ltr\">X</code> יורשת מהמחלקה <code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "המחלקה `Y` יורשת מהמחלקה `X`",
+     "html": "המחלקה <code class=\"tok\" dir=\"ltr\">Y</code> יורשת מהמחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "במחלקה `X` יש שדה מטיפוס `Y`",
+     "html": "במחלקה <code class=\"tok\" dir=\"ltr\">X</code> יש שדה מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "במחלקה `Y` יש שדה מטיפוס `X`",
+     "html": "במחלקה <code class=\"tok\" dir=\"ltr\">Y</code> יש שדה מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "השורה `X &x = y;` מתקמפלת רק אם אפשר להמיר את `Y` ל-`X&`, וזה חוקי כשהמחלקה `Y` יורשת מ-`X` (תשובה ב). שדה מטיפוס אחר בתוך המחלקה לא יוצר המרה, וכיוון הירושה ההפוך (א) לא מתקמפל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests of the four relations: only 'Y derives from X' lets `X &x = y;` compile. Agrees.",
+   "id": "19A-C-Q11",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בתכנית מוגדרות שתי מחלקות <code class=\"tok\" dir=\"ltr\">X</code> ו-<code class=\"tok\" dir=\"ltr\">Y</code>. מה ניתן להגיד על היחס ביניהן בהנחה הקטע הקוד הבא מתקמפל:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1. Y y;\n2. X &amp;x = y;</code></pre>",
+   "explanationHtml": "השורה <code class=\"tok\" dir=\"ltr\">X &amp;x = y;</code> מתקמפלת רק אם אפשר להמיר את <code class=\"tok\" dir=\"ltr\">Y</code> ל-<code class=\"tok\" dir=\"ltr\">X&amp;</code>, וזה חוקי כשהמחלקה <code class=\"tok\" dir=\"ltr\">Y</code> יורשת מ-<code class=\"tok\" dir=\"ltr\">X</code> (תשובה ב). שדה מטיפוס אחר בתוך המחלקה לא יוצר המרה, וכיוון הירושה ההפוך (א) לא מתקמפל.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1c7e619027c24be4"
+  },
+  {
+   "num": 12,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית\n```cpp\nint funC(int i=10) {return i+1;}\nint funC() {return 8;}\n#include <iostream>\nvoid main () { int j= 8; std::cout << funC() << funC(j); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`89`",
+     "html": "<code class=\"tok\" dir=\"ltr\">89</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`88`",
+     "html": "<code class=\"tok\" dir=\"ltr\">88</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`99`",
+     "html": "<code class=\"tok\" dir=\"ltr\">99</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הקריאה `funC()` עמומה: גם `funC(int i=10)` (עם ערך ברירת מחדל) וגם `funC()` מתאימות בלי ארגומנטים. הקומפיילר לא יכול לבחור ולכן התכנית לא מתקמפלת (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++: call to funC() is ambiguous. Agrees.",
+   "id": "19A-C-Q12",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int funC(int i=10) {return i+1;}\nint funC() {return 8;}\n#include &lt;iostream&gt;\nvoid main () { int j= 8; std::cout &lt;&lt; funC() &lt;&lt; funC(j); }</code></pre>",
+   "explanationHtml": "הקריאה <code class=\"tok\" dir=\"ltr\">funC()</code> עמומה: גם <code class=\"tok\" dir=\"ltr\">funC(int i=10)</code> (עם ערך ברירת מחדל) וגם <code class=\"tok\" dir=\"ltr\">funC()</code> מתאימות בלי ארגומנטים. הקומפיילר לא יכול לבחור ולכן התכנית לא מתקמפלת (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ba4e3ae3c4fdc0d7"
+  },
+  {
+   "num": 13,
+   "topic": "stl_exceptions",
+   "question": "בתכנית מוגדר משתנה `v` מטיפוס `vector<int>`. איזו מהטענות נכונה?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`v.begin()==v.end()` אם כמות האיברים בווקטור היא 0",
+     "html": "<code class=\"tok\" dir=\"ltr\">v.begin()==v.end()</code> אם כמות האיברים בווקטור היא 0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`v.begin()==v.end()` אם כמות האיברים בווקטור היא 1",
+     "html": "<code class=\"tok\" dir=\"ltr\">v.begin()==v.end()</code> אם כמות האיברים בווקטור היא 1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "כמות האיברים בווקטור מוחזרת ע\"י `v.capacity`",
+     "html": "כמות האיברים בווקטור מוחזרת ע\"י <code class=\"tok\" dir=\"ltr\">v.capacity</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בווקטור ריק `begin()==end()`, ולכן הטענה הראשונה נכונה (תשובה א). בווקטור עם איבר אחד הם שונים (ב שגויה). `capacity` היא הקיבולת ולא מספר האיברים, ומספר האיברים נתון ב-`size()` (ג שגויה, וגם נכתבה בלי סוגריים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: begin()==end() is true for an empty vector, false for a vector of one element; capacity() is not the element count. Agrees.",
+   "id": "19A-C-Q13",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "בתכנית מוגדר משתנה <code class=\"tok\" dir=\"ltr\">v</code> מטיפוס <code class=\"tok\" dir=\"ltr\">vector&lt;int&gt;</code>. איזו מהטענות נכונה?",
+   "explanationHtml": "בווקטור ריק <code class=\"tok\" dir=\"ltr\">begin()==end()</code>, ולכן הטענה הראשונה נכונה (תשובה א). בווקטור עם איבר אחד הם שונים (ב שגויה). <code class=\"tok\" dir=\"ltr\">capacity</code> היא הקיבולת ולא מספר האיברים, ומספר האיברים נתון ב-<code class=\"tok\" dir=\"ltr\">size()</code> (ג שגויה, וגם נכתבה בלי סוגריים).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c2ce31bafcb5c574"
+  },
+  {
+   "num": 14,
+   "topic": "const_references",
+   "question": "מה ניתן לכתוב כך שהקוד יעבור קומפילציה\n```cpp\nclass A {\nint K ;\nconst int* f(const int *k) const { return _____; }\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`this->K`",
+     "html": "<code class=\"tok\" dir=\"ltr\">this-&gt;K</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`K+*k`",
+     "html": "<code class=\"tok\" dir=\"ltr\">K+*k</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`&K`",
+     "html": "<code class=\"tok\" dir=\"ltr\">&amp;K</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`*k`",
+     "html": "<code class=\"tok\" dir=\"ltr\">*k</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה `f` היא `const`, ולכן `K` בתוכה הוא `const int`. הביטוי `&K` הוא `const int*`, בדיוק טיפוס ההחזרה, ומתקמפל (תשובה ג). `this->K`, `K+*k` ו-`*k` הם `int` ולא מצביע, ולכן שגיאת המרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile test of each option: only `&K` compiles. Agrees.",
+   "id": "19A-C-Q14",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "מה ניתן לכתוב כך שהקוד יעבור קומפילציה<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\nint K ;\nconst int* f(const int *k) const { return _____; }\n};</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> היא <code class=\"tok\" dir=\"ltr\">const</code>, ולכן <code class=\"tok\" dir=\"ltr\">K</code> בתוכה הוא <code class=\"tok\" dir=\"ltr\">const int</code>. הביטוי <code class=\"tok\" dir=\"ltr\">&amp;K</code> הוא <code class=\"tok\" dir=\"ltr\">const int*</code>, בדיוק טיפוס ההחזרה, ומתקמפל (תשובה ג). <code class=\"tok\" dir=\"ltr\">this-&gt;K</code>, <code class=\"tok\" dir=\"ltr\">K+*k</code> ו-<code class=\"tok\" dir=\"ltr\">*k</code> הם <code class=\"tok\" dir=\"ltr\">int</code> ולא מצביע, ולכן שגיאת המרה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "dcae96461591eff4"
+  },
+  {
+   "num": 15,
+   "topic": "templates",
+   "question": "אילו שורות בתכנית הבאה לא עוברות קומפילציה?\n```text\n1. template<typename T> class X {};\n2. void main() {\n3.     X x;\n4.     X x(int);\n5.     X x<int>;\n6.     X<int> x;\n7. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 4 ו-5",
+     "html": "שורות 4 ו-5"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 3, 4 ו-5",
+     "html": "שורות 3, 4 ו-5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "תבנית מחלקה חייבת לקבל ארגומנט תבנית כדי ליצור משתנה. שורה 3 (`X x;`) שגויה כי חסר `<int>`. שורה 4 (`X x(int);`) שגויה מאותה סיבה, ושורה 5 (`X x<int>;`) היא תחביר לא חוקי. שורה 6 (`X<int> x;`) תקינה. לכן שורות 3, 4 ו-5 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile test of each statement alone: lines 3, 4 and 5 fail, line 6 compiles. Agrees.",
+   "id": "19A-C-Q15",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "אילו שורות בתכנית הבאה לא עוברות קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1. template&lt;typename T&gt; class X {};\n2. void main() {\n3.     X x;\n4.     X x(int);\n5.     X x&lt;int&gt;;\n6.     X&lt;int&gt; x;\n7. }</code></pre>",
+   "explanationHtml": "תבנית מחלקה חייבת לקבל ארגומנט תבנית כדי ליצור משתנה. שורה 3 (<code class=\"tok\" dir=\"ltr\">X x;</code>) שגויה כי חסר <code class=\"tok\" dir=\"ltr\">&lt;int&gt;</code>. שורה 4 (<code class=\"tok\" dir=\"ltr\">X x(int);</code>) שגויה מאותה סיבה, ושורה 5 (<code class=\"tok\" dir=\"ltr\">X x&lt;int&gt;;</code>) היא תחביר לא חוקי. שורה 6 (<code class=\"tok\" dir=\"ltr\">X&lt;int&gt; x;</code>) תקינה. לכן שורות 3, 4 ו-5 (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4b3bdc015d8f7ba9"
+  },
+  {
+   "num": 16,
+   "topic": "friend_this_static",
+   "question": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:\n```text\n1. class X {\n2.     friend class Y;\n3.     int a;\n4.     void f(Y y) { y.a = 1; }\n5. };\n6. class Y {\n7.     int a;\n8.     void f(X x) { x.a = 1; }\n9. };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 4",
+     "html": "שורה 4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 8",
+     "html": "שורה 8"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 4 ו-8",
+     "html": "שורות 4 ו-8"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בשורה 4 הפונקציה `f` מקבלת `Y` לפי ערך בעוד `Y` עדיין לא מוגדרת (רק הוצהרה כ-friend), ולכן הטיפוס אינו שלם והשורה שגויה. בשורה 8 `Y` היא חברה (friend) של `X` ולכן יכולה לגשת ל-`x.a`, והשורה תקינה. רק שורה 4 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run (lines tagged): only line 4 fails (Y is incomplete where `f(Y y)` is defined by value); line 8 is fine because X declared Y a friend. Agrees.",
+   "id": "19A-C-Q16",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1. class X {\n2.     friend class Y;\n3.     int a;\n4.     void f(Y y) { y.a = 1; }\n5. };\n6. class Y {\n7.     int a;\n8.     void f(X x) { x.a = 1; }\n9. };</code></pre>",
+   "explanationHtml": "בשורה 4 הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> מקבלת <code class=\"tok\" dir=\"ltr\">Y</code> לפי ערך בעוד <code class=\"tok\" dir=\"ltr\">Y</code> עדיין לא מוגדרת (רק הוצהרה כ-friend), ולכן הטיפוס אינו שלם והשורה שגויה. בשורה 8 <code class=\"tok\" dir=\"ltr\">Y</code> היא חברה (friend) של <code class=\"tok\" dir=\"ltr\">X</code> ולכן יכולה לגשת ל-<code class=\"tok\" dir=\"ltr\">x.a</code>, והשורה תקינה. רק שורה 4 (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3797b4f4f1a0ff3f"
+  },
+  {
+   "num": 17,
+   "topic": "cpp_basics_refs",
+   "question": "נתונות הגדרה של פונקציית `main` והגדרה של פונקציה `f` בה הושמט טיפוס החזרה:\n```cpp\n___ f() {\nstatic int x = 0;\nreturn x;\n}\nvoid main() { f() = 5; }\n```\nמה צריך להיות הטיפוס שהפונקציה `f` מחזירה כדי שהתוכנית תעבור קומפילציה?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`int`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`int*`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int*</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`int&`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int&amp;</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`T`",
+     "html": "<code class=\"tok\" dir=\"ltr\">T</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "השמה `f() = 5;` דורשת ש-`f()` תחזיר ערך שמאלי (lvalue). רק הפניה `int&` להחזרת `x` (משתנה סטטי שחי אחרי היציאה) עושה זאת (תשובה ג). `int` ו-`int*` מחזירים ערך זמני שאי אפשר להשים אליו, ו-`T` אינו טיפוס מוגדר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile test: only int& makes `f() = 5;` compile. Agrees.",
+   "id": "19A-C-Q17",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "נתונות הגדרה של פונקציית <code class=\"tok\" dir=\"ltr\">main</code> והגדרה של פונקציה <code class=\"tok\" dir=\"ltr\">f</code> בה הושמט טיפוס החזרה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>___ f() {\nstatic int x = 0;\nreturn x;\n}\nvoid main() { f() = 5; }</code></pre>מה צריך להיות הטיפוס שהפונקציה <code class=\"tok\" dir=\"ltr\">f</code> מחזירה כדי שהתוכנית תעבור קומפילציה?",
+   "explanationHtml": "השמה <code class=\"tok\" dir=\"ltr\">f() = 5;</code> דורשת ש-<code class=\"tok\" dir=\"ltr\">f()</code> תחזיר ערך שמאלי (lvalue). רק הפניה <code class=\"tok\" dir=\"ltr\">int&amp;</code> להחזרת <code class=\"tok\" dir=\"ltr\">x</code> (משתנה סטטי שחי אחרי היציאה) עושה זאת (תשובה ג). <code class=\"tok\" dir=\"ltr\">int</code> ו-<code class=\"tok\" dir=\"ltr\">int*</code> מחזירים ערך זמני שאי אפשר להשים אליו, ו-<code class=\"tok\" dir=\"ltr\">T</code> אינו טיפוס מוגדר.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ae2818ff1155fdad"
+  },
+  {
+   "num": 18,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nclass A {\npublic:\n  virtual void f() { std::cout << \"A\"; }\n};\nclass B : public A {\npublic:\n  void f() { std::cout << \"B\"; }\n};\nvoid g(A a) { a.f(); }\nint main() {\n  B b;\n  g(b);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">A</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`B`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`AB`",
+     "html": "<code class=\"tok\" dir=\"ltr\">AB</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`BA`",
+     "html": "<code class=\"tok\" dir=\"ltr\">BA</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`g` מקבלת `A` לפי ערך, ולכן האובייקט `b` נחתך (slicing) ל-`A`, והקריאה `a.f()` מופעלת על אובייקט מטיפוס `A`. מודפס `A` (תשובה א). `B` היה מודפס רק אילו `g` הייתה מקבלת הפניה או מצביע.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run printed A (slicing). Agrees.",
+   "id": "19A-C-Q18",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nclass A {\npublic:\n  virtual void f() { std::cout &lt;&lt; \"A\"; }\n};\nclass B : public A {\npublic:\n  void f() { std::cout &lt;&lt; \"B\"; }\n};\nvoid g(A a) { a.f(); }\nint main() {\n  B b;\n  g(b);\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">g</code> מקבלת <code class=\"tok\" dir=\"ltr\">A</code> לפי ערך, ולכן האובייקט <code class=\"tok\" dir=\"ltr\">b</code> נחתך (slicing) ל-<code class=\"tok\" dir=\"ltr\">A</code>, והקריאה <code class=\"tok\" dir=\"ltr\">a.f()</code> מופעלת על אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">A</code>. מודפס <code class=\"tok\" dir=\"ltr\">A</code> (תשובה א). <code class=\"tok\" dir=\"ltr\">B</code> היה מודפס רק אילו <code class=\"tok\" dir=\"ltr\">g</code> הייתה מקבלת הפניה או מצביע.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "81a08ad7aeef774c"
+  },
+  {
+   "num": 19,
+   "topic": "inheritance_access",
+   "question": "כמה שורות בתכנית לא עוברות קומפילציה?\n```cpp\nclass A {};\nclass B : public A {};\nvoid main() {\nA a, *p;\nB b, *q;\np = &b;\nq = &a;\na = b;\nb = a;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`p = &b` תקין (מצביע לנגזרת הומר למצביע לבסיס). `q = &a` שגוי (אין המרה מבסיס לנגזרת). `a = b` תקין (slicing). `b = a` שגוי (אין השמה של `A` ל-`B`). שתי שורות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run (lines tagged): `q = &a;` and `b = a;` fail. Agrees.",
+   "id": "19A-C-Q19",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "כמה שורות בתכנית לא עוברות קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {};\nclass B : public A {};\nvoid main() {\nA a, *p;\nB b, *q;\np = &amp;b;\nq = &amp;a;\na = b;\nb = a;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">p = &amp;b</code> תקין (מצביע לנגזרת הומר למצביע לבסיס). <code class=\"tok\" dir=\"ltr\">q = &amp;a</code> שגוי (אין המרה מבסיס לנגזרת). <code class=\"tok\" dir=\"ltr\">a = b</code> תקין (slicing). <code class=\"tok\" dir=\"ltr\">b = a</code> שגוי (אין השמה של <code class=\"tok\" dir=\"ltr\">A</code> ל-<code class=\"tok\" dir=\"ltr\">B</code>). שתי שורות (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c4fe2e013fef6c69"
+  },
+  {
+   "num": 20,
+   "topic": "const_references",
+   "question": "נתונות 4 טענות לגבי הפונקציה `f` במחלקה הבאה:\n```cpp\nclass A { public: void f() const {…} …};\n```\n(1) את הפונקציה אפשר להפעיל על אובייקט שהוגדר כ-`const`\n(2) את הפונקציה אפשר להפעיל על אובייקט שלא הוגדר כ-`const`\n(3) בפונקציה אפשר לשנות שדות שמסומנים כ-`const`\n(4) בפונקציה אפשר לשנות שדות שלא מסומנים כ-`const`\nכמה מהטענות נכונות?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "4",
+     "html": "4"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "פונקציה `const` אפשר להפעיל על אובייקט `const` וגם על אובייקט רגיל (טענות 1 ו-2 נכונות). בפונקציה `const` אי אפשר לשנות שדה רגיל (4 שגויה) ואי אפשר לשנות שדה `const` בשום מקרה (3 שגויה). שתי טענות נכונות (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests: statements 1 and 2 hold; 3 and 4 are errors. Agrees.",
+   "id": "19A-C-Q20",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "נתונות 4 טענות לגבי הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> במחלקה הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A { public: void f() const {…} …};</code></pre>(1) את הפונקציה אפשר להפעיל על אובייקט שהוגדר כ-<code class=\"tok\" dir=\"ltr\">const</code><br>(2) את הפונקציה אפשר להפעיל על אובייקט שלא הוגדר כ-<code class=\"tok\" dir=\"ltr\">const</code><br>(3) בפונקציה אפשר לשנות שדות שמסומנים כ-<code class=\"tok\" dir=\"ltr\">const</code><br>(4) בפונקציה אפשר לשנות שדות שלא מסומנים כ-<code class=\"tok\" dir=\"ltr\">const</code><br>כמה מהטענות נכונות?",
+   "explanationHtml": "פונקציה <code class=\"tok\" dir=\"ltr\">const</code> אפשר להפעיל על אובייקט <code class=\"tok\" dir=\"ltr\">const</code> וגם על אובייקט רגיל (טענות 1 ו-2 נכונות). בפונקציה <code class=\"tok\" dir=\"ltr\">const</code> אי אפשר לשנות שדה רגיל (4 שגויה) ואי אפשר לשנות שדה <code class=\"tok\" dir=\"ltr\">const</code> בשום מקרה (3 שגויה). שתי טענות נכונות (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c61179edd76de202"
+  },
+  {
+   "num": 21,
+   "topic": "operator_overloading",
+   "question": "בתכנית מוגדרת מחלקה `X`. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:\n```text\nX x;\n2 << x;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `<<` שמקבל פרמטר מטיפוס `int`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">&lt;&lt;</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">int</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר במחלקה `X` אופרטור `<<` שמקבל שני פרמטרים: מטיפוס `int` ומטיפוס `X`",
+     "html": "להגדיר במחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">&lt;&lt;</code> שמקבל שני פרמטרים: מטיפוס <code class=\"tok\" dir=\"ltr\">int</code> ומטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר מחוץ למחלקה `X` אופרטור `<<` שמקבל פרמטר מטיפוס `int` ופרמטר מטיפוס `X`",
+     "html": "להגדיר מחוץ למחלקה <code class=\"tok\" dir=\"ltr\">X</code> אופרטור <code class=\"tok\" dir=\"ltr\">&lt;&lt;</code> שמקבל פרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">int</code> ופרמטר מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות (א) ו-(ג) נכונות",
+     "html": "תשובות (א) ו-(ג) נכונות"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בביטוי `2 << x` האופרנד השמאלי הוא `int`, ולכן לא ניתן להגדיר את האופרטור בתוך `X` (אופרטור חבר נקרא על האופרנד השמאלי). צריך אופרטור חיצוני שמקבל `(int, X)` (תשובה ג). אופרטור חבר עם שני פרמטרים אינו חוקי לאופרטור בינארי, ולכן ב ו-א אינן נכונות, וגם ד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ compile tests: a member operator<<(int) does not make `2 << x` compile (x would have to be the left operand); a two-parameter member is illegal; only the free operator<<(int, X) works. Agrees.",
+   "lockOrder": true,
+   "id": "19A-C-Q21",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "בתכנית מוגדרת מחלקה <code class=\"tok\" dir=\"ltr\">X</code>. מה צריך לעשות כדי שקטע הקוד הבא יעבור קומפילציה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>X x;\n2 &lt;&lt; x;</code></pre>",
+   "explanationHtml": "בביטוי <code class=\"tok\" dir=\"ltr\">2 &lt;&lt; x</code> האופרנד השמאלי הוא <code class=\"tok\" dir=\"ltr\">int</code>, ולכן לא ניתן להגדיר את האופרטור בתוך <code class=\"tok\" dir=\"ltr\">X</code> (אופרטור חבר נקרא על האופרנד השמאלי). צריך אופרטור חיצוני שמקבל <code class=\"tok\" dir=\"ltr\">(int, X)</code> (תשובה ג). אופרטור חבר עם שני פרמטרים אינו חוקי לאופרטור בינארי, ולכן ב ו-א אינן נכונות, וגם ד.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "41f4fec006160d6b"
+  },
+  {
+   "num": 22,
+   "topic": "composition",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nint n = 0;\nclass A {\npublic:\nA() : y(++n), x(++n) { std::cout << x << y; }\nint x;\nint y;\n};\nvoid main() { A a; }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`11`",
+     "html": "<code class=\"tok\" dir=\"ltr\">11</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`21`",
+     "html": "<code class=\"tok\" dir=\"ltr\">21</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`22`",
+     "html": "<code class=\"tok\" dir=\"ltr\">22</code>"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "השדות מאותחלים לפי סדר ההצהרה במחלקה (קודם `x` ואז `y`) ולא לפי סדר רשימת האיתחול. `x` מקבל 1 ו-`y` מקבל 2, והפלט `12` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run printed 12 (declaration order: x before y). Agrees.",
+   "id": "19A-C-Q22",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "הכלה וסדר אתחול",
+   "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nint n = 0;\nclass A {\npublic:\nA() : y(++n), x(++n) { std::cout &lt;&lt; x &lt;&lt; y; }\nint x;\nint y;\n};\nvoid main() { A a; }</code></pre>",
+   "explanationHtml": "השדות מאותחלים לפי סדר ההצהרה במחלקה (קודם <code class=\"tok\" dir=\"ltr\">x</code> ואז <code class=\"tok\" dir=\"ltr\">y</code>) ולא לפי סדר רשימת האיתחול. <code class=\"tok\" dir=\"ltr\">x</code> מקבל 1 ו-<code class=\"tok\" dir=\"ltr\">y</code> מקבל 2, והפלט <code class=\"tok\" dir=\"ltr\">12</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "6107c2c03f624a49"
+  },
+  {
+   "num": 23,
+   "topic": "const_references",
+   "question": "כמה שורות בקטע תכנית לא עוברות קומפילציה?\n```cpp\nint a = 42, *p;\nconst int b = 24, *q;\np = &a;\np = &b;\nq = &a;\nq = &b;\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`p` הוא `int*` ולא יכול להצביע על `b` הקבוע (שורה `p = &b` שגויה). `q` הוא `const int*` ויכול להצביע גם על `a` וגם על `b`. שורה אחת (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run (lines tagged): only `p = &b;` fails. Agrees.",
+   "id": "19A-C-Q23",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "כמה שורות בקטע תכנית לא עוברות קומפילציה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int a = 42, *p;\nconst int b = 24, *q;\np = &amp;a;\np = &amp;b;\nq = &amp;a;\nq = &amp;b;</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">p</code> הוא <code class=\"tok\" dir=\"ltr\">int*</code> ולא יכול להצביע על <code class=\"tok\" dir=\"ltr\">b</code> הקבוע (שורה <code class=\"tok\" dir=\"ltr\">p = &amp;b</code> שגויה). <code class=\"tok\" dir=\"ltr\">q</code> הוא <code class=\"tok\" dir=\"ltr\">const int*</code> ויכול להצביע גם על <code class=\"tok\" dir=\"ltr\">a</code> וגם על <code class=\"tok\" dir=\"ltr\">b</code>. שורה אחת (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4cc73c9e553bdcf5"
+  },
+  {
+   "num": 24,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\n#include <iostream>\n#include <vector>\nvoid main() {\nstd::vector<int> v;\nv.push_back(1);\nv.push_back(4);\nstd::vector<int>::iterator it = v.begin();\nint n = *(it++);\nstd::cout << n;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">2</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`4`",
+     "html": "<code class=\"tok\" dir=\"ltr\">4</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`5`",
+     "html": "<code class=\"tok\" dir=\"ltr\">5</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`it++` מחזיר את הערך הקודם של האיטרטור (שמצביע על האיבר הראשון), ולכן `*(it++)` הוא `1`. הפלט `1` (תשובה א). הערך 4 הוא האיבר שהאיטרטור מצביע עליו אחרי ההגדלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run printed 1. Agrees.",
+   "id": "19A-C-Q24",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\n#include &lt;vector&gt;\nvoid main() {\nstd::vector&lt;int&gt; v;\nv.push_back(1);\nv.push_back(4);\nstd::vector&lt;int&gt;::iterator it = v.begin();\nint n = *(it++);\nstd::cout &lt;&lt; n;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">it++</code> מחזיר את הערך הקודם של האיטרטור (שמצביע על האיבר הראשון), ולכן <code class=\"tok\" dir=\"ltr\">*(it++)</code> הוא <code class=\"tok\" dir=\"ltr\">1</code>. הפלט <code class=\"tok\" dir=\"ltr\">1</code> (תשובה א). הערך 4 הוא האיבר שהאיטרטור מצביע עליו אחרי ההגדלה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "48540ddda1c795bd"
+  },
+  {
+   "num": 25,
+   "topic": "abstract_multiple",
+   "question": "בתכנית מוגדרות שלוש מחלקות:\n```cpp\nclass X {\npublic:\nvirtual void f() = 0;\n};\nclass Y : public X {\nvoid f() { }\n};\nclass Z : public Y {};\n```\nאיזו מהטענות נכונה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוס `Y` אבל לא מטיפוסים `X` ו-`Z`",
+     "html": "ניתן ליצור אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">Y</code> אבל לא מטיפוסים <code class=\"tok\" dir=\"ltr\">X</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוסים `Y` ו-`Z` אבל לא מטיפוס `X`",
+     "html": "ניתן ליצור אובייקט מטיפוסים <code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code> אבל לא מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "ניתן ליצור אובייקט מטיפוסים `X`, `Y` ו-`Z`",
+     "html": "ניתן ליצור אובייקט מטיפוסים <code class=\"tok\" dir=\"ltr\">X</code>, <code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן ליצור אובייקט מטיפוסים `X`, `Y` ו-`Z`",
+     "html": "לא ניתן ליצור אובייקט מטיפוסים <code class=\"tok\" dir=\"ltr\">X</code>, <code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code>"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`X` מופשטת (`f()=0`) ולא ניתן ליצור ממנה אובייקט. `Y` דורסת את `f` ולכן אינה מופשטת, ו-`Z` יורשת את המימוש של `Y` ולכן גם היא ניתנת ליצירה. התשובה היא ב. הגדרת `f` ב-`Y` בלי `public` לא משפיעה על היכולת ליצור אובייקט.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ compile tests: X is abstract (fails); Y and Z compile. Agrees.",
+   "id": "19A-C-Q25",
+   "examCode": "19A-C",
+   "examLabel": "2019 סמסטר א מועד ג",
+   "year": 2019,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "בתכנית מוגדרות שלוש מחלקות:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\nvirtual void f() = 0;\n};\nclass Y : public X {\nvoid f() { }\n};\nclass Z : public Y {};</code></pre>איזו מהטענות נכונה:",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">X</code> מופשטת (<code class=\"tok\" dir=\"ltr\">f()=0</code>) ולא ניתן ליצור ממנה אובייקט. <code class=\"tok\" dir=\"ltr\">Y</code> דורסת את <code class=\"tok\" dir=\"ltr\">f</code> ולכן אינה מופשטת, ו-<code class=\"tok\" dir=\"ltr\">Z</code> יורשת את המימוש של <code class=\"tok\" dir=\"ltr\">Y</code> ולכן גם היא ניתנת ליצירה. התשובה היא ב. הגדרת <code class=\"tok\" dir=\"ltr\">f</code> ב-<code class=\"tok\" dir=\"ltr\">Y</code> בלי <code class=\"tok\" dir=\"ltr\">public</code> לא משפיעה על היכולת ליצור אובייקט.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3bbf5083f5be7689"
+  },
+  {
+   "num": 1,
+   "topic": "templates",
+   "question": "במידה ושני אוביקטים (עצמים) שונים נוצרו מתוך אותה תבנית (template) יכול להיות להם משתנה static משותף במידה ו-:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "במידה והם נוצרו תוך שימוש באותם שמות של מחלקות ביצירת העצמים מהתבנית (template).",
+     "html": "במידה והם נוצרו תוך שימוש באותם שמות של מחלקות ביצירת העצמים מהתבנית (template)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "המשתנים הסטטיים משותפים רק עבור פונקציות וירטואליות טהורות (pure virtual)",
+     "html": "המשתנים הסטטיים משותפים רק עבור פונקציות וירטואליות טהורות (pure virtual)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לא יכול להיות בכלל.",
+     "html": "לא יכול להיות בכלל."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תלוי אם נעשה שימוש, בקובץ שמכיל את הגדרת התבנית, ב פקודה #pragma once או לא.",
+     "html": "תלוי אם נעשה שימוש, בקובץ שמכיל את הגדרת התבנית, ב פקודה #pragma once או לא."
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "המשתנים הסטטיים משותפים לכל העצמים שנבנים מאותה התבנית.",
+     "html": "המשתנים הסטטיים משותפים לכל העצמים שנבנים מאותה התבנית."
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "משתנה סטטי בתבנית מחלקה משותף לכל העצמים של אותו מופע (instantiation) של התבנית, כלומר לעצמים שנוצרו עם אותם שמות מחלקות כארגומנטים לתבנית: שני `X<int>` חולקים אותו משתנה, ולכן תשובה א נכונה. `X<int>` ו-`X<double>` הן מחלקות שונות עם משתנים סטטיים נפרדים (בהרצה גם הכתובות שונות), ולכן תשובה ה (משותף לכל העצמים מאותה תבנית) שגויה. ג שגויה כי שיתוף כן אפשרי, וב ו-ד אינן קשורות לשאלה (פונקציות וירטואליות טהורות ו-`#pragma once` לא משפיעים על כך). בקובץ המקורי מסומנת תשובה ה, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): clang++ shows a static member of a class template is shared per instantiation only (X<int> objects share it, X<double> has its own), which is option a; the box (e) is not an official key. Med: wording of a.",
+   "id": "20B-A-Q1",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "במידה ושני אוביקטים (עצמים) שונים נוצרו מתוך אותה תבנית (template) יכול להיות להם משתנה static משותף במידה ו-:",
+   "explanationHtml": "משתנה סטטי בתבנית מחלקה משותף לכל העצמים של אותו מופע (instantiation) של התבנית, כלומר לעצמים שנוצרו עם אותם שמות מחלקות כארגומנטים לתבנית: שני <code class=\"tok\" dir=\"ltr\">X&lt;int&gt;</code> חולקים אותו משתנה, ולכן תשובה א נכונה. <code class=\"tok\" dir=\"ltr\">X&lt;int&gt;</code> ו-<code class=\"tok\" dir=\"ltr\">X&lt;double&gt;</code> הן מחלקות שונות עם משתנים סטטיים נפרדים (בהרצה גם הכתובות שונות), ולכן תשובה ה (משותף לכל העצמים מאותה תבנית) שגויה. ג שגויה כי שיתוף כן אפשרי, וב ו-ד אינן קשורות לשאלה (פונקציות וירטואליות טהורות ו-<code class=\"tok\" dir=\"ltr\">#pragma once</code> לא משפיעים על כך). בקובץ המקורי מסומנת תשובה ה, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2046c78364ee1c9b"
+  },
+  {
+   "num": 2,
+   "topic": "copy_control",
+   "question": "נתונה התכנית הבאה:\n```cpp\nclass X {\npublic:\n    X(int i = 0) {\n        p = new int[1];\n        *p = i;\n    }\n    ~X() { delete p; }\n    int* p;\n    int f(X x) { return *(x.p); }\n};\nint main() {\n    X x1(1); X x2(2); int k;\n    x2 = x1;\n    k = x2.f(x1);\n}\n```\nניתן לדאוג לכך שהתכנית תתקמפל ותרוץ ללא שגיאות:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ע\"י הוספת העמסת אופרטורים לאופרטור = במחלקה X.",
+     "html": "ע\"י הוספת העמסת אופרטורים לאופרטור = במחלקה X."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ע\"י הוספת copy constructor במחלקה X והוספת העמסת אופרטורים לאופרטור = במחלקה X.",
+     "html": "ע\"י הוספת copy constructor במחלקה X והוספת העמסת אופרטורים לאופרטור = במחלקה X."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה.",
+     "html": "אף תשובה אינה נכונה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ע\"י הוספת copy constructor במחלקה X.",
+     "html": "ע\"י הוספת copy constructor במחלקה X."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "במחלקה יש מצביע שמוקצה בבנאי ומשוחרר בהורס, ולכן ההעתקה ברירת המחדל (shallow) יוצרת שני אובייקטים שמחזיקים אותו מצביע, והשחרור כפול. יש שני מקומות שבהם קורית העתקה: ההשמה `x2 = x1` והעברה לפי ערך `f(x1)` או `x2.f(x1)`, שקוראת לבנאי ההעתקה. בהרצה, תיקון רק של ההשמה או רק של בנאי ההעתקה עדיין שחרר את אותו מצביע פעמיים, ורק הוספת שניהם עבדה נכון (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++ run with a double-delete detector (pointer freed twice): the unchanged class, assignment-only and copy-ctor-only versions all free the same pointer twice (crash); only the version with both a copy constructor and operator= is clean. Box agrees. Screenshot shows four options.",
+   "id": "20B-A-Q2",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "נתונה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    X(int i = 0) {\n        p = new int[1];\n        *p = i;\n    }\n    ~X() { delete p; }\n    int* p;\n    int f(X x) { return *(x.p); }\n};\nint main() {\n    X x1(1); X x2(2); int k;\n    x2 = x1;\n    k = x2.f(x1);\n}</code></pre>ניתן לדאוג לכך שהתכנית תתקמפל ותרוץ ללא שגיאות:",
+   "explanationHtml": "במחלקה יש מצביע שמוקצה בבנאי ומשוחרר בהורס, ולכן ההעתקה ברירת המחדל (shallow) יוצרת שני אובייקטים שמחזיקים אותו מצביע, והשחרור כפול. יש שני מקומות שבהם קורית העתקה: ההשמה <code class=\"tok\" dir=\"ltr\">x2 = x1</code> והעברה לפי ערך <code class=\"tok\" dir=\"ltr\">f(x1)</code> או <code class=\"tok\" dir=\"ltr\">x2.f(x1)</code>, שקוראת לבנאי ההעתקה. בהרצה, תיקון רק של ההשמה או רק של בנאי ההעתקה עדיין שחרר את אותו מצביע פעמיים, ורק הוספת שניהם עבדה נכון (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c6b6a1ce69856bb4"
+  },
+  {
+   "num": 3,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\ntemplate <class T, class U>\nclass X {\npublic:\n    X(T,U) { cout << 1; }\n};\ntemplate <>\nclass X <int,char> {\npublic:\n    X(int i,char c) { cout << 2; }\n};\nint main()\n{\n    int i = 5; char c = 'a'; double d = 7.5;\n    X<int, char> x1(i,c);\n    X<char, int> x2(c,i);\n    X<double, char> x3(d,c);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "211",
+     "html": "211"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "221",
+     "html": "221"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה.",
+     "html": "אף תשובה אינה נכונה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "111",
+     "html": "111"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`X<int, char>` הוא ההתמחות המלאה ולכן מדפיסה 2. `X<char, int>` ו-`X<double, char>` משתמשים בתבנית הכללית ומדפיסים 1 כל אחד. הפלט `211` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option a. clang++ run printed 211 (x1 uses the full specialization, x2 and x3 the generic template). Box agrees.",
+   "id": "20B-A-Q3",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;class T, class U&gt;\nclass X {\npublic:\n    X(T,U) { cout &lt;&lt; 1; }\n};\ntemplate &lt;&gt;\nclass X &lt;int,char&gt; {\npublic:\n    X(int i,char c) { cout &lt;&lt; 2; }\n};\nint main()\n{\n    int i = 5; char c = 'a'; double d = 7.5;\n    X&lt;int, char&gt; x1(i,c);\n    X&lt;char, int&gt; x2(c,i);\n    X&lt;double, char&gt; x3(d,c);\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">X&lt;int, char&gt;</code> הוא ההתמחות המלאה ולכן מדפיסה 2. <code class=\"tok\" dir=\"ltr\">X&lt;char, int&gt;</code> ו-<code class=\"tok\" dir=\"ltr\">X&lt;double, char&gt;</code> משתמשים בתבנית הכללית ומדפיסים 1 כל אחד. הפלט <code class=\"tok\" dir=\"ltr\">211</code> (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "9335f4e436b03794"
+  },
+  {
+   "num": 4,
+   "topic": "copy_control",
+   "question": "להלן הגדרה של מחלקה. המשפטים הבאים מתייחסים להגדרה זו :\n```text\n1  class Home {\n2  public:\n3      Home(const int &i)  { num1 = num2 = i; }\n4      Home(const int *i)  { num1 = num2 = *i; }\n5      Home(const Home &h) { num1 = num2 = h.num1; }\n6      Home(Home &h)       { num1 = num2 = h.num1; }\n7  private :\n8      int num1;\n9      double num2;\n10 };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הבנאי בשורה 4 שגוי כי יש שימוש במצביע מסוג const כדי לאתחל משתנה שאיננו מסוג const",
+     "html": "הבנאי בשורה 4 שגוי כי יש שימוש במצביע מסוג const כדי לאתחל משתנה שאיננו מסוג const"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "יש עמימות (ambiguity) בין הגדרות הבנאים בשורה 5 ובשורה 6.",
+     "html": "יש עמימות (ambiguity) בין הגדרות הבנאים בשורה 5 ובשורה 6."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הבנאי בשורה 3 שגוי כי יש שימוש במשתנה מסוג const להצבה במשתנה מסוג private .",
+     "html": "הבנאי בשורה 3 שגוי כי יש שימוש במשתנה מסוג const להצבה במשתנה מסוג private ."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "כל ההגדרות תקינות",
+     "html": "כל ההגדרות תקינות"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "בנאי ההעתקה בשורה 5 שגוי כי הוא לא רשאי לגשת למשתנה הפנימי h.num1",
+     "html": "בנאי ההעתקה בשורה 5 שגוי כי הוא לא רשאי לגשת למשתנה הפנימי h.num1"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הבנאים בשורות 3 ו-4 מקבלים הפניה או מצביע ל-const ומעתיקים ערך, וזה חוקי (קריאה מ-const תמיד מותרת). בשורות 5 ו-6 יש שני בנאי העתקה, אחד עם `const` ואחד בלי: אובייקט const בוחר את הראשון ואובייקט רגיל את השני, ולכן אין עמימות. גם הגישה ל-`h.num1` של אובייקט אחר מאותה מחלקה מותרת. כל ההגדרות תקינות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option d. clang++: the class compiles; copy-initialising from a const Home picks line 5 and from a non-const Home picks line 6 (no ambiguity). Box agrees.",
+   "id": "20B-A-Q4",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "להלן הגדרה של מחלקה. המשפטים הבאים מתייחסים להגדרה זו :<pre class=\"code-block\" dir=\"ltr\" data-lang=\"text\"><code>1  class Home {\n2  public:\n3      Home(const int &amp;i)  { num1 = num2 = i; }\n4      Home(const int *i)  { num1 = num2 = *i; }\n5      Home(const Home &amp;h) { num1 = num2 = h.num1; }\n6      Home(Home &amp;h)       { num1 = num2 = h.num1; }\n7  private :\n8      int num1;\n9      double num2;\n10 };</code></pre>",
+   "explanationHtml": "הבנאים בשורות 3 ו-4 מקבלים הפניה או מצביע ל-const ומעתיקים ערך, וזה חוקי (קריאה מ-const תמיד מותרת). בשורות 5 ו-6 יש שני בנאי העתקה, אחד עם <code class=\"tok\" dir=\"ltr\">const</code> ואחד בלי: אובייקט const בוחר את הראשון ואובייקט רגיל את השני, ולכן אין עמימות. גם הגישה ל-<code class=\"tok\" dir=\"ltr\">h.num1</code> של אובייקט אחר מאותה מחלקה מותרת. כל ההגדרות תקינות (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f29d0cea28d9a876"
+  },
+  {
+   "num": 5,
+   "topic": "copy_control",
+   "question": "להלן הגדרה של מחלקה. המשפטים הבאים מתייחסים להגדרה זו :\n```cpp\nclass Memory {\npublic:\n    Memory(int i = 0) { this->i = j = i; }\n    Memory(double j) { this->j = i = j + 1; }\n    Memory(const Memory& m) { j = i = m.i = m.j; }\nprivate:\n    int i, j;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לא ניתן להגדיר שני בנאים שונים לאותה מחלקה",
+     "html": "לא ניתן להגדיר שני בנאים שונים לאותה מחלקה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בנאי ההעתקה שגוי בשל סתירה פנימית בהגדרת הבנאי",
+     "html": "בנאי ההעתקה שגוי בשל סתירה פנימית בהגדרת הבנאי"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "יש עמימות (ambiguity) בין שני הבנאים",
+     "html": "יש עמימות (ambiguity) בין שני הבנאים"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ההגדרה תקינה לחלוטין",
+     "html": "ההגדרה תקינה לחלוטין"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "בנאי ההעתקה שגוי כי הוא לא יכול לגשת למשתנה private של אובייקט אחר.",
+     "html": "בנאי ההעתקה שגוי כי הוא לא יכול לגשת למשתנה private של אובייקט אחר."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בבנאי ההעתקה `m` הוא `const Memory&`, ולכן ההשמה `m.i = ...` לשדה של `m` אסורה (שגיאת קומפילציה). זו הסתירה בהגדרה (תשובה ב). שני בנאים שונים מותרים (א שגויה), הקריאה ל-`Memory(3)` אינה עמומה כי `int` מתאים בדיוק (ג שגויה), וגישה לשדה פרטי של אובייקט אחר מאותה מחלקה מותרת (ה שגויה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++: the copy constructor assigns to `m.i` although `m` is `const Memory&` (error); without that assignment the class compiles, two constructors are allowed and calling Memory(3) is not ambiguous. Box agrees.",
+   "id": "20B-A-Q5",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "להלן הגדרה של מחלקה. המשפטים הבאים מתייחסים להגדרה זו :<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Memory {\npublic:\n    Memory(int i = 0) { this-&gt;i = j = i; }\n    Memory(double j) { this-&gt;j = i = j + 1; }\n    Memory(const Memory&amp; m) { j = i = m.i = m.j; }\nprivate:\n    int i, j;\n};</code></pre>",
+   "explanationHtml": "בבנאי ההעתקה <code class=\"tok\" dir=\"ltr\">m</code> הוא <code class=\"tok\" dir=\"ltr\">const Memory&amp;</code>, ולכן ההשמה <code class=\"tok\" dir=\"ltr\">m.i = ...</code> לשדה של <code class=\"tok\" dir=\"ltr\">m</code> אסורה (שגיאת קומפילציה). זו הסתירה בהגדרה (תשובה ב). שני בנאים שונים מותרים (א שגויה), הקריאה ל-<code class=\"tok\" dir=\"ltr\">Memory(3)</code> אינה עמומה כי <code class=\"tok\" dir=\"ltr\">int</code> מתאים בדיוק (ג שגויה), וגישה לשדה פרטי של אובייקט אחר מאותה מחלקה מותרת (ה שגויה).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fe2ebe762b9fe7c5"
+  },
+  {
+   "num": 6,
+   "topic": "cpp_basics_refs",
+   "question": "ניתן להשתמש בשתיים או יותר הגדרות שונות לפונקציה בעלות אותו שם באותה מחלקה כאשר יש להן הגדרות שונות של סוג הפרמטר המוחזר.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף פעם לא נכון.",
+     "html": "אף פעם לא נכון."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "יכול להיות אפשרי אם יש גם הבדלים בסוגי הפרמטרים המועברים לפונקציה או בכמותם",
+     "html": "יכול להיות אפשרי אם יש גם הבדלים בסוגי הפרמטרים המועברים לפונקציה או בכמותם"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "נכון רק עבור פונקציה וירטואלית.",
+     "html": "נכון רק עבור פונקציה וירטואלית."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "נכון תמיד",
+     "html": "נכון תמיד"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "נכון רק עבור פונקציה שאיננה וירטואלית.",
+     "html": "נכון רק עבור פונקציה שאיננה וירטואלית."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "העמסת פונקציות נקבעת לפי רשימת הפרמטרים ולא לפי סוג ההחזרה, ולכן שתי הגדרות עם אותו שם וסוגי החזרה שונים אפשריות רק אם הן נבדלות גם בסוג הפרמטרים או במספרם (תשובה ב). שתי פונקציות שנבדלות רק בסוג ההחזרה הן שגיאת קומפילציה (clang++: functions that differ only in their return type cannot be overloaded), וזה נכון גם לפונקציות וירטואליות וגם לפונקציות רגילות, ולכן ג, ד וה שגויות. א שגויה כי עם פרמטרים שונים זה כן אפשרי. בקובץ המקורי מסומנת תשובה ד, אך הסימון אינו מפתח רשמי ואינו מתיישב עם השפה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): clang++ rejects members differing only in return type (virtual or not) and accepts them when the parameters differ -> b; the box (d) is not an official key. Med: concept wording.",
+   "id": "20B-A-Q6",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "ניתן להשתמש בשתיים או יותר הגדרות שונות לפונקציה בעלות אותו שם באותה מחלקה כאשר יש להן הגדרות שונות של סוג הפרמטר המוחזר.",
+   "explanationHtml": "העמסת פונקציות נקבעת לפי רשימת הפרמטרים ולא לפי סוג ההחזרה, ולכן שתי הגדרות עם אותו שם וסוגי החזרה שונים אפשריות רק אם הן נבדלות גם בסוג הפרמטרים או במספרם (תשובה ב). שתי פונקציות שנבדלות רק בסוג ההחזרה הן שגיאת קומפילציה (clang++: functions that differ only in their return type cannot be overloaded), וזה נכון גם לפונקציות וירטואליות וגם לפונקציות רגילות, ולכן ג, ד וה שגויות. א שגויה כי עם פרמטרים שונים זה כן אפשרי. בקובץ המקורי מסומנת תשובה ד, אך הסימון אינו מפתח רשמי ואינו מתיישב עם השפה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "acec1208a7648581"
+  },
+  {
+   "num": 7,
+   "topic": "cpp_basics_refs",
+   "question": "להלן קטע קוד ובו הגדרה חסרה מסומנת בקו תחתון. מה צריך להיות במקום הקו התחתון על מנת שהתוצאה של ההדפסה תהיה 2\n```cpp\nint f1(int& i, int j = 1) { return i + j; }\nint f1(double& i, int j = 1) { return i * j; }\nvoid main() {\n    double k = 2;\n    int l = 1;\n    cout << f1(________________);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "k,l",
+     "html": "k,l"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "l,k",
+     "html": "l,k"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "k&",
+     "html": "k&amp;"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "l*",
+     "html": "l*"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "l*k",
+     "html": "l*k"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "אפשרות `k,l`: `k` הוא `double` ולכן נבחרת `f1(double&, int)` שמחזירה `i*j` = 2*1 = 2 (תשובה א). אפשרות `l,k`: נבחרת `f1(int&, int)` כש-`k` מומר ל-2, והתוצאה `1+2` = 3. האפשרויות `k&`, `l*` ו-`l*k` אינן ביטויים חוקיים בקריאה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option a. clang++ run of each option: `k,l` prints 2 (f1(double&, int) -> 2*1), `l,k` prints 3 (f1(int&, int) with k converted to 2 -> 1+2), the other three do not compile. Box agrees.",
+   "id": "20B-A-Q7",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "להלן קטע קוד ובו הגדרה חסרה מסומנת בקו תחתון. מה צריך להיות במקום הקו התחתון על מנת שהתוצאה של ההדפסה תהיה 2<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int f1(int&amp; i, int j = 1) { return i + j; }\nint f1(double&amp; i, int j = 1) { return i * j; }\nvoid main() {\n    double k = 2;\n    int l = 1;\n    cout &lt;&lt; f1(________________);\n}</code></pre>",
+   "explanationHtml": "אפשרות <code class=\"tok\" dir=\"ltr\">k,l</code>: <code class=\"tok\" dir=\"ltr\">k</code> הוא <code class=\"tok\" dir=\"ltr\">double</code> ולכן נבחרת <code class=\"tok\" dir=\"ltr\">f1(double&amp;, int)</code> שמחזירה <code class=\"tok\" dir=\"ltr\">i*j</code> = 2*1 = 2 (תשובה א). אפשרות <code class=\"tok\" dir=\"ltr\">l,k</code>: נבחרת <code class=\"tok\" dir=\"ltr\">f1(int&amp;, int)</code> כש-<code class=\"tok\" dir=\"ltr\">k</code> מומר ל-2, והתוצאה <code class=\"tok\" dir=\"ltr\">1+2</code> = 3. האפשרויות <code class=\"tok\" dir=\"ltr\">k&amp;</code>, <code class=\"tok\" dir=\"ltr\">l*</code> ו-<code class=\"tok\" dir=\"ltr\">l*k</code> אינן ביטויים חוקיים בקריאה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "63a0c7a503b2cf7e"
+  },
+  {
+   "num": 8,
+   "topic": "friend_this_static",
+   "question": "אילו סוגים של פונקציות (method) של מחלקה  לא יכולות להיות מסוג static",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "רק פונקציות וירטואליות שאינן וירטואליות טהורות (pure virtual).",
+     "html": "רק פונקציות וירטואליות שאינן וירטואליות טהורות (pure virtual)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אין שום מגבלה",
+     "html": "אין שום מגבלה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציות שיש להן overloading (כלומר שתי פונקציות בעלות אותו שם אבל עם פרמטרים שונים).",
+     "html": "פונקציות שיש להן overloading (כלומר שתי פונקציות בעלות אותו שם אבל עם פרמטרים שונים)."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "פונקציות מסוג const",
+     "html": "פונקציות מסוג const"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "כל הפונקציות הוירטואליות",
+     "html": "כל הפונקציות הוירטואליות"
+    }
+   ],
+   "correctId": "e",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "פונקציה סטטית אינה קשורה לאובייקט מסוים, ולכן אין לה `this` ואי אפשר להפוך אותה לווירטואלית (בלי קשר אם היא טהורה). לכן אף פונקציה וירטואלית לא יכולה להיות סטטית (תשובה ה). overloading מותר גם בפונקציות סטטיות. פונקציה חברה מסוג `const` (שמצהירה שהיא לא משנה את `this`) גם היא לא יכולה להיות סטטית, אבל אם הכוונה לפונקציה שמחזירה `const` היא כן יכולה, ולכן הבחירה היא ה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option e. clang++ compile tests: `static virtual` (pure or not) is rejected, overloaded static members are fine. Option d (const) is also true for a const-qualified member function (`static void f() const` is rejected), though a function that merely returns const can be static; the box keeps e. Confidence med because of that ambiguity in option d.",
+   "id": "20B-A-Q8",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "אילו סוגים של פונקציות (method) של מחלקה  לא יכולות להיות מסוג static",
+   "explanationHtml": "פונקציה סטטית אינה קשורה לאובייקט מסוים, ולכן אין לה <code class=\"tok\" dir=\"ltr\">this</code> ואי אפשר להפוך אותה לווירטואלית (בלי קשר אם היא טהורה). לכן אף פונקציה וירטואלית לא יכולה להיות סטטית (תשובה ה). overloading מותר גם בפונקציות סטטיות. פונקציה חברה מסוג <code class=\"tok\" dir=\"ltr\">const</code> (שמצהירה שהיא לא משנה את <code class=\"tok\" dir=\"ltr\">this</code>) גם היא לא יכולה להיות סטטית, אבל אם הכוונה לפונקציה שמחזירה <code class=\"tok\" dir=\"ltr\">const</code> היא כן יכולה, ולכן הבחירה היא ה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "5b19d0e70b38022c"
+  },
+  {
+   "num": 9,
+   "topic": "abstract_multiple",
+   "question": "מה נדרש לשנות בקטע הקוד הבא כדי שהוא יעבור הידור (קומפילציה)\n```cpp\nclass MyClass { virtual int f() = 0; };\nclass MyClass1 : public MyClass {\n};\nclass Myclass2 :public MyClass {\n};\nclass MyClass3 :public MyClass {\n};\nconst MyClass * f1(const MyClass1&, const Myclass2 ) {return new MyClass3();}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f גם עבור המחלקה MyClass1 וגם עבור MyClass3",
+     "html": "להגדיר מימוש של הפונקציה f גם עבור המחלקה MyClass1 וגם עבור MyClass3"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f גם עבור המחלקה MyClass2 וגם עבור MyClass3 .",
+     "html": "להגדיר מימוש של הפונקציה f גם עבור המחלקה MyClass2 וגם עבור MyClass3 ."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f רק עבור מחלקה MyClass2",
+     "html": "להגדיר מימוש של הפונקציה f רק עבור מחלקה MyClass2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f רק עבור מחלקה MyClass1",
+     "html": "להגדיר מימוש של הפונקציה f רק עבור מחלקה MyClass1"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f רק עבור MyClass3",
+     "html": "להגדיר מימוש של הפונקציה f רק עבור MyClass3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`MyClass3` נוצרת עם `new`, ולכן חייבת לממש את `f` (אחרת היא אבסטרקטית). הפרמטר השני מועבר לפי ערך, וגם אותו אי אפשר לקבל כסוג אבסטרקטי, ולכן גם המחלקה שלו חייבת לממש את `f`. הפרמטר הראשון מועבר בהפניה, ושם מחלקה אבסטרקטית מותרת. בהרצה רק צירוף המימושים בשתי המחלקות האלה התקמפל (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++: `new MyClass3()` needs MyClass3 to implement f; the second parameter is an abstract class passed BY VALUE, so MyClass2 must implement f as well; the first parameter is a reference and needs nothing. Of the five option sets only {MyClass2, MyClass3} compiles (the class is spelled `Myclass2` in the screenshot, both in its header and in the parameter; transcribed as printed). Box agrees.",
+   "id": "20B-A-Q9",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "מה נדרש לשנות בקטע הקוד הבא כדי שהוא יעבור הידור (קומפילציה)<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class MyClass { virtual int f() = 0; };\nclass MyClass1 : public MyClass {\n};\nclass Myclass2 :public MyClass {\n};\nclass MyClass3 :public MyClass {\n};\nconst MyClass * f1(const MyClass1&amp;, const Myclass2 ) {return new MyClass3();}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">MyClass3</code> נוצרת עם <code class=\"tok\" dir=\"ltr\">new</code>, ולכן חייבת לממש את <code class=\"tok\" dir=\"ltr\">f</code> (אחרת היא אבסטרקטית). הפרמטר השני מועבר לפי ערך, וגם אותו אי אפשר לקבל כסוג אבסטרקטי, ולכן גם המחלקה שלו חייבת לממש את <code class=\"tok\" dir=\"ltr\">f</code>. הפרמטר הראשון מועבר בהפניה, ושם מחלקה אבסטרקטית מותרת. בהרצה רק צירוף המימושים בשתי המחלקות האלה התקמפל (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "170c5603e7ef1a3c"
+  },
+  {
+   "num": 10,
+   "topic": "friend_this_static",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\nclass X {\npublic:\n    X() {}\n    static int i;\n};\nint X::i = 0;\nint main() {\n    X x1; X x2;\n    x1.i = 2;\n    x2.i = 3;\n    cout << x1.i << x2.i;\n    X::i++;\n    cout << X::i;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה.",
+     "html": "אף תשובה אינה נכונה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "334",
+     "html": "334"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "331",
+     "html": "331"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "231",
+     "html": "231"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה `i` סטטי ולכן משותף לכל העצמים. `x1.i = 2` ואז `x2.i = 3` כותבים לאותו משתנה (נשאר 3), ולכן ההדפסה הראשונה היא `33`. אחרי `X::i++` הערך 4. הפלט `334` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++ run printed 334 (one shared static: 3 3, then 4). Box agrees.",
+   "id": "20B-A-Q10",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    X() {}\n    static int i;\n};\nint X::i = 0;\nint main() {\n    X x1; X x2;\n    x1.i = 2;\n    x2.i = 3;\n    cout &lt;&lt; x1.i &lt;&lt; x2.i;\n    X::i++;\n    cout &lt;&lt; X::i;\n}</code></pre>",
+   "explanationHtml": "המשתנה <code class=\"tok\" dir=\"ltr\">i</code> סטטי ולכן משותף לכל העצמים. <code class=\"tok\" dir=\"ltr\">x1.i = 2</code> ואז <code class=\"tok\" dir=\"ltr\">x2.i = 3</code> כותבים לאותו משתנה (נשאר 3), ולכן ההדפסה הראשונה היא <code class=\"tok\" dir=\"ltr\">33</code>. אחרי <code class=\"tok\" dir=\"ltr\">X::i++</code> הערך 4. הפלט <code class=\"tok\" dir=\"ltr\">334</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d7126cc4293cf11b"
+  },
+  {
+   "num": 11,
+   "topic": "inheritance_access",
+   "question": "בפרויקט מסוים יש ליצג את האובייקטים הבאים בעולם האמיתי: תפוזים (Orange), לימונים (Lemon), תפוחים (Apple), ומלפפונים (Cucumber). איזה ארגון של מחלקות יתאים ביותר לפרויקט?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "למחלקה מסוג Fruit יש שני Data Members האחד מסוג Orange והשני מסוג Vegetable",
+     "html": "למחלקה מסוג Fruit יש שני Data Members האחד מסוג Orange והשני מסוג Vegetable"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "Orange Lemon ו-Apple יורשים מ-Fruit (פרי) ו-Cucumber יורש מ-Vegetable (ירק). Fruit ו-Vegetable יורשים מ-Food (מאכל).",
+     "html": "Orange Lemon ו-Apple יורשים מ-Fruit (פרי) ו-Cucumber יורש מ-Vegetable (ירק). Fruit ו-Vegetable יורשים מ-Food (מאכל)."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אם יש בתכנית מחלקה מסוג Food היא בהכרח אבסטרקטית.",
+     "html": "אם יש בתכנית מחלקה מסוג Food היא בהכרח אבסטרקטית."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן ליצור עץ ירושות שמתאים לפרויקט שתואר.",
+     "html": "לא ניתן ליצור עץ ירושות שמתאים לפרויקט שתואר."
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "למחלקה מסוג Food יש ירושה כפולה גם מהמחלקה Fruit וגם מהמחלקה Vegetable.",
+     "html": "למחלקה מסוג Food יש ירושה כפולה גם מהמחלקה Fruit וגם מהמחלקה Vegetable."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "יחס של `is-a` (תפוז הוא פרי) מתבטא בירושה ולא בהכלה (א שגויה). הארגון הטבעי: `Orange`, `Lemon`, `Apple` יורשים מ-`Fruit`, `Cucumber` יורש מ-`Vegetable`, ושתיהן יורשות מ-`Food` (תשובה ב). אין צורך שהמחלקה `Food` תהיה אבסטרקטית (ג), אפשר ליצור עץ ירושה מתאים (ד), ו-`Food` היא הבסיס ולא יורשת מאף אחת (ה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. Class-design question, not runnable; the boxed hierarchy (leaf fruits derive from Fruit, Cucumber from Vegetable, both from Food) is the only coherent one (a uses data members for an is-a relation, c is not forced, d is false, e reverses the direction). Key kept, confidence med.",
+   "id": "20B-A-Q11",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בפרויקט מסוים יש ליצג את האובייקטים הבאים בעולם האמיתי: תפוזים (Orange), לימונים (Lemon), תפוחים (Apple), ומלפפונים (Cucumber). איזה ארגון של מחלקות יתאים ביותר לפרויקט?",
+   "explanationHtml": "יחס של <code class=\"tok\" dir=\"ltr\">is-a</code> (תפוז הוא פרי) מתבטא בירושה ולא בהכלה (א שגויה). הארגון הטבעי: <code class=\"tok\" dir=\"ltr\">Orange</code>, <code class=\"tok\" dir=\"ltr\">Lemon</code>, <code class=\"tok\" dir=\"ltr\">Apple</code> יורשים מ-<code class=\"tok\" dir=\"ltr\">Fruit</code>, <code class=\"tok\" dir=\"ltr\">Cucumber</code> יורש מ-<code class=\"tok\" dir=\"ltr\">Vegetable</code>, ושתיהן יורשות מ-<code class=\"tok\" dir=\"ltr\">Food</code> (תשובה ב). אין צורך שהמחלקה <code class=\"tok\" dir=\"ltr\">Food</code> תהיה אבסטרקטית (ג), אפשר ליצור עץ ירושה מתאים (ד), ו-<code class=\"tok\" dir=\"ltr\">Food</code> היא הבסיס ולא יורשת מאף אחת (ה).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "38602dd64280759a"
+  },
+  {
+   "num": 12,
+   "topic": "cpp_basics_refs",
+   "question": "להלן קטע קוד ובו הגדרה חסרה מסומנת בקו תחתון. מה צריך להיות במקום הקו התחתון על מנת שהתוצאה של ההדפסה תהיה 7\n```cpp\ndouble m1(int i = 0) { return i + 1; }\nint m1(double d = 0) { return d + 2; }\nint m2(______________) { return i + 2 * d; }\nint m2(int i) { return 7; }\nint main()\n{\n    int i = 1;\n    std::cout << m2(1.0+m1(i));\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "int i , double d",
+     "html": "int i , double d"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "double d, int i=1",
+     "html": "double d, int i=1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "double d=0, int i=1",
+     "html": "double d=0, int i=1"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "double d, int i",
+     "html": "double d, int i"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "כל התשובות נכונות",
+     "html": "כל התשובות נכונות"
+    }
+   ],
+   "correctId": "e",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בכל ארבע האפשרויות הפלט הוא 7. הביטוי `m1(i)` מחזיר `double` ולכן `1.0+m1(i)` הוא `double`. כשחתימת `m2` הנוספת דורשת שני ארגומנטים (`int i, double d` או `double d, int i`), היא לא מתאימה לקריאה עם ארגומנט אחד ונבחרת `m2(int)` שמחזירה 7. כשיש ערך ברירת מחדל (`double d, int i=1` או `double d=0, int i=1`) היא מתאימה בדיוק, והתוצאה `1 + 2*3.0` = 7. לכן כל התשובות נכונות (ה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option e. clang++ run of each of the four blanks: all print 7 (with two required parameters the new m2 is not viable for the one-argument call, so m2(int) returns 7; with a defaulted int i=1 the double overload is chosen and 1 + 2*3.0 = 7). Box agrees.",
+   "id": "20B-A-Q12",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "להלן קטע קוד ובו הגדרה חסרה מסומנת בקו תחתון. מה צריך להיות במקום הקו התחתון על מנת שהתוצאה של ההדפסה תהיה 7<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>double m1(int i = 0) { return i + 1; }\nint m1(double d = 0) { return d + 2; }\nint m2(______________) { return i + 2 * d; }\nint m2(int i) { return 7; }\nint main()\n{\n    int i = 1;\n    std::cout &lt;&lt; m2(1.0+m1(i));\n}</code></pre>",
+   "explanationHtml": "בכל ארבע האפשרויות הפלט הוא 7. הביטוי <code class=\"tok\" dir=\"ltr\">m1(i)</code> מחזיר <code class=\"tok\" dir=\"ltr\">double</code> ולכן <code class=\"tok\" dir=\"ltr\">1.0+m1(i)</code> הוא <code class=\"tok\" dir=\"ltr\">double</code>. כשחתימת <code class=\"tok\" dir=\"ltr\">m2</code> הנוספת דורשת שני ארגומנטים (<code class=\"tok\" dir=\"ltr\">int i, double d</code> או <code class=\"tok\" dir=\"ltr\">double d, int i</code>), היא לא מתאימה לקריאה עם ארגומנט אחד ונבחרת <code class=\"tok\" dir=\"ltr\">m2(int)</code> שמחזירה 7. כשיש ערך ברירת מחדל (<code class=\"tok\" dir=\"ltr\">double d, int i=1</code> או <code class=\"tok\" dir=\"ltr\">double d=0, int i=1</code>) היא מתאימה בדיוק, והתוצאה <code class=\"tok\" dir=\"ltr\">1 + 2*3.0</code> = 7. לכן כל התשובות נכונות (ה).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f0687dc34294d247"
+  },
+  {
+   "num": 13,
+   "topic": "inheritance_access",
+   "question": "התבקשת לכתוב תוכנה למעקב אחר בדיקות. קיימות בדיקות מסוגים שונים – בדיקות דם (Blood Test), בדיקות נשימה (Breath Test), בדיקות רנטגן (Xray Test). לכל בדיקה יש תאריך שבו התבצעה הבדיקה וכן התאריך שבו פוענחה הבדיקה. יש צורך לשמור את מספר הבדיקות הכולל שבוצעו וכן את מספר הבדיקות לפי סוג בדיקה. לבדיקות דם יש לשמור את מספר המבחנות שנלקחו (יכול להיות שונה בין בדיקות דם שונות). לבדיקות נשימה יש לשמור את משך זמן ביצוע הבדיקה בפועל (בדקות שלמות). לבדיקות רנטגן אין לשמור נתונים נוספים.\nמבנה המחלקות המתאים ביותר יהיה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מגדירים מחלקה GeneralTest שמכילה משתנים סטטים ורגילים. בונים מחלקות BloodTest, XRayTest, BreathTest שלא יורשות מאף מחלקה אחרת. מגדירים לכל אחת מהמחלקות אובייקט פנימי מסוג GeneralTest. BloodTest ו-BreathTest מכילות בנוסף גם משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה בנוסף רק משתנה סטטי אחד.",
+     "html": "מגדירים מחלקה GeneralTest שמכילה משתנים סטטים ורגילים. בונים מחלקות BloodTest, XRayTest, BreathTest שלא יורשות מאף מחלקה אחרת. מגדירים לכל אחת מהמחלקות אובייקט פנימי מסוג GeneralTest. BloodTest ו-BreathTest מכילות בנוסף גם משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה בנוסף רק משתנה סטטי אחד."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בונים מחלקות BloodTest, XRayTest, BreathTest שלא יורשות מאף מחלקה אחרת. BloodTest ו-BreathTest מכילות משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה רק משתנה סטטי אחד. מגדירים מחלקה מסוג GeneralTest שיורשת מכל המחלקות שהוגדרו קודם לכן.",
+     "html": "בונים מחלקות BloodTest, XRayTest, BreathTest שלא יורשות מאף מחלקה אחרת. BloodTest ו-BreathTest מכילות משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה רק משתנה סטטי אחד. מגדירים מחלקה מסוג GeneralTest שיורשת מכל המחלקות שהוגדרו קודם לכן."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בונים מחלקות BloodTest, XRayTest, BreathTest שלא יורשות מאף מחלקה אחרת. כל אחת מהמחלקות BloodTest ו-BreathTest מכילה גם משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה רק משתנה סטטי אחד.",
+     "html": "בונים מחלקות BloodTest, XRayTest, BreathTest שלא יורשות מאף מחלקה אחרת. כל אחת מהמחלקות BloodTest ו-BreathTest מכילה גם משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה רק משתנה סטטי אחד."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הבעיה שתוארה מסובכת מדי ולא מתאימה לתכנות בשפה מונחית עצמים. יותר מתאים לתכנת אותה בשפה פרוצדורלית (למשל C).",
+     "html": "הבעיה שתוארה מסובכת מדי ולא מתאימה לתכנות בשפה מונחית עצמים. יותר מתאים לתכנת אותה בשפה פרוצדורלית (למשל C)."
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "BloodTest, XRayTest, BreathTest יורשים מ-GeneralTest. GeneralTest היא מחלקה וירטואלית טהורה והיא מכילה משתנים רגילים ומשתנים סטטיים. כל אחת מהמחלקות BloodTest ו-BreathTest מכילה גם משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה רק משתנה סטטי אחד.",
+     "html": "BloodTest, XRayTest, BreathTest יורשים מ-GeneralTest. GeneralTest היא מחלקה וירטואלית טהורה והיא מכילה משתנים רגילים ומשתנים סטטיים. כל אחת מהמחלקות BloodTest ו-BreathTest מכילה גם משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה רק משתנה סטטי אחד."
+    }
+   ],
+   "correctId": "e",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "מחלקות הבדיקה חולקות נתונים משותפים (תאריך ביצוע, תאריך פענוח, מספר כולל של בדיקות), ולכן מגדירים להן מחלקת בסיס `GeneralTest` שמכילה אותם, בנוסף למשתנים סטטיים למעקב אחר המספרים. המחלקה היא וירטואלית טהורה כי אין בדיקה כללית שנוצרת בפני עצמה. `BloodTest` ו-`BreathTest` מוסיפות כל אחת את המשתנים הרגילים והסטטיים שלה, ו-`XRayTest` רק משתנה סטטי (תשובה ה). אפשרויות א-ג משכפלות או מחברות את הנתונים הכלליים בדרך גרועה, ו-ד שגויה כי זו בדיוק בעיה שמתאימה לשפה מונחית עצמים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option e. Class-design question, not runnable. e is the one that shares the common fields once in an abstract base GeneralTest and gives each test its own extras; a/c duplicate the common fields or give no common base, b inverts inheritance, d is wrong. Key kept, confidence med.",
+   "id": "20B-A-Q13",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "התבקשת לכתוב תוכנה למעקב אחר בדיקות. קיימות בדיקות מסוגים שונים – בדיקות דם (Blood Test), בדיקות נשימה (Breath Test), בדיקות רנטגן (Xray Test). לכל בדיקה יש תאריך שבו התבצעה הבדיקה וכן התאריך שבו פוענחה הבדיקה. יש צורך לשמור את מספר הבדיקות הכולל שבוצעו וכן את מספר הבדיקות לפי סוג בדיקה. לבדיקות דם יש לשמור את מספר המבחנות שנלקחו (יכול להיות שונה בין בדיקות דם שונות). לבדיקות נשימה יש לשמור את משך זמן ביצוע הבדיקה בפועל (בדקות שלמות). לבדיקות רנטגן אין לשמור נתונים נוספים.<br>מבנה המחלקות המתאים ביותר יהיה:",
+   "explanationHtml": "מחלקות הבדיקה חולקות נתונים משותפים (תאריך ביצוע, תאריך פענוח, מספר כולל של בדיקות), ולכן מגדירים להן מחלקת בסיס <code class=\"tok\" dir=\"ltr\">GeneralTest</code> שמכילה אותם, בנוסף למשתנים סטטיים למעקב אחר המספרים. המחלקה היא וירטואלית טהורה כי אין בדיקה כללית שנוצרת בפני עצמה. <code class=\"tok\" dir=\"ltr\">BloodTest</code> ו-<code class=\"tok\" dir=\"ltr\">BreathTest</code> מוסיפות כל אחת את המשתנים הרגילים והסטטיים שלה, ו-<code class=\"tok\" dir=\"ltr\">XRayTest</code> רק משתנה סטטי (תשובה ה). אפשרויות א-ג משכפלות או מחברות את הנתונים הכלליים בדרך גרועה, ו-ד שגויה כי זו בדיוק בעיה שמתאימה לשפה מונחית עצמים.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "09c72e2ab07a0193"
+  },
+  {
+   "num": 14,
+   "topic": "virtual_polymorphism",
+   "question": "בהינתן מצביע מסוג `myEx2 *ptr;` יתכן שהפעולה `ptr->myRun();` לא תמיד תפעיל את אותה הפונקציה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "רק כאשר הפונקציות סטטיות.",
+     "html": "רק כאשר הפונקציות סטטיות."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "רק כאשר השיטה myRun מוגדרת virtual במחלקה שיורשת מהמחלקה myEx2.",
+     "html": "רק כאשר השיטה myRun מוגדרת virtual במחלקה שיורשת מהמחלקה myEx2."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "רק כאשר המחלקה myEx2 יורשת משתי מחלקות שונות שיש להן מימושים שונים של השיטה (Method) myRun().",
+     "html": "רק כאשר המחלקה myEx2 יורשת משתי מחלקות שונות שיש להן מימושים שונים של השיטה (Method) myRun()."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "כאשר השיטה (Method) myRun מוגדרת וירטואלית במחלקה myEx2 וקיימת לפחות מחלקה אחת אחרת שיורשת מ-myEx2 שיש לה מימוש שונה של ()myRun.",
+     "html": "כאשר השיטה (Method) myRun מוגדרת וירטואלית במחלקה myEx2 וקיימת לפחות מחלקה אחת אחרת שיורשת מ-myEx2 שיש לה מימוש שונה של ()myRun."
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "רק כאשר השיטה myEx2::myRun() הינה וירטואלית טהורה.",
+     "html": "רק כאשר השיטה myEx2::myRun() הינה וירטואלית טהורה."
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפעלת `ptr->myRun()` נבחרת בזמן ריצה לפי הטיפוס האמיתי רק כשהפונקציה וירטואלית ב-`myEx2` ויש מחלקה יורשת שדורסת אותה (תשובה ד). אם היא לא וירטואלית, הקריאה תמיד מפעילה את הגרסה של `myEx2` (בהרצה נדפס `BB`). אם וירטואלית רק במחלקה היורשת, גם אז הקריאה דרך `myEx2*` לא משתנה. ירושה משתי מחלקות עם אותו שם פונקציה גורמת לעמימות ולא לבחירה דינמית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option d. clang++ runs: with a non-virtual myRun the call always runs the pointer type's version; with myRun virtual in myEx2 and overridden in a derived class the version depends on the dynamic type; virtual only in a derived class does not change calls through myEx2*; calling a method defined in two bases is ambiguous (does not compile). Box agrees.",
+   "id": "20B-A-Q14",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "בהינתן מצביע מסוג <code class=\"tok\" dir=\"ltr\">myEx2 *ptr;</code> יתכן שהפעולה <code class=\"tok\" dir=\"ltr\">ptr-&gt;myRun();</code> לא תמיד תפעיל את אותה הפונקציה:",
+   "explanationHtml": "הפעלת <code class=\"tok\" dir=\"ltr\">ptr-&gt;myRun()</code> נבחרת בזמן ריצה לפי הטיפוס האמיתי רק כשהפונקציה וירטואלית ב-<code class=\"tok\" dir=\"ltr\">myEx2</code> ויש מחלקה יורשת שדורסת אותה (תשובה ד). אם היא לא וירטואלית, הקריאה תמיד מפעילה את הגרסה של <code class=\"tok\" dir=\"ltr\">myEx2</code> (בהרצה נדפס <code class=\"tok\" dir=\"ltr\">BB</code>). אם וירטואלית רק במחלקה היורשת, גם אז הקריאה דרך <code class=\"tok\" dir=\"ltr\">myEx2*</code> לא משתנה. ירושה משתי מחלקות עם אותו שם פונקציה גורמת לעמימות ולא לבחירה דינמית.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "7636ce3eb6f0d0c6"
+  },
+  {
+   "num": 15,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\nclass X {\npublic:\n    X() { }\n    virtual void f() { cout << 1; }\n    void f1() { cout << 2; }\n};\nclass Y : public X {\npublic:\n    Y() {}\n    void f() { cout << 3; }\n    virtual void f1() { cout << 4; }\n};\nint main() {\n    X* a[2];\n    X x1;   Y y1;\n    a[0] = &x1; a[1] = &y1;\n    for (int i = 0; i < 2; i++) {\n        a[i]->f();\n        a[i]->f1();\n    }\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה.",
+     "html": "אף תשובה אינה נכונה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1232",
+     "html": "1232"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1234",
+     "html": "1234"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "1212",
+     "html": "1212"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f` וירטואלית ב-`X`. עבור `a[0]` (אובייקט `X`) מודפס 1 ואז `f1` של `X`: 2. עבור `a[1]` (אובייקט `Y` דרך מצביע `X*`) הקריאה הוירטואלית `f` מפעילה את `Y::f` ומדפיסה 3. `f1` לא וירטואלית ב-`X` (ההצהרה `virtual` ב-`Y` לא משפיעה על מצביע `X*`), ולכן מופעל `X::f1` ומודפס 2. הפלט `1232` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++ run printed 1232 (f is virtual in X so a[1]->f() prints 3; f1 is not virtual in X so a[1]->f1() prints X's 2). Box agrees.",
+   "id": "20B-A-Q15",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    X() { }\n    virtual void f() { cout &lt;&lt; 1; }\n    void f1() { cout &lt;&lt; 2; }\n};\nclass Y : public X {\npublic:\n    Y() {}\n    void f() { cout &lt;&lt; 3; }\n    virtual void f1() { cout &lt;&lt; 4; }\n};\nint main() {\n    X* a[2];\n    X x1;   Y y1;\n    a[0] = &amp;x1; a[1] = &amp;y1;\n    for (int i = 0; i &lt; 2; i++) {\n        a[i]-&gt;f();\n        a[i]-&gt;f1();\n    }\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">f</code> וירטואלית ב-<code class=\"tok\" dir=\"ltr\">X</code>. עבור <code class=\"tok\" dir=\"ltr\">a[0]</code> (אובייקט <code class=\"tok\" dir=\"ltr\">X</code>) מודפס 1 ואז <code class=\"tok\" dir=\"ltr\">f1</code> של <code class=\"tok\" dir=\"ltr\">X</code>: 2. עבור <code class=\"tok\" dir=\"ltr\">a[1]</code> (אובייקט <code class=\"tok\" dir=\"ltr\">Y</code> דרך מצביע <code class=\"tok\" dir=\"ltr\">X*</code>) הקריאה הוירטואלית <code class=\"tok\" dir=\"ltr\">f</code> מפעילה את <code class=\"tok\" dir=\"ltr\">Y::f</code> ומדפיסה 3. <code class=\"tok\" dir=\"ltr\">f1</code> לא וירטואלית ב-<code class=\"tok\" dir=\"ltr\">X</code> (ההצהרה <code class=\"tok\" dir=\"ltr\">virtual</code> ב-<code class=\"tok\" dir=\"ltr\">Y</code> לא משפיעה על מצביע <code class=\"tok\" dir=\"ltr\">X*</code>), ולכן מופעל <code class=\"tok\" dir=\"ltr\">X::f1</code> ומודפס 2. הפלט <code class=\"tok\" dir=\"ltr\">1232</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "e74530deda0980a8"
+  },
+  {
+   "num": 16,
+   "topic": "construction_order",
+   "question": "בשאלה אחרת בבחינה זו מופיעה הגדרה של המחלקה Home ודרוש להשיב האם ההגדרה תקינה. להלן ההגדרה של המחלקה Home:\n```cpp\nclass Home {\npublic:\n    Home(const int &i)  { num1 = num2 = i; }\n    Home(const int *i)  { num1 = num2 = *i; }\n    Home(const Home &h) { num1 = num2 = h.num1; }\n    Home(Home &h)       { num1 = num2 = h.num1; }\nprivate :\n    int num1;\n    double num2;\n};\n```\nבהינתן מחלקה Room שיורשת באופן public מהמחלקה Home הנ\"ל (בהנחה שהגדרה תוקנה במידת הצורך) - ניתן לכתוב בנאי ()Room שיאתחל את ערכו של num1 ל-3 באופן הבא:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `Room() : Home(3) { }`",
+     "html": "אפשרי ברשימת האיתחול באופן הבא: <code class=\"tok\" dir=\"ltr\">Room() : Home(3) { }</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `Room() : num1=3 { }`",
+     "html": "אפשרי ברשימת האיתחול באופן הבא: <code class=\"tok\" dir=\"ltr\">Room() : num1=3 { }</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אפשרי (לא ברשימת האיתחול) באופן הבא: `Room(): {(Home)(*this).num1 = 3; }`",
+     "html": "אפשרי (לא ברשימת האיתחול) באופן הבא: <code class=\"tok\" dir=\"ltr\">Room(): {(Home)(*this).num1 = 3; }</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן",
+     "html": "לא ניתן"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `Room() : num1(3) { }`",
+     "html": "אפשרי ברשימת האיתחול באופן הבא: <code class=\"tok\" dir=\"ltr\">Room() : num1(3) { }</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה `num1` הוא `private` ב-`Home`, ולכן מחלקה יורשת לא יכולה לגשת אליו ישירות: לא ברשימת האיתחול ולא בגוף הבנאי. הדרך היחידה היא להפעיל בנאי של `Home` ברשימת האיתחול, כמו `Home(3)` (תשובה א). `Home(3)` בוחר את `Home(const int&)`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option a. clang++ compile tests: `Room() : Home(3) {}` compiles; `num1=3`, `num1(3)` and `((Home)*this).num1 = 3` fail (num1 is private to Home). Box agrees.",
+   "id": "20B-A-Q16",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "בשאלה אחרת בבחינה זו מופיעה הגדרה של המחלקה Home ודרוש להשיב האם ההגדרה תקינה. להלן ההגדרה של המחלקה Home:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Home {\npublic:\n    Home(const int &amp;i)  { num1 = num2 = i; }\n    Home(const int *i)  { num1 = num2 = *i; }\n    Home(const Home &amp;h) { num1 = num2 = h.num1; }\n    Home(Home &amp;h)       { num1 = num2 = h.num1; }\nprivate :\n    int num1;\n    double num2;\n};</code></pre>בהינתן מחלקה Room שיורשת באופן public מהמחלקה Home הנ\"ל (בהנחה שהגדרה תוקנה במידת הצורך) - ניתן לכתוב בנאי ()Room שיאתחל את ערכו של num1 ל-3 באופן הבא:",
+   "explanationHtml": "המשתנה <code class=\"tok\" dir=\"ltr\">num1</code> הוא <code class=\"tok\" dir=\"ltr\">private</code> ב-<code class=\"tok\" dir=\"ltr\">Home</code>, ולכן מחלקה יורשת לא יכולה לגשת אליו ישירות: לא ברשימת האיתחול ולא בגוף הבנאי. הדרך היחידה היא להפעיל בנאי של <code class=\"tok\" dir=\"ltr\">Home</code> ברשימת האיתחול, כמו <code class=\"tok\" dir=\"ltr\">Home(3)</code> (תשובה א). <code class=\"tok\" dir=\"ltr\">Home(3)</code> בוחר את <code class=\"tok\" dir=\"ltr\">Home(const int&amp;)</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c8f9202dc8428737"
+  },
+  {
+   "num": 17,
+   "topic": "construction_order",
+   "question": "בהינתן מחלקה RAM שיורשת באופן public מהמחלקה Memory שמתוארת להלן (מחלקה זו מופיעה בשאלה אחרת והניחו שבמידה ויש בה שגיאה היא תוקנה) - ניתן לכתוב בנאי ()RAM שיאתחל את ערכו של i ל-3 באופן הבא :\n```cpp\nclass Memory {\npublic:\n    Memory(int i = 0) { this->i = j = i; }\n    Memory(double j) { this->j = i = j + 1; }\n    Memory(const Memory& m) { j = i = m.i = m.j; }\nprivate:\n    int i, j;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `RAM() : Memory(3) { }`",
+     "html": "אפשרי ברשימת האיתחול באופן הבא: <code class=\"tok\" dir=\"ltr\">RAM() : Memory(3) { }</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לא ניתן",
+     "html": "לא ניתן"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `RAM() : i(3) { };`",
+     "html": "אפשרי ברשימת האיתחול באופן הבא: <code class=\"tok\" dir=\"ltr\">RAM() : i(3) { };</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אפשרי (לא ברשימת האיתחול) באופן הבא: `RAM(): {Memory::i=3 }`",
+     "html": "אפשרי (לא ברשימת האיתחול) באופן הבא: <code class=\"tok\" dir=\"ltr\">RAM(): {Memory::i=3 }</code>"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `RAM() : i=3{ };`",
+     "html": "אפשרי ברשימת האיתחול באופן הבא: <code class=\"tok\" dir=\"ltr\">RAM() : i=3{ };</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "אפשר להפעיל את בנאי הבסיס ברשימת האיתחול: `RAM() : Memory(3) {}` מתקמפל, והבנאי `Memory(int)` מציב `i` = 3 (תשובה א, נבדק בהרצה). המשתנה `i` פרטי ב-`Memory`, ולכן הניסיונות לגשת אליו ישירות מ-`RAM`, `i(3)`, `i=3` או `Memory::i=3`, נכשלים בקומפילציה. האפשרות ״לא ניתן״ (ב) שגויה, כי הגישה עוברת דרך הבנאי של הבסיס ולא דרך השדה. בקובץ המקורי מסומנת תשובה ב, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): clang++ with the copy ctor repaired: `RAM() : Memory(3) {}` compiles and leaves i == 3; c, d, e fail (i is private). The box (b) is not an official key.",
+   "id": "20B-A-Q17",
+   "examCode": "20B-A",
+   "examLabel": "2020 סמסטר ב מועד א",
+   "year": 2020,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "בהינתן מחלקה RAM שיורשת באופן public מהמחלקה Memory שמתוארת להלן (מחלקה זו מופיעה בשאלה אחרת והניחו שבמידה ויש בה שגיאה היא תוקנה) - ניתן לכתוב בנאי ()RAM שיאתחל את ערכו של i ל-3 באופן הבא :<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Memory {\npublic:\n    Memory(int i = 0) { this-&gt;i = j = i; }\n    Memory(double j) { this-&gt;j = i = j + 1; }\n    Memory(const Memory&amp; m) { j = i = m.i = m.j; }\nprivate:\n    int i, j;\n};</code></pre>",
+   "explanationHtml": "אפשר להפעיל את בנאי הבסיס ברשימת האיתחול: <code class=\"tok\" dir=\"ltr\">RAM() : Memory(3) {}</code> מתקמפל, והבנאי <code class=\"tok\" dir=\"ltr\">Memory(int)</code> מציב <code class=\"tok\" dir=\"ltr\">i</code> = 3 (תשובה א, נבדק בהרצה). המשתנה <code class=\"tok\" dir=\"ltr\">i</code> פרטי ב-<code class=\"tok\" dir=\"ltr\">Memory</code>, ולכן הניסיונות לגשת אליו ישירות מ-<code class=\"tok\" dir=\"ltr\">RAM</code>, <code class=\"tok\" dir=\"ltr\">i(3)</code>, <code class=\"tok\" dir=\"ltr\">i=3</code> או <code class=\"tok\" dir=\"ltr\">Memory::i=3</code>, נכשלים בקומפילציה. האפשרות ״לא ניתן״ (ב) שגויה, כי הגישה עוברת דרך הבנאי של הבסיס ולא דרך השדה. בקובץ המקורי מסומנת תשובה ב, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "af440e58014e9e3b"
+  },
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nvoid f(int& i) {\n    i++;\n    cout << i << endl;\n};\n\nint main()\n{\n    int i = 3, j = 2;\n    f(i);\n    f(i+j);\n    f(5);\n    f(i + 1);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "הפונקציה `f` מקבלת `int&`, כלומר הפניה לערך שמאלי. `f(i)` תקין. `f(i+j)`, `f(5)` ו-`f(i + 1)` מעבירים ערכים זמניים (rvalue) שאי אפשר לקשור להפניה לא-const. שלוש שגיאות, ולכן התשובה היא יותר מ-2 (ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): errors on f(i+j), f(5), f(i + 1) -> 3.",
+   "id": "21B-A-Q1",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>void f(int&amp; i) {\n    i++;\n    cout &lt;&lt; i &lt;&lt; endl;\n};\n\nint main()\n{\n    int i = 3, j = 2;\n    f(i);\n    f(i+j);\n    f(5);\n    f(i + 1);\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> מקבלת <code class=\"tok\" dir=\"ltr\">int&amp;</code>, כלומר הפניה לערך שמאלי. <code class=\"tok\" dir=\"ltr\">f(i)</code> תקין. <code class=\"tok\" dir=\"ltr\">f(i+j)</code>, <code class=\"tok\" dir=\"ltr\">f(5)</code> ו-<code class=\"tok\" dir=\"ltr\">f(i + 1)</code> מעבירים ערכים זמניים (rvalue) שאי אפשר לקשור להפניה לא-const. שלוש שגיאות, ולכן התשובה היא יותר מ-2 (ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "b0b33f75fa2fefd4"
+  },
+  {
+   "num": 2,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint f(int x, int y=3, int z) {\n    return x + y + z;\n}\n\nint main()\n{\n  cout << f(1,3,5) << f(1,3) << f(1,4,2) << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`947`",
+     "html": "<code class=\"tok\" dir=\"ltr\">947</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`749`",
+     "html": "<code class=\"tok\" dir=\"ltr\">749</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`944`",
+     "html": "<code class=\"tok\" dir=\"ltr\">944</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "בפרמטרים של פונקציה, אחרי פרמטר עם ערך ברירת מחדל (`int y=3`) כל הפרמטרים הבאים חייבים גם הם לקבל ערך ברירת מחדל. כאן `int z` בלי ערך ברירת מחדל, ולכן ההגדרה עצמה שגויה והתכנית לא מתקמפלת (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): error 'missing default argument on parameter z'.",
+   "id": "21B-A-Q2",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int f(int x, int y=3, int z) {\n    return x + y + z;\n}\n\nint main()\n{\n  cout &lt;&lt; f(1,3,5) &lt;&lt; f(1,3) &lt;&lt; f(1,4,2) &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "בפרמטרים של פונקציה, אחרי פרמטר עם ערך ברירת מחדל (<code class=\"tok\" dir=\"ltr\">int y=3</code>) כל הפרמטרים הבאים חייבים גם הם לקבל ערך ברירת מחדל. כאן <code class=\"tok\" dir=\"ltr\">int z</code> בלי ערך ברירת מחדל, ולכן ההגדרה עצמה שגויה והתכנית לא מתקמפלת (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1973cde3c7d5bd4a"
+  },
+  {
+   "num": 3,
+   "topic": "classes_ctor_dtor",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int a, int b = 3) { x = a; y = b; }\n    int x,y;\n};\n\n\nint main() {\n    A a1;\n    A a2(2);\n    A a3(2, 3);\n    A a4(2, 3, 4);\n    A a5=a3;\n    a3 = a2;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "למחלקה יש בנאי יחיד `A(int a, int b = 3)`, ולכן אין בנאי ברירת מחדל. `A a1;` שגוי. `A a2(2)` ו-`A a3(2,3)` תקינים. `A a4(2,3,4)` שגוי (יותר מדי ארגומנטים). `A a5=a3` ו-`a3 = a2` משתמשים בבנאי ההעתקה ובהשמה שנוצרו אוטומטית. שתי שגיאות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): errors on `A a1;` (no default constructor) and `A a4(2, 3, 4);` -> 2.",
+   "id": "21B-A-Q3",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int a, int b = 3) { x = a; y = b; }\n    int x,y;\n};\n\n\nint main() {\n    A a1;\n    A a2(2);\n    A a3(2, 3);\n    A a4(2, 3, 4);\n    A a5=a3;\n    a3 = a2;\n}</code></pre>",
+   "explanationHtml": "למחלקה יש בנאי יחיד <code class=\"tok\" dir=\"ltr\">A(int a, int b = 3)</code>, ולכן אין בנאי ברירת מחדל. <code class=\"tok\" dir=\"ltr\">A a1;</code> שגוי. <code class=\"tok\" dir=\"ltr\">A a2(2)</code> ו-<code class=\"tok\" dir=\"ltr\">A a3(2,3)</code> תקינים. <code class=\"tok\" dir=\"ltr\">A a4(2,3,4)</code> שגוי (יותר מדי ארגומנטים). <code class=\"tok\" dir=\"ltr\">A a5=a3</code> ו-<code class=\"tok\" dir=\"ltr\">a3 = a2</code> משתמשים בבנאי ההעתקה ובהשמה שנוצרו אוטומטית. שתי שגיאות (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "6c1c7dd542dfc2b6"
+  },
+  {
+   "num": 4,
+   "topic": "const_references",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int z) { x = z; }\n    int x;\n    void f() { cout << x; }\n    void f() const { cout << x; }\n    void setX(int z) { x = z; }\n};\n\nint main() {\n    A a1(4);\n    a1.setX(8);\n    const A a2(6);\n    a1.f();\n    a2.f();\n    a2.setX(5);\n    A a3 = a2;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "יש שתי גרסאות של `f`, אחת רגילה ואחת `const`, ולכן הקריאה `a2.f()` על אובייקט קבוע בוחרת את הגרסה ה-`const`. `setX` אינה `const`, ולכן הקריאה `a2.setX(5)` על אובייקט קבוע שגויה. כל שאר השורות תקינות, כולל `A a3 = a2` (בנאי העתקה אוטומטי). שגיאה אחת (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): only `a2.setX(5);` fails (non-const member on a const object).",
+   "id": "21B-A-Q4",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int z) { x = z; }\n    int x;\n    void f() { cout &lt;&lt; x; }\n    void f() const { cout &lt;&lt; x; }\n    void setX(int z) { x = z; }\n};\n\nint main() {\n    A a1(4);\n    a1.setX(8);\n    const A a2(6);\n    a1.f();\n    a2.f();\n    a2.setX(5);\n    A a3 = a2;\n}</code></pre>",
+   "explanationHtml": "יש שתי גרסאות של <code class=\"tok\" dir=\"ltr\">f</code>, אחת רגילה ואחת <code class=\"tok\" dir=\"ltr\">const</code>, ולכן הקריאה <code class=\"tok\" dir=\"ltr\">a2.f()</code> על אובייקט קבוע בוחרת את הגרסה ה-<code class=\"tok\" dir=\"ltr\">const</code>. <code class=\"tok\" dir=\"ltr\">setX</code> אינה <code class=\"tok\" dir=\"ltr\">const</code>, ולכן הקריאה <code class=\"tok\" dir=\"ltr\">a2.setX(5)</code> על אובייקט קבוע שגויה. כל שאר השורות תקינות, כולל <code class=\"tok\" dir=\"ltr\">A a3 = a2</code> (בנאי העתקה אוטומטי). שגיאה אחת (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "948f23d73b5e312c"
+  },
+  {
+   "num": 5,
+   "topic": "friend_this_static",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i=0) { x = i;}\n    A& f(int i) {\n        x = 2 * i;\n        return *this;\n    }\n    A* g(int i) {\n        x = 2 + i;\n        return this;\n    }\n    int x;\n};\n\nint main() {\n    A a1;\n    a1.f(5).g(4);\n    (&a1)->g(3).x = 5;\n    a1.f(2)->x = 6;\n    a1.f(2).x.g(2);\n    a1.g(3)->f(4);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "`f` מחזירה הפניה `A&` ו-`g` מחזירה מצביע `A*`. `a1.f(5).g(4)` תקין. `(&a1)->g(3).x` שגוי כי `g` מחזירה מצביע ויש להשתמש ב-`->`. `a1.f(2)->x` שגוי כי `f` מחזירה הפניה ויש להשתמש ב-`.`. `a1.f(2).x.g(2)` שגוי כי `x` הוא `int` ואין לו פונקציה `g`. `a1.g(3)->f(4)` תקין. שלוש שגיאות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): errors on `(&a1)->g(3).x`, `a1.f(2)->x` and `a1.f(2).x.g(2)` -> 3.",
+   "id": "21B-A-Q5",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i=0) { x = i;}\n    A&amp; f(int i) {\n        x = 2 * i;\n        return *this;\n    }\n    A* g(int i) {\n        x = 2 + i;\n        return this;\n    }\n    int x;\n};\n\nint main() {\n    A a1;\n    a1.f(5).g(4);\n    (&amp;a1)-&gt;g(3).x = 5;\n    a1.f(2)-&gt;x = 6;\n    a1.f(2).x.g(2);\n    a1.g(3)-&gt;f(4);\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">f</code> מחזירה הפניה <code class=\"tok\" dir=\"ltr\">A&amp;</code> ו-<code class=\"tok\" dir=\"ltr\">g</code> מחזירה מצביע <code class=\"tok\" dir=\"ltr\">A*</code>. <code class=\"tok\" dir=\"ltr\">a1.f(5).g(4)</code> תקין. <code class=\"tok\" dir=\"ltr\">(&amp;a1)-&gt;g(3).x</code> שגוי כי <code class=\"tok\" dir=\"ltr\">g</code> מחזירה מצביע ויש להשתמש ב-<code class=\"tok\" dir=\"ltr\">-&gt;</code>. <code class=\"tok\" dir=\"ltr\">a1.f(2)-&gt;x</code> שגוי כי <code class=\"tok\" dir=\"ltr\">f</code> מחזירה הפניה ויש להשתמש ב-<code class=\"tok\" dir=\"ltr\">.</code>. <code class=\"tok\" dir=\"ltr\">a1.f(2).x.g(2)</code> שגוי כי <code class=\"tok\" dir=\"ltr\">x</code> הוא <code class=\"tok\" dir=\"ltr\">int</code> ואין לו פונקציה <code class=\"tok\" dir=\"ltr\">g</code>. <code class=\"tok\" dir=\"ltr\">a1.g(3)-&gt;f(4)</code> תקין. שלוש שגיאות (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4c86f33bbb279c20"
+  },
+  {
+   "num": 7,
+   "topic": "operator_conversions",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i) {x=i;}\n    operator int() {return x;}\n    int x;\n};\n\nvoid main()\n{\n    A a1(5); int i=3;\n    A a2=i;\n    i=a1;\n    i=(int) a1;\n    a1=(A)i;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "`A a2=i;` תקין כי הבנאי `A(int)` אינו `explicit`. `i=a1` תקין כי יש אופרטור המרה `operator int()`. `i=(int) a1` תקין, וגם `a1=(A)i` תקין. אין שגיאות (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): no errors.",
+   "id": "21B-A-Q7",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "אופרטורי המרה",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i) {x=i;}\n    operator int() {return x;}\n    int x;\n};\n\nvoid main()\n{\n    A a1(5); int i=3;\n    A a2=i;\n    i=a1;\n    i=(int) a1;\n    a1=(A)i;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">A a2=i;</code> תקין כי הבנאי <code class=\"tok\" dir=\"ltr\">A(int)</code> אינו <code class=\"tok\" dir=\"ltr\">explicit</code>. <code class=\"tok\" dir=\"ltr\">i=a1</code> תקין כי יש אופרטור המרה <code class=\"tok\" dir=\"ltr\">operator int()</code>. <code class=\"tok\" dir=\"ltr\">i=(int) a1</code> תקין, וגם <code class=\"tok\" dir=\"ltr\">a1=(A)i</code> תקין. אין שגיאות (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "254443c7c8c63805"
+  },
+  {
+   "num": 8,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B {\npublic:\n    B() {cout << 1; }\n    B(int i) {\n        cout << 2;\n        x = i;\n    }\n    int x;\n};\n\nclass A : public B {\npublic:\n    A(int y = 5, int x = 10) : B(x) {\n        cout << 3;\n        this->y = y;\n        this->x = 8;\n    }\n    void f() const { cout << x << y; }\n    int y;\n};\n\nvoid main()\n{\n    A a(5, 7);\n    a.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`23105`",
+     "html": "<code class=\"tok\" dir=\"ltr\">23105</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`123105`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123105</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`2385`",
+     "html": "<code class=\"tok\" dir=\"ltr\">2385</code>"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "הבנאי של `A` קורא ל-`B(x)` עם הפרמטר `x=7` (הפרמטר מסתיר את השדה), ולכן נבחר `B(int)` שמדפיס 2. אחר כך גוף הבנאי של `A` מדפיס 3, מציב `y=5` ו-`x=8`. הפונקציה `f` מדפיסה `x` ואז `y`: `85`. הפלט `2385` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): printed 2385.",
+   "id": "21B-A-Q8",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class B {\npublic:\n    B() {cout &lt;&lt; 1; }\n    B(int i) {\n        cout &lt;&lt; 2;\n        x = i;\n    }\n    int x;\n};\n\nclass A : public B {\npublic:\n    A(int y = 5, int x = 10) : B(x) {\n        cout &lt;&lt; 3;\n        this-&gt;y = y;\n        this-&gt;x = 8;\n    }\n    void f() const { cout &lt;&lt; x &lt;&lt; y; }\n    int y;\n};\n\nvoid main()\n{\n    A a(5, 7);\n    a.f();\n}</code></pre>",
+   "explanationHtml": "הבנאי של <code class=\"tok\" dir=\"ltr\">A</code> קורא ל-<code class=\"tok\" dir=\"ltr\">B(x)</code> עם הפרמטר <code class=\"tok\" dir=\"ltr\">x=7</code> (הפרמטר מסתיר את השדה), ולכן נבחר <code class=\"tok\" dir=\"ltr\">B(int)</code> שמדפיס 2. אחר כך גוף הבנאי של <code class=\"tok\" dir=\"ltr\">A</code> מדפיס 3, מציב <code class=\"tok\" dir=\"ltr\">y=5</code> ו-<code class=\"tok\" dir=\"ltr\">x=8</code>. הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> מדפיסה <code class=\"tok\" dir=\"ltr\">x</code> ואז <code class=\"tok\" dir=\"ltr\">y</code>: <code class=\"tok\" dir=\"ltr\">85</code>. הפלט <code class=\"tok\" dir=\"ltr\">2385</code> (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0cb9b2507bf5a81e"
+  },
+  {
+   "num": 9,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i=0) { na = i; }\nprotected:\n    int na;\n};\n\nclass B : private A {\npublic:\n    B(int i, int j) :A(j) { nb = i; }\n    int f() { return na; }\nprotected:\n    int nb;\n};\n\nclass C : private B {\npublic:\n    C(int i, int j, int k) : B(j, k) {\n        nc = i;\n    }\n    int f() {\n        int i = nb;\n        return na;\n    }\nprotected:\n    int nc;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "ב-`B` הירושה מ-`A` היא `private`, אבל `na` מוגן ב-`A`, ולכן `B::f` יכולה להחזיר אותו. ב-`C` הירושה מ-`B` היא `private`, ו-`nb` מוגן ב-`B` ולכן קריאתו תקינה. אבל `na` בתוך `B` הפך ל-`private` (בגלל הירושה הפרטית), ולכן `C` לא יכולה לגשת אליו. שגיאה אחת, `return na;` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): only `return na;` in C::f fails (na became private in B).",
+   "id": "21B-A-Q9",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i=0) { na = i; }\nprotected:\n    int na;\n};\n\nclass B : private A {\npublic:\n    B(int i, int j) :A(j) { nb = i; }\n    int f() { return na; }\nprotected:\n    int nb;\n};\n\nclass C : private B {\npublic:\n    C(int i, int j, int k) : B(j, k) {\n        nc = i;\n    }\n    int f() {\n        int i = nb;\n        return na;\n    }\nprotected:\n    int nc;\n};</code></pre>",
+   "explanationHtml": "ב-<code class=\"tok\" dir=\"ltr\">B</code> הירושה מ-<code class=\"tok\" dir=\"ltr\">A</code> היא <code class=\"tok\" dir=\"ltr\">private</code>, אבל <code class=\"tok\" dir=\"ltr\">na</code> מוגן ב-<code class=\"tok\" dir=\"ltr\">A</code>, ולכן <code class=\"tok\" dir=\"ltr\">B::f</code> יכולה להחזיר אותו. ב-<code class=\"tok\" dir=\"ltr\">C</code> הירושה מ-<code class=\"tok\" dir=\"ltr\">B</code> היא <code class=\"tok\" dir=\"ltr\">private</code>, ו-<code class=\"tok\" dir=\"ltr\">nb</code> מוגן ב-<code class=\"tok\" dir=\"ltr\">B</code> ולכן קריאתו תקינה. אבל <code class=\"tok\" dir=\"ltr\">na</code> בתוך <code class=\"tok\" dir=\"ltr\">B</code> הפך ל-<code class=\"tok\" dir=\"ltr\">private</code> (בגלל הירושה הפרטית), ולכן <code class=\"tok\" dir=\"ltr\">C</code> לא יכולה לגשת אליו. שגיאה אחת, <code class=\"tok\" dir=\"ltr\">return na;</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ae5c4c3a28c9ca8c"
+  },
+  {
+   "num": 10,
+   "topic": "copy_control",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    A(int i) { na = i; }\n    A& operator=(const A& a) {\n        na = a.na * 2;\n        return *this;\n    }\n    int na;\n};\n\nclass B : public A {\npublic:\n    B(int i, int j) : A(j) {\n        nb = i;\n    }\n    int nb;\n};\n\nvoid main()\n{\n    B b1(1, 2);\n    B b2(3, 4);\n    b2 = b1;\n    cout << b2.nb << b2.na;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`14`",
+     "html": "<code class=\"tok\" dir=\"ltr\">14</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`34`",
+     "html": "<code class=\"tok\" dir=\"ltr\">34</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "ל-`B` אין אופרטור השמה משלה, ולכן הקומפיילר יוצר אחד שמעתיק כל שדה ל-`nb` ומפעיל את `A::operator=` על החלק של הבסיס. `A::operator=` מציב `na = a.na * 2` = 2*2 = 4. השדה `nb` מועתק ל-1. ההדפסה היא `14` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): printed 14.",
+   "id": "21B-A-Q10",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i) { na = i; }\n    A&amp; operator=(const A&amp; a) {\n        na = a.na * 2;\n        return *this;\n    }\n    int na;\n};\n\nclass B : public A {\npublic:\n    B(int i, int j) : A(j) {\n        nb = i;\n    }\n    int nb;\n};\n\nvoid main()\n{\n    B b1(1, 2);\n    B b2(3, 4);\n    b2 = b1;\n    cout &lt;&lt; b2.nb &lt;&lt; b2.na;\n}</code></pre>",
+   "explanationHtml": "ל-<code class=\"tok\" dir=\"ltr\">B</code> אין אופרטור השמה משלה, ולכן הקומפיילר יוצר אחד שמעתיק כל שדה ל-<code class=\"tok\" dir=\"ltr\">nb</code> ומפעיל את <code class=\"tok\" dir=\"ltr\">A::operator=</code> על החלק של הבסיס. <code class=\"tok\" dir=\"ltr\">A::operator=</code> מציב <code class=\"tok\" dir=\"ltr\">na = a.na * 2</code> = 2*2 = 4. השדה <code class=\"tok\" dir=\"ltr\">nb</code> מועתק ל-1. ההדפסה היא <code class=\"tok\" dir=\"ltr\">14</code> (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "b7153fa2b40878d5"
+  },
+  {
+   "num": 11,
+   "topic": "abstract_multiple",
+   "question": "כיצד ניתן לתקן שגיאות שמופיעות בקטע הקוד הבא:\n```cpp\nclass X\n{\nprotected:\n    int key;\npublic:\n    X(int i = 0) { key = i;};\n    void f1() { cout << \"f1 from X\" << endl; }\n};\n\nclass Y :  public X\n{\npublic:\n    Y(int i = 0) {key = i;};\n    void f1() { cout << \"f1 from Y\" << endl; }\n};\n\nclass Z :  public X\n{\npublic:\n    Z(int i = 0) { key = i; };\n    void f1() { cout << \"f1 from Z\" << endl; }\n};\n\nclass A : public Y, public Z {\n    int key;\npublic:\n    A(int i = 0) : Y(i + 2), Z(i + 3)\n    {\n        key = Y::key + Z::key;\n    }\n    int getkey(void) { return key; }\n    void f1() { cout << \"f1 from A\" << endl; }\n};\nvoid main() {\n    A object(4);\n    cout << \"object.key = \" << object.getkey()<<endl;\n    object.f1();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אין צורך לתקן שגיאות כי בקטע הקוד הנ\"ל אין שגיאות",
+     "html": "אין צורך לתקן שגיאות כי בקטע הקוד הנ\"ל אין שגיאות"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לדייק את הקריאה לפונקציה `f1` שמופיעה בשורה האחרונה בפונקציה `main`",
+     "html": "לדייק את הקריאה לפונקציה <code class=\"tok\" dir=\"ltr\">f1</code> שמופיעה בשורה האחרונה בפונקציה <code class=\"tok\" dir=\"ltr\">main</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשנות את ההצהרה של הפונקציה `f1` במחלקה `X` כך שתהיה פונקציה וירטואלית",
+     "html": "לשנות את ההצהרה של הפונקציה <code class=\"tok\" dir=\"ltr\">f1</code> במחלקה <code class=\"tok\" dir=\"ltr\">X</code> כך שתהיה פונקציה וירטואלית"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן לתקן את השגיאות בקטע הקוד הנ\"ל",
+     "html": "לא ניתן לתקן את השגיאות בקטע הקוד הנ\"ל"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "הקוד מתקמפל. ב-`A` מוגדרת `f1` משלה, ולכן `object.f1()` אינה עמומה למרות ש-`Y` ו-`Z` מגדירות כל אחת `f1`. גם `Y::key` ו-`Z::key` מציינים במפורש איזה עותק של `key` נקרא (ל-`A` יש שני עותקים של `X`). הפלט `object.key = 13` ואחריו `f1 from A`. לכן אין צורך לתקן שגיאות (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): the code compiles and prints `object.key = 13` and `f1 from A` (A::f1 hides the two inherited f1; Y::key and Z::key are named explicitly).",
+   "id": "21B-A-Q11",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "כיצד ניתן לתקן שגיאות שמופיעות בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X\n{\nprotected:\n    int key;\npublic:\n    X(int i = 0) { key = i;};\n    void f1() { cout &lt;&lt; \"f1 from X\" &lt;&lt; endl; }\n};\n\nclass Y :  public X\n{\npublic:\n    Y(int i = 0) {key = i;};\n    void f1() { cout &lt;&lt; \"f1 from Y\" &lt;&lt; endl; }\n};\n\nclass Z :  public X\n{\npublic:\n    Z(int i = 0) { key = i; };\n    void f1() { cout &lt;&lt; \"f1 from Z\" &lt;&lt; endl; }\n};\n\nclass A : public Y, public Z {\n    int key;\npublic:\n    A(int i = 0) : Y(i + 2), Z(i + 3)\n    {\n        key = Y::key + Z::key;\n    }\n    int getkey(void) { return key; }\n    void f1() { cout &lt;&lt; \"f1 from A\" &lt;&lt; endl; }\n};\nvoid main() {\n    A object(4);\n    cout &lt;&lt; \"object.key = \" &lt;&lt; object.getkey()&lt;&lt;endl;\n    object.f1();\n}</code></pre>",
+   "explanationHtml": "הקוד מתקמפל. ב-<code class=\"tok\" dir=\"ltr\">A</code> מוגדרת <code class=\"tok\" dir=\"ltr\">f1</code> משלה, ולכן <code class=\"tok\" dir=\"ltr\">object.f1()</code> אינה עמומה למרות ש-<code class=\"tok\" dir=\"ltr\">Y</code> ו-<code class=\"tok\" dir=\"ltr\">Z</code> מגדירות כל אחת <code class=\"tok\" dir=\"ltr\">f1</code>. גם <code class=\"tok\" dir=\"ltr\">Y::key</code> ו-<code class=\"tok\" dir=\"ltr\">Z::key</code> מציינים במפורש איזה עותק של <code class=\"tok\" dir=\"ltr\">key</code> נקרא (ל-<code class=\"tok\" dir=\"ltr\">A</code> יש שני עותקים של <code class=\"tok\" dir=\"ltr\">X</code>). הפלט <code class=\"tok\" dir=\"ltr\">object.key = 13</code> ואחריו <code class=\"tok\" dir=\"ltr\">f1 from A</code>. לכן אין צורך לתקן שגיאות (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "b95c62a65d57b278"
+  },
+  {
+   "num": 12,
+   "topic": "const_references",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nvoid main()\n{\n    int i = 12;\n    const int ci = 12;\n    ci = 13;\n    const int* ip3 = &i;\n    i = 10;\n    *ip3 = 10;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "`ci = 13` שגוי כי `ci` הוא `const`. `i = 10` תקין. `*ip3 = 10` שגוי כי `ip3` מצביע ל-`const int`. שתי שגיאות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): `ci = 13;` and `*ip3 = 10;` fail -> 2.",
+   "id": "21B-A-Q12",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>void main()\n{\n    int i = 12;\n    const int ci = 12;\n    ci = 13;\n    const int* ip3 = &amp;i;\n    i = 10;\n    *ip3 = 10;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">ci = 13</code> שגוי כי <code class=\"tok\" dir=\"ltr\">ci</code> הוא <code class=\"tok\" dir=\"ltr\">const</code>. <code class=\"tok\" dir=\"ltr\">i = 10</code> תקין. <code class=\"tok\" dir=\"ltr\">*ip3 = 10</code> שגוי כי <code class=\"tok\" dir=\"ltr\">ip3</code> מצביע ל-<code class=\"tok\" dir=\"ltr\">const int</code>. שתי שגיאות (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f282b40bb5dc2978"
+  },
+  {
+   "num": 14,
+   "topic": "stl_exceptions",
+   "question": "```cpp\nvoid main()\n{\n    int* ip = new int[12];\n    for (int i = 0; i < 12; i++)\n        ip[i] = 2 * i;\n\n    vector<int> iv(12);\n    for (int j = 0; j < iv.size(); ++j)\n        iv[j] = 2 * j;\n}\n```\n(בדף אין ניסוח של שאלה: בוחרים את המשפט הנכון לגבי הקוד)",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הקוד המוצג בשלוש השורות הראשונות בפונקציה `main` טוב יותר מהקוד המוצג בשלוש השורות האחרונות בפונקציה `main`",
+     "html": "הקוד המוצג בשלוש השורות הראשונות בפונקציה <code class=\"tok\" dir=\"ltr\">main</code> טוב יותר מהקוד המוצג בשלוש השורות האחרונות בפונקציה <code class=\"tok\" dir=\"ltr\">main</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הקוד המוצג בשלוש השורות האחרונות בפונקציה `main` טוב יותר מהקוד המוצג בשלוש השורות הראשונות בפונקציה `main`",
+     "html": "הקוד המוצג בשלוש השורות האחרונות בפונקציה <code class=\"tok\" dir=\"ltr\">main</code> טוב יותר מהקוד המוצג בשלוש השורות הראשונות בפונקציה <code class=\"tok\" dir=\"ltr\">main</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הקוד המוצג בשלוש השורות הראשונות בפונקציה `main` טוב ובאותה מידה גם הקוד המוצג בשלוש השורות האחרונות בפונקציה `main` הוא טוב",
+     "html": "הקוד המוצג בשלוש השורות הראשונות בפונקציה <code class=\"tok\" dir=\"ltr\">main</code> טוב ובאותה מידה גם הקוד המוצג בשלוש השורות האחרונות בפונקציה <code class=\"tok\" dir=\"ltr\">main</code> הוא טוב"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הקוד המוצג בשלוש השורות הראשונות אינו טוב ובאותה מידה גם הקוד המוצג בשלוש השורות האחרונות אינו טוב",
+     "html": "הקוד המוצג בשלוש השורות הראשונות אינו טוב ובאותה מידה גם הקוד המוצג בשלוש השורות האחרונות אינו טוב"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "contextId": "21B-A-notes",
+   "explanation": "הקוד בשלוש השורות הראשונות מקצה מערך עם `new[]` ולא משחרר אותו אף פעם (דליפת זיכרון). הווקטור בשלוש השורות האחרונות מנהל את הזיכרון בעצמו ומשחרר אותו כשהוא יוצא מהתחום, והוא גם יודע את גודלו. בהרצה נספר בלוק אחד שלא שוחרר בגרסה הראשונה ואפס בגרסה השנייה. לכן הקוד האחרון טוב יותר (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from reasoning plus a run (student sheet agrees): an allocation counter shows the raw `new int[12]` is never freed (1 live block after its scope) while the vector releases its memory (0). The printed question has no stem line. Design/style question, so confidence med.",
+   "id": "21B-A-Q14",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>void main()\n{\n    int* ip = new int[12];\n    for (int i = 0; i &lt; 12; i++)\n        ip[i] = 2 * i;\n\n    vector&lt;int&gt; iv(12);\n    for (int j = 0; j &lt; iv.size(); ++j)\n        iv[j] = 2 * j;\n}</code></pre>(בדף אין ניסוח של שאלה: בוחרים את המשפט הנכון לגבי הקוד)",
+   "explanationHtml": "הקוד בשלוש השורות הראשונות מקצה מערך עם <code class=\"tok\" dir=\"ltr\">new[]</code> ולא משחרר אותו אף פעם (דליפת זיכרון). הווקטור בשלוש השורות האחרונות מנהל את הזיכרון בעצמו ומשחרר אותו כשהוא יוצא מהתחום, והוא גם יודע את גודלו. בהרצה נספר בלוק אחד שלא שוחרר בגרסה הראשונה ואפס בגרסה השנייה. לכן הקוד האחרון טוב יותר (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "9cda54d851064f6b"
+  },
+  {
+   "num": 15,
+   "topic": "classes_ctor_dtor",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\n    int n;\npublic:\n    A(int m = 0) {n=m;}\n};\n\nA a1(5);\nA a2;\nA a3();\n\nvoid main() {}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "`A a1(5);` ו-`A a2;` תקינים (יש ערך ברירת מחדל `m = 0`). `A a3();` אינו הגדרת אובייקט אלא הצהרה על פונקציה בשם `a3` שמחזירה `A`, וזה תקין. אין שגיאות (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): no errors (`A a3();` is a function declaration).",
+   "id": "21B-A-Q15",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\n    int n;\npublic:\n    A(int m = 0) {n=m;}\n};\n\nA a1(5);\nA a2;\nA a3();\n\nvoid main() {}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">A a1(5);</code> ו-<code class=\"tok\" dir=\"ltr\">A a2;</code> תקינים (יש ערך ברירת מחדל <code class=\"tok\" dir=\"ltr\">m = 0</code>). <code class=\"tok\" dir=\"ltr\">A a3();</code> אינו הגדרת אובייקט אלא הצהרה על פונקציה בשם <code class=\"tok\" dir=\"ltr\">a3</code> שמחזירה <code class=\"tok\" dir=\"ltr\">A</code>, וזה תקין. אין שגיאות (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8950fc2d7b6d396c"
+  },
+  {
+   "num": 16,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B{\npublic:\n    virtual ~B() {};\n    virtual int getN() const\n    { return n; }\n    virtual void setN(int nn)\n    {  n=nn; }\nprotected:\n    int n;\n};\n\nclass D: public B{\npublic:\n    virtual int getN() const\n    {\n        return n*n;\n    }\n\n    virtual void setN(int nn)\n    {\n        n = 2*nn; }\n};\n\nvoid main()\n{\n    B b;\n    D d;\n    d.setN(5);\n    b = d;\n    cout << b.getN();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`25`",
+     "html": "<code class=\"tok\" dir=\"ltr\">25</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`10`",
+     "html": "<code class=\"tok\" dir=\"ltr\">10</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`100`",
+     "html": "<code class=\"tok\" dir=\"ltr\">100</code>"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "ההשמה `b = d` מבצעת חיתוך (slicing): `b` הוא אובייקט מטיפוס `B` שמקבל רק את חלק הבסיס של `d`, כולל `n = 10` (כי `D::setN(5)` הציבה `2*5`). הקריאה `b.getN()` על אובייקט מטיפוס `B` מפעילה את `B::getN` שמחזירה `n`, כלומר 10. הפלט `10` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): printed 10 (slicing: b is a B holding n == 10).",
+   "id": "21B-A-Q16",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class B{\npublic:\n    virtual ~B() {};\n    virtual int getN() const\n    { return n; }\n    virtual void setN(int nn)\n    {  n=nn; }\nprotected:\n    int n;\n};\n\nclass D: public B{\npublic:\n    virtual int getN() const\n    {\n        return n*n;\n    }\n\n    virtual void setN(int nn)\n    {\n        n = 2*nn; }\n};\n\nvoid main()\n{\n    B b;\n    D d;\n    d.setN(5);\n    b = d;\n    cout &lt;&lt; b.getN();\n}</code></pre>",
+   "explanationHtml": "ההשמה <code class=\"tok\" dir=\"ltr\">b = d</code> מבצעת חיתוך (slicing): <code class=\"tok\" dir=\"ltr\">b</code> הוא אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">B</code> שמקבל רק את חלק הבסיס של <code class=\"tok\" dir=\"ltr\">d</code>, כולל <code class=\"tok\" dir=\"ltr\">n = 10</code> (כי <code class=\"tok\" dir=\"ltr\">D::setN(5)</code> הציבה <code class=\"tok\" dir=\"ltr\">2*5</code>). הקריאה <code class=\"tok\" dir=\"ltr\">b.getN()</code> על אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">B</code> מפעילה את <code class=\"tok\" dir=\"ltr\">B::getN</code> שמחזירה <code class=\"tok\" dir=\"ltr\">n</code>, כלומר 10. הפלט <code class=\"tok\" dir=\"ltr\">10</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a2e0cb7d79ef5c84"
+  },
+  {
+   "num": 17,
+   "topic": "templates",
+   "question": "בקטע הקוד הבא ישנן שלוש קריאות לפונקציה בשם `f` בתוך הפונקציה `main`\n```cpp\ntemplate<class T>\nvoid f(T t){}\n\ntemplate<class T>\nvoid f(T* t) {};\n\nvoid main()\n{\n    int* p, i=3;\n    double d = 3.1415;\n    p = &i;\n    f(i);\n    f(d);\n    f(p);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "כל שלושת הקריאות פונות לאותה כתובת, ואין שגיאת קומפילציה בקטע הקוד הנ\"ל",
+     "html": "כל שלושת הקריאות פונות לאותה כתובת, ואין שגיאת קומפילציה בקטע הקוד הנ\"ל"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "כל שלושת הקריאות פונות לכתובות שונות ואין שגיאת קומפילציה בקטע הקוד הנ\"ל",
+     "html": "כל שלושת הקריאות פונות לכתובות שונות ואין שגיאת קומפילציה בקטע הקוד הנ\"ל"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שתיים מבין הקריאות פונות לאותה כתובת ושלישית לכתובת אחרת, ואין שגיאת קומפילציה בקטע הקוד הנ\"ל",
+     "html": "שתיים מבין הקריאות פונות לאותה כתובת ושלישית לכתובת אחרת, ואין שגיאת קומפילציה בקטע הקוד הנ\"ל"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בקטע הקוד הנ\"ל יש שגיאת קומפילציה",
+     "html": "בקטע הקוד הנ\"ל יש שגיאת קומפילציה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "הקריאה `f(i)` מתאימה לתבנית `f(T t)` עם `T=int`. `f(d)` מתאימה לאותה תבנית עם `T=double`, כלומר פונקציה אחרת. `f(p)` עם מצביע `int*` מתאימה טוב יותר לתבנית המתמחה `f(T* t)` עם `T=int`. בהרצה הודפסו שלוש חתימות שונות. שלוש הקריאות הן לשלוש פונקציות שונות וללא שגיאה (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): compiles; the three calls instantiate f<int>(int), f<double>(double) and f<int>(int*) (three different functions).",
+   "id": "21B-A-Q17",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "בקטע הקוד הבא ישנן שלוש קריאות לפונקציה בשם <code class=\"tok\" dir=\"ltr\">f</code> בתוך הפונקציה <code class=\"tok\" dir=\"ltr\">main</code><pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template&lt;class T&gt;\nvoid f(T t){}\n\ntemplate&lt;class T&gt;\nvoid f(T* t) {};\n\nvoid main()\n{\n    int* p, i=3;\n    double d = 3.1415;\n    p = &amp;i;\n    f(i);\n    f(d);\n    f(p);\n}</code></pre>",
+   "explanationHtml": "הקריאה <code class=\"tok\" dir=\"ltr\">f(i)</code> מתאימה לתבנית <code class=\"tok\" dir=\"ltr\">f(T t)</code> עם <code class=\"tok\" dir=\"ltr\">T=int</code>. <code class=\"tok\" dir=\"ltr\">f(d)</code> מתאימה לאותה תבנית עם <code class=\"tok\" dir=\"ltr\">T=double</code>, כלומר פונקציה אחרת. <code class=\"tok\" dir=\"ltr\">f(p)</code> עם מצביע <code class=\"tok\" dir=\"ltr\">int*</code> מתאימה טוב יותר לתבנית המתמחה <code class=\"tok\" dir=\"ltr\">f(T* t)</code> עם <code class=\"tok\" dir=\"ltr\">T=int</code>. בהרצה הודפסו שלוש חתימות שונות. שלוש הקריאות הן לשלוש פונקציות שונות וללא שגיאה (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d3bf584e7703bd13"
+  },
+  {
+   "num": 18,
+   "topic": "operator_conversions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <string.h>\n\nclass MySting {\npublic:\n    MySting(const char* s) {\n        s_ = new char[strlen(s) + 1];\n        strcpy(s_,s);\n    }\n    friend MySting operator+(const MySting&, const MySting&);\n    operator const char* () const { return s_; }\nprivate:\n    char* s_;\n};\n\nMySting operator+(const MySting &s1, const MySting &s2)\n{\n    MySting sum(\"a\");\n    sum.s_=strcat(s1.s_, s2.s_);\n    return sum;\n}\n\nvoid main()\n{\n    MySting s1(\"a\"), s2(\"b\");\n    MySting temp = s1 + s2;\n    const char* p = temp;\n    cout<<p;\n    cout << temp;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`abab`",
+     "html": "<code class=\"tok\" dir=\"ltr\">abab</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`ab`",
+     "html": "<code class=\"tok\" dir=\"ltr\">ab</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בתכנית יש שגיאת זמן ריצה",
+     "html": "בתכנית יש שגיאת זמן ריצה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "contextId": "21B-A-notes",
+   "explanation": "`strcat(s1.s_, s2.s_)` מדביק את `\"b\"` לתוך המחרוזת של `s1` (המאגר שלה מכיל רק מקום ל-`\"a\"`, גלישה של בית אחד שלא גורמת לקריסה בפועל) ומחזיר מצביע אליו. `temp` מצביע לאותה מחרוזת `\"ab\"`. ההדפסה של `p` ושל `temp` (דרך אופרטור ההמרה) נותנת `ab` פעמיים, כלומר `abab` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): printed abab. strcat appends into s1's 2-byte buffer (a one-byte heap overrun that does not crash in practice); both prints give the same string through the conversion operator.",
+   "id": "21B-A-Q18",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "אופרטורי המרה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;string.h&gt;\n\nclass MySting {\npublic:\n    MySting(const char* s) {\n        s_ = new char[strlen(s) + 1];\n        strcpy(s_,s);\n    }\n    friend MySting operator+(const MySting&amp;, const MySting&amp;);\n    operator const char* () const { return s_; }\nprivate:\n    char* s_;\n};\n\nMySting operator+(const MySting &amp;s1, const MySting &amp;s2)\n{\n    MySting sum(\"a\");\n    sum.s_=strcat(s1.s_, s2.s_);\n    return sum;\n}\n\nvoid main()\n{\n    MySting s1(\"a\"), s2(\"b\");\n    MySting temp = s1 + s2;\n    const char* p = temp;\n    cout&lt;&lt;p;\n    cout &lt;&lt; temp;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">strcat(s1.s_, s2.s_)</code> מדביק את <code class=\"tok\" dir=\"ltr\">\"b\"</code> לתוך המחרוזת של <code class=\"tok\" dir=\"ltr\">s1</code> (המאגר שלה מכיל רק מקום ל-<code class=\"tok\" dir=\"ltr\">\"a\"</code>, גלישה של בית אחד שלא גורמת לקריסה בפועל) ומחזיר מצביע אליו. <code class=\"tok\" dir=\"ltr\">temp</code> מצביע לאותה מחרוזת <code class=\"tok\" dir=\"ltr\">\"ab\"</code>. ההדפסה של <code class=\"tok\" dir=\"ltr\">p</code> ושל <code class=\"tok\" dir=\"ltr\">temp</code> (דרך אופרטור ההמרה) נותנת <code class=\"tok\" dir=\"ltr\">ab</code> פעמיים, כלומר <code class=\"tok\" dir=\"ltr\">abab</code> (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a72ec23ff182649d"
+  },
+  {
+   "num": 19,
+   "topic": "copy_control",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass Record {\npublic:\n    virtual ~Record() {};\n    Record(const Record& that)\n    {\n        *this = that;\n    }\n    Record operator = (const Record& that)\n    {\n        name = that.name;\n        return *this;\n    }\n    //...\nprivate:\n    char name[100];\n    long id;\n};\nvoid main()\n{\n    Record r1;\n    Record r2 = r1;\n    Record r3;\n    r3 = r2 = r1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "21B-A-notes",
+   "explanation": "`name = that.name;` שגוי כי אי אפשר להשים מערך למערך. `Record r1;` ו-`Record r3;` שגויות כי הוגדר בנאי העתקה ולכן לא נוצר בנאי ברירת מחדל. `Record r2 = r1` ו-`r3 = r2 = r1` תקינות מבחינת קומפילציה. שלוש שגיאות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): errors on `name = that.name;` (arrays are not assignable), `Record r1;` and `Record r3;` (no default constructor) -> 3.",
+   "id": "21B-A-Q19",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Record {\npublic:\n    virtual ~Record() {};\n    Record(const Record&amp; that)\n    {\n        *this = that;\n    }\n    Record operator = (const Record&amp; that)\n    {\n        name = that.name;\n        return *this;\n    }\n    //...\nprivate:\n    char name[100];\n    long id;\n};\nvoid main()\n{\n    Record r1;\n    Record r2 = r1;\n    Record r3;\n    r3 = r2 = r1;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">name = that.name;</code> שגוי כי אי אפשר להשים מערך למערך. <code class=\"tok\" dir=\"ltr\">Record r1;</code> ו-<code class=\"tok\" dir=\"ltr\">Record r3;</code> שגויות כי הוגדר בנאי העתקה ולכן לא נוצר בנאי ברירת מחדל. <code class=\"tok\" dir=\"ltr\">Record r2 = r1</code> ו-<code class=\"tok\" dir=\"ltr\">r3 = r2 = r1</code> תקינות מבחינת קומפילציה. שלוש שגיאות (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fab69312e0fae847"
+  },
+  {
+   "num": 20,
+   "topic": "virtual_polymorphism",
+   "question": "מהן השגיאות בקטע הקוד הבא:\n```cpp\n#include <string.h>\n\nclass Base {\n    int* br;\npublic:\n    Base() { br = NULL; }\n    ~Base() {\n        if(br!=NULL)\n            delete br; }\n};\n\nclass Derived : public Base {\n    int* dr;\npublic:\n    Derived() { dr = NULL; }\n    ~Derived() {\n        if(dr!=NULL)\n            delete[] dr; }\n    void f() { dr = new int[10]; }\n};\n\nvoid main(){\n    Base *bp = new Base;\n    delete bp;\n    bp = new Derived;\n    delete bp;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שגיאת קומפילציה בגלל חוסר של בנאי העתקה",
+     "html": "שגיאת קומפילציה בגלל חוסר של בנאי העתקה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שגיאת קומפילציה בגלל חוסר של אופרטור השמה",
+     "html": "שגיאת קומפילציה בגלל חוסר של אופרטור השמה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאות אחרות (כולל שגיאות עקרוניות של המתכנת)",
+     "html": "שגיאות אחרות (כולל שגיאות עקרוניות של המתכנת)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אין שגיאות בקטע הקוד הנ\"ל",
+     "html": "אין שגיאות בקטע הקוד הנ\"ל"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "contextId": "21B-A-notes",
+   "explanation": "הקוד מתקמפל: בנאי העתקה ואופרטור השמה נוצרים אוטומטית ולא נדרשים, ולכן א ו-ב שגויות. אבל `Base` לא מגדירה הורס וירטואלי, ולכן `delete bp` על אובייקט `Derived` מפעיל רק את `~Base` וההתנהגות אינה מוגדרת (בהרצה נדפס רק `B`). זו שגיאה עקרונית של המתכנת (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run plus a trace (student sheet agrees): the program compiles (so a, b are wrong), but deleting a Derived through a Base* whose destructor is not virtual runs only ~Base (trace printed `B`): undefined behaviour, i.e. a conceptual error (c). Confidence med because 'other errors' is judged, not run.",
+   "id": "21B-A-Q20",
+   "examCode": "21B-A",
+   "examLabel": "2021 סמסטר ב מועד א",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מהן השגיאות בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;string.h&gt;\n\nclass Base {\n    int* br;\npublic:\n    Base() { br = NULL; }\n    ~Base() {\n        if(br!=NULL)\n            delete br; }\n};\n\nclass Derived : public Base {\n    int* dr;\npublic:\n    Derived() { dr = NULL; }\n    ~Derived() {\n        if(dr!=NULL)\n            delete[] dr; }\n    void f() { dr = new int[10]; }\n};\n\nvoid main(){\n    Base *bp = new Base;\n    delete bp;\n    bp = new Derived;\n    delete bp;\n}</code></pre>",
+   "explanationHtml": "הקוד מתקמפל: בנאי העתקה ואופרטור השמה נוצרים אוטומטית ולא נדרשים, ולכן א ו-ב שגויות. אבל <code class=\"tok\" dir=\"ltr\">Base</code> לא מגדירה הורס וירטואלי, ולכן <code class=\"tok\" dir=\"ltr\">delete bp</code> על אובייקט <code class=\"tok\" dir=\"ltr\">Derived</code> מפעיל רק את <code class=\"tok\" dir=\"ltr\">~Base</code> וההתנהגות אינה מוגדרת (בהרצה נדפס רק <code class=\"tok\" dir=\"ltr\">B</code>). זו שגיאה עקרונית של המתכנת (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8a517e6ab507395b"
+  },
+  {
+   "num": 1,
+   "topic": "copy_control",
+   "question": "נתונה המחלקה הבאה:\n```cpp\nclass A {\n     int* p;\n     A(int n=1) { p = new int[n]; }\n     ~A() { delete [] p; }\n     A f() { return *this; }\n     int g() { A a1; A a2; a2=f(); }\n     // ...\n};\n```\nכדי שניתן יהיה להשתמש במחלקה הנ\"ל ובכל הפונקציות שלה באופן תקין ולפי עקרונות תכנות נכון **חייבים**:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להוסיף העמסת אופרטורים לאופרטור =.",
+     "html": "להוסיף העמסת אופרטורים לאופרטור =."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להוסיף העמסת אופרטורים לאופרטור = ולאופרטור ==",
+     "html": "להוסיף העמסת אופרטורים לאופרטור = ולאופרטור =="
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להוסיף בנאי העתקה והעמסת אופרטורים לאופרטור =",
+     "html": "להוסיף בנאי העתקה והעמסת אופרטורים לאופרטור ="
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לשנות את ההורס.",
+     "html": "לשנות את ההורס."
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "הפונקציה `f` מחזירה `A` by value, ולכן נוצר עותק של האובייקט. בלי בנאי העתקה מוגדר, ההעתקה רדודה: שני האובייקטים מצביעים על אותו מערך, וההורס `delete[] p` נקרא פעמיים על אותו מערך. גם ההשמה `a2=f()` דורשת `operator=` שמעתיק לעומק.\nהרצת בדיקה שסופרת כל `delete[]` הראתה: עם `operator=` בלבד (א) או עם `=` ו-`==` (ב) יש מחיקה כפולה; עם בנאי העתקה ו-`operator=` (ג) אין. שינוי ההורס (ד) לא פותר את הבעיה.\nהתשובה היא ג (כלל שלושת הגדולים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the paper. Probe (q01_rule.cpp, counting every delete[]): with only operator= (a) or operator= and == (b) the by-value return of `f()` copies `p` shallowly -> a double delete[]; copy ctor + operator= (c) -> 0 double deletes, 0 leaks. Rule of three -> c.",
+   "correctId": "c",
+   "id": "21B-B-Q1",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "נתונה המחלקה הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\n     int* p;\n     A(int n=1) { p = new int[n]; }\n     ~A() { delete [] p; }\n     A f() { return *this; }\n     int g() { A a1; A a2; a2=f(); }\n     // ...\n};</code></pre>כדי שניתן יהיה להשתמש במחלקה הנ\"ל ובכל הפונקציות שלה באופן תקין ולפי עקרונות תכנות נכון <strong>חייבים</strong>:",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> מחזירה <code class=\"tok\" dir=\"ltr\">A</code> by value, ולכן נוצר עותק של האובייקט. בלי בנאי העתקה מוגדר, ההעתקה רדודה: שני האובייקטים מצביעים על אותו מערך, וההורס <code class=\"tok\" dir=\"ltr\">delete[] p</code> נקרא פעמיים על אותו מערך. גם ההשמה <code class=\"tok\" dir=\"ltr\">a2=f()</code> דורשת <code class=\"tok\" dir=\"ltr\">operator=</code> שמעתיק לעומק.<br>הרצת בדיקה שסופרת כל <code class=\"tok\" dir=\"ltr\">delete[]</code> הראתה: עם <code class=\"tok\" dir=\"ltr\">operator=</code> בלבד (א) או עם <code class=\"tok\" dir=\"ltr\">=</code> ו-<code class=\"tok\" dir=\"ltr\">==</code> (ב) יש מחיקה כפולה; עם בנאי העתקה ו-<code class=\"tok\" dir=\"ltr\">operator=</code> (ג) אין. שינוי ההורס (ד) לא פותר את הבעיה.<br>התשובה היא ג (כלל שלושת הגדולים).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "cb93f032c26ed182"
+  },
+  {
+   "num": 2,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\ntemplate <class X, class Y>\nY f(X x, Y y) {\n     y+=x + 1;\n     return y;\n}\nint f(double p, int q) {\n     q+=(int) p+2;\n     return q;\n}\nvoid main() {\n     int i=3,j=6;\n     double d=4.3;\n     cout << f(i, j) << f(d,j) << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1111`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1111</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1011`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1011</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`1211`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1211</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`1012`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1012</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הקריאה `f(i, j)` מתאימה בדיוק לתבנית עם `X=int, Y=int`, ולכן נבחרת התבנית: `6 + 3 + 1 = 10`. הקריאה `f(d, j)` מתאימה בדיוק גם לתבנית וגם לפונקציה הרגילה `f(double,int)`, ובמקרה כזה הפונקציה הרגילה מועדפת: `6 + 4 + 2 = 12`.\nהפלט הוא `1012` (תשובה ד). תשובה א ו-ג מתעלמות מההעדפה לפונקציה הלא-תבניתית בקריאה השנייה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `1012`: f(i,j) picks the template (exact match, 6+3+1=10); f(d,j) matches both exactly and the non-template wins (6+4+2=12).",
+   "correctId": "d",
+   "id": "21B-B-Q2",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;class X, class Y&gt;\nY f(X x, Y y) {\n     y+=x + 1;\n     return y;\n}\nint f(double p, int q) {\n     q+=(int) p+2;\n     return q;\n}\nvoid main() {\n     int i=3,j=6;\n     double d=4.3;\n     cout &lt;&lt; f(i, j) &lt;&lt; f(d,j) &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "הקריאה <code class=\"tok\" dir=\"ltr\">f(i, j)</code> מתאימה בדיוק לתבנית עם <code class=\"tok\" dir=\"ltr\">X=int, Y=int</code>, ולכן נבחרת התבנית: <code class=\"tok\" dir=\"ltr\">6 + 3 + 1 = 10</code>. הקריאה <code class=\"tok\" dir=\"ltr\">f(d, j)</code> מתאימה בדיוק גם לתבנית וגם לפונקציה הרגילה <code class=\"tok\" dir=\"ltr\">f(double,int)</code>, ובמקרה כזה הפונקציה הרגילה מועדפת: <code class=\"tok\" dir=\"ltr\">6 + 4 + 2 = 12</code>.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">1012</code> (תשובה ד). תשובה א ו-ג מתעלמות מההעדפה לפונקציה הלא-תבניתית בקריאה השנייה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "b877ac5f19f59347"
+  },
+  {
+   "num": 3,
+   "topic": "operator_overloading",
+   "question": "נתונה המחלקה הבאה:\n```cpp\nclass A {\n// ...\n};\n```\nכדי להוסיף העמסת אופרטורים לאופרטור `<<` עבור המחלקה הנ\"ל חייבים להוסיף:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "פונקציה חיצונית שהיא פונקציית `friend` של המחלקה.",
+     "html": "פונקציה חיצונית שהיא פונקציית <code class=\"tok\" dir=\"ltr\">friend</code> של המחלקה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פונקציה חיצונית שאינה בהכרח פונקציית `friend` של המחלקה.",
+     "html": "פונקציה חיצונית שאינה בהכרח פונקציית <code class=\"tok\" dir=\"ltr\">friend</code> של המחלקה."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציה חברה (`member function`) של המחלקה או פונקציה חיצונית שהיא פונקציית `friend` של המחלקה.",
+     "html": "פונקציה חברה (<code class=\"tok\" dir=\"ltr\">member function</code>) של המחלקה או פונקציה חיצונית שהיא פונקציית <code class=\"tok\" dir=\"ltr\">friend</code> של המחלקה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "פונקציה חברה (`member function`) של המחלקה או פונקציה חיצונית שאינה בהכרח פונקציית `friend` של המחלקה.",
+     "html": "פונקציה חברה (<code class=\"tok\" dir=\"ltr\">member function</code>) של המחלקה או פונקציה חיצונית שאינה בהכרח פונקציית <code class=\"tok\" dir=\"ltr\">friend</code> של המחלקה."
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "כדי ש-`cout << a` יעבוד, האופרטור צריך לקבל את `ostream` כארגומנט שמאלי, ולכן אי אפשר שהוא יהיה פונקציה חברה של `A`. נדרשת פונקציה חיצונית, אבל היא לא חייבת להיות `friend`: אם היא משתמשת רק בחברים ציבוריים (או בפונקציית עזר ציבורית) היא מתקמפלת.\nבהרצה: גרסה חיצונית שאינה friend התקמפלה ופעלה, וגרסה חברה לא התקמפלה עבור `cout << a`.\nהתשובה היא ב. תשובה א דורשת friend יותר מדי, ותשובות ג ו-ד כוללות פונקציה חברה שאינה אפשרית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probes: a non-friend external `operator<<(ostream&, const A&)` compiles and runs (so a and c are wrong); a member `operator<<` cannot take `cout` on the left (`cout << a` does not compile), so d is wrong. -> b.",
+   "correctId": "b",
+   "id": "21B-B-Q3",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "נתונה המחלקה הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\n// ...\n};</code></pre>כדי להוסיף העמסת אופרטורים לאופרטור <code class=\"tok\" dir=\"ltr\">&lt;&lt;</code> עבור המחלקה הנ\"ל חייבים להוסיף:",
+   "explanationHtml": "כדי ש-<code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a</code> יעבוד, האופרטור צריך לקבל את <code class=\"tok\" dir=\"ltr\">ostream</code> כארגומנט שמאלי, ולכן אי אפשר שהוא יהיה פונקציה חברה של <code class=\"tok\" dir=\"ltr\">A</code>. נדרשת פונקציה חיצונית, אבל היא לא חייבת להיות <code class=\"tok\" dir=\"ltr\">friend</code>: אם היא משתמשת רק בחברים ציבוריים (או בפונקציית עזר ציבורית) היא מתקמפלת.<br>בהרצה: גרסה חיצונית שאינה friend התקמפלה ופעלה, וגרסה חברה לא התקמפלה עבור <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a</code>.<br>התשובה היא ב. תשובה א דורשת friend יותר מדי, ותשובות ג ו-ד כוללות פונקציה חברה שאינה אפשרית.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ec3dc9c963f8a37c"
+  },
+  {
+   "num": 4,
+   "topic": "classes_ctor_dtor",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n     A(int x = 1) {\n          this->x = x;\n     }\n     ~A() {\n          cout << x;\n     }\n     int x;\n};\n\nclass B {\npublic:\n     B(int n = 3) {\n          this->n = n;\n          p = new A[n];\n     }\n     ~B() {\n          delete[] p;\n     }\n     int n;\n     A* p;\n};\n\nvoid main() {\n     B* p = new B();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא מדפיסה כלום.",
+     "html": "התכנית לא מדפיסה כלום."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`111`",
+     "html": "<code class=\"tok\" dir=\"ltr\">111</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`3`",
+     "html": "<code class=\"tok\" dir=\"ltr\">3</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האובייקט `B` נוצר ב-`new` ואף פעם לא נמחק. ללא `delete`, ההורס `~B` לא מופעל, ולכן גם `delete[] p` לא מופעל וההורסים של איברי `A` לא נקראים. בנאי `A` לא מדפיס כלום.\nהתכנית לא מדפיסה כלום (תשובה א). הרצת הקוד אישרה פלט ריק.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed nothing: the heap `B` is never deleted, so neither `~B` nor the `~A` calls run.",
+   "correctId": "a",
+   "id": "21B-B-Q4",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n     A(int x = 1) {\n          this-&gt;x = x;\n     }\n     ~A() {\n          cout &lt;&lt; x;\n     }\n     int x;\n};\n\nclass B {\npublic:\n     B(int n = 3) {\n          this-&gt;n = n;\n          p = new A[n];\n     }\n     ~B() {\n          delete[] p;\n     }\n     int n;\n     A* p;\n};\n\nvoid main() {\n     B* p = new B();\n}</code></pre>",
+   "explanationHtml": "האובייקט <code class=\"tok\" dir=\"ltr\">B</code> נוצר ב-<code class=\"tok\" dir=\"ltr\">new</code> ואף פעם לא נמחק. ללא <code class=\"tok\" dir=\"ltr\">delete</code>, ההורס <code class=\"tok\" dir=\"ltr\">~B</code> לא מופעל, ולכן גם <code class=\"tok\" dir=\"ltr\">delete[] p</code> לא מופעל וההורסים של איברי <code class=\"tok\" dir=\"ltr\">A</code> לא נקראים. בנאי <code class=\"tok\" dir=\"ltr\">A</code> לא מדפיס כלום.<br>התכנית לא מדפיסה כלום (תשובה א). הרצת הקוד אישרה פלט ריק.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3770878ae9294110"
+  },
+  {
+   "num": 5,
+   "topic": "inheritance_access",
+   "question": "להלן תיאור חלקי של מחלקות `A` ו- `B` והפונקציה `main`.\n```cpp\nclass B {\npublic:\n     ...\n     void f() { ... }\n};\n\nclass A : public B {\npublic:\n     ...\n     void f() { ... }\n};\n\nvoid main()\n{\n     ...\n}\n```\nבשאלה זו במונח פונקציות חברות הכוונה ל- `member functions`.\n\nאת המשפט `B::f();` ניתן לבצע",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מתוך הפונקציה `main` וגם מתוך כל הפונקציות החברות של המחלקה `A`.",
+     "html": "מתוך הפונקציה <code class=\"tok\" dir=\"ltr\">main</code> וגם מתוך כל הפונקציות החברות של המחלקה <code class=\"tok\" dir=\"ltr\">A</code>."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "מתוך כל הפונקציות החברות של המחלקה `A` אבל לא מתוך כל הפונקציות החברות של המחלקה `B`.",
+     "html": "מתוך כל הפונקציות החברות של המחלקה <code class=\"tok\" dir=\"ltr\">A</code> אבל לא מתוך כל הפונקציות החברות של המחלקה <code class=\"tok\" dir=\"ltr\">B</code>."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "מתוך כל הפונקציות החברות של המחלקה `B` אבל לא מתוך כל הפונקציות החברות של המחלקה `A`.",
+     "html": "מתוך כל הפונקציות החברות של המחלקה <code class=\"tok\" dir=\"ltr\">B</code> אבל לא מתוך כל הפונקציות החברות של המחלקה <code class=\"tok\" dir=\"ltr\">A</code>."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה.",
+     "html": "אף תשובה אינה נכונה."
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "בתוך `main` הביטוי `B::f();` שגוי כי הפונקציה חברה לא סטטית וצריך אובייקט שיפעיל אותה. בתוך פונקציה חברה של `A` או של `B` הוא תקין (בתוך `B` זו פשוט קריאה לגרסה של `B`; בתוך `A` זו גישה מפורשת לפונקציה של הבסיס).\nלכן א שגויה (`main`), ב שגויה (אפשר גם מתוך `B`), ו-ג שגויה (אפשר גם מתוך `A`). התשובה היא ד. בהרצה: `main` לא התקמפלה, ושתי הפונקציות החברות כן.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probes: `B::f();` inside `main` does not compile (no object); inside a member of A and inside a member of B it compiles and runs. So a (main), b (not from B) and c (not from A) are all false -> d.",
+   "correctId": "d",
+   "id": "21B-B-Q5",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "להלן תיאור חלקי של מחלקות <code class=\"tok\" dir=\"ltr\">A</code> ו- <code class=\"tok\" dir=\"ltr\">B</code> והפונקציה <code class=\"tok\" dir=\"ltr\">main</code>.<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class B {\npublic:\n     ...\n     void f() { ... }\n};\n\nclass A : public B {\npublic:\n     ...\n     void f() { ... }\n};\n\nvoid main()\n{\n     ...\n}</code></pre>בשאלה זו במונח פונקציות חברות הכוונה ל- <code class=\"tok\" dir=\"ltr\">member functions</code>.<br><br>את המשפט <code class=\"tok\" dir=\"ltr\">B::f();</code> ניתן לבצע",
+   "explanationHtml": "בתוך <code class=\"tok\" dir=\"ltr\">main</code> הביטוי <code class=\"tok\" dir=\"ltr\">B::f();</code> שגוי כי הפונקציה חברה לא סטטית וצריך אובייקט שיפעיל אותה. בתוך פונקציה חברה של <code class=\"tok\" dir=\"ltr\">A</code> או של <code class=\"tok\" dir=\"ltr\">B</code> הוא תקין (בתוך <code class=\"tok\" dir=\"ltr\">B</code> זו פשוט קריאה לגרסה של <code class=\"tok\" dir=\"ltr\">B</code>; בתוך <code class=\"tok\" dir=\"ltr\">A</code> זו גישה מפורשת לפונקציה של הבסיס).<br>לכן א שגויה (<code class=\"tok\" dir=\"ltr\">main</code>), ב שגויה (אפשר גם מתוך <code class=\"tok\" dir=\"ltr\">B</code>), ו-ג שגויה (אפשר גם מתוך <code class=\"tok\" dir=\"ltr\">A</code>). התשובה היא ד. בהרצה: <code class=\"tok\" dir=\"ltr\">main</code> לא התקמפלה, ושתי הפונקציות החברות כן.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2343d4f0f9197ff8"
+  },
+  {
+   "num": 6,
+   "topic": "const_references",
+   "question": "מה יודפס לאחר ביצוע הקטע:\n```cpp\nint& f1(int& x, int& y)\n       { static int t = x > y ? x : y; return t; }\nvoid main() {\n    std::cout << (f1(2, 3) + 4);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`7`",
+     "html": "<code class=\"tok\" dir=\"ltr\">7</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`4`",
+     "html": "<code class=\"tok\" dir=\"ltr\">4</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התכנית רצה אבל הפלט הוא ערך בלתי מוגדר (זבל)",
+     "html": "התכנית רצה אבל הפלט הוא ערך בלתי מוגדר (זבל)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שגיאת הידור (קומפילציה)",
+     "html": "שגיאת הידור (קומפילציה)"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f1` מקבלת הפניות לא-const (`int&`), והארגומנטים `2` ו-`3` הם ערכים זמניים (rvalues) שאי אפשר לקשור להפניה לא-const. הקומפיילר דוחה את הקריאה.\nהתשובה היא ד (שגיאת קומפילציה). הרצה עם clang++ אישרה זאת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: compile error (`int&` cannot bind to the temporaries 2 and 3).",
+   "correctId": "d",
+   "id": "21B-B-Q6",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "מה יודפס לאחר ביצוע הקטע:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int&amp; f1(int&amp; x, int&amp; y)\n       { static int t = x &gt; y ? x : y; return t; }\nvoid main() {\n    std::cout &lt;&lt; (f1(2, 3) + 4);\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">f1</code> מקבלת הפניות לא-const (<code class=\"tok\" dir=\"ltr\">int&amp;</code>), והארגומנטים <code class=\"tok\" dir=\"ltr\">2</code> ו-<code class=\"tok\" dir=\"ltr\">3</code> הם ערכים זמניים (rvalues) שאי אפשר לקשור להפניה לא-const. הקומפיילר דוחה את הקריאה.<br>התשובה היא ד (שגיאת קומפילציה). הרצה עם clang++ אישרה זאת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1119821ca7e7002b"
+  },
+  {
+   "num": 7,
+   "topic": "cpp_basics_refs",
+   "question": "מה יודפס לאחר ביצוע הקטע\n```cpp\nint& f1(int& x, int& y)\n{ static int t = x > y ? x : y; return t; }\nint& f1(int x, int y)\n{ static int t = x > y ? x : y; return t; }\nvoid main() {\n    std::cout << (f1(2, 3) = 4);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שגיאת מהדר (קומפילציה)",
+     "html": "שגיאת מהדר (קומפילציה)"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "התכנית רצה אבל הפלט הוא ערך בלתי מוגדר (זבל)",
+     "html": "התכנית רצה אבל הפלט הוא ערך בלתי מוגדר (זבל)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התכנית לא כתובה טוב אבל היא תרוץ ותדפיס `4`",
+     "html": "התכנית לא כתובה טוב אבל היא תרוץ ותדפיס <code class=\"tok\" dir=\"ltr\">4</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`0`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "יש שתי העמסות: `f1(int&, int&)` ו-`f1(int, int)`. הארגומנטים `2` ו-`3` הם ערכים זמניים, ולכן רק הגרסה by-value ניתנת לקריאה. היא מחזירה הפניה למשתנה הסטטי `t`, שערכו 3, וההשמה `= 4` משנה אותו ל-4. הפלט `4`.\nהתכנית \"לא כתובה טוב\" (מחזירה הפניה למשתנה סטטי ושתי העמסות מבלבלות), אבל היא מתקמפלת ורצה: תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `4`: only the by-value overload accepts the literals, and it returns a reference to its static `t`, which is assigned 4.",
+   "correctId": "c",
+   "id": "21B-B-Q7",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה יודפס לאחר ביצוע הקטע<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int&amp; f1(int&amp; x, int&amp; y)\n{ static int t = x &gt; y ? x : y; return t; }\nint&amp; f1(int x, int y)\n{ static int t = x &gt; y ? x : y; return t; }\nvoid main() {\n    std::cout &lt;&lt; (f1(2, 3) = 4);\n}</code></pre>",
+   "explanationHtml": "יש שתי העמסות: <code class=\"tok\" dir=\"ltr\">f1(int&amp;, int&amp;)</code> ו-<code class=\"tok\" dir=\"ltr\">f1(int, int)</code>. הארגומנטים <code class=\"tok\" dir=\"ltr\">2</code> ו-<code class=\"tok\" dir=\"ltr\">3</code> הם ערכים זמניים, ולכן רק הגרסה by-value ניתנת לקריאה. היא מחזירה הפניה למשתנה הסטטי <code class=\"tok\" dir=\"ltr\">t</code>, שערכו 3, וההשמה <code class=\"tok\" dir=\"ltr\">= 4</code> משנה אותו ל-4. הפלט <code class=\"tok\" dir=\"ltr\">4</code>.<br>התכנית \"לא כתובה טוב\" (מחזירה הפניה למשתנה סטטי ושתי העמסות מבלבלות), אבל היא מתקמפלת ורצה: תשובה ג.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d04a98953d7c1b92"
+  },
+  {
+   "num": 8,
+   "topic": "construction_order",
+   "question": "מה יודפס לאחר ביצוע הקטע\n```cpp\nclass One {\npublic:\n    int one;\n    One() { one = 1; }\n};\nclass Two :public One {\npublic:\n    int two;\n    Two() { this->two = 2; }\n};\nvoid main() {\n    Two* two = new Two();\n    std::cout << two->one << two->two;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שגיאת מהדר (קומפילציה)",
+     "html": "שגיאת מהדר (קומפילציה)"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "התכנית רצה אבל הפלט הוא ערך בלתי מוגדר (זבל)",
+     "html": "התכנית רצה אבל הפלט הוא ערך בלתי מוגדר (זבל)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`22`",
+     "html": "<code class=\"tok\" dir=\"ltr\">22</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי הבסיס `One` רץ ראשון ומציב `one=1`, אחר כך בנאי `Two` מציב `two=2`. ההדפסה מציגה `one` ואחריו `two`: `12`.\nהתשובה היא ג. אין כאן שגיאת קומפילציה והערכים אינם זבל, כי שניהם מאותחלים בבנאים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `12`.",
+   "correctId": "c",
+   "id": "21B-B-Q8",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה יודפס לאחר ביצוע הקטע<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class One {\npublic:\n    int one;\n    One() { one = 1; }\n};\nclass Two :public One {\npublic:\n    int two;\n    Two() { this-&gt;two = 2; }\n};\nvoid main() {\n    Two* two = new Two();\n    std::cout &lt;&lt; two-&gt;one &lt;&lt; two-&gt;two;\n}</code></pre>",
+   "explanationHtml": "בנאי הבסיס <code class=\"tok\" dir=\"ltr\">One</code> רץ ראשון ומציב <code class=\"tok\" dir=\"ltr\">one=1</code>, אחר כך בנאי <code class=\"tok\" dir=\"ltr\">Two</code> מציב <code class=\"tok\" dir=\"ltr\">two=2</code>. ההדפסה מציגה <code class=\"tok\" dir=\"ltr\">one</code> ואחריו <code class=\"tok\" dir=\"ltr\">two</code>: <code class=\"tok\" dir=\"ltr\">12</code>.<br>התשובה היא ג. אין כאן שגיאת קומפילציה והערכים אינם זבל, כי שניהם מאותחלים בבנאים.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c1698b88bf7df646"
+  },
+  {
+   "num": 9,
+   "topic": "virtual_polymorphism",
+   "question": "אילו מהפונקציות הבאות לא יכולה להיות וירטואלית?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "פונקציה בונה מכל סוג שהוא (`constructor`)",
+     "html": "פונקציה בונה מכל סוג שהוא (<code class=\"tok\" dir=\"ltr\">constructor</code>)"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פונקציה הורסת (`destructor`)",
+     "html": "פונקציה הורסת (<code class=\"tok\" dir=\"ltr\">destructor</code>)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציה טהורה (`pure virtual`)",
+     "html": "פונקציה טהורה (<code class=\"tok\" dir=\"ltr\">pure virtual</code>)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "פונקציה שיורשת ממחלקת אב שהוגדרה במחלקה האב כ `protected`.",
+     "html": "פונקציה שיורשת ממחלקת אב שהוגדרה במחלקה האב כ <code class=\"tok\" dir=\"ltr\">protected</code>."
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "בנאי לא יכול להיות וירטואלי: הוא רץ בזמן שהאובייקט עדיין נבנה, ואין עדיין טבלת פונקציות וירטואליות מלאה. הרצה אישרה ש-`virtual A() {}` לא מתקמפל.\nהורס יכול להיות (ואף רצוי), פונקציה טהורה היא וירטואלית מעצם הגדרתה, ופונקציה שנורשת כ-`protected` אפשר להפוך לוירטואלית בנגזרת (הכול התקמפל).\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probes: `virtual A() {}` does not compile; `virtual ~A()`, a pure virtual function and a virtual override of an inherited protected function all compile.",
+   "correctId": "a",
+   "id": "21B-B-Q9",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "אילו מהפונקציות הבאות לא יכולה להיות וירטואלית?",
+   "explanationHtml": "בנאי לא יכול להיות וירטואלי: הוא רץ בזמן שהאובייקט עדיין נבנה, ואין עדיין טבלת פונקציות וירטואליות מלאה. הרצה אישרה ש-<code class=\"tok\" dir=\"ltr\">virtual A() {}</code> לא מתקמפל.<br>הורס יכול להיות (ואף רצוי), פונקציה טהורה היא וירטואלית מעצם הגדרתה, ופונקציה שנורשת כ-<code class=\"tok\" dir=\"ltr\">protected</code> אפשר להפוך לוירטואלית בנגזרת (הכול התקמפל).<br>התשובה היא א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "5cc43dd0cc9bea6b"
+  },
+  {
+   "num": 10,
+   "topic": "classes_ctor_dtor",
+   "question": "לאיזה מהפונקציות הבאות לא יכולה להיות העמסה (`overloading`)?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "פונקציה בונה מכל סוג שהוא (`constructor`)",
+     "html": "פונקציה בונה מכל סוג שהוא (<code class=\"tok\" dir=\"ltr\">constructor</code>)"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פונקציה הורסת (`destructor`)",
+     "html": "פונקציה הורסת (<code class=\"tok\" dir=\"ltr\">destructor</code>)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציה טהורה (`pure virtual`)",
+     "html": "פונקציה טהורה (<code class=\"tok\" dir=\"ltr\">pure virtual</code>)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "פונקציה שיורשת ממחלקת אב שהוגדרה במחלקה האב כ `protected`",
+     "html": "פונקציה שיורשת ממחלקת אב שהוגדרה במחלקה האב כ <code class=\"tok\" dir=\"ltr\">protected</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "בנאים אפשר להעמיס (הרצנו שלוש חתימות), פונקציה טהורה אפשר להעמיס, ופונקציה מורשית מוגנת אפשר להעמיס. להורס יש חתימה אחת בלבד: בלי פרמטרים. הגדרה של `~A(int)` לא התקמפלה.\nהתשובה היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probes: constructors with three signatures, overloaded pure virtual functions and an overload of an inherited protected name all compile; a second destructor `~A(int)` does not compile.",
+   "correctId": "b",
+   "id": "21B-B-Q10",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "לאיזה מהפונקציות הבאות לא יכולה להיות העמסה (<code class=\"tok\" dir=\"ltr\">overloading</code>)?",
+   "explanationHtml": "בנאים אפשר להעמיס (הרצנו שלוש חתימות), פונקציה טהורה אפשר להעמיס, ופונקציה מורשית מוגנת אפשר להעמיס. להורס יש חתימה אחת בלבד: בלי פרמטרים. הגדרה של <code class=\"tok\" dir=\"ltr\">~A(int)</code> לא התקמפלה.<br>התשובה היא ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2db25e402c06134a"
+  },
+  {
+   "num": 11,
+   "topic": "classes_ctor_dtor",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Utest {\npublic:\n    Utest(int i = 40) { d = i; cout << \"d = \" << i; }\nprivate:\n    int d;\n};\nvoid main() {\n    Utest ut = Utest(20);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שגיאת מהדר",
+     "html": "שגיאת מהדר"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`d=40 d=20`",
+     "html": "<code class=\"tok\" dir=\"ltr\">d=40 d=20</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`d=20 d=20`",
+     "html": "<code class=\"tok\" dir=\"ltr\">d=20 d=20</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`d=20`",
+     "html": "<code class=\"tok\" dir=\"ltr\">d=20</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "השורה `Utest ut = Utest(20);` יוצרת זמני ומעתיקה אותו, אך הקומפיילר מבטל את ההעתקה (copy elision, מובטח מ-C++17) ולכן הבנאי רץ פעם אחת בלבד עם 20.\nהפלט הוא `d = 20` (תשובה ד). תשובה ב מניחה שבנאי ברירת המחדל רץ גם הוא, ותשובה ג מניחה הדפסה כפולה. הרצה עם clang++ הדפיסה פעם אחת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run (c++17) printed `d = 20`: the temporary is elided into `ut`, so the constructor runs once. The printed spacing `d = 20` is written `d=20` in the options.",
+   "correctId": "d",
+   "id": "21B-B-Q11",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Utest {\npublic:\n    Utest(int i = 40) { d = i; cout &lt;&lt; \"d = \" &lt;&lt; i; }\nprivate:\n    int d;\n};\nvoid main() {\n    Utest ut = Utest(20);\n}</code></pre>",
+   "explanationHtml": "השורה <code class=\"tok\" dir=\"ltr\">Utest ut = Utest(20);</code> יוצרת זמני ומעתיקה אותו, אך הקומפיילר מבטל את ההעתקה (copy elision, מובטח מ-C++17) ולכן הבנאי רץ פעם אחת בלבד עם 20.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">d = 20</code> (תשובה ד). תשובה ב מניחה שבנאי ברירת המחדל רץ גם הוא, ותשובה ג מניחה הדפסה כפולה. הרצה עם clang++ הדפיסה פעם אחת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "cb4222d6e9538331"
+  },
+  {
+   "num": 12,
+   "topic": "friend_this_static",
+   "question": "התוכנית הבאה יוצרת רק אוביקט אחד מהמחלקה `House` ומדפיסה \"120\". מה כתוב בשורה עם \"???\"\n```cpp\nclass House {\npublic:\n    int rooms;\n    const int size;\n    House(int r, int s = 0) :rooms(r), size(s) {  }\n    ? ? ? ? ? setRoom(int r) { rooms = r; ? ? ? ? ? ; }\n    int getSize() { return size; }\n};\n\nvoid main()\n{\n    House h(4, 120);\n    std::cout << h.setRoom(5).getSize();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`House &setRoom(int r) { rooms = r; return *this; }`",
+     "html": "<code class=\"tok\" dir=\"ltr\">House &amp;setRoom(int r) { rooms = r; return *this; }</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`House *setRoom(int r) { rooms = r; return *this; }`",
+     "html": "<code class=\"tok\" dir=\"ltr\">House *setRoom(int r) { rooms = r; return *this; }</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`void   setRoom(int r) { rooms = r; }`",
+     "html": "<code class=\"tok\" dir=\"ltr\">void   setRoom(int r) { rooms = r; }</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`House  setRoom(int r) { rooms = r; return *this; }`",
+     "html": "<code class=\"tok\" dir=\"ltr\">House  setRoom(int r) { rooms = r; return *this; }</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הביטוי `h.setRoom(5).getSize()` מפעיל מתודה על ערך ההחזרה של `setRoom`. אם ההחזרה היא הפניה (`House&`), זה אותו אובייקט `h` ולכן `getSize()` מחזיר 120, ונוצר רק אובייקט אחד.\n- ב מחזירה `House*` ולכן `.getSize()` לא מתקמפל.\n- ג מחזירה `void`, לא מתקמפל.\n- ד מחזירה עותק: זה מתקמפל ומדפיס 120, אבל נוצר אובייקט שני, בניגוד לנאמר בשאלה.\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: a prints 120; b and c do not compile; d compiles and also prints 120 but returns a copy, i.e. creates a second object, which the stem rules out -> a.",
+   "correctId": "a",
+   "id": "21B-B-Q12",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "התוכנית הבאה יוצרת רק אוביקט אחד מהמחלקה <code class=\"tok\" dir=\"ltr\">House</code> ומדפיסה \"120\". מה כתוב בשורה עם \"???\"<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class House {\npublic:\n    int rooms;\n    const int size;\n    House(int r, int s = 0) :rooms(r), size(s) {  }\n    ? ? ? ? ? setRoom(int r) { rooms = r; ? ? ? ? ? ; }\n    int getSize() { return size; }\n};\n\nvoid main()\n{\n    House h(4, 120);\n    std::cout &lt;&lt; h.setRoom(5).getSize();\n}</code></pre>",
+   "explanationHtml": "הביטוי <code class=\"tok\" dir=\"ltr\">h.setRoom(5).getSize()</code> מפעיל מתודה על ערך ההחזרה של <code class=\"tok\" dir=\"ltr\">setRoom</code>. אם ההחזרה היא הפניה (<code class=\"tok\" dir=\"ltr\">House&amp;</code>), זה אותו אובייקט <code class=\"tok\" dir=\"ltr\">h</code> ולכן <code class=\"tok\" dir=\"ltr\">getSize()</code> מחזיר 120, ונוצר רק אובייקט אחד.<br>- ב מחזירה <code class=\"tok\" dir=\"ltr\">House*</code> ולכן <code class=\"tok\" dir=\"ltr\">.getSize()</code> לא מתקמפל.<br>- ג מחזירה <code class=\"tok\" dir=\"ltr\">void</code>, לא מתקמפל.<br>- ד מחזירה עותק: זה מתקמפל ומדפיס 120, אבל נוצר אובייקט שני, בניגוד לנאמר בשאלה.<br>התשובה היא א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "603884ac8e29b084"
+  },
+  {
+   "num": 13,
+   "topic": "composition",
+   "question": "יש צורך לכתוב פרויקט שתפקידו לנהול דירות. לכל דירה (`apartment`) יכולים להיות מספר חדרים. כל חדר יכול להיות מסוג חדר שינה (`bed room`) או חדר מגורים (`living room`) או חדר אמבטיה (`bath room`). הפרויקט יכיל כמובן מחלקות מסוג `Apartment, LivingRoom, BathRoom, BedRoom`.\nמה יהיה מבנה הירושה המיטבי של המחלקות בפרויקט זה?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "תבנה מחלקה אב `Room` שממנה ירשו כל המחלקות מסוג `xxxRoom`. במחלקה `Apartment` יהיה `data member` - מערך של איברים (`vector`) מסוג `Room`.",
+     "html": "תבנה מחלקה אב <code class=\"tok\" dir=\"ltr\">Room</code> שממנה ירשו כל המחלקות מסוג <code class=\"tok\" dir=\"ltr\">xxxRoom</code>. במחלקה <code class=\"tok\" dir=\"ltr\">Apartment</code> יהיה <code class=\"tok\" dir=\"ltr\">data member</code> - מערך של איברים (<code class=\"tok\" dir=\"ltr\">vector</code>) מסוג <code class=\"tok\" dir=\"ltr\">Room</code>."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "במחלקה `Apartment` יהיו `data member` מסוג מערך של `BedRoom` וכן `data member` מסוג מערך של `LivingRoom` וכן `data member` מסוג מערך של `BathRoom`",
+     "html": "במחלקה <code class=\"tok\" dir=\"ltr\">Apartment</code> יהיו <code class=\"tok\" dir=\"ltr\">data member</code> מסוג מערך של <code class=\"tok\" dir=\"ltr\">BedRoom</code> וכן <code class=\"tok\" dir=\"ltr\">data member</code> מסוג מערך של <code class=\"tok\" dir=\"ltr\">LivingRoom</code> וכן <code class=\"tok\" dir=\"ltr\">data member</code> מסוג מערך של <code class=\"tok\" dir=\"ltr\">BathRoom</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "המחלקה `Apartment` תירש בצורה של \"ירושה מרובה\" מכל המחלקות מסוג `LivingRoom, BathRoom, BedRoom`",
+     "html": "המחלקה <code class=\"tok\" dir=\"ltr\">Apartment</code> תירש בצורה של \"ירושה מרובה\" מכל המחלקות מסוג <code class=\"tok\" dir=\"ltr\">LivingRoom, BathRoom, BedRoom</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "המחלקות `LivingRoom, BathRoom, BedRoom` ירשו כל אחת מהן בנפרד מהמחלקה `Apartment`.",
+     "html": "המחלקות <code class=\"tok\" dir=\"ltr\">LivingRoom, BathRoom, BedRoom</code> ירשו כל אחת מהן בנפרד מהמחלקה <code class=\"tok\" dir=\"ltr\">Apartment</code>."
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "מבנה הירושה המיטבי הוא מחלקת אב `Room` שממנה יורשות `BedRoom`, `LivingRoom` ו-`BathRoom` (כל אחד מהם הוא סוג של חדר, יחס is-a), ו-`Apartment` מחזיקה אוסף של חדרים (יחס has-a, הכלה), ולכן תשובה א. כך אפשר לטפל בכל החדרים באותו אופן ולהוסיף סוג חדר חדש בלי לשנות את `Apartment`. ב משכפלת שלושה אוספים נפרדים, אחד לכל סוג. ג ו-ד משתמשות בירושה במקום שבו אין יחס is-a: דירה אינה חדר, וחדר אינו דירה. הערה: כדי לשמור על פולימורפיזם האוסף צריך להחזיק מצביעים (`vector<Room*>`) ולא עצמים מטיפוס `Room` (אחרת העצמים נחתכים, slicing), אבל גם כך א היא המבנה הנכון מבין האפשרויות.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): design question, one clearly best answer by OOP principles: Room base (is-a) + Apartment holding a collection of rooms (has-a). b duplicates per type, c and d misuse inheritance for has-a. No key; confidence med.",
+   "correctId": "a",
+   "id": "21B-B-Q13",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "הכלה וסדר אתחול",
+   "questionHtml": "יש צורך לכתוב פרויקט שתפקידו לנהול דירות. לכל דירה (<code class=\"tok\" dir=\"ltr\">apartment</code>) יכולים להיות מספר חדרים. כל חדר יכול להיות מסוג חדר שינה (<code class=\"tok\" dir=\"ltr\">bed room</code>) או חדר מגורים (<code class=\"tok\" dir=\"ltr\">living room</code>) או חדר אמבטיה (<code class=\"tok\" dir=\"ltr\">bath room</code>). הפרויקט יכיל כמובן מחלקות מסוג <code class=\"tok\" dir=\"ltr\">Apartment, LivingRoom, BathRoom, BedRoom</code>.<br>מה יהיה מבנה הירושה המיטבי של המחלקות בפרויקט זה?",
+   "explanationHtml": "מבנה הירושה המיטבי הוא מחלקת אב <code class=\"tok\" dir=\"ltr\">Room</code> שממנה יורשות <code class=\"tok\" dir=\"ltr\">BedRoom</code>, <code class=\"tok\" dir=\"ltr\">LivingRoom</code> ו-<code class=\"tok\" dir=\"ltr\">BathRoom</code> (כל אחד מהם הוא סוג של חדר, יחס is-a), ו-<code class=\"tok\" dir=\"ltr\">Apartment</code> מחזיקה אוסף של חדרים (יחס has-a, הכלה), ולכן תשובה א. כך אפשר לטפל בכל החדרים באותו אופן ולהוסיף סוג חדר חדש בלי לשנות את <code class=\"tok\" dir=\"ltr\">Apartment</code>. ב משכפלת שלושה אוספים נפרדים, אחד לכל סוג. ג ו-ד משתמשות בירושה במקום שבו אין יחס is-a: דירה אינה חדר, וחדר אינו דירה. הערה: כדי לשמור על פולימורפיזם האוסף צריך להחזיק מצביעים (<code class=\"tok\" dir=\"ltr\">vector&lt;Room*&gt;</code>) ולא עצמים מטיפוס <code class=\"tok\" dir=\"ltr\">Room</code> (אחרת העצמים נחתכים, slicing), אבל גם כך א היא המבנה הנכון מבין האפשרויות.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_",
+   "dedupKey": "04de8711011b9d89"
+  },
+  {
+   "num": 14,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <vector>\nvoid main()\n{\n    vector<float> vf(5);\n    vector<float>::iterator iter = vf.begin() + 2;\n    while (iter != --vf.end())\n        cout << *iter++; }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שגיאת מהדר",
+     "html": "שגיאת מהדר"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`12345`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12345</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`00000`",
+     "html": "<code class=\"tok\" dir=\"ltr\">00000</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`00`",
+     "html": "<code class=\"tok\" dir=\"ltr\">00</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`vector<float> vf(5)` מאותחל לחמישה אפסים. האיטרטור מתחיל באינדקס 2, והלולאה רצה כל עוד הוא לא שווה ל-`--vf.end()`, כלומר לאיבר האחרון (אינדקס 4). לכן מודפסים האיברים באינדקסים 2 ו-3: `00`.\nהתשובה היא ד. הפלט `00000` מניח שמדפיסים את כל המערך, ו-`12345` מניח אתחול שונה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `00` (elements 2 and 3 of the five zero-initialised floats; the loop stops at the last element).",
+   "correctId": "d",
+   "id": "21B-B-Q14",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\nvoid main()\n{\n    vector&lt;float&gt; vf(5);\n    vector&lt;float&gt;::iterator iter = vf.begin() + 2;\n    while (iter != --vf.end())\n        cout &lt;&lt; *iter++; }</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">vector&lt;float&gt; vf(5)</code> מאותחל לחמישה אפסים. האיטרטור מתחיל באינדקס 2, והלולאה רצה כל עוד הוא לא שווה ל-<code class=\"tok\" dir=\"ltr\">--vf.end()</code>, כלומר לאיבר האחרון (אינדקס 4). לכן מודפסים האיברים באינדקסים 2 ו-3: <code class=\"tok\" dir=\"ltr\">00</code>.<br>התשובה היא ד. הפלט <code class=\"tok\" dir=\"ltr\">00000</code> מניח שמדפיסים את כל המערך, ו-<code class=\"tok\" dir=\"ltr\">12345</code> מניח אתחול שונה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "e3cb728e037f0d73"
+  },
+  {
+   "num": 15,
+   "topic": "friend_this_static",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass X{\npublic:\n    X(int i = 0)\n{ static int c = 0; std::cout << i + c++; }\n};\nvoid main() {\n    X a;\n    X b(1);\n    X c = b;\n    c = X(3); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שגיאת מהדר",
+     "html": "שגיאת מהדר"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`0246`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0246</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`025`",
+     "html": "<code class=\"tok\" dir=\"ltr\">025</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`0237`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0237</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה `static int c` משותף לכל הקריאות לבנאי. `X a;` מדפיס `0+0=0`. `X b(1);` מדפיס `1+1=2`. `X c = b;` משתמש בבנאי העתקה מובנה שלא מדפיס כלום. `c = X(3);` יוצר זמני: `3+2=5`, וההשמה המובנית לא מדפיסה.\nהפלט `025` (תשובה ג). תשובה ב ו-ד מניחות שגם ההעתקה מדפיסה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `025`: `X c = b;` uses the implicit copy constructor (prints nothing, `c` unchanged); `X(3)` prints 3+2=5.",
+   "correctId": "c",
+   "id": "21B-B-Q15",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X{\npublic:\n    X(int i = 0)\n{ static int c = 0; std::cout &lt;&lt; i + c++; }\n};\nvoid main() {\n    X a;\n    X b(1);\n    X c = b;\n    c = X(3); }</code></pre>",
+   "explanationHtml": "המשתנה <code class=\"tok\" dir=\"ltr\">static int c</code> משותף לכל הקריאות לבנאי. <code class=\"tok\" dir=\"ltr\">X a;</code> מדפיס <code class=\"tok\" dir=\"ltr\">0+0=0</code>. <code class=\"tok\" dir=\"ltr\">X b(1);</code> מדפיס <code class=\"tok\" dir=\"ltr\">1+1=2</code>. <code class=\"tok\" dir=\"ltr\">X c = b;</code> משתמש בבנאי העתקה מובנה שלא מדפיס כלום. <code class=\"tok\" dir=\"ltr\">c = X(3);</code> יוצר זמני: <code class=\"tok\" dir=\"ltr\">3+2=5</code>, וההשמה המובנית לא מדפיסה.<br>הפלט <code class=\"tok\" dir=\"ltr\">025</code> (תשובה ג). תשובה ב ו-ד מניחות שגם ההעתקה מדפיסה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "12dd0b2fafb11d22"
+  },
+  {
+   "num": 16,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\ntemplate <class T>\nclass Uone {\npublic:\n    static  int uone;\n    Uone(int ut) { uone = ut; }\n};\n\ntemplate <class T>\nint Uone<T>::uone = 0;\n\nvoid main()\n{\n    Uone<int> u1(1);\n    Uone<int> u2(2);\n    Uone<float> u3(3);\n    cout << u1.uone << u2.uone << u3.uone;   }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שגיאת מהדר",
+     "html": "שגיאת מהדר"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`000`",
+     "html": "<code class=\"tok\" dir=\"ltr\">000</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`223`",
+     "html": "<code class=\"tok\" dir=\"ltr\">223</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "לכל מופע של התבנית (`Uone<int>` ו-`Uone<float>`) יש משתנה סטטי נפרד. `u1` ו-`u2` חולקים את `Uone<int>::uone`, ולכן אחרי `u2(2)` ערכו 2 וגם `u1.uone` מחזיר 2. `u3` שייך ל-`Uone<float>` וערכו 3.\nהפלט `223` (תשובה ד). תשובה ג מניחה שלכל אובייקט יש עותק משלו.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `223`: one static per instantiation (`Uone<int>` shared by u1 and u2, `Uone<float>` separate).",
+   "correctId": "d",
+   "id": "21B-B-Q16",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;class T&gt;\nclass Uone {\npublic:\n    static  int uone;\n    Uone(int ut) { uone = ut; }\n};\n\ntemplate &lt;class T&gt;\nint Uone&lt;T&gt;::uone = 0;\n\nvoid main()\n{\n    Uone&lt;int&gt; u1(1);\n    Uone&lt;int&gt; u2(2);\n    Uone&lt;float&gt; u3(3);\n    cout &lt;&lt; u1.uone &lt;&lt; u2.uone &lt;&lt; u3.uone;   }</code></pre>",
+   "explanationHtml": "לכל מופע של התבנית (<code class=\"tok\" dir=\"ltr\">Uone&lt;int&gt;</code> ו-<code class=\"tok\" dir=\"ltr\">Uone&lt;float&gt;</code>) יש משתנה סטטי נפרד. <code class=\"tok\" dir=\"ltr\">u1</code> ו-<code class=\"tok\" dir=\"ltr\">u2</code> חולקים את <code class=\"tok\" dir=\"ltr\">Uone&lt;int&gt;::uone</code>, ולכן אחרי <code class=\"tok\" dir=\"ltr\">u2(2)</code> ערכו 2 וגם <code class=\"tok\" dir=\"ltr\">u1.uone</code> מחזיר 2. <code class=\"tok\" dir=\"ltr\">u3</code> שייך ל-<code class=\"tok\" dir=\"ltr\">Uone&lt;float&gt;</code> וערכו 3.<br>הפלט <code class=\"tok\" dir=\"ltr\">223</code> (תשובה ד). תשובה ג מניחה שלכל אובייקט יש עותק משלו.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "504edd72a5c6493a"
+  },
+  {
+   "num": 17,
+   "topic": "friend_this_static",
+   "question": "כמה שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:\n```cpp\nclass X {\n    friend void f(X x);\npublic:\n    int a;\nprivate:\n    int b;\n};\nvoid f(X x) {\n    x.a = 1;\n    x.b = 1;\n}\nvoid f(X x, int k) {\n    x.a = 1;\n    x.b = 1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה",
+     "html": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה אחת",
+     "html": "שורה אחת"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שתי שורות",
+     "html": "שתי שורות"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שלוש שורות",
+     "html": "שלוש שורות"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההצהרה `friend void f(X x);` מקנה גישה רק להעמסה בעלת הפרמטר היחיד. ב-`f(X x)` גישה ל-`b` תקינה. ב-`f(X x, int k)`, שהיא פונקציה אחרת ואינה friend, השורה `x.b = 1;` היא שגיאה.\nשורה אחת (תשובה ב). הגישה ל-`x.a` ציבורית ולכן תקינה בשתי הפונקציות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: one error line (`x.b = 1;` in `f(X, int)`, which is not a friend; the friend is only the one-argument overload).",
+   "correctId": "b",
+   "id": "21B-B-Q17",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "כמה שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\n    friend void f(X x);\npublic:\n    int a;\nprivate:\n    int b;\n};\nvoid f(X x) {\n    x.a = 1;\n    x.b = 1;\n}\nvoid f(X x, int k) {\n    x.a = 1;\n    x.b = 1;\n}</code></pre>",
+   "explanationHtml": "ההצהרה <code class=\"tok\" dir=\"ltr\">friend void f(X x);</code> מקנה גישה רק להעמסה בעלת הפרמטר היחיד. ב-<code class=\"tok\" dir=\"ltr\">f(X x)</code> גישה ל-<code class=\"tok\" dir=\"ltr\">b</code> תקינה. ב-<code class=\"tok\" dir=\"ltr\">f(X x, int k)</code>, שהיא פונקציה אחרת ואינה friend, השורה <code class=\"tok\" dir=\"ltr\">x.b = 1;</code> היא שגיאה.<br>שורה אחת (תשובה ב). הגישה ל-<code class=\"tok\" dir=\"ltr\">x.a</code> ציבורית ולכן תקינה בשתי הפונקציות.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1dbb021b3ed4ab91"
+  },
+  {
+   "num": 18,
+   "topic": "composition",
+   "question": "האם יכול להיות שאובייקט ממחלקה `A` יכיל מצביע לאובייקט מהמחלקה `B`, וכל אובייקט ממחלקה `B` יכיל מצביע לאובייקט ששייך למחלקה `A`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "בלתי אפשרי (אסור לולאה בהגדרות).",
+     "html": "בלתי אפשרי (אסור לולאה בהגדרות)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אפשרי אבל רק אם הלולאה איננה בעצמים (כלומר יכול להיות שעצם ששייך למחלקה `B` יצביע לעצם ששייך למחלקה `A`. אבל אז העצם ששייך למחלקה `A` לא יכול להצביע חזרה על אותו העצם שמצביע עליו).",
+     "html": "אפשרי אבל רק אם הלולאה איננה בעצמים (כלומר יכול להיות שעצם ששייך למחלקה <code class=\"tok\" dir=\"ltr\">B</code> יצביע לעצם ששייך למחלקה <code class=\"tok\" dir=\"ltr\">A</code>. אבל אז העצם ששייך למחלקה <code class=\"tok\" dir=\"ltr\">A</code> לא יכול להצביע חזרה על אותו העצם שמצביע עליו)."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "קצת מורכב אבל אפשרי.",
+     "html": "קצת מורכב אבל אפשרי."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "זה אפשרי אבל רק אם המצביעים הם מסוג `public` ולא מסוג `private` או `protected`.",
+     "html": "זה אפשרי אבל רק אם המצביעים הם מסוג <code class=\"tok\" dir=\"ltr\">public</code> ולא מסוג <code class=\"tok\" dir=\"ltr\">private</code> או <code class=\"tok\" dir=\"ltr\">protected</code>."
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "מחלקה `A` יכולה להחזיק `B*` ומחלקה `B` יכולה להחזיק `A*` בעזרת הצהרה מקדימה (`class B;`). מצביעים הם בעלי גודל ידוע, ולכן אין בעיית הגדרה מעגלית כמו בהכלה לפי ערך. בהרצה הצבנו את האובייקטים זה על זה וקיבלנו שהקשר דו-כיווני.\nהתשובה היא ג (אפשרי, אך דורש הצהרה מקדימה). תשובה א שגויה, ב שגויה כי גם `A` יכול להצביע חזרה, ו-ד שגויה כי סוג הגישה של המצביעים אינו משנה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probe (q18.cpp): `class B;` forward declaration, `A` holds `B*`, `B` holds `A*`, and the objects point at each other at run time (prints 1). The compiler needs the forward declaration, hence 'a bit complicated but possible'.",
+   "correctId": "c",
+   "id": "21B-B-Q18",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "הכלה וסדר אתחול",
+   "questionHtml": "האם יכול להיות שאובייקט ממחלקה <code class=\"tok\" dir=\"ltr\">A</code> יכיל מצביע לאובייקט מהמחלקה <code class=\"tok\" dir=\"ltr\">B</code>, וכל אובייקט ממחלקה <code class=\"tok\" dir=\"ltr\">B</code> יכיל מצביע לאובייקט ששייך למחלקה <code class=\"tok\" dir=\"ltr\">A</code>?",
+   "explanationHtml": "מחלקה <code class=\"tok\" dir=\"ltr\">A</code> יכולה להחזיק <code class=\"tok\" dir=\"ltr\">B*</code> ומחלקה <code class=\"tok\" dir=\"ltr\">B</code> יכולה להחזיק <code class=\"tok\" dir=\"ltr\">A*</code> בעזרת הצהרה מקדימה (<code class=\"tok\" dir=\"ltr\">class B;</code>). מצביעים הם בעלי גודל ידוע, ולכן אין בעיית הגדרה מעגלית כמו בהכלה לפי ערך. בהרצה הצבנו את האובייקטים זה על זה וקיבלנו שהקשר דו-כיווני.<br>התשובה היא ג (אפשרי, אך דורש הצהרה מקדימה). תשובה א שגויה, ב שגויה כי גם <code class=\"tok\" dir=\"ltr\">A</code> יכול להצביע חזרה, ו-ד שגויה כי סוג הגישה של המצביעים אינו משנה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3a1f9dcd4d0247d2"
+  },
+  {
+   "num": 19,
+   "topic": "operator_overloading",
+   "question": "על מנת שהתוכנית הבאה תדפיס \"1\" מה צריך להופיע בשורה עם ????\n```cpp\nclass X{};\n?????????????????\nvoid main()\n{\n    std::cout << X();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`ostream &operator<< (ostream& o, X x) { o << 1;  return o; }`",
+     "html": "<code class=\"tok\" dir=\"ltr\">ostream &amp;operator&lt;&lt; (ostream&amp; o, X x) { o &lt;&lt; 1;  return o; }</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`void  operator<< (ostream& o, X x) { o << 1; }`",
+     "html": "<code class=\"tok\" dir=\"ltr\">void  operator&lt;&lt; (ostream&amp; o, X x) { o &lt;&lt; 1; }</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "גם א' וגם ב' וגם ד' (למרות שא' יתאים באופן כללי)",
+     "html": "גם א' וגם ב' וגם ד' (למרות שא' יתאים באופן כללי)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`ostream *operator<< (ostream& o, X x) { o << 1;  return &o; }`",
+     "html": "<code class=\"tok\" dir=\"ltr\">ostream *operator&lt;&lt; (ostream&amp; o, X x) { o &lt;&lt; 1;  return &amp;o; }</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "ב-`main` מבוצע `cout << X();` בלבד, בלי שרשור. לכן כל אחת מהחתימות א, ב ו-ד מתקמפלת ומדפיסה `1`: ערך ההחזרה פשוט נזרק. הגרסה הכללית והמומלצת היא א (מחזירה `ostream&` ומאפשרת שרשור), אבל לא היא היחידה שעובדת כאן.\nהתשובה היא ג (כל שלוש). הרצת שלוש הגרסאות הדפיסה `1`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: each of the options a, b and d compiles and prints `1` for this exact `main` (only chaining would need the reference return), so c (all three) is the accurate statement.",
+   "correctId": "c",
+   "id": "21B-B-Q19",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "lockOrder": true,
+   "questionHtml": "על מנת שהתוכנית הבאה תדפיס \"1\" מה צריך להופיע בשורה עם ????<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X{};\n?????????????????\nvoid main()\n{\n    std::cout &lt;&lt; X();\n}</code></pre>",
+   "explanationHtml": "ב-<code class=\"tok\" dir=\"ltr\">main</code> מבוצע <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; X();</code> בלבד, בלי שרשור. לכן כל אחת מהחתימות א, ב ו-ד מתקמפלת ומדפיסה <code class=\"tok\" dir=\"ltr\">1</code>: ערך ההחזרה פשוט נזרק. הגרסה הכללית והמומלצת היא א (מחזירה <code class=\"tok\" dir=\"ltr\">ostream&amp;</code> ומאפשרת שרשור), אבל לא היא היחידה שעובדת כאן.<br>התשובה היא ג (כל שלוש). הרצת שלוש הגרסאות הדפיסה <code class=\"tok\" dir=\"ltr\">1</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ace8d2a66494af7e"
+  },
+  {
+   "num": 20,
+   "topic": "virtual_polymorphism",
+   "question": "מה תדפיס התכנית הבאה?\n```cpp\nclass X {\npublic:\n    virtual void f1(int i) { cout << i; }\n    void f1(int i, int j) { cout << i; }\n};\nclass Y :public X {\npublic:\n    virtual void f1(int i) { cout << i + 1; }\n    virtual void f1(int i, int j) { cout << i + 1; }\n};\n\nvoid main() {\n    X* x = new Y;\n    x->f1(2);\n    x->f1(2, 3);}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`22`",
+     "html": "<code class=\"tok\" dir=\"ltr\">22</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`33`",
+     "html": "<code class=\"tok\" dir=\"ltr\">33</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`23`",
+     "html": "<code class=\"tok\" dir=\"ltr\">23</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`32`",
+     "html": "<code class=\"tok\" dir=\"ltr\">32</code>"
+    }
+   ],
+   "contextId": "21B-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f1(int)` וירטואלית ב-`X` ולכן הקריאה דרך `X*` שמצביע על `Y` מפעילה את הגרסה של `Y`: `2+1=3`. לעומת זאת `f1(int,int)` אינה וירטואלית ב-`X` (ה-`virtual` ב-`Y` לא משנה את הקריאה דרך `X*`), ולכן רצה הגרסה של `X`: `2`.\nהפלט `32` (תשובה ד). תשובה ב מניחה שגם השנייה דינמית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `32`: `f1(int)` is virtual in X (Y's version runs, 3); `f1(int,int)` is not virtual in X, so the call through `X*` runs X's version (2).",
+   "correctId": "d",
+   "id": "21B-B-Q20",
+   "examCode": "21B-B",
+   "examLabel": "2021 סמסטר ב מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה תדפיס התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    virtual void f1(int i) { cout &lt;&lt; i; }\n    void f1(int i, int j) { cout &lt;&lt; i; }\n};\nclass Y :public X {\npublic:\n    virtual void f1(int i) { cout &lt;&lt; i + 1; }\n    virtual void f1(int i, int j) { cout &lt;&lt; i + 1; }\n};\n\nvoid main() {\n    X* x = new Y;\n    x-&gt;f1(2);\n    x-&gt;f1(2, 3);}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">f1(int)</code> וירטואלית ב-<code class=\"tok\" dir=\"ltr\">X</code> ולכן הקריאה דרך <code class=\"tok\" dir=\"ltr\">X*</code> שמצביע על <code class=\"tok\" dir=\"ltr\">Y</code> מפעילה את הגרסה של <code class=\"tok\" dir=\"ltr\">Y</code>: <code class=\"tok\" dir=\"ltr\">2+1=3</code>. לעומת זאת <code class=\"tok\" dir=\"ltr\">f1(int,int)</code> אינה וירטואלית ב-<code class=\"tok\" dir=\"ltr\">X</code> (ה-<code class=\"tok\" dir=\"ltr\">virtual</code> ב-<code class=\"tok\" dir=\"ltr\">Y</code> לא משנה את הקריאה דרך <code class=\"tok\" dir=\"ltr\">X*</code>), ולכן רצה הגרסה של <code class=\"tok\" dir=\"ltr\">X</code>: <code class=\"tok\" dir=\"ltr\">2</code>.<br>הפלט <code class=\"tok\" dir=\"ltr\">32</code> (תשובה ד). תשובה ב מניחה שגם השנייה דינמית.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c9edfadda2e63b1f"
+  },
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "איזה מהבאים הוא תחביר (`syntax`) הנכון אם ברצוננו ליצור משתנה `reference` למשתנה `int` קיים?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`int a = 10; int r = &a;`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int a = 10; int r = &amp;a;</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`int a = 10; int &r = a;`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int a = 10; int &amp;r = a;</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`int a = 10; int & r = & a;`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int a = 10; int &amp; r = &amp; a;</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`int a = 10; int &r; r = a;`",
+     "html": "<code class=\"tok\" dir=\"ltr\">int a = 10; int &amp;r; r = a;</code>"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "כדי ליצור משתנה הפניה (reference) כותבים `int &r = a;`: ההפניה חייבת להיות מאותחלת בהצהרה.\n- א ו-ג: `&a` הוא כתובת (מצביע) ולא ניתן לאתחל בה `int` או הפניה.\n- ד: הפניה חייבת אתחול ואי אפשר להשים אליה אחר כך.\nבהרצה רק אפשרות ב התקמפלה. התשובה היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student. clang++: only option b compiles; a, c, d are errors.",
+   "correctId": "b",
+   "id": "21S-B-Q1",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "איזה מהבאים הוא תחביר (<code class=\"tok\" dir=\"ltr\">syntax</code>) הנכון אם ברצוננו ליצור משתנה <code class=\"tok\" dir=\"ltr\">reference</code> למשתנה <code class=\"tok\" dir=\"ltr\">int</code> קיים?",
+   "explanationHtml": "כדי ליצור משתנה הפניה (reference) כותבים <code class=\"tok\" dir=\"ltr\">int &amp;r = a;</code>: ההפניה חייבת להיות מאותחלת בהצהרה.<br>- א ו-ג: <code class=\"tok\" dir=\"ltr\">&amp;a</code> הוא כתובת (מצביע) ולא ניתן לאתחל בה <code class=\"tok\" dir=\"ltr\">int</code> או הפניה.<br>- ד: הפניה חייבת אתחול ואי אפשר להשים אליה אחר כך.<br>בהרצה רק אפשרות ב התקמפלה. התשובה היא ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f9d997dd812181f1"
+  },
+  {
+   "num": 2,
+   "topic": "friend_this_static",
+   "question": "כמה שגיאות יש בתוכנית הבאה?\n```cpp\nclass Sample {\n    static int count;\n\npublic:\n    Sample()\n    {\n        count++;\n    }\n\n    void sayHello()\n    {\n        cout << \"Hello, \";\n    }\n    static void printTotalObj()\n    {\n        sayHello();\n        cout << count << endl;\n    }\n};\n\nint Sample::count = 0;\n\nint main()\n{\n    Sample S1;\n    Sample S2;\n    Sample.printTotalObj();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "יש שתי שגיאות:\n- בפונקציה הסטטית `printTotalObj` נקראת `sayHello()` שהיא פונקציה לא סטטית, ובפונקציה סטטית אין אובייקט (`this`).\n- הקריאה `Sample.printTotalObj()` שגויה, כי מפעילים פונקציה סטטית דרך שם המחלקה עם `::` (או דרך אובייקט), לא עם נקודה על שם המחלקה.\nהתשובה היא 2 (ג). הרצה הראתה שגיאות בשתי השורות האלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked b). clang++: errors on exactly two lines: `sayHello();` inside the static function (no object) and `Sample.printTotalObj();` (class name needs `::`).",
+   "correctId": "c",
+   "id": "21S-B-Q2",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "כמה שגיאות יש בתוכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Sample {\n    static int count;\n\npublic:\n    Sample()\n    {\n        count++;\n    }\n\n    void sayHello()\n    {\n        cout &lt;&lt; \"Hello, \";\n    }\n    static void printTotalObj()\n    {\n        sayHello();\n        cout &lt;&lt; count &lt;&lt; endl;\n    }\n};\n\nint Sample::count = 0;\n\nint main()\n{\n    Sample S1;\n    Sample S2;\n    Sample.printTotalObj();\n    return 0;\n}</code></pre>",
+   "explanationHtml": "יש שתי שגיאות:<br>- בפונקציה הסטטית <code class=\"tok\" dir=\"ltr\">printTotalObj</code> נקראת <code class=\"tok\" dir=\"ltr\">sayHello()</code> שהיא פונקציה לא סטטית, ובפונקציה סטטית אין אובייקט (<code class=\"tok\" dir=\"ltr\">this</code>).<br>- הקריאה <code class=\"tok\" dir=\"ltr\">Sample.printTotalObj()</code> שגויה, כי מפעילים פונקציה סטטית דרך שם המחלקה עם <code class=\"tok\" dir=\"ltr\">::</code> (או דרך אובייקט), לא עם נקודה על שם המחלקה.<br>התשובה היא 2 (ג). הרצה הראתה שגיאות בשתי השורות האלה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d4878cbcdca794a8"
+  },
+  {
+   "num": 3,
+   "topic": "friend_this_static",
+   "question": "אילו מהטענות הבאות נכונות לגבי השימוש במילת המפתח \"this\"?\n1. מצביע המשמש להצביע על פונקציות וירטואליות.\n2. מצביע המכיל את ההפניה לאובייקט הנוכחי.\n3. מצביע שניתן להשתמש בו במחלקה בלבד.\n4. מצביע שניתן להשתמש בו בתוך המחלקה וגם מחוצה לה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1 ו-3.",
+     "html": "1 ו-3."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2 ו-3.",
+     "html": "2 ו-3."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1, 2 ו-4.",
+     "html": "1, 2 ו-4."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "1, 2 ו-3.",
+     "html": "1, 2 ו-3."
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הטענות הנכונות: `this` הוא מצביע שמכיל את כתובת האובייקט הנוכחי (2), ושימושי רק בתוך פונקציות חברות של המחלקה (3).\nטענה 1 שגויה (`this` אינו קשור לפונקציות וירטואליות), וטענה 4 שגויה (מחוץ למחלקה אין `this`; בהרצה הדבר לא התקמפל).\nהתשובה היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer b). clang++ probes agree: `this` returned from a member equals the object's address; using `this` in `main` does not compile.",
+   "correctId": "b",
+   "id": "21S-B-Q3",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "אילו מהטענות הבאות נכונות לגבי השימוש במילת המפתח \"this\"?<br>1. מצביע המשמש להצביע על פונקציות וירטואליות.<br>2. מצביע המכיל את ההפניה לאובייקט הנוכחי.<br>3. מצביע שניתן להשתמש בו במחלקה בלבד.<br>4. מצביע שניתן להשתמש בו בתוך המחלקה וגם מחוצה לה.",
+   "explanationHtml": "הטענות הנכונות: <code class=\"tok\" dir=\"ltr\">this</code> הוא מצביע שמכיל את כתובת האובייקט הנוכחי (2), ושימושי רק בתוך פונקציות חברות של המחלקה (3).<br>טענה 1 שגויה (<code class=\"tok\" dir=\"ltr\">this</code> אינו קשור לפונקציות וירטואליות), וטענה 4 שגויה (מחוץ למחלקה אין <code class=\"tok\" dir=\"ltr\">this</code>; בהרצה הדבר לא התקמפל).<br>התשובה היא ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "71bfa2f22ecb97c0"
+  },
+  {
+   "num": 4,
+   "topic": "stl_exceptions",
+   "question": "אילו מהפעולות 1-4 הבאות הן פעולות הנתמכות על ידי איטרטורים?\n1. פעולות קריאה\n2. פעולות כתיבה\n3. פעולות הגדלה\n4. פעולות השוואה",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1, 2",
+     "html": "1, 2"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1, 3",
+     "html": "1, 3"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1, 2, 3",
+     "html": "1, 2, 3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "1, 2, 3, 4",
+     "html": "1, 2, 3, 4"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "איטרטור תומך בקריאת הערך (`*it`), בכתיבה (`*it = v`), בהגדלה (`++it`) ובהשוואה (`it != end`, `it == end`). לכן כל ארבע הפעולות נתמכות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer d). Concept question; an iterator supports `*it` (read), `*it = v` (write), `++it` and `it != end`.",
+   "correctId": "d",
+   "id": "21S-B-Q4",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "אילו מהפעולות 1-4 הבאות הן פעולות הנתמכות על ידי איטרטורים?<br>1. פעולות קריאה<br>2. פעולות כתיבה<br>3. פעולות הגדלה<br>4. פעולות השוואה",
+   "explanationHtml": "איטרטור תומך בקריאת הערך (<code class=\"tok\" dir=\"ltr\">*it</code>), בכתיבה (<code class=\"tok\" dir=\"ltr\">*it = v</code>), בהגדלה (<code class=\"tok\" dir=\"ltr\">++it</code>) ובהשוואה (<code class=\"tok\" dir=\"ltr\">it != end</code>, <code class=\"tok\" dir=\"ltr\">it == end</code>). לכן כל ארבע הפעולות נתמכות (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "011f853440cd8b63"
+  },
+  {
+   "num": 5,
+   "topic": "const_references",
+   "question": "כמה מהטענות הבאות הינן נכונות לגבי שימוש במתודה שמוגדרת כקבועה?\n1. ניתן לגשת ולא לשנות רק ל-`data members` אשר מוגדרים כקבועים.\n2. ניתן לגשת ולא לשנות לכל ה-`data members`: גם קבועים וגם לא קבועים.\n3. ניתן לשנות את כל ה-`data members`, חוץ מאשר `data members` אשר מוגדרים כקבועים.\n4. לא ניתן לגשת אף `data member` של המחלקה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "4",
+     "html": "4"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "במתודה const אפשר לקרוא כל `data member` (גם קבוע וגם לא קבוע), אבל אי אפשר לשנות אף אחד מהם (חוץ מ-`mutable`). הרצה הראתה ששתי ההשמות בתוך מתודה const (לחבר קבוע ולחבר לא קבוע) נכשלות בקומפילציה.\nמבין הטענות רק טענה 2 נכונה: 1 שגויה (אפשר לגשת גם ללא קבועים), 3 שגויה (אי אפשר לשנות), 4 שגויה (אפשר לגשת).\nהשאלה שואלת כמה טענות נכונות: אחת (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked 2). clang++ probe: a const method reads const and non-const members, and assigning to either kind is an error; so only statement 2 is true -> one true statement -> a.",
+   "correctId": "a",
+   "id": "21S-B-Q5",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "כמה מהטענות הבאות הינן נכונות לגבי שימוש במתודה שמוגדרת כקבועה?<br>1. ניתן לגשת ולא לשנות רק ל-<code class=\"tok\" dir=\"ltr\">data members</code> אשר מוגדרים כקבועים.<br>2. ניתן לגשת ולא לשנות לכל ה-<code class=\"tok\" dir=\"ltr\">data members</code>: גם קבועים וגם לא קבועים.<br>3. ניתן לשנות את כל ה-<code class=\"tok\" dir=\"ltr\">data members</code>, חוץ מאשר <code class=\"tok\" dir=\"ltr\">data members</code> אשר מוגדרים כקבועים.<br>4. לא ניתן לגשת אף <code class=\"tok\" dir=\"ltr\">data member</code> של המחלקה.",
+   "explanationHtml": "במתודה const אפשר לקרוא כל <code class=\"tok\" dir=\"ltr\">data member</code> (גם קבוע וגם לא קבוע), אבל אי אפשר לשנות אף אחד מהם (חוץ מ-<code class=\"tok\" dir=\"ltr\">mutable</code>). הרצה הראתה ששתי ההשמות בתוך מתודה const (לחבר קבוע ולחבר לא קבוע) נכשלות בקומפילציה.<br>מבין הטענות רק טענה 2 נכונה: 1 שגויה (אפשר לגשת גם ללא קבועים), 3 שגויה (אי אפשר לשנות), 4 שגויה (אפשר לגשת).<br>השאלה שואלת כמה טענות נכונות: אחת (תשובה א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f69001beab6825c2"
+  },
+  {
+   "num": 6,
+   "topic": "classes_ctor_dtor",
+   "question": "מה היא ההגדרה הנכונה עבור פונקציה בונה ברירת מחדל (`default constructor`) למחלקה הבאה?\n```cpp\nclass sample\n{\n   private:\n      int x,y;\n};\n```\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`public: sample(){}`",
+     "html": "<code class=\"tok\" dir=\"ltr\">public: sample(){}</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`public: sample(){ x=0; y=0;}`",
+     "html": "<code class=\"tok\" dir=\"ltr\">public: sample(){ x=0; y=0;}</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`public: sample(int a, int b){ x=a; y=b;}`",
+     "html": "<code class=\"tok\" dir=\"ltr\">public: sample(int a, int b){ x=a; y=b;}</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות א' ו-ב'.",
+     "html": "תשובות א' ו-ב'."
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי ברירת מחדל הוא בנאי שאפשר לקרוא לו בלי ארגומנטים. גם `sample(){}` וגם `sample(){ x=0; y=0; }` הם כאלה. `sample(int a, int b)` דורש שני ארגומנטים ולכן אינו בנאי ברירת מחדל.\nהתשובה היא ד (גם א וגם ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer d). Both a and b are constructors callable without arguments.",
+   "correctId": "d",
+   "id": "21S-B-Q6",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "lockOrder": true,
+   "questionHtml": "מה היא ההגדרה הנכונה עבור פונקציה בונה ברירת מחדל (<code class=\"tok\" dir=\"ltr\">default constructor</code>) למחלקה הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class sample\n{\n   private:\n      int x,y;\n};</code></pre>",
+   "explanationHtml": "בנאי ברירת מחדל הוא בנאי שאפשר לקרוא לו בלי ארגומנטים. גם <code class=\"tok\" dir=\"ltr\">sample(){}</code> וגם <code class=\"tok\" dir=\"ltr\">sample(){ x=0; y=0; }</code> הם כאלה. <code class=\"tok\" dir=\"ltr\">sample(int a, int b)</code> דורש שני ארגומנטים ולכן אינו בנאי ברירת מחדל.<br>התשובה היא ד (גם א וגם ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "cdb5ab7e54476ec3"
+  },
+  {
+   "num": 7,
+   "topic": "friend_this_static",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass Sample {\nprivate:\n   int var;\npublic:\n   Sample() {\n      var = 10;\n   }\n   friend void fun();\n};\nfriend void fun(){\n   Sample S;\n   cout << S.var << endl;\n}\nint main()\n{\n   fun();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`10`",
+     "html": "<code class=\"tok\" dir=\"ltr\">10</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שגיאת קומפילציה",
+     "html": "שגיאת קומפילציה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת זמן ריצה",
+     "html": "שגיאת זמן ריצה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`0`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0</code>"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המילה `friend` מופיעה רק בהצהרה בתוך המחלקה. בהגדרה של `fun` מחוץ למחלקה אסור לכתוב `friend`, וזו שגיאת קומפילציה (בהרצה אכן נכשלה).\nהתשובה היא ב. לא מגיעים לשלב הריצה ולכן `10` אינו נכון.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked a). clang++: compile error (`friend` may appear only inside a class, here on the out-of-class definition).",
+   "correctId": "b",
+   "id": "21S-B-Q7",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה הפלט הנכון של הקוד הנתון?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Sample {\nprivate:\n   int var;\npublic:\n   Sample() {\n      var = 10;\n   }\n   friend void fun();\n};\nfriend void fun(){\n   Sample S;\n   cout &lt;&lt; S.var &lt;&lt; endl;\n}\nint main()\n{\n   fun();\n   return 0;\n}</code></pre>",
+   "explanationHtml": "המילה <code class=\"tok\" dir=\"ltr\">friend</code> מופיעה רק בהצהרה בתוך המחלקה. בהגדרה של <code class=\"tok\" dir=\"ltr\">fun</code> מחוץ למחלקה אסור לכתוב <code class=\"tok\" dir=\"ltr\">friend</code>, וזו שגיאת קומפילציה (בהרצה אכן נכשלה).<br>התשובה היא ב. לא מגיעים לשלב הריצה ולכן <code class=\"tok\" dir=\"ltr\">10</code> אינו נכון.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "787c68d3fda0ad12"
+  },
+  {
+   "num": 8,
+   "topic": "copy_control",
+   "question": "אילו מהפונקציות הבאות \"חייבות\" להשתמש ב-`reference`:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אופרטור השוואה",
+     "html": "אופרטור השוואה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פונקציה בונה מעתיקה",
+     "html": "פונקציה בונה מעתיקה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציה הורסת",
+     "html": "פונקציה הורסת"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "פונקציה בונה עם פרמטרים.",
+     "html": "פונקציה בונה עם פרמטרים."
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי העתקה חייב לקבל את הפרמטר בהפניה (`const A&`). אם יקבל by value, ההעברה של הארגומנט עצמה תקרא לבנאי ההעתקה שוב ושוב, ללא סוף.\nשאר הפונקציות (אופרטור השוואה, הורס, בנאי עם פרמטרים) יכולות לעבוד גם בלי הפניה. התשובה היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer b). A copy constructor must take its parameter by reference (by value would recurse forever).",
+   "correctId": "b",
+   "id": "21S-B-Q8",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "אילו מהפונקציות הבאות \"חייבות\" להשתמש ב-<code class=\"tok\" dir=\"ltr\">reference</code>:",
+   "explanationHtml": "בנאי העתקה חייב לקבל את הפרמטר בהפניה (<code class=\"tok\" dir=\"ltr\">const A&amp;</code>). אם יקבל by value, ההעברה של הארגומנט עצמה תקרא לבנאי ההעתקה שוב ושוב, ללא סוף.<br>שאר הפונקציות (אופרטור השוואה, הורס, בנאי עם פרמטרים) יכולות לעבוד גם בלי הפניה. התשובה היא ב.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "70ac423229d19f62"
+  },
+  {
+   "num": 9,
+   "topic": "operator_overloading",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass Sample {\nprivate:\n   int number;\npublic:\n   Sample(){\n      number = 10;\n   }\n   void operator++(){\n      number = number + 1;\n   }\n   void Display() const {\n      cout << number << endl;\n   }\n};\nint main(){\n   Sample S;\n   S++;\n   S++;\n   S.Display();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`12`",
+     "html": "<code class=\"tok\" dir=\"ltr\">12</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`10`",
+     "html": "<code class=\"tok\" dir=\"ltr\">10</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת תחביר (`syntax`)",
+     "html": "שגיאת תחביר (<code class=\"tok\" dir=\"ltr\">syntax</code>)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ערך אשפה",
+     "html": "ערך אשפה"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האופרטור `operator++()` ללא פרמטר מעמיס רק את ההגדלה הקדמית (`++S`). הביטוי `S++` הוא הגדלה אחורית ודורש `operator++(int)`, ולכן יש שגיאת קומפילציה בשתי השורות.\nהתשובה היא ג (שגיאת תחביר). בהרצה אכן נכשלו שתי השורות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer c). clang++: compile errors on both `S++;` lines (postfix needs `operator++(int)`).",
+   "correctId": "c",
+   "id": "21S-B-Q9",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה הפלט הנכון של הקוד הנתון?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Sample {\nprivate:\n   int number;\npublic:\n   Sample(){\n      number = 10;\n   }\n   void operator++(){\n      number = number + 1;\n   }\n   void Display() const {\n      cout &lt;&lt; number &lt;&lt; endl;\n   }\n};\nint main(){\n   Sample S;\n   S++;\n   S++;\n   S.Display();\n   return 0;\n}</code></pre>",
+   "explanationHtml": "האופרטור <code class=\"tok\" dir=\"ltr\">operator++()</code> ללא פרמטר מעמיס רק את ההגדלה הקדמית (<code class=\"tok\" dir=\"ltr\">++S</code>). הביטוי <code class=\"tok\" dir=\"ltr\">S++</code> הוא הגדלה אחורית ודורש <code class=\"tok\" dir=\"ltr\">operator++(int)</code>, ולכן יש שגיאת קומפילציה בשתי השורות.<br>התשובה היא ג (שגיאת תחביר). בהרצה אכן נכשלו שתי השורות.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ad703814981a58ae"
+  },
+  {
+   "num": 10,
+   "topic": "cpp_basics_refs",
+   "question": "אילו מהאפשרויות הבאות בתכנות מונחה עצמים מתאימה ביותר עבור נושא של העמסת פונקציות (`function overloading`) ופרמטרים ברירת מחדל (`default arguments`):",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הורשה",
+     "html": "הורשה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פולימורפיזם",
+     "html": "פולימורפיזם"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הסתרת מידע",
+     "html": "הסתרת מידע"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יצירת עצמים",
+     "html": "יצירת עצמים"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "העמסת פונקציות ופרמטרים ברירת מחדל מאפשרים לקרוא לאותו שם פונקציה עם סוגים שונים ומספרים שונים של ארגומנטים, וזו צורה של פולימורפיזם (פולימורפיזם בזמן קומפילציה), ולכן תשובה ב. הורשה עוסקת ביחס בין מחלקות, הסתרת מידע עוסקת בהגבלת הגישה לחברי המחלקה, ויצירת עצמים נעשית בבנאים; אף אחת מהן אינה מתארת שם אחד שמתאים לכמה צורות קריאה. בעותק הנבדק של הסטודנט מוקפות גם ב וגם ג והשאלה סומנה כשגויה, ולכן אי אפשר ללמוד ממנו מפתח.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): concept question, one clearly best answer: overloading and default arguments are compile-time (ad-hoc) polymorphism -> b. The graded scan circles both b and c and is marked wrong; it cannot be read as a key. Confidence med.",
+   "correctId": "b",
+   "id": "21S-B-Q10",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "אילו מהאפשרויות הבאות בתכנות מונחה עצמים מתאימה ביותר עבור נושא של העמסת פונקציות (<code class=\"tok\" dir=\"ltr\">function overloading</code>) ופרמטרים ברירת מחדל (<code class=\"tok\" dir=\"ltr\">default arguments</code>):",
+   "explanationHtml": "העמסת פונקציות ופרמטרים ברירת מחדל מאפשרים לקרוא לאותו שם פונקציה עם סוגים שונים ומספרים שונים של ארגומנטים, וזו צורה של פולימורפיזם (פולימורפיזם בזמן קומפילציה), ולכן תשובה ב. הורשה עוסקת ביחס בין מחלקות, הסתרת מידע עוסקת בהגבלת הגישה לחברי המחלקה, ויצירת עצמים נעשית בבנאים; אף אחת מהן אינה מתארת שם אחד שמתאים לכמה צורות קריאה. בעותק הנבדק של הסטודנט מוקפות גם ב וגם ג והשאלה סומנה כשגויה, ולכן אי אפשר ללמוד ממנו מפתח.<br><br>_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_",
+   "dedupKey": "124d397efc471edc"
+  },
+  {
+   "num": 11,
+   "topic": "abstract_multiple",
+   "question": "אילו מהטענות הבאות נכונות עבור מחלקה אבסטרקטית ב-C++?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "(1) ניתן לייצר מצביע מסוג המחלקה האבסטרקטית אך לא ניתן לייצר אובייקט של מחלקה אבסטרקטית.",
+     "html": "(1) ניתן לייצר מצביע מסוג המחלקה האבסטרקטית אך לא ניתן לייצר אובייקט של מחלקה אבסטרקטית."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "(2) מחלקה אבסטרקטית יכולה להכיל משתנים, פונקציות וירטואליות טהורות, ופונקציות אחרות נוספות.",
+     "html": "(2) מחלקה אבסטרקטית יכולה להכיל משתנים, פונקציות וירטואליות טהורות, ופונקציות אחרות נוספות."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שתי התשובות (1) ו-(2) הינן נכונות.",
+     "html": "שתי התשובות (1) ו-(2) הינן נכונות."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף אחת מהתשובות אינה נכונה.",
+     "html": "אף אחת מהתשובות אינה נכונה."
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "שתי הטענות נכונות. אפשר להכריז על מצביע (או הפניה) מטיפוס מחלקה אבסטרקטית, אבל לא ליצור ממנה אובייקט (הרצה: שגיאת קומפילציה). מחלקה אבסטרקטית יכולה להכיל גם משתנים וגם פונקציות רגילות לצד הפונקציה הוירטואלית הטהורה.\nהתשובה היא ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked a). clang++ probes: a pointer to the abstract type compiles, an object does not; a class with data members, a pure virtual and a normal function compiles.",
+   "correctId": "c",
+   "id": "21S-B-Q11",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "אילו מהטענות הבאות נכונות עבור מחלקה אבסטרקטית ב-C++?",
+   "explanationHtml": "שתי הטענות נכונות. אפשר להכריז על מצביע (או הפניה) מטיפוס מחלקה אבסטרקטית, אבל לא ליצור ממנה אובייקט (הרצה: שגיאת קומפילציה). מחלקה אבסטרקטית יכולה להכיל גם משתנים וגם פונקציות רגילות לצד הפונקציה הוירטואלית הטהורה.<br>התשובה היא ג.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "890bf7f3527fb815"
+  },
+  {
+   "num": 12,
+   "topic": "abstract_multiple",
+   "question": "איך \"מכריחים\" מחלקה נגזרת ממשית (`concrete derived class`) להגדיר (`to define`) מתודה וירטואלית?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "על ידי הגדרת פונקציה וירטואלית טהורה ב-`base class`.",
+     "html": "על ידי הגדרת פונקציה וירטואלית טהורה ב-<code class=\"tok\" dir=\"ltr\">base class</code>."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לא ניתן לאלץ מחלקה נגזרת להגדיר מתודה וירטואלית.",
+     "html": "לא ניתן לאלץ מחלקה נגזרת להגדיר מתודה וירטואלית."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "כל הורשה מחייבת את המחלקה הנגזרת להגדיר את כל המתודות הוירטואליות.",
+     "html": "כל הורשה מחייבת את המחלקה הנגזרת להגדיר את כל המתודות הוירטואליות."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לדרוס (`override`) את הפונקציה במחלקה נגזרת.",
+     "html": "לדרוס (<code class=\"tok\" dir=\"ltr\">override</code>) את הפונקציה במחלקה נגזרת."
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "כדי להכריח מחלקה נגזרת ממשית לממש פונקציה, מגדירים אותה בבסיס כוירטואלית טהורה (`= 0`). אם הנגזרת לא תממש, היא עצמה נשארת אבסטרקטית ואי אפשר ליצור ממנה אובייקט (נבדק בהרצה: ההצהרה על אובייקט מהנגזרת שלא מימשה נכשלה).\nב שגויה (אפשר להכריח). ג שגויה (הירושה לא מחייבת מימוש). ד היא מה שהנגזרת עושה, לא האמצעי שמכריח.\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked c). clang++ probe: a derived class that does not define the pure virtual function stays abstract (cannot be instantiated), so a pure virtual function is the mechanism that forces it; d only restates what the derived class does.",
+   "correctId": "a",
+   "id": "21S-B-Q12",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "איך \"מכריחים\" מחלקה נגזרת ממשית (<code class=\"tok\" dir=\"ltr\">concrete derived class</code>) להגדיר (<code class=\"tok\" dir=\"ltr\">to define</code>) מתודה וירטואלית?",
+   "explanationHtml": "כדי להכריח מחלקה נגזרת ממשית לממש פונקציה, מגדירים אותה בבסיס כוירטואלית טהורה (<code class=\"tok\" dir=\"ltr\">= 0</code>). אם הנגזרת לא תממש, היא עצמה נשארת אבסטרקטית ואי אפשר ליצור ממנה אובייקט (נבדק בהרצה: ההצהרה על אובייקט מהנגזרת שלא מימשה נכשלה).<br>ב שגויה (אפשר להכריח). ג שגויה (הירושה לא מחייבת מימוש). ד היא מה שהנגזרת עושה, לא האמצעי שמכריח.<br>התשובה היא א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "7e5d365870dbdfe3"
+  },
+  {
+   "num": 13,
+   "topic": "templates",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\ntemplate <class T, int b>\nclass Sample {\n   T a;\npublic:\n   Sample(T a) {\n      this->a = a;\n   }\n   void print() const {\n      cout << a << \" \" << b << endl;\n   }\n};\nint main(){\n   Sample<int, 20> S(10);\n   S.print();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`10 20`",
+     "html": "<code class=\"tok\" dir=\"ltr\">10 20</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ערכי זבל",
+     "html": "ערכי זבל"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת תחביר (`syntax`)",
+     "html": "שגיאת תחביר (<code class=\"tok\" dir=\"ltr\">syntax</code>)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שגיאה בזמן ריצה",
+     "html": "שגיאה בזמן ריצה"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "התבנית מקבלת סוג `T` וערך שלם `b` כפרמטרים. עם `Sample<int, 20>` הערך `a` הוא 10 ו-`b` הוא 20. הפונקציה `print` היא `const` וקוראת רק, ולכן תקינה.\nהפלט `10 20` (תשובה א). הרצה אישרה זאת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked c). clang++ run printed `10 20`.",
+   "correctId": "a",
+   "id": "21S-B-Q13",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה הפלט הנכון של הקוד הנתון?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;class T, int b&gt;\nclass Sample {\n   T a;\npublic:\n   Sample(T a) {\n      this-&gt;a = a;\n   }\n   void print() const {\n      cout &lt;&lt; a &lt;&lt; \" \" &lt;&lt; b &lt;&lt; endl;\n   }\n};\nint main(){\n   Sample&lt;int, 20&gt; S(10);\n   S.print();\n   return 0;\n}</code></pre>",
+   "explanationHtml": "התבנית מקבלת סוג <code class=\"tok\" dir=\"ltr\">T</code> וערך שלם <code class=\"tok\" dir=\"ltr\">b</code> כפרמטרים. עם <code class=\"tok\" dir=\"ltr\">Sample&lt;int, 20&gt;</code> הערך <code class=\"tok\" dir=\"ltr\">a</code> הוא 10 ו-<code class=\"tok\" dir=\"ltr\">b</code> הוא 20. הפונקציה <code class=\"tok\" dir=\"ltr\">print</code> היא <code class=\"tok\" dir=\"ltr\">const</code> וקוראת רק, ולכן תקינה.<br>הפלט <code class=\"tok\" dir=\"ltr\">10 20</code> (תשובה א). הרצה אישרה זאת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c77a49d3579b89a7"
+  },
+  {
+   "num": 14,
+   "topic": "construction_order",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass Base {\npublic:\n   Base(){\n      cout << \"Base Ctor Called\" << endl;\n   }\n   ~Base(){\n      cout << \"Base Dtor Called\" << endl;\n   }\n};\nclass Derived : Base {\npublic:\n   Derived(){\n      cout << \"Derived Ctor Called\" << endl;\n   }\n   ~Derived(){\n      cout << \"Derived Dtor Called\" << endl;\n   }\n};\nint main(){\n   Base *B;\n   B=new Derived;\n   delete B;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```\nBase Ctor Called\nDerived Ctor Called\nBase Dtor Called\nDerived Dtor Called\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>Base Ctor Called\nDerived Ctor Called\nBase Dtor Called\nDerived Dtor Called</code></pre>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```\nBase Ctor Called\nDerived Ctor Called\nDerived Dtor Called\nBase Dtor Called\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>Base Ctor Called\nDerived Ctor Called\nDerived Dtor Called\nBase Dtor Called</code></pre>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nBase Ctor Called\nDerived Ctor Called\nBase Dtor Called\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>Base Ctor Called\nDerived Ctor Called\nBase Dtor Called</code></pre>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שגיאת זמן קומפילציה",
+     "html": "שגיאת זמן קומפילציה"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`Derived` יורשת מ-`Base` בלי מילת הגישה, ולכן בירושה של `class` זו ירושה `private`. ההמרה מ-`Derived*` ל-`Base*` בהשמה `B=new Derived` אסורה מחוץ למחלקה.\nזו שגיאת קומפילציה (תשובה ד). בהרצה הקומפילציה אכן נכשלה. תשובה ג (שאולי מסמנים כי אין הורס וירטואלי) תהיה נכונה רק אם הירושה הייתה `public`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked c). clang++: compile error, because `class Derived : Base` inherits privately (default for `class`), so the conversion `B = new Derived` to `Base*` is inaccessible.",
+   "correctId": "d",
+   "id": "21S-B-Q14",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה הפלט הנכון של הקוד הנתון?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Base {\npublic:\n   Base(){\n      cout &lt;&lt; \"Base Ctor Called\" &lt;&lt; endl;\n   }\n   ~Base(){\n      cout &lt;&lt; \"Base Dtor Called\" &lt;&lt; endl;\n   }\n};\nclass Derived : Base {\npublic:\n   Derived(){\n      cout &lt;&lt; \"Derived Ctor Called\" &lt;&lt; endl;\n   }\n   ~Derived(){\n      cout &lt;&lt; \"Derived Dtor Called\" &lt;&lt; endl;\n   }\n};\nint main(){\n   Base *B;\n   B=new Derived;\n   delete B;\n   return 0;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">Derived</code> יורשת מ-<code class=\"tok\" dir=\"ltr\">Base</code> בלי מילת הגישה, ולכן בירושה של <code class=\"tok\" dir=\"ltr\">class</code> זו ירושה <code class=\"tok\" dir=\"ltr\">private</code>. ההמרה מ-<code class=\"tok\" dir=\"ltr\">Derived*</code> ל-<code class=\"tok\" dir=\"ltr\">Base*</code> בהשמה <code class=\"tok\" dir=\"ltr\">B=new Derived</code> אסורה מחוץ למחלקה.<br>זו שגיאת קומפילציה (תשובה ד). בהרצה הקומפילציה אכן נכשלה. תשובה ג (שאולי מסמנים כי אין הורס וירטואלי) תהיה נכונה רק אם הירושה הייתה <code class=\"tok\" dir=\"ltr\">public</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d18acf102dec045f"
+  },
+  {
+   "num": 15,
+   "topic": "virtual_polymorphism",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass ClassA {\npublic:\n        void display() { cout << \"Displaying Class A\"; }\n};\n\nclass ClassB : public ClassA {\npublic:\n        void jump(int num) { cout << \"Jumping \" << num << endl; }\n        void display() { ClassA::display();  cout << \"Displaying Class B\" << endl; }\n};\n\nvoid main(){\n        ClassA *aPtr;\n        ClassB b;\n        aPtr->jump(3);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`Jumping 3` - בגלל שמצביעים לאובייקט מסוג `ClassB`.",
+     "html": "<code class=\"tok\" dir=\"ltr\">Jumping 3</code> - בגלל שמצביעים לאובייקט מסוג <code class=\"tok\" dir=\"ltr\">ClassB</code>."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`Jumping 3` – בגלל שהמצביע הוא מסוג `ClassA` והאובייקט הוא מסוג מחלקה יורשת.",
+     "html": "<code class=\"tok\" dir=\"ltr\">Jumping 3</code> – בגלל שהמצביע הוא מסוג <code class=\"tok\" dir=\"ltr\">ClassA</code> והאובייקט הוא מסוג מחלקה יורשת."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת קומפילציה.",
+     "html": "שגיאת קומפילציה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ניתן היה להריץ את התכנית אם `void jump` הייתה מוגדרת כמתודה וירטואלית במחלקה `ClassB` בלבד.",
+     "html": "ניתן היה להריץ את התכנית אם <code class=\"tok\" dir=\"ltr\">void jump</code> הייתה מוגדרת כמתודה וירטואלית במחלקה <code class=\"tok\" dir=\"ltr\">ClassB</code> בלבד."
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`aPtr` הוא מצביע ל-`ClassA`, ולמחלקה `ClassA` אין פונקציה בשם `jump` (היא קיימת רק ב-`ClassB`). הקומפיילר בודק לפי הטיפוס הסטטי של המצביע, ולכן הקריאה `aPtr->jump(3)` היא שגיאת קומפילציה.\nהתשובה היא ג. גם אם `jump` הייתה וירטואלית רק ב-`ClassB` זה לא עוזר, כי היא צריכה להיות מוצהרת בבסיס (אפשרות ד שגויה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer c). clang++: `jump` is not a member of `ClassA` -> compile error on `aPtr->jump(3)` (with `main` made `int main()`; `void main` itself is rejected by clang++).",
+   "correctId": "c",
+   "id": "21S-B-Q15",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה הפלט הנכון של הקוד הנתון?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class ClassA {\npublic:\n        void display() { cout &lt;&lt; \"Displaying Class A\"; }\n};\n\nclass ClassB : public ClassA {\npublic:\n        void jump(int num) { cout &lt;&lt; \"Jumping \" &lt;&lt; num &lt;&lt; endl; }\n        void display() { ClassA::display();  cout &lt;&lt; \"Displaying Class B\" &lt;&lt; endl; }\n};\n\nvoid main(){\n        ClassA *aPtr;\n        ClassB b;\n        aPtr-&gt;jump(3);\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">aPtr</code> הוא מצביע ל-<code class=\"tok\" dir=\"ltr\">ClassA</code>, ולמחלקה <code class=\"tok\" dir=\"ltr\">ClassA</code> אין פונקציה בשם <code class=\"tok\" dir=\"ltr\">jump</code> (היא קיימת רק ב-<code class=\"tok\" dir=\"ltr\">ClassB</code>). הקומפיילר בודק לפי הטיפוס הסטטי של המצביע, ולכן הקריאה <code class=\"tok\" dir=\"ltr\">aPtr-&gt;jump(3)</code> היא שגיאת קומפילציה.<br>התשובה היא ג. גם אם <code class=\"tok\" dir=\"ltr\">jump</code> הייתה וירטואלית רק ב-<code class=\"tok\" dir=\"ltr\">ClassB</code> זה לא עוזר, כי היא צריכה להיות מוצהרת בבסיס (אפשרות ד שגויה).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "b0720dd72ea2208a"
+  },
+  {
+   "num": 16,
+   "topic": "operator_overloading",
+   "question": "כמה שגיאות יש בתוכנית הבאה?\n```cpp\nclass A {\n   int n;\npublic:\n   A(int nn = 0) { n = nn; }\n   A &operator ++() { ++n; return *this; }\n};\nint main()\n{\n   A a(5);\n   A b=++a;\n   A c(a++);\n   cout << a;\n   return 1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "יש רק `operator++()` קדמי. השורה `A b=++a;` תקינה. השורה `A c(a++);` שגויה (אין `operator++(int)`). השורה `cout << a;` שגויה (אין `operator<<` למחלקה). `return 1;` תקין.\nשתי שגיאות (תשובה ג). הרצה הראתה שגיאות בשתי השורות האלה בדיוק.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer c). clang++: errors on `A c(a++);` (no postfix operator++) and `cout << a;` (no operator<<) -> 2.",
+   "correctId": "c",
+   "id": "21S-B-Q16",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "כמה שגיאות יש בתוכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\n   int n;\npublic:\n   A(int nn = 0) { n = nn; }\n   A &amp;operator ++() { ++n; return *this; }\n};\nint main()\n{\n   A a(5);\n   A b=++a;\n   A c(a++);\n   cout &lt;&lt; a;\n   return 1;\n}</code></pre>",
+   "explanationHtml": "יש רק <code class=\"tok\" dir=\"ltr\">operator++()</code> קדמי. השורה <code class=\"tok\" dir=\"ltr\">A b=++a;</code> תקינה. השורה <code class=\"tok\" dir=\"ltr\">A c(a++);</code> שגויה (אין <code class=\"tok\" dir=\"ltr\">operator++(int)</code>). השורה <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a;</code> שגויה (אין <code class=\"tok\" dir=\"ltr\">operator&lt;&lt;</code> למחלקה). <code class=\"tok\" dir=\"ltr\">return 1;</code> תקין.<br>שתי שגיאות (תשובה ג). הרצה הראתה שגיאות בשתי השורות האלה בדיוק.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "33099f362fc8336c"
+  },
+  {
+   "num": 18,
+   "topic": "stl_exceptions",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\n#include <vector>\nvoid func(){\n   vector<int> v(5, 3);\n   for (int i=0;i<v.size();i++)\n      cout << v[i];\n}\nvoid main(){\n   func();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`555`",
+     "html": "<code class=\"tok\" dir=\"ltr\">555</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`33333`",
+     "html": "<code class=\"tok\" dir=\"ltr\">33333</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת קומפילציה",
+     "html": "שגיאת קומפילציה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`53`",
+     "html": "<code class=\"tok\" dir=\"ltr\">53</code>"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`vector<int> v(5, 3)` יוצר חמישה איברים שערכם 3, והלולאה מדפיסה אותם ברצף: `33333`.\nהתשובה היא ב. `555` מבלבל בין הכמות לערך, ו-`53` מניח שהמספרים הם הערך והגודל.\nשים לב: ב-clang `void main` נדחה, לכן הבדיקה בוצעה עם `int main`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked c). clang++ run (with `main` made `int main()`) printed `33333`; `vector<int> v(5, 3)` is five elements of value 3.",
+   "correctId": "b",
+   "id": "21S-B-Q18",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה הפלט הנכון של הקוד הנתון?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\nvoid func(){\n   vector&lt;int&gt; v(5, 3);\n   for (int i=0;i&lt;v.size();i++)\n      cout &lt;&lt; v[i];\n}\nvoid main(){\n   func();\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">vector&lt;int&gt; v(5, 3)</code> יוצר חמישה איברים שערכם 3, והלולאה מדפיסה אותם ברצף: <code class=\"tok\" dir=\"ltr\">33333</code>.<br>התשובה היא ב. <code class=\"tok\" dir=\"ltr\">555</code> מבלבל בין הכמות לערך, ו-<code class=\"tok\" dir=\"ltr\">53</code> מניח שהמספרים הם הערך והגודל.<br>שים לב: ב-clang <code class=\"tok\" dir=\"ltr\">void main</code> נדחה, לכן הבדיקה בוצעה עם <code class=\"tok\" dir=\"ltr\">int main</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2619f5320db92575"
+  },
+  {
+   "num": 19,
+   "topic": "templates",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\ntemplate <typename T>\nvoid fun(const T&x){\n   static int count = 0;\n   cout << \"x = \" << x << \" count = \" << count << endl;\n   ++count;\n   return;\n}\nint main(){\n   fun<int> (1);\n   cout << endl;\n   fun<int>(1);\n   cout << endl;\n   fun<double>(1.1);\n   cout << endl;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```\nx = 1 count = 0\nx = 1 count = 1\nx = 1.1 count = 0\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>x = 1 count = 0\nx = 1 count = 1\nx = 1.1 count = 0</code></pre>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```\nx = 1 count = 0\nx = 1 count = 0\nx = 1.1 count = 0\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>x = 1 count = 0\nx = 1 count = 0\nx = 1.1 count = 0</code></pre>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nx = 1 count = 0\nx = 1 count = 1\nx = 1.1 count = 2\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>x = 1 count = 0\nx = 1 count = 1\nx = 1.1 count = 2</code></pre>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שגיאת קומפילציה",
+     "html": "שגיאת קומפילציה"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה `static int count` הוא אחד לכל מופע של התבנית. `fun<int>` נקראת פעמיים, ולכן הספירה שלה 0 ואז 1. `fun<double>` היא מופע נפרד עם משתנה סטטי נפרד, ולכן הספירה שלו מתחילה מ-0.\nהפלט: `x = 1 count = 0`, `x = 1 count = 1`, `x = 1.1 count = 0` (תשובה א). תשובה ג מניחה משתנה סטטי משותף לכל המופעים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked d). clang++ run: x = 1 count = 0 / x = 1 count = 1 / x = 1.1 count = 0 (blank lines between), i.e. option a: one static per instantiation.",
+   "correctId": "a",
+   "id": "21S-B-Q19",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה הפלט הנכון של הקוד הנתון?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;typename T&gt;\nvoid fun(const T&amp;x){\n   static int count = 0;\n   cout &lt;&lt; \"x = \" &lt;&lt; x &lt;&lt; \" count = \" &lt;&lt; count &lt;&lt; endl;\n   ++count;\n   return;\n}\nint main(){\n   fun&lt;int&gt; (1);\n   cout &lt;&lt; endl;\n   fun&lt;int&gt;(1);\n   cout &lt;&lt; endl;\n   fun&lt;double&gt;(1.1);\n   cout &lt;&lt; endl;\n   return 0;\n}</code></pre>",
+   "explanationHtml": "המשתנה <code class=\"tok\" dir=\"ltr\">static int count</code> הוא אחד לכל מופע של התבנית. <code class=\"tok\" dir=\"ltr\">fun&lt;int&gt;</code> נקראת פעמיים, ולכן הספירה שלה 0 ואז 1. <code class=\"tok\" dir=\"ltr\">fun&lt;double&gt;</code> היא מופע נפרד עם משתנה סטטי נפרד, ולכן הספירה שלו מתחילה מ-0.<br>הפלט: <code class=\"tok\" dir=\"ltr\">x = 1 count = 0</code>, <code class=\"tok\" dir=\"ltr\">x = 1 count = 1</code>, <code class=\"tok\" dir=\"ltr\">x = 1.1 count = 0</code> (תשובה א). תשובה ג מניחה משתנה סטטי משותף לכל המופעים.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "754124f7d0f1c3d9"
+  },
+  {
+   "num": 20,
+   "topic": "friend_this_static",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass X {\npublic:\n   X(int num = 0)\n   {\n      static int counter = 0;\n      cout << num + ++counter;\n   }\n};\nvoid main() {\n   X a;\n   X b(1);\n   X c = b;\n   X d(c);\n   c = X(3);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`136`",
+     "html": "<code class=\"tok\" dir=\"ltr\">136</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`025`",
+     "html": "<code class=\"tok\" dir=\"ltr\">025</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת קומפילציה",
+     "html": "שגיאת קומפילציה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`123`",
+     "html": "<code class=\"tok\" dir=\"ltr\">123</code>"
+    }
+   ],
+   "contextId": "21S-B-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה הסטטי `counter` משותף לכל הקריאות לבנאי. `X a;` מדפיס `0+1=1`, `X b(1);` מדפיס `1+2=3`. `X c = b;` ו-`X d(c);` משתמשים בבנאי ההעתקה המובנה שלא מדפיס כלום. `c = X(3);` יוצר זמני: `3+3=6`.\nהפלט `136` (תשובה א). תשובה ב מניחה שגם ההעתקות מדפיסות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student. clang++ run (with `main` made `int main()`) printed `136`: copies (`X c = b`, `X d(c)`) do not print; a=0+1, b=1+2, `X(3)`=3+3.",
+   "correctId": "a",
+   "id": "21S-B-Q20",
+   "examCode": "21S-B",
+   "examLabel": "2021 סמסטר קיץ מועד ב",
+   "year": 2021,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה הפלט הנכון של הקוד הנתון?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n   X(int num = 0)\n   {\n      static int counter = 0;\n      cout &lt;&lt; num + ++counter;\n   }\n};\nvoid main() {\n   X a;\n   X b(1);\n   X c = b;\n   X d(c);\n   c = X(3);\n}</code></pre>",
+   "explanationHtml": "המשתנה הסטטי <code class=\"tok\" dir=\"ltr\">counter</code> משותף לכל הקריאות לבנאי. <code class=\"tok\" dir=\"ltr\">X a;</code> מדפיס <code class=\"tok\" dir=\"ltr\">0+1=1</code>, <code class=\"tok\" dir=\"ltr\">X b(1);</code> מדפיס <code class=\"tok\" dir=\"ltr\">1+2=3</code>. <code class=\"tok\" dir=\"ltr\">X c = b;</code> ו-<code class=\"tok\" dir=\"ltr\">X d(c);</code> משתמשים בבנאי ההעתקה המובנה שלא מדפיס כלום. <code class=\"tok\" dir=\"ltr\">c = X(3);</code> יוצר זמני: <code class=\"tok\" dir=\"ltr\">3+3=6</code>.<br>הפלט <code class=\"tok\" dir=\"ltr\">136</code> (תשובה א). תשובה ב מניחה שגם ההעתקות מדפיסות.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d97dab4a59828238"
+  },
+  {
+   "num": 1,
+   "topic": "classes_ctor_dtor",
+   "question": "להלן הגדרה חלקית של מחלקה `X`:\n```cpp\nclass X {\npublic:\n     int nx;\n     X(int i) : nx(i) {}\n     X() {}\n     ...\n};\n```\nהשורה `X(){}` בהגדרה הנ\"ל, נחוצה",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "כדי לאפשר להגדיר `X x1;`",
+     "html": "כדי לאפשר להגדיר <code class=\"tok\" dir=\"ltr\">X x1;</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "כדי לאפשר ליצור מערך של אובייקטים של המחלקה `X` בעזרת האופרטור `new`",
+     "html": "כדי לאפשר ליצור מערך של אובייקטים של המחלקה <code class=\"tok\" dir=\"ltr\">X</code> בעזרת האופרטור <code class=\"tok\" dir=\"ltr\">new</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תשובות א ו-ב נכונות.",
+     "html": "תשובות א ו-ב נכונות."
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הבנאי `X(int i)` מוגדר, ולכן הקומפיילר לא מייצר בנאי ברירת מחדל. בלי `X(){}` שתי הפעולות נכשלות: `X x1;` (אין בנאי בלי פרמטרים) ו-`new X[3]` (גם הוא דורש בנאי ברירת מחדל לכל איבר).\nהרצה עם clang++ אישרה ששתי השורות נכשלות בלי `X(){}` ומתקמפלות איתו. לכן התשובה היא ג (גם א וגם ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: without `X(){}` both `X x1;` and `new X[3]` fail to compile; with it both compile -> c.",
+   "correctId": "c",
+   "id": "22B-A-Q1",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "lockOrder": true,
+   "questionHtml": "להלן הגדרה חלקית של מחלקה <code class=\"tok\" dir=\"ltr\">X</code>:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n     int nx;\n     X(int i) : nx(i) {}\n     X() {}\n     ...\n};</code></pre>השורה <code class=\"tok\" dir=\"ltr\">X(){}</code> בהגדרה הנ\"ל, נחוצה",
+   "explanationHtml": "הבנאי <code class=\"tok\" dir=\"ltr\">X(int i)</code> מוגדר, ולכן הקומפיילר לא מייצר בנאי ברירת מחדל. בלי <code class=\"tok\" dir=\"ltr\">X(){}</code> שתי הפעולות נכשלות: <code class=\"tok\" dir=\"ltr\">X x1;</code> (אין בנאי בלי פרמטרים) ו-<code class=\"tok\" dir=\"ltr\">new X[3]</code> (גם הוא דורש בנאי ברירת מחדל לכל איבר).<br>הרצה עם clang++ אישרה ששתי השורות נכשלות בלי <code class=\"tok\" dir=\"ltr\">X(){}</code> ומתקמפלות איתו. לכן התשובה היא ג (גם א וגם ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "235a4d64b600b687"
+  },
+  {
+   "num": 2,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass B{\npublic:\n     B();\n     virtual void p() const;\n     void q() const;\n};\nB::B() {}\nvoid B::p() const{\n     cout << \"B::p\\n\";\n}\nvoid B::q() const{\n     cout << \"B::q\\n\";\n}\n\nclass D : public B{\npublic:\n     D();\n     virtual void p() const;\n     void q() const;\n};\nD::D(){\n}\nvoid D::p() const{\n     cout << \"D::p\\n\";\n}\nvoid D::q() const{\n     cout << \"D::q\\n\";\n}\nint main(){\n     B b;\n     D d;\n     B* pb = new B;\n     B* pd = new D;\n     D* pd2 = new D;\n     b.p(); b.q();\n     d.p(); d.q();\n     pb->p(); pb->q();\n     pd->p(); pd->q();\n     pd2->p(); pd2->q();\n     return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה",
+     "html": "אף תשובה אינה נכונה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nB::p\nB::q\nD::p\nD::q\nB::p\nB::q\nD::p\nB::q\nD::p\nD::q\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>B::p\nB::q\nD::p\nD::q\nB::p\nB::q\nD::p\nB::q\nD::p\nD::q</code></pre>"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה `p` וירטואלית, ולכן קריאה דרך `B*` לאובייקט מטיפוס `D` מפעילה את `D::p`. הפונקציה `q` אינה וירטואלית, ולכן הקריאה נקבעת לפי הטיפוס הסטטי של המצביע.\n- `b`: `B::p B::q`.\n- `d`: `D::p D::q`.\n- `pb` (מצביע ל-B שמצביע ל-B): `B::p B::q`.\n- `pd` (`B*` שמצביע ל-D): `D::p` (וירטואלית) ואז `B::q` (לא וירטואלית).\n- `pd2` (`D*`): `D::p D::q`.\nזה בדיוק הרצף בתשובה ג. הרצה אישרה זאת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed exactly the listing of option c (the only virtual call through B* that reaches D is `pd->p()`; `pd->q()` is non-virtual and prints B::q).",
+   "correctId": "c",
+   "id": "22B-A-Q2",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class B{\npublic:\n     B();\n     virtual void p() const;\n     void q() const;\n};\nB::B() {}\nvoid B::p() const{\n     cout &lt;&lt; \"B::p\\n\";\n}\nvoid B::q() const{\n     cout &lt;&lt; \"B::q\\n\";\n}\n\nclass D : public B{\npublic:\n     D();\n     virtual void p() const;\n     void q() const;\n};\nD::D(){\n}\nvoid D::p() const{\n     cout &lt;&lt; \"D::p\\n\";\n}\nvoid D::q() const{\n     cout &lt;&lt; \"D::q\\n\";\n}\nint main(){\n     B b;\n     D d;\n     B* pb = new B;\n     B* pd = new D;\n     D* pd2 = new D;\n     b.p(); b.q();\n     d.p(); d.q();\n     pb-&gt;p(); pb-&gt;q();\n     pd-&gt;p(); pd-&gt;q();\n     pd2-&gt;p(); pd2-&gt;q();\n     return 0;\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">p</code> וירטואלית, ולכן קריאה דרך <code class=\"tok\" dir=\"ltr\">B*</code> לאובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">D</code> מפעילה את <code class=\"tok\" dir=\"ltr\">D::p</code>. הפונקציה <code class=\"tok\" dir=\"ltr\">q</code> אינה וירטואלית, ולכן הקריאה נקבעת לפי הטיפוס הסטטי של המצביע.<br>- <code class=\"tok\" dir=\"ltr\">b</code>: <code class=\"tok\" dir=\"ltr\">B::p B::q</code>.<br>- <code class=\"tok\" dir=\"ltr\">d</code>: <code class=\"tok\" dir=\"ltr\">D::p D::q</code>.<br>- <code class=\"tok\" dir=\"ltr\">pb</code> (מצביע ל-B שמצביע ל-B): <code class=\"tok\" dir=\"ltr\">B::p B::q</code>.<br>- <code class=\"tok\" dir=\"ltr\">pd</code> (<code class=\"tok\" dir=\"ltr\">B*</code> שמצביע ל-D): <code class=\"tok\" dir=\"ltr\">D::p</code> (וירטואלית) ואז <code class=\"tok\" dir=\"ltr\">B::q</code> (לא וירטואלית).<br>- <code class=\"tok\" dir=\"ltr\">pd2</code> (<code class=\"tok\" dir=\"ltr\">D*</code>): <code class=\"tok\" dir=\"ltr\">D::p D::q</code>.<br>זה בדיוק הרצף בתשובה ג. הרצה אישרה זאת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "731d4c8a6dedcd0b"
+  },
+  {
+   "num": 3,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass Base {\n     virtual void method() { std::cout << \"from Base\" << std::endl; }\npublic:\n     virtual ~Base() { method(); }\n     void baseMethod() { method(); }\n};\nclass A : public Base {\n     void method() { std::cout << \"from A\" << std::endl; }\npublic:\n     ~A() { method(); }\n};\nint main(void) {\n     Base* base = new A;\n     base->baseMethod();\n     delete base;\n     return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```\nfrom A\nfrom A\nfrom Base\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>from A\nfrom A\nfrom Base</code></pre>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```\nfrom A\nfrom Base\nfrom Base\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>from A\nfrom Base\nfrom Base</code></pre>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nfrom Base\nfrom A\nfrom Base\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>from Base\nfrom A\nfrom Base</code></pre>"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה `method` וירטואלית, והקריאה `baseMethod()` מפעילה אותה על אובייקט `A`, ולכן מודפס `from A`.\nב-`delete base` ההורס וירטואלי: קודם `~A`, שקורא ל-`method()` של `A` (`from A`). אחר כך `~Base`: בזמן הרצת ההורס של הבסיס חלק ה-`A` כבר הושמד, ולכן קריאה וירטואלית בתוך ההורס מגיעה ל-`Base::method` (`from Base`).\nהפלט הוא `from A / from A / from Base` (תשובה א). הרצה אישרה זאת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `from A / from A / from Base` (option a).",
+   "correctId": "a",
+   "id": "22B-A-Q3",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Base {\n     virtual void method() { std::cout &lt;&lt; \"from Base\" &lt;&lt; std::endl; }\npublic:\n     virtual ~Base() { method(); }\n     void baseMethod() { method(); }\n};\nclass A : public Base {\n     void method() { std::cout &lt;&lt; \"from A\" &lt;&lt; std::endl; }\npublic:\n     ~A() { method(); }\n};\nint main(void) {\n     Base* base = new A;\n     base-&gt;baseMethod();\n     delete base;\n     return 0;\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">method</code> וירטואלית, והקריאה <code class=\"tok\" dir=\"ltr\">baseMethod()</code> מפעילה אותה על אובייקט <code class=\"tok\" dir=\"ltr\">A</code>, ולכן מודפס <code class=\"tok\" dir=\"ltr\">from A</code>.<br>ב-<code class=\"tok\" dir=\"ltr\">delete base</code> ההורס וירטואלי: קודם <code class=\"tok\" dir=\"ltr\">~A</code>, שקורא ל-<code class=\"tok\" dir=\"ltr\">method()</code> של <code class=\"tok\" dir=\"ltr\">A</code> (<code class=\"tok\" dir=\"ltr\">from A</code>). אחר כך <code class=\"tok\" dir=\"ltr\">~Base</code>: בזמן הרצת ההורס של הבסיס חלק ה-<code class=\"tok\" dir=\"ltr\">A</code> כבר הושמד, ולכן קריאה וירטואלית בתוך ההורס מגיעה ל-<code class=\"tok\" dir=\"ltr\">Base::method</code> (<code class=\"tok\" dir=\"ltr\">from Base</code>).<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">from A / from A / from Base</code> (תשובה א). הרצה אישרה זאת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "3daa6075e2ad846b"
+  },
+  {
+   "num": 4,
+   "topic": "copy_control",
+   "question": "נניח ש- `p1,p2,p3` הם מצביעים לאובייקטים של המחלקה `A`. נניח שבבנאי המחלקה `A` יש הקצאות זיכרון דינאמיות. כדי שאפשר יהיה לבצע השמה מהסוג:\n`*p1=*p2=*p2`",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "רצוי להגדיר פונקציה `A& operator=(const A& a)` במחלקה `A`.",
+     "html": "רצוי להגדיר פונקציה <code class=\"tok\" dir=\"ltr\">A&amp; operator=(const A&amp; a)</code> במחלקה <code class=\"tok\" dir=\"ltr\">A</code>."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "רצוי להגדיר פונקציה `A* operator=(const A& a)` במחלקה `A`.",
+     "html": "רצוי להגדיר פונקציה <code class=\"tok\" dir=\"ltr\">A* operator=(const A&amp; a)</code> במחלקה <code class=\"tok\" dir=\"ltr\">A</code>."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אין צורך להגדיר העמסת אופרטורים להשמה בין שני אוביקטים של המחלקה `A`.",
+     "html": "אין צורך להגדיר העמסת אופרטורים להשמה בין שני אוביקטים של המחלקה <code class=\"tok\" dir=\"ltr\">A</code>."
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "כדי שהשרשור `*p1=*p2=*p2` יעבוד, `operator=` צריך להחזיר הפניה לאובייקט (`A&`), כך שתוצאת ההשמה הפנימית היא אובייקט שאפשר להשים ממנו שוב. עם החזרת `A*` ההשמה השנייה מנסה להשים מצביע לתוך אובייקט ולא מתקמפלת (נבדק).\nמכיוון שיש הקצאות דינמיות, אסור להסתמך על ההשמה המובנית: היא רדודה ומובילה למחיקה כפולה (נבדק: שחרור כפול).\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probes: with `A& operator=` the chain compiles and (with a deep copy) no double delete; with `A* operator=` the chain does not compile (the middle result is a pointer); with no operator= it compiles but the shallow copy double-deletes the array.",
+   "correctId": "a",
+   "id": "22B-A-Q4",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "נניח ש- <code class=\"tok\" dir=\"ltr\">p1,p2,p3</code> הם מצביעים לאובייקטים של המחלקה <code class=\"tok\" dir=\"ltr\">A</code>. נניח שבבנאי המחלקה <code class=\"tok\" dir=\"ltr\">A</code> יש הקצאות זיכרון דינאמיות. כדי שאפשר יהיה לבצע השמה מהסוג:<br><code class=\"tok\" dir=\"ltr\">*p1=*p2=*p2</code>",
+   "explanationHtml": "כדי שהשרשור <code class=\"tok\" dir=\"ltr\">*p1=*p2=*p2</code> יעבוד, <code class=\"tok\" dir=\"ltr\">operator=</code> צריך להחזיר הפניה לאובייקט (<code class=\"tok\" dir=\"ltr\">A&amp;</code>), כך שתוצאת ההשמה הפנימית היא אובייקט שאפשר להשים ממנו שוב. עם החזרת <code class=\"tok\" dir=\"ltr\">A*</code> ההשמה השנייה מנסה להשים מצביע לתוך אובייקט ולא מתקמפלת (נבדק).<br>מכיוון שיש הקצאות דינמיות, אסור להסתמך על ההשמה המובנית: היא רדודה ומובילה למחיקה כפולה (נבדק: שחרור כפול).<br>התשובה היא א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "98eebda229d7a143"
+  },
+  {
+   "num": 5,
+   "topic": "inheritance_access",
+   "question": "נניח שקיימות 4 מחלקות לא אבסטרקטיות, שיחסי הירושה ביניהן הם כפי שמתואר להלן:\n```cpp\nclass X {... };\nclass Y : public X {... };\nclass Z : private Y {... };\nclass W : public Z {... };\n```\nנניח שבמחלקה `X` מוגדרת פונקציה ציבורית (`public`) בשם `f()` שאינה מוגדרת באף אחת מהמחלקות האחרות. נניח שבפונקציה חברה (`member function`) של המחלקה `W` מגדירים אובייקט של המחלקה `W` בשם `w1` ולאחר מכן מבצעים את המשפט:\n`w1.f();`",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "המשפט `w1.f()` יגרום לשגיאת קומפילציה",
+     "html": "המשפט <code class=\"tok\" dir=\"ltr\">w1.f()</code> יגרום לשגיאת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "המשפט `w1.f()` יגרום לשגיאת זמן ריצה",
+     "html": "המשפט <code class=\"tok\" dir=\"ltr\">w1.f()</code> יגרום לשגיאת זמן ריצה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "המשפט `w1.f()` תקין ולא יגרום לשגיאות כלל",
+     "html": "המשפט <code class=\"tok\" dir=\"ltr\">w1.f()</code> תקין ולא יגרום לשגיאות כלל"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`Z` יורשת את `Y` בירושה `private`, ולכן כל החברים של `Y` (כולל `f` שירשה מ-`X`) הופכים לפרטיים ב-`Z`. מחלקה `W`, שיורשת מ-`Z`, אינה יכולה לגשת אליהם, ולכן `w1.f()` נכשלת, גם מתוך פונקציה חברה של `W`.\nזו שגיאת קומפילציה (תשובה א), לא שגיאת זמן ריצה. הקומפילציה בהרצה אכן נכשלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: compile error (`f` became private in Z through `private Y`, so it is inaccessible in W).",
+   "correctId": "a",
+   "id": "22B-A-Q5",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "נניח שקיימות 4 מחלקות לא אבסטרקטיות, שיחסי הירושה ביניהן הם כפי שמתואר להלן:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {... };\nclass Y : public X {... };\nclass Z : private Y {... };\nclass W : public Z {... };</code></pre>נניח שבמחלקה <code class=\"tok\" dir=\"ltr\">X</code> מוגדרת פונקציה ציבורית (<code class=\"tok\" dir=\"ltr\">public</code>) בשם <code class=\"tok\" dir=\"ltr\">f()</code> שאינה מוגדרת באף אחת מהמחלקות האחרות. נניח שבפונקציה חברה (<code class=\"tok\" dir=\"ltr\">member function</code>) של המחלקה <code class=\"tok\" dir=\"ltr\">W</code> מגדירים אובייקט של המחלקה <code class=\"tok\" dir=\"ltr\">W</code> בשם <code class=\"tok\" dir=\"ltr\">w1</code> ולאחר מכן מבצעים את המשפט:<br><code class=\"tok\" dir=\"ltr\">w1.f();</code>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">Z</code> יורשת את <code class=\"tok\" dir=\"ltr\">Y</code> בירושה <code class=\"tok\" dir=\"ltr\">private</code>, ולכן כל החברים של <code class=\"tok\" dir=\"ltr\">Y</code> (כולל <code class=\"tok\" dir=\"ltr\">f</code> שירשה מ-<code class=\"tok\" dir=\"ltr\">X</code>) הופכים לפרטיים ב-<code class=\"tok\" dir=\"ltr\">Z</code>. מחלקה <code class=\"tok\" dir=\"ltr\">W</code>, שיורשת מ-<code class=\"tok\" dir=\"ltr\">Z</code>, אינה יכולה לגשת אליהם, ולכן <code class=\"tok\" dir=\"ltr\">w1.f()</code> נכשלת, גם מתוך פונקציה חברה של <code class=\"tok\" dir=\"ltr\">W</code>.<br>זו שגיאת קומפילציה (תשובה א), לא שגיאת זמן ריצה. הקומפילציה בהרצה אכן נכשלה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "7ba966a3054f20cc"
+  },
+  {
+   "num": 6,
+   "topic": "copy_control",
+   "question": "להלן הצהרות של 6 פונקציות:\n```cpp\nvoid f1(Person &p);\nvoid f2(Person p);\nvoid f3(Person *p);\nPerson f4();\nPerson &f5();\nPerson *f6();\n```\nנניח שמפעילים (דהינו מבצעים קריאה) את כל אחת מ- 6 הפונקציות הנ\"ל. בכמה מההפעלות האלה יהיה בהכרח שימוש בבנאי ההעתקה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "4",
+     "html": "4"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "6",
+     "html": "6"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "רק בהפעלה של `f2` יש בהכרח שימוש בבנאי ההעתקה: הפרמטר מועבר לפי ערך, ולכן האובייקט שנשלח אליה מועתק לתוך `p` (תשובה א). `f1` ו-`f3` מקבלות הפניה ומצביע, ו-`f5` ו-`f6` מחזירות הפניה ומצביע, ולכן אין בהן העתקה של `Person`. ב-`f4` ההחזרה לפי ערך אינה מחייבת העתקה: הקומפיילר רשאי לבנות את הערך המוחזר ישירות במקום היעד (copy elision, RVO), ומ-C++17 החזרה של ביטוי זמני כמו `return Person(...)` מובטחת ללא העתקה. בהרצת clang++ בנאי ההעתקה לא נקרא ב-`f4`. המילה 'בהכרח' מוציאה אפוא את `f4`; מי שסופר גם אותה מגיע ל-2 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): 'necessarily' (בהכרח) is what separates f4: a by-value return may always be elided (RVO/NRVO; guaranteed for a prvalue since C++17) and clang++ does elide it, while f2's by-value parameter copies its lvalue argument -> 1. Probe q06.cpp: f4 copies only with -fno-elide-constructors. Reading f4 as a copy gives 2 (b), hence confidence med.",
+   "correctId": "a",
+   "id": "22B-A-Q6",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "להלן הצהרות של 6 פונקציות:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>void f1(Person &amp;p);\nvoid f2(Person p);\nvoid f3(Person *p);\nPerson f4();\nPerson &amp;f5();\nPerson *f6();</code></pre>נניח שמפעילים (דהינו מבצעים קריאה) את כל אחת מ- 6 הפונקציות הנ\"ל. בכמה מההפעלות האלה יהיה בהכרח שימוש בבנאי ההעתקה:",
+   "explanationHtml": "רק בהפעלה של <code class=\"tok\" dir=\"ltr\">f2</code> יש בהכרח שימוש בבנאי ההעתקה: הפרמטר מועבר לפי ערך, ולכן האובייקט שנשלח אליה מועתק לתוך <code class=\"tok\" dir=\"ltr\">p</code> (תשובה א). <code class=\"tok\" dir=\"ltr\">f1</code> ו-<code class=\"tok\" dir=\"ltr\">f3</code> מקבלות הפניה ומצביע, ו-<code class=\"tok\" dir=\"ltr\">f5</code> ו-<code class=\"tok\" dir=\"ltr\">f6</code> מחזירות הפניה ומצביע, ולכן אין בהן העתקה של <code class=\"tok\" dir=\"ltr\">Person</code>. ב-<code class=\"tok\" dir=\"ltr\">f4</code> ההחזרה לפי ערך אינה מחייבת העתקה: הקומפיילר רשאי לבנות את הערך המוחזר ישירות במקום היעד (copy elision, RVO), ומ-C++17 החזרה של ביטוי זמני כמו <code class=\"tok\" dir=\"ltr\">return Person(...)</code> מובטחת ללא העתקה. בהרצת clang++ בנאי ההעתקה לא נקרא ב-<code class=\"tok\" dir=\"ltr\">f4</code>. המילה 'בהכרח' מוציאה אפוא את <code class=\"tok\" dir=\"ltr\">f4</code>; מי שסופר גם אותה מגיע ל-2 (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "02def7acc708f64e"
+  },
+  {
+   "num": 7,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass B{\npublic:\n     B();\n     B(int n);\n};\nB::B(){\n     cout << \"B::B()\\n\";\n}\nB::B(int n){ cout << \"B::B(\" << n << \")\\n\"; }\n\nclass D : public B{\npublic:\n     D();\n     D(int n);\nprivate:\n     B b;\n};\nD::D(){ cout << \"D::D()\\n\"; }\nD::D(int n) : B(n){\n     b = B(-n);\n     cout << \"D::D(\" << n << \")\\n\";\n}\nint main(){\n     D d(3);\n     return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```\nB::B(3)\nB::B()\nB::B(-3)\nD::D(3)\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>B::B(3)\nB::B()\nB::B(-3)\nD::D(3)</code></pre>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```\nB::B(3)\nB::B(-3)\nD::D(3)\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>B::B(3)\nB::B(-3)\nD::D(3)</code></pre>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nB::B()\nB::B(-3)\nD::D(3)\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>B::B()\nB::B(-3)\nD::D(3)</code></pre>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יש שגיאות בתכנית",
+     "html": "יש שגיאות בתכנית"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "סדר הבנייה: קודם הבסיס `B(n)` עם `n=3` (`B::B(3)`), אחר כך החברים לפי סדר ההצהרה: `b` נבנה בבנאי ברירת מחדל (`B::B()`), כי הוא לא מופיע ברשימת האתחול. רק אחר כך מתחיל גוף הבנאי של `D`.\nבגוף הבנאי השורה `b = B(-n)` יוצרת זמני `B(-3)` (`B::B(-3)`) ומשימה אותו ל-`b`. לבסוף מודפס `D::D(3)`.\nהפלט הוא תשובה א. תשובה ב מפספסת את בניית `b` לפני גוף הבנאי.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed option a (base `B(3)`, then the member `b` default-constructed, then the temporary `B(-3)` for the assignment, then the body of D).",
+   "correctId": "a",
+   "id": "22B-A-Q7",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class B{\npublic:\n     B();\n     B(int n);\n};\nB::B(){\n     cout &lt;&lt; \"B::B()\\n\";\n}\nB::B(int n){ cout &lt;&lt; \"B::B(\" &lt;&lt; n &lt;&lt; \")\\n\"; }\n\nclass D : public B{\npublic:\n     D();\n     D(int n);\nprivate:\n     B b;\n};\nD::D(){ cout &lt;&lt; \"D::D()\\n\"; }\nD::D(int n) : B(n){\n     b = B(-n);\n     cout &lt;&lt; \"D::D(\" &lt;&lt; n &lt;&lt; \")\\n\";\n}\nint main(){\n     D d(3);\n     return 0;\n}</code></pre>",
+   "explanationHtml": "סדר הבנייה: קודם הבסיס <code class=\"tok\" dir=\"ltr\">B(n)</code> עם <code class=\"tok\" dir=\"ltr\">n=3</code> (<code class=\"tok\" dir=\"ltr\">B::B(3)</code>), אחר כך החברים לפי סדר ההצהרה: <code class=\"tok\" dir=\"ltr\">b</code> נבנה בבנאי ברירת מחדל (<code class=\"tok\" dir=\"ltr\">B::B()</code>), כי הוא לא מופיע ברשימת האתחול. רק אחר כך מתחיל גוף הבנאי של <code class=\"tok\" dir=\"ltr\">D</code>.<br>בגוף הבנאי השורה <code class=\"tok\" dir=\"ltr\">b = B(-n)</code> יוצרת זמני <code class=\"tok\" dir=\"ltr\">B(-3)</code> (<code class=\"tok\" dir=\"ltr\">B::B(-3)</code>) ומשימה אותו ל-<code class=\"tok\" dir=\"ltr\">b</code>. לבסוף מודפס <code class=\"tok\" dir=\"ltr\">D::D(3)</code>.<br>הפלט הוא תשובה א. תשובה ב מפספסת את בניית <code class=\"tok\" dir=\"ltr\">b</code> לפני גוף הבנאי.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "afa43d3739deb0c9"
+  },
+  {
+   "num": 8,
+   "topic": "abstract_multiple",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות ?\n```cpp\nclass A {\npublic: A(int _x = 0) { x = _x; }\n     virtual void f() {};\nprotected: int x;\n};\nclass B : public A {\npublic: void AddB(int y) { x += y; }\n};\nclass C : public A {\npublic: void AddC(int y) { x += y; }\n};\nclass D : public B, public C {\npublic: void ShowX() { cout << \"x = \" << x << endl; }\n};\nint main() {\n     D d;\n     d.ShowX();\n     d.AddB(10); d.ShowX();\n     d.AddC(5); d.ShowX();\n     d.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ל-`D` יש שני עותקי `A` (ירושה לא וירטואלית דרך `B` ודרך `C`). לכן:\n- `cout << x` בתוך `ShowX` דו-משמעי (איזה `x`?) ולכן שגיאה.\n- `d.f()` דו-משמעי, שגיאה.\n- הקריאות `AddB` ו-`AddC` תקינות (כל אחת פועלת על ה-`A` של מחלקת האב שלה).\nשתי שורות שגויות (תשובה ג). הרצה אישרה שהשגיאות בשתי השורות האלה בלבד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: errors on exactly two lines: `cout << x` in `D::ShowX` (ambiguous `x`, two A subobjects) and `d.f()` in main (ambiguous `f`); `AddB`/`AddC` are fine.",
+   "correctId": "c",
+   "id": "22B-A-Q8",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic: A(int _x = 0) { x = _x; }\n     virtual void f() {};\nprotected: int x;\n};\nclass B : public A {\npublic: void AddB(int y) { x += y; }\n};\nclass C : public A {\npublic: void AddC(int y) { x += y; }\n};\nclass D : public B, public C {\npublic: void ShowX() { cout &lt;&lt; \"x = \" &lt;&lt; x &lt;&lt; endl; }\n};\nint main() {\n     D d;\n     d.ShowX();\n     d.AddB(10); d.ShowX();\n     d.AddC(5); d.ShowX();\n     d.f();\n}</code></pre>",
+   "explanationHtml": "ל-<code class=\"tok\" dir=\"ltr\">D</code> יש שני עותקי <code class=\"tok\" dir=\"ltr\">A</code> (ירושה לא וירטואלית דרך <code class=\"tok\" dir=\"ltr\">B</code> ודרך <code class=\"tok\" dir=\"ltr\">C</code>). לכן:<br>- <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; x</code> בתוך <code class=\"tok\" dir=\"ltr\">ShowX</code> דו-משמעי (איזה <code class=\"tok\" dir=\"ltr\">x</code>?) ולכן שגיאה.<br>- <code class=\"tok\" dir=\"ltr\">d.f()</code> דו-משמעי, שגיאה.<br>- הקריאות <code class=\"tok\" dir=\"ltr\">AddB</code> ו-<code class=\"tok\" dir=\"ltr\">AddC</code> תקינות (כל אחת פועלת על ה-<code class=\"tok\" dir=\"ltr\">A</code> של מחלקת האב שלה).<br>שתי שורות שגויות (תשובה ג). הרצה אישרה שהשגיאות בשתי השורות האלה בלבד.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a94561511cdeef55"
+  },
+  {
+   "num": 9,
+   "topic": "operator_overloading",
+   "question": "נניח שהוגדרה מחלקה `A` כלשהי. עבור איזה אופרטורים אי אפשר לבצע העמסה על ידי שימוש ב- `member function` של המחלקה `A`:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "עבור אופרטורים שהאופרנד הראשון שלהם הוא אוביקט של מחלקה כלשהי",
+     "html": "עבור אופרטורים שהאופרנד הראשון שלהם הוא אוביקט של מחלקה כלשהי"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "עבור אופרטורים שהאופרנד הראשון שלהם הוא אוביקט של המחלקה `A`",
+     "html": "עבור אופרטורים שהאופרנד הראשון שלהם הוא אוביקט של המחלקה <code class=\"tok\" dir=\"ltr\">A</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "עבור אופרטורים שהאופרנד הראשון שלהם אינו אוביקט של המחלקה `A`",
+     "html": "עבור אופרטורים שהאופרנד הראשון שלהם אינו אוביקט של המחלקה <code class=\"tok\" dir=\"ltr\">A</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לכל האופרטורים אפשר לבצע העמסה על ידי שימוש ב- `member function` של המחלקה `A`",
+     "html": "לכל האופרטורים אפשר לבצע העמסה על ידי שימוש ב- <code class=\"tok\" dir=\"ltr\">member function</code> של המחלקה <code class=\"tok\" dir=\"ltr\">A</code>"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "אופרטור שמוגדר כפונקציה חברה של `A` תמיד מקבל אובייקט `A` כאופרנד השמאלי (`this`). לכן אי אפשר להעמיס כך אופרטורים שהאופרנד הראשון שלהם אינו `A`, כמו `5 + a` או `cout << a`.\nבהרצה: `a + 5` עם חבר התקמפל, `5 + a` לא התקמפל, ו-`cout << a` עם `operator<<` חבר לא התקמפל.\nהתשובה היא ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probes: a member `operator+(int)` works for `a + 5` and fails for `5 + a`; a member `operator<<(ostream&)` fails for `cout << a` (the left operand must be an `A`).",
+   "correctId": "c",
+   "id": "22B-A-Q9",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "נניח שהוגדרה מחלקה <code class=\"tok\" dir=\"ltr\">A</code> כלשהי. עבור איזה אופרטורים אי אפשר לבצע העמסה על ידי שימוש ב- <code class=\"tok\" dir=\"ltr\">member function</code> של המחלקה <code class=\"tok\" dir=\"ltr\">A</code>:",
+   "explanationHtml": "אופרטור שמוגדר כפונקציה חברה של <code class=\"tok\" dir=\"ltr\">A</code> תמיד מקבל אובייקט <code class=\"tok\" dir=\"ltr\">A</code> כאופרנד השמאלי (<code class=\"tok\" dir=\"ltr\">this</code>). לכן אי אפשר להעמיס כך אופרטורים שהאופרנד הראשון שלהם אינו <code class=\"tok\" dir=\"ltr\">A</code>, כמו <code class=\"tok\" dir=\"ltr\">5 + a</code> או <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a</code>.<br>בהרצה: <code class=\"tok\" dir=\"ltr\">a + 5</code> עם חבר התקמפל, <code class=\"tok\" dir=\"ltr\">5 + a</code> לא התקמפל, ו-<code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a</code> עם <code class=\"tok\" dir=\"ltr\">operator&lt;&lt;</code> חבר לא התקמפל.<br>התשובה היא ג.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "7c99ae9977469d84"
+  },
+  {
+   "num": 10,
+   "topic": "templates",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות ?\n```cpp\ntemplate<class T, class U> void f(const T& a, const U& b)\n{}\n\nint main() {\n     int a[2] = { 1,2 };\n     int b[3] = { 1,2,3 };\n     f(a, b);\n     f(&a, &b);\n     f(*a, *b);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "התבנית מקבלת את שני הארגומנטים בהפניה ל-const, ולכן כל הקריאות חוקיות:\n- `f(a, b)`: `T=int[2]`, `U=int[3]` (מערכים לא דועכים כשמקבלים בהפניה).\n- `f(&a, &b)`: מצביעים למערכים (זמניים), נקשרים ל-`const T&`.\n- `f(*a, *b)`: `int` ו-`int`.\nאין שגיאות (תשובה א). הקומפילציה בהרצה עברה ללא שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: compiles with no errors (T and U deduce as `int[2]`/`int[3]` for the by-reference arrays, as pointers-to-array for `&a`/`&b` and as `int` for `*a`/`*b`).",
+   "correctId": "a",
+   "id": "22B-A-Q10",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template&lt;class T, class U&gt; void f(const T&amp; a, const U&amp; b)\n{}\n\nint main() {\n     int a[2] = { 1,2 };\n     int b[3] = { 1,2,3 };\n     f(a, b);\n     f(&amp;a, &amp;b);\n     f(*a, *b);\n}</code></pre>",
+   "explanationHtml": "התבנית מקבלת את שני הארגומנטים בהפניה ל-const, ולכן כל הקריאות חוקיות:<br>- <code class=\"tok\" dir=\"ltr\">f(a, b)</code>: <code class=\"tok\" dir=\"ltr\">T=int[2]</code>, <code class=\"tok\" dir=\"ltr\">U=int[3]</code> (מערכים לא דועכים כשמקבלים בהפניה).<br>- <code class=\"tok\" dir=\"ltr\">f(&amp;a, &amp;b)</code>: מצביעים למערכים (זמניים), נקשרים ל-<code class=\"tok\" dir=\"ltr\">const T&amp;</code>.<br>- <code class=\"tok\" dir=\"ltr\">f(*a, *b)</code>: <code class=\"tok\" dir=\"ltr\">int</code> ו-<code class=\"tok\" dir=\"ltr\">int</code>.<br>אין שגיאות (תשובה א). הקומפילציה בהרצה עברה ללא שגיאות.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a3555d73545ec269"
+  },
+  {
+   "num": 11,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass X {\npublic:\n     X(int i = 0) : nx(i) { cout << nx; }\n     virtual ~X() { cout << nx; }\n     int nx;\n     virtual void f() { cout << nx; }\n};\nclass Y : public X {\npublic:\n     Y(int i=0, int j=0) : ny(i), X(j) { cout << ny; }\n     ~Y() { cout << ny; }\n     int ny;\n     X Xy;\n     void f() { X::f();   cout << nx << Xy.nx; }\n};\nint main() {\n     Y y1(4, 8);\n     y1.X::f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`8048408`",
+     "html": "<code class=\"tok\" dir=\"ltr\">8048408</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`0848480`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0848480</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`0848480`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0848480</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "סדר ההדפסה:\n- בנייה של `y1(4, 8)`: בסיס `X(8)` מדפיס `8`; החבר `Xy` נבנה בבנאי ברירת מחדל ומדפיס `0`; גוף `Y` מדפיס `4`.\n- `y1.X::f()` קורא ישירות ל-`X::f` ומדפיס `nx` שהוא `8`.\n- הריסה בסדר הפוך: `~Y` מדפיס `4`, אחר כך החבר `Xy` (`0`), אחר כך `~X` של הבסיס (`8`).\nהפלט `8048408` (תשובה א). שים לב שתשובות ב ו-ג כתובות באותו אופן בשאלה, ושתיהן שגויות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `8048408`. Options b and c are printed identically (`0848480`) in the source; both are wrong. Order: base X(8) prints 8; member Xy (default 0) prints 0; Y body prints 4; `y1.X::f()` prints 8; then ~Y prints 4, member Xy destroyed prints 0, ~X prints 8.",
+   "correctId": "a",
+   "id": "22B-A-Q11",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n     X(int i = 0) : nx(i) { cout &lt;&lt; nx; }\n     virtual ~X() { cout &lt;&lt; nx; }\n     int nx;\n     virtual void f() { cout &lt;&lt; nx; }\n};\nclass Y : public X {\npublic:\n     Y(int i=0, int j=0) : ny(i), X(j) { cout &lt;&lt; ny; }\n     ~Y() { cout &lt;&lt; ny; }\n     int ny;\n     X Xy;\n     void f() { X::f();   cout &lt;&lt; nx &lt;&lt; Xy.nx; }\n};\nint main() {\n     Y y1(4, 8);\n     y1.X::f();\n}</code></pre>",
+   "explanationHtml": "סדר ההדפסה:<br>- בנייה של <code class=\"tok\" dir=\"ltr\">y1(4, 8)</code>: בסיס <code class=\"tok\" dir=\"ltr\">X(8)</code> מדפיס <code class=\"tok\" dir=\"ltr\">8</code>; החבר <code class=\"tok\" dir=\"ltr\">Xy</code> נבנה בבנאי ברירת מחדל ומדפיס <code class=\"tok\" dir=\"ltr\">0</code>; גוף <code class=\"tok\" dir=\"ltr\">Y</code> מדפיס <code class=\"tok\" dir=\"ltr\">4</code>.<br>- <code class=\"tok\" dir=\"ltr\">y1.X::f()</code> קורא ישירות ל-<code class=\"tok\" dir=\"ltr\">X::f</code> ומדפיס <code class=\"tok\" dir=\"ltr\">nx</code> שהוא <code class=\"tok\" dir=\"ltr\">8</code>.<br>- הריסה בסדר הפוך: <code class=\"tok\" dir=\"ltr\">~Y</code> מדפיס <code class=\"tok\" dir=\"ltr\">4</code>, אחר כך החבר <code class=\"tok\" dir=\"ltr\">Xy</code> (<code class=\"tok\" dir=\"ltr\">0</code>), אחר כך <code class=\"tok\" dir=\"ltr\">~X</code> של הבסיס (<code class=\"tok\" dir=\"ltr\">8</code>).<br>הפלט <code class=\"tok\" dir=\"ltr\">8048408</code> (תשובה א). שים לב שתשובות ב ו-ג כתובות באותו אופן בשאלה, ושתיהן שגויות.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "36018cf61bc84a11"
+  },
+  {
+   "num": 12,
+   "topic": "operator_overloading",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass X {\npublic:\n     int x;\n     X(int i = 0) :x(i) {}\n     X& operator+=(const X b) {\n          this->x += b.x;\n          return *this;\n     }\n};\n\nclass Y : public X {\npublic:\n     int y;\n     Y(int i = 0, int j = 0) :y(i), X(j) {}\n     Y& operator+=(const Y a) {\n          (X&)(*this) += (const X)a;\n          this->y += a.y;\n          return *this;\n     }\n     void print() {\n          cout << this->y << this ->x;\n     }\n};\n\nint main() {\n     X x1(1), x2(2);\n     Y y1(10, 6), y2(20, 5);\n     x2 += x1;\n     (X&)y2 = x2;\n     y2.print();\n     y2 += y1;\n     y2.print();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`106206`",
+     "html": "<code class=\"tok\" dir=\"ltr\">106206</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`203309`",
+     "html": "<code class=\"tok\" dir=\"ltr\">203309</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`106306`",
+     "html": "<code class=\"tok\" dir=\"ltr\">106306</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "השורה `x2 += x1` נותנת `x2.x = 3`. `(X&)y2 = x2` מעתיקה רק את חלק ה-`X` של `y2`: `y2.x = 3`, ו-`y2.y` נשאר 20. ההדפסה הראשונה (`y` ואז `x`): `203`.\nאחרי `y2 += y1`: חלק `X` נעשה `3+6=9` ו-`y` נעשה `20+10=30`: `309`.\nהפלט `203309` (תשובה ב). תשובות א ו-ג מניחות ש-`y` הוחלף.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `203309`: x2 becomes 3, `(X&)y2 = x2` copies only the X part (y2.x = 3, y stays 20) -> `203`; `y2 += y1` gives x=9, y=30 -> `309`.",
+   "correctId": "b",
+   "id": "22B-A-Q12",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה מדפיסה התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n     int x;\n     X(int i = 0) :x(i) {}\n     X&amp; operator+=(const X b) {\n          this-&gt;x += b.x;\n          return *this;\n     }\n};\n\nclass Y : public X {\npublic:\n     int y;\n     Y(int i = 0, int j = 0) :y(i), X(j) {}\n     Y&amp; operator+=(const Y a) {\n          (X&amp;)(*this) += (const X)a;\n          this-&gt;y += a.y;\n          return *this;\n     }\n     void print() {\n          cout &lt;&lt; this-&gt;y &lt;&lt; this -&gt;x;\n     }\n};\n\nint main() {\n     X x1(1), x2(2);\n     Y y1(10, 6), y2(20, 5);\n     x2 += x1;\n     (X&amp;)y2 = x2;\n     y2.print();\n     y2 += y1;\n     y2.print();\n}</code></pre>",
+   "explanationHtml": "השורה <code class=\"tok\" dir=\"ltr\">x2 += x1</code> נותנת <code class=\"tok\" dir=\"ltr\">x2.x = 3</code>. <code class=\"tok\" dir=\"ltr\">(X&amp;)y2 = x2</code> מעתיקה רק את חלק ה-<code class=\"tok\" dir=\"ltr\">X</code> של <code class=\"tok\" dir=\"ltr\">y2</code>: <code class=\"tok\" dir=\"ltr\">y2.x = 3</code>, ו-<code class=\"tok\" dir=\"ltr\">y2.y</code> נשאר 20. ההדפסה הראשונה (<code class=\"tok\" dir=\"ltr\">y</code> ואז <code class=\"tok\" dir=\"ltr\">x</code>): <code class=\"tok\" dir=\"ltr\">203</code>.<br>אחרי <code class=\"tok\" dir=\"ltr\">y2 += y1</code>: חלק <code class=\"tok\" dir=\"ltr\">X</code> נעשה <code class=\"tok\" dir=\"ltr\">3+6=9</code> ו-<code class=\"tok\" dir=\"ltr\">y</code> נעשה <code class=\"tok\" dir=\"ltr\">20+10=30</code>: <code class=\"tok\" dir=\"ltr\">309</code>.<br>הפלט <code class=\"tok\" dir=\"ltr\">203309</code> (תשובה ב). תשובות א ו-ג מניחות ש-<code class=\"tok\" dir=\"ltr\">y</code> הוחלף.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "785f20e1d81c593f"
+  },
+  {
+   "num": 13,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\n# include <vector>\n\nint main() {\n     int a[6] = { 10, 20, 30, 40, 50, 60 };\n     vector<int> v(a+1, a + 5);\n     a[2] = 20;\n     vector<int>::iterator it;\n     it = v.begin();\n     it++;\n     it++;\n     int total = 0;\n     while (it != v.end()) {\n          total += *it;\n          it++;\n     }\n     cout << total << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`70`",
+     "html": "<code class=\"tok\" dir=\"ltr\">70</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`50`",
+     "html": "<code class=\"tok\" dir=\"ltr\">50</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`90`",
+     "html": "<code class=\"tok\" dir=\"ltr\">90</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הווקטור `v` נבנה כעותק של `a[1]..a[4]` = `{20,30,40,50}`. השינוי `a[2] = 20` אחרי הבנייה לא משפיע על `v`, כי הנתונים הועתקו.\nהאיטרטור מתקדם פעמיים ומצביע על `40`, והלולאה מסכמת `40 + 50 = 90`.\nהתשובה היא ג. תשובה א (70) מניחה ש-`v` משתנה עם `a`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed 90: `v` is a copy of {20,30,40,50}, so `a[2] = 20` does not affect it; the loop sums elements 2 and 3 (40+50).",
+   "correctId": "c",
+   "id": "22B-A-Q13",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code># include &lt;vector&gt;\n\nint main() {\n     int a[6] = { 10, 20, 30, 40, 50, 60 };\n     vector&lt;int&gt; v(a+1, a + 5);\n     a[2] = 20;\n     vector&lt;int&gt;::iterator it;\n     it = v.begin();\n     it++;\n     it++;\n     int total = 0;\n     while (it != v.end()) {\n          total += *it;\n          it++;\n     }\n     cout &lt;&lt; total &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "הווקטור <code class=\"tok\" dir=\"ltr\">v</code> נבנה כעותק של <code class=\"tok\" dir=\"ltr\">a[1]..a[4]</code> = <code class=\"tok\" dir=\"ltr\">{20,30,40,50}</code>. השינוי <code class=\"tok\" dir=\"ltr\">a[2] = 20</code> אחרי הבנייה לא משפיע על <code class=\"tok\" dir=\"ltr\">v</code>, כי הנתונים הועתקו.<br>האיטרטור מתקדם פעמיים ומצביע על <code class=\"tok\" dir=\"ltr\">40</code>, והלולאה מסכמת <code class=\"tok\" dir=\"ltr\">40 + 50 = 90</code>.<br>התשובה היא ג. תשובה א (70) מניחה ש-<code class=\"tok\" dir=\"ltr\">v</code> משתנה עם <code class=\"tok\" dir=\"ltr\">a</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "e83292665c8100dc"
+  },
+  {
+   "num": 14,
+   "topic": "classes_ctor_dtor",
+   "question": "כדי לדאוג שלא ניתן יהיה ליצור אובייקטים של מחלקה `A` בפונקציות שאינן פונקציות חברות (`member functions`) או בפונקציות שאינן פונקציות `friend` של המחלקה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "יש לדאוג לכך שהבנאי של מחלקה `A` (`constructor`) יהיה פרטי (`private`)",
+     "html": "יש לדאוג לכך שהבנאי של מחלקה <code class=\"tok\" dir=\"ltr\">A</code> (<code class=\"tok\" dir=\"ltr\">constructor</code>) יהיה פרטי (<code class=\"tok\" dir=\"ltr\">private</code>)"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "יש לדאוג לכך שהבנאי וההורס (`destructor`) של המחלקה `A` יהיו פרטיים",
+     "html": "יש לדאוג לכך שהבנאי וההורס (<code class=\"tok\" dir=\"ltr\">destructor</code>) של המחלקה <code class=\"tok\" dir=\"ltr\">A</code> יהיו פרטיים"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "יש לדאוג לכך שהבנאי, ההורס ובנאי ההעתקה של המחלקה `A` יהיו פרטיים",
+     "html": "יש לדאוג לכך שהבנאי, ההורס ובנאי ההעתקה של המחלקה <code class=\"tok\" dir=\"ltr\">A</code> יהיו פרטיים"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יש לדאוג לכך שהבנאי ובנאי ההעתקה של מחלקה `A` יהיו פרטיים",
+     "html": "יש לדאוג לכך שהבנאי ובנאי ההעתקה של מחלקה <code class=\"tok\" dir=\"ltr\">A</code> יהיו פרטיים"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "אם הבנאי פרטי, אי אפשר ליצור אובייקט מחוץ למחלקה (פרט לפונקציות חברות ול-friend): גם `A a1;` וגם `new A` נכשלים בקומפילציה (נבדק). הבנאי הפרטי מספיק, ואין צורך להפוך פרטיים גם את ההורס ואת בנאי ההעתקה, כי אי אפשר להשיג אובייקט קיים להעתיק ממנו.\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probe: with only the default constructor private, `A a1;` and `new A` in main both fail to compile (an `A` can only come from a member/friend), so the private constructor alone is sufficient; the extra private members in b-d are not needed. Reading of 'sufficient' is the paper's, not compiler-checkable beyond that.",
+   "correctId": "a",
+   "id": "22B-A-Q14",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "כדי לדאוג שלא ניתן יהיה ליצור אובייקטים של מחלקה <code class=\"tok\" dir=\"ltr\">A</code> בפונקציות שאינן פונקציות חברות (<code class=\"tok\" dir=\"ltr\">member functions</code>) או בפונקציות שאינן פונקציות <code class=\"tok\" dir=\"ltr\">friend</code> של המחלקה:",
+   "explanationHtml": "אם הבנאי פרטי, אי אפשר ליצור אובייקט מחוץ למחלקה (פרט לפונקציות חברות ול-friend): גם <code class=\"tok\" dir=\"ltr\">A a1;</code> וגם <code class=\"tok\" dir=\"ltr\">new A</code> נכשלים בקומפילציה (נבדק). הבנאי הפרטי מספיק, ואין צורך להפוך פרטיים גם את ההורס ואת בנאי ההעתקה, כי אי אפשר להשיג אובייקט קיים להעתיק ממנו.<br>התשובה היא א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "73397ac81ff29021"
+  },
+  {
+   "num": 15,
+   "topic": "abstract_multiple",
+   "question": "נניח שקיימות 4 מחלקות לא אבסטרקטיות, שיחסי הירושה ביניהן הם כפי שמתואר להלן:\n```cpp\nclass X { int x; };\nclass Y : public X { int y;... };\nclass Z : public X { int z;... };\nclass W : public Y, public Z { int w;... };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אובייקט של המחלקה `W` מכיל בדיוק אוביקט אחד של המחלקה `X`",
+     "html": "אובייקט של המחלקה <code class=\"tok\" dir=\"ltr\">W</code> מכיל בדיוק אוביקט אחד של המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אובייקט של המחלקה `W` מכיל שני אוביקטים זהים של המחלקה `X`",
+     "html": "אובייקט של המחלקה <code class=\"tok\" dir=\"ltr\">W</code> מכיל שני אוביקטים זהים של המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אובייקט של המחלקה `W` מכיל שני אוביקטים לא בהכרח זהים של המחלקה `X`",
+     "html": "אובייקט של המחלקה <code class=\"tok\" dir=\"ltr\">W</code> מכיל שני אוביקטים לא בהכרח זהים של המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אובייקט של המחלקה `W` מכיל יותר משני אוביקטים של המחלקה `X`",
+     "html": "אובייקט של המחלקה <code class=\"tok\" dir=\"ltr\">W</code> מכיל יותר משני אוביקטים של המחלקה <code class=\"tok\" dir=\"ltr\">X</code>"
+    }
+   ],
+   "contextId": "22B-A-notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "ירושה \"יהלום\" לא וירטואלית: `W` יורשת מ-`Y` ומ-`Z`, שכל אחת יורשת מ-`X`, ולכן `W` מכילה שני עותקים נפרדים של `X`. הם נפרדים בזיכרון ויכולים להחזיק ערכים שונים.\nבהרצה קיבלנו שתי כתובות שונות לשני חלקי ה-`X`, והצבנו בהם ערכים שונים (1 ו-2). לכן הטענה הנכונה היא ג (שני אובייקטים לא בהכרח זהים). א שגויה ו-ב מדויקת פחות (הם לא תמיד זהים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probe: `W` has two distinct `X` subobjects (two different addresses, sizeof(W)=20) that hold different values (1 and 2); so 'two, not necessarily identical' is the accurate statement.",
+   "correctId": "c",
+   "id": "22B-A-Q15",
+   "examCode": "22B-A",
+   "examLabel": "2022 סמסטר ב מועד א",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "נניח שקיימות 4 מחלקות לא אבסטרקטיות, שיחסי הירושה ביניהן הם כפי שמתואר להלן:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X { int x; };\nclass Y : public X { int y;... };\nclass Z : public X { int z;... };\nclass W : public Y, public Z { int w;... };</code></pre>",
+   "explanationHtml": "ירושה \"יהלום\" לא וירטואלית: <code class=\"tok\" dir=\"ltr\">W</code> יורשת מ-<code class=\"tok\" dir=\"ltr\">Y</code> ומ-<code class=\"tok\" dir=\"ltr\">Z</code>, שכל אחת יורשת מ-<code class=\"tok\" dir=\"ltr\">X</code>, ולכן <code class=\"tok\" dir=\"ltr\">W</code> מכילה שני עותקים נפרדים של <code class=\"tok\" dir=\"ltr\">X</code>. הם נפרדים בזיכרון ויכולים להחזיק ערכים שונים.<br>בהרצה קיבלנו שתי כתובות שונות לשני חלקי ה-<code class=\"tok\" dir=\"ltr\">X</code>, והצבנו בהם ערכים שונים (1 ו-2). לכן הטענה הנכונה היא ג (שני אובייקטים לא בהכרח זהים). א שגויה ו-ב מדויקת פחות (הם לא תמיד זהים).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "979c8ce99f413222"
+  },
+  {
+   "num": 1,
+   "topic": "const_references",
+   "question": "בכמה שורות בפונקציה main בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i = 0) { nA = i; }\n    const A& f() const\n    {\n        return *this;\n    }\n    void g() {}\n    int nA;\n};\n\nint main()\n{\n    const A a(2);\n    a.f().g();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האובייקט `a` הוא `const`, ולכן אפשר לקרוא עליו רק למתודות const. `f()` היא const ומחזירה `const A&`. אבל `g()` אינה const, והקריאה `a.f().g()` מפעילה אותה על הפניה ל-const, וזו שגיאה אחת.\nהתשובה היא ב. הרצה אישרה שגיאה בשורה זו בלבד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student b). clang++: one error (`g()` is not const, but `a.f()` returns `const A&`).",
+   "correctId": "b",
+   "id": "22B-B-Q1",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "בכמה שורות בפונקציה main בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i = 0) { nA = i; }\n    const A&amp; f() const\n    {\n        return *this;\n    }\n    void g() {}\n    int nA;\n};\n\nint main()\n{\n    const A a(2);\n    a.f().g();\n    return 0;\n}</code></pre>",
+   "explanationHtml": "האובייקט <code class=\"tok\" dir=\"ltr\">a</code> הוא <code class=\"tok\" dir=\"ltr\">const</code>, ולכן אפשר לקרוא עליו רק למתודות const. <code class=\"tok\" dir=\"ltr\">f()</code> היא const ומחזירה <code class=\"tok\" dir=\"ltr\">const A&amp;</code>. אבל <code class=\"tok\" dir=\"ltr\">g()</code> אינה const, והקריאה <code class=\"tok\" dir=\"ltr\">a.f().g()</code> מפעילה אותה על הפניה ל-const, וזו שגיאה אחת.<br>התשובה היא ב. הרצה אישרה שגיאה בשורה זו בלבד.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "456a8f6571fd67c2"
+  },
+  {
+   "num": 2,
+   "topic": "inheritance_access",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B {\npublic:\n        void print(int n) const;\n};\n\nvoid B::print(int n) const {\n        cout << n << \"\\n\";\n}\n\nclass D : public B {\npublic:\n        void print(int n) const;\n};\n\nvoid D::print(int n) const {\n        if (n <= 1) B::print(n);\n        else if (n % 2 == 0) print(n / 2);\n        else print(3 * n + 1);\n}\n\nint main() {\n        D d;\n        d.print(3);\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`3`",
+     "html": "<code class=\"tok\" dir=\"ltr\">3</code>"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הקריאה `d.print(3)` מפעילה את `D::print` (הפונקציה אינה וירטואלית, אבל הקריאה היא על אובייקט `D`). 3 הוא אי-זוגי, ולכן נקרא `print(10)`, אחר כך 5, 16, 8, 4, 2, 1. כשמגיעים ל-1 נקרא `B::print(1)` שמדפיס את `1`.\nרק הערך האחרון מודפס: `1` (תשובה ב). הרצה אישרה. תשובה ג מניחה שמדפיסים את הערך הראשון.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student b). clang++ run printed `1` (the Collatz chain 3,10,5,16,8,4,2,1 ends in `B::print(1)`; `print` is non-virtual and the recursive calls resolve to `D::print`).",
+   "correctId": "b",
+   "id": "22B-B-Q2",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class B {\npublic:\n        void print(int n) const;\n};\n\nvoid B::print(int n) const {\n        cout &lt;&lt; n &lt;&lt; \"\\n\";\n}\n\nclass D : public B {\npublic:\n        void print(int n) const;\n};\n\nvoid D::print(int n) const {\n        if (n &lt;= 1) B::print(n);\n        else if (n % 2 == 0) print(n / 2);\n        else print(3 * n + 1);\n}\n\nint main() {\n        D d;\n        d.print(3);\n        return 0;\n}</code></pre>",
+   "explanationHtml": "הקריאה <code class=\"tok\" dir=\"ltr\">d.print(3)</code> מפעילה את <code class=\"tok\" dir=\"ltr\">D::print</code> (הפונקציה אינה וירטואלית, אבל הקריאה היא על אובייקט <code class=\"tok\" dir=\"ltr\">D</code>). 3 הוא אי-זוגי, ולכן נקרא <code class=\"tok\" dir=\"ltr\">print(10)</code>, אחר כך 5, 16, 8, 4, 2, 1. כשמגיעים ל-1 נקרא <code class=\"tok\" dir=\"ltr\">B::print(1)</code> שמדפיס את <code class=\"tok\" dir=\"ltr\">1</code>.<br>רק הערך האחרון מודפס: <code class=\"tok\" dir=\"ltr\">1</code> (תשובה ב). הרצה אישרה. תשובה ג מניחה שמדפיסים את הערך הראשון.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "244e90bff0632d7c"
+  },
+  {
+   "num": 3,
+   "topic": "copy_control",
+   "question": "הארגומנטים של בנאי העתקה",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "חייבים להיות מועברים `by reference`",
+     "html": "חייבים להיות מועברים <code class=\"tok\" dir=\"ltr\">by reference</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "חייבים להיות מועברים `by value`",
+     "html": "חייבים להיות מועברים <code class=\"tok\" dir=\"ltr\">by value</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "יכולים להיות מועברים `by reference` או `by value`",
+     "html": "יכולים להיות מועברים <code class=\"tok\" dir=\"ltr\">by reference</code> או <code class=\"tok\" dir=\"ltr\">by value</code>"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי העתקה חייב לקבל את הארגומנט בהפניה. אם הוא היה מקבל by value, כדי להעביר את הארגומנט היה צריך לקרוא שוב לבנאי ההעתקה, וכך הלאה בלי סוף. לכן הקומפיילר אוסר זאת (בהרצה: `A(A a)` נדחה).\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student a). clang++ probe: a copy constructor taking its parameter by value is rejected (`A(A a)`).",
+   "correctId": "a",
+   "id": "22B-B-Q3",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "הארגומנטים של בנאי העתקה",
+   "explanationHtml": "בנאי העתקה חייב לקבל את הארגומנט בהפניה. אם הוא היה מקבל by value, כדי להעביר את הארגומנט היה צריך לקרוא שוב לבנאי ההעתקה, וכך הלאה בלי סוף. לכן הקומפיילר אוסר זאת (בהרצה: <code class=\"tok\" dir=\"ltr\">A(A a)</code> נדחה).<br>התשובה היא א.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d84b9321a1c8c223"
+  },
+  {
+   "num": 4,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\ntemplate <class T, int max> int arrMin(T arr[], int n)\n{\n    int m = max;\n    for (int i = 0; i < n; i++)\n        if (arr[i] < m)\n            m = arr[i];\n    return m;\n}\n\nint main()\n{\n    int arr1[] = { 10, 20, 15, 12 };\n    int n1 = sizeof(arr1) / sizeof(arr1[0]);\n\n    char arr2[] = { 1, 2, 3 };\n    int n2 = sizeof(arr2) / sizeof(arr2[0]);\n\n    // Second template parameter to arrMin must be a\n    // constant\n    cout << arrMin<int, 10000>(arr1, n1) << endl;\n    cout << arrMin<char, 256>(arr2, n2);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`10`",
+     "html": "<code class=\"tok\" dir=\"ltr\">10</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\n10\n1\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>10\n1</code></pre>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה מחפשת מינימום ומתחילה מערך ההתחלה `max`. במערך `{10,20,15,12}` עם `max=10000` המינימום הוא 10. במערך ה-`char` `{1,2,3}` עם `max=256` המינימום הוא 1 (ההשוואה נעשית כ-`int`).\nהפלט: `10` ובשורה הבאה `1` (תשובה ג). הרצה אישרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student c). clang++ run printed `10` then `1`.",
+   "correctId": "c",
+   "id": "22B-B-Q4",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;class T, int max&gt; int arrMin(T arr[], int n)\n{\n    int m = max;\n    for (int i = 0; i &lt; n; i++)\n        if (arr[i] &lt; m)\n            m = arr[i];\n    return m;\n}\n\nint main()\n{\n    int arr1[] = { 10, 20, 15, 12 };\n    int n1 = sizeof(arr1) / sizeof(arr1[0]);\n\n    char arr2[] = { 1, 2, 3 };\n    int n2 = sizeof(arr2) / sizeof(arr2[0]);\n\n    // Second template parameter to arrMin must be a\n    // constant\n    cout &lt;&lt; arrMin&lt;int, 10000&gt;(arr1, n1) &lt;&lt; endl;\n    cout &lt;&lt; arrMin&lt;char, 256&gt;(arr2, n2);\n    return 0;\n}</code></pre>",
+   "explanationHtml": "הפונקציה מחפשת מינימום ומתחילה מערך ההתחלה <code class=\"tok\" dir=\"ltr\">max</code>. במערך <code class=\"tok\" dir=\"ltr\">{10,20,15,12}</code> עם <code class=\"tok\" dir=\"ltr\">max=10000</code> המינימום הוא 10. במערך ה-<code class=\"tok\" dir=\"ltr\">char</code> <code class=\"tok\" dir=\"ltr\">{1,2,3}</code> עם <code class=\"tok\" dir=\"ltr\">max=256</code> המינימום הוא 1 (ההשוואה נעשית כ-<code class=\"tok\" dir=\"ltr\">int</code>).<br>הפלט: <code class=\"tok\" dir=\"ltr\">10</code> ובשורה הבאה <code class=\"tok\" dir=\"ltr\">1</code> (תשובה ג). הרצה אישרה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "708c0308ebe42de7"
+  },
+  {
+   "num": 5,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B {\npublic:\n        B(int i) { nB = i; }\n        int nB;\n};\nclass A : public B {\npublic:\n        A(int i = 1, int j = 2) { nA = 1; nB = j; }\n        A(const A& a) {\n                this->nA = a.nA + 1; this->nB = a.nB + 2;\n        }\n        int nA;\n};\n\nint main() {\n        A a1(1, 2);\n        A a2 = a1;\n        cout << a2.nA << a2.nB;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`14`",
+     "html": "<code class=\"tok\" dir=\"ltr\">14</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`24`",
+     "html": "<code class=\"tok\" dir=\"ltr\">24</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`23`",
+     "html": "<code class=\"tok\" dir=\"ltr\">23</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי של `A` לא מזכיר את בנאי הבסיס בצורה מפורשת, ולכן הקומפיילר מנסה לקרוא לבנאי ברירת המחדל של `B`. אבל ל-`B` יש רק `B(int i)` ואין בנאי ברירת מחדל, ולכן שני הבנאים של `A` (הרגיל ובנאי ההעתקה) נכשלים בקומפילציה.\nהתשובה היא ד. הרצה אישרה את שגיאת הקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Student marked b; the grader's red mark corrects it to d. clang++: compile errors in both `A` constructors (`B` has no default constructor and neither initializer list calls `B(int)`).",
+   "correctId": "d",
+   "id": "22B-B-Q5",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class B {\npublic:\n        B(int i) { nB = i; }\n        int nB;\n};\nclass A : public B {\npublic:\n        A(int i = 1, int j = 2) { nA = 1; nB = j; }\n        A(const A&amp; a) {\n                this-&gt;nA = a.nA + 1; this-&gt;nB = a.nB + 2;\n        }\n        int nA;\n};\n\nint main() {\n        A a1(1, 2);\n        A a2 = a1;\n        cout &lt;&lt; a2.nA &lt;&lt; a2.nB;\n        return 0;\n}</code></pre>",
+   "explanationHtml": "בנאי של <code class=\"tok\" dir=\"ltr\">A</code> לא מזכיר את בנאי הבסיס בצורה מפורשת, ולכן הקומפיילר מנסה לקרוא לבנאי ברירת המחדל של <code class=\"tok\" dir=\"ltr\">B</code>. אבל ל-<code class=\"tok\" dir=\"ltr\">B</code> יש רק <code class=\"tok\" dir=\"ltr\">B(int i)</code> ואין בנאי ברירת מחדל, ולכן שני הבנאים של <code class=\"tok\" dir=\"ltr\">A</code> (הרגיל ובנאי ההעתקה) נכשלים בקומפילציה.<br>התשובה היא ד. הרצה אישרה את שגיאת הקומפילציה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "7c404bfbac944caa"
+  },
+  {
+   "num": 6,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות מבין 4 השורות האחרונות בפונקציה `f` בקטע הקוד הבא יש שגיאות:\n```cpp\nclass A {\npublic:\n        A(int i = 0) { nap = i; }\n        int nA;\n};\n\nclass B : protected A {\npublic:\n        B(int i = 0) { nB = i; }\n        int nB;\n};\n\nclass C : public B {\npublic:\n        C(int i = 0) { nC = i; }\n        int nC;\n};\n\nvoid f() {\n        B b1;\n        C c1;\n        b1.nA = 8;\n        b1.nB = 9;\n        c1.nA = 10;\n        c1.nB = 11;\n}\n\nint main() {\n        f();\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "המחלקה `B` יורשת את `A` בירושה `protected`, ולכן החבר `nA` נגיש רק בתוך `B` ובנגזרות שלה, לא מבחוץ (מתוך `f`). שורות `b1.nA = 8;` ו-`c1.nA = 10;` שגויות. השדות `nB` הם ציבוריים ולכן תקינים.\nשתי שגיאות (תשובה ג). שים לב: בקטע הנסרק בנאי `A` כתוב עם `nap` (שגיאת הקלדה), אבל ההתייחסות היא לארבע השורות האחרונות בלבד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student c). The printed constructor of A reads `nap = i` (a typo in the paper, transcribed as printed); the keyed count is for the four lines of `f` and the harness uses `nA`. clang++: errors on `b1.nA = 8;` and `c1.nA = 10;` (protected after `protected A`) -> 2.",
+   "correctId": "c",
+   "id": "22B-B-Q6",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בכמה שורות מבין 4 השורות האחרונות בפונקציה <code class=\"tok\" dir=\"ltr\">f</code> בקטע הקוד הבא יש שגיאות:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n        A(int i = 0) { nap = i; }\n        int nA;\n};\n\nclass B : protected A {\npublic:\n        B(int i = 0) { nB = i; }\n        int nB;\n};\n\nclass C : public B {\npublic:\n        C(int i = 0) { nC = i; }\n        int nC;\n};\n\nvoid f() {\n        B b1;\n        C c1;\n        b1.nA = 8;\n        b1.nB = 9;\n        c1.nA = 10;\n        c1.nB = 11;\n}\n\nint main() {\n        f();\n        return 0;\n}</code></pre>",
+   "explanationHtml": "המחלקה <code class=\"tok\" dir=\"ltr\">B</code> יורשת את <code class=\"tok\" dir=\"ltr\">A</code> בירושה <code class=\"tok\" dir=\"ltr\">protected</code>, ולכן החבר <code class=\"tok\" dir=\"ltr\">nA</code> נגיש רק בתוך <code class=\"tok\" dir=\"ltr\">B</code> ובנגזרות שלה, לא מבחוץ (מתוך <code class=\"tok\" dir=\"ltr\">f</code>). שורות <code class=\"tok\" dir=\"ltr\">b1.nA = 8;</code> ו-<code class=\"tok\" dir=\"ltr\">c1.nA = 10;</code> שגויות. השדות <code class=\"tok\" dir=\"ltr\">nB</code> הם ציבוריים ולכן תקינים.<br>שתי שגיאות (תשובה ג). שים לב: בקטע הנסרק בנאי <code class=\"tok\" dir=\"ltr\">A</code> כתוב עם <code class=\"tok\" dir=\"ltr\">nap</code> (שגיאת הקלדה), אבל ההתייחסות היא לארבע השורות האחרונות בלבד.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f7cf6e9e0054f8c9"
+  },
+  {
+   "num": 7,
+   "topic": "abstract_multiple",
+   "question": "בכמה שורות בפונקציה main בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n        A(int i = 0) { nA = i; }\n        int nA;\n        void f() { cout << \"abc\"; }\n};\n\nclass B : virtual public A {\npublic:\n        B(int i = 0) { nB = i; }\n        int nB;\n};\n\nclass C : virtual public A {\npublic:\n        C(int i = 0) { nC = i; }\n        int nC;\n};\n\nclass D : virtual public A {\npublic:\n        D(int i = 0) { nD = i; }\n        int nD;\n};\n\nclass E : public B, C, D {\npublic:\n        E(int i = 0) { nE = i; }\n        int nE;\n};\n\nint main() {\n        E e1;\n        e1.f();\n        cout << e1.nA;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "שלושת המחלקות `B`, `C`, `D` יורשות את `A` בירושה וירטואלית, ולכן ב-`E` יש עותק אחד בלבד של `A` והגישה ל-`nA` ול-`f` חד-משמעית. הנתיב דרך `B` ציבורי, ולכן הגישה מותרת גם אם `C` ו-`D` נורשות באופן פרטי.\nאין שגיאות (תשובה א). הרצה הדפיסה `abc0`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Student marked b; the grader's red mark corrects it to a. clang++: compiles and prints `abc0` (single shared virtual `A`; the public path through `B` makes `f` and `nA` accessible).",
+   "correctId": "a",
+   "id": "22B-B-Q7",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "בכמה שורות בפונקציה main בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n        A(int i = 0) { nA = i; }\n        int nA;\n        void f() { cout &lt;&lt; \"abc\"; }\n};\n\nclass B : virtual public A {\npublic:\n        B(int i = 0) { nB = i; }\n        int nB;\n};\n\nclass C : virtual public A {\npublic:\n        C(int i = 0) { nC = i; }\n        int nC;\n};\n\nclass D : virtual public A {\npublic:\n        D(int i = 0) { nD = i; }\n        int nD;\n};\n\nclass E : public B, C, D {\npublic:\n        E(int i = 0) { nE = i; }\n        int nE;\n};\n\nint main() {\n        E e1;\n        e1.f();\n        cout &lt;&lt; e1.nA;\n        return 0;\n}</code></pre>",
+   "explanationHtml": "שלושת המחלקות <code class=\"tok\" dir=\"ltr\">B</code>, <code class=\"tok\" dir=\"ltr\">C</code>, <code class=\"tok\" dir=\"ltr\">D</code> יורשות את <code class=\"tok\" dir=\"ltr\">A</code> בירושה וירטואלית, ולכן ב-<code class=\"tok\" dir=\"ltr\">E</code> יש עותק אחד בלבד של <code class=\"tok\" dir=\"ltr\">A</code> והגישה ל-<code class=\"tok\" dir=\"ltr\">nA</code> ול-<code class=\"tok\" dir=\"ltr\">f</code> חד-משמעית. הנתיב דרך <code class=\"tok\" dir=\"ltr\">B</code> ציבורי, ולכן הגישה מותרת גם אם <code class=\"tok\" dir=\"ltr\">C</code> ו-<code class=\"tok\" dir=\"ltr\">D</code> נורשות באופן פרטי.<br>אין שגיאות (תשובה א). הרצה הדפיסה <code class=\"tok\" dir=\"ltr\">abc0</code>.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "7007f719f6c8968d"
+  },
+  {
+   "num": 8,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass My {\npublic:\n    ~My() {\n        std::cout << \"Hello from ~My()\" << std::endl;\n    }\n};\nclass Derived : public My {\npublic:\n    ~Derived() {\n        std::cout << \"Hello from ~Derived()\" << std::endl;\n    }\n};\nint main() {\n    My* obj = new Derived();\n    delete obj;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`Hello from ~Derived()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">Hello from ~Derived()</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`Hello from ~My()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">Hello from ~My()</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nHello from ~Derived()\nHello from ~My()\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>Hello from ~Derived()\nHello from ~My()</code></pre>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההורס של `My` אינו וירטואלי, ולכן `delete obj` דרך מצביע מסוג `My*` קורא רק להורס של `My`. ההורס של `Derived` לא נקרא (בפועל זו התנהגות לא מוגדרת, אך כך מתנהגת ההרצה).\nהפלט הוא `Hello from ~My()` (תשובה ב). לא היו מודפסות שתי השורות אילו ההורס היה וירטואלי.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Student marked c; the grader's red mark corrects it to b. clang++ run printed only `Hello from ~My()` (non-virtual destructor, deleting through the base pointer; formally undefined behaviour).",
+   "correctId": "b",
+   "id": "22B-B-Q8",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class My {\npublic:\n    ~My() {\n        std::cout &lt;&lt; \"Hello from ~My()\" &lt;&lt; std::endl;\n    }\n};\nclass Derived : public My {\npublic:\n    ~Derived() {\n        std::cout &lt;&lt; \"Hello from ~Derived()\" &lt;&lt; std::endl;\n    }\n};\nint main() {\n    My* obj = new Derived();\n    delete obj;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "ההורס של <code class=\"tok\" dir=\"ltr\">My</code> אינו וירטואלי, ולכן <code class=\"tok\" dir=\"ltr\">delete obj</code> דרך מצביע מסוג <code class=\"tok\" dir=\"ltr\">My*</code> קורא רק להורס של <code class=\"tok\" dir=\"ltr\">My</code>. ההורס של <code class=\"tok\" dir=\"ltr\">Derived</code> לא נקרא (בפועל זו התנהגות לא מוגדרת, אך כך מתנהגת ההרצה).<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">Hello from ~My()</code> (תשובה ב). לא היו מודפסות שתי השורות אילו ההורס היה וירטואלי.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "057157205cecdf8b"
+  },
+  {
+   "num": 9,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <vector>\n\nint main()\n{\n    vector<int> v{ 1, 2, 3, 4, 5 };\n    vector<int>::iterator it;\n\n    it = v.begin();\n    it++;\n    v.erase(it);\n\n    for (vector<int>::iterator it = v.begin(); it != v.end(); ++it)\n        cout << ' ' << *it;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`2 3 4 5`",
+     "html": "<code class=\"tok\" dir=\"ltr\">2 3 4 5</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1 2 4 5`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2 4 5</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`1 3 4 5`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 3 4 5</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הווקטור הוא `{1,2,3,4,5}`. האיטרטור מצביע על האיבר השני (`2`) ואחר כך `erase` מוחק אותו, ונשאר `{1,3,4,5}`. ההדפסה מוסיפה רווח לפני כל מספר.\nהפלט `1 3 4 5` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student c). clang++ run printed ` 1 3 4 5` (each number preceded by a space; the second element is erased). The options are printed without the leading spaces.",
+   "correctId": "c",
+   "id": "22B-B-Q9",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\n\nint main()\n{\n    vector&lt;int&gt; v{ 1, 2, 3, 4, 5 };\n    vector&lt;int&gt;::iterator it;\n\n    it = v.begin();\n    it++;\n    v.erase(it);\n\n    for (vector&lt;int&gt;::iterator it = v.begin(); it != v.end(); ++it)\n        cout &lt;&lt; ' ' &lt;&lt; *it;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "הווקטור הוא <code class=\"tok\" dir=\"ltr\">{1,2,3,4,5}</code>. האיטרטור מצביע על האיבר השני (<code class=\"tok\" dir=\"ltr\">2</code>) ואחר כך <code class=\"tok\" dir=\"ltr\">erase</code> מוחק אותו, ונשאר <code class=\"tok\" dir=\"ltr\">{1,3,4,5}</code>. ההדפסה מוסיפה רווח לפני כל מספר.<br>הפלט <code class=\"tok\" dir=\"ltr\">1 3 4 5</code> (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fd9fdf58409a8910"
+  },
+  {
+   "num": 10,
+   "topic": "classes_ctor_dtor",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n        A() { x = 2; y = 5; };\n        A(int x=3, int y = 6) { this->x = x; this->y = y; }\n        int x = 8;\n        int y = 10;\n};\n\nint main() {\n        A a1;\n        cout << a1.x << a1.y << endl;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`25`",
+     "html": "<code class=\"tok\" dir=\"ltr\">25</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`36`",
+     "html": "<code class=\"tok\" dir=\"ltr\">36</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`810`",
+     "html": "<code class=\"tok\" dir=\"ltr\">810</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ב-`A` יש שני בנאים שאפשר לקרוא להם בלי ארגומנטים: `A()` ו-`A(int x=3, int y=6)` (כל הפרמטרים עם ברירת מחדל). ההגדרה `A a1;` דו-משמעית, ולכן יש שגיאת קומפילציה.\nהתשובה היא ד. הרצה אישרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student d). clang++: compile error, `A a1;` is ambiguous between `A()` and `A(int=3, int=6)`.",
+   "correctId": "d",
+   "id": "22B-B-Q10",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n        A() { x = 2; y = 5; };\n        A(int x=3, int y = 6) { this-&gt;x = x; this-&gt;y = y; }\n        int x = 8;\n        int y = 10;\n};\n\nint main() {\n        A a1;\n        cout &lt;&lt; a1.x &lt;&lt; a1.y &lt;&lt; endl;\n        return 0;\n}</code></pre>",
+   "explanationHtml": "ב-<code class=\"tok\" dir=\"ltr\">A</code> יש שני בנאים שאפשר לקרוא להם בלי ארגומנטים: <code class=\"tok\" dir=\"ltr\">A()</code> ו-<code class=\"tok\" dir=\"ltr\">A(int x=3, int y=6)</code> (כל הפרמטרים עם ברירת מחדל). ההגדרה <code class=\"tok\" dir=\"ltr\">A a1;</code> דו-משמעית, ולכן יש שגיאת קומפילציה.<br>התשובה היא ד. הרצה אישרה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ee08fa4d14a9c05d"
+  },
+  {
+   "num": 11,
+   "topic": "operator_overloading",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n        int num;\n        A(int i = 0) {\n                num = i;\n        }\n};\n\nA& operator++(A& a) {\n        a.num++;\n        return a;\n}\n\nA operator++(A& a, int) {\n        A temp = a;\n        a.num += 2;\n        return temp;\n}\n\nA operator+(const A& a1, const A& a2) {\n        A temp;\n        temp.num = a1.num + a2.num;\n        return temp;\n}\n\nint main()\n{\n        A a1(1), a2(2), a3, a4;\n        a3 = a1++ + ++a2;\n        a4 = operator++(a1, 0) + operator++(a2);\n        cout << a3.num << a4.num;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`47`",
+     "html": "<code class=\"tok\" dir=\"ltr\">47</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`46`",
+     "html": "<code class=\"tok\" dir=\"ltr\">46</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`36`",
+     "html": "<code class=\"tok\" dir=\"ltr\">36</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`56`",
+     "html": "<code class=\"tok\" dir=\"ltr\">56</code>"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "מתחילים עם `a1=1`, `a2=2`. בשורה הראשונה: `a1++` מחזיר עותק ישן (1) ומגדיל את `a1` ב-2 (ל-3). `++a2` מגדיל ל-3. לכן `a3 = 1 + 3 = 4`.\nבשורה השנייה: `operator++(a1, 0)` מחזיר 3 ומגדיל את `a1` ל-5; `operator++(a2)` מגדיל ל-4. לכן `a4 = 3 + 4 = 7`.\nהפלט הוא `47` (תשובה א). הרצה אישרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student a). clang++ run printed `47` (a3 = 1 + 3 = 4; then a1: 3 -> returns 3, a2 becomes 4, so a4 = 3 + 4 = 7).",
+   "correctId": "a",
+   "id": "22B-B-Q11",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n        int num;\n        A(int i = 0) {\n                num = i;\n        }\n};\n\nA&amp; operator++(A&amp; a) {\n        a.num++;\n        return a;\n}\n\nA operator++(A&amp; a, int) {\n        A temp = a;\n        a.num += 2;\n        return temp;\n}\n\nA operator+(const A&amp; a1, const A&amp; a2) {\n        A temp;\n        temp.num = a1.num + a2.num;\n        return temp;\n}\n\nint main()\n{\n        A a1(1), a2(2), a3, a4;\n        a3 = a1++ + ++a2;\n        a4 = operator++(a1, 0) + operator++(a2);\n        cout &lt;&lt; a3.num &lt;&lt; a4.num;\n        return 0;\n}</code></pre>",
+   "explanationHtml": "מתחילים עם <code class=\"tok\" dir=\"ltr\">a1=1</code>, <code class=\"tok\" dir=\"ltr\">a2=2</code>. בשורה הראשונה: <code class=\"tok\" dir=\"ltr\">a1++</code> מחזיר עותק ישן (1) ומגדיל את <code class=\"tok\" dir=\"ltr\">a1</code> ב-2 (ל-3). <code class=\"tok\" dir=\"ltr\">++a2</code> מגדיל ל-3. לכן <code class=\"tok\" dir=\"ltr\">a3 = 1 + 3 = 4</code>.<br>בשורה השנייה: <code class=\"tok\" dir=\"ltr\">operator++(a1, 0)</code> מחזיר 3 ומגדיל את <code class=\"tok\" dir=\"ltr\">a1</code> ל-5; <code class=\"tok\" dir=\"ltr\">operator++(a2)</code> מגדיל ל-4. לכן <code class=\"tok\" dir=\"ltr\">a4 = 3 + 4 = 7</code>.<br>הפלט הוא <code class=\"tok\" dir=\"ltr\">47</code> (תשובה א). הרצה אישרה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "35f1ce315788f000"
+  },
+  {
+   "num": 12,
+   "topic": "copy_control",
+   "question": "כיצד ניתן לגרום לכך שכל אוביקט של מחלקה `A` יהיה בלתי ניתן להעתקה?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר את בנאי ההעתקה של המחלקה `A` כ- `private`",
+     "html": "להגדיר את בנאי ההעתקה של המחלקה <code class=\"tok\" dir=\"ltr\">A</code> כ- <code class=\"tok\" dir=\"ltr\">private</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר את אופרטור ההשמה (האופרטור `=`) במחלקה `A` כ- `private`",
+     "html": "להגדיר את אופרטור ההשמה (האופרטור <code class=\"tok\" dir=\"ltr\">=</code>) במחלקה <code class=\"tok\" dir=\"ltr\">A</code> כ- <code class=\"tok\" dir=\"ltr\">private</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר את בנאי ההעתקה של המחלקה `A` כ- `private` ולהגדיר את אופרטור ההשמה במחלקה `A` כ- `private`",
+     "html": "להגדיר את בנאי ההעתקה של המחלקה <code class=\"tok\" dir=\"ltr\">A</code> כ- <code class=\"tok\" dir=\"ltr\">private</code> ולהגדיר את אופרטור ההשמה במחלקה <code class=\"tok\" dir=\"ltr\">A</code> כ- <code class=\"tok\" dir=\"ltr\">private</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה.",
+     "html": "אף תשובה אינה נכונה."
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "כדי שאי אפשר יהיה להעתיק אובייקט צריך לחסום שני דברים: יצירה בהעתקה (בנאי העתקה) והשמה (`operator=`). אם רק אחד מהם פרטי, האחר עדיין מאפשר להעתיק. בהרצה: עם בנאי העתקה פרטי בלבד ההשמה עדיין עבדה, ועם השמה פרטית בלבד בנאי ההעתקה עדיין עבד.\nהתשובה היא ג (שניהם פרטיים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Student marked d; the grader's red mark corrects it to c. clang++ probes: with only the copy constructor private, assignment still works; with only `operator=` private, copy construction still works; both private blocks both.",
+   "correctId": "c",
+   "id": "22B-B-Q12",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "כיצד ניתן לגרום לכך שכל אוביקט של מחלקה <code class=\"tok\" dir=\"ltr\">A</code> יהיה בלתי ניתן להעתקה?",
+   "explanationHtml": "כדי שאי אפשר יהיה להעתיק אובייקט צריך לחסום שני דברים: יצירה בהעתקה (בנאי העתקה) והשמה (<code class=\"tok\" dir=\"ltr\">operator=</code>). אם רק אחד מהם פרטי, האחר עדיין מאפשר להעתיק. בהרצה: עם בנאי העתקה פרטי בלבד ההשמה עדיין עבדה, ועם השמה פרטית בלבד בנאי ההעתקה עדיין עבד.<br>התשובה היא ג (שניהם פרטיים).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "06e950db9629969e"
+  },
+  {
+   "num": 13,
+   "topic": "composition",
+   "question": "כמה משפטים מבין שלושת המשפטים הבאים נכונים:\n1. יחס `IS-A` בין מחלקות מתקיים כאשר ישנה הורשה בין המחלקות.\n2. יחס `IS-A` בין מחלקות מתקיים כאשר ישנה הכלה בין המחלקות.\n3. שימוש ברב צורתיות (`polymorphism`) מתבצע כאשר מתקיים יחס `IS-A` בין מחלקות שקשורות לשימוש זה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "יחס `IS-A` מתקיים בהורשה (טענה 1 נכונה). בהכלה מתקיים יחס `HAS-A`, לא `IS-A` (טענה 2 שגויה). פולימורפיזם מתבצע על מחלקות הקשורות ביחס `IS-A` בהורשה (טענה 3 נכונה).\nשתי טענות נכונות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student c). Concept question: statements 1 and 3 are true, 2 is false (containment is HAS-A).",
+   "correctId": "c",
+   "id": "22B-B-Q13",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "הכלה וסדר אתחול",
+   "questionHtml": "כמה משפטים מבין שלושת המשפטים הבאים נכונים:<br>1. יחס <code class=\"tok\" dir=\"ltr\">IS-A</code> בין מחלקות מתקיים כאשר ישנה הורשה בין המחלקות.<br>2. יחס <code class=\"tok\" dir=\"ltr\">IS-A</code> בין מחלקות מתקיים כאשר ישנה הכלה בין המחלקות.<br>3. שימוש ברב צורתיות (<code class=\"tok\" dir=\"ltr\">polymorphism</code>) מתבצע כאשר מתקיים יחס <code class=\"tok\" dir=\"ltr\">IS-A</code> בין מחלקות שקשורות לשימוש זה.",
+   "explanationHtml": "יחס <code class=\"tok\" dir=\"ltr\">IS-A</code> מתקיים בהורשה (טענה 1 נכונה). בהכלה מתקיים יחס <code class=\"tok\" dir=\"ltr\">HAS-A</code>, לא <code class=\"tok\" dir=\"ltr\">IS-A</code> (טענה 2 שגויה). פולימורפיזם מתבצע על מחלקות הקשורות ביחס <code class=\"tok\" dir=\"ltr\">IS-A</code> בהורשה (טענה 3 נכונה).<br>שתי טענות נכונות (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8f716256aed6d7e5"
+  },
+  {
+   "num": 14,
+   "topic": "friend_this_static",
+   "question": "כמה משפטים מבין שלושת המשפטים הבאים נכונים (עבור שפת C++):\n1. במילת המפתח `friend` ניתן להשתמש בתוך הגדרת מחלקה כדי לאפשר גישה למחלקה אחרת.\n2. במילת המפתח `friend` ניתן להשתמש בחלק ה- `public` של הגדרת המחלקה.\n3. במילת המפתח `friend` ניתן להשתמש בחלק ה- `private` של הגדרת המחלקה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "המילה `friend` מופיעה בתוך הגדרת המחלקה כדי להעניק גישה לפונקציה או למחלקה אחרת. אין חשיבות לאזור הגישה (`public` או `private`) שבו היא כתובה: ההצהרה נכונה בשניהם. בהרצה, הצהרות `friend` בשני האזורים התקמפלו ופעלו.\nכל שלוש הטענות נכונות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student d). clang++ probe: `friend` declarations (class and function) inside the public section and inside the private section both compile and work.",
+   "correctId": "d",
+   "id": "22B-B-Q14",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "כמה משפטים מבין שלושת המשפטים הבאים נכונים (עבור שפת C++):<br>1. במילת המפתח <code class=\"tok\" dir=\"ltr\">friend</code> ניתן להשתמש בתוך הגדרת מחלקה כדי לאפשר גישה למחלקה אחרת.<br>2. במילת המפתח <code class=\"tok\" dir=\"ltr\">friend</code> ניתן להשתמש בחלק ה- <code class=\"tok\" dir=\"ltr\">public</code> של הגדרת המחלקה.<br>3. במילת המפתח <code class=\"tok\" dir=\"ltr\">friend</code> ניתן להשתמש בחלק ה- <code class=\"tok\" dir=\"ltr\">private</code> של הגדרת המחלקה.",
+   "explanationHtml": "המילה <code class=\"tok\" dir=\"ltr\">friend</code> מופיעה בתוך הגדרת המחלקה כדי להעניק גישה לפונקציה או למחלקה אחרת. אין חשיבות לאזור הגישה (<code class=\"tok\" dir=\"ltr\">public</code> או <code class=\"tok\" dir=\"ltr\">private</code>) שבו היא כתובה: ההצהרה נכונה בשניהם. בהרצה, הצהרות <code class=\"tok\" dir=\"ltr\">friend</code> בשני האזורים התקמפלו ופעלו.<br>כל שלוש הטענות נכונות (תשובה ד).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2a2f6650f825da9a"
+  },
+  {
+   "num": 15,
+   "topic": "operator_conversions",
+   "question": "בכמה שורות בפונקציה main בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i = 0) { nA = i; }\n    int nA;\n};\n\nclass B {\npublic:\n    B(int i = 0) { nB = i; }\n    operator A() { ... // קטע קוד תקין כלשהו }\n    int nB;\n};\n\nint main() {\n    A a1;\n    B b1;\n    a1 = b1;\n    b1 = a1;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "contextId": "22B-B-notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "השורה `a1 = b1;` תקינה: אופרטור ההמרה `operator A()` ממיר `B` ל-`A`. השורה `b1 = a1;` שגויה: אין המרה מ-`A` ל-`B` (הבנאי של `B` מקבל `int`, ול-`A` אין אופרטור המרה ל-`int`).\nשגיאה אחת (תשובה ב). הרצה אישרה (עם גוף תקין ל-`operator A()`).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student b). clang++ (with a valid body for `operator A()`): `a1 = b1;` is fine through the conversion operator; `b1 = a1;` fails (no conversion from `A` to `B` or to `int`) -> 1.",
+   "correctId": "b",
+   "id": "22B-B-Q15",
+   "examCode": "22B-B",
+   "examLabel": "2022 סמסטר ב מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "אופרטורי המרה",
+   "questionHtml": "בכמה שורות בפונקציה main בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i = 0) { nA = i; }\n    int nA;\n};\n\nclass B {\npublic:\n    B(int i = 0) { nB = i; }\n    operator A() { ... // קטע קוד תקין כלשהו }\n    int nB;\n};\n\nint main() {\n    A a1;\n    B b1;\n    a1 = b1;\n    b1 = a1;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "השורה <code class=\"tok\" dir=\"ltr\">a1 = b1;</code> תקינה: אופרטור ההמרה <code class=\"tok\" dir=\"ltr\">operator A()</code> ממיר <code class=\"tok\" dir=\"ltr\">B</code> ל-<code class=\"tok\" dir=\"ltr\">A</code>. השורה <code class=\"tok\" dir=\"ltr\">b1 = a1;</code> שגויה: אין המרה מ-<code class=\"tok\" dir=\"ltr\">A</code> ל-<code class=\"tok\" dir=\"ltr\">B</code> (הבנאי של <code class=\"tok\" dir=\"ltr\">B</code> מקבל <code class=\"tok\" dir=\"ltr\">int</code>, ול-<code class=\"tok\" dir=\"ltr\">A</code> אין אופרטור המרה ל-<code class=\"tok\" dir=\"ltr\">int</code>).<br>שגיאה אחת (תשובה ב). הרצה אישרה (עם גוף תקין ל-<code class=\"tok\" dir=\"ltr\">operator A()</code>).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fe0e1bc9a43d5be5"
+  },
+  {
+   "num": 2,
+   "topic": "construction_order",
+   "question": "מה יודפס בקטע קוד הבא ?\n```cpp\nclass A {\npublic:\n    A(int i) {\n        cout << \"A's Constructor\" << i << endl;\n    }\n    A(const A & other) {\n        cout << \"A's copy Constructor\" << endl;\n    }\n    A& operator=(A& other) {\n        cout << \"A=\" << endl;\n        return *this;\n    }\n    virtual void f(int i = 7) const {\n        cout << \"A's f\" << i << endl;\n    }\n};\nclass B:public A {\npublic:\n    B() : A(2) {\n        cout << \"B's default Constructor\" << endl;\n    }\n    B(int i,int j) : A(i) {\n        cout << \"B's parameter Constructor\" << i << j << endl;\n    }\n    virtual ~B() {\n        cout << \"B's Destructor\" << endl;\n    }\n    void f(int k = 9,int q = 10) const {\n        cout << \"B's f\" << k << q << endl;\n        A::f(q);\n    }\n};\nint main() {\n    B b1(19,20);\n    A a1 = b1;\n    A* p;\n    p = new B[2];\n    p[0] = b1;\n    p[0].f(2,3);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "A's Constructor19\nB's parameter Constructor1920\nA's copy Constructor\nA's Constructor2\nB's default Constructor\nA's Constructor2\nB's default Constructor\nA=\nB’s f23\nB’s f3\nB's Destructor",
+     "html": "A's Constructor19<br>B's parameter Constructor1920<br>A's copy Constructor<br>A's Constructor2<br>B's default Constructor<br>A's Constructor2<br>B's default Constructor<br>A=<br>B’s f23<br>B’s f3<br>B's Destructor"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "B's parameter Constructor1920\nA's Constructor19\nA's copy Constructor\nB's default Constructor\nA's Constructor2\nA's Constructor2\nB's default Constructor\nA=\nB’s f23\nB’s f3\nB's Destructor",
+     "html": "B's parameter Constructor1920<br>A's Constructor19<br>A's copy Constructor<br>B's default Constructor<br>A's Constructor2<br>A's Constructor2<br>B's default Constructor<br>A=<br>B’s f23<br>B’s f3<br>B's Destructor"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "A's Constructor19\nB's parameter Constructor1920\nA's copy Constructor\nB's default Constructor\nA's Constructor2\nA's Constructor2\nB's default Constructor\nB's Destructor\nA=\nB’s f23\nB’s f3",
+     "html": "A's Constructor19<br>B's parameter Constructor1920<br>A's copy Constructor<br>B's default Constructor<br>A's Constructor2<br>A's Constructor2<br>B's default Constructor<br>B's Destructor<br>A=<br>B’s f23<br>B’s f3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התוכנית לא מתקמפלת",
+     "html": "התוכנית לא מתקמפלת"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הקוד מגיע לשורה `p[0].f(2,3)`, ושם `p` הוא מצביע מטיפוס `A*`, ולכן `p[0]` הוא אובייקט מטיפוס `A`. בשפה הפונקציה שנקראת נבחרת לפי הטיפוס הסטטי: ב-`A` הפונקציה `f` מקבלת ארגומנט אחד (`int i = 7`), והקריאה שולחת שניים. ההגדרה `f(int k, int q)` של `B` לא נראית דרך `A`. זו שגיאת קומפילציה (clang++: too many arguments to function call), ולכן התוכנית אינה מתקמפלת (תשובה ד) ואף פלט אינו מודפס. שלוש האפשרויות האחרות מתארות הרצה שלא מתרחשת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "22S-B-Q2",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה יודפס בקטע קוד הבא ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i) {\n        cout &lt;&lt; \"A's Constructor\" &lt;&lt; i &lt;&lt; endl;\n    }\n    A(const A &amp; other) {\n        cout &lt;&lt; \"A's copy Constructor\" &lt;&lt; endl;\n    }\n    A&amp; operator=(A&amp; other) {\n        cout &lt;&lt; \"A=\" &lt;&lt; endl;\n        return *this;\n    }\n    virtual void f(int i = 7) const {\n        cout &lt;&lt; \"A's f\" &lt;&lt; i &lt;&lt; endl;\n    }\n};\nclass B:public A {\npublic:\n    B() : A(2) {\n        cout &lt;&lt; \"B's default Constructor\" &lt;&lt; endl;\n    }\n    B(int i,int j) : A(i) {\n        cout &lt;&lt; \"B's parameter Constructor\" &lt;&lt; i &lt;&lt; j &lt;&lt; endl;\n    }\n    virtual ~B() {\n        cout &lt;&lt; \"B's Destructor\" &lt;&lt; endl;\n    }\n    void f(int k = 9,int q = 10) const {\n        cout &lt;&lt; \"B's f\" &lt;&lt; k &lt;&lt; q &lt;&lt; endl;\n        A::f(q);\n    }\n};\nint main() {\n    B b1(19,20);\n    A a1 = b1;\n    A* p;\n    p = new B[2];\n    p[0] = b1;\n    p[0].f(2,3);\n    return 0;\n}</code></pre>",
+   "explanationHtml": "הקוד מגיע לשורה <code class=\"tok\" dir=\"ltr\">p[0].f(2,3)</code>, ושם <code class=\"tok\" dir=\"ltr\">p</code> הוא מצביע מטיפוס <code class=\"tok\" dir=\"ltr\">A*</code>, ולכן <code class=\"tok\" dir=\"ltr\">p[0]</code> הוא אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">A</code>. בשפה הפונקציה שנקראת נבחרת לפי הטיפוס הסטטי: ב-<code class=\"tok\" dir=\"ltr\">A</code> הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> מקבלת ארגומנט אחד (<code class=\"tok\" dir=\"ltr\">int i = 7</code>), והקריאה שולחת שניים. ההגדרה <code class=\"tok\" dir=\"ltr\">f(int k, int q)</code> של <code class=\"tok\" dir=\"ltr\">B</code> לא נראית דרך <code class=\"tok\" dir=\"ltr\">A</code>. זו שגיאת קומפילציה (clang++: too many arguments to function call), ולכן התוכנית אינה מתקמפלת (תשובה ד) ואף פלט אינו מודפס. שלוש האפשרויות האחרות מתארות הרצה שלא מתרחשת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "9a18268b71f8e76e"
+  },
+  {
+   "num": 3,
+   "topic": "virtual_polymorphism",
+   "question": "איזה בין הטענות הבאות **הטענה הנכונה**? נא לבחור תשובה אחד בלבד!\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ה- `virtual table` נוצרת עבור האובייקט של המחלקה המכילה לפחות פונקציה וירטואלית אחת",
+     "html": "ה- <code class=\"tok\" dir=\"ltr\">virtual table</code> נוצרת עבור האובייקט של המחלקה המכילה לפחות פונקציה וירטואלית אחת"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ה- `virtual table` נוצרת עבור כל אובייקט ב- C++",
+     "html": "ה- <code class=\"tok\" dir=\"ltr\">virtual table</code> נוצרת עבור כל אובייקט ב- C++"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "ה- `virtual table` מציינת מצביע עבור כל הפונקציות ותכונות במחלקה וירטואלית",
+     "html": "ה- <code class=\"tok\" dir=\"ltr\">virtual table</code> מציינת מצביע עבור כל הפונקציות ותכונות במחלקה וירטואלית"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ה- `virtual table` נוצרת עבור כל מחלקה ב- C++",
+     "html": "ה- <code class=\"tok\" dir=\"ltr\">virtual table</code> נוצרת עבור כל מחלקה ב- C++"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "ה-vtable נוצרת פעם אחת לכל מחלקה שיש בה (או בבסיס שלה) לפחות פונקציה וירטואלית, ולא לכל מחלקה (ד שגויה) ולא לכל אובייקט (ב שגויה). כל אובייקט של מחלקה כזו מחזיק רק מצביע (`vptr`) אל ה-vtable של המחלקה שלו. הטענה ג שגויה כי ה-vtable מכילה מצביעים לפונקציות הוירטואליות בלבד, לא לתכונות. נשארת א כטענה הקרובה ביותר לנכון: ה-vtable קיימת עבור מחלקה שמכילה לפחות פונקציה וירטואלית אחת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule.",
+   "id": "22S-B-Q3",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "איזה בין הטענות הבאות <strong>הטענה הנכונה</strong>? נא לבחור תשובה אחד בלבד!<br>",
+   "explanationHtml": "ה-vtable נוצרת פעם אחת לכל מחלקה שיש בה (או בבסיס שלה) לפחות פונקציה וירטואלית, ולא לכל מחלקה (ד שגויה) ולא לכל אובייקט (ב שגויה). כל אובייקט של מחלקה כזו מחזיק רק מצביע (<code class=\"tok\" dir=\"ltr\">vptr</code>) אל ה-vtable של המחלקה שלו. הטענה ג שגויה כי ה-vtable מכילה מצביעים לפונקציות הוירטואליות בלבד, לא לתכונות. נשארת א כטענה הקרובה ביותר לנכון: ה-vtable קיימת עבור מחלקה שמכילה לפחות פונקציה וירטואלית אחת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "49ce77fa6589b5f6"
+  },
+  {
+   "num": 4,
+   "topic": "construction_order",
+   "question": "מה יודפס בקטע הקוד הבא?\n```cpp\nclass A {\npublic:\n    int x;\n    A() {\n        x = 6;\n        cout << \"A's Constructor \" << x << endl;\n    }\n    A(int i) {\n        cout << \"A's Constructor \" << i << endl;\n        x = i;\n    }\n    A(const A& other) {\n        cout << \"A's copy Constructor \" << endl;\n    }\n    A& operator=(A& other) {\n        cout << \"A= \" << other.x << endl;\n        return *this;\n    }\n    void virtual f(int i = 8) const {\n        cout << \"A's f \" << i << endl;\n    }\n};\nvoid main(){\n    A arr[3];\n    arr[0] = arr[1];\n    arr[0].f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "A's Constructor 6\nA's Constructor 6\nA's Constructor 6\nA= 6\nA's f 8",
+     "html": "A's Constructor 6<br>A's Constructor 6<br>A's Constructor 6<br>A= 6<br>A's f 8"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "A's Constructor 6\nA's Constructor 6\nA's Constructor 6\nA's f 8\nA= 6",
+     "html": "A's Constructor 6<br>A's Constructor 6<br>A's Constructor 6<br>A's f 8<br>A= 6"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "A's Constructor 6\nA's Constructor 6\nA's f 8\nA's Constructor 6\nA= 6",
+     "html": "A's Constructor 6<br>A's Constructor 6<br>A's f 8<br>A's Constructor 6<br>A= 6"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התוכנית תקרוס תוך כדי ריצה",
+     "html": "התוכנית תקרוס תוך כדי ריצה"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההצהרה `A arr[3]` מפעילה את בנאי ברירת המחדל שלוש פעמים, ומדפיסה שלוש שורות `A's Constructor 6`. אחר כך `arr[0] = arr[1]` קוראת לאופרטור ההשמה ומדפיסה `A= 6` (`other.x` הוא 6). לבסוף `arr[0].f()` מדפיסה `A's f 8` (ערך ברירת המחדל). הפלט הוא האפשרות א. בשתי האפשרויות האחרות הסדר שגוי, ואין קריסה בהרצה (הרצת clang++ הדפיסה בדיוק את הפלט של א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "22S-B-Q4",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה יודפס בקטע הקוד הבא?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    int x;\n    A() {\n        x = 6;\n        cout &lt;&lt; \"A's Constructor \" &lt;&lt; x &lt;&lt; endl;\n    }\n    A(int i) {\n        cout &lt;&lt; \"A's Constructor \" &lt;&lt; i &lt;&lt; endl;\n        x = i;\n    }\n    A(const A&amp; other) {\n        cout &lt;&lt; \"A's copy Constructor \" &lt;&lt; endl;\n    }\n    A&amp; operator=(A&amp; other) {\n        cout &lt;&lt; \"A= \" &lt;&lt; other.x &lt;&lt; endl;\n        return *this;\n    }\n    void virtual f(int i = 8) const {\n        cout &lt;&lt; \"A's f \" &lt;&lt; i &lt;&lt; endl;\n    }\n};\nvoid main(){\n    A arr[3];\n    arr[0] = arr[1];\n    arr[0].f();\n}</code></pre>",
+   "explanationHtml": "ההצהרה <code class=\"tok\" dir=\"ltr\">A arr[3]</code> מפעילה את בנאי ברירת המחדל שלוש פעמים, ומדפיסה שלוש שורות <code class=\"tok\" dir=\"ltr\">A's Constructor 6</code>. אחר כך <code class=\"tok\" dir=\"ltr\">arr[0] = arr[1]</code> קוראת לאופרטור ההשמה ומדפיסה <code class=\"tok\" dir=\"ltr\">A= 6</code> (<code class=\"tok\" dir=\"ltr\">other.x</code> הוא 6). לבסוף <code class=\"tok\" dir=\"ltr\">arr[0].f()</code> מדפיסה <code class=\"tok\" dir=\"ltr\">A's f 8</code> (ערך ברירת המחדל). הפלט הוא האפשרות א. בשתי האפשרויות האחרות הסדר שגוי, ואין קריסה בהרצה (הרצת clang++ הדפיסה בדיוק את הפלט של א).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4ea12b398657641f"
+  },
+  {
+   "num": 5,
+   "topic": "friend_this_static",
+   "question": "איזה בין הטענות הבאות **הטענה הנכונה**? נא לבחור תשובה אחד בלבד!\nהפונקציה החברה (`friend`) היא:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "פונקציה הנחתמת בגוף המחלקה כולל תכונת `friend`, אבל לא שייכת למחלקה והיא פונקציה גלובלית.",
+     "html": "פונקציה הנחתמת בגוף המחלקה כולל תכונת <code class=\"tok\" dir=\"ltr\">friend</code>, אבל לא שייכת למחלקה והיא פונקציה גלובלית."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פונקציה של מחלקה אחרת הנחתמת במחלקה הנוכחית עם תכונת `friend`.",
+     "html": "פונקציה של מחלקה אחרת הנחתמת במחלקה הנוכחית עם תכונת <code class=\"tok\" dir=\"ltr\">friend</code>."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציה של המחלקה כולל תכונת `friend`.",
+     "html": "פונקציה של המחלקה כולל תכונת <code class=\"tok\" dir=\"ltr\">friend</code>."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הפונקציה של המחלקה הנוכחית שנחתמת במחלקה אחרת.",
+     "html": "הפונקציה של המחלקה הנוכחית שנחתמת במחלקה אחרת."
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "פונקציה חברה (`friend`) מוצהרת בתוך גוף המחלקה עם המילה `friend`, אבל היא אינה חלק מהמחלקה (אינה פונקציה חברה-מחלקה) ולכן היא פונקציה גלובלית שמותר לה לגשת לחברים הפרטיים. זו האפשרות א. האפשרות ג שגויה כי `friend` אינה פונקציה של המחלקה, וד הפוכה מההגדרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule.",
+   "id": "22S-B-Q5",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "איזה בין הטענות הבאות <strong>הטענה הנכונה</strong>? נא לבחור תשובה אחד בלבד!<br>הפונקציה החברה (<code class=\"tok\" dir=\"ltr\">friend</code>) היא:",
+   "explanationHtml": "פונקציה חברה (<code class=\"tok\" dir=\"ltr\">friend</code>) מוצהרת בתוך גוף המחלקה עם המילה <code class=\"tok\" dir=\"ltr\">friend</code>, אבל היא אינה חלק מהמחלקה (אינה פונקציה חברה-מחלקה) ולכן היא פונקציה גלובלית שמותר לה לגשת לחברים הפרטיים. זו האפשרות א. האפשרות ג שגויה כי <code class=\"tok\" dir=\"ltr\">friend</code> אינה פונקציה של המחלקה, וד הפוכה מההגדרה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "68aa6bf83ae61218"
+  },
+  {
+   "num": 6,
+   "topic": "inheritance_access",
+   "question": "איזה בין הטענות הבאות **הטענה הנכונה**? נא לבחור תשובה אחד בלבד!\nהרשאה `protected` במחלקה מאפשרת:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "תכונות ופונקציות של המחלקה ניתן לזמן גם בתוך המחלקה וגם להשתמש בהם מחוץ למחלקה.",
+     "html": "תכונות ופונקציות של המחלקה ניתן לזמן גם בתוך המחלקה וגם להשתמש בהם מחוץ למחלקה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "תכונות ופונקציות של המחלקה ניתן לזמן אך ורק בתוך המחלקה או במחלקות נגזרות (יורשות) ממנה.",
+     "html": "תכונות ופונקציות של המחלקה ניתן לזמן אך ורק בתוך המחלקה או במחלקות נגזרות (יורשות) ממנה."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תכונות ופונקציות של המחלקה ניתן לזמן אך ורק בתוך המחלקה.",
+     "html": "תכונות ופונקציות של המחלקה ניתן לזמן אך ורק בתוך המחלקה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף טענה לא נכונה.",
+     "html": "אף טענה לא נכונה."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הרשאת `protected` מאפשרת גישה לחברים רק מתוך המחלקה עצמה ומתוך מחלקות שיורשות ממנה, ולא מבחוץ. זו האפשרות ב. א מתארת את `public`, ג מתארת את `private`, ולכן ד שגויה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule.",
+   "id": "22S-B-Q6",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "איזה בין הטענות הבאות <strong>הטענה הנכונה</strong>? נא לבחור תשובה אחד בלבד!<br>הרשאה <code class=\"tok\" dir=\"ltr\">protected</code> במחלקה מאפשרת:",
+   "explanationHtml": "הרשאת <code class=\"tok\" dir=\"ltr\">protected</code> מאפשרת גישה לחברים רק מתוך המחלקה עצמה ומתוך מחלקות שיורשות ממנה, ולא מבחוץ. זו האפשרות ב. א מתארת את <code class=\"tok\" dir=\"ltr\">public</code>, ג מתארת את <code class=\"tok\" dir=\"ltr\">private</code>, ולכן ד שגויה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "9dd7853db3f3db94"
+  },
+  {
+   "num": 7,
+   "topic": "templates",
+   "question": "מה יודפס ?\n```cpp\ntemplate<class T>class Counter\n{\n    static int counter;\n    const int id;\npublic:\n    Counter() :id(++counter) {}\n    int getId() { return id; }\n    static int getCounter() { return counter; }\n};\nclass B : public Counter<B> {};\nclass C : public Counter<C> {};\ntemplate<class T>\nint Counter<T>::counter = 0;\nC c;\nint main()\n{\n    B b;\n    static C c;\n    cout << B::getCounter() << b.getId() ; cout << C::getCounter();\n    C* pc = new C();\n    cout << B::getCounter() ;\n    cout << C::getCounter()  << pc->getId() ;\n    return 1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התוכנית לא עוברת קומפילציה",
+     "html": "התוכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "התוכנית זורקת הודעת חריגה",
+     "html": "התוכנית זורקת הודעת חריגה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "112133",
+     "html": "112133"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "111223",
+     "html": "111223"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ל-`Counter<B>` ול-`Counter<C>` יש `counter` סטטי נפרד לכל אחד, כי כל מופע של התבנית הוא מחלקה נפרדת. האובייקט הגלובלי `C c` נבנה לפני `main` ומקדם את מונה `C` ל-1. ב-`main`: `B b` מקדם את מונה `B` ל-1 (`id` 1), ו-`static C c` מקדם את מונה `C` ל-2. ההדפסה הראשונה: `B::getCounter()` הוא 1, `b.getId()` הוא 1, `C::getCounter()` הוא 2, כלומר `112`. אחר כך `new C()` מקדם את מונה `C` ל-3 (`id` 3): `1`, `3`, `3`, כלומר `133`. הפלט `112133` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "22S-B-Q7",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה יודפס ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template&lt;class T&gt;class Counter\n{\n    static int counter;\n    const int id;\npublic:\n    Counter() :id(++counter) {}\n    int getId() { return id; }\n    static int getCounter() { return counter; }\n};\nclass B : public Counter&lt;B&gt; {};\nclass C : public Counter&lt;C&gt; {};\ntemplate&lt;class T&gt;\nint Counter&lt;T&gt;::counter = 0;\nC c;\nint main()\n{\n    B b;\n    static C c;\n    cout &lt;&lt; B::getCounter() &lt;&lt; b.getId() ; cout &lt;&lt; C::getCounter();\n    C* pc = new C();\n    cout &lt;&lt; B::getCounter() ;\n    cout &lt;&lt; C::getCounter()  &lt;&lt; pc-&gt;getId() ;\n    return 1;\n}</code></pre>",
+   "explanationHtml": "ל-<code class=\"tok\" dir=\"ltr\">Counter&lt;B&gt;</code> ול-<code class=\"tok\" dir=\"ltr\">Counter&lt;C&gt;</code> יש <code class=\"tok\" dir=\"ltr\">counter</code> סטטי נפרד לכל אחד, כי כל מופע של התבנית הוא מחלקה נפרדת. האובייקט הגלובלי <code class=\"tok\" dir=\"ltr\">C c</code> נבנה לפני <code class=\"tok\" dir=\"ltr\">main</code> ומקדם את מונה <code class=\"tok\" dir=\"ltr\">C</code> ל-1. ב-<code class=\"tok\" dir=\"ltr\">main</code>: <code class=\"tok\" dir=\"ltr\">B b</code> מקדם את מונה <code class=\"tok\" dir=\"ltr\">B</code> ל-1 (<code class=\"tok\" dir=\"ltr\">id</code> 1), ו-<code class=\"tok\" dir=\"ltr\">static C c</code> מקדם את מונה <code class=\"tok\" dir=\"ltr\">C</code> ל-2. ההדפסה הראשונה: <code class=\"tok\" dir=\"ltr\">B::getCounter()</code> הוא 1, <code class=\"tok\" dir=\"ltr\">b.getId()</code> הוא 1, <code class=\"tok\" dir=\"ltr\">C::getCounter()</code> הוא 2, כלומר <code class=\"tok\" dir=\"ltr\">112</code>. אחר כך <code class=\"tok\" dir=\"ltr\">new C()</code> מקדם את מונה <code class=\"tok\" dir=\"ltr\">C</code> ל-3 (<code class=\"tok\" dir=\"ltr\">id</code> 3): <code class=\"tok\" dir=\"ltr\">1</code>, <code class=\"tok\" dir=\"ltr\">3</code>, <code class=\"tok\" dir=\"ltr\">3</code>, כלומר <code class=\"tok\" dir=\"ltr\">133</code>. הפלט <code class=\"tok\" dir=\"ltr\">112133</code> (תשובה ג), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "560503fee8e4820e"
+  },
+  {
+   "num": 8,
+   "topic": "construction_order",
+   "question": "מה יודפס ?\n```cpp\nclass A {\npublic: A() { cout << \"ea\"; }\n    ~A() { cout << \"A\"; }\n};\nclass C {\npublic: C() { cout << \"c\"; }\n    ~C() { cout << \"C\"; }\n};\nclass B :public A {\npublic:\n    C c;\n    B() {\n        cout << \"eb\";\n    }\n    ~B() { cout << \"B\"; }\n};\nB b;\nint main()\n{\n    A a;\n    C c;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התוכנית לא עוברת קומפילציה",
+     "html": "התוכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "acbaceacCACBA",
+     "html": "acbaceacCACBA"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "eacebeacCABCA",
+     "html": "eacebeacCABCA"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "eacaccabCCAAB",
+     "html": "eacaccabCCAAB"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האובייקט הגלובלי `b` נבנה לפני `main`: קודם הבסיס `A` (`ea`), אחר כך החבר `C c` (`c`), ואז גוף הבנאי של `B` (`eb`), כלומר `eaceb`. ב-`main` נבנים `a` (`ea`) ו-`c` (`c`): `eac`. בסיום `main` הם נהרסים בסדר הפוך: `C` ואז `A`. לבסוף, בסיום התוכנית, נהרס `b`: קודם גוף `~B` (`B`), אחר כך החבר `c` (`C`), ואז הבסיס (`A`). הפלט הוא `eacebeacCABCA` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "22S-B-Q8",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה יודפס ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic: A() { cout &lt;&lt; \"ea\"; }\n    ~A() { cout &lt;&lt; \"A\"; }\n};\nclass C {\npublic: C() { cout &lt;&lt; \"c\"; }\n    ~C() { cout &lt;&lt; \"C\"; }\n};\nclass B :public A {\npublic:\n    C c;\n    B() {\n        cout &lt;&lt; \"eb\";\n    }\n    ~B() { cout &lt;&lt; \"B\"; }\n};\nB b;\nint main()\n{\n    A a;\n    C c;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "האובייקט הגלובלי <code class=\"tok\" dir=\"ltr\">b</code> נבנה לפני <code class=\"tok\" dir=\"ltr\">main</code>: קודם הבסיס <code class=\"tok\" dir=\"ltr\">A</code> (<code class=\"tok\" dir=\"ltr\">ea</code>), אחר כך החבר <code class=\"tok\" dir=\"ltr\">C c</code> (<code class=\"tok\" dir=\"ltr\">c</code>), ואז גוף הבנאי של <code class=\"tok\" dir=\"ltr\">B</code> (<code class=\"tok\" dir=\"ltr\">eb</code>), כלומר <code class=\"tok\" dir=\"ltr\">eaceb</code>. ב-<code class=\"tok\" dir=\"ltr\">main</code> נבנים <code class=\"tok\" dir=\"ltr\">a</code> (<code class=\"tok\" dir=\"ltr\">ea</code>) ו-<code class=\"tok\" dir=\"ltr\">c</code> (<code class=\"tok\" dir=\"ltr\">c</code>): <code class=\"tok\" dir=\"ltr\">eac</code>. בסיום <code class=\"tok\" dir=\"ltr\">main</code> הם נהרסים בסדר הפוך: <code class=\"tok\" dir=\"ltr\">C</code> ואז <code class=\"tok\" dir=\"ltr\">A</code>. לבסוף, בסיום התוכנית, נהרס <code class=\"tok\" dir=\"ltr\">b</code>: קודם גוף <code class=\"tok\" dir=\"ltr\">~B</code> (<code class=\"tok\" dir=\"ltr\">B</code>), אחר כך החבר <code class=\"tok\" dir=\"ltr\">c</code> (<code class=\"tok\" dir=\"ltr\">C</code>), ואז הבסיס (<code class=\"tok\" dir=\"ltr\">A</code>). הפלט הוא <code class=\"tok\" dir=\"ltr\">eacebeacCABCA</code> (תשובה ג), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4b00d31ab11a77ae"
+  },
+  {
+   "num": 9,
+   "topic": "templates",
+   "question": "מה יודפס בקטע קוד הבא ?\n```cpp\ntemplate <typename T>\nclass C {\n    template <typename S>\n    friend ostream& operator<<(ostream& out, C<S> c1) {\n        out << c1.data;\n        return out;\n    }\nprivate:\n    T data;\npublic:\n    C(T d) {\n        data = d;\n    }\n    C(const C& other) {\n        data = other.data;\n    }\n    C operator+(C<T>& other) {\n        C res(data + other.data);\n        return res;\n    }\n    bool operator!=(C& other) {\n        return data != other.data;\n    }\n    int f(int x) {\n        if (x < 0)\n            return x;\n        return x + data;\n    }\n};\n\nint main() {\n    C<int> c1(4), c2(5);\n    cout << c1;\n    c1 = c1 + c2;\n    cout << c1;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "94",
+     "html": "94"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "49",
+     "html": "49"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "904",
+     "html": "904"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "409",
+     "html": "409"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההדפסה הראשונה `cout << c1` מדפיסה 4. אחרי `c1 = c1 + c2` הערך הוא 4+5=9, וההדפסה השנייה מדפיסה 9. הפלט הוא `49` (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "22S-B-Q9",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה יודפס בקטע קוד הבא ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;typename T&gt;\nclass C {\n    template &lt;typename S&gt;\n    friend ostream&amp; operator&lt;&lt;(ostream&amp; out, C&lt;S&gt; c1) {\n        out &lt;&lt; c1.data;\n        return out;\n    }\nprivate:\n    T data;\npublic:\n    C(T d) {\n        data = d;\n    }\n    C(const C&amp; other) {\n        data = other.data;\n    }\n    C operator+(C&lt;T&gt;&amp; other) {\n        C res(data + other.data);\n        return res;\n    }\n    bool operator!=(C&amp; other) {\n        return data != other.data;\n    }\n    int f(int x) {\n        if (x &lt; 0)\n            return x;\n        return x + data;\n    }\n};\n\nint main() {\n    C&lt;int&gt; c1(4), c2(5);\n    cout &lt;&lt; c1;\n    c1 = c1 + c2;\n    cout &lt;&lt; c1;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "ההדפסה הראשונה <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; c1</code> מדפיסה 4. אחרי <code class=\"tok\" dir=\"ltr\">c1 = c1 + c2</code> הערך הוא 4+5=9, וההדפסה השנייה מדפיסה 9. הפלט הוא <code class=\"tok\" dir=\"ltr\">49</code> (תשובה ב), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d7e5e54661d7f951"
+  },
+  {
+   "num": 10,
+   "topic": "templates",
+   "question": "מה יודפס באותו קטע קוד לעייל (שאלה 9) כאשר נריץ את פונקציית `main` הבאה:\n```cpp\ntemplate <typename T>\nclass C {\n    template <typename S>\n    friend ostream& operator<<(ostream& out, C<S> c1) {\n        out << c1.data;\n        return out;\n    }\nprivate:\n    T data;\npublic:\n    C(T d) {\n        data = d;\n    }\n    C(const C& other) {\n        data = other.data;\n    }\n    C operator+(C<T>& other) {\n        C res(data + other.data);\n        return res;\n    }\n    bool operator!=(C& other) {\n        return data != other.data;\n    }\n    int f(int x) {\n        if (x < 0)\n            return x;\n        return x + data;\n    }\n};\n\nint main() {\n    vector<C<double>> v;\n    C<double> c1(4.2);\n    v.push_back(c1);\n    C<double> c2(5.1);\n    v.push_back(c2);\n    cout << (v[0]+v[1]).f(10) << endl;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "38",
+     "html": "38"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "83",
+     "html": "83"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "19",
+     "html": "19"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התוכנית לא עוברת קומפילציה",
+     "html": "התוכנית לא עוברת קומפילציה"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`v[0]+v[1]` הוא `C<double>` שערכו 4.2+5.1=9.3. הפונקציה `f(10)` מחזירה `int`, והביטוי `x + data` הוא `10 + 9.3 = 19.3` שנחתך להמרה ל-`int`, כלומר 19. הפלט הוא `19` (תשובה ג), וכך גם הרצת clang++. התוכנית מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "22S-B-Q10",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה יודפס באותו קטע קוד לעייל (שאלה 9) כאשר נריץ את פונקציית <code class=\"tok\" dir=\"ltr\">main</code> הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;typename T&gt;\nclass C {\n    template &lt;typename S&gt;\n    friend ostream&amp; operator&lt;&lt;(ostream&amp; out, C&lt;S&gt; c1) {\n        out &lt;&lt; c1.data;\n        return out;\n    }\nprivate:\n    T data;\npublic:\n    C(T d) {\n        data = d;\n    }\n    C(const C&amp; other) {\n        data = other.data;\n    }\n    C operator+(C&lt;T&gt;&amp; other) {\n        C res(data + other.data);\n        return res;\n    }\n    bool operator!=(C&amp; other) {\n        return data != other.data;\n    }\n    int f(int x) {\n        if (x &lt; 0)\n            return x;\n        return x + data;\n    }\n};\n\nint main() {\n    vector&lt;C&lt;double&gt;&gt; v;\n    C&lt;double&gt; c1(4.2);\n    v.push_back(c1);\n    C&lt;double&gt; c2(5.1);\n    v.push_back(c2);\n    cout &lt;&lt; (v[0]+v[1]).f(10) &lt;&lt; endl;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">v[0]+v[1]</code> הוא <code class=\"tok\" dir=\"ltr\">C&lt;double&gt;</code> שערכו 4.2+5.1=9.3. הפונקציה <code class=\"tok\" dir=\"ltr\">f(10)</code> מחזירה <code class=\"tok\" dir=\"ltr\">int</code>, והביטוי <code class=\"tok\" dir=\"ltr\">x + data</code> הוא <code class=\"tok\" dir=\"ltr\">10 + 9.3 = 19.3</code> שנחתך להמרה ל-<code class=\"tok\" dir=\"ltr\">int</code>, כלומר 19. הפלט הוא <code class=\"tok\" dir=\"ltr\">19</code> (תשובה ג), וכך גם הרצת clang++. התוכנית מתקמפלת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "dc91eb5b8f2ac39e"
+  },
+  {
+   "num": 11,
+   "topic": "construction_order",
+   "question": "מה יודפס בקטע קוד הבא ?\n```cpp\nclass A\n{\n    int x;\npublic:\n    A(int x) : x(x) { cout << \"A: \" << x << \"\\n\"; }\n    A(const A& other) : x(other.x) { cout << \"A (copy)\\n\"; }\n    ~A() { cout << \"~A \" << x << \"\\n\"; }\n    virtual void toOs(ostream& os) const {}\n    friend ostream& operator<<(ostream& os, const A& a)\n    {\n        os << a.x;\n        a.toOs(os);\n        return os;\n    }\n};\ntemplate<class T>\nclass B : public A\n{\n    T val;\npublic:\n    B(const T& t, int x = 3) : A(x), val(t)\n    {\n        cout << \"B: \" << val << \"\\n\";\n    }\n    B(const B& other) : A(other), val(other.val)\n    {\n        cout << \"B (copy)\\n\";\n    }\n    ~B() { cout << \"~B: \" << val << \"\\n\"; }\n    virtual void toOs(ostream& os) const override\n    {\n        os << \" \" << val << endl;\n    }\n};\nvoid main()\n{\n    B<const char*> b1(\"hi\", 8);\n    B<const char*> b2(b1);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אין תשובה נכונה",
+     "html": "אין תשובה נכונה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "A: 8\nB: hi\nA (Copy)\nB (Copy)",
+     "html": "A: 8<br>B: hi<br>A (Copy)<br>B (Copy)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התוכנית לא מתקמפלת",
+     "html": "התוכנית לא מתקמפלת"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "A (Copy)\nB (Copy)\nA: 8\nB: hi",
+     "html": "A (Copy)<br>B (Copy)<br>A: 8<br>B: hi"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בהרצה מודפס: `A: 8`, `B: hi`, אחר כך בנאי ההעתקה `A (copy)` ו-`B (copy)` (באותיות קטנות), ובסוף יוצאים מ-`main` וההורסים מדפיסים `~B: hi`, `~A 8` פעמיים. בתשובה ב חסרות שורות ההורסים, והמילה `Copy` נכתבה באות גדולה, ולכן היא אינה הפלט. לכן אין תשובה נכונה (תשובה א). התוכנית כן מתקמפלת, וגם סדר הבנייה בתשובה ד שגוי.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "22S-B-Q11",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה יודפס בקטע קוד הבא ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A\n{\n    int x;\npublic:\n    A(int x) : x(x) { cout &lt;&lt; \"A: \" &lt;&lt; x &lt;&lt; \"\\n\"; }\n    A(const A&amp; other) : x(other.x) { cout &lt;&lt; \"A (copy)\\n\"; }\n    ~A() { cout &lt;&lt; \"~A \" &lt;&lt; x &lt;&lt; \"\\n\"; }\n    virtual void toOs(ostream&amp; os) const {}\n    friend ostream&amp; operator&lt;&lt;(ostream&amp; os, const A&amp; a)\n    {\n        os &lt;&lt; a.x;\n        a.toOs(os);\n        return os;\n    }\n};\ntemplate&lt;class T&gt;\nclass B : public A\n{\n    T val;\npublic:\n    B(const T&amp; t, int x = 3) : A(x), val(t)\n    {\n        cout &lt;&lt; \"B: \" &lt;&lt; val &lt;&lt; \"\\n\";\n    }\n    B(const B&amp; other) : A(other), val(other.val)\n    {\n        cout &lt;&lt; \"B (copy)\\n\";\n    }\n    ~B() { cout &lt;&lt; \"~B: \" &lt;&lt; val &lt;&lt; \"\\n\"; }\n    virtual void toOs(ostream&amp; os) const override\n    {\n        os &lt;&lt; \" \" &lt;&lt; val &lt;&lt; endl;\n    }\n};\nvoid main()\n{\n    B&lt;const char*&gt; b1(\"hi\", 8);\n    B&lt;const char*&gt; b2(b1);\n}</code></pre>",
+   "explanationHtml": "בהרצה מודפס: <code class=\"tok\" dir=\"ltr\">A: 8</code>, <code class=\"tok\" dir=\"ltr\">B: hi</code>, אחר כך בנאי ההעתקה <code class=\"tok\" dir=\"ltr\">A (copy)</code> ו-<code class=\"tok\" dir=\"ltr\">B (copy)</code> (באותיות קטנות), ובסוף יוצאים מ-<code class=\"tok\" dir=\"ltr\">main</code> וההורסים מדפיסים <code class=\"tok\" dir=\"ltr\">~B: hi</code>, <code class=\"tok\" dir=\"ltr\">~A 8</code> פעמיים. בתשובה ב חסרות שורות ההורסים, והמילה <code class=\"tok\" dir=\"ltr\">Copy</code> נכתבה באות גדולה, ולכן היא אינה הפלט. לכן אין תשובה נכונה (תשובה א). התוכנית כן מתקמפלת, וגם סדר הבנייה בתשובה ד שגוי.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ffb3edf886f4c908"
+  },
+  {
+   "num": 12,
+   "topic": "friend_this_static",
+   "question": "מה יודפס בקטע קוד הבא ?\n```cpp\nclass A\n{\n    static int counter;\n    int x;\npublic:\n    A(int x = ++counter) : x(x) { cout << \"c'tor x=\" << x << endl; }\n    A(const A& other) : x(other.x) { cout << \"copy x=\" << x << endl; }\n    static int getCounter() { return counter; }\n    friend ostream& operator<<(ostream& os, const A& a)\n    {\n        os << a.x << \" \" << a.counter << endl;\n        return os;\n    }\n};\nint A::counter = 0;\nvoid main()\n{\n    vector<A> arr;\n    A a1(1);\n    cout << A::getCounter() << endl;\n    arr.push_back(A());\n    arr.push_back(a1);\n    cout << A::getCounter() << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "c'tor x=1\n2\nc'tor x=1\ncopy x=1\ncopy x=1\nc'tor x=1\n1",
+     "html": "c'tor x=1<br>2<br>c'tor x=1<br>copy x=1<br>copy x=1<br>c'tor x=1<br>1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "c'tor x=1\n0\nc'tor x=1\ncopy x=1\ncopy x=1\ncopy x=1\n1",
+     "html": "c'tor x=1<br>0<br>c'tor x=1<br>copy x=1<br>copy x=1<br>copy x=1<br>1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "c'tor x=1\n1\nc'tor x=1\ncopy x=1\ncopy x=1\n0",
+     "html": "c'tor x=1<br>1<br>c'tor x=1<br>copy x=1<br>copy x=1<br>0"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התוכנית תופסק בזמן ריצה",
+     "html": "התוכנית תופסק בזמן ריצה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`A a1(1)` מדפיס `c'tor x=1` ואינו מקדם את `counter` (ארגומנט ברירת המחדל לא מחושב), ולכן `getCounter()` מדפיס `0`. `A()` מחשב את ארגומנט ברירת המחדל `++counter` (מגיע ל-1) ומדפיס `c'tor x=1`. `push_back` של הזמני יוצר עותק (`copy x=1`). `push_back(a1)` גורם להגדלת הווקטור: מועתק האיבר הקיים ונוצר עותק של `a1`, כלומר עוד שני עותקים. בסך הכול שלושה `copy x=1`, ובסוף `getCounter()` הוא `1`. זו תשובה ב, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "22S-B-Q12",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה יודפס בקטע קוד הבא ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A\n{\n    static int counter;\n    int x;\npublic:\n    A(int x = ++counter) : x(x) { cout &lt;&lt; \"c'tor x=\" &lt;&lt; x &lt;&lt; endl; }\n    A(const A&amp; other) : x(other.x) { cout &lt;&lt; \"copy x=\" &lt;&lt; x &lt;&lt; endl; }\n    static int getCounter() { return counter; }\n    friend ostream&amp; operator&lt;&lt;(ostream&amp; os, const A&amp; a)\n    {\n        os &lt;&lt; a.x &lt;&lt; \" \" &lt;&lt; a.counter &lt;&lt; endl;\n        return os;\n    }\n};\nint A::counter = 0;\nvoid main()\n{\n    vector&lt;A&gt; arr;\n    A a1(1);\n    cout &lt;&lt; A::getCounter() &lt;&lt; endl;\n    arr.push_back(A());\n    arr.push_back(a1);\n    cout &lt;&lt; A::getCounter() &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">A a1(1)</code> מדפיס <code class=\"tok\" dir=\"ltr\">c'tor x=1</code> ואינו מקדם את <code class=\"tok\" dir=\"ltr\">counter</code> (ארגומנט ברירת המחדל לא מחושב), ולכן <code class=\"tok\" dir=\"ltr\">getCounter()</code> מדפיס <code class=\"tok\" dir=\"ltr\">0</code>. <code class=\"tok\" dir=\"ltr\">A()</code> מחשב את ארגומנט ברירת המחדל <code class=\"tok\" dir=\"ltr\">++counter</code> (מגיע ל-1) ומדפיס <code class=\"tok\" dir=\"ltr\">c'tor x=1</code>. <code class=\"tok\" dir=\"ltr\">push_back</code> של הזמני יוצר עותק (<code class=\"tok\" dir=\"ltr\">copy x=1</code>). <code class=\"tok\" dir=\"ltr\">push_back(a1)</code> גורם להגדלת הווקטור: מועתק האיבר הקיים ונוצר עותק של <code class=\"tok\" dir=\"ltr\">a1</code>, כלומר עוד שני עותקים. בסך הכול שלושה <code class=\"tok\" dir=\"ltr\">copy x=1</code>, ובסוף <code class=\"tok\" dir=\"ltr\">getCounter()</code> הוא <code class=\"tok\" dir=\"ltr\">1</code>. זו תשובה ב, וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "af9ab2242d2cfc76"
+  },
+  {
+   "num": 13,
+   "topic": "operator_overloading",
+   "question": "בחר את ההגדרה **המתאימה ביותר** ל – `overloading` של `postfix ++` , בהנחה של `Class` קוראים `T` :",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`T operator ++`",
+     "html": "<code class=\"tok\" dir=\"ltr\">T operator ++</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`T operator++(int)`",
+     "html": "<code class=\"tok\" dir=\"ltr\">T operator++(int)</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`T& operator++()`",
+     "html": "<code class=\"tok\" dir=\"ltr\">T&amp; operator++()</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`T& operator++(int)`",
+     "html": "<code class=\"tok\" dir=\"ltr\">T&amp; operator++(int)</code>"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "העמסת האופרטור הפוסטפיקס `++` מזוהה על ידי פרמטר `int` מדומה, והוא מחזיר את הערך הישן **לפי ערך** (עותק), בניגוד לפרפיקס שמחזיר הפניה. לכן `T operator++(int)` (תשובה ב). א חסרה את הפרמטר, ג היא פרפיקס, ו-ד מחזירה הפניה לאובייקט זמני שהוא ערך ישן, מה שאינו תקין.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule.",
+   "id": "22S-B-Q13",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "בחר את ההגדרה <strong>המתאימה ביותר</strong> ל – <code class=\"tok\" dir=\"ltr\">overloading</code> של <code class=\"tok\" dir=\"ltr\">postfix ++</code> , בהנחה של <code class=\"tok\" dir=\"ltr\">Class</code> קוראים <code class=\"tok\" dir=\"ltr\">T</code> :",
+   "explanationHtml": "העמסת האופרטור הפוסטפיקס <code class=\"tok\" dir=\"ltr\">++</code> מזוהה על ידי פרמטר <code class=\"tok\" dir=\"ltr\">int</code> מדומה, והוא מחזיר את הערך הישן <strong>לפי ערך</strong> (עותק), בניגוד לפרפיקס שמחזיר הפניה. לכן <code class=\"tok\" dir=\"ltr\">T operator++(int)</code> (תשובה ב). א חסרה את הפרמטר, ג היא פרפיקס, ו-ד מחזירה הפניה לאובייקט זמני שהוא ערך ישן, מה שאינו תקין.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1b97ffb1b6590c6f"
+  },
+  {
+   "num": 14,
+   "topic": "templates",
+   "question": "לפניך ההגדרה הבאה:\n```cpp\ntemplate <class T>\nclass abc{\n    void f();\n};\n```\nבחר את הגדרה הנכונה למימוש הפונקציה (מתודה) `f` :",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```cpp\ntemplate <class T>\nvoid abc<T>::f() { }\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;class T&gt;\nvoid abc&lt;T&gt;::f() { }</code></pre>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```cpp\ntemplate<class T>\nvoid abc::f() { }\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template&lt;class T&gt;\nvoid abc::f() { }</code></pre>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```cpp\ntemplate<T>\nvoid abc<class T>::f() { }\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template&lt;T&gt;\nvoid abc&lt;class T&gt;::f() { }</code></pre>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "```cpp\ntemplate<T>\nvoid abc<T>::f() { }\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template&lt;T&gt;\nvoid abc&lt;T&gt;::f() { }</code></pre>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "מימוש פונקציה חברה של תבנית מחוץ למחלקה דורש להצהיר מחדש `template <class T>` ולציין `abc<T>::`. זו האפשרות א, והיא מתקמפלת. בב חסר `<T>` בשם המחלקה, ובג ובד התחביר `template<T>` אינו חוקי (חסר `class` או `typename`). כל שלוש האפשרויות האלה נכשלות בקומפילציה (נבדק עם clang++).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; compile-checked.",
+   "id": "22S-B-Q14",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "לפניך ההגדרה הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;class T&gt;\nclass abc{\n    void f();\n};</code></pre>בחר את הגדרה הנכונה למימוש הפונקציה (מתודה) <code class=\"tok\" dir=\"ltr\">f</code> :",
+   "explanationHtml": "מימוש פונקציה חברה של תבנית מחוץ למחלקה דורש להצהיר מחדש <code class=\"tok\" dir=\"ltr\">template &lt;class T&gt;</code> ולציין <code class=\"tok\" dir=\"ltr\">abc&lt;T&gt;::</code>. זו האפשרות א, והיא מתקמפלת. בב חסר <code class=\"tok\" dir=\"ltr\">&lt;T&gt;</code> בשם המחלקה, ובג ובד התחביר <code class=\"tok\" dir=\"ltr\">template&lt;T&gt;</code> אינו חוקי (חסר <code class=\"tok\" dir=\"ltr\">class</code> או <code class=\"tok\" dir=\"ltr\">typename</code>). כל שלוש האפשרויות האלה נכשלות בקומפילציה (נבדק עם clang++).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8f9095ef23cbb526"
+  },
+  {
+   "num": 15,
+   "topic": "classes_ctor_dtor",
+   "question": "איזה בין הגדרות הבאות של המחלקות `A` ו-`B` מעודפת:\n```cpp\nclass A {\npublic:\n    void f1(){\n        //code\n    }\n};\nclass B {\npublic:\n    void f1();\n};\nvoid B::f1(){\n    //code\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`class A`",
+     "html": "<code class=\"tok\" dir=\"ltr\">class A</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`class B`",
+     "html": "<code class=\"tok\" dir=\"ltr\">class B</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אין הבדל",
+     "html": "אין הבדל"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תלוי בקוד",
+     "html": "תלוי בקוד"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "פונקציה שמוגדרת בתוך גוף המחלקה היא `inline` באופן מרומז, והקומפיילר יכול להטמיע את הגוף במקום הקריאה. הפונקציה `B::f1` מוגדרת מחוץ למחלקה בלי המילה `inline`, ולכן אינה כזו. בגלל זה `class A` מועדפת (תשובה א). שים לב שהשאלה מנוסחת באופן לא חד ('מעודפת'), ולכן הביטחון בתשובה בינוני.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule.",
+   "id": "22S-B-Q15",
+   "examCode": "22S-B",
+   "examLabel": "2022 סמסטר קיץ מועד ב",
+   "year": 2022,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "איזה בין הגדרות הבאות של המחלקות <code class=\"tok\" dir=\"ltr\">A</code> ו-<code class=\"tok\" dir=\"ltr\">B</code> מעודפת:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    void f1(){\n        //code\n    }\n};\nclass B {\npublic:\n    void f1();\n};\nvoid B::f1(){\n    //code\n};</code></pre>",
+   "explanationHtml": "פונקציה שמוגדרת בתוך גוף המחלקה היא <code class=\"tok\" dir=\"ltr\">inline</code> באופן מרומז, והקומפיילר יכול להטמיע את הגוף במקום הקריאה. הפונקציה <code class=\"tok\" dir=\"ltr\">B::f1</code> מוגדרת מחוץ למחלקה בלי המילה <code class=\"tok\" dir=\"ltr\">inline</code>, ולכן אינה כזו. בגלל זה <code class=\"tok\" dir=\"ltr\">class A</code> מועדפת (תשובה א). שים לב שהשאלה מנוסחת באופן לא חד ('מעודפת'), ולכן הביטחון בתשובה בינוני.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8e92f034a4624396"
+  },
+  {
+   "num": 1,
+   "topic": "inheritance_access",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass C {\npublic:\n    void f() { cout << \"C\"; }\n};\n\nclass B : public C {};\n\nclass A : public B {\npublic:\n    void f() { cout << \"A\"; }\n};\n\nint main() {\n    A a; B b;\n    a.f(); a.B::f(); a.C::f(); b.f();\n    b.C::f();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "AACCC",
+     "html": "AACCC"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ACCCC",
+     "html": "ACCCC"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "CCCCC",
+     "html": "CCCCC"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ל-`B` אין `f` משלה, ולכן `b.f()` וגם `a.B::f()` מגיעות ל-`C::f` שבבסיס, ומדפיסות `C`. רק `a.f()` מוצאת את `A::f` (ה-`f` של `A` מסתירה את הבסיס) ומדפיסה `A`. `a.C::f()` ו-`b.C::f()` מציינות במפורש את `C`. הפלט `ACCCC` (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: ACCCC. Agrees.",
+   "id": "23B-A-Q1",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class C {\npublic:\n    void f() { cout &lt;&lt; \"C\"; }\n};\n\nclass B : public C {};\n\nclass A : public B {\npublic:\n    void f() { cout &lt;&lt; \"A\"; }\n};\n\nint main() {\n    A a; B b;\n    a.f(); a.B::f(); a.C::f(); b.f();\n    b.C::f();\n    return 0;\n}</code></pre>",
+   "explanationHtml": "ל-<code class=\"tok\" dir=\"ltr\">B</code> אין <code class=\"tok\" dir=\"ltr\">f</code> משלה, ולכן <code class=\"tok\" dir=\"ltr\">b.f()</code> וגם <code class=\"tok\" dir=\"ltr\">a.B::f()</code> מגיעות ל-<code class=\"tok\" dir=\"ltr\">C::f</code> שבבסיס, ומדפיסות <code class=\"tok\" dir=\"ltr\">C</code>. רק <code class=\"tok\" dir=\"ltr\">a.f()</code> מוצאת את <code class=\"tok\" dir=\"ltr\">A::f</code> (ה-<code class=\"tok\" dir=\"ltr\">f</code> של <code class=\"tok\" dir=\"ltr\">A</code> מסתירה את הבסיס) ומדפיסה <code class=\"tok\" dir=\"ltr\">A</code>. <code class=\"tok\" dir=\"ltr\">a.C::f()</code> ו-<code class=\"tok\" dir=\"ltr\">b.C::f()</code> מציינות במפורש את <code class=\"tok\" dir=\"ltr\">C</code>. הפלט <code class=\"tok\" dir=\"ltr\">ACCCC</code> (תשובה ב), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ff8486bb4723258a"
+  },
+  {
+   "num": 2,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass D {\npublic:\n    int n1;\n};\n\nclass C : private D {\npublic:\n    int n2;\n    int f1() { return n1; }\n};\n\nclass B : public C {\npublic:\n    int n3;\n    void f2() {\n        cout << n1;\n        cout << n2;\n    }\n};\n\nclass A : private B {\npublic:\n    int n4;\n    int f2() {\n        B b1;\n        cout << n2;\n        cout << b1.n1;\n    }\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`C` יורשת מ-`D` ירושה `private`, ולכן `n1` פרטי ב-`C` ואינו נגיש ביורשות שלה. ב-`B::f2` השורה `cout << n1` שגויה, ו-`cout << n2` תקינה (`n2` ציבורי). ב-`A` (ירושה פרטית מ-`B`) הגישה ל-`n2` תקינה מבפנים, אבל `b1.n1` שגויה כי `n1` אינו נגיש. שתי שורות שגויות (תשובה ג), וכך גם clang++. בקוד המודפס מופיע פסיק במקום נקודה-פסיק אחרי `n1` ו-`n2`, והשאלה מורה להתעלם מכך.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). Printed `int n1,` / `int n2,` read as `;`. clang++: 2 error lines. Agrees.",
+   "id": "23B-A-Q2",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class D {\npublic:\n    int n1;\n};\n\nclass C : private D {\npublic:\n    int n2;\n    int f1() { return n1; }\n};\n\nclass B : public C {\npublic:\n    int n3;\n    void f2() {\n        cout &lt;&lt; n1;\n        cout &lt;&lt; n2;\n    }\n};\n\nclass A : private B {\npublic:\n    int n4;\n    int f2() {\n        B b1;\n        cout &lt;&lt; n2;\n        cout &lt;&lt; b1.n1;\n    }\n};</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">C</code> יורשת מ-<code class=\"tok\" dir=\"ltr\">D</code> ירושה <code class=\"tok\" dir=\"ltr\">private</code>, ולכן <code class=\"tok\" dir=\"ltr\">n1</code> פרטי ב-<code class=\"tok\" dir=\"ltr\">C</code> ואינו נגיש ביורשות שלה. ב-<code class=\"tok\" dir=\"ltr\">B::f2</code> השורה <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; n1</code> שגויה, ו-<code class=\"tok\" dir=\"ltr\">cout &lt;&lt; n2</code> תקינה (<code class=\"tok\" dir=\"ltr\">n2</code> ציבורי). ב-<code class=\"tok\" dir=\"ltr\">A</code> (ירושה פרטית מ-<code class=\"tok\" dir=\"ltr\">B</code>) הגישה ל-<code class=\"tok\" dir=\"ltr\">n2</code> תקינה מבפנים, אבל <code class=\"tok\" dir=\"ltr\">b1.n1</code> שגויה כי <code class=\"tok\" dir=\"ltr\">n1</code> אינו נגיש. שתי שורות שגויות (תשובה ג), וכך גם clang++. בקוד המודפס מופיע פסיק במקום נקודה-פסיק אחרי <code class=\"tok\" dir=\"ltr\">n1</code> ו-<code class=\"tok\" dir=\"ltr\">n2</code>, והשאלה מורה להתעלם מכך.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "964c0f8488a27038"
+  },
+  {
+   "num": 3,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint& f(int& x, int& y, int& z)\n{\n    if (x == 1) return y;\n    return z;\n}\n\nint main()\n{\n    int a = 1, b = 2, c = 3;\n    f(a, b, c)++;\n    a++;\n    f(a, b, c)++\n    int& d = f(a, b, c);\n    d++;\n    cout << b << c << d;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "334",
+     "html": "334"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "444",
+     "html": "444"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "355",
+     "html": "355"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה מחזירה הפניה ל-`y` כש-`x == 1`, ואחרת הפניה ל-`z`. בקריאה הראשונה `a = 1`, ולכן `f(a,b,c)++` מגדילה את `b` ל-3. אחרי `a++` מתקבל `a = 2`, ולכן הקריאה השנייה מחזירה הפניה ל-`c`, ו-`++` מגדיל אותו ל-4. `d` הוא כינוי ל-`c`, ו-`d++` מעלה אותו ל-5. ההדפסה `b c d` נותנת `3`, `5`, `5`, כלומר `355` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). Printed `f(a, b, c)++` without `;` (the exam's note says to ignore it); run with `;`: 355. Agrees.",
+   "id": "23B-A-Q3",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int&amp; f(int&amp; x, int&amp; y, int&amp; z)\n{\n    if (x == 1) return y;\n    return z;\n}\n\nint main()\n{\n    int a = 1, b = 2, c = 3;\n    f(a, b, c)++;\n    a++;\n    f(a, b, c)++\n    int&amp; d = f(a, b, c);\n    d++;\n    cout &lt;&lt; b &lt;&lt; c &lt;&lt; d;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "הפונקציה מחזירה הפניה ל-<code class=\"tok\" dir=\"ltr\">y</code> כש-<code class=\"tok\" dir=\"ltr\">x == 1</code>, ואחרת הפניה ל-<code class=\"tok\" dir=\"ltr\">z</code>. בקריאה הראשונה <code class=\"tok\" dir=\"ltr\">a = 1</code>, ולכן <code class=\"tok\" dir=\"ltr\">f(a,b,c)++</code> מגדילה את <code class=\"tok\" dir=\"ltr\">b</code> ל-3. אחרי <code class=\"tok\" dir=\"ltr\">a++</code> מתקבל <code class=\"tok\" dir=\"ltr\">a = 2</code>, ולכן הקריאה השנייה מחזירה הפניה ל-<code class=\"tok\" dir=\"ltr\">c</code>, ו-<code class=\"tok\" dir=\"ltr\">++</code> מגדיל אותו ל-4. <code class=\"tok\" dir=\"ltr\">d</code> הוא כינוי ל-<code class=\"tok\" dir=\"ltr\">c</code>, ו-<code class=\"tok\" dir=\"ltr\">d++</code> מעלה אותו ל-5. ההדפסה <code class=\"tok\" dir=\"ltr\">b c d</code> נותנת <code class=\"tok\" dir=\"ltr\">3</code>, <code class=\"tok\" dir=\"ltr\">5</code>, <code class=\"tok\" dir=\"ltr\">5</code>, כלומר <code class=\"tok\" dir=\"ltr\">355</code> (תשובה ג), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "f686449085e253b6"
+  },
+  {
+   "num": 4,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    A(int i) { this->i = i; }\n    ~A() { cout << i; }\nprivate:\n    int i;\n};\n\nvoid f() {\n    static A a1(1);\n    A a2(2);\n}\nA a3(3);\nA a7(7);\n\nint main()\n{\n    static A a4(4);\n    A a5(5);\n    f();\n    A a6(6);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "2651473",
+     "html": "2651473"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2654137",
+     "html": "2654137"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2561743",
+     "html": "2561743"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "6254137",
+     "html": "6254137"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הגלובליים `a3` ו-`a7` נבנים לפני `main`. ב-`main` נבנים הסטטי `a4` והאוטומטי `a5`, אחר כך נקראת `f` שבונה את הסטטי `a1` ואת האוטומטי `a2`. בסיום `f` נהרס `a2`: `2`. אחר כך נבנה `a6`. בסיום `main` נהרסים האוטומטיים בסדר הפוך: `a6` ואז `a5`: `65`. לבסוף נהרסים הסטטיים והגלובליים בסדר הפוך לבנייתם: `a1`, `a4`, `a7`, `a3`: `1473`. הפלט `2651473` (תשובה א), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: 2651473. Agrees.",
+   "id": "23B-A-Q4",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i) { this-&gt;i = i; }\n    ~A() { cout &lt;&lt; i; }\nprivate:\n    int i;\n};\n\nvoid f() {\n    static A a1(1);\n    A a2(2);\n}\nA a3(3);\nA a7(7);\n\nint main()\n{\n    static A a4(4);\n    A a5(5);\n    f();\n    A a6(6);\n    return 0;\n}</code></pre>",
+   "explanationHtml": "הגלובליים <code class=\"tok\" dir=\"ltr\">a3</code> ו-<code class=\"tok\" dir=\"ltr\">a7</code> נבנים לפני <code class=\"tok\" dir=\"ltr\">main</code>. ב-<code class=\"tok\" dir=\"ltr\">main</code> נבנים הסטטי <code class=\"tok\" dir=\"ltr\">a4</code> והאוטומטי <code class=\"tok\" dir=\"ltr\">a5</code>, אחר כך נקראת <code class=\"tok\" dir=\"ltr\">f</code> שבונה את הסטטי <code class=\"tok\" dir=\"ltr\">a1</code> ואת האוטומטי <code class=\"tok\" dir=\"ltr\">a2</code>. בסיום <code class=\"tok\" dir=\"ltr\">f</code> נהרס <code class=\"tok\" dir=\"ltr\">a2</code>: <code class=\"tok\" dir=\"ltr\">2</code>. אחר כך נבנה <code class=\"tok\" dir=\"ltr\">a6</code>. בסיום <code class=\"tok\" dir=\"ltr\">main</code> נהרסים האוטומטיים בסדר הפוך: <code class=\"tok\" dir=\"ltr\">a6</code> ואז <code class=\"tok\" dir=\"ltr\">a5</code>: <code class=\"tok\" dir=\"ltr\">65</code>. לבסוף נהרסים הסטטיים והגלובליים בסדר הפוך לבנייתם: <code class=\"tok\" dir=\"ltr\">a1</code>, <code class=\"tok\" dir=\"ltr\">a4</code>, <code class=\"tok\" dir=\"ltr\">a7</code>, <code class=\"tok\" dir=\"ltr\">a3</code>: <code class=\"tok\" dir=\"ltr\">1473</code>. הפלט <code class=\"tok\" dir=\"ltr\">2651473</code> (תשובה א), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2c32418e29547f49"
+  },
+  {
+   "num": 5,
+   "topic": "inheritance_access",
+   "question": "אילו מאפיינים של תכנות מונחה עצמים (`OOP`) ממומשים בקטע הקוד הבא:\n```cpp\nclass student { int marks; };\n\nclass topper : public student {\n    int age;\n    topper(int age) {\n        this->age = age;\n    }\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הסתרת מידע (`Encapsulation`) והורשה (`Inheritance`).",
+     "html": "הסתרת מידע (<code class=\"tok\" dir=\"ltr\">Encapsulation</code>) והורשה (<code class=\"tok\" dir=\"ltr\">Inheritance</code>)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הורשה (`Inheritance`) ורב צורתיות (`Polymorphism`).",
+     "html": "הורשה (<code class=\"tok\" dir=\"ltr\">Inheritance</code>) ורב צורתיות (<code class=\"tok\" dir=\"ltr\">Polymorphism</code>)."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "רב צורתיות (`Polymorphism`).",
+     "html": "רב צורתיות (<code class=\"tok\" dir=\"ltr\">Polymorphism</code>)."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הורשה (`Inheritance`).",
+     "html": "הורשה (<code class=\"tok\" dir=\"ltr\">Inheritance</code>)."
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "med",
+   "explanation": "השדות `marks` ו-`age` פרטיים, כלומר המידע מוסתר (`Encapsulation`), והמחלקה `topper` יורשת מ-`student` (`Inheritance`). אין פונקציות וירטואליות ולכן אין רב-צורתיות. לכן התשובה היא א. זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Concept question (no run): private members = encapsulation, `: public student` = inheritance, no virtual functions = no polymorphism.",
+   "id": "23B-A-Q5",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "אילו מאפיינים של תכנות מונחה עצמים (<code class=\"tok\" dir=\"ltr\">OOP</code>) ממומשים בקטע הקוד הבא:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class student { int marks; };\n\nclass topper : public student {\n    int age;\n    topper(int age) {\n        this-&gt;age = age;\n    }\n};</code></pre>",
+   "explanationHtml": "השדות <code class=\"tok\" dir=\"ltr\">marks</code> ו-<code class=\"tok\" dir=\"ltr\">age</code> פרטיים, כלומר המידע מוסתר (<code class=\"tok\" dir=\"ltr\">Encapsulation</code>), והמחלקה <code class=\"tok\" dir=\"ltr\">topper</code> יורשת מ-<code class=\"tok\" dir=\"ltr\">student</code> (<code class=\"tok\" dir=\"ltr\">Inheritance</code>). אין פונקציות וירטואליות ולכן אין רב-צורתיות. לכן התשובה היא א. זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "7201437bbff16536"
+  },
+  {
+   "num": 6,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <vector>\nint main()\n{\n    vector <int> v1;\n    v1.push_back(8);\n    v1.push_back(9);\n    vector <int> v2;\n    v2.push_back(-8);\n    v2.push_back(5);\n    v2.push_back(51);\n    v2.push_back(3);\n    vector<vector<int> > A;\n    A.push_back(v1);\n    A.push_back(v2);\n    A.push_back(v1);\n    v2.push_back(10);\n    vector<int>::iterator i;\n    for (i = A[1].begin(); i != A[1].end(); i+=2)\n        cout << *i << \" \";\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "-8 51 10",
+     "html": "-8 51 10"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "-8 5 51 3",
+     "html": "-8 5 51 3"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "-8 51",
+     "html": "-8 51"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "-8 5 51 3 19 20",
+     "html": "-8 5 51 3 19 20"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`push_back` שומר עותקים: `A[1]` הוא עותק של `v2` ברגע ההוספה, כלומר `-8 5 51 3`, והוספת 10 אחר כך אל `v2` לא משפיעה עליו. הלולאה מקדמת את האיטרטור בשניים: מדפיסה `-8` (מקום 0) ו-`51` (מקום 2), ואז מגיעה בדיוק ל-`end()` ונעצרת. הפלט `-8 51` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). clang++ run: `-8 51 `. Agrees.",
+   "id": "23B-A-Q6",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\nint main()\n{\n    vector &lt;int&gt; v1;\n    v1.push_back(8);\n    v1.push_back(9);\n    vector &lt;int&gt; v2;\n    v2.push_back(-8);\n    v2.push_back(5);\n    v2.push_back(51);\n    v2.push_back(3);\n    vector&lt;vector&lt;int&gt; &gt; A;\n    A.push_back(v1);\n    A.push_back(v2);\n    A.push_back(v1);\n    v2.push_back(10);\n    vector&lt;int&gt;::iterator i;\n    for (i = A[1].begin(); i != A[1].end(); i+=2)\n        cout &lt;&lt; *i &lt;&lt; \" \";\n    return 0;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">push_back</code> שומר עותקים: <code class=\"tok\" dir=\"ltr\">A[1]</code> הוא עותק של <code class=\"tok\" dir=\"ltr\">v2</code> ברגע ההוספה, כלומר <code class=\"tok\" dir=\"ltr\">-8 5 51 3</code>, והוספת 10 אחר כך אל <code class=\"tok\" dir=\"ltr\">v2</code> לא משפיעה עליו. הלולאה מקדמת את האיטרטור בשניים: מדפיסה <code class=\"tok\" dir=\"ltr\">-8</code> (מקום 0) ו-<code class=\"tok\" dir=\"ltr\">51</code> (מקום 2), ואז מגיעה בדיוק ל-<code class=\"tok\" dir=\"ltr\">end()</code> ונעצרת. הפלט <code class=\"tok\" dir=\"ltr\">-8 51</code> (תשובה ג), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "6243eac31c8300ea"
+  },
+  {
+   "num": 7,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nconst int DefaultSize = 10;\ntemplate <class T>\nclass Array{\npublic:\n    Array(int itsSize = DefaultSize);\n    ~Array() { delete[] pType; }\n    T& operator[](int offSet) { return pType[offSet]; }\n    const T& operator[](int offSet) const {\n        return pType[offSet];\n    }\n    int GetSize() const { return itsSize; }\n    template <class NET>\n      friend void infiltrate(const Array<NET> &);\nprivate:\n    T* pType;\n    int  itsSize;\n};\ntemplate <class WWW>\nvoid infiltrate(const Array<WWW> &theArray) {\n    for (int i = 0; i < theArray.itsSize; i++)\n        cout <<  theArray.pType[i] << \"; \";\n    cout << \"\\n\"; }\ntemplate <class T>\nArray<T>::Array(int size):itsSize(size){\n    pType = new T[size];\n    for (int i = 0; i < size; i++)\n        pType[i] = 0;\n}\nint main(){\n    Array<int> theArray(3);\n    Array<double> theArrayD(2);\n    for (int i = 0; i < theArray.GetSize(); i++){\n        theArray[i] = i * 2;\n    }\n    for (int i = 0; i < theArrayD.GetSize(); i++) {\n        theArrayD[i] = i / 2.0;\n    }\n    infiltrate(theArray);\n    infiltrate(theArrayD);  return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0; 2; 4;\n0; 0;",
+     "html": "0; 2; 4;<br>0; 0;"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "0; 2; 4;\n0; 0.5",
+     "html": "0; 2; 4;<br>0; 0.5"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בהפעלת התכנית מתקבלת שגיאת זמן ריצה.",
+     "html": "בהפעלת התכנית מתקבלת שגיאת זמן ריצה."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ב-`Array<int>(3)` האיברים הם `0, 2, 4`, וב-`Array<double>(2)` האיברים הם `0, 0.5` (כי `i / 2.0`). הפונקציה `infiltrate` היא תבנית חברה של המחלקה ולכן מותר לה לגשת לשדות הפרטיים. כל איבר מודפס ואחריו `; `, ולכן השורה הראשונה `0; 2; 4;` והשנייה `0; 0.5;`. התוכנית מתקמפלת ורצה בלי שגיאה. התשובה המתאימה היא ב (בהרצה מופיע `;` גם בסוף השורה השנייה, ובתשובה ב הוא לא מודפס, אבל זו האפשרות היחידה שמתאימה לערכים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: `0; 2; 4; ` / `0; 0.5; ` (option b prints no trailing `;` on line 2, as printed). Agrees with b.",
+   "id": "23B-A-Q7",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>const int DefaultSize = 10;\ntemplate &lt;class T&gt;\nclass Array{\npublic:\n    Array(int itsSize = DefaultSize);\n    ~Array() { delete[] pType; }\n    T&amp; operator[](int offSet) { return pType[offSet]; }\n    const T&amp; operator[](int offSet) const {\n        return pType[offSet];\n    }\n    int GetSize() const { return itsSize; }\n    template &lt;class NET&gt;\n      friend void infiltrate(const Array&lt;NET&gt; &amp;);\nprivate:\n    T* pType;\n    int  itsSize;\n};\ntemplate &lt;class WWW&gt;\nvoid infiltrate(const Array&lt;WWW&gt; &amp;theArray) {\n    for (int i = 0; i &lt; theArray.itsSize; i++)\n        cout &lt;&lt;  theArray.pType[i] &lt;&lt; \"; \";\n    cout &lt;&lt; \"\\n\"; }\ntemplate &lt;class T&gt;\nArray&lt;T&gt;::Array(int size):itsSize(size){\n    pType = new T[size];\n    for (int i = 0; i &lt; size; i++)\n        pType[i] = 0;\n}\nint main(){\n    Array&lt;int&gt; theArray(3);\n    Array&lt;double&gt; theArrayD(2);\n    for (int i = 0; i &lt; theArray.GetSize(); i++){\n        theArray[i] = i * 2;\n    }\n    for (int i = 0; i &lt; theArrayD.GetSize(); i++) {\n        theArrayD[i] = i / 2.0;\n    }\n    infiltrate(theArray);\n    infiltrate(theArrayD);  return 0;\n}</code></pre>",
+   "explanationHtml": "ב-<code class=\"tok\" dir=\"ltr\">Array&lt;int&gt;(3)</code> האיברים הם <code class=\"tok\" dir=\"ltr\">0, 2, 4</code>, וב-<code class=\"tok\" dir=\"ltr\">Array&lt;double&gt;(2)</code> האיברים הם <code class=\"tok\" dir=\"ltr\">0, 0.5</code> (כי <code class=\"tok\" dir=\"ltr\">i / 2.0</code>). הפונקציה <code class=\"tok\" dir=\"ltr\">infiltrate</code> היא תבנית חברה של המחלקה ולכן מותר לה לגשת לשדות הפרטיים. כל איבר מודפס ואחריו <code class=\"tok\" dir=\"ltr\">; </code>, ולכן השורה הראשונה <code class=\"tok\" dir=\"ltr\">0; 2; 4;</code> והשנייה <code class=\"tok\" dir=\"ltr\">0; 0.5;</code>. התוכנית מתקמפלת ורצה בלי שגיאה. התשובה המתאימה היא ב (בהרצה מופיע <code class=\"tok\" dir=\"ltr\">;</code> גם בסוף השורה השנייה, ובתשובה ב הוא לא מודפס, אבל זו האפשרות היחידה שמתאימה לערכים).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "dbd1af08e1262271"
+  },
+  {
+   "num": 8,
+   "topic": "abstract_multiple",
+   "question": "עבור התכנית הבאה מתקיים:\n```cpp\nclass A{\npublic:\n    virtual void f1(void) { cout << \"A\"; };\n};\nclass B : virtual public A{\npublic:\n    void f1(void) { cout << \"B\"; };\n};\nclass C : virtual public A{\npublic:\n    void f1(void) { cout << \"C\"; };\n};\nclass D : public C, public B{\npublic:\n    void f1(void) { cout << \"D\"; };\n};\nint main(){\n    A* pa;\n    pa = new A;\n    pa->f1();\n    pa = new B;\n    pa->f1();\n    pa = new C;\n    pa->f1();\n    pa = new D::B;\n    pa->f1();\n    pa = new D::C;\n    pa->f1();\n    pa = new D;\n    pa->f1();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "יש שגיאת קומפילציה בשורה אחת.",
+     "html": "יש שגיאת קומפילציה בשורה אחת."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "יש שגיאת קומפילציה ביותר משורה אחת.",
+     "html": "יש שגיאת קומפילציה ביותר משורה אחת."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אין שגיאת קומפילציה והתכנית מדפיסה `ABCACD`",
+     "html": "אין שגיאת קומפילציה והתכנית מדפיסה <code class=\"tok\" dir=\"ltr\">ABCACD</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אין שגיאת קומפילציה והתכנית מדפיסה `ABCBCD`",
+     "html": "אין שגיאת קומפילציה והתכנית מדפיסה <code class=\"tok\" dir=\"ltr\">ABCBCD</code>"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`new D::B` ו-`new D::C` יוצרים אובייקטים מטיפוס `B` ו-`C` (השם `D::B` הוא שם המחלקה `B` שבבסיס, דרך שם המחלקה היורשת). הקוד מתקמפל: לאחר ירושה וירטואלית מ-`A`, הקריאה `pa->f1()` נבחרת לפי הטיפוס האמיתי. הפלט הוא: `A` עבור `new A`, `B` עבור `new B`, `C` עבור `new C`, `B` עבור `new D::B`, `C` עבור `new D::C`, ו-`D` עבור `new D`. כלומר `ABCBCD` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: ABCBCD. Agrees.",
+   "id": "23B-A-Q8",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "עבור התכנית הבאה מתקיים:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A{\npublic:\n    virtual void f1(void) { cout &lt;&lt; \"A\"; };\n};\nclass B : virtual public A{\npublic:\n    void f1(void) { cout &lt;&lt; \"B\"; };\n};\nclass C : virtual public A{\npublic:\n    void f1(void) { cout &lt;&lt; \"C\"; };\n};\nclass D : public C, public B{\npublic:\n    void f1(void) { cout &lt;&lt; \"D\"; };\n};\nint main(){\n    A* pa;\n    pa = new A;\n    pa-&gt;f1();\n    pa = new B;\n    pa-&gt;f1();\n    pa = new C;\n    pa-&gt;f1();\n    pa = new D::B;\n    pa-&gt;f1();\n    pa = new D::C;\n    pa-&gt;f1();\n    pa = new D;\n    pa-&gt;f1();\n    return 0;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">new D::B</code> ו-<code class=\"tok\" dir=\"ltr\">new D::C</code> יוצרים אובייקטים מטיפוס <code class=\"tok\" dir=\"ltr\">B</code> ו-<code class=\"tok\" dir=\"ltr\">C</code> (השם <code class=\"tok\" dir=\"ltr\">D::B</code> הוא שם המחלקה <code class=\"tok\" dir=\"ltr\">B</code> שבבסיס, דרך שם המחלקה היורשת). הקוד מתקמפל: לאחר ירושה וירטואלית מ-<code class=\"tok\" dir=\"ltr\">A</code>, הקריאה <code class=\"tok\" dir=\"ltr\">pa-&gt;f1()</code> נבחרת לפי הטיפוס האמיתי. הפלט הוא: <code class=\"tok\" dir=\"ltr\">A</code> עבור <code class=\"tok\" dir=\"ltr\">new A</code>, <code class=\"tok\" dir=\"ltr\">B</code> עבור <code class=\"tok\" dir=\"ltr\">new B</code>, <code class=\"tok\" dir=\"ltr\">C</code> עבור <code class=\"tok\" dir=\"ltr\">new C</code>, <code class=\"tok\" dir=\"ltr\">B</code> עבור <code class=\"tok\" dir=\"ltr\">new D::B</code>, <code class=\"tok\" dir=\"ltr\">C</code> עבור <code class=\"tok\" dir=\"ltr\">new D::C</code>, ו-<code class=\"tok\" dir=\"ltr\">D</code> עבור <code class=\"tok\" dir=\"ltr\">new D</code>. כלומר <code class=\"tok\" dir=\"ltr\">ABCBCD</code> (תשובה ד), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "5ac4fad751324b22"
+  },
+  {
+   "num": 9,
+   "topic": "classes_ctor_dtor",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass TestClass\n{\npublic:\n    TestClass() :x(0) { cout<<x<<\" \"; }\n    TestClass(int a) :x(a) { cout<<x<<\" \"; }\n    void printValue()\n    {\n        cout << \"Value: \" << x <<\" \";\n    }\nprivate:\n    int x;\n};\n\nint main()\n{\n    TestClass s1(100);\n    TestClass s2;\n    TestClass s3 = 100;\n    TestClass obj();\n    obj.printValue();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "100 0 100",
+     "html": "100 0 100"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "100",
+     "html": "100"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "100 0 100 0 0",
+     "html": "100 0 100 0 0"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "השורה `TestClass obj();` אינה יוצרת אובייקט: היא מצהירה על **פונקציה** בשם `obj` שמחזירה `TestClass` (the most vexing parse). לכן `obj.printValue()` היא שגיאת קומפילציה (clang++: base of member reference is a function). התוכנית אינה מתקמפלת (תשובה ד), ואף אחת משלוש האפשרויות האחרות אינה פלט אפשרי. בסריקה יש קשקוש בצבע כחול על מחרוזת בתוך `printValue`, והוא אינו משפיע על התשובה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). clang++: compile error (`TestClass obj();` declares a function). Agrees with d. The scan has a scribbled-over string in printValue, read as `Value: `.",
+   "id": "23B-A-Q9",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class TestClass\n{\npublic:\n    TestClass() :x(0) { cout&lt;&lt;x&lt;&lt;\" \"; }\n    TestClass(int a) :x(a) { cout&lt;&lt;x&lt;&lt;\" \"; }\n    void printValue()\n    {\n        cout &lt;&lt; \"Value: \" &lt;&lt; x &lt;&lt;\" \";\n    }\nprivate:\n    int x;\n};\n\nint main()\n{\n    TestClass s1(100);\n    TestClass s2;\n    TestClass s3 = 100;\n    TestClass obj();\n    obj.printValue();\n    return 0;\n}</code></pre>",
+   "explanationHtml": "השורה <code class=\"tok\" dir=\"ltr\">TestClass obj();</code> אינה יוצרת אובייקט: היא מצהירה על <strong>פונקציה</strong> בשם <code class=\"tok\" dir=\"ltr\">obj</code> שמחזירה <code class=\"tok\" dir=\"ltr\">TestClass</code> (the most vexing parse). לכן <code class=\"tok\" dir=\"ltr\">obj.printValue()</code> היא שגיאת קומפילציה (clang++: base of member reference is a function). התוכנית אינה מתקמפלת (תשובה ד), ואף אחת משלוש האפשרויות האחרות אינה פלט אפשרי. בסריקה יש קשקוש בצבע כחול על מחרוזת בתוך <code class=\"tok\" dir=\"ltr\">printValue</code>, והוא אינו משפיע על התשובה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2e18e8695a451066"
+  },
+  {
+   "num": 10,
+   "topic": "virtual_polymorphism",
+   "question": "על פי רוב עדיף שפונקציה וירטואלית תהיה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`public`",
+     "html": "<code class=\"tok\" dir=\"ltr\">public</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`private`",
+     "html": "<code class=\"tok\" dir=\"ltr\">private</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`protected`",
+     "html": "<code class=\"tok\" dir=\"ltr\">protected</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`default`",
+     "html": "<code class=\"tok\" dir=\"ltr\">default</code>"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "med",
+   "explanation": "פונקציה וירטואלית היא ממשק שנקרא דרך מצביע או הפניה לבסיס, ולכן על פי רוב מגדירים אותה `public`. אפשר להגדיר גם `private` או `protected` (בתבנית NVI למשל), ולכן השאלה מנוסחת 'על פי רוב'. `default` אינו מפרט גישה ב-C++. התשובה לפי סימון הבודק היא א. זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Concept question (no run).",
+   "id": "23B-A-Q10",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "על פי רוב עדיף שפונקציה וירטואלית תהיה:",
+   "explanationHtml": "פונקציה וירטואלית היא ממשק שנקרא דרך מצביע או הפניה לבסיס, ולכן על פי רוב מגדירים אותה <code class=\"tok\" dir=\"ltr\">public</code>. אפשר להגדיר גם <code class=\"tok\" dir=\"ltr\">private</code> או <code class=\"tok\" dir=\"ltr\">protected</code> (בתבנית NVI למשל), ולכן השאלה מנוסחת 'על פי רוב'. <code class=\"tok\" dir=\"ltr\">default</code> אינו מפרט גישה ב-C++. התשובה לפי סימון הבודק היא א. זו שאלת מושגים בלי הרצה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "8e526cbf57e997f6"
+  },
+  {
+   "num": 11,
+   "topic": "abstract_multiple",
+   "question": "כיצד ניתן להתגבר על בעית המעוין (`diamond`) של הורשה מרובה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להשתמש במחלקות נגזרות נפרדות.",
+     "html": "להשתמש במחלקות נגזרות נפרדות."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להשתמש במילה השמורה `virtual`.",
+     "html": "להשתמש במילה השמורה <code class=\"tok\" dir=\"ltr\">virtual</code>."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בלתי אפשרי.",
+     "html": "בלתי אפשרי."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להשתמש בשם מחלקה נוסף (`alias`).",
+     "html": "להשתמש בשם מחלקה נוסף (<code class=\"tok\" dir=\"ltr\">alias</code>)."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "med",
+   "explanation": "בעיית המעוין היא מצב שבו מחלקה יורשת פעמיים מאותו בסיס דרך שתי מחלקות ביניים, ומקבלת שני עותקים שלו. הפתרון הוא ירושה **וירטואלית** (`virtual`) של הבסיס בשתי מחלקות הביניים, כך שיש רק עותק אחד (התשובה ב). זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Concept question (no run).",
+   "id": "23B-A-Q11",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "כיצד ניתן להתגבר על בעית המעוין (<code class=\"tok\" dir=\"ltr\">diamond</code>) של הורשה מרובה:",
+   "explanationHtml": "בעיית המעוין היא מצב שבו מחלקה יורשת פעמיים מאותו בסיס דרך שתי מחלקות ביניים, ומקבלת שני עותקים שלו. הפתרון הוא ירושה <strong>וירטואלית</strong> (<code class=\"tok\" dir=\"ltr\">virtual</code>) של הבסיס בשתי מחלקות הביניים, כך שיש רק עותק אחד (התשובה ב). זו שאלת מושגים בלי הרצה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0d57646768b62ced"
+  },
+  {
+   "num": 12,
+   "topic": "classes_ctor_dtor",
+   "question": "מה קורה כאשר קוראים לבנאי (`constructor`) ?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לא קורה כלום.",
+     "html": "לא קורה כלום."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "נוצר מצביע לאוביקט של מחלקה.",
+     "html": "נוצר מצביע לאוביקט של מחלקה."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "נוצר אוביקט של מחלקה.",
+     "html": "נוצר אוביקט של מחלקה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "נוצר `reference` לאוביקט של מחלקה שכבר קיים.",
+     "html": "נוצר <code class=\"tok\" dir=\"ltr\">reference</code> לאוביקט של מחלקה שכבר קיים."
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "קריאה לבנאי יוצרת אובייקט של המחלקה (תשובה ג), ולא רק מצביע או הפניה אליו. זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). Concept question (no run).",
+   "id": "23B-A-Q12",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "מה קורה כאשר קוראים לבנאי (<code class=\"tok\" dir=\"ltr\">constructor</code>) ?",
+   "explanationHtml": "קריאה לבנאי יוצרת אובייקט של המחלקה (תשובה ג), ולא רק מצביע או הפניה אליו. זו שאלת מושגים בלי הרצה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "e9e069fe4d84f16e"
+  },
+  {
+   "num": 13,
+   "topic": "operator_overloading",
+   "question": "נניח ש `a1` ו- `a2` הם שני אובייקטים של מחלקה.\nכמה מהמשפטים הבאים נכונים:\nא. שתי השורות הבאות שקולות (מבצעות את אותה פעולה):\n```cpp\ncout << a1;\noperator<<(cout,a1);\n```\nב. שתי השורות הבאות שקולות (מבצעות את אותה פעולה):\n```cpp\ncin >> a1;\noperator>>(a1,cin);\n```\nג. שתי השורות הבאות שקולות (מבצעות את אותה פעולה):\n```cpp\ncout<<a1<<a2;\noperator<<(operator<<(cout, a1), a2);\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "טענה א נכונה: `cout << a1` הוא קיצור לקריאה `operator<<(cout, a1)` של האופרטור הגלובלי. טענה ב שגויה: ל-`cin >> a1` מתאימה הקריאה `operator>>(cin, a1)`, כלומר הזרם הוא הארגומנט הראשון, ואילו בשורה המודפסת הסדר הפוך (נבדק: היא אינה מתקמפלת). טענה ג נכונה: `cout << a1 << a2` שקול לקריאה מקוננת, כי האופרטור מחזיר את הזרם (נבדק: אותו פלט). שתי טענות נכונות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Rule + clang++ check of the three equivalences (tools/verify/23B-A/check.py).",
+   "id": "23B-A-Q13",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "נניח ש <code class=\"tok\" dir=\"ltr\">a1</code> ו- <code class=\"tok\" dir=\"ltr\">a2</code> הם שני אובייקטים של מחלקה.<br>כמה מהמשפטים הבאים נכונים:<br>א. שתי השורות הבאות שקולות (מבצעות את אותה פעולה):<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>cout &lt;&lt; a1;\noperator&lt;&lt;(cout,a1);</code></pre>ב. שתי השורות הבאות שקולות (מבצעות את אותה פעולה):<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>cin &gt;&gt; a1;\noperator&gt;&gt;(a1,cin);</code></pre>ג. שתי השורות הבאות שקולות (מבצעות את אותה פעולה):<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>cout&lt;&lt;a1&lt;&lt;a2;\noperator&lt;&lt;(operator&lt;&lt;(cout, a1), a2);</code></pre>",
+   "explanationHtml": "טענה א נכונה: <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a1</code> הוא קיצור לקריאה <code class=\"tok\" dir=\"ltr\">operator&lt;&lt;(cout, a1)</code> של האופרטור הגלובלי. טענה ב שגויה: ל-<code class=\"tok\" dir=\"ltr\">cin &gt;&gt; a1</code> מתאימה הקריאה <code class=\"tok\" dir=\"ltr\">operator&gt;&gt;(cin, a1)</code>, כלומר הזרם הוא הארגומנט הראשון, ואילו בשורה המודפסת הסדר הפוך (נבדק: היא אינה מתקמפלת). טענה ג נכונה: <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a1 &lt;&lt; a2</code> שקול לקריאה מקוננת, כי האופרטור מחזיר את הזרם (נבדק: אותו פלט). שתי טענות נכונות (תשובה ג).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c847ac2b105093f1"
+  },
+  {
+   "num": 14,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B {\npublic:\n    ~B() { cout << \"B dtor; \";}\n};\n\nclass C:public B{\npublic:\n    ~C() { cout << \"C dtor; \"; }\n};\n\nclass D :public C {\npublic:\n    ~D() { cout << \"D dtor; \"; }\n};\n\nint main(){\n    D d;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "B dtor;",
+     "html": "B dtor;"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "D dtor;",
+     "html": "D dtor;"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "B dtor; C dtor; D dtor;",
+     "html": "B dtor; C dtor; D dtor;"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "D dtor; C dtor; B dtor;",
+     "html": "D dtor; C dtor; B dtor;"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההורסים נקראים בסדר הפוך לבנאים: קודם ההורס של המחלקה הנגזרת ביותר, ואחר כך הורסי הבסיסים בסדר עולה בשרשרת. לכן `D dtor; C dtor; B dtor; ` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). clang++ run: `D dtor; C dtor; B dtor; `. Agrees.",
+   "id": "23B-A-Q14",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class B {\npublic:\n    ~B() { cout &lt;&lt; \"B dtor; \";}\n};\n\nclass C:public B{\npublic:\n    ~C() { cout &lt;&lt; \"C dtor; \"; }\n};\n\nclass D :public C {\npublic:\n    ~D() { cout &lt;&lt; \"D dtor; \"; }\n};\n\nint main(){\n    D d;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "ההורסים נקראים בסדר הפוך לבנאים: קודם ההורס של המחלקה הנגזרת ביותר, ואחר כך הורסי הבסיסים בסדר עולה בשרשרת. לכן <code class=\"tok\" dir=\"ltr\">D dtor; C dtor; B dtor; </code> (תשובה ד), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "9e97b0da0cc514ad"
+  },
+  {
+   "num": 15,
+   "topic": "friend_this_static",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass M\n{\n    float a;\n    int b;\npublic:\n    M() {\n        a = 50;\n        b = -100;\n    }\n    M(int p, int q) {\n        a = p;\n        b = q;\n    }\n    friend M operator+(M);\n    void output()\n    {\n        cout << \"a=\" << a << \"b=\" << b;\n    }\n};\n\nM operator+(M t) {\n    M res;\n    res.a = a + t.a;\n    res.b = b + t.b;\n    return res;\n}\n\nint main()\n{\n    M d1(10, 20);\n    M d2, d3;\n    d3 = d1 + d3;\n    d3.output();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה `operator+(M t)` מוגדרת עם פרמטר אחד, כלומר זהו `+` אונרי ולא בינארי. בנוסף היא פונקציה חברה (`friend`) ולא חבר, ולכן בתוכה השמות `a` ו-`b` לא מוגדרים (שגיאות בשתי שורות), והשורה `d3 = d1 + d3` נכשלת כי אין `operator+` בינארי. סך הכול שלוש שורות שגויות, כלומר יותר מ-2 (תשובה ד), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy).",
+   "id": "23B-A-Q15",
+   "examCode": "23B-A",
+   "examLabel": "2023 סמסטר ב מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class M\n{\n    float a;\n    int b;\npublic:\n    M() {\n        a = 50;\n        b = -100;\n    }\n    M(int p, int q) {\n        a = p;\n        b = q;\n    }\n    friend M operator+(M);\n    void output()\n    {\n        cout &lt;&lt; \"a=\" &lt;&lt; a &lt;&lt; \"b=\" &lt;&lt; b;\n    }\n};\n\nM operator+(M t) {\n    M res;\n    res.a = a + t.a;\n    res.b = b + t.b;\n    return res;\n}\n\nint main()\n{\n    M d1(10, 20);\n    M d2, d3;\n    d3 = d1 + d3;\n    d3.output();\n    return 0;\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">operator+(M t)</code> מוגדרת עם פרמטר אחד, כלומר זהו <code class=\"tok\" dir=\"ltr\">+</code> אונרי ולא בינארי. בנוסף היא פונקציה חברה (<code class=\"tok\" dir=\"ltr\">friend</code>) ולא חבר, ולכן בתוכה השמות <code class=\"tok\" dir=\"ltr\">a</code> ו-<code class=\"tok\" dir=\"ltr\">b</code> לא מוגדרים (שגיאות בשתי שורות), והשורה <code class=\"tok\" dir=\"ltr\">d3 = d1 + d3</code> נכשלת כי אין <code class=\"tok\" dir=\"ltr\">operator+</code> בינארי. סך הכול שלוש שורות שגויות, כלומר יותר מ-2 (תשובה ד), וכך גם clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d7e1e1e47e40399e"
+  },
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nfloat f(float x) {\n    return x + 1;\n}\nint f(float x, float y = 2) {\n    int z = x + (int)y;\n    return z;\n}\nint f(float x, int y, int z = 8) {\n    int w = (int) x + y + z;\n    return w;\n}\nint main()\n{\n    float x = 5.5, y = 2.5;\n    int z = 3;\n    cout << f(5) << endl;\n    cout << f(5,6) << endl;\n    cout << f(5,6,7) << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הקריאה `f(5)` עמומה: גם `f(float)` וגם `f(float, float = 2)` מתאימות לארגומנט אחד (שתיהן דורשות המרה מ-`int` ל-`float`), ולכן יש שגיאת קומפילציה בשורה הזאת. הקריאה `f(5,6)` תקינה: ב-`f(float, int, int = 8)` הארגומנט השני מתאים בדיוק (`int`), ולכן היא עדיפה על `f(float, float = 2)`. `f(5,6,7)` מתאימה רק לגרסה בעלת שלושה פרמטרים. בסך הכול שגיאה בשורה אחת (תשובה ב), וזה גם מה ש-clang++ מדווח.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q1",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>float f(float x) {\n    return x + 1;\n}\nint f(float x, float y = 2) {\n    int z = x + (int)y;\n    return z;\n}\nint f(float x, int y, int z = 8) {\n    int w = (int) x + y + z;\n    return w;\n}\nint main()\n{\n    float x = 5.5, y = 2.5;\n    int z = 3;\n    cout &lt;&lt; f(5) &lt;&lt; endl;\n    cout &lt;&lt; f(5,6) &lt;&lt; endl;\n    cout &lt;&lt; f(5,6,7) &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "הקריאה <code class=\"tok\" dir=\"ltr\">f(5)</code> עמומה: גם <code class=\"tok\" dir=\"ltr\">f(float)</code> וגם <code class=\"tok\" dir=\"ltr\">f(float, float = 2)</code> מתאימות לארגומנט אחד (שתיהן דורשות המרה מ-<code class=\"tok\" dir=\"ltr\">int</code> ל-<code class=\"tok\" dir=\"ltr\">float</code>), ולכן יש שגיאת קומפילציה בשורה הזאת. הקריאה <code class=\"tok\" dir=\"ltr\">f(5,6)</code> תקינה: ב-<code class=\"tok\" dir=\"ltr\">f(float, int, int = 8)</code> הארגומנט השני מתאים בדיוק (<code class=\"tok\" dir=\"ltr\">int</code>), ולכן היא עדיפה על <code class=\"tok\" dir=\"ltr\">f(float, float = 2)</code>. <code class=\"tok\" dir=\"ltr\">f(5,6,7)</code> מתאימה רק לגרסה בעלת שלושה פרמטרים. בסך הכול שגיאה בשורה אחת (תשובה ב), וזה גם מה ש-clang++ מדווח.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ee3a9dad8c2d4e09"
+  },
+  {
+   "num": 2,
+   "topic": "friend_this_static",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    A(int i) {x = i; y++;}\n    ~A() {y--;}\n    static int f() { A a3(4); y = y + a3.x; return y; }\n    int x;\npublic:\n    static int y;\n};\nint A::y = 0;\nint main() {\n    A a1(1), a2(2);\n    cout << a1.f();\n    cout << a2.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "611",
+     "html": "611"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "610",
+     "html": "610"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "711",
+     "html": "711"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`A a1(1), a2(2)` מגדילים את `y` ל-2. `a1.f()` היא פונקציה סטטית: נוצר `a3` (`y` הופך 3), `y = y + a3.x` נותן 7, והערך 7 מוחזר (אחר כך `a3` נהרס ו-`y` יורד ל-6). בקריאה `a2.f()`: `a3` מעלה את `y` ל-7, אחרי החיבור הוא 11 והערך 11 מוחזר. ההדפסה היא `7` ואחריה `11`, כלומר `711` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q2",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i) {x = i; y++;}\n    ~A() {y--;}\n    static int f() { A a3(4); y = y + a3.x; return y; }\n    int x;\npublic:\n    static int y;\n};\nint A::y = 0;\nint main() {\n    A a1(1), a2(2);\n    cout &lt;&lt; a1.f();\n    cout &lt;&lt; a2.f();\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">A a1(1), a2(2)</code> מגדילים את <code class=\"tok\" dir=\"ltr\">y</code> ל-2. <code class=\"tok\" dir=\"ltr\">a1.f()</code> היא פונקציה סטטית: נוצר <code class=\"tok\" dir=\"ltr\">a3</code> (<code class=\"tok\" dir=\"ltr\">y</code> הופך 3), <code class=\"tok\" dir=\"ltr\">y = y + a3.x</code> נותן 7, והערך 7 מוחזר (אחר כך <code class=\"tok\" dir=\"ltr\">a3</code> נהרס ו-<code class=\"tok\" dir=\"ltr\">y</code> יורד ל-6). בקריאה <code class=\"tok\" dir=\"ltr\">a2.f()</code>: <code class=\"tok\" dir=\"ltr\">a3</code> מעלה את <code class=\"tok\" dir=\"ltr\">y</code> ל-7, אחרי החיבור הוא 11 והערך 11 מוחזר. ההדפסה היא <code class=\"tok\" dir=\"ltr\">7</code> ואחריה <code class=\"tok\" dir=\"ltr\">11</code>, כלומר <code class=\"tok\" dir=\"ltr\">711</code> (תשובה ד), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "660509297c37ef38"
+  },
+  {
+   "num": 3,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass X {\npublic:\n    int n1;\n};\nclass Y : protected X {\npublic:\n    int n2;\n};\nclass Z : public Y {\npublic:\n    int n3;\n    friend void g();\n    void f() {\n        n3 = n1;\n        n3 = n2;\n    }\n};\nvoid g() { Y y1; Z z1;\n    y1.n1 = 0;\n    y1.n2 = 0;\n    z1.n1 = 0;\n    z1.n2 = 0;\n}\nint main() {\n    Z z1;\n    z1.n2 = 0;\n    z1.n1 = 0;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`Y` יורשת מ-`X` ירושה `protected`, ולכן `n1` מוגן ב-`Y` ובכל יורשיה. הפונקציה `g` היא חברה של `Z` בלבד: דרך אובייקט `Z` (`z1.n1`) מותר לה לגשת ל-`n1`, אבל דרך אובייקט `Y` (`y1.n1`) לא, ולכן זו שגיאה. ב-`main` הגישה `z1.n1` נחסמת (שדה מוגן, ו-`main` אינה חברה). שאר השורות תקינות (`n2` ציבורי, והפונקציה `f` של `Z` רשאית לגשת ל-`n1`). שתי שורות שגויות (תשובה ג), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q3",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    int n1;\n};\nclass Y : protected X {\npublic:\n    int n2;\n};\nclass Z : public Y {\npublic:\n    int n3;\n    friend void g();\n    void f() {\n        n3 = n1;\n        n3 = n2;\n    }\n};\nvoid g() { Y y1; Z z1;\n    y1.n1 = 0;\n    y1.n2 = 0;\n    z1.n1 = 0;\n    z1.n2 = 0;\n}\nint main() {\n    Z z1;\n    z1.n2 = 0;\n    z1.n1 = 0;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">Y</code> יורשת מ-<code class=\"tok\" dir=\"ltr\">X</code> ירושה <code class=\"tok\" dir=\"ltr\">protected</code>, ולכן <code class=\"tok\" dir=\"ltr\">n1</code> מוגן ב-<code class=\"tok\" dir=\"ltr\">Y</code> ובכל יורשיה. הפונקציה <code class=\"tok\" dir=\"ltr\">g</code> היא חברה של <code class=\"tok\" dir=\"ltr\">Z</code> בלבד: דרך אובייקט <code class=\"tok\" dir=\"ltr\">Z</code> (<code class=\"tok\" dir=\"ltr\">z1.n1</code>) מותר לה לגשת ל-<code class=\"tok\" dir=\"ltr\">n1</code>, אבל דרך אובייקט <code class=\"tok\" dir=\"ltr\">Y</code> (<code class=\"tok\" dir=\"ltr\">y1.n1</code>) לא, ולכן זו שגיאה. ב-<code class=\"tok\" dir=\"ltr\">main</code> הגישה <code class=\"tok\" dir=\"ltr\">z1.n1</code> נחסמת (שדה מוגן, ו-<code class=\"tok\" dir=\"ltr\">main</code> אינה חברה). שאר השורות תקינות (<code class=\"tok\" dir=\"ltr\">n2</code> ציבורי, והפונקציה <code class=\"tok\" dir=\"ltr\">f</code> של <code class=\"tok\" dir=\"ltr\">Z</code> רשאית לגשת ל-<code class=\"tok\" dir=\"ltr\">n1</code>). שתי שורות שגויות (תשובה ג), וכך גם clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1ec6247f14ffc245"
+  },
+  {
+   "num": 4,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass X {\npublic:\n    int n1;\n    virtual void f() { cout << \"X\"; }\n};\nclass Y : public X {\npublic:\n    int n2;\n    void f() { cout << \"Y\"; }\n};\nclass Z : public X {\npublic:\n    int n3;\n    void f() { cout << \"Z\"; }\n};\nclass W : public Z {\n    int n4;\n    void f() { cout << \"W\"; }\n};\nvoid g(X &x);\nvoid main()\n{\n    X* x[4];\n    x[0] = new X();\n    x[1] = new Y();\n    x[2] = new Z();\n    x[3] = new W();\n    X* x1 = (X *) x[3];\n    for (int i = 0; i < 4; i++) { g(*x[i]); };\n    g(*x1);\n}\nvoid g(X & x) {\n    x.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "XYZWX",
+     "html": "XYZWX"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "XXZWY",
+     "html": "XXZWY"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "XYZWW",
+     "html": "XYZWW"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f` וירטואלית במחלקת הבסיס `X`, וכל המחלקות הנגזרות דורסות אותה, ולכן הקריאה דרך הפניה `X&` נבחרת לפי הטיפוס הדינמי. ארבעת האובייקטים מדפיסים `X`, `Y`, `Z`, `W`. `x1` מצביע על האובייקט `W` (ההמרה `(X*)` היא רק המרה למצביע בסיס), ולכן הקריאה האחרונה מדפיסה `W` שוב. הפלט `XYZWW` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q4",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class X {\npublic:\n    int n1;\n    virtual void f() { cout &lt;&lt; \"X\"; }\n};\nclass Y : public X {\npublic:\n    int n2;\n    void f() { cout &lt;&lt; \"Y\"; }\n};\nclass Z : public X {\npublic:\n    int n3;\n    void f() { cout &lt;&lt; \"Z\"; }\n};\nclass W : public Z {\n    int n4;\n    void f() { cout &lt;&lt; \"W\"; }\n};\nvoid g(X &amp;x);\nvoid main()\n{\n    X* x[4];\n    x[0] = new X();\n    x[1] = new Y();\n    x[2] = new Z();\n    x[3] = new W();\n    X* x1 = (X *) x[3];\n    for (int i = 0; i &lt; 4; i++) { g(*x[i]); };\n    g(*x1);\n}\nvoid g(X &amp; x) {\n    x.f();\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">f</code> וירטואלית במחלקת הבסיס <code class=\"tok\" dir=\"ltr\">X</code>, וכל המחלקות הנגזרות דורסות אותה, ולכן הקריאה דרך הפניה <code class=\"tok\" dir=\"ltr\">X&amp;</code> נבחרת לפי הטיפוס הדינמי. ארבעת האובייקטים מדפיסים <code class=\"tok\" dir=\"ltr\">X</code>, <code class=\"tok\" dir=\"ltr\">Y</code>, <code class=\"tok\" dir=\"ltr\">Z</code>, <code class=\"tok\" dir=\"ltr\">W</code>. <code class=\"tok\" dir=\"ltr\">x1</code> מצביע על האובייקט <code class=\"tok\" dir=\"ltr\">W</code> (ההמרה <code class=\"tok\" dir=\"ltr\">(X*)</code> היא רק המרה למצביע בסיס), ולכן הקריאה האחרונה מדפיסה <code class=\"tok\" dir=\"ltr\">W</code> שוב. הפלט <code class=\"tok\" dir=\"ltr\">XYZWW</code> (תשובה ג), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "d355cbdae96c82cb"
+  },
+  {
+   "num": 5,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    int n1;\n    A(int i = 0) { n1 = i; }\n    operator int() { return n1; }\n};\ntemplate <class X, class Y>\nvoid f(X i, Y j) {\n    cout << i;\n    cout << j;\n}\ntemplate<>\nvoid f(int x, char c) {\n    cout << c;\n    cout << x;\n}\nint main() {\n    int i = 6;\n    char c = 'd';\n    A a1(5);\n    f<A, int>(a1, i);\n    f<int, char>(i, c);\n    f<char, int>(c, i);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "566dd6",
+     "html": "566dd6"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "56d6d6",
+     "html": "56d6d6"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "56d66d",
+     "html": "56d66d"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "656dd6",
+     "html": "656dd6"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בקריאה `f<A,int>(a1, i)` נבחרת התבנית הכללית: `cout << i` מפעילה את `operator int` של `A` ומדפיסה 5, ואז מודפס `j` שהוא 6: `56`. בקריאה `f<int,char>(i, c)` קיימת התמחות מפורשת `f(int x, char c)` שמדפיסה קודם את התו ואחר כך את המספר: `d6`. הקריאה `f<char,int>(c, i)` חוזרת לתבנית הכללית עם `c` ו-`i`: `d6`. הפלט `56d6d6` (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q5",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    int n1;\n    A(int i = 0) { n1 = i; }\n    operator int() { return n1; }\n};\ntemplate &lt;class X, class Y&gt;\nvoid f(X i, Y j) {\n    cout &lt;&lt; i;\n    cout &lt;&lt; j;\n}\ntemplate&lt;&gt;\nvoid f(int x, char c) {\n    cout &lt;&lt; c;\n    cout &lt;&lt; x;\n}\nint main() {\n    int i = 6;\n    char c = 'd';\n    A a1(5);\n    f&lt;A, int&gt;(a1, i);\n    f&lt;int, char&gt;(i, c);\n    f&lt;char, int&gt;(c, i);\n    return 0;\n}</code></pre>",
+   "explanationHtml": "בקריאה <code class=\"tok\" dir=\"ltr\">f&lt;A,int&gt;(a1, i)</code> נבחרת התבנית הכללית: <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; i</code> מפעילה את <code class=\"tok\" dir=\"ltr\">operator int</code> של <code class=\"tok\" dir=\"ltr\">A</code> ומדפיסה 5, ואז מודפס <code class=\"tok\" dir=\"ltr\">j</code> שהוא 6: <code class=\"tok\" dir=\"ltr\">56</code>. בקריאה <code class=\"tok\" dir=\"ltr\">f&lt;int,char&gt;(i, c)</code> קיימת התמחות מפורשת <code class=\"tok\" dir=\"ltr\">f(int x, char c)</code> שמדפיסה קודם את התו ואחר כך את המספר: <code class=\"tok\" dir=\"ltr\">d6</code>. הקריאה <code class=\"tok\" dir=\"ltr\">f&lt;char,int&gt;(c, i)</code> חוזרת לתבנית הכללית עם <code class=\"tok\" dir=\"ltr\">c</code> ו-<code class=\"tok\" dir=\"ltr\">i</code>: <code class=\"tok\" dir=\"ltr\">d6</code>. הפלט <code class=\"tok\" dir=\"ltr\">56d6d6</code> (תשובה ב), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "aabadb57f4341dac"
+  },
+  {
+   "num": 6,
+   "topic": "classes_ctor_dtor",
+   "question": "להלן הצהרה של המחלקה הבאה:\n```cpp\nclass A {\n    int x;\npublic:\n    int f() { return x;}\n    int& g() {return x;}\n    int* h()  {return &x;}\n};\n```\nכמה מבין הפונקציות של המחלקה הנ\"ל ממומשות באופן שנוגד עקרונות תכנות נכון?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "העיקרון הוא הסתרת מידע: פונקציות גישה לא אמורות לחשוף את השדה הפרטי לשינוי חופשי. `f` מחזירה עותק של `x`, ולכן היא תקינה. `g` מחזירה הפניה (`int&`) ל-`x`, ו-`h` מחזירה מצביע (`int*`) אליו: דרכן אפשר לשנות את השדה הפרטי בלי שהמחלקה תשלוט בכך. לכן שתי פונקציות סותרות את העיקרון (תשובה ג). השאלה עוסקת בעיקרון תכנות ולא בהרצה, והתשובה נקבעה לפי כלל זה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule.",
+   "id": "23B-B-Q6",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "להלן הצהרה של המחלקה הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\n    int x;\npublic:\n    int f() { return x;}\n    int&amp; g() {return x;}\n    int* h()  {return &amp;x;}\n};</code></pre>כמה מבין הפונקציות של המחלקה הנ\"ל ממומשות באופן שנוגד עקרונות תכנות נכון?",
+   "explanationHtml": "העיקרון הוא הסתרת מידע: פונקציות גישה לא אמורות לחשוף את השדה הפרטי לשינוי חופשי. <code class=\"tok\" dir=\"ltr\">f</code> מחזירה עותק של <code class=\"tok\" dir=\"ltr\">x</code>, ולכן היא תקינה. <code class=\"tok\" dir=\"ltr\">g</code> מחזירה הפניה (<code class=\"tok\" dir=\"ltr\">int&amp;</code>) ל-<code class=\"tok\" dir=\"ltr\">x</code>, ו-<code class=\"tok\" dir=\"ltr\">h</code> מחזירה מצביע (<code class=\"tok\" dir=\"ltr\">int*</code>) אליו: דרכן אפשר לשנות את השדה הפרטי בלי שהמחלקה תשלוט בכך. לכן שתי פונקציות סותרות את העיקרון (תשובה ג). השאלה עוסקת בעיקרון תכנות ולא בהרצה, והתשובה נקבעה לפי כלל זה.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0920629e373f70cf"
+  },
+  {
+   "num": 7,
+   "topic": "friend_this_static",
+   "question": "כמה מהמשפטים הבאים נכונים:\nא. מחלקה `A` יכולה לתת חברות (`friendship`) לחלק מהפונקציות של מחלקה `B`.\nב. אם מחלקה `A` נותנת חברות (`friendship`) למחלקה `B`, אז היא לא יכולה להגביל את החברות רק לחלק מהפונקציות של מחלקה `B`.\nג. אם מחלקה `A` נותנת חברות (`friendship`) לפונקציה גלובלית בשם `f` אזי היא לא יכולה לתת חברות (`friendship`) לפונקציה של מחלקה `B` בשם `f`.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "טענה א נכונה: אפשר לתת חברות לפונקציה חברה בודדת של `B`, למשל `friend void B::f();` (נבדק בקומפילציה, ופונקציה אחרת של `B` לא קיבלה גישה). טענה ב לכן שגויה. טענה ג שגויה: פונקציה גלובלית `f` ופונקציה `B::f` הן שתי פונקציות שונות, ואפשר להצהיר על שתיהן כחברות באותה מחלקה. רק טענה אחת נכונה (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q7",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "כמה מהמשפטים הבאים נכונים:<br>א. מחלקה <code class=\"tok\" dir=\"ltr\">A</code> יכולה לתת חברות (<code class=\"tok\" dir=\"ltr\">friendship</code>) לחלק מהפונקציות של מחלקה <code class=\"tok\" dir=\"ltr\">B</code>.<br>ב. אם מחלקה <code class=\"tok\" dir=\"ltr\">A</code> נותנת חברות (<code class=\"tok\" dir=\"ltr\">friendship</code>) למחלקה <code class=\"tok\" dir=\"ltr\">B</code>, אז היא לא יכולה להגביל את החברות רק לחלק מהפונקציות של מחלקה <code class=\"tok\" dir=\"ltr\">B</code>.<br>ג. אם מחלקה <code class=\"tok\" dir=\"ltr\">A</code> נותנת חברות (<code class=\"tok\" dir=\"ltr\">friendship</code>) לפונקציה גלובלית בשם <code class=\"tok\" dir=\"ltr\">f</code> אזי היא לא יכולה לתת חברות (<code class=\"tok\" dir=\"ltr\">friendship</code>) לפונקציה של מחלקה <code class=\"tok\" dir=\"ltr\">B</code> בשם <code class=\"tok\" dir=\"ltr\">f</code>.",
+   "explanationHtml": "טענה א נכונה: אפשר לתת חברות לפונקציה חברה בודדת של <code class=\"tok\" dir=\"ltr\">B</code>, למשל <code class=\"tok\" dir=\"ltr\">friend void B::f();</code> (נבדק בקומפילציה, ופונקציה אחרת של <code class=\"tok\" dir=\"ltr\">B</code> לא קיבלה גישה). טענה ב לכן שגויה. טענה ג שגויה: פונקציה גלובלית <code class=\"tok\" dir=\"ltr\">f</code> ופונקציה <code class=\"tok\" dir=\"ltr\">B::f</code> הן שתי פונקציות שונות, ואפשר להצהיר על שתיהן כחברות באותה מחלקה. רק טענה אחת נכונה (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "2f3e2fa6a245fe5f"
+  },
+  {
+   "num": 8,
+   "topic": "classes_ctor_dtor",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nchar c;\nclass X {\n    char c;\npublic:\n    class Y {\n    public:\n        void f(char r) {\n            X t;\n            ::c = t.X::c = c = r;\n        }\n    private:\n        char c;\n    };\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המחלקה `Y` מקוננת בתוך `X`, ובמחלקה מקוננת מותר לגשת לחברים הפרטיים של המחלקה העוטפת. בביטוי `::c = t.X::c = c = r`: `::c` הוא המשתנה הגלובלי, `t.X::c` הוא השדה הפרטי של `X` (מותר מתוך `Y`), ו-`c` לבדו הוא `Y::c`. כל ההשמות חוקיות והקוד מתקמפל בלי אף שגיאה (תשובה א), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q8",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>char c;\nclass X {\n    char c;\npublic:\n    class Y {\n    public:\n        void f(char r) {\n            X t;\n            ::c = t.X::c = c = r;\n        }\n    private:\n        char c;\n    };\n};</code></pre>",
+   "explanationHtml": "המחלקה <code class=\"tok\" dir=\"ltr\">Y</code> מקוננת בתוך <code class=\"tok\" dir=\"ltr\">X</code>, ובמחלקה מקוננת מותר לגשת לחברים הפרטיים של המחלקה העוטפת. בביטוי <code class=\"tok\" dir=\"ltr\">::c = t.X::c = c = r</code>: <code class=\"tok\" dir=\"ltr\">::c</code> הוא המשתנה הגלובלי, <code class=\"tok\" dir=\"ltr\">t.X::c</code> הוא השדה הפרטי של <code class=\"tok\" dir=\"ltr\">X</code> (מותר מתוך <code class=\"tok\" dir=\"ltr\">Y</code>), ו-<code class=\"tok\" dir=\"ltr\">c</code> לבדו הוא <code class=\"tok\" dir=\"ltr\">Y::c</code>. כל ההשמות חוקיות והקוד מתקמפל בלי אף שגיאה (תשובה א), וכך גם clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "e162649f37040ab2"
+  },
+  {
+   "num": 9,
+   "topic": "copy_control",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass T{\nprivate:\n    int a;\npublic:\n    static int n;\n    int b;\n    T(int i, int j) { a = i; b = j; }\n    T(const T &r){\n        a = r.a; b = r.b;\n        n++;\n    }\n};\nint T::n = 0;\nT ret_obj(const T& t){\n    return t;\n}\nvoid pass_obj(T t){\n    ;\n}\nint main(){\n    T t1(1, 2), t2(3, 4);\n    ret_obj(t1);\n    pass_obj(t1);\n    cout << T::n;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי ההעתקה מקדם את `T::n`. `ret_obj(t1)` מחזירה את `t` לפי ערך, וזה יוצר עותק אחד (גם אם התוצאה לא נשמרת). `pass_obj(t1)` מקבלת את הארגומנט לפי ערך ויוצרת עותק נוסף. סך הכול `n = 2`, והפלט `2` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q9",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class T{\nprivate:\n    int a;\npublic:\n    static int n;\n    int b;\n    T(int i, int j) { a = i; b = j; }\n    T(const T &amp;r){\n        a = r.a; b = r.b;\n        n++;\n    }\n};\nint T::n = 0;\nT ret_obj(const T&amp; t){\n    return t;\n}\nvoid pass_obj(T t){\n    ;\n}\nint main(){\n    T t1(1, 2), t2(3, 4);\n    ret_obj(t1);\n    pass_obj(t1);\n    cout &lt;&lt; T::n;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "בנאי ההעתקה מקדם את <code class=\"tok\" dir=\"ltr\">T::n</code>. <code class=\"tok\" dir=\"ltr\">ret_obj(t1)</code> מחזירה את <code class=\"tok\" dir=\"ltr\">t</code> לפי ערך, וזה יוצר עותק אחד (גם אם התוצאה לא נשמרת). <code class=\"tok\" dir=\"ltr\">pass_obj(t1)</code> מקבלת את הארגומנט לפי ערך ויוצרת עותק נוסף. סך הכול <code class=\"tok\" dir=\"ltr\">n = 2</code>, והפלט <code class=\"tok\" dir=\"ltr\">2</code> (תשובה ג), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "1454985dbea92114"
+  },
+  {
+   "num": 10,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    int a;\n    A() { a = 0; }\n    A(int i) { a = i; }\n    virtual void f() const { cout << \" A.f \"; }\n    void g() const { cout << \" A.g \"; }\n};\nclass B : public A{\npublic:\n    B(int i) : A(i) {}\n};\nclass C : public A{\npublic:\n    void f() const { cout << \" C.f \"; }\n    void g() const { cout << \" C.g \"; }\n};\nvoid t(A* p){\n    p->f();\n    p->g();\n}\nint main(){\n    B b(10);\n    C c;\n    cout << b.a + c.a << \" \";\n    t(&c);\n    return 0;\n}\n```\nבתשובה ד. הנ\"ל המספר -858993450 הוא מספר שלם אקראי כלשהו שהתכנית מדפיסה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "10  C.f  A.g",
+     "html": "10  C.f  A.g"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "10  C.f  C.g",
+     "html": "10  C.f  C.g"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "10  C.f  C.g",
+     "html": "10  C.f  C.g"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "-858993450  C.f  C.g",
+     "html": "-858993450  C.f  C.g"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`b.a + c.a` הוא 10+0, ולכן מודפס `10` ואחריו רווח. ב-`t(&c)` הפונקציה `f` וירטואלית ולכן נקראת הגרסה של `C` (` C.f `), אבל `g` אינה וירטואלית, ולכן נבחרת לפי הטיפוס הסטטי `A*`: ` A.g `. הפלט `10  C.f  A.g` (תשובה א), וכך גם הרצת clang++. בתשובות ב ו-ג, שהן זהות בדפוס, מודפס `C.g`, וזה לא קורה. הערך האקראי בתשובה ד אינו אפשרי כי `A()` מאתחל את `a` ל-0.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q10",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    int a;\n    A() { a = 0; }\n    A(int i) { a = i; }\n    virtual void f() const { cout &lt;&lt; \" A.f \"; }\n    void g() const { cout &lt;&lt; \" A.g \"; }\n};\nclass B : public A{\npublic:\n    B(int i) : A(i) {}\n};\nclass C : public A{\npublic:\n    void f() const { cout &lt;&lt; \" C.f \"; }\n    void g() const { cout &lt;&lt; \" C.g \"; }\n};\nvoid t(A* p){\n    p-&gt;f();\n    p-&gt;g();\n}\nint main(){\n    B b(10);\n    C c;\n    cout &lt;&lt; b.a + c.a &lt;&lt; \" \";\n    t(&amp;c);\n    return 0;\n}</code></pre>בתשובה ד. הנ\"ל המספר -858993450 הוא מספר שלם אקראי כלשהו שהתכנית מדפיסה.",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">b.a + c.a</code> הוא 10+0, ולכן מודפס <code class=\"tok\" dir=\"ltr\">10</code> ואחריו רווח. ב-<code class=\"tok\" dir=\"ltr\">t(&amp;c)</code> הפונקציה <code class=\"tok\" dir=\"ltr\">f</code> וירטואלית ולכן נקראת הגרסה של <code class=\"tok\" dir=\"ltr\">C</code> (<code class=\"tok\" dir=\"ltr\"> C.f </code>), אבל <code class=\"tok\" dir=\"ltr\">g</code> אינה וירטואלית, ולכן נבחרת לפי הטיפוס הסטטי <code class=\"tok\" dir=\"ltr\">A*</code>: <code class=\"tok\" dir=\"ltr\"> A.g </code>. הפלט <code class=\"tok\" dir=\"ltr\">10  C.f  A.g</code> (תשובה א), וכך גם הרצת clang++. בתשובות ב ו-ג, שהן זהות בדפוס, מודפס <code class=\"tok\" dir=\"ltr\">C.g</code>, וזה לא קורה. הערך האקראי בתשובה ד אינו אפשרי כי <code class=\"tok\" dir=\"ltr\">A()</code> מאתחל את <code class=\"tok\" dir=\"ltr\">a</code> ל-0.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "dfdd3d42042df239"
+  },
+  {
+   "num": 11,
+   "topic": "templates",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A{\npublic:\n    void p() const { cout << \"p\\n\"; }\n};\ntemplate <typename T> class B{\nprivate:\n    T x;\npublic:\n    int k;\n    B(T y) : x(y), k(2) { x.p(); }\n};\nvoid f(B &r){\n    std::cout << r.k;\n}\nint main(){\n    A a;\n    B<A*> b(&a);\n    f(b);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2",
+     "html": "יותר מ- 2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "בתבנית `B<A*>` השדה `x` הוא מצביע (`A*`), ולכן `x.p()` שגויה (צריך `x->p()`): שגיאה אחת בשורת הבנאי. הכותרת `void f(B &r)` שגויה כי `B` היא תבנית ודורשת ארגומנט (`B<A*>&`): שגיאה שנייה. הקריאה `f(b)` נכשלת רק כתוצאה מההצהרה השגויה של `f`, ולכן לא נספרת כשורה נפרדת. שתי שורות (תשובה ג). clang++ מדווח גם על שורת הקריאה כשגיאה נגררת, ולכן הביטחון בינוני.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q11",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A{\npublic:\n    void p() const { cout &lt;&lt; \"p\\n\"; }\n};\ntemplate &lt;typename T&gt; class B{\nprivate:\n    T x;\npublic:\n    int k;\n    B(T y) : x(y), k(2) { x.p(); }\n};\nvoid f(B &amp;r){\n    std::cout &lt;&lt; r.k;\n}\nint main(){\n    A a;\n    B&lt;A*&gt; b(&amp;a);\n    f(b);\n    return 0;\n}</code></pre>",
+   "explanationHtml": "בתבנית <code class=\"tok\" dir=\"ltr\">B&lt;A*&gt;</code> השדה <code class=\"tok\" dir=\"ltr\">x</code> הוא מצביע (<code class=\"tok\" dir=\"ltr\">A*</code>), ולכן <code class=\"tok\" dir=\"ltr\">x.p()</code> שגויה (צריך <code class=\"tok\" dir=\"ltr\">x-&gt;p()</code>): שגיאה אחת בשורת הבנאי. הכותרת <code class=\"tok\" dir=\"ltr\">void f(B &amp;r)</code> שגויה כי <code class=\"tok\" dir=\"ltr\">B</code> היא תבנית ודורשת ארגומנט (<code class=\"tok\" dir=\"ltr\">B&lt;A*&gt;&amp;</code>): שגיאה שנייה. הקריאה <code class=\"tok\" dir=\"ltr\">f(b)</code> נכשלת רק כתוצאה מההצהרה השגויה של <code class=\"tok\" dir=\"ltr\">f</code>, ולכן לא נספרת כשורה נפרדת. שתי שורות (תשובה ג). clang++ מדווח גם על שורת הקריאה כשגיאה נגררת, ולכן הביטחון בינוני.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fc7ce245833286cc"
+  },
+  {
+   "num": 12,
+   "topic": "const_references",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint f(int x) { return 1; }\nint f(int& x) { return 3; }\nint f(const int& x) { return 4; }\nclass C {\npublic:\n    int f(int x) const { return 5; }\n    int f(int x) { return 6; }\n};\nint main()\n{\n    const C c;\n    int y = 7;\n    cout << c.f(y);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה.",
+     "html": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "7",
+     "html": "7"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "6",
+     "html": "6"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "5",
+     "html": "5"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האובייקט `c` הוא `const`, ולכן על אובייקט כזה אפשר לקרוא רק לפונקציות חברות שהן `const`: נבחרת `int f(int) const` שמחזירה 5. שלוש הפונקציות הגלובליות לא מעורבות כלל, כי הקריאה היא קריאה לפונקציה חברה. הפלט `5` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q12",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int f(int x) { return 1; }\nint f(int&amp; x) { return 3; }\nint f(const int&amp; x) { return 4; }\nclass C {\npublic:\n    int f(int x) const { return 5; }\n    int f(int x) { return 6; }\n};\nint main()\n{\n    const C c;\n    int y = 7;\n    cout &lt;&lt; c.f(y);\n    return 0;\n}</code></pre>",
+   "explanationHtml": "האובייקט <code class=\"tok\" dir=\"ltr\">c</code> הוא <code class=\"tok\" dir=\"ltr\">const</code>, ולכן על אובייקט כזה אפשר לקרוא רק לפונקציות חברות שהן <code class=\"tok\" dir=\"ltr\">const</code>: נבחרת <code class=\"tok\" dir=\"ltr\">int f(int) const</code> שמחזירה 5. שלוש הפונקציות הגלובליות לא מעורבות כלל, כי הקריאה היא קריאה לפונקציה חברה. הפלט <code class=\"tok\" dir=\"ltr\">5</code> (תשובה ד), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "874b8030836acda3"
+  },
+  {
+   "num": 13,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass CD{\npublic:\n    CD(int value) :data(value) { cout << \"+\" << data; }\n    ~CD() { cout << \"-\"<< data; }\nprivate:\n    int data;\n};\nvoid create(void);\nCD first(1);\nint main() {\n    cout << \"main\";\n    CD second(2);\n    static CD third(3);\n    create();\n    CD fourth(4);\n    return 0;\n}\nvoid create(void){\n    CD fifth(5);\n    static CD sixth(6);\n    CD seventh(7);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "main+1+2+3+5+6+7-7-5+4-4-2-6-3-1",
+     "html": "main+1+2+3+5+6+7-7-5+4-4-2-6-3-1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "+1main+2+3+5+6+7-7-5+4-4-2-6-3-1",
+     "html": "+1main+2+3+5+6+7-7-5+4-4-2-6-3-1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "+1main+2+3+5+6+7-7-5+4-4-1-2-6-3",
+     "html": "+1main+2+3+5+6+7-7-5+4-4-1-2-6-3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "משתנה גלובלי נבנה לפני `main`: `+1`. אחר כך `main` מדפיסה `main`, נבנה `second` (`+2`), נבנה המשתנה הסטטי `third` (`+3`), ובתוך `create` נבנים `fifth` (`+5`), הסטטי `sixth` (`+6`) ו-`seventh` (`+7`). בסיום `create` נהרסים רק המשתנים האוטומטיים בסדר הפוך: `-7-5`. נבנה `fourth` (`+4`), ובסיום `main` נהרסים `fourth` ו-`second`: `-4-2`. לבסוף נהרסים הסטטיים והגלובליים בסדר הפוך לבנייה: `-6-3-1`. הפלט `+1main+2+3+5+6+7-7-5+4-4-2-6-3-1` (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23B-B-Q13",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה מדפיסה התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class CD{\npublic:\n    CD(int value) :data(value) { cout &lt;&lt; \"+\" &lt;&lt; data; }\n    ~CD() { cout &lt;&lt; \"-\"&lt;&lt; data; }\nprivate:\n    int data;\n};\nvoid create(void);\nCD first(1);\nint main() {\n    cout &lt;&lt; \"main\";\n    CD second(2);\n    static CD third(3);\n    create();\n    CD fourth(4);\n    return 0;\n}\nvoid create(void){\n    CD fifth(5);\n    static CD sixth(6);\n    CD seventh(7);\n}</code></pre>",
+   "explanationHtml": "משתנה גלובלי נבנה לפני <code class=\"tok\" dir=\"ltr\">main</code>: <code class=\"tok\" dir=\"ltr\">+1</code>. אחר כך <code class=\"tok\" dir=\"ltr\">main</code> מדפיסה <code class=\"tok\" dir=\"ltr\">main</code>, נבנה <code class=\"tok\" dir=\"ltr\">second</code> (<code class=\"tok\" dir=\"ltr\">+2</code>), נבנה המשתנה הסטטי <code class=\"tok\" dir=\"ltr\">third</code> (<code class=\"tok\" dir=\"ltr\">+3</code>), ובתוך <code class=\"tok\" dir=\"ltr\">create</code> נבנים <code class=\"tok\" dir=\"ltr\">fifth</code> (<code class=\"tok\" dir=\"ltr\">+5</code>), הסטטי <code class=\"tok\" dir=\"ltr\">sixth</code> (<code class=\"tok\" dir=\"ltr\">+6</code>) ו-<code class=\"tok\" dir=\"ltr\">seventh</code> (<code class=\"tok\" dir=\"ltr\">+7</code>). בסיום <code class=\"tok\" dir=\"ltr\">create</code> נהרסים רק המשתנים האוטומטיים בסדר הפוך: <code class=\"tok\" dir=\"ltr\">-7-5</code>. נבנה <code class=\"tok\" dir=\"ltr\">fourth</code> (<code class=\"tok\" dir=\"ltr\">+4</code>), ובסיום <code class=\"tok\" dir=\"ltr\">main</code> נהרסים <code class=\"tok\" dir=\"ltr\">fourth</code> ו-<code class=\"tok\" dir=\"ltr\">second</code>: <code class=\"tok\" dir=\"ltr\">-4-2</code>. לבסוף נהרסים הסטטיים והגלובליים בסדר הפוך לבנייה: <code class=\"tok\" dir=\"ltr\">-6-3-1</code>. הפלט <code class=\"tok\" dir=\"ltr\">+1main+2+3+5+6+7-7-5+4-4-2-6-3-1</code> (תשובה ב), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "ca98363ea3edb44e"
+  },
+  {
+   "num": 14,
+   "topic": "cpp_basics_refs",
+   "question": "כמה מבין המשפטים הבאים **אינם** נכונים:\nב- `structure` ב-C++ כל השדות הם מסוג `public`.\n`structure` ב-C++ לא יכול להכיל מטודות (`member functions`).\nכאשר מכריזים על משתנה מסוג `structure` ב-C++ חייבים להוסיף את המילה `struct` לפני ההכרזה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "שלושת המשפטים אינם נכונים. ב-`struct` ברירת המחדל היא `public`, אבל אפשר להגדיר גם שדות `private` או `protected` (נבדק בקומפילציה), ולכן 'כל השדות הם `public`' אינו נכון. ל-`struct` ב-C++ יכולות להיות פונקציות חברות (נבדק). ו-C++ אינה דורשת את המילה `struct` בהכרזת משתנה (זו דרישת C). לכן 3 משפטים אינם נכונים (תשובה ד). הקריאה של המשפט הראשון היא קריאה מילולית, ולכן הביטחון בינוני.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule.",
+   "id": "23B-B-Q14",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "כמה מבין המשפטים הבאים <strong>אינם</strong> נכונים:<br>ב- <code class=\"tok\" dir=\"ltr\">structure</code> ב-C++ כל השדות הם מסוג <code class=\"tok\" dir=\"ltr\">public</code>.<br><code class=\"tok\" dir=\"ltr\">structure</code> ב-C++ לא יכול להכיל מטודות (<code class=\"tok\" dir=\"ltr\">member functions</code>).<br>כאשר מכריזים על משתנה מסוג <code class=\"tok\" dir=\"ltr\">structure</code> ב-C++ חייבים להוסיף את המילה <code class=\"tok\" dir=\"ltr\">struct</code> לפני ההכרזה.",
+   "explanationHtml": "שלושת המשפטים אינם נכונים. ב-<code class=\"tok\" dir=\"ltr\">struct</code> ברירת המחדל היא <code class=\"tok\" dir=\"ltr\">public</code>, אבל אפשר להגדיר גם שדות <code class=\"tok\" dir=\"ltr\">private</code> או <code class=\"tok\" dir=\"ltr\">protected</code> (נבדק בקומפילציה), ולכן 'כל השדות הם <code class=\"tok\" dir=\"ltr\">public</code>' אינו נכון. ל-<code class=\"tok\" dir=\"ltr\">struct</code> ב-C++ יכולות להיות פונקציות חברות (נבדק). ו-C++ אינה דורשת את המילה <code class=\"tok\" dir=\"ltr\">struct</code> בהכרזת משתנה (זו דרישת C). לכן 3 משפטים אינם נכונים (תשובה ד). הקריאה של המשפט הראשון היא קריאה מילולית, ולכן הביטחון בינוני.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "99cf12582beb1c89"
+  },
+  {
+   "num": 15,
+   "topic": "classes_ctor_dtor",
+   "question": "מה קורה כאשר כל הבנאים של מחלקה `C` מוכרזים `private`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מתקבלת שגיאת קומפילציה.",
+     "html": "מתקבלת שגיאת קומפילציה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לא ניתן ליצור אוביקטים של המחלקה `C`.",
+     "html": "לא ניתן ליצור אוביקטים של המחלקה <code class=\"tok\" dir=\"ltr\">C</code>."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שתי התשובות א ו ב לא נכונות.",
+     "html": "שתי התשובות א ו ב לא נכונות."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שתי התשובות א ו ב נכונות.",
+     "html": "שתי התשובות א ו ב נכונות."
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "הצהרה של בנאים `private` אינה שגיאה בפני עצמה: מחלקה כזו מתקמפלת (נבדק), והשגיאה מתקבלת רק כשמנסים ליצור אובייקט מבחוץ. לכן א אינה נכונה בכלליות. גם ב אינה נכונה: פונקציה סטטית של המחלקה או פונקציה חברה (`friend`) יכולות ליצור אובייקטים (נבדק עם `static C make()`), כמו בתבנית Singleton. לכן שתי התשובות א ו-ב אינן נכונות (תשובה ג). זו שאלת ניסוח ולכן הביטחון בינוני.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule.",
+   "id": "23B-B-Q15",
+   "examCode": "23B-B",
+   "examLabel": "2023 סמסטר ב מועד ב",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "lockOrder": true,
+   "questionHtml": "מה קורה כאשר כל הבנאים של מחלקה <code class=\"tok\" dir=\"ltr\">C</code> מוכרזים <code class=\"tok\" dir=\"ltr\">private</code>?",
+   "explanationHtml": "הצהרה של בנאים <code class=\"tok\" dir=\"ltr\">private</code> אינה שגיאה בפני עצמה: מחלקה כזו מתקמפלת (נבדק), והשגיאה מתקבלת רק כשמנסים ליצור אובייקט מבחוץ. לכן א אינה נכונה בכלליות. גם ב אינה נכונה: פונקציה סטטית של המחלקה או פונקציה חברה (<code class=\"tok\" dir=\"ltr\">friend</code>) יכולות ליצור אובייקטים (נבדק עם <code class=\"tok\" dir=\"ltr\">static C make()</code>), כמו בתבנית Singleton. לכן שתי התשובות א ו-ב אינן נכונות (תשובה ג). זו שאלת ניסוח ולכן הביטחון בינוני.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "33512e3b2c25436f"
+  },
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "מה יודפס לאחר הרצת התכנית הבאה?\n```cpp\nint& smallest(int& r, int& s){\n    if (r < s) return r;\n    else       return s;\n}\nvoid main(){\n    int k = 6;\n    int m = 5;\n    smallest(k, m) = 10;\n    smallest(k, m)--;\n    cout << \"k=\" << k << \", m=\" << m << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "k=5, m=10",
+     "html": "k=5, m=10"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "k=6,m=5",
+     "html": "k=6,m=5"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "k=5, m=9",
+     "html": "k=5, m=9"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה `smallest` מחזירה הפניה לאחד הארגומנטים. בקריאה הראשונה `r` הוא `k` (6) ו-`s` הוא `m` (5), התנאי `6 < 5` לא מתקיים ולכן מוחזרת ההפניה ל-`m`, וההשמה `= 10` משנה את `m` ל-10. בקריאה השנייה `6 < 10` מתקיים, מוחזרת ההפניה ל-`k`, ו-`--` מקטין אותו ל-5. הפלט `k=5, m=10` (תשובה א), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q1",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה יודפס לאחר הרצת התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>int&amp; smallest(int&amp; r, int&amp; s){\n    if (r &lt; s) return r;\n    else       return s;\n}\nvoid main(){\n    int k = 6;\n    int m = 5;\n    smallest(k, m) = 10;\n    smallest(k, m)--;\n    cout &lt;&lt; \"k=\" &lt;&lt; k &lt;&lt; \", m=\" &lt;&lt; m &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "הפונקציה <code class=\"tok\" dir=\"ltr\">smallest</code> מחזירה הפניה לאחד הארגומנטים. בקריאה הראשונה <code class=\"tok\" dir=\"ltr\">r</code> הוא <code class=\"tok\" dir=\"ltr\">k</code> (6) ו-<code class=\"tok\" dir=\"ltr\">s</code> הוא <code class=\"tok\" dir=\"ltr\">m</code> (5), התנאי <code class=\"tok\" dir=\"ltr\">6 &lt; 5</code> לא מתקיים ולכן מוחזרת ההפניה ל-<code class=\"tok\" dir=\"ltr\">m</code>, וההשמה <code class=\"tok\" dir=\"ltr\">= 10</code> משנה את <code class=\"tok\" dir=\"ltr\">m</code> ל-10. בקריאה השנייה <code class=\"tok\" dir=\"ltr\">6 &lt; 10</code> מתקיים, מוחזרת ההפניה ל-<code class=\"tok\" dir=\"ltr\">k</code>, ו-<code class=\"tok\" dir=\"ltr\">--</code> מקטין אותו ל-5. הפלט <code class=\"tok\" dir=\"ltr\">k=5, m=10</code> (תשובה א), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "5760ec0877df9a86"
+  },
+  {
+   "num": 2,
+   "topic": "copy_control",
+   "question": "כמה בנאי עותק (`copy constructors`) ברשימה הבאה?\n- `Point(Point const src)`\n- `Point(Point const *src)`\n- `Point(Point const &src)`",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי העתקה הוא בנאי שהפרמטר הראשון שלו הוא הפניה למחלקה עצמה (בדרך כלל `const &`). `Point(Point const src)` מקבל לפי ערך, וזה אסור לבנאי העתקה (clang++ דוחה אותו, כי העתקת הארגומנט הייתה קוראת שוב לבנאי ההעתקה בלי סוף). `Point(Point const *src)` מקבל מצביע, ולכן הוא בנאי רגיל ולא בנאי העתקה. רק `Point(Point const &src)` הוא בנאי העתקה: 1 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule.",
+   "id": "23S-A-Q2",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "בנאי העתקה והשמה",
+   "questionHtml": "כמה בנאי עותק (<code class=\"tok\" dir=\"ltr\">copy constructors</code>) ברשימה הבאה?<br>- <code class=\"tok\" dir=\"ltr\">Point(Point const src)</code><br>- <code class=\"tok\" dir=\"ltr\">Point(Point const *src)</code><br>- <code class=\"tok\" dir=\"ltr\">Point(Point const &amp;src)</code>",
+   "explanationHtml": "בנאי העתקה הוא בנאי שהפרמטר הראשון שלו הוא הפניה למחלקה עצמה (בדרך כלל <code class=\"tok\" dir=\"ltr\">const &amp;</code>). <code class=\"tok\" dir=\"ltr\">Point(Point const src)</code> מקבל לפי ערך, וזה אסור לבנאי העתקה (clang++ דוחה אותו, כי העתקת הארגומנט הייתה קוראת שוב לבנאי ההעתקה בלי סוף). <code class=\"tok\" dir=\"ltr\">Point(Point const *src)</code> מקבל מצביע, ולכן הוא בנאי רגיל ולא בנאי העתקה. רק <code class=\"tok\" dir=\"ltr\">Point(Point const &amp;src)</code> הוא בנאי העתקה: 1 (תשובה ב).<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "bb7cd24075129286"
+  },
+  {
+   "num": 3,
+   "topic": "operator_overloading",
+   "question": "כמה שגיאות קומפילציה יש בתכנית הבאה?\n```cpp\nstruct vector{\n    double x;\n    double y;\n};\nvector operator * (double a, vector b)\n{\n    vector r;\n    r.x = a * b.x;\n    r.y = a * b.y;\n    return r;\n}\nvoid main(){\n    vector k, m;\n    k.x = 2;\n    k.y = -1;\n    m = 3.1415927 * k;\n    cout << \"(\" << m.x << \", \" << m.y << \")\" << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "הפונקציה הגלובלית `operator*(double, vector)` מאפשרת את הביטוי `3.1415927 * k`, כאשר האופרנד השמאלי הוא `double` (פונקציה חברה לא הייתה מתאימה לכך). הכינוי `vector` כאן הוא `struct` של התוכנית עצמה, ובלי הכללת `<vector>` אין התנגשות. אין שגיאות קומפילציה (תשובה א), וכך גם clang++. הביטחון בינוני כי התשובה מניחה שרק `<iostream>` נכלל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q3",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "כמה שגיאות קומפילציה יש בתכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct vector{\n    double x;\n    double y;\n};\nvector operator * (double a, vector b)\n{\n    vector r;\n    r.x = a * b.x;\n    r.y = a * b.y;\n    return r;\n}\nvoid main(){\n    vector k, m;\n    k.x = 2;\n    k.y = -1;\n    m = 3.1415927 * k;\n    cout &lt;&lt; \"(\" &lt;&lt; m.x &lt;&lt; \", \" &lt;&lt; m.y &lt;&lt; \")\" &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "הפונקציה הגלובלית <code class=\"tok\" dir=\"ltr\">operator*(double, vector)</code> מאפשרת את הביטוי <code class=\"tok\" dir=\"ltr\">3.1415927 * k</code>, כאשר האופרנד השמאלי הוא <code class=\"tok\" dir=\"ltr\">double</code> (פונקציה חברה לא הייתה מתאימה לכך). הכינוי <code class=\"tok\" dir=\"ltr\">vector</code> כאן הוא <code class=\"tok\" dir=\"ltr\">struct</code> של התוכנית עצמה, ובלי הכללת <code class=\"tok\" dir=\"ltr\">&lt;vector&gt;</code> אין התנגשות. אין שגיאות קומפילציה (תשובה א), וכך גם clang++. הביטחון בינוני כי התשובה מניחה שרק <code class=\"tok\" dir=\"ltr\">&lt;iostream&gt;</code> נכלל.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "c3d6e8383699ff55"
+  },
+  {
+   "num": 4,
+   "topic": "templates",
+   "question": "כמה שגיאות קומפילציה יש בתכנית הבאה?\n```cpp\ntemplate <class T> class B{\npublic:\n    B(int nn = 0):n(nn){}\n    friend ostream& operator<<(ostream&, const B<T>&);\nprivate:\n    int  n;\n};\ntemplate <class T> ostream& operator<<(ostream& output, const B<T>& theB){\n    output << theB.n << endl;\n    return output;\n}\nint main(){\n    B<int> intB=5;\n    cout << \"intB = \" << intB;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "ההצהרה `friend ostream& operator<<(ostream&, const B<T>&)` בתוך תבנית מצהירה על פונקציה חברה **שאינה תבנית** לכל מופע `B<T>`, והאופרטור שמוגדר בהמשך כתבנית הוא פונקציה אחרת. הקומפיילר לא מדווח על שגיאת קומפילציה אחת (clang++ -fsyntax-only: 0 שגיאות), והאתחול `B<int> intB = 5` תקין כי הבנאי `B(int)` אינו `explicit`. הבעיה מתגלה רק בשלב הקישור (`undefined reference` לאופרטור). לכן מספר שגיאות הקומפילציה הוא 0 (תשובה א), אבל התוכנית אינה נבנית. הביטחון בינוני כי הנוסח 'שגיאות קומפילציה' אינו כולל שגיאת קישור.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q4",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "כמה שגיאות קומפילציה יש בתכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template &lt;class T&gt; class B{\npublic:\n    B(int nn = 0):n(nn){}\n    friend ostream&amp; operator&lt;&lt;(ostream&amp;, const B&lt;T&gt;&amp;);\nprivate:\n    int  n;\n};\ntemplate &lt;class T&gt; ostream&amp; operator&lt;&lt;(ostream&amp; output, const B&lt;T&gt;&amp; theB){\n    output &lt;&lt; theB.n &lt;&lt; endl;\n    return output;\n}\nint main(){\n    B&lt;int&gt; intB=5;\n    cout &lt;&lt; \"intB = \" &lt;&lt; intB;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "ההצהרה <code class=\"tok\" dir=\"ltr\">friend ostream&amp; operator&lt;&lt;(ostream&amp;, const B&lt;T&gt;&amp;)</code> בתוך תבנית מצהירה על פונקציה חברה <strong>שאינה תבנית</strong> לכל מופע <code class=\"tok\" dir=\"ltr\">B&lt;T&gt;</code>, והאופרטור שמוגדר בהמשך כתבנית הוא פונקציה אחרת. הקומפיילר לא מדווח על שגיאת קומפילציה אחת (clang++ -fsyntax-only: 0 שגיאות), והאתחול <code class=\"tok\" dir=\"ltr\">B&lt;int&gt; intB = 5</code> תקין כי הבנאי <code class=\"tok\" dir=\"ltr\">B(int)</code> אינו <code class=\"tok\" dir=\"ltr\">explicit</code>. הבעיה מתגלה רק בשלב הקישור (<code class=\"tok\" dir=\"ltr\">undefined reference</code> לאופרטור). לכן מספר שגיאות הקומפילציה הוא 0 (תשובה א), אבל התוכנית אינה נבנית. הביטחון בינוני כי הנוסח 'שגיאות קומפילציה' אינו כולל שגיאת קישור.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "60c89bbc22cd978d"
+  },
+  {
+   "num": 5,
+   "topic": "stl_exceptions",
+   "question": "מה יודפס לאחר הרצת התכנית הבאה?\n```cpp\n#include <vector>\nint main(){\n    vector <int> v1;\n    v1.push_back(8);\n    v1.push_back(9);\n    vector <int> v2;\n    v2.push_back(-8);\n    v2.push_back(5);\n    v2.push_back(51);\n    vector<vector<int> > A;\n    A.push_back(v1);\n    A.push_back(v2);\n    A.push_back(v1);\n    A[1][1] = 35;\n    for (int i = 0; i < A.size(); i++)\n    {\n        for (int j = 0; j < A[i].size(); j++)\n            cout << A[i][j] << \" \";\n        cout << endl;\n    }\n    cout << v2[1];\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "8 9\n-8 5 51\n8 9\n35",
+     "html": "8 9<br>-8 5 51<br>8 9<br>35"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה",
+     "html": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "8 9\n-8 35 51\n8 9\n5",
+     "html": "8 9<br>-8 35 51<br>8 9<br>5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "8 9\n-8 35 51\n8 9\n35",
+     "html": "8 9<br>-8 35 51<br>8 9<br>35"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`A` הוא וקטור של וקטורים, ו-`push_back` שומר **עותקים**: `A[1]` הוא עותק של `v2`. השינוי `A[1][1] = 35` משנה את העותק בלבד. ההדפסה הלולאתית מציגה `8 9`, אחר כך `-8 35 51`, ואז `8 9`, ובסוף `v2[1]` שנשאר 5. הפלט בתשובה ג, וכך גם הרצת clang++. בתשובה ד מודפס 35 בסוף, וזה יקרה רק אם `A` היה שומר הפניות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q5",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "מה יודפס לאחר הרצת התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\nint main(){\n    vector &lt;int&gt; v1;\n    v1.push_back(8);\n    v1.push_back(9);\n    vector &lt;int&gt; v2;\n    v2.push_back(-8);\n    v2.push_back(5);\n    v2.push_back(51);\n    vector&lt;vector&lt;int&gt; &gt; A;\n    A.push_back(v1);\n    A.push_back(v2);\n    A.push_back(v1);\n    A[1][1] = 35;\n    for (int i = 0; i &lt; A.size(); i++)\n    {\n        for (int j = 0; j &lt; A[i].size(); j++)\n            cout &lt;&lt; A[i][j] &lt;&lt; \" \";\n        cout &lt;&lt; endl;\n    }\n    cout &lt;&lt; v2[1];\n    return 0;\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">A</code> הוא וקטור של וקטורים, ו-<code class=\"tok\" dir=\"ltr\">push_back</code> שומר <strong>עותקים</strong>: <code class=\"tok\" dir=\"ltr\">A[1]</code> הוא עותק של <code class=\"tok\" dir=\"ltr\">v2</code>. השינוי <code class=\"tok\" dir=\"ltr\">A[1][1] = 35</code> משנה את העותק בלבד. ההדפסה הלולאתית מציגה <code class=\"tok\" dir=\"ltr\">8 9</code>, אחר כך <code class=\"tok\" dir=\"ltr\">-8 35 51</code>, ואז <code class=\"tok\" dir=\"ltr\">8 9</code>, ובסוף <code class=\"tok\" dir=\"ltr\">v2[1]</code> שנשאר 5. הפלט בתשובה ג, וכך גם הרצת clang++. בתשובה ד מודפס 35 בסוף, וזה יקרה רק אם <code class=\"tok\" dir=\"ltr\">A</code> היה שומר הפניות.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "82aaf66c49076217"
+  },
+  {
+   "num": 6,
+   "topic": "abstract_multiple",
+   "question": "מה יודפס לאחר הרצת התכנית הבאה?\n```cpp\nclass base {\n    int arr[10];\n};\nclass b1 : public base { };\nclass b2 : public base { };\nclass derived : public b1, public b2 {};\nint main(void){\n    int intSize = sizeof(int);\n    cout << sizeof(derived)/intSize;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "10",
+     "html": "10"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "20",
+     "html": "20"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המחלקה `base` מכילה `int arr[10]`, כלומר 40 בתים (כש-`int` הוא 4 בתים). `b1` ו-`b2` יורשות מ-`base` בירושה רגילה (לא וירטואלית), ולכן `derived` מכילה שני עותקים נפרדים של `base`: 80 בתים. 80 חלקי 4 הם 20 (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q6",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "מה יודפס לאחר הרצת התכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class base {\n    int arr[10];\n};\nclass b1 : public base { };\nclass b2 : public base { };\nclass derived : public b1, public b2 {};\nint main(void){\n    int intSize = sizeof(int);\n    cout &lt;&lt; sizeof(derived)/intSize;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "המחלקה <code class=\"tok\" dir=\"ltr\">base</code> מכילה <code class=\"tok\" dir=\"ltr\">int arr[10]</code>, כלומר 40 בתים (כש-<code class=\"tok\" dir=\"ltr\">int</code> הוא 4 בתים). <code class=\"tok\" dir=\"ltr\">b1</code> ו-<code class=\"tok\" dir=\"ltr\">b2</code> יורשות מ-<code class=\"tok\" dir=\"ltr\">base</code> בירושה רגילה (לא וירטואלית), ולכן <code class=\"tok\" dir=\"ltr\">derived</code> מכילה שני עותקים נפרדים של <code class=\"tok\" dir=\"ltr\">base</code>: 80 בתים. 80 חלקי 4 הם 20 (תשובה ד), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0f054e36172ab65c"
+  },
+  {
+   "num": 7,
+   "topic": "inheritance_access",
+   "question": "אם מחלקה נגזרת (יורשת) באופן פרטי (`private inheritance`) ממחלקת בסיס, אז\n1) אף חבר (`member`) במחלקת הבסיס לא עובר בהורשה.\n2) כל החברים (`members`) במחלקת הבסיס חוץ מפרטיים (`private members`) נגישים בתוך הפונקציות של המחלקה הנגזרת.\n3) כל החברים (`members`) במחלקת הבסיס עוברים בהורשה למחלקה הנגזרת, אך אינם נגישים בתוך הפונקציות של המחלקה הנגזרת.\n4) גזירת המחלקה נותנת שגיאה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "4",
+     "html": "4"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בירושה `private` חברי `public` ו-`protected` של הבסיס עוברים למחלקה הנגזרת (הופכים ל-`private` בה) ונגישים מתוך הפונקציות שלה, בעוד חברי `private` של הבסיס אינם נגישים (נבדק בקומפילציה). לכן רק טענה 2 נכונה (תשובה ב). טענה 1 ו-3 שגויות כי החברים כן עוברים בהורשה ונגישים מבפנים, וטענה 4 שגויה כי הגזירה מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q7",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "אם מחלקה נגזרת (יורשת) באופן פרטי (<code class=\"tok\" dir=\"ltr\">private inheritance</code>) ממחלקת בסיס, אז<br>1) אף חבר (<code class=\"tok\" dir=\"ltr\">member</code>) במחלקת הבסיס לא עובר בהורשה.<br>2) כל החברים (<code class=\"tok\" dir=\"ltr\">members</code>) במחלקת הבסיס חוץ מפרטיים (<code class=\"tok\" dir=\"ltr\">private members</code>) נגישים בתוך הפונקציות של המחלקה הנגזרת.<br>3) כל החברים (<code class=\"tok\" dir=\"ltr\">members</code>) במחלקת הבסיס עוברים בהורשה למחלקה הנגזרת, אך אינם נגישים בתוך הפונקציות של המחלקה הנגזרת.<br>4) גזירת המחלקה נותנת שגיאה.",
+   "explanationHtml": "בירושה <code class=\"tok\" dir=\"ltr\">private</code> חברי <code class=\"tok\" dir=\"ltr\">public</code> ו-<code class=\"tok\" dir=\"ltr\">protected</code> של הבסיס עוברים למחלקה הנגזרת (הופכים ל-<code class=\"tok\" dir=\"ltr\">private</code> בה) ונגישים מתוך הפונקציות שלה, בעוד חברי <code class=\"tok\" dir=\"ltr\">private</code> של הבסיס אינם נגישים (נבדק בקומפילציה). לכן רק טענה 2 נכונה (תשובה ב). טענה 1 ו-3 שגויות כי החברים כן עוברים בהורשה ונגישים מבפנים, וטענה 4 שגויה כי הגזירה מתקמפלת.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "0179e914f662738d"
+  },
+  {
+   "num": 8,
+   "topic": "operator_overloading",
+   "question": "כמה ארגומנטים יש לכתוב בתוך הסוגריים של `operator%( )` ?\n```cpp\nclass A {\n\nclass A {\npublic:\n    A operator%(...);\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יכול להיות 1 או 2",
+     "html": "יכול להיות 1 או 2"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "אופרטור בינארי כמו `%` שמוגדר כפונקציה חברה מקבל ארגומנט אחד בלבד: האופרנד הימני. האופרנד השמאלי הוא האובייקט עצמו (`this`). הצהרה עם 0 או עם 2 ארגומנטים לא מתקמפלת (נבדק עם clang++), ולכן התשובה היא 1 (ב). האפשרות 'יכול להיות 1 או 2' מתאימה רק לאופרטור גלובלי. השורה `class A {` שמופיעה פעמיים בקוד המודפס היא טעות דפוס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides. (the duplicated `class A {` line is as printed; the check uses the single-line class.)",
+   "id": "23S-A-Q8",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "כמה ארגומנטים יש לכתוב בתוך הסוגריים של <code class=\"tok\" dir=\"ltr\">operator%( )</code> ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\n\nclass A {\npublic:\n    A operator%(...);\n};</code></pre>",
+   "explanationHtml": "אופרטור בינארי כמו <code class=\"tok\" dir=\"ltr\">%</code> שמוגדר כפונקציה חברה מקבל ארגומנט אחד בלבד: האופרנד הימני. האופרנד השמאלי הוא האובייקט עצמו (<code class=\"tok\" dir=\"ltr\">this</code>). הצהרה עם 0 או עם 2 ארגומנטים לא מתקמפלת (נבדק עם clang++), ולכן התשובה היא 1 (ב). האפשרות 'יכול להיות 1 או 2' מתאימה רק לאופרטור גלובלי. השורה <code class=\"tok\" dir=\"ltr\">class A {</code> שמופיעה פעמיים בקוד המודפס היא טעות דפוס.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "35b6ecb1c1f230a5"
+  },
+  {
+   "num": 9,
+   "topic": "classes_ctor_dtor",
+   "question": "כמה שגיאות קומפילציה יש בתכנית הבאה?\n```cpp\nclass A {\npublic:\n    A(int i) {\n        cout << \"A's Constructor\" << i << endl;\n    }\n    A(const A& other) {\n        cout << \"A's copy Constructor\" << endl;\n    }\n    A& operator=(A& other) {\n        cout << \"A=\" << endl;\n        return *this;\n    }\n    void virtual f(int i = 7) const {\n        cout << \"A's f\" << i << endl;\n    }\n};\nclass B :public A {\npublic:\n    B() : A(1) {\n        cout << \"B's Constructor\" << endl;\n    }\n    virtual ~B() {\n        cout << \"B's Destructor\" << endl;\n    }\n    void f(int i = 7) const {\n        cout << \"B's f\" << i << endl;\n    }\n};\nint main() {\n    B b1();\n    A a1(0);\n    A* p;\n    p = new B[2];\n    p[0] = b1;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "השורה `B b1();` מצהירה על **פונקציה** בשם `b1` (ולא על אובייקט), והיא תקינה כהצהרה. `new B[2]` תקין כי ל-`B` יש בנאי ברירת מחדל. `A a1(0)` תקין. השורה `p[0] = b1;` שגויה: מנסים להשים שם של פונקציה לתוך `A`, ואין אופרטור השמה שמתאים לכך. שגיאה אחת בלבד (תשובה ב), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q9",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מחלקות, בנאים והורסים",
+   "questionHtml": "כמה שגיאות קומפילציה יש בתכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(int i) {\n        cout &lt;&lt; \"A's Constructor\" &lt;&lt; i &lt;&lt; endl;\n    }\n    A(const A&amp; other) {\n        cout &lt;&lt; \"A's copy Constructor\" &lt;&lt; endl;\n    }\n    A&amp; operator=(A&amp; other) {\n        cout &lt;&lt; \"A=\" &lt;&lt; endl;\n        return *this;\n    }\n    void virtual f(int i = 7) const {\n        cout &lt;&lt; \"A's f\" &lt;&lt; i &lt;&lt; endl;\n    }\n};\nclass B :public A {\npublic:\n    B() : A(1) {\n        cout &lt;&lt; \"B's Constructor\" &lt;&lt; endl;\n    }\n    virtual ~B() {\n        cout &lt;&lt; \"B's Destructor\" &lt;&lt; endl;\n    }\n    void f(int i = 7) const {\n        cout &lt;&lt; \"B's f\" &lt;&lt; i &lt;&lt; endl;\n    }\n};\nint main() {\n    B b1();\n    A a1(0);\n    A* p;\n    p = new B[2];\n    p[0] = b1;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "השורה <code class=\"tok\" dir=\"ltr\">B b1();</code> מצהירה על <strong>פונקציה</strong> בשם <code class=\"tok\" dir=\"ltr\">b1</code> (ולא על אובייקט), והיא תקינה כהצהרה. <code class=\"tok\" dir=\"ltr\">new B[2]</code> תקין כי ל-<code class=\"tok\" dir=\"ltr\">B</code> יש בנאי ברירת מחדל. <code class=\"tok\" dir=\"ltr\">A a1(0)</code> תקין. השורה <code class=\"tok\" dir=\"ltr\">p[0] = b1;</code> שגויה: מנסים להשים שם של פונקציה לתוך <code class=\"tok\" dir=\"ltr\">A</code>, ואין אופרטור השמה שמתאים לכך. שגיאה אחת בלבד (תשובה ב), וכך גם clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "25871ddde933d144"
+  },
+  {
+   "num": 10,
+   "topic": "cpp_basics_refs",
+   "question": "מה יהיה הפלט של התכנית הבאה ?\n```cpp\n#include <iostream>\nusing namespace std;\nvoid main() {\n    int arr[] = { 1, 2, 3 };\n    int(&arrRef)[3] = arr;\n    int &r0 = arrRef[0];\n    r0 = arrRef[1] = arr[2] = 5;\n    cout << arr[0] << arr[1] << arr[2];\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "123",
+     "html": "123"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "125",
+     "html": "125"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "155",
+     "html": "155"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "555",
+     "html": "555"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`arrRef` היא הפניה למערך `arr`, ו-`r0` היא הפניה ל-`arr[0]`. ההשמה `r0 = arrRef[1] = arr[2] = 5` מתבצעת מימין לשמאל: `arr[2]` הופך 5, אחר כך `arrRef[1]` (שהוא `arr[1]`) הופך 5, ולבסוף `r0` (שהוא `arr[0]`) הופך 5. הפלט `555` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q10",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "מה יהיה הפלט של התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\nvoid main() {\n    int arr[] = { 1, 2, 3 };\n    int(&amp;arrRef)[3] = arr;\n    int &amp;r0 = arrRef[0];\n    r0 = arrRef[1] = arr[2] = 5;\n    cout &lt;&lt; arr[0] &lt;&lt; arr[1] &lt;&lt; arr[2];\n}</code></pre>",
+   "explanationHtml": "<code class=\"tok\" dir=\"ltr\">arrRef</code> היא הפניה למערך <code class=\"tok\" dir=\"ltr\">arr</code>, ו-<code class=\"tok\" dir=\"ltr\">r0</code> היא הפניה ל-<code class=\"tok\" dir=\"ltr\">arr[0]</code>. ההשמה <code class=\"tok\" dir=\"ltr\">r0 = arrRef[1] = arr[2] = 5</code> מתבצעת מימין לשמאל: <code class=\"tok\" dir=\"ltr\">arr[2]</code> הופך 5, אחר כך <code class=\"tok\" dir=\"ltr\">arrRef[1]</code> (שהוא <code class=\"tok\" dir=\"ltr\">arr[1]</code>) הופך 5, ולבסוף <code class=\"tok\" dir=\"ltr\">r0</code> (שהוא <code class=\"tok\" dir=\"ltr\">arr[0]</code>) הופך 5. הפלט <code class=\"tok\" dir=\"ltr\">555</code> (תשובה ד), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "a6341147698529c1"
+  },
+  {
+   "num": 11,
+   "topic": "construction_order",
+   "question": "מה יהיה הפלט של התכנית הבאה ?\n```cpp\nclass C {\npublic:\n    C() : id(++count) { cout << id << \" \"; }\n    ~C() { cout << id << \" \"; }\nprivate:\n    int id;\n    static int count;\n};\nint C::count = 0;\nC x;\nvoid main() {\n    C y;\n    static C z;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0 1 2 1 2 0",
+     "html": "0 1 2 1 2 0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1 2 3 3 2 1",
+     "html": "1 2 3 3 2 1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1 2 3 3 1 2",
+     "html": "1 2 3 3 1 2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "1 2 3 2 3 1",
+     "html": "1 2 3 2 3 1"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה הגלובלי `x` נבנה לפני `main` ומדפיס `1`. ב-`main` נבנה `y` (מדפיס `2`) ואחריו הסטטי `z` (מדפיס `3`). בסיום `main` נהרס רק האוטומטי `y` (מדפיס `2`). לבסוף, בסיום התוכנית, נהרסים הסטטי והגלובלי בסדר הפוך לבנייה: `z` (`3`) ואז `x` (`1`). הפלט `1 2 3 2 3 1` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q11",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מה יהיה הפלט של התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class C {\npublic:\n    C() : id(++count) { cout &lt;&lt; id &lt;&lt; \" \"; }\n    ~C() { cout &lt;&lt; id &lt;&lt; \" \"; }\nprivate:\n    int id;\n    static int count;\n};\nint C::count = 0;\nC x;\nvoid main() {\n    C y;\n    static C z;\n}</code></pre>",
+   "explanationHtml": "המשתנה הגלובלי <code class=\"tok\" dir=\"ltr\">x</code> נבנה לפני <code class=\"tok\" dir=\"ltr\">main</code> ומדפיס <code class=\"tok\" dir=\"ltr\">1</code>. ב-<code class=\"tok\" dir=\"ltr\">main</code> נבנה <code class=\"tok\" dir=\"ltr\">y</code> (מדפיס <code class=\"tok\" dir=\"ltr\">2</code>) ואחריו הסטטי <code class=\"tok\" dir=\"ltr\">z</code> (מדפיס <code class=\"tok\" dir=\"ltr\">3</code>). בסיום <code class=\"tok\" dir=\"ltr\">main</code> נהרס רק האוטומטי <code class=\"tok\" dir=\"ltr\">y</code> (מדפיס <code class=\"tok\" dir=\"ltr\">2</code>). לבסוף, בסיום התוכנית, נהרסים הסטטי והגלובלי בסדר הפוך לבנייה: <code class=\"tok\" dir=\"ltr\">z</code> (<code class=\"tok\" dir=\"ltr\">3</code>) ואז <code class=\"tok\" dir=\"ltr\">x</code> (<code class=\"tok\" dir=\"ltr\">1</code>). הפלט <code class=\"tok\" dir=\"ltr\">1 2 3 2 3 1</code> (תשובה ד), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "973d41b0dc919bf8"
+  },
+  {
+   "num": 12,
+   "topic": "const_references",
+   "question": "בכמה שורות של פונקציית `main()` בקטע הקוד הבא יש שגיאות קומפילציה ?\n```cpp\nclass M {\npublic:\n    M(int n = 0) { i = n; }\n    const M& f() const\n    {\n        return *this;\n    }\n    void g() {}\n    int i;\n};\nint main(){\n    const M m(2);\n    m.f();\n    m.g();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האובייקט `m` הוא `const`. הקריאה `m.f()` תקינה כי `f` מוגדרת `const`. הקריאה `m.g()` שגויה: `g` אינה `const`, ולא ניתן לקרוא לה על אובייקט קבוע. שורה אחת שגויה (תשובה ב), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q12",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "בכמה שורות של פונקציית <code class=\"tok\" dir=\"ltr\">main()</code> בקטע הקוד הבא יש שגיאות קומפילציה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class M {\npublic:\n    M(int n = 0) { i = n; }\n    const M&amp; f() const\n    {\n        return *this;\n    }\n    void g() {}\n    int i;\n};\nint main(){\n    const M m(2);\n    m.f();\n    m.g();\n    return 0;\n}</code></pre>",
+   "explanationHtml": "האובייקט <code class=\"tok\" dir=\"ltr\">m</code> הוא <code class=\"tok\" dir=\"ltr\">const</code>. הקריאה <code class=\"tok\" dir=\"ltr\">m.f()</code> תקינה כי <code class=\"tok\" dir=\"ltr\">f</code> מוגדרת <code class=\"tok\" dir=\"ltr\">const</code>. הקריאה <code class=\"tok\" dir=\"ltr\">m.g()</code> שגויה: <code class=\"tok\" dir=\"ltr\">g</code> אינה <code class=\"tok\" dir=\"ltr\">const</code>, ולא ניתן לקרוא לה על אובייקט קבוע. שורה אחת שגויה (תשובה ב), וכך גם clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "fe7536bf537840ff"
+  },
+  {
+   "num": 14,
+   "topic": "abstract_multiple",
+   "question": "מה יהיה הפלט של התכנית הבאה:\n```cpp\nclass A {\npublic:\n    A(): a(++c) {};\n    int a;\n    static int c;\n};\nint A::c = 0;\nclass B : virtual public A {public: B(){}; };\nclass C : virtual public A {public: C(){}; };\nclass D : public B, public C {public: D(){} };\nint main() {\n    D d;\n    cout << d.A::a << \" \" << d.B::a << \" \" << d.C::a;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1 2 3",
+     "html": "1 2 3"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1 1 2",
+     "html": "1 1 2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1 2 2",
+     "html": "1 2 2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "1 1 1",
+     "html": "1 1 1"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ל-`B` ול-`C` יש ירושה **וירטואלית** מ-`A`, ולכן ב-`D` יש תת-אובייקט אחד בלבד של `A`, והוא נבנה פעם אחת על ידי המחלקה היורשת הסופית `D`: `a = ++c = 1`. הביטויים `d.A::a`, `d.B::a` ו-`d.C::a` מתייחסים לאותו שדה, ולכן מודפס `1 1 1` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q14",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "מה יהיה הפלט של התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A {\npublic:\n    A(): a(++c) {};\n    int a;\n    static int c;\n};\nint A::c = 0;\nclass B : virtual public A {public: B(){}; };\nclass C : virtual public A {public: C(){}; };\nclass D : public B, public C {public: D(){} };\nint main() {\n    D d;\n    cout &lt;&lt; d.A::a &lt;&lt; \" \" &lt;&lt; d.B::a &lt;&lt; \" \" &lt;&lt; d.C::a;\n}</code></pre>",
+   "explanationHtml": "ל-<code class=\"tok\" dir=\"ltr\">B</code> ול-<code class=\"tok\" dir=\"ltr\">C</code> יש ירושה <strong>וירטואלית</strong> מ-<code class=\"tok\" dir=\"ltr\">A</code>, ולכן ב-<code class=\"tok\" dir=\"ltr\">D</code> יש תת-אובייקט אחד בלבד של <code class=\"tok\" dir=\"ltr\">A</code>, והוא נבנה פעם אחת על ידי המחלקה היורשת הסופית <code class=\"tok\" dir=\"ltr\">D</code>: <code class=\"tok\" dir=\"ltr\">a = ++c = 1</code>. הביטויים <code class=\"tok\" dir=\"ltr\">d.A::a</code>, <code class=\"tok\" dir=\"ltr\">d.B::a</code> ו-<code class=\"tok\" dir=\"ltr\">d.C::a</code> מתייחסים לאותו שדה, ולכן מודפס <code class=\"tok\" dir=\"ltr\">1 1 1</code> (תשובה ד), וכך גם הרצת clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "4d23185083b1d207"
+  },
+  {
+   "num": 15,
+   "topic": "templates",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות קומפילציה ?\n```cpp\ntemplate<class T = int, int N = 0>\nT f(T x = 0) {\n    return x + N;\n}\nvoid main() {\n    double y = 1.5;\n    int n = 10;\n    cout << f() << endl;\n    cout << f<>() << endl;\n    cout << f<double, n>(y) << endl;\n    cout << f<int>(y, n) << endl;\n    cout << f(y) << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הקריאות `f()`, `f<>()` ו-`f(y)` תקינות (`T` ו-`N` מקבלים ברירות מחדל או נגזרים מהארגומנט). בקריאה `f<double, n>(y)` הארגומנט `n` הוא משתנה רגיל ולא קבוע בזמן קומפילציה, ולכן אי אפשר להשתמש בו כפרמטר תבנית. בקריאה `f<int>(y, n)` שולחים שני ארגומנטים לפונקציה שמקבלת אחד. שתי שורות שגויות (תשובה ג), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides.",
+   "id": "23S-A-Q15",
+   "examCode": "23S-A",
+   "examLabel": "2023 סמסטר קיץ מועד א",
+   "year": 2023,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "בכמה שורות בקטע הקוד הבא יש שגיאות קומפילציה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>template&lt;class T = int, int N = 0&gt;\nT f(T x = 0) {\n    return x + N;\n}\nvoid main() {\n    double y = 1.5;\n    int n = 10;\n    cout &lt;&lt; f() &lt;&lt; endl;\n    cout &lt;&lt; f&lt;&gt;() &lt;&lt; endl;\n    cout &lt;&lt; f&lt;double, n&gt;(y) &lt;&lt; endl;\n    cout &lt;&lt; f&lt;int&gt;(y, n) &lt;&lt; endl;\n    cout &lt;&lt; f(y) &lt;&lt; endl;\n}</code></pre>",
+   "explanationHtml": "הקריאות <code class=\"tok\" dir=\"ltr\">f()</code>, <code class=\"tok\" dir=\"ltr\">f&lt;&gt;()</code> ו-<code class=\"tok\" dir=\"ltr\">f(y)</code> תקינות (<code class=\"tok\" dir=\"ltr\">T</code> ו-<code class=\"tok\" dir=\"ltr\">N</code> מקבלים ברירות מחדל או נגזרים מהארגומנט). בקריאה <code class=\"tok\" dir=\"ltr\">f&lt;double, n&gt;(y)</code> הארגומנט <code class=\"tok\" dir=\"ltr\">n</code> הוא משתנה רגיל ולא קבוע בזמן קומפילציה, ולכן אי אפשר להשתמש בו כפרמטר תבנית. בקריאה <code class=\"tok\" dir=\"ltr\">f&lt;int&gt;(y, n)</code> שולחים שני ארגומנטים לפונקציה שמקבלת אחד. שתי שורות שגויות (תשובה ג), וכך גם clang++.<br><br>_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "dedupKey": "6d265e777918d100"
+  },
   {
    "num": 2,
    "topic": "inheritance_access",

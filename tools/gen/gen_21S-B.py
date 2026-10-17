@@ -7,7 +7,7 @@ The grader's total (35 = 7 correct) and the list of wrong questions identify the
 (3, 4, 6, 8, 9, 15, 16): for those the student's answer is the key (answerSource solution-pdf, i.e. the graded copy). For every other question the
 key is derived by compiling/running with clang++ (tools/verify/21S-B/, run_all.py), answerSource solved. All keys were also checked
 against the run: the seven graded-correct answers agree with it (Q4 is a concept question: every iterator operation listed is supported).
-Held: Q10 (concept, the student's marked answer was graded wrong but the scan is ambiguous between b and c; no key),
+Q10 (concept; the graded mark is ambiguous between b and c) keyed b by the arbiter (2026-10-18), confidence med. Held:
 Q17 (clang counts one compile-error line, plus a link error from the never-defined non-template friend; intended count 1 vs 2 unclear)."""
 import json, pathlib
 
@@ -173,9 +173,10 @@ int main(){
 
 q10 = Q(
     10, "cpp_basics_refs", "אילו מהאפשרויות הבאות בתכנות מונחה עצמים מתאימה ביותר עבור נושא של העמסת פונקציות (`function overloading`) ופרמטרים ברירת מחדל (`default arguments`):",
-    txt("הורשה", "פולימורפיזם", "הסתרת מידע", "יצירת עצמים"), None,
-    "Held: concept question with no code to run. The student's marking on the page circles both b and c; it was graded wrong, and the scan does not show which of the two counts.")
-questions.append(held(q10, "no-key: concept question, the graded student answer is unreadable (b or c) and was marked wrong; no official key"))
+    txt("הורשה", "פולימורפיזם", "הסתרת מידע", "יצירת עצמים"), "b",
+    "Arbiter ruling 2026-10-18 (was held): concept question, one clearly best answer: overloading and default arguments are compile-time "
+    "(ad-hoc) polymorphism -> b. The graded scan circles both b and c and is marked wrong; it cannot be read as a key. Confidence med.", conf="med")
+questions.append(q10)
 
 questions.append(Q(
     11, "abstract_multiple", "אילו מהטענות הבאות נכונות עבור מחלקה אבסטרקטית ב-C++?",
@@ -401,6 +402,16 @@ SIG = '\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקו
 for q in questions:
     if q["num"] in EXPL:
         q["explanation"] = EXPL[q["num"]] + SIG
+
+EXPL_NORUN = {
+    10: "העמסת פונקציות ופרמטרים ברירת מחדל מאפשרים לקרוא לאותו שם פונקציה עם סוגים שונים ומספרים שונים של ארגומנטים, וזו צורה של פולימורפיזם (פולימורפיזם בזמן קומפילציה), ולכן תשובה ב. "
+        "הורשה עוסקת ביחס בין מחלקות, הסתרת מידע עוסקת בהגבלת הגישה לחברי המחלקה, ויצירת עצמים נעשית בבנאים; אף אחת מהן אינה מתארת שם אחד שמתאים לכמה צורות קריאה. "
+        "בעותק הנבדק של הסטודנט מוקפות גם ב וגם ג והשאלה סומנה כשגויה, ולכן אי אפשר ללמוד ממנו מפתח.",
+}
+SIG_NORUN = '\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_'
+for q in questions:
+    if q["num"] in EXPL_NORUN:
+        q["explanation"] = EXPL_NORUN[q["num"]] + SIG_NORUN
 
 exam = {
     "examCode": "21S-B",

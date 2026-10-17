@@ -25,7 +25,7 @@ KEYS = {1: "a", 2: "d", 3: "a", 4: "a", 5: "a", 6: "b", 7: "c", 8: "c", 9: "b", 
         13: "b", 14: "a", 15: "a"}
 # Q1 is held (evaluation order of the operands of `*` is unspecified: clang prints 6561 = option a, a right-to-left
 # compiler such as MSVC would print 3024 = option b); Q3/Q5/Q15 are language-rule judgement calls (confidence med).
-HOLD = {1: "unspecified-evaluation-order: clang++ 6561 (a) vs right-to-left compilers 3024 (b); no key in source"}
+HOLD = {1: "unspecified-evaluation-order: the operands of binary * are unsequenced even in C++17 (P0145 sequenced only <<, >>, =, op=, [], ->*, and the callee before its arguments); clang++ reads x after the call and prints 6561 (a), an order that reads x first gives 3024 (b); no key in source"}
 MED = {3, 5, 15}
 EXPL = {
     2: "הקוד מגיע לשורה `p[0].f(2,3)`, ושם `p` הוא מצביע מטיפוס `A*`, ולכן `p[0]` הוא אובייקט מטיפוס `A`. בשפה הפונקציה שנקראת נבחרת לפי הטיפוס הסטטי: ב-`A` הפונקציה `f` מקבלת ארגומנט אחד (`int i = 7`), והקריאה שולחת שניים. ההגדרה `f(int k, int q)` של `B` לא נראית דרך `A`. זו שגיאת קומפילציה (clang++: too many arguments to function call), ולכן התוכנית אינה מתקמפלת (תשובה ד) ואף פלט אינו מודפס. שלוש האפשרויות האחרות מתארות הרצה שלא מתרחשת.",

@@ -414,11 +414,13 @@
      "value": "תשובות א' וב' נכונות"
     }
    ],
-   "confidence": "low",
-   "explanation": "",
-   "note": "Held: MFC question, cannot be run, no official source for this sitting; the student's boxes (c and d both marked) are not a usable key.",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "בפתיחת חלון דיאלוג ב-MFC נשלחת ההודעה `WM_INITDIALOG`, ולכן נקראת `OnInitDialog`, ומיד אחריה `WM_PAINT` כדי לצייר את החלון, ולכן נקראת `OnPaint`. `OnLButtonDown` נקראת רק כשהמשתמש לוחץ על כפתור העכבר השמאלי, ולא בעקבות פתיחת החלון. לכן הפונקציה שלא נקראת היא `OnLButtonDown` (תשובה ג). תשובה ד שגויה כי `OnInitDialog` ו-`OnPaint` כן נקראות.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): MFC framework fact, cannot be run. Opening a dialog sends WM_INITDIALOG (OnInitDialog) and WM_PAINT (OnPaint); OnLButtonDown needs a mouse click -> c. No official source; the student's boxes (c and d) are not a key.",
    "contextId": "notes",
-   "hold": "no-key: MFC question, no official key for this sitting; the only marks are a student's (two options boxed).",
+   "correctId": "c",
    "lockOrder": true
   },
   {

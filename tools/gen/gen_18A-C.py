@@ -9,7 +9,7 @@ Keys:
   file's questions); answerSource "solved", official False. Where the run differs from the student's box, the run wins.
 - Q15 and Q20 (MFC): same stem and options as 18A-B Q15 / Q20, whose official highlighted key is used (note says so).
 - Q23: analogous to 18A-B Q23 (cin instead of cout); keyed b like that sitting, but c also compiles (noted, confidence med).
-- Q12 (MFC, no official source, no way to run it): held.
+- Q12 (MFC, no official source, no way to run it): keyed c by the arbiter from the MFC message order (confidence med).
 Handwriting added by the student to the code (an extra `*`, `private:`, `g(&x)`) is ignored; the printed code is transcribed.
 The exam targets Visual Studio (`void main`); the harness rewrites it to `int main`."""
 import json, pathlib
@@ -186,11 +186,10 @@ class X {
 
 questions.append(Q(
     12, "stl_exceptions", "איזו פונקציה **לא** נקראת בעקבות פתיחת חלון באמצעות MFC?\n",
-    txt("`OnInitDialog`", "`OnPaint`", "`OnLButtonDown`", "תשובות א' וב' נכונות"), None,
-    "Held: MFC question, cannot be run, no official source for this sitting; the student's boxes (c and d both marked) are not a usable key.",
-    hold="no-key: MFC question, no official key for this sitting; the only marks are a student's (two options boxed).",
-    confidence="low", lockOrder=True))
-del questions[-1]["answerSource"], questions[-1]["official"]
+    txt("`OnInitDialog`", "`OnPaint`", "`OnLButtonDown`", "תשובות א' וב' נכונות"), "c",
+    "Arbiter ruling 2026-10-18 (was held): MFC framework fact, cannot be run. Opening a dialog sends WM_INITDIALOG (OnInitDialog) and WM_PAINT (OnPaint); "
+    "OnLButtonDown needs a mouse click -> c. No official source; the student's boxes (c and d) are not a key.",
+    confidence="med", lockOrder=True))
 
 questions.append(Q(
     13, "virtual_polymorphism", OUT_Q2 + cb('''
@@ -373,6 +372,7 @@ EXPL = {
     9: 'השורה `X x, y(x);` יוצרת את `y` כעותק של `x`, וזה מתבצע בבנאי ההעתקה שהקומפיילר מייצר אוטומטית. לכן הקוד מתקמפל כמו שהוא כתוב.\nהתשובה היא תשובה ד.',
     10: 'שדה `public` נגיש מכל מקום בתכנית, גם מ-`main`.\nהתשובה היא תשובה א.',
     11: 'במחלקה (`class`) ברירת המחדל היא `private`. שדה פרטי נגיש רק מתוך המחלקה עצמה (ומ-friend), ולא ממחלקות יורשות.\nהתשובה היא תשובה ב.',
+    12: 'בפתיחת חלון דיאלוג ב-MFC נשלחת ההודעה `WM_INITDIALOG`, ולכן נקראת `OnInitDialog`, ומיד אחריה `WM_PAINT` כדי לצייר את החלון, ולכן נקראת `OnPaint`. `OnLButtonDown` נקראת רק כשהמשתמש לוחץ על כפתור העכבר השמאלי, ולא בעקבות פתיחת החלון. לכן הפונקציה שלא נקראת היא `OnLButtonDown` (תשובה ג). תשובה ד שגויה כי `OnInitDialog` ו-`OnPaint` כן נקראות.',
     13: 'הפונקציה `f` וירטואלית ב-`X`, ולכן הקריאה דרך מצביע `X*` לאובייקט מטיפוס `Y` מפעילה את `Y::f`.\nהפלט הוא `2` (תשובה ב).',
     14: 'האובייקט נוצר ב-`new Y`, ולכן הבנאים רצים בסדר `1` ואז `3`. אין `delete`, ולכן ההורסים לא רצים.\nהפלט הוא `13` (תשובה ב).',
     15: 'קריאה ל-`Invalidate` מסמנת את החלון כדורש ציור מחדש, ו-MFC קוראת בעקבות זה ל-`OnPaint`. התשובה היא ב, לפי המפתח הרשמי של שאלה זהה.',
@@ -389,9 +389,10 @@ EXPL = {
 }
 SIG = '\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_'
 SIG_NORUN = '\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי של שאלה זהה)_'
+SIG_MFC = '\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_'
 for q in questions:
     if q["num"] in EXPL:
-        q["explanation"] = EXPL[q["num"]] + (SIG_NORUN if q["num"] in (15, 20) else SIG)
+        q["explanation"] = EXPL[q["num"]] + (SIG_NORUN if q["num"] in (15, 20) else SIG_MFC if q["num"] == 12 else SIG)
 
 exam = {
     "examCode": "18A-C",

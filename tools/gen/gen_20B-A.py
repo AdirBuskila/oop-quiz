@@ -5,7 +5,7 @@ Run: PYTHONUTF8=1 py tools/gen/gen_20B-A.py
 Source: the quiz PDF extracted from the course RAR (2020/"מבחן מועד א 2020.pdf"). Each question is a screenshot; a black box is drawn round one option
 and hand-drawn X marks sit on the others (plus handwritten question numbers and a few scribbles). The boxes are NOT treated as an official key:
 Q4/Q12/... were re-derived by compiling with clang++ (tools/verify/20B-A/check.py). Where the run (or plain C++) disagrees with the box the
-question is HELD (Q1, Q6, Q17). Q11, Q13 (class-design questions) cannot be run: the boxed option agrees with the reasoning, key kept with confidence med.
+question was held (Q1, Q6, Q17) until the arbiter ruling of 2026-10-18 keyed them a / b / a from the run. Q11, Q13 (class-design questions) cannot be run: the boxed option agrees with the reasoning, key kept with confidence med.
 All keys are marked official:false. Options are listed in the on-screen order (top to bottom) as a-e.
 No handwriting, name or ID is transcribed; no page images are shipped (all questions are re-typed)."""
 import json, pathlib
@@ -38,11 +38,18 @@ def held(q, reason):
     return q
 
 
+
+def ruled(q, cid, conf, note):
+    """Arbiter ruling 2026-10-18: a held question shipped with a run/rule-derived key."""
+    q["correctId"], q["answerSource"], q["official"], q["confidence"], q["note"] = cid, "solved", False, conf, note
+    return q
+
+
 PRINTS = "מה מדפיסה התכנית הבאה:"
 questions = []
 
 # 1 (HELD)
-questions.append(held(Q(1, "templates", "במידה ושני אוביקטים (עצמים) שונים נוצרו מתוך אותה תבנית (template) יכול להיות להם משתנה static משותף במידה ו-:",
+questions.append(ruled(Q(1, "templates", "במידה ושני אוביקטים (עצמים) שונים נוצרו מתוך אותה תבנית (template) יכול להיות להם משתנה static משותף במידה ו-:",
     txt("במידה והם נוצרו תוך שימוש באותם שמות של מחלקות ביצירת העצמים מהתבנית (template).",
         "המשתנים הסטטיים משותפים רק עבור פונקציות וירטואליות טהורות (pure virtual)",
         "לא יכול להיות בכלל.",
@@ -50,7 +57,8 @@ questions.append(held(Q(1, "templates", "במידה ושני אוביקטים (�
         "המשתנים הסטטיים משותפים לכל העצמים שנבנים מאותה התבנית."), None,
     "Held. The boxed option is e (statics shared by all objects built from the template). clang++ run: a static member of a class template is shared only within one instantiation "
     "(X<int> objects share, X<double> has its own, different address), so e as written is false and a (same class names = same instantiation) is the true statement."),
-    "Box (option e) disagrees with the run: statics are shared only per template instantiation, which is option a."))
+    "a", "med", "Arbiter ruling 2026-10-18 (was held): clang++ shows a static member of a class template is shared per instantiation only "
+    "(X<int> objects share it, X<double> has its own), which is option a; the box (e) is not an official key. Med: wording of a."))
 
 # 2
 questions.append(Q(2, "copy_control", "נתונה התכנית הבאה:\n" + cb(r'''
@@ -131,12 +139,13 @@ private:
     "two constructors are allowed and calling Memory(3) is not ambiguous. Box agrees."))
 
 # 6 (HELD)
-questions.append(held(Q(6, "cpp_basics_refs", "ניתן להשתמש בשתיים או יותר הגדרות שונות לפונקציה בעלות אותו שם באותה מחלקה כאשר יש להן הגדרות שונות של סוג הפרמטר המוחזר.",
+questions.append(ruled(Q(6, "cpp_basics_refs", "ניתן להשתמש בשתיים או יותר הגדרות שונות לפונקציה בעלות אותו שם באותה מחלקה כאשר יש להן הגדרות שונות של סוג הפרמטר המוחזר.",
     txt("אף פעם לא נכון.", "יכול להיות אפשרי אם יש גם הבדלים בסוגי הפרמטרים המועברים לפונקציה או בכמותם", "נכון רק עבור פונקציה וירטואלית.",
         "נכון תמיד", "נכון רק עבור פונקציה שאיננה וירטואלית."), None,
     "Held. The boxed option is d ('always true'). clang++: two members that differ only in return type do not compile (virtual or not); with different parameters they do. "
     "So 'always true' is false and b (possible only if the parameters also differ) is the defensible choice."),
-    "Box (option d, always true) disagrees with C++ (clang++: members differing only in return type are an error); defensible answer is b."))
+    "b", "med", "Arbiter ruling 2026-10-18 (was held): clang++ rejects members differing only in return type (virtual or not) and accepts them "
+    "when the parameters differ -> b; the box (d) is not an official key. Med: concept wording."))
 
 # 7
 questions.append(Q(7, "cpp_basics_refs", "להלן קטע קוד ובו הגדרה חסרה מסומנת בקו תחתון. מה צריך להיות במקום הקו התחתון על מנת שהתוצאה של ההדפסה תהיה 2\n" + cb(r'''
@@ -285,7 +294,7 @@ private :
     "Boxed option a. clang++ compile tests: `Room() : Home(3) {}` compiles; `num1=3`, `num1(3)` and `((Home)*this).num1 = 3` fail (num1 is private to Home). Box agrees."))
 
 # 17 (HELD)
-questions.append(held(Q(17, "construction_order", "בהינתן מחלקה RAM שיורשת באופן public מהמחלקה Memory שמתוארת להלן (מחלקה זו מופיעה בשאלה אחרת והניחו שבמידה ויש בה שגיאה היא תוקנה) - ניתן לכתוב בנאי ()RAM שיאתחל את ערכו של i ל-3 באופן הבא :\n" + cb(r'''
+questions.append(ruled(Q(17, "construction_order", "בהינתן מחלקה RAM שיורשת באופן public מהמחלקה Memory שמתוארת להלן (מחלקה זו מופיעה בשאלה אחרת והניחו שבמידה ויש בה שגיאה היא תוקנה) - ניתן לכתוב בנאי ()RAM שיאתחל את ערכו של i ל-3 באופן הבא :\n" + cb(r'''
 class Memory {
 public:
     Memory(int i = 0) { this->i = j = i; }
@@ -298,15 +307,16 @@ private:
         "אפשרי (לא ברשימת האיתחול) באופן הבא: `RAM(): {Memory::i=3 }`", "אפשרי ברשימת האיתחול באופן הבא: `RAM() : i=3{ };`"), None,
     "Held. The boxed option is b ('not possible', with a handwritten 'private' note beside it). clang++: with the copy constructor repaired, `RAM() : Memory(3) {}` compiles "
     "and leaves i == 3 (the base constructor Memory(int) sets i), so option a works; the other three fail because i is private. Box disagrees with the run."),
-    "Box (option b, not possible) disagrees with the run: RAM() : Memory(3) {} compiles and sets i to 3 (option a)."))
+    "a", "high", "Arbiter ruling 2026-10-18 (was held): clang++ with the copy ctor repaired: `RAM() : Memory(3) {}` compiles and leaves i == 3; "
+    "c, d, e fail (i is private). The box (b) is not an official key."))
 
 EXPL = {
-    1: "משתנה סטטי בתבנית מחלקה שייך לכל מופע (instantiation) של התבנית בנפרד. עצמים מאותו מופע, למשל שני `X<int>`, חולקים אותו משתנה סטטי, אבל `X<int>` ו-`X<double>` הם מחלקות שונות עם משתנים סטטיים נפרדים (בהרצה גם הכתובות שונות). לכן ההצהרה שהמשתנה משותף לכל העצמים שנבנו מהתבנית (ה) אינה נכונה בכללותה, והנכונה היא שהמשתנה משותף כאשר נוצרו באותם שמות מחלקה, כלומר אותו מופע (א). הסימון בדף (ה) שונה מתוצאת ההרצה ולכן השאלה מוחזקת.",
+    1: "משתנה סטטי בתבנית מחלקה משותף לכל העצמים של אותו מופע (instantiation) של התבנית, כלומר לעצמים שנוצרו עם אותם שמות מחלקות כארגומנטים לתבנית: שני `X<int>` חולקים אותו משתנה, ולכן תשובה א נכונה. `X<int>` ו-`X<double>` הן מחלקות שונות עם משתנים סטטיים נפרדים (בהרצה גם הכתובות שונות), ולכן תשובה ה (משותף לכל העצמים מאותה תבנית) שגויה. ג שגויה כי שיתוף כן אפשרי, וב ו-ד אינן קשורות לשאלה (פונקציות וירטואליות טהורות ו-`#pragma once` לא משפיעים על כך). בקובץ המקורי מסומנת תשובה ה, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.",
     2: "במחלקה יש מצביע שמוקצה בבנאי ומשוחרר בהורס, ולכן ההעתקה ברירת המחדל (shallow) יוצרת שני אובייקטים שמחזיקים אותו מצביע, והשחרור כפול. יש שני מקומות שבהם קורית העתקה: ההשמה `x2 = x1` והעברה לפי ערך `f(x1)` או `x2.f(x1)`, שקוראת לבנאי ההעתקה. בהרצה, תיקון רק של ההשמה או רק של בנאי ההעתקה עדיין שחרר את אותו מצביע פעמיים, ורק הוספת שניהם עבדה נכון (תשובה ב).",
     3: "`X<int, char>` הוא ההתמחות המלאה ולכן מדפיסה 2. `X<char, int>` ו-`X<double, char>` משתמשים בתבנית הכללית ומדפיסים 1 כל אחד. הפלט `211` (תשובה א).",
     4: "הבנאים בשורות 3 ו-4 מקבלים הפניה או מצביע ל-const ומעתיקים ערך, וזה חוקי (קריאה מ-const תמיד מותרת). בשורות 5 ו-6 יש שני בנאי העתקה, אחד עם `const` ואחד בלי: אובייקט const בוחר את הראשון ואובייקט רגיל את השני, ולכן אין עמימות. גם הגישה ל-`h.num1` של אובייקט אחר מאותה מחלקה מותרת. כל ההגדרות תקינות (תשובה ד).",
     5: "בבנאי ההעתקה `m` הוא `const Memory&`, ולכן ההשמה `m.i = ...` לשדה של `m` אסורה (שגיאת קומפילציה). זו הסתירה בהגדרה (תשובה ב). שני בנאים שונים מותרים (א שגויה), הקריאה ל-`Memory(3)` אינה עמומה כי `int` מתאים בדיוק (ג שגויה), וגישה לשדה פרטי של אובייקט אחר מאותה מחלקה מותרת (ה שגויה).",
-    6: "בשתי פונקציות חברות עם אותו שם ואותה רשימת פרמטרים שנבדלות רק בסוג ההחזרה הקומפיילר לא יכול להבחין ביניהן, וזו שגיאת קומפילציה (גם בפונקציות וירטואליות). כשהפרמטרים שונים אין בעיה, אך אז ההבדל הוא בפרמטרים ולא בסוג ההחזרה. לכן ״נכון תמיד״ (ד) אינה נכונה, והאפשרות הסבירה היא ב. הסימון בדף (ד) שונה, ולכן השאלה מוחזקת.",
+    6: "העמסת פונקציות נקבעת לפי רשימת הפרמטרים ולא לפי סוג ההחזרה, ולכן שתי הגדרות עם אותו שם וסוגי החזרה שונים אפשריות רק אם הן נבדלות גם בסוג הפרמטרים או במספרם (תשובה ב). שתי פונקציות שנבדלות רק בסוג ההחזרה הן שגיאת קומפילציה (clang++: functions that differ only in their return type cannot be overloaded), וזה נכון גם לפונקציות וירטואליות וגם לפונקציות רגילות, ולכן ג, ד וה שגויות. א שגויה כי עם פרמטרים שונים זה כן אפשרי. בקובץ המקורי מסומנת תשובה ד, אך הסימון אינו מפתח רשמי ואינו מתיישב עם השפה.",
     7: "אפשרות `k,l`: `k` הוא `double` ולכן נבחרת `f1(double&, int)` שמחזירה `i*j` = 2*1 = 2 (תשובה א). אפשרות `l,k`: נבחרת `f1(int&, int)` כש-`k` מומר ל-2, והתוצאה `1+2` = 3. האפשרויות `k&`, `l*` ו-`l*k` אינן ביטויים חוקיים בקריאה.",
     8: "פונקציה סטטית אינה קשורה לאובייקט מסוים, ולכן אין לה `this` ואי אפשר להפוך אותה לווירטואלית (בלי קשר אם היא טהורה). לכן אף פונקציה וירטואלית לא יכולה להיות סטטית (תשובה ה). overloading מותר גם בפונקציות סטטיות. פונקציה חברה מסוג `const` (שמצהירה שהיא לא משנה את `this`) גם היא לא יכולה להיות סטטית, אבל אם הכוונה לפונקציה שמחזירה `const` היא כן יכולה, ולכן הבחירה היא ה.",
     9: "`MyClass3` נוצרת עם `new`, ולכן חייבת לממש את `f` (אחרת היא אבסטרקטית). הפרמטר השני מועבר לפי ערך, וגם אותו אי אפשר לקבל כסוג אבסטרקטי, ולכן גם המחלקה שלו חייבת לממש את `f`. הפרמטר הראשון מועבר בהפניה, ושם מחלקה אבסטרקטית מותרת. בהרצה רק צירוף המימושים בשתי המחלקות האלה התקמפל (תשובה ב).",
@@ -317,7 +327,7 @@ EXPL = {
     14: "הפעלת `ptr->myRun()` נבחרת בזמן ריצה לפי הטיפוס האמיתי רק כשהפונקציה וירטואלית ב-`myEx2` ויש מחלקה יורשת שדורסת אותה (תשובה ד). אם היא לא וירטואלית, הקריאה תמיד מפעילה את הגרסה של `myEx2` (בהרצה נדפס `BB`). אם וירטואלית רק במחלקה היורשת, גם אז הקריאה דרך `myEx2*` לא משתנה. ירושה משתי מחלקות עם אותו שם פונקציה גורמת לעמימות ולא לבחירה דינמית.",
     15: "`f` וירטואלית ב-`X`. עבור `a[0]` (אובייקט `X`) מודפס 1 ואז `f1` של `X`: 2. עבור `a[1]` (אובייקט `Y` דרך מצביע `X*`) הקריאה הוירטואלית `f` מפעילה את `Y::f` ומדפיסה 3. `f1` לא וירטואלית ב-`X` (ההצהרה `virtual` ב-`Y` לא משפיעה על מצביע `X*`), ולכן מופעל `X::f1` ומודפס 2. הפלט `1232` (תשובה ב).",
     16: "המשתנה `num1` הוא `private` ב-`Home`, ולכן מחלקה יורשת לא יכולה לגשת אליו ישירות: לא ברשימת האיתחול ולא בגוף הבנאי. הדרך היחידה היא להפעיל בנאי של `Home` ברשימת האיתחול, כמו `Home(3)` (תשובה א). `Home(3)` בוחר את `Home(const int&)`.",
-    17: "המשתנה `i` פרטי ב-`Memory`, ולכן אי אפשר לגשת אליו ישירות מהמחלקה `RAM`. אבל אפשר להפעיל את בנאי הבסיס ברשימת האיתחול: `RAM() : Memory(3) {}` מתקמפל, והבנאי `Memory(int)` מציב `i` = 3. לכן הדרך הראשונה אפשרית, והאפשרות ״לא ניתן״ שסומנה בדף אינה מתאימה להרצה. השאלה מוחזקת.",
+    17: "אפשר להפעיל את בנאי הבסיס ברשימת האיתחול: `RAM() : Memory(3) {}` מתקמפל, והבנאי `Memory(int)` מציב `i` = 3 (תשובה א, נבדק בהרצה). המשתנה `i` פרטי ב-`Memory`, ולכן הניסיונות לגשת אליו ישירות מ-`RAM`, `i(3)`, `i=3` או `Memory::i=3`, נכשלים בקומפילציה. האפשרות ״לא ניתן״ (ב) שגויה, כי הגישה עוברת דרך הבנאי של הבסיס ולא דרך השדה. בקובץ המקורי מסומנת תשובה ב, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.",
 }
 SIG = '\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_'
 for q in questions:

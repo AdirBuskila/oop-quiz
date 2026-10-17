@@ -37,10 +37,12 @@
      "value": "המשתנים הסטטיים משותפים לכל העצמים שנבנים מאותה התבנית."
     }
    ],
-   "confidence": "low",
-   "explanation": "משתנה סטטי בתבנית מחלקה שייך לכל מופע (instantiation) של התבנית בנפרד. עצמים מאותו מופע, למשל שני `X<int>`, חולקים אותו משתנה סטטי, אבל `X<int>` ו-`X<double>` הם מחלקות שונות עם משתנים סטטיים נפרדים (בהרצה גם הכתובות שונות). לכן ההצהרה שהמשתנה משותף לכל העצמים שנבנו מהתבנית (ה) אינה נכונה בכללותה, והנכונה היא שהמשתנה משותף כאשר נוצרו באותם שמות מחלקה, כלומר אותו מופע (א). הסימון בדף (ה) שונה מתוצאת ההרצה ולכן השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
-   "note": "Held. The boxed option is e (statics shared by all objects built from the template). clang++ run: a static member of a class template is shared only within one instantiation (X<int> objects share, X<double> has its own, different address), so e as written is false and a (same class names = same instantiation) is the true statement.",
-   "hold": "Box (option e) disagrees with the run: statics are shared only per template instantiation, which is option a."
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "משתנה סטטי בתבנית מחלקה משותף לכל העצמים של אותו מופע (instantiation) של התבנית, כלומר לעצמים שנוצרו עם אותם שמות מחלקות כארגומנטים לתבנית: שני `X<int>` חולקים אותו משתנה, ולכן תשובה א נכונה. `X<int>` ו-`X<double>` הן מחלקות שונות עם משתנים סטטיים נפרדים (בהרצה גם הכתובות שונות), ולכן תשובה ה (משותף לכל העצמים מאותה תבנית) שגויה. ג שגויה כי שיתוף כן אפשרי, וב ו-ד אינן קשורות לשאלה (פונקציות וירטואליות טהורות ו-`#pragma once` לא משפיעים על כך). בקובץ המקורי מסומנת תשובה ה, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): clang++ shows a static member of a class template is shared per instantiation only (X<int> objects share it, X<double> has its own), which is option a; the box (e) is not an official key. Med: wording of a."
   },
   {
    "num": 2,
@@ -215,10 +217,12 @@
      "value": "נכון רק עבור פונקציה שאיננה וירטואלית."
     }
    ],
-   "confidence": "low",
-   "explanation": "בשתי פונקציות חברות עם אותו שם ואותה רשימת פרמטרים שנבדלות רק בסוג ההחזרה הקומפיילר לא יכול להבחין ביניהן, וזו שגיאת קומפילציה (גם בפונקציות וירטואליות). כשהפרמטרים שונים אין בעיה, אך אז ההבדל הוא בפרמטרים ולא בסוג ההחזרה. לכן ״נכון תמיד״ (ד) אינה נכונה, והאפשרות הסבירה היא ב. הסימון בדף (ד) שונה, ולכן השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
-   "note": "Held. The boxed option is d ('always true'). clang++: two members that differ only in return type do not compile (virtual or not); with different parameters they do. So 'always true' is false and b (possible only if the parameters also differ) is the defensible choice.",
-   "hold": "Box (option d, always true) disagrees with C++ (clang++: members differing only in return type are an error); defensible answer is b."
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "העמסת פונקציות נקבעת לפי רשימת הפרמטרים ולא לפי סוג ההחזרה, ולכן שתי הגדרות עם אותו שם וסוגי החזרה שונים אפשריות רק אם הן נבדלות גם בסוג הפרמטרים או במספרם (תשובה ב). שתי פונקציות שנבדלות רק בסוג ההחזרה הן שגיאת קומפילציה (clang++: functions that differ only in their return type cannot be overloaded), וזה נכון גם לפונקציות וירטואליות וגם לפונקציות רגילות, ולכן ג, ד וה שגויות. א שגויה כי עם פרמטרים שונים זה כן אפשרי. בקובץ המקורי מסומנת תשובה ד, אך הסימון אינו מפתח רשמי ואינו מתיישב עם השפה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): clang++ rejects members differing only in return type (virtual or not) and accepts them when the parameters differ -> b; the box (d) is not an official key. Med: concept wording."
   },
   {
    "num": 7,
@@ -621,10 +625,12 @@
      "value": "אפשרי ברשימת האיתחול באופן הבא: `RAM() : i=3{ };`"
     }
    ],
-   "confidence": "low",
-   "explanation": "המשתנה `i` פרטי ב-`Memory`, ולכן אי אפשר לגשת אליו ישירות מהמחלקה `RAM`. אבל אפשר להפעיל את בנאי הבסיס ברשימת האיתחול: `RAM() : Memory(3) {}` מתקמפל, והבנאי `Memory(int)` מציב `i` = 3. לכן הדרך הראשונה אפשרית, והאפשרות ״לא ניתן״ שסומנה בדף אינה מתאימה להרצה. השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
-   "note": "Held. The boxed option is b ('not possible', with a handwritten 'private' note beside it). clang++: with the copy constructor repaired, `RAM() : Memory(3) {}` compiles and leaves i == 3 (the base constructor Memory(int) sets i), so option a works; the other three fail because i is private. Box disagrees with the run.",
-   "hold": "Box (option b, not possible) disagrees with the run: RAM() : Memory(3) {} compiles and sets i to 3 (option a)."
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "אפשר להפעיל את בנאי הבסיס ברשימת האיתחול: `RAM() : Memory(3) {}` מתקמפל, והבנאי `Memory(int)` מציב `i` = 3 (תשובה א, נבדק בהרצה). המשתנה `i` פרטי ב-`Memory`, ולכן הניסיונות לגשת אליו ישירות מ-`RAM`, `i(3)`, `i=3` או `Memory::i=3`, נכשלים בקומפילציה. האפשרות ״לא ניתן״ (ב) שגויה, כי הגישה עוברת דרך הבנאי של הבסיס ולא דרך השדה. בקובץ המקורי מסומנת תשובה ב, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): clang++ with the copy ctor repaired: `RAM() : Memory(3) {}` compiles and leaves i == 3; c, d, e fail (i is private). The box (b) is not an official key."
   }
  ]
 }

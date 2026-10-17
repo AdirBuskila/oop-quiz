@@ -448,9 +448,12 @@
     }
    ],
    "contextId": "notes",
-   "explanation": "",
-   "note": "Held: design-preference question, no key and nothing to compile.",
-   "hold": "no-key: design question (best class structure), the paper has no key and it cannot be settled by running code"
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "מבנה הירושה המיטבי הוא מחלקת אב `Room` שממנה יורשות `BedRoom`, `LivingRoom` ו-`BathRoom` (כל אחד מהם הוא סוג של חדר, יחס is-a), ו-`Apartment` מחזיקה אוסף של חדרים (יחס has-a, הכלה), ולכן תשובה א. כך אפשר לטפל בכל החדרים באותו אופן ולהוסיף סוג חדר חדש בלי לשנות את `Apartment`. ב משכפלת שלושה אוספים נפרדים, אחד לכל סוג. ג ו-ד משתמשות בירושה במקום שבו אין יחס is-a: דירה אינה חדר, וחדר אינו דירה. הערה: כדי לשמור על פולימורפיזם האוסף צריך להחזיק מצביעים (`vector<Room*>`) ולא עצמים מטיפוס `Room` (אחרת העצמים נחתכים, slicing), אבל גם כך א היא המבנה הנכון מבין האפשרויות.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): design question, one clearly best answer by OOP principles: Room base (is-a) + Apartment holding a collection of rooms (has-a). b duplicates per type, c and d misuse inheritance for has-a. No key; confidence med.",
+   "correctId": "a"
   },
   {
    "num": 14,

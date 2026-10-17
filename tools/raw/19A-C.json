@@ -197,10 +197,12 @@
      "value": "`*this`"
     }
    ],
-   "confidence": "low",
-   "explanation": "השאלה לא נפתרת כפי שהודפסה: בשורה 9 משווים `&x`, שהוא מצביע `X*`, עם `x.f()`, שהוא הפניה `X&` לאובייקט, ואין השוואה כזאת. לכן בכל אחת מארבע האפשרויות התכנית לא מתקמפלת. עם ההשוואה המתוקנת `&x == &x.f()` האפשרות `*this` מדפיסה 1. אין סימון בדף ולכן השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
-   "note": "Held. No option is highlighted on the paper. clang++: with each of the four options the program fails to compile, because `&x == x.f()` compares an `X*` with an `X&`. (With the repaired comparison `&x == &x.f()` and `*this` it prints 1.)",
-   "hold": "no-key: no highlighted option on the paper, and as printed none of the four options compiles (`&x == x.f()` compares X* with X&)."
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "התשובה היא `*this` (תשובה ד): הפונקציה מחזירה `X&`, ורק `*this` הוא האובייקט `x` עצמו, ולכן רק איתו הכתובת של התוצאה שווה ל-`&x` ומודפס 1. `this` ו-`new X` הם מצביעים (`X*`) ולא אובייקט, ו-`X()` הוא אובייקט זמני שאי אפשר לקשור להפניה שאינה `const` (וגם הוא אינו `x`). הערה: הקוד כפי שהודפס אינו מתקמפל עם אף אחת מהאפשרויות, כי `f` פרטית (ברירת המחדל ב-`class`) ובשורה 9 משווים `X*` עם `X&`. בגרסה המתוקנת (`public:` והשוואה `&x == &x.f()`) רק `*this` מתקמפלת ומדפיסה 1 בהרצת clang++, וזו כוונת השאלה. בדף לא סומנה תשובה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): no highlight; as printed nothing compiles (f is private, and `&x == x.f()` compares X* with X&). Every reasonable repair points to d: only `*this` binds to the return type X& and refers to x; with `public:` and `&x == &x.f()` clang++ compiles only `*this` and prints 1 (this/new X: X* to X&, X(): temporary to non-const X&). Shipped with a note."
   },
   {
    "num": 7,

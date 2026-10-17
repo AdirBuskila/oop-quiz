@@ -429,7 +429,7 @@
     }
    ],
    "note": "No key in the source; clang++ run decides. Count depends on the language standard (see explanation).",
-   "hold": "standard-dependent: clang++ c++17 gives 0 lines, c++14 gives 1 line (A a1 = 1), MSVC extension accepts; no key in source"
+   "hold": "standard-dependent: `A a1 = 1;` needs a copy from a temporary that A(A&) cannot bind: an error in C++11/14 (1 line, b), legal in C++17 by guaranteed elision (0 lines, a); `A a2 = A(2);` compiles in both via operator int + A(int). The course gives no evidence of its standard (exams target MSVC, whose default is C++14 but which also accepts temporary-to-A& as an extension); no key in source"
   },
   {
    "num": 14,

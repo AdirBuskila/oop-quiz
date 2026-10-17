@@ -5,7 +5,7 @@ Run: PYTHONUTF8=1 py tools/gen/gen_21B-B.py
 Source: 10-page text PDF, 20 MCQ x 4 options. The paper carries NO answer key.
 Per GATE1 the keys are derived by compiling/running every item with clang++ (tools/verify/21B-B/, run_all.py), marked
 answerSource "solved", official false. Concept questions (1, 3, 5, 9, 10, 18) were settled with compile/run probes of each option's claim.
-Held: Q13 (class-hierarchy design preference, cannot be compiled -> no-key)."""
+Q13 (class-hierarchy design preference, cannot be compiled) was keyed a by the arbiter (2026-10-18) from OOP principles, confidence med."""
 import json, pathlib
 
 OUT = pathlib.Path(__file__).resolve().parents[1] / "raw" / "21B-B.json"
@@ -225,10 +225,8 @@ q13 = Q(
         "במחלקה `Apartment` יהיו `data member` מסוג מערך של `BedRoom` וכן `data member` מסוג מערך של `LivingRoom` וכן `data member` מסוג מערך של `BathRoom`",
         "המחלקה `Apartment` תירש בצורה של \"ירושה מרובה\" מכל המחלקות מסוג `LivingRoom, BathRoom, BedRoom`",
         "המחלקות `LivingRoom, BathRoom, BedRoom` ירשו כל אחת מהן בנפרד מהמחלקה `Apartment`."),
-    None, "Held: design-preference question, no key and nothing to compile.",
-    hold="no-key: design question (best class structure), the paper has no key and it cannot be settled by running code")
-for k in ("answerSource", "official", "confidence"):
-    q13.pop(k)
+    "a", "Arbiter ruling 2026-10-18 (was held): design question, one clearly best answer by OOP principles: Room base (is-a) + Apartment "
+    "holding a collection of rooms (has-a). b duplicates per type, c and d misuse inheritance for has-a. No key; confidence med.", conf="med")
 questions.append(q13)
 
 questions.append(Q(
@@ -367,6 +365,16 @@ SIG = '\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקו
 for q in questions:
     if q["num"] in EXPL:
         q["explanation"] = EXPL[q["num"]] + SIG
+
+EXPL_NORUN = {
+    13: "מבנה הירושה המיטבי הוא מחלקת אב `Room` שממנה יורשות `BedRoom`, `LivingRoom` ו-`BathRoom` (כל אחד מהם הוא סוג של חדר, יחס is-a), ו-`Apartment` מחזיקה אוסף של חדרים (יחס has-a, הכלה), ולכן תשובה א. "
+        "כך אפשר לטפל בכל החדרים באותו אופן ולהוסיף סוג חדר חדש בלי לשנות את `Apartment`. ב משכפלת שלושה אוספים נפרדים, אחד לכל סוג. ג ו-ד משתמשות בירושה במקום שבו אין יחס is-a: דירה אינה חדר, וחדר אינו דירה. "
+        "הערה: כדי לשמור על פולימורפיזם האוסף צריך להחזיק מצביעים (`vector<Room*>`) ולא עצמים מטיפוס `Room` (אחרת העצמים נחתכים, slicing), אבל גם כך א היא המבנה הנכון מבין האפשרויות.",
+}
+SIG_NORUN = '\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_'
+for q in questions:
+    if q["num"] in EXPL_NORUN:
+        q["explanation"] = EXPL_NORUN[q["num"]] + SIG_NORUN
 
 exam = {
     "examCode": "21B-B",

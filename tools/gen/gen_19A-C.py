@@ -4,7 +4,7 @@ Run: PYTHONUTF8=1 py tools/gen/gen_19A-C.py
 
 Source: 11-page paper (25 MCQ, 4 options) with the official correct option highlighted in yellow (page 11 is a scratch page, page 1 the answer sheet).
 Every code question was compiled/run with clang++ (tools/verify/19A-C/check.py); the results agree with the key except as noted:
- - Q6 has NO highlighted option and no option compiles as printed (`&x == x.f()` compares X* with X&) -> held.
+ - Q6 has NO highlighted option and no option compiles as printed (`&x == x.f()` compares X* with X&); keyed d (*this) by the arbiter, with a note.
  - Q1: the key is a; option d (free operator++ with one parameter) also compiles (note only).
 `void main` in the exam is MSVC style; the harness rewrites it to `int main` for clang."""
 import json, pathlib
@@ -102,12 +102,11 @@ q6 = Q(6, "friend_this_static", "מה צריך להיכתב בשורה 4 כדי 
 8.     X x;
 9.     std::cout << (&x == x.f());
 10. }''', "text"),
-    txt("`new X`", "`X()`", "`this`", "`*this`"), None,
-    "Held. No option is highlighted on the paper. clang++: with each of the four options the program fails to compile, because `&x == x.f()` compares an `X*` with an `X&`. "
-    "(With the repaired comparison `&x == &x.f()` and `*this` it prints 1.)",
-    hold="no-key: no highlighted option on the paper, and as printed none of the four options compiles (`&x == x.f()` compares X* with X&).",
-    confidence="low")
-del q6["answerSource"], q6["official"], q6["correctId"]
+    txt("`new X`", "`X()`", "`this`", "`*this`"), "d",
+    "Arbiter ruling 2026-10-18 (was held): no highlight; as printed nothing compiles (f is private, and `&x == x.f()` compares X* with X&). "
+    "Every reasonable repair points to d: only `*this` binds to the return type X& and refers to x; with `public:` and `&x == &x.f()` clang++ "
+    "compiles only `*this` and prints 1 (this/new X: X* to X&, X(): temporary to non-const X&). Shipped with a note.",
+    answerSource="solved", official=False, confidence="med")
 questions.append(q6)
 
 # 7
@@ -336,7 +335,7 @@ EXPL = {
     3: "ב-`f` הגישה ל-`y` תקינה, כי פונקציה חברה ניגשת גם לשדות `private` של המחלקה שלה (גם אם `y` מוצהר אחרי הפונקציה). ב-`g` הגישה `c.x` תקינה (`public`) אבל `c.y` שגויה מכיוון ש-`y` הוא `private` וגישה מחוץ למחלקה אסורה. לכן רק `g` (תשובה ג).",
     4: "בפונקציה חברה `const`, הטיפוס של `this` הוא מצביע לאובייקט קבוע: `const A*` (תשובה ד). `A*` הוא הטיפוס בפונקציה רגילה, ו-`this` הוא מצביע ולא הפניה (ג שגויה).",
     5: "בירושה `protected` החבר הציבורי `I` של `A` הופך ל-`protected` ב-`B`, ולכן `tt.I` בשורה 7 אסור מחוץ למחלקה. `t.I` (שורה 6) תקין כי `t` מטיפוס `A`. השורות 2 ו-5 תקינות. לכן רק שורה 7 (תשובה ד).",
-    6: "השאלה לא נפתרת כפי שהודפסה: בשורה 9 משווים `&x`, שהוא מצביע `X*`, עם `x.f()`, שהוא הפניה `X&` לאובייקט, ואין השוואה כזאת. לכן בכל אחת מארבע האפשרויות התכנית לא מתקמפלת. עם ההשוואה המתוקנת `&x == &x.f()` האפשרות `*this` מדפיסה 1. אין סימון בדף ולכן השאלה מוחזקת.",
+    6: "התשובה היא `*this` (תשובה ד): הפונקציה מחזירה `X&`, ורק `*this` הוא האובייקט `x` עצמו, ולכן רק איתו הכתובת של התוצאה שווה ל-`&x` ומודפס 1. `this` ו-`new X` הם מצביעים (`X*`) ולא אובייקט, ו-`X()` הוא אובייקט זמני שאי אפשר לקשור להפניה שאינה `const` (וגם הוא אינו `x`). הערה: הקוד כפי שהודפס אינו מתקמפל עם אף אחת מהאפשרויות, כי `f` פרטית (ברירת המחדל ב-`class`) ובשורה 9 משווים `X*` עם `X&`. בגרסה המתוקנת (`public:` והשוואה `&x == &x.f()`) רק `*this` מתקמפלת ומדפיסה 1 בהרצת clang++, וזו כוונת השאלה. בדף לא סומנה תשובה.",
     7: "לכל מופע של התבנית יש משתנה סטטי `d` משלו. `a` ו-`b` הם `X<0>` וחולקים `d` שהגיע ל-2, ו-`c` הוא `X<1>` עם `d` שהגיע ל-1. הפלט `221` (תשובה ג).",
     8: "האופרטור `>>` לקריאה מ-`cin` (`cin >> x`) חייב להיות פונקציה חיצונית, כי האופרנד השמאלי הוא `istream` ולא `X`. אם הפונקציה משתמשת רק בחברים ציבוריים לא חייבים להצהיר עליה כ-`friend` (תשובה ג). `friend` נחוץ רק לגישה לחברים פרטיים.",
     9: "שדה `private` נגיש רק מתוך המחלקה עצמה (ומחברים שהוכרזו `friend`). מחלקות יורשות אינן ניגשות אליו, ובוודאי שלא קוד חיצוני. לכן התשובה ב. התשובות ג ו-ד שגויות כי מחלקה יורשת אינה ניגשת לשדה פרטי של הבסיס.",

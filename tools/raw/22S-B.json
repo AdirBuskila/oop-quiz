@@ -33,7 +33,7 @@
     }
    ],
    "note": "No key in the source; clang++ run decides.",
-   "hold": "unspecified-evaluation-order: clang++ 6561 (a) vs right-to-left compilers 3024 (b); no key in source"
+   "hold": "unspecified-evaluation-order: the operands of binary * are unsequenced even in C++17 (P0145 sequenced only <<, >>, =, op=, [], ->*, and the callee before its arguments); clang++ reads x after the call and prints 6561 (a), an order that reads x first gives 3024 (b); no key in source"
   },
   {
    "num": 2,

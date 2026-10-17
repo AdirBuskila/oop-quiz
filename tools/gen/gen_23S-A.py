@@ -25,7 +25,7 @@ KEYS = {1: "a", 2: "b", 3: "a", 4: "a", 5: "c", 6: "d", 7: "b", 8: "b", 9: "b", 
         13: "c", 14: "d", 15: "c"}
 # Q13 is held: `A(A&)` cannot bind a temporary, so the answer depends on the language standard / compiler
 # (clang++ -std=c++17: 0 lines, -std=c++14: 1 line, MSVC accepts binding a temporary to A& as an extension).
-HOLD = {13: "standard-dependent: clang++ c++17 gives 0 lines, c++14 gives 1 line (A a1 = 1), MSVC extension accepts; no key in source"}
+HOLD = {13: "standard-dependent: `A a1 = 1;` needs a copy from a temporary that A(A&) cannot bind: an error in C++11/14 (1 line, b), legal in C++17 by guaranteed elision (0 lines, a); `A a2 = A(2);` compiles in both via operator int + A(int). The course gives no evidence of its standard (exams target MSVC, whose default is C++14 but which also accepts temporary-to-A& as an extension); no key in source"}
 MED = {3, 4}
 EXPL = {
     1: "הפונקציה `smallest` מחזירה הפניה לאחד הארגומנטים. בקריאה הראשונה `r` הוא `k` (6) ו-`s` הוא `m` (5), התנאי `6 < 5` לא מתקיים ולכן מוחזרת ההפניה ל-`m`, וההשמה `= 10` משנה את `m` ל-10. בקריאה השנייה `6 < 10` מתקיים, מוחזרת ההפניה ל-`k`, ו-`--` מקטין אותו ל-5. הפלט `k=5, m=10` (תשובה א), וכך גם הרצת clang++.",

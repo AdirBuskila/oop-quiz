@@ -346,9 +346,12 @@
     }
    ],
    "contextId": "notes",
-   "explanation": "",
-   "note": "Held: concept question with no code to run. The student's marking on the page circles both b and c; it was graded wrong, and the scan does not show which of the two counts.",
-   "hold": "no-key: concept question, the graded student answer is unreadable (b or c) and was marked wrong; no official key"
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "העמסת פונקציות ופרמטרים ברירת מחדל מאפשרים לקרוא לאותו שם פונקציה עם סוגים שונים ומספרים שונים של ארגומנטים, וזו צורה של פולימורפיזם (פולימורפיזם בזמן קומפילציה), ולכן תשובה ב. הורשה עוסקת ביחס בין מחלקות, הסתרת מידע עוסקת בהגבלת הגישה לחברי המחלקה, ויצירת עצמים נעשית בבנאים; אף אחת מהן אינה מתארת שם אחד שמתאים לכמה צורות קריאה. בעותק הנבדק של הסטודנט מוקפות גם ב וגם ג והשאלה סומנה כשגויה, ולכן אי אפשר ללמוד ממנו מפתח.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על עקרונות השפה)_",
+   "note": "Arbiter ruling 2026-10-18 (was held): concept question, one clearly best answer: overloading and default arguments are compile-time (ad-hoc) polymorphism -> b. The graded scan circles both b and c and is marked wrong; it cannot be read as a key. Confidence med.",
+   "correctId": "b"
   },
   {
    "num": 11,

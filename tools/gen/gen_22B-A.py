@@ -5,7 +5,7 @@ Run: PYTHONUTF8=1 py tools/gen/gen_22B-A.py
 Source: 15-page text PDF, 15 MCQ x 7 pts (3 or 4 options, Q2 option c is an image of the printed listing, transcribed as text).
 The paper carries NO answer key. Per GATE1 the keys are derived by compiling/running each item with clang++
 (tools/verify/22B-A/, run_all.py), answerSource "solved", official false.
-Held: Q6 (the key depends on whether f4's by-value return counts as a copy; clang++ elides it by default, so the run cannot decide)."""
+Q6 (does f4's by-value return count as a necessary copy?) keyed a by the arbiter (2026-10-18): elision means it is not necessary; confidence med."""
 import json, pathlib
 
 OUT = pathlib.Path(__file__).resolve().parents[1] / "raw" / "22B-A.json"
@@ -139,12 +139,10 @@ void f3(Person *p);
 Person f4();
 Person &f5();
 Person *f6();''') + "\nנניח שמפעילים (דהינו מבצעים קריאה) את כל אחת מ- 6 הפונקציות הנ\"ל. בכמה מההפעלות האלה יהיה בהכרח שימוש בבנאי ההעתקה:",
-    txt("1", "2", "4", "6"), None,
-    "Held. Probe (q06.cpp): only f2 (by-value parameter) always copies; f4 (by-value return) copies only with -fno-elide-constructors, "
-    "so 'necessarily' reads as 1 (default clang++) or 2 (language semantics). The paper gives no function bodies and no key.",
-    hold="no-key: the answer (1 vs 2) depends on whether a by-value return counts as a necessary copy (copy elision); no key and the run cannot decide")
-for k in ("answerSource", "official", "confidence"):
-    q6.pop(k)
+    txt("1", "2", "4", "6"), "a",
+    "Arbiter ruling 2026-10-18 (was held): 'necessarily' (בהכרח) is what separates f4: a by-value return may always be elided (RVO/NRVO; "
+    "guaranteed for a prvalue since C++17) and clang++ does elide it, while f2's by-value parameter copies its lvalue argument -> 1. "
+    "Probe q06.cpp: f4 copies only with -fno-elide-constructors. Reading f4 as a copy gives 2 (b), hence confidence med.", conf="med")
 questions.append(q6)
 
 questions.append(Q(
@@ -349,6 +347,16 @@ SIG = '\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקו
 for q in questions:
     if q["num"] in EXPL:
         q["explanation"] = EXPL[q["num"]] + SIG
+
+EXPL_RULED = {
+    6: "רק בהפעלה של `f2` יש בהכרח שימוש בבנאי ההעתקה: הפרמטר מועבר לפי ערך, ולכן האובייקט שנשלח אליה מועתק לתוך `p` (תשובה א). "
+       "`f1` ו-`f3` מקבלות הפניה ומצביע, ו-`f5` ו-`f6` מחזירות הפניה ומצביע, ולכן אין בהן העתקה של `Person`. "
+       "ב-`f4` ההחזרה לפי ערך אינה מחייבת העתקה: הקומפיילר רשאי לבנות את הערך המוחזר ישירות במקום היעד (copy elision, RVO), ומ-C++17 החזרה של ביטוי זמני כמו `return Person(...)` מובטחת ללא העתקה. "
+       "בהרצת clang++ בנאי ההעתקה לא נקרא ב-`f4`. המילה 'בהכרח' מוציאה אפוא את `f4`; מי שסופר גם אותה מגיע ל-2 (תשובה ב).",
+}
+for q in questions:
+    if q["num"] in EXPL_RULED:
+        q["explanation"] = EXPL_RULED[q["num"]] + SIG
 
 exam = {
     "examCode": "22B-A",
