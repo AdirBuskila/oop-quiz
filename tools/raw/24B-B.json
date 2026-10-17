@@ -1,0 +1,592 @@
+{
+ "examCode": "24B-B",
+ "examLabel": "2024 סמסטר ב מועד ב",
+ "year": 2024,
+ "examDate": "15.08.2024",
+ "sourceFile": "2024/סמ׳ ב מועד ב + פתרון.pdf",
+ "keyFile": "same file: the true answers marked in red on the page-1 answer grid; cross-checked with clang++ runs (tools/verify/24B-B/)",
+ "contexts": {
+  "notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`.\nבכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט `#include` בתחילת קטע הקוד/התכנית.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```\nבכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-`#include` הנדרשים להרצת קטע הקוד."
+  }
+ },
+ "questions": [
+  {
+   "num": 1,
+   "topic": "templates",
+   "question": "להלן הכרזה של מחלקה. בכמה שורות יש שגיאות בהכרזה זו?\n```cpp\ntemplate <class T>\nclass Array {\n    template <class U>\n        friend ostream& operator<<(ostream&, const Array<U>&);\n    template <class U>\n        friend istream& operator>>(istream&, Array<U>&);\npublic:\n    Array(int = 10);\n    Array(const Array&);\n    virtual ~Array();\n    const Array& operator=(const Array&);\n    bool operator==(const Array&) const;\n    int getSize() const;\n    bool operator!=(const Array& right) const;\n    T& operator[](int);\n    const T& operator[](int) const;\n    operator int();\n    static int getArrayCount();\nprivate:\n    int size;\n    T* ptr;\n    static int arrayCount;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההצהרה תקינה: תבנית המחלקה `Array` עם שתי הצהרות `friend` כתבניות (`template <class U> friend ...`), בנאי, הורס וירטואלי, אופרטורים, אופרטור המרה `operator int()` ושדה סטטי. אין בה שגיאה (תשובה א). הקומפיילר קיבל אותה ללא שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ (declaration compiled alone): 0 error lines.",
+   "correctId": "a"
+  },
+  {
+   "num": 2,
+   "topic": "operator_conversions",
+   "question": "להלן הכרזה של מחלקה. בכמה שורות יש שגיאות בהכרזה זו?\n```cpp\nclass YARD\n{\nprivate:\n        float length;\npublic:\n        yard(float l)\n        {\n                length = l;\n        }\n        float operator float()\n        {\n                return length;\n        }\n        //... Other member functions follow ...\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "יש שתי שורות שגויות (תשובה ג). הראשונה: `yard(float l)` נראית כבנאי, אבל שם המחלקה הוא `YARD` באותיות גדולות, ולכן זו הצהרה של פונקציה בלי טיפוס מוחזר. השנייה: `float operator float()`, כי לאופרטור המרה אסור להגדיר טיפוס מוחזר. הקומפיילר דיווח על שתי השורות האלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++: 2 error lines (`yard(float l)` has no type specifier because the constructor name is YARD, and `float operator float()` gives a return type to a conversion operator).",
+   "correctId": "c"
+  },
+  {
+   "num": 3,
+   "topic": "construction_order",
+   "question": "באיזה סדר יקראו ה- destructors של המחלקות בקטע הקוד הבא (הסדר של התשובות הוא משמאל לימין)?\n```cpp\nclass A {...};\nclass B {...};\nclass C : public B, public A {...};\nclass D {...};\nclass E : public D {...};\nclass F : public E {...};\nclass G : public F, public C {...};\n\nint main()\n{\n  G g;\n  return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "D, E, F, B, A, C, G"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "G, C, A, B, F, E, D"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "D, E, B, F, A, C, G"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההורסים נקראים בסדר הפוך לסדר הבנייה. סדר הבנייה של `G` הוא: הבסיסים לפי סדר הרישום, `F` (שבנויה מ-`D`, `E`, `F`) ואחר כך `C` (שבנויה מ-`B`, `A`, `C`), ואז `G`: `D E F B A C G`. ההריסה הפוכה: `G C A B F E D` (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ run (every class prints its letter in ctor and dtor): construction D E F B A C G, destruction G C A B F E D.",
+   "correctId": "b"
+  },
+  {
+   "num": 4,
+   "topic": "cpp_basics_refs",
+   "question": "כמה מהמשפטים הבאים נכונים:\n1. לשתי overloaded functions יכול להיות טיפוס ערך מוחזר שונה בתנאי שטיפוסי הפרמטרים שמועברים לפונקציות זהים לפי הסדר.\n2. לשתי overloaded functions חייב להיות טיפוס ערך מוחזר שונה אם שמות הפונקציות זהים.\n3. לשתי overloaded functions יכול להיות טיפוס ערך מוחזר שונה בתנאי שטיפוסי הפרמטרים שמועברים לפונקציות אינם זהים לפי הסדר.\n4. לשתי overloaded functions אסור שטיפוסי הפרמטרים שמועברים אליהן יהיו זהים לפי הסדר.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "משפטים 3 ו-4 נכונים. משפט 1 ו-2 שגויים: אי אפשר להעמיס פונקציות רק לפי טיפוס הערך המוחזר (הקומפיילר דוחה: `functions that differ only in their return type cannot be overloaded`). העמסה אפשרית רק כאשר רשימת הפרמטרים שונה, ואז טיפוס ההחזרה יכול להיות שונה. שני משפטים נכונים (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ checks: two functions that differ only in the return type do not compile (statements 1, 2 false); `int f(int)` with `double f(double)` compiles (3, 4 true). The numbering 1-4 is added (the paper lists א-ד).",
+   "correctId": "c"
+  },
+  {
+   "num": 5,
+   "topic": "classes_ctor_dtor",
+   "question": "ההבדל ב- C++ בין class ל struct הוא:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ב C++ ב struct ברירת המחדל עבור ה members היא public בעוד שב class ברירת המחדל עבור ה members היא private."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ב C++ ב- class משתמשים לתכנות מונחה עצמים וב- struct משתמשים לתכנות פרוצדורלי."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "ב C++ class תומכת בהורשה בעוד ש struct לא."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ב C++ ל- struct לא יכולים להגדיר member functions בעוד של- class יכולים."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההבדל היחיד בשפה בין `struct` ל-`class` הוא ברירת המחדל של ההרשאה: ב-`struct` היא `public` וב-`class` היא `private` (גם ב-`struct` אפשר ירושה ופונקציות חברות). תשובה א. תשובה ב מתארת מוסכמת שימוש ולא הבדל בשפה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. Concept question: the language defines the difference only by default access (public for struct, private for class).",
+   "correctId": "a"
+  },
+  {
+   "num": 6,
+   "topic": "operator_overloading",
+   "question": "כמה מהמשפטים הבאים נכונים לגבי הפונקציה operator+ של מחלקה A:\n1. יתכן שהפונקציה operator+ היא member function (method) של מחלקה A.\n2. יתכן שהפונקציה operator+ אינה member function של מחלקה A והיא friend של המחלקה A.\n3. יתכן שהפונקציה operator+ אינה member function של מחלקה A ואינה friend של המחלקה A.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "כל שלושת המשפטים נכונים (תשובה ד). `operator+` יכול להיות פונקציה חברה, פונקציית `friend`, או פונקציה גלובלית רגילה שמשתמשת רק בממשק הציבורי של `A` (למשל דרך getter). בדקנו בקומפילציה את שלושת הצורות, והן עוברות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ compile check: a member operator+, a friend operator+ and a plain non-member operator+ (using a public getter) all compile. The numbering 1-3 is added.",
+   "correctId": "d"
+  },
+  {
+   "num": 7,
+   "topic": "virtual_polymorphism",
+   "question": "נתונה התכנית הבאה:\n```cpp\nclass Widget {\npublic:\n        virtual int f() { return 1; }   // 1-st\n};\nclass Gadget : public Widget {\npublic:\n        virtual int f() { return 2; }   // 2-nd\n};\nclass Gizmo : public Widget {\npublic:\n        virtual int f() { return 3; }   // 3-rd\n};\nvoid do_it(Widget* w) {\n        std::cout << w->f() << \" \";\n}\nint main() {\n        std::vector<Widget*> widgets;\n        Widget wid;\n        Gadget gad;\n        Gizmo giz;\n        widgets.push_back(&wid);\n        widgets.push_back(&gad);\n        widgets.push_back(&giz);\n        for (int i = 0; i < widgets.size(); i++)\n                do_it(widgets[i]);\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הפלט של התכנית יישאר זהה אם נמחק את המילה virtual בשורה שבה רשום בהערה 1-st"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הפלט של התכנית יישאר זהה אם נמחק את המילה virtual בשתי שורות: בשורה שבה רשום בהערה 2-nd ובשורה שבה רשום בהערה 3-rd."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הפלט של התכנית יישאר זהה אם נמחק את המילה virtual בשלוש שורות: בשורה שבה רשום בהערה 1-st , בשורה שבה רשום בהערה 2-nd ובשורה שבה רשום בהערה 3-rd"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף אחד משלושת המשפטים הקודמים אינו נכון."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "רק משפט ב נכון. כשמוחקים `virtual` רק מהמחלקה `Widget` (משפט א), הפונקציה כבר לא וירטואלית ומודפס `1 1 1`. כשמוחקים `virtual` משתי הנגזרות (משפט ב), הפונקציות עדיין דורסות את הפונקציה הווירטואלית של `Widget` (המילה `virtual` ביורשות אופציונלית), ולכן הפלט נשאר `1 2 3`. כשמוחקים מהשלוש (משפט ג) מתקבל `1 1 1`. בהרצה אישרנו את שלושת המקרים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ runs: original `1 2 3`; without virtual in the 1-st line `1 1 1`; without it in the 2-nd and 3-rd lines `1 2 3` (the overrides stay virtual); in all three `1 1 1`. Statement (b) holds.",
+   "correctId": "b"
+  },
+  {
+   "num": 8,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Base {\npublic:\n    virtual void f(int &a, int &b) {\n        a = b;\n        b = 10*a;\n   }\n};\n\nclass Derived : public Base {\npublic:\n    virtual void f(int &a, int &b) {\n        int temp = a;\n        a = b;\n        b = temp;\n    }\n};\n\nint main() {\n    int x = 10, y = 20;\n    Derived d;\n    d.f(x, y);\n    cout  << x << \" \"<< y << \" \";\n\n    Base *b = &d;\n    b->f(x, y);\n    cout  << x << \" \"<< y << endl;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "10 20 10 20"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "20 10 10 100"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "20 10 10 20"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "20 10 20 10"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`d.f(x,y)` קוראת ל-`Derived::f`, שמחליפה בין `x` ל-`y`: `20 10`. `b` מצביע לאובייקט `Derived`, ו-`f` וירטואלית, ולכן `b->f(x,y)` שוב נקראת ל-`Derived::f` ומחליפה שוב: `10 20`. הפלט `20 10 10 20` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ run: `20 10 10 20` (both calls reach Derived::f and swap).",
+   "correctId": "c"
+  },
+  {
+   "num": 9,
+   "topic": "inheritance_access",
+   "question": "להלן תיאור חלקי של מחלקות A ו- B והפונקציה main.\n```cpp\nclass B {\n   public:\n      static  void f() { ... }\n   ...\n};\n\nclass A : private B {\npublic:\n   ...\n};\n\nvoid main()\n{\n   ....\n}\n```\nאת המשפט A::f() ניתן לבצע:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מתוך הפונקציה main"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "מתוך כל מחלקה שהיא friend של A"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "מתוך כל מחלקה שיורשת את A"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`A` יורשת מ-`B` ירושה פרטית, ולכן `f` (החברה הציבורית של `B`) הופכת לפרטית ב-`A`. מותר לגשת אליה מתוך `A` ומתוך `friend` של `A`. אסור מ-`main` ואסור ממחלקה שיורשת מ-`A`. תשובה ב. בקומפילציה: מ-`main` ומנגזרת התקבלה שגיאה `'f' is a private member of 'B'`, ומ-`friend` הקוד עבר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ compile checks (f given an empty body): from main `'f' is a private member of 'B'`; from a class derived from A the same error; from a friend class of A it compiles.",
+   "correctId": "b"
+  },
+  {
+   "num": 10,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n   void show() { cout << \"A\"; }\n};\n\nclass B : public A {\npublic:\n   void show() { cout << \"B\"; }\n};\n\nint main() {\n   A b;\n   B d;\n   A *ptr = &d;\n   b.show();\n   ptr->show();\n   d.show();\n   ptr = &b;\n   ptr->show();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ABBA"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ABBB"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "AABA"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "BBBA"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`show` אינה וירטואלית, ולכן הקריאה נקבעת לפי טיפוס המצביע ולא לפי האובייקט. `b.show()` מדפיסה `A`. `ptr->show()` (מצביע ל-`A` לאובייקט `B`) מדפיסה `A`. `d.show()` מדפיסה `B`. אחרי `ptr = &b` מודפס `A`. הפלט `AABA` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ run: `AABA` (show is not virtual, so ptr->show() always calls A::show).",
+   "correctId": "c"
+  },
+  {
+   "num": 11,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n   A() { cout << \"A\"; }\n};\n\nclass B : public A {\npublic:\n   B() { cout << \"B\"; }\n};\n\nclass C : public B {\npublic:\n   C() { cout << \"C\"; }\n};\n\nA a;\n\nint main() {\n   C c;\n   static B b;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "CABABC"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "CBAABA"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "AABCAB"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "AABABC"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "האובייקט הגלובלי `a` נבנה לפני `main`: `A`. אחר כך `C c` בונה את השרשרת `A B C`. אחר כך `static B b` בונה `A B`. הפלט `AABCAB` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ run: `AABCAB` (the global a, then c = A B C, then the static b = A B).",
+   "correctId": "c"
+  },
+  {
+   "num": 12,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint main() {\n   vector<int> vec;\n\n   for (int i = 0; i < 5; ++i) {\n       vec[i] = i * 2;\n   }\n\n   for (int i = 1; i < vec.size()-1; ++i) {\n       cout << vec[i] << \" \";\n\n   }\n   cout << endl;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "2 4 6"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "0 2 3 4 6 8"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שגיאה בזמן ריצה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "הווקטור `vec` ריק, ולכן `vec[i] = i * 2` כותב לאזור זיכרון שלא הוקצה (ל-`vector` ריק אין מערך). זו התנהגות לא מוגדרת, ובהרצה התוכנית קורסת (תשובה ד, שגיאה בזמן ריצה). `operator[]` אינו מוסיף איברים, בניגוד ל-`push_back`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ run: the program crashes (exit code 0xC0000005): `vec[i] = ...` writes through the null buffer of an empty vector (formally undefined behaviour; the crash is what every implementation produces here).",
+   "correctId": "d"
+  },
+  {
+   "num": 13,
+   "topic": "templates",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\ntemplate <typename T, typename T2>\nT2 add(T a, T2 b, T c) {\n   return a + b - c;\n}\n\nint main() {\n   cout << add(3, 4.5, 7) << endl;\n   cout << add(3.5, 4.5, 3) << endl;\n   cout << add(3.5, 4.5, 9.5) << endl;\n   cout << add(3, 4.5, 3.5) << endl;\n\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ב-`add(T a, T2 b, T c)` הארגומנטים הראשון והשלישי חייבים להיות מאותו טיפוס. הקריאה השנייה `add(3.5, 4.5, 3)` מנסה `T=double` ו-`T=int`, והרביעית `add(3, 4.5, 3.5)` מנסה `T=int` ו-`T=double`. שתיהן נכשלות (`no matching function`). הראשונה והשלישית תקינות. שתי שגיאות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++: errors on the 2nd and 4th calls (`no matching function for call to 'add'`: T deduced as double and int from the first and third arguments).",
+   "correctId": "c"
+  },
+  {
+   "num": 14,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\ntemplate <typename T>\nclass MyClass {\n        T x;\npublic:\n        MyClass(T val) : x(val) {}\n        T getX() { return x; }\n        void setX(T val) { x = val; }\n};\n\nint main() {\n        MyClass<int> obj1(10);\n        MyClass<double> obj2(15.5);\n        cout << obj1.getX() << \" \" << obj2.getX() << \" \";\n        MyClass<char*> obj4(\"Hello!\");\n        cout << obj4.getX() << endl;\n\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "10 15.5 Hello!"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "10 15 Hello!"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1015.5 Hello!"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התוכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "explanation": "",
+   "note": "Official key: the red mark on the page-1 grid. The key d is the ISO C++11+ rule (a string literal does not convert to `char*`; `clang++ -Werror=writable-strings` rejects it), but clang++ -std=c++17 by default only warns and prints `10 15.5 Hello!`, and before C++11 the conversion was legal.",
+   "hold": "answer depends on the language standard/compiler mode: key d (ill-formed since C++11) vs clang++ default (warning only, prints 10 15.5 Hello!)"
+  },
+  {
+   "num": 15,
+   "topic": "abstract_multiple",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n        int a;\n        A(int a1 = 0) { a = a1; }\n};\nclass B : virtual public A {\npublic:\n        int b;\n        B(int b1 = 0) { b = b1; }\n};\nclass C : virtual public A {};\nclass D : public B, public C {};\n\nint main() {\n        D d1;\n        d1.a++;\n        d1.B::a++;\n        d1.C::a++;\n        cout << d1.a << d1.B::a << d1.C::a;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "333"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "311"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "111"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ב-`B` וב-`C` יש ירושה וירטואלית מ-`A`, ולכן ב-`D` יש עותק יחיד של `A::a`. `d1.a`, `d1.B::a` ו-`d1.C::a` הם אותו שדה, ושלוש ההגדלות מעלות אותו מ-0 ל-3. מודפס `3` שלוש פעמים: `333` (תשובה א), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++ run: `333` (virtual inheritance: one shared A::a, incremented three times).",
+   "correctId": "a"
+  },
+  {
+   "num": 16,
+   "topic": "inheritance_access",
+   "question": "כמה מהמשפטים הבאים נכונים:\n1. המוטיבציה לשימוש בהורשה היא שימוש חוזר בקוד (code reuse)\n2. המוטיבציה לשימוש בהורשה היא הכמסה (encapsulation)\n3. נניח שקיים יחס isA בין מחלקה A למחלקה B, כך שאובייקט של מחלקה A הוא גם אובייקט של מחלקה B, אזי בתכנות מונחה עצמים רצוי שמחלקה B תירש ממחלקה A.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "משפט 1 נכון: המוטיבציה להורשה היא שימוש חוזר בקוד. משפט 2 שגוי: הכמסה היא עיקרון נפרד. משפט 3 שגוי: הכיוון הפוך. אם כל אובייקט `A` הוא גם אובייקט `B`, אז `A` צריכה לרשת מ-`B` ולא להפך. משפט אחד נכון (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. Concept question (no code). Only statement 1 is true; in statement 3 the direction is reversed (if every A is a B, A should inherit from B). The numbering 1-3 is added (the paper lists א-ג).",
+   "correctId": "b"
+  },
+  {
+   "num": 17,
+   "topic": "abstract_multiple",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n        int a;\n        A(int a1 = 0) { cout << \"A\"; a = a1; }\n        virtual ~A()=0;\n};\n\nclass B : public A {\npublic:\n        int b;\n        B(int b1 = 0) { cout << \"B\"; b = b1; }\n};\n\nint main(){\n        B b1;\n        B* bP = new B;\n        B b2 = *bP;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ABAB"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "BABA"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "BABABA"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "`A` מכילה הורס וירטואלי טהור `virtual ~A()=0` בלי גוף. כל הורס של נגזרת קורא להורס של הבסיס, ולכן חייבת להיות הגדרה ל-`~A`. בלעדיה הקוד מתקמפל אבל הקישור (linker) נכשל (`undefined symbol`), ולכן אין תכנית להריץ (תשובה ד). אילו הייתה הגדרה, היה מודפס `ABAB`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key: the red mark on the page-1 grid. clang++: the translation unit compiles but the build fails at link time (`~A()` is pure virtual and never defined, but B's destructor calls it), so no program is produced. With a body for ~A it would print `ABAB` (the examinee's pencil answer a).",
+   "correctId": "d"
+  }
+ ]
+}

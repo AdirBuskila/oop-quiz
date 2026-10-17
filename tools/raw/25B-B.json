@@ -1,0 +1,592 @@
+{
+ "examCode": "25B-B",
+ "examLabel": "2025 סמסטר ב מועד ב",
+ "year": 2025,
+ "examDate": "19.08.2025",
+ "sourceFile": "2025/סמ׳ ב מועד ב + פתרון.pdf",
+ "keyFile": "same file: graded copy (grader marks on the page-1 grid), cross-checked by clang++ runs (tools/verify/25B-B/)",
+ "contexts": {
+  "notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`.\nבכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט `#include` בתחילת קטע הקוד/התכנית.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```\nבכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-`#include` הנדרשים להרצת קטע הקוד."
+  }
+ },
+ "questions": [
+  {
+   "num": 1,
+   "topic": "const_references",
+   "question": "מה יקרה אם יסירו את ההערה // שמופיעה בתחילת השורה המסומנת כשורה X (Line X) בתכנית הבאה:\n```cpp\nclass Matrix {\nprivate:\n   int data[2][2];\n\npublic:\n   Matrix() { data[0][0] = 1; data[0][1] = 2; data[1][0] = 3; data[1][1] = 4; }\n\n   int getValue(int row, int col) const {\n      return data[row][col];\n   }\n\n   int& getValue(int row, int col) {\n      return data[row][col];\n   }\n\n   void print() const {\n      cout << data[0][0] << \" \" << data[0][1] << endl;\n      cout << data[1][0] << \" \" << data[1][1] << endl;\n   }\n};\n\nint main() {\n   const Matrix m1;\n   Matrix m2;\n   int a = m1.getValue(1, 1);\n   m2.getValue(0, 0) = 99;\n   m2.print();\n   // m1.getValue(0,0) = 5;   // Line X\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית תתקמפל ותרוץ ללא שגיאות"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התכנית לא תעבור קומפילציה בגלל שהקריאה לפונקציה getValue היא דו משמעית (ambiguous)."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא תעבור קומפילציה מסיבה שונה מהסיבה שצוינה בסעיף ג."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "לאובייקט `const` נבחרת רק הגרסה ה-`const` של `getValue`, והיא מחזירה `int` לפי ערך (ערך זמני). ניסיון להשמה לערך זמני כזה הוא שגיאת קומפילציה (`expression is not assignable`). אין עמימות בין שתי הגרסאות, כי ה-`const` הוא חלק מחתימת הפונקציה, ולכן תשובה ג שגויה. השגיאה קיימת אבל מסיבה אחרת, כלומר תשובה ד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++: with the comment removed there is exactly one error, `expression is not assignable`: the const object picks the const overload, which returns an int rvalue (no ambiguity). Grader tick agrees.",
+   "correctId": "d"
+  },
+  {
+   "num": 2,
+   "topic": "friend_this_static",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Counter;\n\nclass Box {\nprivate:\n   int length;\npublic:\n   Box(int l = 0) : length(l){}\n   friend Box operator+(const Box& b, const Counter& c);\n   void print() const {\n      cout << \"Length: \" << length << endl;\n   }\n};\n\nclass Counter {\nprivate:\n   int count;\npublic:\n   Counter(int c = 0) : count(c){}\n   friend Box operator+(const Box& b, const Counter& c);\n};\n\nBox operator+(const Box& b, const Counter& c) {\n   return Box(b.length + c.count);\n}\n\nint main() {\n   Box b1(10);\n   Counter c1(5);\n   Box b2 = b1 + c1;\n   b2.print();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "Length: 15"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "Length: 10"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`operator+` מוגדרת כ-`friend` בשתי המחלקות, ולכן יש לה גישה לשדות הפרטיים `length` ו-`count`. החישוב הוא `10 + 5`, והפלט `Length: 15` (תשובה א). בקוד שהורץ התקבל בדיוק הפלט הזה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: `Length: 15`. The friend function reads the private fields of both classes.",
+   "correctId": "a"
+  },
+  {
+   "num": 3,
+   "topic": "friend_this_static",
+   "question": "מה יודפס בשורה האחרונה של הפלט של התכנית הבאה:\n```cpp\nclass Counter {\nprivate:\n   static int count;\n   int id;\n\npublic:\n   Counter() {\n      id = ++count;\n   }\n\n   static int getCount() {\n      return count;\n   }\n\n   void print() const {\n      cout << \"Object ID: \" << id << \", Current Count: \" << count << endl;\n   }\n};\n\nint Counter::count = 0;\n\nint main() {\n   Counter c1;\n   Counter c2;\n   c1.print();\n   c2.print();\n   cout << \"Total created: \" << Counter::getCount() << endl;\n\n   Counter* c3 = new Counter();\n   delete c3;\n\n   cout << \"After delete, count is: \" << Counter::getCount() << endl;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "After delete, count is: 2"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "After delete, count is: 3"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`count` הוא משתנה סטטי משותף לכל האובייקטים: `c1` ו-`c2` מעלים אותו ל-2, ו-`c3` ל-3. ההורס של `Counter` לא מוגדר ולכן לא מקטין את `count`, ולכן אחרי `delete c3` הערך נשאר 3 (תשובה ב). בהרצה: `After delete, count is: 3`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: last line `After delete, count is: 3` (nothing decrements the static counter on delete).",
+   "correctId": "b"
+  },
+  {
+   "num": 4,
+   "topic": "operator_overloading",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Number {\nprivate:\n   int value;\npublic:\n   Number(int v = 0) : value(v) {}\n   Number& operator+=(const Number& other) {\n      value += other.value;\n      return *this;\n   }\n   Number& operator++() {\n      ++value;\n      return *this;\n   }\n   Number operator++(int) {\n      Number temp = *this;\n      value++;\n      return temp;\n   }\n   void print() const {\n      cout << \"Value: \" << value << endl;\n   }\n};\n\nint main() {\n   Number a(5), b(3);\n   (++a += b++)++;\n   a.print();\n   b.print();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "Value: 10\nValue: 4"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "Value:9\nValue: 4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "Value:9\nValue:3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`++a` מעלה את `a` ל-6 ומחזירה הפניה אליו. `b++` מחזיר עותק של הערך הישן 3, ו-`b` הופך ל-4. `+=` מוסיף 3 ל-`a` (9) ומחזיר הפניה אל `a`. האופרטור הפוסטפיקסי האחרון `++` מעלה את `a` ל-10. הפלט `Value: 10` ו-`Value: 4` (תשובה א), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: `Value: 10` / `Value: 4`. ++a gives 6, b++ yields a copy of 3 (b becomes 4), += gives 9, the outer postfix ++ makes a 10.",
+   "correctId": "a"
+  },
+  {
+   "num": 5,
+   "topic": "copy_control",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Sample {\nprivate:\n   int* arr;\n   int size;\npublic:\n   Sample(int s) : size(s) {\n      arr = new int[size];\n      for (int i = 0; i < size; ++i) arr[i] = i * 10;\n   }\n   Sample(const Sample& other) {\n      arr = other.arr;\n      size = other.size;\n   }\n   void modify(int index, int value) {\n      if (index >= 0 && index < size) arr[index] = value;\n   }\n   void print() const {\n      for (int i = 0; i < size; ++i)\n         cout << arr[i] << \" \";\n      cout << endl;\n   }\n   ~Sample() {\n      delete[] arr;\n   }\n};\n\nint main() {\n   Sample a(3);\n   Sample b = a;\n\n   b.modify(0, 999);\n   a.print();\n   b.print();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0 10 20\n999 10 20"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "999 10 20\n999 10 20"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "explanation": "",
+   "note": "clang++ run: prints `999 10 20` twice, then the process dies in the double `delete[]` (exit code 0xC0000374, heap corruption, at -O0 and -O2). The grader circled c, but whether the double delete is reported is implementation-dependent, so b vs c is not decidable by the language alone.",
+   "hold": "double delete[] at exit is undefined behaviour: b (output only) vs c (runtime error) depends on the implementation"
+  },
+  {
+   "num": 6,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <vector>\n\nint main() {\n   vector<double> values;\n   vector<double>::reverse_iterator rit;\n   values.push_back(1.1);\n   values.push_back(2.2);\n   values.push_back(3.3);\n   values.insert(values.begin(), 0.0);\n   values.erase(values.begin() + 1);\n   if (!values.empty())\n      values[values.size() - 1] = 9.9;\n\n   for (rit = values.rbegin(); rit != values.rend(); ++rit)\n      cout << *rit << \" \";\n   cout << endl;\n\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "9.9 3.3 2.2"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "9.9 2.2 0"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3.3 2.2 1.1"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הווקטור משתנה כך: `1.1 2.2 3.3`, אחרי `insert` בתחילה `0 1.1 2.2 3.3`, אחרי `erase` של האיבר השני `0 2.2 3.3`, ואחרי ההשמה לאיבר האחרון `0 2.2 9.9`. הלולאה עוברת באיטרטור הפוך ולכן מדפיסה `9.9 2.2 0` (תשובה ב). בהרצה: `9.9 2.2 0`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: `9.9 2.2 0`. The vector goes 1.1 2.2 3.3 -> 0 1.1 2.2 3.3 -> 0 2.2 3.3 -> 0 2.2 9.9, printed in reverse. Grader tick agrees.",
+   "correctId": "b"
+  },
+  {
+   "num": 7,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\ntemplate <typename T>\nclass MyCollection {\nprivate:\n   T* data;\n   int capacity;\n   int size;\npublic:\n   MyCollection(int cap = 10) : capacity(cap), size(0) { data = new T[capacity]; }\n   void push_back(const T& val) {\n      if (size >= capacity) return;\n      data[size++] = val;\n   }\n   T& operator[](int index) { return data[index]; }\n   ~MyCollection() {\n      delete[] data;\n   }\n   MyCollection(const MyCollection& other) {\n      capacity = other.capacity;\n      size = other.size;\n      data = new T[capacity];\n      for (int i = 0; i < size; ++i)\n         data[i] = other.data[i];\n   }\n};\nclass SomeClass {\n   int val;\npublic:\n   SomeClass(int v) : val(v) {}\n   void print() const { cout << val << endl; }\n};\nint main() {\n   MyCollection<SomeClass> v1(3);\n   v1.push_back(SomeClass(1));\n   v1.push_back(SomeClass(2));\n   MyCollection<SomeClass> v2 = v1;\n\n   v2[0].print();\n   v2[1].print();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1\n2"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ערך כלשהו (זבל)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ב-`MyCollection<SomeClass>` הבנאי מבצע `new T[capacity]`, וזה דורש בנאי ברירת מחדל של `T`. ל-`SomeClass` יש רק בנאי שמקבל `int`, ולכן הקומפיילר מדווח שגיאה (`no matching constructor`). התכנית אינה מתקמפלת (תשובה ד), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++: no matching constructor for `new T[capacity]` with T=SomeClass (SomeClass has no default constructor), reported at both `new T[...]` lines. Grader circled d.",
+   "correctId": "d"
+  },
+  {
+   "num": 8,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Base {\npublic:\n   Base() { cout << \"Base constructor\\n\"; }\n   ~Base() { cout << \"Base destructor\\n\"; }\n   void print() { cout << \"Base::print\\n\"; }\n};\nclass Derived : public Base {\npublic:\n   Derived() { cout << \"Derived constructor\\n\"; }\n   ~Derived() { cout << \"Derived destructor\\n\"; }\n   void print() { cout << \"Derived::print\\n\"; }\n};\nvoid callPrint(Base &b) {\n   b.print();\n}\nint main() {\n   Derived d;\n   callPrint(d);\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "Base constructor\nDerived constructor\nDerived::print\nDerived destructor\nBase destructor"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "Base constructor\nDerived constructor\nBase::print\nBase destructor\nDerived destructor\nBase destructor"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "Base constructor\nDerived constructor\nBase::print\nBase destructor"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "Base constructor\nDerived constructor\nBase::print\nDerived destructor\nBase destructor"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`print` ב-`Base` אינה וירטואלית, ולכן הקריאה `b.print()` דרך הפניה ל-`Base` מפעילה תמיד את `Base::print` (קישור סטטי). הבנייה היא בסדר `Base` ואז `Derived`, וההריסה בסדר הפוך: `Derived` ואז `Base`. תשובה ד, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: Base constructor, Derived constructor, Base::print (print is not virtual), Derived destructor, Base destructor. Grader circled d.",
+   "correctId": "d"
+  },
+  {
+   "num": 9,
+   "topic": "abstract_multiple",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n   A() { cout << \"A constructor\\n\"; }\n   virtual ~A() { cout << \"A destructor\\n\"; }\n   virtual void speak() const { cout << \"A speaks\\n\"; }\n};\nclass B : virtual public A {\npublic:\n   B() { cout << \"B constructor\\n\"; }\n   ~B() { cout << \"B destructor\\n\"; }\n   void speak() const { cout << \"B speaks\\n\"; }\n};\nclass C : virtual public A {\npublic:\n   C() { cout << \"C constructor\\n\"; }\n   ~C() { cout << \"C destructor\\n\"; }\n   void speak() const { cout << \"C speaks\\n\"; }\n};\nclass D : public B, public C {\npublic:\n   D() { cout << \"D constructor\\n\"; }\n   ~D() { cout << \"D destructor\\n\"; }\n   void speak() const { cout << \"D speaks\\n\"; }\n};\nint main() {\n   A* a = new D();\n   a->speak();\n   delete a;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "A constructor\nB constructor\nC constructor\nD constructor\nD speaks\nD destructor\nC destructor\nB destructor\nA destructor"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "A constructor\nB constructor\nC constructor\nD constructor\nA speaks\nD destructor\nC destructor\nB destructor\nA destructor"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "A constructor\nB constructor\nC constructor\nD constructor\nD speaks\nB destructor\nC destructor\nA destructor"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "הבסיס הווירטואלי `A` נבנה פעם אחת ולפני כולם: `A`, ואחריו `B`, `C`, `D`. `speak` וירטואלית ולכן הקריאה דרך `A*` מפעילה את `D::speak` (ל-`D` יש דריסה, מה שפותר את העמימות בין `B` ל-`C`). `A` יש הורס וירטואלי, ולכן `delete a` מפעיל את שרשרת ההריסה המלאה בסדר הפוך: `D C B A`. תשובה א, וכך גם בהרצה. בקוד המודפס יש גרש במקום מירכאות ב-`C::speak`, וזו נראית טעות דפוס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run (typo corrected): the virtual base A is built once and first, then B, C, D; destruction is the exact reverse. The printed paper has `\"C speaks\\n'  }` (a stray apostrophe and no semicolon) in C::speak, read as a typo; the grader ticked a.",
+   "correctId": "a"
+  },
+  {
+   "num": 10,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\ntemplate<typename T>\nvoid func(T a) {\n   cout << \"Generic template\\n\";\n}\n\nvoid func(int a) {\n   cout << \"Non-template overload\\n\";\n}\n\nint main() {\n   func(3.14);\n   func(int(3.14));\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "Generic template\nGeneric template"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "Generic template\nNon-template overload"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בקריאה `func(3.14)` הארגומנט הוא `double`, והתבנית מתאימה בדיוק עם `T=double`, ולכן היא עדיפה על ההמרה ל-`int`. ב-`func(int(3.14))` הארגומנט הוא `int`, ושתי הפונקציות מתאימות בדיוק, ופונקציה רגילה עדיפה על תבנית. הפלט `Generic template` ואחריו `Non-template overload` (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: `Generic template` then `Non-template overload`. func(3.14) deduces T=double (exact match beats the int conversion); func(int(...)) prefers the non-template.",
+   "correctId": "b"
+  },
+  {
+   "num": 11,
+   "topic": "virtual_polymorphism",
+   "question": "מה קורה כאשר קוראים לפונקציה לא ויטואלית דרך מצביע למחלקה בסיסית (base class pointer)?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "יהיה שימוש במימוש של הפונקציה במחלקה הנגזרת (derived class)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "יהיה שימוש במימוש של הפונקציה במחלקה הבסיסית (base class)."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תקרה שגיאת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "פונקציה לא וירטואלית נקבעת בזמן קומפילציה לפי טיפוס המצביע, כלומר המחלקה הבסיסית. לכן יופעל המימוש של המחלקה הבסיסית (תשובה ב), גם אם המצביע מצביע בפועל על אובייקט נגזר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Concept question. Key from the grader's tick (b); static binding.",
+   "correctId": "b"
+  },
+  {
+   "num": 12,
+   "topic": "abstract_multiple",
+   "question": "כמה מהמשפטים הבאים נכונים:\n1. ב ++C אם למחלקה מסוימת יש פונקציה וירטואלית טהורה, אז אסור לממש אותה במחלקה זו.\n2. ב ++C אם למחלקה מסוימת יש פונקציה וירטואלית טהורה, אז במחלקה שיורשת ממנה באופן ישיר חייב להיות מימוש לפונקציה הזאת.\n3. ב ++C הבנאי (constructor) של מחלקה לא יכול להיות פונקציה וירטואלית טהורה.\n4. ב ++C ההורס (destructor) של מחלקה לא יכול להיות פונקציה וירטואלית טהורה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "רק משפט 3 נכון. משפט 1 שגוי: לפונקציה וירטואלית טהורה אפשר לתת גוף מחוץ למחלקה. משפט 2 שגוי: המחלקה היורשת יכולה להישאר אבסטרקטית ולא לממש. משפט 3 נכון: בנאי אינו יכול להיות וירטואלי בכלל. משפט 4 שגוי: הורס יכול להיות וירטואלי טהור, ובלבד שמוגדר לו גוף. סך הכול משפט אחד (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Concept question. Key from the grader's circle (b = 1 true statement): only statement 3 is true (a pure virtual may have a body, a derived class may stay abstract, a destructor can be pure virtual if defined). The numbering 1-4 is added; the paper uses bullets.",
+   "correctId": "b"
+  },
+  {
+   "num": 13,
+   "topic": "abstract_multiple",
+   "question": "בהורשה מרובה ב ++C איזו בעיה פותר המנגנון של הורשה וירטואלית?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "בעית הסתרת פונקציות (Function hiding problem)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בעית היהלום/מעוין (Diamond problem)."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בעית פיצול הזכרון (Memory fragmentation problem)."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בעית התנגשות שמות במרחב השמות (Name conflicts in Namespace problem)."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "כשמחלקה יורשת פעמיים מאותו בסיס דרך שתי מחלקות ביניים נוצרים בה שני עותקים של הבסיס (בעיית היהלום). ירושה וירטואלית מבטיחה עותק אחד משותף. תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Concept question. Key from the grader's tick (b).",
+   "correctId": "b"
+  },
+  {
+   "num": 14,
+   "topic": "virtual_polymorphism",
+   "question": "איזה מנגנון ב ++C מאפשר קישור למטודות בזמן ריצה (runtime method binding)?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "תבניות (Templates)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פונקציות inline."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציות וירטואליות."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "פונקציות friend."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "קישור מתודות בזמן ריצה (דינמי) מתבצע באמצעות פונקציות וירטואליות. תבניות ו-`inline` נפתרות בזמן קומפילציה, ו-`friend` קשור להרשאות גישה בלבד. תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Concept question. Key from the grader's circle (c).",
+   "correctId": "c"
+  },
+  {
+   "num": 15,
+   "topic": "operator_overloading",
+   "question": "איזו פקודה צריכה להחליף את שורת ההערה שמסומנת ב *** בתכנית הבאה על מנת שהפלט של התכנית יהיה 1 ?\n```cpp\nstruct A\n{\n   int value;\n   A(int x) : value(x) {}\n   int operator+(const A& a) { return -a.value; }\n   int operator+(int x) { return 2 * x; }\n   friend ostream& operator<< (ostream& os, const A& a);\n};\n\nostream& operator<< (ostream& os, const A& a) {\n   return os << a.value;\n}\n\nint operator+(const A& a) {\n   static int counter = 1;\n   return ++counter + a.value;\n}\n\nint main()\n{\n   A a1(4), a2(-1);\n   //*********\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "cout<<a2+a1;"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "cout<<+a2;"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "cout<<a1 + -3;"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפלט צריך להיות 1. `cout<<a2+a1` מפעיל את `operator+` החבר ומדפיס `-4`. `cout<<+a2` מפעיל את `operator+` האונרי הגלובלי: `++counter` נותן 2 ועם `a.value` שהוא -1 מתקבל 1. `cout<<a1 + -3` מפעיל את `operator+(int)` ונותן `-6`. תשובה ב, וכך גם בהרצות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ runs: `a2+a1` prints -4, `+a2` prints 1 (global unary +: ++counter=2 plus -1), `a1 + -3` prints -6. Grader tick agrees.",
+   "correctId": "b"
+  },
+  {
+   "num": 16,
+   "topic": "copy_control",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n   int x;\n   A(int x = 2) { this->x = x; }\n   A(A other) { this->x = other.x; }\n};\n\nvoid f(A obj1, A obj2)\n{\n   cout << obj1.x << obj2.x;\n}\n\nint main()\n{\n   A a1;\n   A a2(a1);\n   A a3;\n   A a4(a3);\n   f(a2, a4);\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "22"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ערך כלשהו (זבל)."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הבנאי `A(A other)` מקבל את הארגומנט לפי ערך, וזה אסור: קבלת פרמטר מסוג המחלקה עצמה בבנאי העתקה הייתה גורמת לרקורסיה אינסופית, ולכן הקומפיילר דוחה זאת (`copy constructor must pass its first argument by reference`). התכנית אינה מתקמפלת (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++: error `copy constructor must pass its first argument by reference` (ill-formed in the standard). The grader marked the examinee's a wrong and circled d.",
+   "correctId": "d"
+  },
+  {
+   "num": 17,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint& DoChange(int num)\n{\n   return num;\n}\n\nint main()\n{\n   int i = 10;\n   DoChange(i) = 7;\n   cout << i << endl;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "7"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "10"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "ערך כלשהו (זבל)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "`num` מועבר לפי ערך, ולכן ההפניה שמוחזרת מצביעה על העותק המקומי של הפונקציה ולא על `i`. ההשמה `= 7` לא משנה את `i`, והוא נשאר 10 (תשובה ב). בהרצה (גם עם אופטימיזציה) מודפס `10`. ההפניה תלויה (dangling), וזו סיבה שהתשובה נשארת ברמת ביטחון בינונית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run (-O0 and -O2): 10. The parameter is passed by value, so the returned reference never aliases i (it dangles into the callee's copy; i itself is never written). Grader tick agrees.",
+   "correctId": "b"
+  }
+ ]
+}

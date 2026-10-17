@@ -1,0 +1,589 @@
+{
+ "examCode": "24B-A",
+ "examLabel": "2024 סמסטר ב מועד א",
+ "year": 2024,
+ "examDate": "25.07.2024",
+ "sourceFile": "2024/סמ׳ ב מועד א + פתרון_.pdf",
+ "keyFile": "same file: graded student copy (full marks); cross-checked by clang++ runs (tools/verify/24B-A/)",
+ "contexts": {
+  "notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`.\nבכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט `#include` בתחילת קטע הקוד/התכנית.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```\nבכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-`#include` הנדרשים להרצת קטע הקוד."
+  }
+ },
+ "questions": [
+  {
+   "num": 1,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B {\npublic:\n        virtual void f() { cout << \"A\"; }\n};\nclass A : public B {\n        void f() { cout << \"B\"; }\n};\nint main()\n{\n        A a1;\n        B b1;\n        B& c1 = b1;\n        B& d1 = a1;\n        B* e1 = &c1;\n        B* f1 = &d1;\n        c1.f(); d1.f(); e1->f(); f1->f();\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "BBBB"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "ABAB"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "BBAB"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f` וירטואלית ב-`B`, ו-`A::f` דורסת אותה (גם כשהיא `private`, הגישה נבדקת לפי הטיפוס הסטטי `B`). `c1` ו-`e1` מצביעים על `b1` (`B`) ולכן מדפיסים `A`, ו-`d1` ו-`f1` מצביעים על `a1` (`A`) ולכן מדפיסים `B`. הפלט `ABAB` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `ABAB` (A::f is private but overrides the virtual B::f; the calls go through B references/pointers).",
+   "correctId": "c"
+  },
+  {
+   "num": 2,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\n        int x;\npublic:\n        A(int i = 0) { x = i; }\n};\nclass B : private A {\n        int y;\npublic:\n        B(int i = 0, int j = 0) {\n                x = i;\n                y = j;\n        }\n};\nclass C : public B {\n        int z;\npublic:\n        C(int i = 0, int j = 0, int k = 0) {\n                z = i;\n                y = j;\n                x = k;\n        }\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`B` יורשת פרטית מ-`A`, ולכן `x` (פרטי ב-`A`) אינו נגיש ב-`B`: השורה `x = i` שגויה. `C` יורשת מ-`B`, ולכן `y` (פרטי ב-`B`) ו-`x` אינם נגישים בה: `y = j` ו-`x = k` שגויות. שלוש שורות שגויות, כלומר יותר מ-2 (תשובה ד), וכך גם בקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: 3 error lines (`x = i` in B: x is private in A; `y = j` and `x = k` in C: y is private in B and x is not accessible).",
+   "correctId": "d"
+  },
+  {
+   "num": 3,
+   "topic": "const_references",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\n        int x;\npublic:\n        int f(int i) { return i + x; }\n        int& g() { return x; }\n        const int& h(int i) { return x+i; }\n};\nint main() {\n        A a1;\n        a1.g() = 5;\n        a1.h(3)= 6;\n        cout << a1.f(3) + a1.h(3);\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`g()` מחזירה הפניה לא-קבועה, ולכן `a1.g() = 5` תקינה. `h()` מחזירה `const int&`, ולכן `a1.h(3) = 6` שגויה: אי אפשר להשים להפניה קבועה. זו שורה שגויה אחת (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: 1 error line, `a1.h(3) = 6` (assignment through a const reference).",
+   "correctId": "b"
+  },
+  {
+   "num": 4,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint& f(int i) {\n        static int x = i;\n        x++;\n        return x;\n}\n\nint main() {\n        cout << f(5);\n        cout << f(5)++;\n        f(3) = 4;\n        cout << f(3);\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "654"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "563"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "564"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "675"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`static int x = i` מאותחל פעם אחת בלבד, בקריאה הראשונה, ל-5. הקריאה הראשונה מעלה ל-6 ומדפיסה `6`. השנייה מעלה ל-7, ו-`f(5)++` מדפיסה את הערך `7` לפני ההגדלה ל-8 (ההפניה מחזירה את `x` עצמו). אחר כך `f(3) = 4` מציבה 4 ב-`x`, והקריאה האחרונה מעלה ל-5 ומדפיסה `5`. הפלט `675` (תשובה ד), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `675` (the static x is initialized once to 5; f returns a reference to it, so f(3)=4 sets it to 4 and the last call gives 5).",
+   "correctId": "d"
+  },
+  {
+   "num": 5,
+   "topic": "operator_conversions",
+   "question": "כמה מהמשפטים הבאים נכונים:\n1. בהגדרה של מחלקה A ניתן להגדיר המרה מאוביקט של מחלקה B לאוביקט של מחלקה A וגם (בהגדרה של אותה מחלקה A) ניתן להגדיר המרה מאוביקט של מחלקה A לאוביקט של מחלקה B.\n2. אם בהגדרה של מחלקה A מוגדרת המרה של אוביקט של מחלקה A לאוביקט של מחלקה B אזי הגדרה של המרה של אוביקט של מחלקה B לאוביקט של מחלקה A חיבת להיות בהגדרת מחלקה B.\n3. אם בהגדרה של מחלקה A מוגדרת המרה של אוביקט של מחלקה A לאוביקט של מחלקה B אזי לא ניתן להגדיר המרה של אוביקט של מחלקה B לאוביקט של מחלקה A.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "רק משפט 1 נכון. בתוך `A` אפשר להגדיר גם בנאי המרה מ-`B` ל-`A` וגם אופרטור המרה `operator B()` מ-`A` ל-`B`. משפט 2 שגוי: מספיק שהמרה אחת מוגדרת במקום אחד. משפט 3 שגוי: אפשר להגדיר גם את ההמרה ההפוכה. תשובה ב. בדקנו בקומפילציה את כל המקרים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ compile checks: a conversion constructor A(const B&) plus `operator B()` in A compile together (1 true); `operator B()` in A alone is enough (2 false); both directions can be defined at once (3 false). The numbering 1-3 is added (the paper lists א-ג).",
+   "correctId": "b"
+  },
+  {
+   "num": 6,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\n        int x;\npublic:\n        A() {\n                cout << \"A\"; x = 0;\n        }\n        ~A() { cout << \"~A\"; }\n};\nclass B {\npublic:\n        B() { cout << \"B\"; }\n        ~B() { cout << \"~B\"; }\n};\nclass C : public A, public B {\npublic:\n        int y;\n        B b1;\n        A a1;\n        C() { cout << \"C\"; y = 0; }\n        ~C() { cout << \"~C\"; }\n};\nint main() {\n        C c1;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "BABAC~C~A~B~A~B"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ABBAC~C~A~B~B~A"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "BABAC~C~A~B~B~A"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הסדר בבנייה: קודם הבסיסים לפי סדר הרישום, `A` ואז `B`, אחר כך החברים לפי סדר ההצהרה, `b1` ואז `a1`, ולבסוף גוף הבנאי `C`. הפלט `ABBAC`. ההריסה בסדר הפוך: `~C`, אחר כך החברים `~A` (`a1`) ו-`~B` (`b1`), ואז הבסיסים `~B` ו-`~A`: `~C~A~B~B~A`. תשובה ב, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `ABBAC~C~A~B~B~A` (bases A then B, then members b1 then a1, then the body; destruction in exact reverse).",
+   "correctId": "b"
+  },
+  {
+   "num": 7,
+   "topic": "abstract_multiple",
+   "question": "כמה מהמשפטים הבאים נכונים:\n1. למחלקה אבסטרקטית חייבת להיות לפחות פונקציה אחת וירטואלית טהורה (pure virtual).\n2. למחלקה אבסטרקטית חייבת להיות לפחות פונקציה אחת שלא הוגדר לה מימוש.\n3. מחלקה שיורשת ממחלקה אבסטרקטית ולא מממשת את כל הפונקציות אותן היא יורשת היא בהכרח מחלקה אבסטרקטית.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "explanation": "",
+   "note": "The graded copy circles b (1 true statement). By the language rules statements 1 and 3 are true (2 is false: a pure virtual function may have a body), which would make c; the held entry asks which reading the exam intends. clang++ confirms that a pure virtual with a body compiles and that a derived class missing one override cannot be instantiated.",
+   "hold": "graded key (b: one true statement) disagrees with the language rules (statements 1 and 3 are both true, giving c)"
+  },
+  {
+   "num": 8,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass B {\npublic:\n        int x;\n        B(int x=0) { this->x = x; }\n};\nclass A : public B {\npublic:\n        int y;\n        A(int y) { this->y = y; }\n};\n\nint main() {\n        A a1(4);\n        A a2(5);\n        B b1;\n        A* p1=&b1;\n        B* q1=&a1;\n        A* p2 = &a1;\n        B* q2 = &a2;\n        p2 = q2;\n        q2 = p2;\n        p2 = (A*)q2;\n        p2->y = 9;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההמרה מנגזרת לבסיס (`B* q1 = &a1`) תקינה. ההמרה מבסיס לנגזרת אסורה בלי המרה מפורשת: `A* p1 = &b1` שגויה, וגם `p2 = q2` שגויה. `q2 = p2` תקינה, ו-`p2 = (A*)q2` תקינה (המרה מפורשת). שתי שורות שגויות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: 2 error lines, `A* p1=&b1;` and `p2 = q2;` (no implicit base-to-derived pointer conversion); the explicit cast is fine.",
+   "correctId": "c"
+  },
+  {
+   "num": 9,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\ntemplate <class T>\nclass A {\npublic:\n        T z;\n        T f(T y) { return y + z; }\n        A(T z) { this->z = z; }\n};\nclass B {\npublic:\n        int x;\n        B(int i = 0) { x = i; }\n        B operator+(B b) {\n                B bb;\n                bb.x = x + b.x+1;\n                return bb;\n        }\n};\nint main() {\n        B b1, b2(3);\n        A<int> a1(10);\n        cout << a1.f(11);\n        A<B> a2(b1);\n        cout << a2.f(b2).x;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "214"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "103"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "213"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`a1.f(11)` מחזירה `11 + 10 = 21`. עבור `A<B>` הפעולה `y + z` קוראת ל-`B::operator+`, שמחשבת `3 + 0 + 1 = 4`. הפלט `21` ואחריו `4`, כלומר `214` (תשובה א), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `214` (21, then B(3)+B(0)+1 = 4).",
+   "correctId": "a"
+  },
+  {
+   "num": 10,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint main() {\n        int temp,n=6;\n        vector<int> the_vector;\n        vector<int>::iterator the_iterator;\n        vector<int>::reverse_iterator rev_iterator;\n        for (int i = 0; i < n; i++)\n                the_vector.push_back(i);\n        the_iterator = the_vector.begin();\n        rev_iterator = the_vector.rbegin();\n        for(int i=0;i<n/2;i++){\n                temp = *the_iterator;\n                *the_iterator = *rev_iterator;\n                *rev_iterator = temp;\n                the_iterator++;\n                rev_iterator++;\n        }\n        the_iterator = the_vector.begin();\n        while (the_iterator < the_vector.end()) {\n                cout << *the_iterator++;\n        }\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "012345"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "345345"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "543210"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "012012"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הלולאה מחליפה בין האיטרטור הרגיל לאיטרטור ההפוך שלוש פעמים (n/2), כלומר מהפכת את הווקטור: `5 4 3 2 1 0`. ההדפסה היא `543210` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `543210` (the first half is swapped with the second half, i.e. the vector is reversed).",
+   "correctId": "c"
+  },
+  {
+   "num": 11,
+   "topic": "templates",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\ntemplate <class T> T F1(T a, T b) {\n        if (a > b)\n                return a;\n        else\n                return b;\n}\n\nint main() {\n        char   c1 = 'Z', c2 = 'g';\n        int    n1 = 18, n2 = 72;\n        long   n3 = 5000;\n        float  n4 = 25.4, n5 = 6.78;\n\n        cout << F1(c1, c2) << endl;\n        cout << F1(n1, n2) << endl;\n        cout << F1(c1, n1) << endl;\n        cout << F1(n2, n3) << endl;\n        cout << F1(n3, n4) << endl;\n        cout << F1(n4, n5) << endl;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בתבנית `F1(T a, T b)` שני הארגומנטים חייבים להיות מאותו טיפוס. הקריאות עם `char` ו-`int`, עם `int` ו-`long`, ועם `long` ו-`float` מסיקות שני טיפוסים שונים ל-`T` ונכשלות. שלוש הקריאות הללו שגויות, כלומר יותר מ-2 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: 3 error lines (F1(c1,n1), F1(n2,n3), F1(n3,n4): the two arguments deduce different T).",
+   "correctId": "d"
+  },
+  {
+   "num": 12,
+   "topic": "copy_control",
+   "question": "כמה פעמים בתכנית הבאה מופעל בנאי ההעתקה?\n```cpp\nclass A\n{\n        int n;\npublic:\n        A(int _n) {\n                n = _n;\n        }\n        A(const A& a) {\n                n = a.n;\n        }\n};\nvoid main()\n{\n        A a1(10);\n        A a2(a1);\n        A a3 = a1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`A a2(a1)` ו-`A a3 = a1` מפעילות שתיהן את בנאי ההעתקה, ולכן הוא מופעל פעמיים (תשובה ב). `A a1(10)` קוראת לבנאי הרגיל. בהרצה, עם הדפסה בבנאי ההעתקה, התקבל `CC`. (`void main` בשאלה הוא סגנון MSVC.)\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run (the copy constructor given a marker print, `void main` run as `int main`): 2 copies (`A a2(a1)` and `A a3 = a1`).",
+   "correctId": "b"
+  },
+  {
+   "num": 13,
+   "topic": "const_references",
+   "question": "באיזו שורה יש שגיאה בתכנית הבאה?\n```cpp\n1  class A {\n2   public:\n3     A(int x = 5) : x_(x) {}\n4     int getX() const { x_ += 2; return x_; }\n5     void setX(int x) { x_ = x; }\n6   private:\n7     int x_;\n8   };\n\n9   int main() {\n10        A a1(10);\n11        A a2;\n12        cout << a1.getX() << \" \" << a2.getX() << endl;\n13        a2.setX(30);\n14        cout << a2.getX() << endl;\n15  }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורה 12"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 10"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 4"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורה 3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`getX` מוגדרת `const`, אבל היא משנה את השדה `x_` (`x_ += 2`), וזו שגיאה. השורה השגויה היחידה היא שורה 4 (תשובה ג), וכך גם בקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: the only error is line 4 (`x_ += 2` inside a const method).",
+   "correctId": "c"
+  },
+  {
+   "num": 14,
+   "topic": "operator_overloading",
+   "question": "נתונה התכנית הבאה:\n```cpp\nclass C {\npublic:\n        int x;\n};\nvoid main() {\n        C c1;\n        c1.x = 2;\n        c1 = 3.2 + c1;\n}\n```\nכמה מהמשפטים הבאים נכונים:\n1. התכנית יכולה להתקמפל ולרוץ ללא שגיאות.\n2. כדי שהתכנית תוכל להתקמפל ולרוץ חייבים להוסיף פונקציה חיצונית שהיא פונקציה friend של המחלקה C.\n3. כדי שהתכנית תוכל להתקמפל ולרוץ חייבים להוסיף פונקציה חיצונית שאינה בהכרח פונקצה friend של המחלקה C.\n4. כדי שהתכנית תוכל להתקמפל ולרוץ חייבים להוסיף פונקציה חברה (member function) למחלקה C.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "explanation": "",
+   "note": "The graded copy circles b (1 true statement); the numbering 1-4 is added (the paper lists א-ד). clang++: as written the program does not compile (`3.2 + c1` has no operator); a non-friend external `operator+(double, const C&)` compiles and runs (x is public), so the intended single true statement is 3, but 'must add' in 3 versus an external friend (2) is a matter of wording.",
+   "hold": "wording-dependent: the graded key says one true statement (3, a non-friend external function), but statement 2 (a friend function) would also compile"
+  },
+  {
+   "num": 15,
+   "topic": "copy_control",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Box{\npublic:\n        double width;\n        double length;\n        double height;\n        Box(double w, double l, double h)\n        {\n                width = w; length = l; height = h;\n        }\n        Box(Box b)\n        {\n                width = b.width;\n                length = b.length;\n                height = b.height;\n        }\n        //... Other member functions follow ...\n};\nint main() {\n        Box b1(1.1, 2.2, 3.3);\n        Box b2 = b1;\n        cout << b1.height++;\n        cout << b1.height--;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "3.34.3"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "4.33.3"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "4.32.3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הבנאי `Box(Box b)` מקבל את הארגומנט לפי ערך, וזה אסור: בנאי העתקה חייב לקבל הפניה, אחרת העתקת הארגומנט תקרא לו שוב ושוב. הקומפיילר דוחה זאת (`copy constructor must pass its first argument by reference`). התכנית אינה מתקמפלת (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: error `copy constructor must pass its first argument by reference` (`Box(Box b)`).",
+   "correctId": "d"
+  },
+  {
+   "num": 16,
+   "topic": "const_references",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A\n{\n        int n;\npublic:\n        A(int _n) : n(_n) {}\n        const int& f1(const int& a) const {\n                int y = a;\n                return n;\n        }\n};\nvoid main() {\n        A a1(10);\n        int y = a1.f1(5);\n        a1.f1(5) = 7;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f1` היא פונקציה `const` שמחזירה `const int&`. `int y = a1.f1(5)` תקינה (העתקה). `a1.f1(5) = 7` שגויה, כי אי אפשר להשים להפניה קבועה. שורה שגויה אחת (תשובה ב). `void main` הוא סגנון MSVC ואינו נחשב כאן.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ (with `void main` read as `int main`): 1 error, `a1.f1(5) = 7` (assignment through a const reference).",
+   "correctId": "b"
+  },
+  {
+   "num": 17,
+   "topic": "inheritance_access",
+   "question": "מי המשפט הנכון מבין המשפטים הבאים:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "Protected members של מחלקה A הם כמו private members למעט העובדה שניתן לגשת אליהם מפונקציות חברות (member functions) של מחלקה שיורשת (באופן ישיר) מהמחלקה A."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "Protected members של מחלקה A הם כמו public members למעט העובדה שניתן לגשת אליהם מפונקציות חברות (member functions) של מחלקה שיורשת (באופן ישיר) מהמחלקה A."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "Protected members של מחלקה A הם לא ניתנים לגישה על ידי פונקציות של מחלקות אחרות."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "מבין שלושת המשפטים האחרים אין אף משפט נכון."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "משפט א נכון: חברי `protected` הם כמו `private`, למעט העובדה שפונקציות חברות של מחלקה יורשת (ישירה) יכולות לגשת אליהם. משפט ב שגוי: הם לא נגישים מבחוץ כמו `public`. משפט ג שגוי: מחלקה יורשת היא מחלקה אחרת ויש לה גישה. תשובה א. בדקנו בקומפילציה: מחלקה לא קשורה מקבלת שגיאה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. Concept question; clang++ confirms: a derived member function reads a protected member, while an unrelated class or main gets `'p' is a protected member of 'A'` (so b is false). Statement c is false because derived classes are 'other classes' that can access it.",
+   "correctId": "a"
+  }
+ ]
+}

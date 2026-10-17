@@ -1,0 +1,595 @@
+{
+ "examCode": "25B-A",
+ "examLabel": "2025 סמסטר ב מועד א",
+ "year": 2025,
+ "examDate": "22.07.2025",
+ "sourceFile": "2025/סמ׳ ב מועד א + פתרון .pdf",
+ "keyFile": "same file: graded copy (grader marks, 16 of 17 right), cross-checked by clang++ runs (tools/verify/25B-A/)",
+ "contexts": {
+  "notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`.\nבכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט `#include` בתחילת קטע הקוד/התכנית.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```\nבכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-`#include` הנדרשים להרצת קטע הקוד."
+  }
+ },
+ "questions": [
+  {
+   "num": 1,
+   "topic": "friend_this_static",
+   "question": "נניח ש x הוא שדה פרטי (private member data) של מחלקה A. כמה מהמשפטים הבאים נכונים:\n1. נניח שבפונקציה חיצונית שאינה friend של המחלקה A, מגדירים אובייקט של המחלקה A. אזי בהמשך הפונקציה הזו לא ניתן לשנות את הערך של השדה x של האובייקט.\n2. נניח שלא קימת במחלקה A מטודה (member function) שמשנה את הערך של השדה x. נניח שבפונקציה חיצונית שאינה friend של המחלקה A, מגדירים אובייקט של המחלקה A. אזי בהמשך הפונקציה הזו לא ניתן לשנות את הערך של השדה x של האובייקט.\n3. נניח שבפונקציה חיצונית שאינה friend של המחלקה A, מגדירים אובייקט של המחלקה A. בהמשך הפונקציה, כדי לשנות את הערך של השדה x של האובייקט חייבים לבצע לפחות קריאה אחת למטודה (member function) ציבורית של המחלקה A.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "אף אחד מהמשפטים אינו נכון, ולכן תשובה א. משפט 1 שגוי: פונקציה חיצונית יכולה לשנות את `x` בעקיפין, למשל דרך מתודה ציבורית (setter). משפטים 2 ו-3 שגויים בגלל השמה: `a1 = a2` מפעילה את אופרטור ההשמה שמוגדר אוטומטית, והוא מעתיק גם את `x` הפרטי, בלי שנכתבה מתודה ששינתה אותו ובלי קריאה למתודה ציבורית של הפונקציה החיצונית. זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Concept question, no code to run. Key = the examinee's answer (a), ticked by the grader (16 of 17 right, only Q2 wrong). The numbering 1-3 is added; the paper uses bullets. All three statements are false: a public setter changes x (1), and the implicit copy assignment `a1 = a2` changes x without any member function being written or called (2, 3).",
+   "correctId": "a"
+  },
+  {
+   "num": 2,
+   "topic": "templates",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\ntemplate<typename U>\nvoid f(U);\n\ntemplate<typename T>\nclass A {\nprivate:\n   T x;\n\npublic:\n   A(T x1) : x(x1) {}\n\n   template<typename U>\n   friend void f(U);\n};\n\ntemplate<typename U>\nvoid f(U u) {\n   A<int> obj1(5);\n   A<U> obj2(u);\n   cout << obj1.x;\n       cout << obj2.x;\n}\n\nint main() {\n   f(3.14);\n   f(\"test\");\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הצהרת `friend` כתבנית (`template<typename U> friend void f(U);`) הופכת כל התמחות של `f` לחברה של כל התמחות של `A`. לכן `f` רשאית לגשת ל-`x` הפרטי גם של `A<int>` וגם של `A<U>`. אין שגיאות (תשובה א): בהרצה מתקבל `53.145test`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: compiles and prints `53.145test`. The friend template declaration makes every specialization of f a friend of every A<T>. The examinee answered c and the grader marked it wrong.",
+   "correctId": "a"
+  },
+  {
+   "num": 3,
+   "topic": "classes_ctor_dtor",
+   "question": "להלן תאור חלקי של המחלקה A:\n```cpp\nclass A {\n  A() {}\n...\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ניתן ליצור אובייקטים של המחלקה A בכל מקום."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "רק במחלקות שיורשות מהמחלקה A ניתן ליצור אובייקטים של המחלקה A."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "רק פונקציות friend של המחלקה A יכולות ליצור אובייקטים של המחלקה A."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף אחת מהתשובות אינה נכונה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ב-`class` ברירת המחדל היא `private`, ולכן הבנאי `A() {}` פרטי. הקוד `A a;` ב-`main` נכשל. אפשר ליצור אובייקט גם מתוך פונקציה סטטית של המחלקה עצמה, ולכן המשפט 'רק פונקציות friend' אינו מדויק (ג). מחלקה יורשת גם היא לא יכולה לגשת לבנאי פרטי (ב). לכן אף תשובה מהראשונות אינה נכונה: תשובה ד. זו שאלת מושגים, ובדקנו את הטענות בקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++: `class A { A() {} };` has a private constructor (class default access): `A a;` in main fails, a static member function can create objects (so c is incomplete), and a derived class cannot either. Key d = the examinee's ticked answer.",
+   "correctId": "d"
+  },
+  {
+   "num": 4,
+   "topic": "cpp_basics_refs",
+   "question": "בכמה שורות של פונקציה main בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\n   int a;\n};\n\nclass B : public A {\n   int b;\n};\n\nvoid f(A& a, int x = 1, int y = 3) {\n   cout << x;\n}\n\nvoid f(A& a, int x = 2) {\n   cout << x;\n}\n\nint main() {\n   A* a = new A;\n   B* b = new B;\n   f(*a, 5, 7);\n   f(*b ,6, 8);\n   f(*a ,9);\n   f(*b ,10);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f(*a, 5, 7)` ו-`f(*b, 6, 8)` מתאימות רק לפונקציה בעלת שלושה פרמטרים. `f(*a, 9)` ו-`f(*b, 10)` מתאימות לשתי הפונקציות (הראשונה עם `y` ברירת מחדל, השנייה עם שני פרמטרים), ולכן הקריאה דו-משמעית (שגיאה). סך הכול שתי שורות שגויות (תשובה ג). הקומפיילר דיווח בדיוק על שתי הקריאות האלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: 2 errors, `f(*a,9)` and `f(*b,10)` are ambiguous (both overloads accept A& and one int). The three-argument calls are fine.",
+   "correctId": "c"
+  },
+  {
+   "num": 5,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\n   const char* id;\npublic:\n   A(const char* id) : id(id) {}\n   ~A() { cout << \"A(\" << id << \") \"; }\n};\n\nclass B {\n   const char* id;\npublic:\n   B(const char* id) : id(id) {}\n   ~B() { cout << \"B(\" << id << \") \"; }\n};\n\nclass C : public A {\n   B b;\n   const char* id;\npublic:\n   C(const char* id) : A(\"C->A\"), b(\"C->B\"), id(id) {}\n   ~C() { cout << \"C(\" << id << \") \"; }\n};\n\nstatic A sg(\"sg\");\nA g(\"g\");\n\nvoid func() {\n   static A s(\"s\");\n   A I(\"I\");\n}\n\nint main() {\n   C x(\"x\");\n   func();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "A(I) C(x) B(C->A) A(C->B) A(s) A(g) A(sg)"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "C(x) A(I) B(C->A) A(C->B) A(s) A(g) A(sg)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "A(I) C(x) B(C->B) A(C->A) A(s) A(g) A(sg)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "A(I) C(x) B(C->B) A(C->A) A(s) A(sg) A(g)"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "סדר ההריסה הפוך לסדר הבנייה. `I` מקומי ב-`func` ולכן נהרס ראשון: `A(I)`. אחר כך נהרס `x` ב-`main`: קודם גוף `~C` (`C(x)`), אחר כך החברים (`b`: `B(C->B)`) ולבסוף הבסיס (`A(C->A)`). לבסוף נהרסים האובייקטים הסטטיים והגלובליים בסדר הפוך לבנייתם: `s`, אחר כך `g`, ואז `sg`. הפלט `A(I) C(x) B(C->B) A(C->A) A(s) A(g) A(sg)` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: `A(I) C(x) B(C->B) A(C->A) A(s) A(g) A(sg) `. I dies at the end of func, then x (C, then member b, then base A), then the statics/globals in reverse construction order s, g, sg.",
+   "correctId": "c"
+  },
+  {
+   "num": 6,
+   "topic": "friend_this_static",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B;\n\nclass A {\nprivate:\n   int value;\n\npublic:\n   A() : value(42) {}\n   friend class B;\n};\n\nclass B {\npublic:\n   void showValue(A a) {\n      cout << a.value << endl;\n   }\n};\n\nint main() {\n   A a;\n   B b;\n   b.showValue(a);\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "42"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "זבל (ערך כלשהו)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`B` היא `friend` של `A`, ולכן `showValue` רשאית לקרוא את `value` הפרטי של `A`. הערך 42 מאותחל בבנאי של `A`, והפלט `42` (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: 42 (B is a friend of A, so it may read the private field).",
+   "correctId": "b"
+  },
+  {
+   "num": 7,
+   "topic": "operator_overloading",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Complex {\nprivate:\n   int real, imag;\n\npublic:\n   Complex(int r, int i) : real(r), imag(i) {}\n\n   friend Complex operator+(const Complex& c1, const Complex& c2);\n\n   void display() const {\n      cout << real << \" + \" << imag << \"i\" << endl;\n   }\n};\n\nComplex operator+(const Complex& c1, const Complex& c2) {\n   return Complex(c1.real + c2.real, c1.imag + c2.imag);\n}\n\nint main() {\n   Complex c1(3, 4), c2(1, 2);\n   Complex c3 = c1 + c2;\n   c3.display();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "4 + 6i"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "3 + 4i"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1 + 2i"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האופרטור `+` מוגדר כפונקציה `friend` ולכן ניגש לשדות הפרטיים. `(3,4) + (1,2) = (4,6)`, והפלט `4 + 6i` (תשובה א), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: `4 + 6i`.",
+   "correctId": "a"
+  },
+  {
+   "num": 8,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <vector>\nclass F {\npublic:\n   bool operator()(int x) const {\n      return x < 0;\n   }\n};\n\nclass A {\npublic:\n   vector<int> x;\n   A(const int arr[], int size) {\n      for (int i = 0; i < size; ++i)\n         x.push_back(arr[i]);\n   }\n};\n\nint main() {\n   int arr[] = { -5, 3, -1, 7, 0, -2 };\n   A a(arr, 6);\n   vector<int> y;\n   F p;\n   vector<int>::iterator it, end;\n   for (it = a.x.begin(), end = a.x.end(); it != end; it++) {\n      if (p(*it)) {\n         y.push_back(*it);\n      }\n   }\n   vector<int>::reverse_iterator rit, rend;\n   for (rit = y.rbegin(), rend = y.rend(); rit != rend; rit++) {\n      cout << *rit << \" \";\n   }\n   cout << endl;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "-5 -1 -2"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "-2 -1 -5"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המחלקה `F` היא פונקטור (אובייקט עם `operator()`) שמחזיר אמת למספרים שליליים. הלולאה הראשונה מעתיקה ל-`y` את השליליים לפי הסדר: `-5 -1 -2`. הלולאה השנייה מדפיסה את `y` באיטרטור הפוך, ולכן `-2 -1 -5` (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: `-2 -1 -5 ` (the negatives -5 -1 -2 in order, printed in reverse).",
+   "correctId": "b"
+  },
+  {
+   "num": 9,
+   "topic": "operator_overloading",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Multiplier {\n   int factor;\npublic:\n   Multiplier(int f) : factor(f) {}\n\n   int operator() (int x) const {\n      return x * factor;\n   }\n};\n\nint main() {\n   Multiplier triple(3), doubleIt(2);\n   cout << triple(4) << \" \" << doubleIt(5);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "12 10"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "7 10"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "4 5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`Multiplier` מגדירה `operator()`, ולכן אפשר לקרוא לאובייקט כמו לפונקציה. `triple(4) = 12` ו-`doubleIt(5) = 10`, והפלט `12 10` (תשובה א), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: `12 10` (function-call operator).",
+   "correctId": "a"
+  },
+  {
+   "num": 10,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass Base {\npublic:\n   Base() { cout << \"Base \"; }\n   ~Base() { cout << \"DesBase \"; }\n\n   virtual void show() { cout << \"Base Show \"; }\n};\n\nclass Derived : public Base {\npublic:\n   Derived() { cout << \"Derived \"; }\n   ~Derived() { cout << \"DesDerived \"; }\n   void show() { cout << \"Derived Show \"; }\n};\n\nint main() {\n   Base* b = new Derived();\n   b->show();\n   delete b;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "Base Derived Derived Show DesDerived DesBase"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "Base Derived Derived Show DesBase"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "Base Derived Base Show DesDerived DesBase"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "`show` וירטואלית, לכן `b->show()` מפעילה את `Derived::show`. ההורס `~Base` אינו וירטואלי, ולכן `delete b` דרך `Base*` מפעיל רק את `~Base` (`DesBase`), בלי `~Derived`. פורמלית זו התנהגות לא מוגדרת, אבל זו התוצאה המתוכננת והנצפית: `Base Derived Derived Show DesBase` (תשובה ב). בהרצה: אותו פלט.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: `Base Derived Derived Show DesBase `. show is virtual (dynamic), the destructor is not, so only ~Base runs; deleting a Derived through a Base* without a virtual destructor is formally undefined behaviour, but this is the exam's intended outcome and the observed one.",
+   "correctId": "b"
+  },
+  {
+   "num": 11,
+   "topic": "copy_control",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A\n{\npublic:\n   int x;\n\n   A() { x = 10; }\n   A(const A& a){x=a.x+1;}\n\n   A f() {\n      x++;\n      return *this;\n   }\n};\n\nint main()\n{\n   A obj;\n   obj.f().f();\n   cout << obj.x << endl;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "10"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "11"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "12"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`obj.f()` מגדילה את `obj.x` ל-11 ומחזירה העתק של `*this` לפי ערך (בנאי ההעתקה נותן `x = 12` לעותק). הקריאה השנייה `.f()` פועלת על העותק הזמני ולא על `obj`, ולכן `obj.x` נשאר 11 (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: 11. obj.f() increments obj to 11 and returns a copy (the copy constructor gives 12); the second f() acts on that temporary, not on obj.",
+   "correctId": "b"
+  },
+  {
+   "num": 12,
+   "topic": "abstract_multiple",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n   void display() {\n      cout << \"Class A\" << endl;\n   }\n};\n\nclass B {\npublic:\n   void display() {\n      cout << \"Class B\" << endl;\n   }\n};\n\nclass C : public A, public B {\n};\n\nint main() {\n   C obj;\n   obj.display();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "Class A"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "Class B"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ל-`C` יש שתי פונקציות `display` שנורשות מ-`A` ומ-`B`, והקריאה `obj.display()` דו-משמעית. הקומפיילר מדווח על שגיאה (`member 'display' found in multiple base classes`). לכן התכנית לא עוברת קומפילציה (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++: `member 'display' found in multiple base classes of different types` (ambiguous call).",
+   "correctId": "d"
+  },
+  {
+   "num": 13,
+   "topic": "friend_this_static",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass MyClass {\nprivate:\n   int value;\n\npublic:\n   MyClass(int v) : value(v) {}\n\n   static void printValue() {\n      cout << \"Value is: \" << value << endl;\n   }\n};\n\nint main() {\n   MyClass obj(42);\n   obj.printValue();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "42"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "זבל (ערך כלשהו)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בהרצת התכנית תקרה שגיאת זמן ריצה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`printValue` היא פונקציה סטטית, ולכן אין לה `this` והיא לא יכולה לגשת לשדה הלא-סטטי `value`. זו שגיאת קומפילציה (`invalid use of member 'value' in static member function`), תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++: `invalid use of member 'value' in static member function`.",
+   "correctId": "c"
+  },
+  {
+   "num": 14,
+   "topic": "copy_control",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {};\nint main()\n{\n   A a;\n   A b = a;\n   A c(b);\n   a = b;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`A` ריקה, והקומפיילר מייצר לה בנאי ברירת מחדל, בנאי העתקה ואופרטור השמה. `A b = a;` ו-`A c(b);` קוראות לבנאי ההעתקה, ו-`a = b;` להשמה. אין אף שגיאה (תשובה א), והקוד מתקמפל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++: compiles with 0 errors (implicit default/copy constructor and copy assignment).",
+   "correctId": "a"
+  },
+  {
+   "num": 15,
+   "topic": "abstract_multiple",
+   "question": "כמה מהמשפטים הבאים נכונים:\n1. ב ++C מחלקה נגזרת, יכולה לרשת רק מחלקה אחת.\n2. הורשה מרובה (multiple inheritance) לא קיימת ב ++C סטנדרטי ודורשת שימוש בספריות חיצוניות.\n3. אם לשתי מחלקות בסיס יש פונקציה באותו שם, וישנה מחלקה שיורשת משתי מחלקות אלה, יתכנו מקרים שבהם תקרה שגיאת קומפילציה בגלל ambiguity (רב משמעות).\n4. כאשר מחלקה נגזרת משתמשת בהורשה מרובה מטודות שלה חייבות לקרוא באופן מפורש לבנאים של מחלקות הבסיס שמהן היא יורשת.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "רק משפט 3 נכון. משפט 1 שגוי: ב-C++ מותרת הורשה מרובה. משפט 2 שגוי: הורשה מרובה קיימת בשפה הסטנדרטית. משפט 3 נכון: אם יש פונקציה באותו שם בשני הבסיסים, קריאה אליה דרך האובייקט הנגזר דו-משמעית (ראו את השאלה על `display`). משפט 4 שגוי: אם לבסיסים יש בנאי ברירת מחדל, הוא נקרא אוטומטית ולא חייבים לקרוא להם במפורש. תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Concept question. Key = the examinee's answer (b), ticked by the grader: only statement 3 is true (Q12 shows the ambiguity). The numbering 1-4 is added; the paper uses bullets.",
+   "correctId": "b"
+  },
+  {
+   "num": 16,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n   virtual void f() {\n      cout << \"A\";\n   }\n};\n\nclass B : public A {\npublic:\n   void f() {\n      cout << \"B\";\n   }\n};\n\nvoid g(A& x) {\n   x.f();\n}\n\nint main() {\n   A *x = new B;\n   B *y = new B;\n   B z;\n   g(*x);\n   g(*y);\n   g(z);\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ABB"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "BAB"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "BBB"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f` וירטואלית ב-`A`, ו-`B::f` דורסת אותה (המילה `virtual` ב-`B` אינה חובה). `g` מקבלת הפניה ל-`A`, והקריאה `x.f()` נקבעת לפי הטיפוס האמיתי של האובייקט, שהוא `B` בכל שלוש הקריאות. הפלט `BBB` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++ run: BBB. f is virtual in A, so B::f overrides it (the `virtual` keyword is optional in B) and all three calls dispatch to B.",
+   "correctId": "c"
+  },
+  {
+   "num": 17,
+   "topic": "const_references",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass Sample {\nprivate:\n   int value;\n\npublic:\n   Sample(int v) : value(v) {}\n\n   void show() const {\n      cout << \"Value: \" << value << endl;\n   }\n\n   void modify() {\n      value += 10;\n   }\n};\n\nint main() {\n   const Sample obj1(5);\n   Sample obj2(7);\n\n   obj2.modify();\n   obj2.show();\n   obj1.modify();\n   obj1.show();\n\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`obj1` הוא `const`, ולכן מותר לקרוא עליו רק למתודות `const`. `obj1.show()` תקינה כי היא `const`. `obj1.modify()` אינה `const`, ולכן זו שגיאה. `obj2` אינו `const` ושתי הקריאות אליו תקינות. יש בדיוק שגיאה אחת (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "clang++: exactly 1 error, `obj1.modify()` (non-const method on a const object); `obj1.show()` is a const method and is fine.",
+   "correctId": "b"
+  }
+ ]
+}

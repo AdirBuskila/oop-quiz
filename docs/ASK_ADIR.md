@@ -76,6 +76,34 @@ Open questions for Adir. One entry per item; the orchestrator moves it to Resolv
 - Needed: confirm run-derived keys are acceptable for these items.
 - Status: info
 
+### 25B-B Q5 - double delete at exit (hold)
+- Path: sitting 25B-B (2025 sem B moed B, 19.08.2025), question paper
+- Page: 11
+- Question: shallow copy constructor, then both objects delete[] the same array. The program prints `999 10 20` twice, then the double delete is undefined behaviour (clang++ on Windows aborts). The grader circled c (runtime error); b (output only) is what a lenient reading gives.
+- Needed: the intended answer (b or c), or leave it out.
+- Status: hold
+
+### 24B-B Q14 - string literal to char* (hold)
+- Path: sitting 24B-B (2024 sem B moed B, 15.08.2024), question paper
+- Page: 15
+- Question: `MyClass<char*> obj4("Hello!")`. The red key says d (does not compile, the C++11+ rule), but clang++ -std=c++17 only warns by default and prints `10 15.5 Hello!`.
+- Needed: confirm d is acceptable, or leave it out.
+- Status: hold
+
+### 24B-A Q7 and Q14 - graded key vs the language rules (hold)
+- Path: sitting 24B-A (2024 sem B moed A, 25.07.2024), question paper
+- Page: Q7 p.17 (paper p.9), Q14 p.31 (paper p.16)
+- Question: Q7: the graded copy circles b (one true statement), but statements 1 and 3 are both true by the language rules (c). Q14: the graded copy circles b (one true statement); a friend external function (statement 2) and a non-friend one (statement 3) both compile.
+- Needed: the intended answers for Q7 and Q14, or leave them out.
+- Status: hold
+
+### 24B-A, 24B-B, 25B-A, 25B-B - keys are run-derived or graded-copy
+- Path: all four sittings
+- Page: all
+- Question: code questions are keyed from clang++ runs (stored official:false) and agree with the graded copies / red marks. Judgement calls kept at confidence med: 25B-B Q9 (typo in the paper corrected), Q17; 25B-A Q1, Q10; 24B-B Q12. 25B-A header says moed A 1/07/2025 while the slot stamp says 22/07/2025 (code kept 25B-A, date 22.07.2025). `void main` in 24B-A Q12/Q16 is MSVC style, run as int main.
+- Needed: confirm run-derived keys are acceptable.
+- Status: info
+
 ## Resolved
 
 ### 18A-C Q12 - MFC question, no key (hold)
