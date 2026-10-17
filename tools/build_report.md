@@ -5,7 +5,7 @@
 - Excluded: **0** 
 - Shared context blocks: **1**
 - Math spans rendered (distinct): **0**
-- lockOrder: 0 · multiple accepted answers: 2
+- lockOrder: 0 · multiple accepted answers: 4
 
 - **On hold (not in bank, see docs/ASK_ADIR.md): 1**
 

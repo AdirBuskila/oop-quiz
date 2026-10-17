@@ -24,7 +24,7 @@ Open questions for Adir. One entry per item; the orchestrator moves it to Resolv
 - Path: sitting 25S-A, answer sheet p.1 (version 1)
 - Page: 16 and 19
 - Question: Q14 has all four options highlighted; Q17 has a, b and d highlighted. The run and the language rule give exactly b for both (Q14 prints option b; Q17 statement 2). Stored with correctId b only.
-- Needed: confirm b alone is fine, or say to store the sheet's accepted sets as acceptedIds.
-- Status: decision
+- Needed: (done) acceptedIds now hold every highlighted option; correctId stays b.
+- Status: resolved: all highlighted options accepted per official sheet
 
 ## Resolved
