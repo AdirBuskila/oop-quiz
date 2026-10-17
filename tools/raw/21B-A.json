@@ -1,0 +1,693 @@
+{
+ "examCode": "21B-A",
+ "examLabel": "2021 סמסטר ב מועד א",
+ "year": 2021,
+ "examDate": "24.06.2021",
+ "sourceFile": "2021/סמ׳ ב מועד א גירסה 1.pdf",
+ "keyFile": "no official key; every key re-derived by clang++ runs (hand-marked student answer sheets used only as a cross-check)",
+ "contexts": {
+  "notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`. בנוסף לכך בכל השאלות מהסוג הזה ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```"
+  }
+ },
+ "questions": [
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nvoid f(int& i) {\n    i++;\n    cout << i << endl;\n};\n\nint main()\n{\n    int i = 3, j = 2;\n    f(i);\n    f(i+j);\n    f(5);\n    f(i + 1);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "הפונקציה `f` מקבלת `int&`, כלומר הפניה לערך שמאלי. `f(i)` תקין. `f(i+j)`, `f(5)` ו-`f(i + 1)` מעבירים ערכים זמניים (rvalue) שאי אפשר לקשור להפניה לא-const. שלוש שגיאות, ולכן התשובה היא יותר מ-2 (ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): errors on f(i+j), f(5), f(i + 1) -> 3."
+  },
+  {
+   "num": 2,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint f(int x, int y=3, int z) {\n    return x + y + z;\n}\n\nint main()\n{\n  cout << f(1,3,5) << f(1,3) << f(1,4,2) << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`947`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`749`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`944`"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "בפרמטרים של פונקציה, אחרי פרמטר עם ערך ברירת מחדל (`int y=3`) כל הפרמטרים הבאים חייבים גם הם לקבל ערך ברירת מחדל. כאן `int z` בלי ערך ברירת מחדל, ולכן ההגדרה עצמה שגויה והתכנית לא מתקמפלת (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): error 'missing default argument on parameter z'."
+  },
+  {
+   "num": 3,
+   "topic": "classes_ctor_dtor",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int a, int b = 3) { x = a; y = b; }\n    int x,y;\n};\n\n\nint main() {\n    A a1;\n    A a2(2);\n    A a3(2, 3);\n    A a4(2, 3, 4);\n    A a5=a3;\n    a3 = a2;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "למחלקה יש בנאי יחיד `A(int a, int b = 3)`, ולכן אין בנאי ברירת מחדל. `A a1;` שגוי. `A a2(2)` ו-`A a3(2,3)` תקינים. `A a4(2,3,4)` שגוי (יותר מדי ארגומנטים). `A a5=a3` ו-`a3 = a2` משתמשים בבנאי ההעתקה ובהשמה שנוצרו אוטומטית. שתי שגיאות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): errors on `A a1;` (no default constructor) and `A a4(2, 3, 4);` -> 2."
+  },
+  {
+   "num": 4,
+   "topic": "const_references",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int z) { x = z; }\n    int x;\n    void f() { cout << x; }\n    void f() const { cout << x; }\n    void setX(int z) { x = z; }\n};\n\nint main() {\n    A a1(4);\n    a1.setX(8);\n    const A a2(6);\n    a1.f();\n    a2.f();\n    a2.setX(5);\n    A a3 = a2;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "יש שתי גרסאות של `f`, אחת רגילה ואחת `const`, ולכן הקריאה `a2.f()` על אובייקט קבוע בוחרת את הגרסה ה-`const`. `setX` אינה `const`, ולכן הקריאה `a2.setX(5)` על אובייקט קבוע שגויה. כל שאר השורות תקינות, כולל `A a3 = a2` (בנאי העתקה אוטומטי). שגיאה אחת (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): only `a2.setX(5);` fails (non-const member on a const object)."
+  },
+  {
+   "num": 5,
+   "topic": "friend_this_static",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i=0) { x = i;}\n    A& f(int i) {\n        x = 2 * i;\n        return *this;\n    }\n    A* g(int i) {\n        x = 2 + i;\n        return this;\n    }\n    int x;\n};\n\nint main() {\n    A a1;\n    a1.f(5).g(4);\n    (&a1)->g(3).x = 5;\n    a1.f(2)->x = 6;\n    a1.f(2).x.g(2);\n    a1.g(3)->f(4);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "`f` מחזירה הפניה `A&` ו-`g` מחזירה מצביע `A*`. `a1.f(5).g(4)` תקין. `(&a1)->g(3).x` שגוי כי `g` מחזירה מצביע ויש להשתמש ב-`->`. `a1.f(2)->x` שגוי כי `f` מחזירה הפניה ויש להשתמש ב-`.`. `a1.f(2).x.g(2)` שגוי כי `x` הוא `int` ואין לו פונקציה `g`. `a1.g(3)->f(4)` תקין. שלוש שגיאות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): errors on `(&a1)->g(3).x`, `a1.f(2)->x` and `a1.f(2).x.g(2)` -> 3."
+  },
+  {
+   "num": 6,
+   "topic": "copy_control",
+   "question": "נתונה התכנית הבאה:\n```cpp\nclass A {\npublic:\n    A(int i = 10) {\n        n = i;\n        p = new int[n];\n        for (int j = 0; j < n; j++) { p[j] = 0; }\n    }\n    ~A() { delete p; }\n    int n;\n    int* p;\n};\n\nint f(A a) { return 2*a.n; }\n\nint main() {\n    A a1(5), a2(5);\n    cout << 1 << endl;\n    f(a1);\n    cout << 2 << endl;\n    f(a2);\n    cout << 3 << endl;\n    f(a1);\n    cout << 4 << endl;\n    f(a2);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית תתקמפל ותרוץ ללא שגיאות"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בזמן הרצת התכנית תקרה שגיאת זמן ריצה לפני הקריאה השלישית לפונקציה `f`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "confidence": "low",
+   "contextId": "notes",
+   "explanation": "המחלקה מקצה זיכרון בבנאי ומשחררת בהורס, אבל אין בנאי העתקה. הקריאה `f(a1)` מעבירה עותק רדוד, וההורס של הפרמטר משחרר את `a1.p`. אותו דבר ל-`f(a2)`. בקריאה השלישית `f(a1)` ההורס משחרר שוב את אותו זיכרון, וזו שגיאת זמן ריצה (בהרצה התכנית הדפיסה 1, 2, 3 וקרסה לפני 4). אבל השגיאה קורית בתוך הקריאה השלישית ולא לפניה, וההתנהגות אינה מוגדרת, ולכן השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Held. The class has no copy constructor, so every call f(a) by value shares the pointer with the argument and the destructor frees it; the first call to f(a1) and f(a2) free their pointers, the THIRD call f(a1) frees a1.p again. clang++ run: prints 1, 2, 3, then the process dies with heap corruption (exit 0xC0000374) inside the third call, before 4. Student sheet marks c, but 'before the third call' is not literally what happens (the crash is during it), and the behaviour is undefined.",
+   "hold": "Undefined behaviour and wording: the runtime error happens during (not before) the third call f(a1); student sheet says c, a literal reading gives d."
+  },
+  {
+   "num": 7,
+   "topic": "operator_conversions",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i) {x=i;}\n    operator int() {return x;}\n    int x;\n};\n\nvoid main()\n{\n    A a1(5); int i=3;\n    A a2=i;\n    i=a1;\n    i=(int) a1;\n    a1=(A)i;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "`A a2=i;` תקין כי הבנאי `A(int)` אינו `explicit`. `i=a1` תקין כי יש אופרטור המרה `operator int()`. `i=(int) a1` תקין, וגם `a1=(A)i` תקין. אין שגיאות (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): no errors."
+  },
+  {
+   "num": 8,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B {\npublic:\n    B() {cout << 1; }\n    B(int i) {\n        cout << 2;\n        x = i;\n    }\n    int x;\n};\n\nclass A : public B {\npublic:\n    A(int y = 5, int x = 10) : B(x) {\n        cout << 3;\n        this->y = y;\n        this->x = 8;\n    }\n    void f() const { cout << x << y; }\n    int y;\n};\n\nvoid main()\n{\n    A a(5, 7);\n    a.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`23105`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`123105`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`2385`"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "הבנאי של `A` קורא ל-`B(x)` עם הפרמטר `x=7` (הפרמטר מסתיר את השדה), ולכן נבחר `B(int)` שמדפיס 2. אחר כך גוף הבנאי של `A` מדפיס 3, מציב `y=5` ו-`x=8`. הפונקציה `f` מדפיסה `x` ואז `y`: `85`. הפלט `2385` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): printed 2385."
+  },
+  {
+   "num": 9,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i=0) { na = i; }\nprotected:\n    int na;\n};\n\nclass B : private A {\npublic:\n    B(int i, int j) :A(j) { nb = i; }\n    int f() { return na; }\nprotected:\n    int nb;\n};\n\nclass C : private B {\npublic:\n    C(int i, int j, int k) : B(j, k) {\n        nc = i;\n    }\n    int f() {\n        int i = nb;\n        return na;\n    }\nprotected:\n    int nc;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "ב-`B` הירושה מ-`A` היא `private`, אבל `na` מוגן ב-`A`, ולכן `B::f` יכולה להחזיר אותו. ב-`C` הירושה מ-`B` היא `private`, ו-`nb` מוגן ב-`B` ולכן קריאתו תקינה. אבל `na` בתוך `B` הפך ל-`private` (בגלל הירושה הפרטית), ולכן `C` לא יכולה לגשת אליו. שגיאה אחת, `return na;` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): only `return na;` in C::f fails (na became private in B)."
+  },
+  {
+   "num": 10,
+   "topic": "copy_control",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    A(int i) { na = i; }\n    A& operator=(const A& a) {\n        na = a.na * 2;\n        return *this;\n    }\n    int na;\n};\n\nclass B : public A {\npublic:\n    B(int i, int j) : A(j) {\n        nb = i;\n    }\n    int nb;\n};\n\nvoid main()\n{\n    B b1(1, 2);\n    B b2(3, 4);\n    b2 = b1;\n    cout << b2.nb << b2.na;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`14`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`34`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`12`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "ל-`B` אין אופרטור השמה משלה, ולכן הקומפיילר יוצר אחד שמעתיק כל שדה ל-`nb` ומפעיל את `A::operator=` על החלק של הבסיס. `A::operator=` מציב `na = a.na * 2` = 2*2 = 4. השדה `nb` מועתק ל-1. ההדפסה היא `14` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): printed 14."
+  },
+  {
+   "num": 11,
+   "topic": "abstract_multiple",
+   "question": "כיצד ניתן לתקן שגיאות שמופיעות בקטע הקוד הבא:\n```cpp\nclass X\n{\nprotected:\n    int key;\npublic:\n    X(int i = 0) { key = i;};\n    void f1() { cout << \"f1 from X\" << endl; }\n};\n\nclass Y :  public X\n{\npublic:\n    Y(int i = 0) {key = i;};\n    void f1() { cout << \"f1 from Y\" << endl; }\n};\n\nclass Z :  public X\n{\npublic:\n    Z(int i = 0) { key = i; };\n    void f1() { cout << \"f1 from Z\" << endl; }\n};\n\nclass A : public Y, public Z {\n    int key;\npublic:\n    A(int i = 0) : Y(i + 2), Z(i + 3)\n    {\n        key = Y::key + Z::key;\n    }\n    int getkey(void) { return key; }\n    void f1() { cout << \"f1 from A\" << endl; }\n};\nvoid main() {\n    A object(4);\n    cout << \"object.key = \" << object.getkey()<<endl;\n    object.f1();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אין צורך לתקן שגיאות כי בקטע הקוד הנ\"ל אין שגיאות"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לדייק את הקריאה לפונקציה `f1` שמופיעה בשורה האחרונה בפונקציה `main`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לשנות את ההצהרה של הפונקציה `f1` במחלקה `X` כך שתהיה פונקציה וירטואלית"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן לתקן את השגיאות בקטע הקוד הנ\"ל"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "הקוד מתקמפל. ב-`A` מוגדרת `f1` משלה, ולכן `object.f1()` אינה עמומה למרות ש-`Y` ו-`Z` מגדירות כל אחת `f1`. גם `Y::key` ו-`Z::key` מציינים במפורש איזה עותק של `key` נקרא (ל-`A` יש שני עותקים של `X`). הפלט `object.key = 13` ואחריו `f1 from A`. לכן אין צורך לתקן שגיאות (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): the code compiles and prints `object.key = 13` and `f1 from A` (A::f1 hides the two inherited f1; Y::key and Z::key are named explicitly)."
+  },
+  {
+   "num": 12,
+   "topic": "const_references",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nvoid main()\n{\n    int i = 12;\n    const int ci = 12;\n    ci = 13;\n    const int* ip3 = &i;\n    i = 10;\n    *ip3 = 10;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "`ci = 13` שגוי כי `ci` הוא `const`. `i = 10` תקין. `*ip3 = 10` שגוי כי `ip3` מצביע ל-`const int`. שתי שגיאות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): `ci = 13;` and `*ip3 = 10;` fail -> 2."
+  },
+  {
+   "num": 13,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\ntemplate <class T, int n>\nclass Array {\npublic:\n    T &operator[](int i)\n    {\n        return a_[i];\n    }\n    const T& operator[](int i) const\n    {\n        return a_[i];\n    }\nprivate:\n    T a_[n];\n};\nvoid main()\n{\n    Array <int, 12 > ia;\n    ia[20] = 3;\n    ia[3] = ia[20];\n    cout << ia[3];\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בתכנית יש שגיאת זמן ריצה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`3`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תווים בלתי צפויים (זבל) כלשהם"
+    }
+   ],
+   "confidence": "low",
+   "contextId": "notes",
+   "explanation": "התכנית מתקמפלת אבל הגישה `ia[20]` חורגת מהמערך בגודל 12, שזו התנהגות לא מוגדרת. בהרצה בלי אופטימיזציה הודפס 3, ועם אופטימיזציה הודפס ערך זבל, ובבניית דיבוג של MSVC הייתה יכולה להתקבל שגיאת זמן ריצה. אין תשובה יחידה שמוגדרת בשפה, ולכן השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Held. The program compiles; `ia[20]` writes past the 12-element array on the stack (undefined behaviour). clang++ run: prints 3 at -O0 and a garbage number at -O2; a debug MSVC build would report a stack-corruption runtime error. Student sheet marks b, a literal run gives c or d depending on optimisation.",
+   "hold": "Undefined behaviour (out-of-bounds write): clang++ prints 3 at -O0 and garbage at -O2; student sheet says b (runtime error)."
+  },
+  {
+   "num": 14,
+   "topic": "stl_exceptions",
+   "question": "```cpp\nvoid main()\n{\n    int* ip = new int[12];\n    for (int i = 0; i < 12; i++)\n        ip[i] = 2 * i;\n\n    vector<int> iv(12);\n    for (int j = 0; j < iv.size(); ++j)\n        iv[j] = 2 * j;\n}\n```\n(בדף אין ניסוח של שאלה: בוחרים את המשפט הנכון לגבי הקוד)",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הקוד המוצג בשלוש השורות הראשונות בפונקציה `main` טוב יותר מהקוד המוצג בשלוש השורות האחרונות בפונקציה `main`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הקוד המוצג בשלוש השורות האחרונות בפונקציה `main` טוב יותר מהקוד המוצג בשלוש השורות הראשונות בפונקציה `main`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הקוד המוצג בשלוש השורות הראשונות בפונקציה `main` טוב ובאותה מידה גם הקוד המוצג בשלוש השורות האחרונות בפונקציה `main` הוא טוב"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הקוד המוצג בשלוש השורות הראשונות אינו טוב ובאותה מידה גם הקוד המוצג בשלוש השורות האחרונות אינו טוב"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "contextId": "notes",
+   "explanation": "הקוד בשלוש השורות הראשונות מקצה מערך עם `new[]` ולא משחרר אותו אף פעם (דליפת זיכרון). הווקטור בשלוש השורות האחרונות מנהל את הזיכרון בעצמו ומשחרר אותו כשהוא יוצא מהתחום, והוא גם יודע את גודלו. בהרצה נספר בלוק אחד שלא שוחרר בגרסה הראשונה ואפס בגרסה השנייה. לכן הקוד האחרון טוב יותר (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from reasoning plus a run (student sheet agrees): an allocation counter shows the raw `new int[12]` is never freed (1 live block after its scope) while the vector releases its memory (0). The printed question has no stem line. Design/style question, so confidence med."
+  },
+  {
+   "num": 15,
+   "topic": "classes_ctor_dtor",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\n    int n;\npublic:\n    A(int m = 0) {n=m;}\n};\n\nA a1(5);\nA a2;\nA a3();\n\nvoid main() {}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "`A a1(5);` ו-`A a2;` תקינים (יש ערך ברירת מחדל `m = 0`). `A a3();` אינו הגדרת אובייקט אלא הצהרה על פונקציה בשם `a3` שמחזירה `A`, וזה תקין. אין שגיאות (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): no errors (`A a3();` is a function declaration)."
+  },
+  {
+   "num": 16,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B{\npublic:\n    virtual ~B() {};\n    virtual int getN() const\n    { return n; }\n    virtual void setN(int nn)\n    {  n=nn; }\nprotected:\n    int n;\n};\n\nclass D: public B{\npublic:\n    virtual int getN() const\n    {\n        return n*n;\n    }\n\n    virtual void setN(int nn)\n    {\n        n = 2*nn; }\n};\n\nvoid main()\n{\n    B b;\n    D d;\n    d.setN(5);\n    b = d;\n    cout << b.getN();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`25`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`10`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`100`"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "ההשמה `b = d` מבצעת חיתוך (slicing): `b` הוא אובייקט מטיפוס `B` שמקבל רק את חלק הבסיס של `d`, כולל `n = 10` (כי `D::setN(5)` הציבה `2*5`). הקריאה `b.getN()` על אובייקט מטיפוס `B` מפעילה את `B::getN` שמחזירה `n`, כלומר 10. הפלט `10` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): printed 10 (slicing: b is a B holding n == 10)."
+  },
+  {
+   "num": 17,
+   "topic": "templates",
+   "question": "בקטע הקוד הבא ישנן שלוש קריאות לפונקציה בשם `f` בתוך הפונקציה `main`\n```cpp\ntemplate<class T>\nvoid f(T t){}\n\ntemplate<class T>\nvoid f(T* t) {};\n\nvoid main()\n{\n    int* p, i=3;\n    double d = 3.1415;\n    p = &i;\n    f(i);\n    f(d);\n    f(p);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "כל שלושת הקריאות פונות לאותה כתובת, ואין שגיאת קומפילציה בקטע הקוד הנ\"ל"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "כל שלושת הקריאות פונות לכתובות שונות ואין שגיאת קומפילציה בקטע הקוד הנ\"ל"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שתיים מבין הקריאות פונות לאותה כתובת ושלישית לכתובת אחרת, ואין שגיאת קומפילציה בקטע הקוד הנ\"ל"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בקטע הקוד הנ\"ל יש שגיאת קומפילציה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "הקריאה `f(i)` מתאימה לתבנית `f(T t)` עם `T=int`. `f(d)` מתאימה לאותה תבנית עם `T=double`, כלומר פונקציה אחרת. `f(p)` עם מצביע `int*` מתאימה טוב יותר לתבנית המתמחה `f(T* t)` עם `T=int`. בהרצה הודפסו שלוש חתימות שונות. שלוש הקריאות הן לשלוש פונקציות שונות וללא שגיאה (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): compiles; the three calls instantiate f<int>(int), f<double>(double) and f<int>(int*) (three different functions)."
+  },
+  {
+   "num": 18,
+   "topic": "operator_conversions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <string.h>\n\nclass MySting {\npublic:\n    MySting(const char* s) {\n        s_ = new char[strlen(s) + 1];\n        strcpy(s_,s);\n    }\n    friend MySting operator+(const MySting&, const MySting&);\n    operator const char* () const { return s_; }\nprivate:\n    char* s_;\n};\n\nMySting operator+(const MySting &s1, const MySting &s2)\n{\n    MySting sum(\"a\");\n    sum.s_=strcat(s1.s_, s2.s_);\n    return sum;\n}\n\nvoid main()\n{\n    MySting s1(\"a\"), s2(\"b\");\n    MySting temp = s1 + s2;\n    const char* p = temp;\n    cout<<p;\n    cout << temp;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`abab`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`ab`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בתכנית יש שגיאת זמן ריצה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "contextId": "notes",
+   "explanation": "`strcat(s1.s_, s2.s_)` מדביק את `\"b\"` לתוך המחרוזת של `s1` (המאגר שלה מכיל רק מקום ל-`\"a\"`, גלישה של בית אחד שלא גורמת לקריסה בפועל) ומחזיר מצביע אליו. `temp` מצביע לאותה מחרוזת `\"ab\"`. ההדפסה של `p` ושל `temp` (דרך אופרטור ההמרה) נותנת `ab` פעמיים, כלומר `abab` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): printed abab. strcat appends into s1's 2-byte buffer (a one-byte heap overrun that does not crash in practice); both prints give the same string through the conversion operator."
+  },
+  {
+   "num": 19,
+   "topic": "copy_control",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass Record {\npublic:\n    virtual ~Record() {};\n    Record(const Record& that)\n    {\n        *this = that;\n    }\n    Record operator = (const Record& that)\n    {\n        name = that.name;\n        return *this;\n    }\n    //...\nprivate:\n    char name[100];\n    long id;\n};\nvoid main()\n{\n    Record r1;\n    Record r2 = r1;\n    Record r3;\n    r3 = r2 = r1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "contextId": "notes",
+   "explanation": "`name = that.name;` שגוי כי אי אפשר להשים מערך למערך. `Record r1;` ו-`Record r3;` שגויות כי הוגדר בנאי העתקה ולכן לא נוצר בנאי ברירת מחדל. `Record r2 = r1` ו-`r3 = r2 = r1` תקינות מבחינת קומפילציה. שלוש שגיאות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run (student sheet agrees): errors on `name = that.name;` (arrays are not assignable), `Record r1;` and `Record r3;` (no default constructor) -> 3."
+  },
+  {
+   "num": 20,
+   "topic": "virtual_polymorphism",
+   "question": "מהן השגיאות בקטע הקוד הבא:\n```cpp\n#include <string.h>\n\nclass Base {\n    int* br;\npublic:\n    Base() { br = NULL; }\n    ~Base() {\n        if(br!=NULL)\n            delete br; }\n};\n\nclass Derived : public Base {\n    int* dr;\npublic:\n    Derived() { dr = NULL; }\n    ~Derived() {\n        if(dr!=NULL)\n            delete[] dr; }\n    void f() { dr = new int[10]; }\n};\n\nvoid main(){\n    Base *bp = new Base;\n    delete bp;\n    bp = new Derived;\n    delete bp;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שגיאת קומפילציה בגלל חוסר של בנאי העתקה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שגיאת קומפילציה בגלל חוסר של אופרטור השמה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאות אחרות (כולל שגיאות עקרוניות של המתכנת)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אין שגיאות בקטע הקוד הנ\"ל"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "contextId": "notes",
+   "explanation": "הקוד מתקמפל: בנאי העתקה ואופרטור השמה נוצרים אוטומטית ולא נדרשים, ולכן א ו-ב שגויות. אבל `Base` לא מגדירה הורס וירטואלי, ולכן `delete bp` על אובייקט `Derived` מפעיל רק את `~Base` וההתנהגות אינה מוגדרת (בהרצה נדפס רק `B`). זו שגיאה עקרונית של המתכנת (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key from the clang++ run plus a trace (student sheet agrees): the program compiles (so a, b are wrong), but deleting a Derived through a Base* whose destructor is not virtual runs only ~Base (trace printed `B`): undefined behaviour, i.e. a conceptual error (c). Confidence med because 'other errors' is judged, not run."
+  }
+ ]
+}
