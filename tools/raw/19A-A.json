@@ -1,0 +1,872 @@
+{
+ "examCode": "19A-A",
+ "examLabel": "2019 סמסטר א מועד א",
+ "year": 2019,
+ "examDate": "27.02.2019",
+ "sourceFile": "2019/סמ׳ א מועד א + פתרון.pdf",
+ "keyFile": "same file (correct option highlighted in yellow on the paper; Q7 has no highlight, key from the clang++ run)",
+ "contexts": {
+  "notes": {
+   "kind": "text",
+   "title": "הוראות לנבחן",
+   "text": "בכל אחת מהשאלות להלן עליך לסמן את התשובה הנכונה ביותר."
+  }
+ },
+ "questions": [
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "מה גורם לשגיאת קומפילציה\n```cpp\n1. int x = 5;\n2. int &r = x;\n3. r = 7;\n4. int &s = x;\n5. s = 7\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 2 ו-4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 4"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורה 5"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הקוד מתקמפל: `r` ו-`s` הן הפניות מאותחלות ל-`x`, וההשמות דרכן תקינות. (בשורה 5 מודפס בדף `s = 7` בלי נקודה-פסיק, כנראה טעות דפוס, ואם משלימים אותה אין שגיאה באף שורה.)\nהתשובה היא אף שורה (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: the snippet is printed with no `;` after `s = 7` on line 5 (a typo; with the `;` added there is no error on any line). Agrees with the key on that reading.",
+   "contextId": "notes",
+   "correctId": "a"
+  },
+  {
+   "num": 2,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התוכנית\n```cpp\n#include <iostream>\nint & f(int &x, int  y) { x=--y; return x; }\nvoid main() { int x=4; std::cout << f(x,x)++ ; std::cout << ++x;}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`45`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`44`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`35`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בקריאה `f(x,x)` הפרמטר `x` הוא הפניה ל-`x` של `main`, ו-`y` הוא עותק. `x = --y` נותן `y` = 3 ו-`x` = 3, והפונקציה מחזירה הפניה ל-`x`. הביטוי `f(x,x)++` מדפיס את הערך 3 ואז מגדיל את `x` ל-4. אחר כך `++x` מדפיס 5.\nהפלט הוא `35` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: prints 35 (y is a copy: x = 3, f returns x, post-increment prints 3, then ++x prints 5). Agrees.",
+   "contextId": "notes",
+   "correctId": "d"
+  },
+  {
+   "num": 3,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התוכנית\n```cpp\nint funC(int i=10) {return i+1;}\nint funC() {return 8;}\n#include <iostream>\nvoid main () { std::cout << funC() << funC(8); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`89`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`88`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`99`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הקריאה `funC()` דו-משמעית: היא מתאימה גם ל-`funC()` וגם ל-`funC(int i=10)` עם ערך ברירת המחדל. הקומפיילר מדווח על שגיאה.\nהתשובה היא שהתכנית לא עוברת קומפילציה (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: `funC()` is ambiguous between `funC()` and `funC(int i=10)`: compile error. Agrees.",
+   "contextId": "notes",
+   "correctId": "a"
+  },
+  {
+   "num": 4,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nusing namespace std;\nint &f(int &i)\n{\n    static int r = 0;\n    r+=i;\n    return r;\n}\nvoid main()\n{\n    int i = 5;\n    f(i) += i;\n    cout << f(i) << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`5`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`10`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`15`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`20`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "המשתנה `r` סטטי ושומר את ערכו בין קריאות. הקריאה הראשונה מוסיפה 5 ל-`r` (5) ומחזירה הפניה אליו, ו-`+= i` מעלה אותו ל-10. הקריאה השנייה מוסיפה עוד 5 ומדפיסה 15.\nהפלט הוא `15` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: prints 15 (r = 5, then `+= i` makes it 10, the second call adds 5 more). Agrees.",
+   "contextId": "notes",
+   "correctId": "c"
+  },
+  {
+   "num": 5,
+   "topic": "friend_this_static",
+   "question": "נתונות הגדרות של מחלקות `A` ו-`B`:\n```cpp\nclass A { … };\nclass B { friend class A; …};\n```\nמשמעות הגדרות היא:\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "למחלקה `A` מותר לגשת לכל משתני המחלקה `B`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "למחלקה `B` מותר לגשת לכל משתני המחלקה `A`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "למחלקה `A` מותר לגשת לכל משתני המחלקה `B` ולהיפך"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "למחלקה `A` מותר לגשת למשתני המחלקה `B` שמוגדרים `public` ו-`protected` אבל לא `private`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההצהרה `friend class A;` בתוך `B` נותנת למחלקה `A` גישה לכל החברים של `B`, כולל הפרטיים. הידידות חד-כיוונית, ולכן ל-`B` אין גישה אוטומטית לחברי `A`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: with `friend class A;` inside B, A's members read B's private fields; B cannot read A's private fields. Agrees.",
+   "contextId": "notes",
+   "correctId": "a"
+  },
+  {
+   "num": 6,
+   "topic": "classes_ctor_dtor",
+   "question": "הנח שהוגדרה מחלקה בשם `A` (בעלת בנאי ברירת מחדל (default constructor)) והתבונן במשפט הבא:\n```cpp\nA *a = new A;\n```\nמתי ייקרא ההורס (destructor) של המחלקה `A`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "בעקבות הפעלת אופרטור `delete` על ההמשתנה `a`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בסוף תחום ההגדרה בו הוגדר המשתנה `a`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תשובות (א) ו-(ב) נכונות"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "עבור אובייקט שנוצר ב-`new`, ההורס נקרא רק כשמפעילים `delete`. כשהמצביע `a` יוצא מהתחום האובייקט לא נהרס (דליפת זיכרון).\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: the destructor message appears only after `delete a`; a pointer leaving its scope destroys nothing. Agrees.",
+   "contextId": "notes",
+   "correctId": "a",
+   "lockOrder": true
+  },
+  {
+   "num": 7,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nusing namespace std;\nclass X {\npublic:\n    X(int i) { n = i;  cout << i; }\n    ~X() { cout << n; }\n    int n;\n};\nint f() {\n    X x1(1);\n    return x1.n;\n}\nX x2(2);\nint main() {\n    X x3(3);\n    cout << f();\n    static X x4(4);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`231114342`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`23411142`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`23114342`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הסדר: המשתנה הגלובלי `x2(2)` נבנה קודם (2), ואז `x3(3)` ב-`main` (3). הקריאה ל-`f` בונה את `x1` (1), מעתיקה את `n`, והורסת את `x1` (1) לפני שהערך המוחזר מודפס (1). אחר כך נבנה הסטטי `x4(4)` (4). בסיום `main` נהרס `x3` (3), ואחריו הסטטי `x4` (4) והגלובלי `x2` (2), בסדר הפוך לבנייה.\nהפלט הוא `231114342` (תשובה א). בדף לא סומנה תשובה לשאלה זו, והתשובה נקבעה מהרצת הקוד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No highlight on the paper for this question. Key derived from the clang++ run: 231114342 (x2, x3, then f: x1 ctor 1, x1 dtor 1, prints 1; x4 ctor 4; at exit x3, x4, x2 destroyed: 3 4 2). Option a matches exactly.",
+   "contextId": "notes",
+   "correctId": "a"
+  },
+  {
+   "num": 8,
+   "topic": "classes_ctor_dtor",
+   "question": "איזו מהפונקציות הבאות לא קיימת במחלקה שמוגדרת באופן הבא: `A{};`\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "בנאי (constructor)"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אופרטור השמה (`=`)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אופרטור השוואה (`==`)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הורס (destructor)"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הקומפיילר מייצר למחלקה ריקה בנאי, אופרטור השמה והורס. הוא לא מייצר אופרטור השוואה `==`, ולכן `a == b` לא מתקמפל.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run on `class A{};`: construction, assignment and destruction compile; `a == b` does not. Agrees (the paper prints `A{};` without `class`).",
+   "contextId": "notes",
+   "correctId": "c"
+  },
+  {
+   "num": 9,
+   "topic": "copy_control",
+   "question": "באיזה מקרה **לא** נקרא בנאי העתקה (copy constructor) של מחלקה `A`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "כאשר פונקציה מחזירה אובייקט מטיפוס `A`."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "כאשר לפונקציה מועבר ארגומנט (פרמטר) מטיפוס `A`."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "כאשר מתבצעת השמה בין אובייקטים מטיפוס `A`."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בכל המקרים שמופיעים בתשובות (א)-(ג) נקרא בנאי העתקה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בנאי העתקה נקרא בהעברת אובייקט לפי ערך, ובהחזרת אובייקט לפי ערך (אלא אם הקומפיילר מבטל את ההעתקה). השמה בין אובייקטים קיימים קוראת לאופרטור ההשמה ולא לבנאי ההעתקה.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run with a counting copy constructor: passing by value and (with -fno-elide-constructors) returning by value call it; assignment `a = b` calls only operator=. Agrees.",
+   "contextId": "notes",
+   "correctId": "c",
+   "lockOrder": true
+  },
+  {
+   "num": 10,
+   "topic": "const_references",
+   "question": "```cpp\nclass A {\n  int K ;\n  int* f(const int *k) const { return _____; }\n};\n```\nמה ניתן לכתוב ב-`_____` כך שהקוד יעבור קומפילציה\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`this->K`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`K+k`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`new int(*k+K)`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`k`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה מחזירה `int*` והיא `const`, ולכן `K` הוא `const int` בתוכה. רק `new int(*k+K)` מחזיר `int*`. הביטוי `this->K` הוא `int`, ואילו `K+k` ו-`k` הם `const int*` שלא ניתן להמיר ל-`int*`.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: only `new int(*k+K)` compiles (returns `int*`); `this->K` is an int, `K+k` and `k` are `const int*` and cannot convert to `int*`. Agrees.",
+   "contextId": "notes",
+   "correctId": "c"
+  },
+  {
+   "num": 11,
+   "topic": "const_references",
+   "question": "למשתני מחלקה שמוגדרים כ-`const` ניתן לבצע **השמה**:\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מכל מקום בתכנית במידה והם מוגדרים כ-`public`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "רק מתוך פונקציות המוגדרות באותה מחלקה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "רק מתוך בנאי שמוגדר באותה מחלקה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שדה `const` אי אפשר להשים אליו מאף מקום, לא מ-`main`, לא ממתודה ולא מגוף הבנאי. אפשר רק לאתחל אותו ברשימת האתחול של הבנאי.\nהתשובה היא אף תשובה אינה נכונה (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: assignment to a const member fails in main, in a member function and in a constructor body (only initialization in the init list is allowed). Agrees.",
+   "contextId": "notes",
+   "correctId": "d"
+  },
+  {
+   "num": 12,
+   "topic": "composition",
+   "question": "בשאלה זו הנח שלא ניתן לאתחל שדות במקום הגדרתם.\nשלוש תלמידות נשאלו מתי רשימת אתחול של בנאי מחלקה לא יכולה להיות ריקה? הן השיבו:\nתלמידה 1: כאשר במחלקה קיים שדה שמוגדר כ-`const`.\nתלמידה 2: כאשר במחלקה קיים שדה הפנייה (reference).\nתלמידה 3: כאשר המחלקה יורשת ממחלקה אחרת, בה אין בנאי ברירת מחדל.\nכמה מהתלמידות צדקו?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`0`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`2`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`3`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שלושת המקרים דורשים רשימת אתחול: שדה `const` חייב אתחול, שדה הפניה חייב אתחול, ומחלקת בסיס בלי בנאי ברירת מחדל דורשת קריאה מפורשת לבנאי שלה. כל שלוש התלמידות צדקו.\nהתשובה היא `3` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: with an empty init list each of the three situations fails to compile. Agrees.",
+   "contextId": "notes",
+   "correctId": "d"
+  },
+  {
+   "num": 13,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התוכנית\n```cpp\n#include <iostream>\nclass A {\npublic:\n    A() { std::cout << \"a\"; }\n    ~A() { std::cout << \"A\"; }\n};\nclass B {\npublic:\n    B() { std::cout << \"b\"; }\n    ~B() { std::cout << \"B\"; }\n};\nclass C {\npublic:\n    C() { std::cout << \"c\"; }\n    ~C() { std::cout << \"C\"; }\n};\nA a;\nint main() {\n    C c;\n    B b;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`cba`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`abc`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`cbaBCA`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`acbBCA`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "המשתנה הגלובלי `a` נבנה לפני `main` (`a`). בתוך `main` נבנים `c` ואז `b`. ההריסה בסדר הפוך: `b` (`B`), `c` (`C`), ובסוף הגלובלי (`A`).\nהפלט הוא `acbBCA` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: prints acbBCA (global a first; locals c, b; destroyed b, c, then the global). Agrees.",
+   "contextId": "notes",
+   "correctId": "d"
+  },
+  {
+   "num": 14,
+   "topic": "const_references",
+   "question": "מה מדפיסה התכנית?\n```cpp\n#include <iostream>\nusing namespace std;\nclass X {\npublic:\n    X(int i=0) : n(i) { }\n    void f() const { cout << n; }\n    void f() { cout << n*2; }\n    int n;\n};\nint main() {\n    X x1(2);\n    const X x2(3);\n    x1.f();\n    x2.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`43`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`34`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`26`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`42`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בעומס יתר לפי `const`, אובייקט לא-const קורא לגרסה הלא-const (`n*2`), ואובייקט `const` קורא לגרסת ה-`const`. `x1.f()` מדפיס 4, ו-`x2.f()` מדפיס 3.\nהפלט הוא `43` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: prints 43 (non-const object picks the non-const f: 2*2; the const object picks the const f: 3). Agrees.",
+   "contextId": "notes",
+   "correctId": "a"
+  },
+  {
+   "num": 15,
+   "topic": "inheritance_access",
+   "question": "אילו שורות גורמות לשגיאת קומפילציה בקטע הקוד הבא:\n```cpp\n 1. #include <iostream>\n 2. using namespace std;\n 3. class X {\n 4. public:\n 5.     X(int i = 0) : nx(i) {}\n 6.     void f() { cout << nx; }\n 7.     int nx;\n 8. };\n 9. class Y : public X {\n10. public:\n11.     Y(int i = 0, int j = 0) : X(i),ny(j) {}\n12.     void h() {\n13.       this->X::f();\n14.       cout << ny; }\n15.     int ny;\n16. };\n17. int main() {\n18.     Y y1(2);\n19.     y1.X::f();\n20.     X::f();\n21.     y1.f();\n22.     y1.X::h();\n23. }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "שורות 13,19,20,21,22"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורות 13,19,20,22"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורות 13,20,22"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 20 ו-22"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "- שורה 13: `this->X::f()` תקינה.\n- שורה 19: `y1.X::f()` תקינה.\n- שורה 20: `X::f()` ב-`main` קוראת לפונקציה לא סטטית בלי אובייקט, שגיאה.\n- שורה 21: `y1.f()` תקינה, כי `f` עוברת בירושה.\n- שורה 22: `y1.X::h()` שגויה, כי `h` שייכת ל-`Y` ולא ל-`X`.\nהתשובה היא שורות 20 ו-22 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: errors on lines 20 (`X::f()` without an object) and 22 (`h` is not a member of X); lines 13, 19 and 21 compile. Agrees.",
+   "contextId": "notes",
+   "correctId": "d"
+  },
+  {
+   "num": 16,
+   "topic": "construction_order",
+   "question": "מה יודפס עבור הקוד\n```cpp\n#include <iostream>\nclass A {\npublic:\n    A(int) {std::cout << \" A int \";}\n    A() {std::cout << \"A empty \";}\n    virtual ~A() {std::cout << \" destroy A\";}\n};\nclass B : public A{\npublic:\n    B(int):A() {std::cout << \"B int \";}\n    B() {std::cout << \"B empty \";}\n    virtual ~B() {std::cout << \" destroy B\";}\n};\nB b(3);\nvoid main() { A a(3); }\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A empty B int A int destroy A destroy B destroy A`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`A int A int destroy B destroy A`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`B int A int destroy A destroy B`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`A int B int destroy A destroy B destroy A`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "המשתנה הגלובלי `b(3)` נבנה לפני `main`: קודם הבסיס `A()` מדפיס `A empty`, ואז `B int`. ב-`main` נבנה `A a(3)` ומדפיס `A int`, ובסוף `main` ההורס שלו מדפיס `destroy A`. בסיום התכנית נהרס הגלובלי: `destroy B` ואז `destroy A`.\nהפלט הוא הפלט שבתשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run (curly quotes of the source replaced by ASCII quotes): the output, with runs of spaces collapsed, is exactly option a. Agrees.",
+   "contextId": "notes",
+   "correctId": "a"
+  },
+  {
+   "num": 17,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התוכנית\n```cpp\n#include <iostream>\nclass A {\npublic: void f() { std::cout << \"A\"; }\n};\nclass B : public A {\npublic: void f() { std::cout << \"B\"; }\n};\nvoid g(A &a) { a.f(); }\nint main() {\n    B b;\n    g(b);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`A`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`B`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`AB`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`BA`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "הפונקציה `f` אינה וירטואלית, לכן הקריאה דרך הפניה מטיפוס `A&` נקשרת סטטית ל-`A::f`.\nהפלט הוא `A` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: prints A (`f` is not virtual, so the call through `A&` binds to A::f). Agrees.",
+   "contextId": "notes",
+   "correctId": "a"
+  },
+  {
+   "num": 18,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התוכנית\n```cpp\n#include <iostream>\nclass B{\npublic:\n    void disp() { std::cout<<\"B\"; }\n};\nclass D:public B{\npublic:\n    void disp() { std::cout<<\"D\"; }\n};\nvoid main(){\n    D d;\n    d.disp();\n    D *pd=&d;\n    pd->disp();\n    B *pb=pd;\n    pb->disp();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`DDB`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`DDD`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`BBB`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בקריאות דרך `d` ודרך `pd` (טיפוס `D`) נבחרת `D::disp`. הקריאה דרך `pb` מטיפוס `B*` נקשרת ל-`B::disp`, כי הפונקציה אינה וירטואלית.\nהפלט הוא `DDB` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: prints DDB (static binding by pointer type). Agrees.",
+   "contextId": "notes",
+   "correctId": "b"
+  },
+  {
+   "num": 19,
+   "topic": "copy_control",
+   "question": "בקטע הקוד הבא:\n```cpp\n#include <iostream>\nusing namespace std;\nclass X {\npublic:\n    X(int i = 0) { p = new(int);\n                   *p = i;\n    }\n    ~X() { delete p; }\n    int* p;\n};\n\nint main() {\n    X x1(1);\n    X x2(2);\n    x2 = x1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מתקבלת שגיאה בזמן ביצוע שורת קוד של ה-constructor"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "מתקבלת שגיאה בזמן ביצוע שורת קוד של ה-destructor"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "מתקבלת שגיאה בזמן ביצוע שורת קוד של הפונקציה `main`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא מתקבלת שגיאה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההשמה `x2 = x1` היא השמה רדודה: המצביע `p` מועתק, כך שהבלוק של `x2` דולף ושני האובייקטים מצביעים לאותו בלוק. בסוף `main` ההורס של כל אחד מהם מבצע `delete` לאותו בלוק, וההרצה קורסת בתוך ההורס.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: the default assignment copies the pointer, so at the end both objects `delete` the same block; the double delete aborts the program from inside the destructor. Agrees.",
+   "contextId": "notes",
+   "correctId": "b"
+  },
+  {
+   "num": 20,
+   "topic": "friend_this_static",
+   "question": "נתונה מחלקה `C` בה יש 3 משתני מחלקה שמוגדרים כ-`public`, `protected` ו-`private`. למי מבין הבאים יש גישה למספר גדול יותר של משתנים במחלקה `C`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "למחלקה `D` שיורשת מ-`C` ירושת `public`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לפונקציה `F` שמוגדרת כ-`friend` במחלקה `C`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "למחלקה `X` שמוגדרת כ-`friend` במחלקה `C`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התשובות (ב) ו-(ג) נכונות."
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "מחלקה יורשת בירושה ציבורית רואה את החברים הציבוריים והמוגנים (2 מתוך 3). פונקציה ידידה ומחלקה ידידה רואות את כולם (3 מתוך 3).\nלכן תשובות ב ו-ג נכונות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: the derived class reaches 2 of the 3 fields (public, protected); a friend function and a friend class reach all 3. Agrees.",
+   "contextId": "notes",
+   "correctId": "d",
+   "lockOrder": true
+  },
+  {
+   "num": 21,
+   "topic": "copy_control",
+   "question": "מהי ההצהרה הנכונה ביותר (שתואמת את התנהגות הטיפוס `int`) של אופרטור השמה (`=`) עבור המחלקה `C`?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`C &operator=( const C & )`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`const C &operator=( const C & )`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`const C &operator=( C & )`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`const C &operator=( const C & ) const`"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "כדי להתנהג כמו `int` (שבו `(a = b) = c` ו-`a = b = c` חוקיים), אופרטור ההשמה מקבל `const C &` ומחזיר `C &` לא קבועה. החזרת `const C &` חוסמת את `(a = b) = c`, פרמטר לא קבוע לא מקבל אובייקט `const`, ואופרטור `const` לא יכול לשנות את האובייקט.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: like `int`, the chained forms `(a = b) = c` and `a = b = c` compile only with a non-const reference result; the other declarations return const (no `(a = b) = c`) or are const members that cannot modify the object. Agrees.",
+   "contextId": "notes",
+   "correctId": "a"
+  },
+  {
+   "num": 22,
+   "topic": "templates",
+   "question": "נתון קטע תכנית:\n```cpp\n1. template<typename T> void f(T t) { int n = t; }\n2. template<typename T> void g(int n) { T t = n; }\n3. int main() {\n4.     f(5);\n5.     g(5);\n6. }\n```\nאילו שורות גורמות לשגיאת קומפילציה?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף שורה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שורה 4"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שורה 5"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שורות 4 ו-5"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "בקריאה `f(5)` הטיפוס `T` מוסק כ-`int`, והקוד תקין. בקריאה `g(5)` אין פרמטר מטיפוס `T`, ולכן הקומפיילר לא יכול להסיק אותו, והשורה שגויה.\nהתשובה היא שורה 5 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key c. clang++ run: line 5 fails (`T` cannot be deduced for `g`); line 4 compiles. Agrees.",
+   "contextId": "notes",
+   "correctId": "c"
+  },
+  {
+   "num": 23,
+   "topic": "templates",
+   "question": "נתון קטע תכנית:\n```cpp\ntemplate<typename T> void f() {}\ntemplate<typename T> class X { friend void f<T>(); };\n```\nאיזו מהטענות נכונה?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הפונקציה `f<double>` היא חברה של המחלקה `X<double>`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הפונקציה `f<int>` היא חברה של המחלקה `X<double>`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תשובות (א) ו-(ב) נכונות"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "ההצהרה `friend void f<T>();` בתוך `X<T>` מצהירה על ידידות לאותו מופע של התבנית `f` עם אותו `T`. לכן `f<double>` היא חברה של `X<double>`, ו-`f<int>` אינה חברה של `X<double>`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key a. clang++ run: with a private field added to X and f reading it, `f<double>` can read `X<double>`'s field and `f<int>` cannot. Agrees.",
+   "contextId": "notes",
+   "correctId": "a",
+   "lockOrder": true
+  },
+  {
+   "num": 24,
+   "topic": "templates",
+   "question": "נתונות מחלקה `X` ומחלקה `Y` שיורשת מ-`X`. כמו כן, נתונה תבנית מחלקה `A<T>`.\nאיזו מהטענות נכונה?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ניתן לבצע השמה ממשתנה מטיפוס `A<Y>` למשתנה מטיפוס `A<X>`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ניתן לבצע השמה ממשתנה מטיפוס `A<X>` למשתנה מטיפוס `A<Y>`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תשובות (א) ו-(ב) נכונות"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "שני מופעים שונים של תבנית (`A<X>` ו-`A<Y>`) הם טיפוסים לא קשורים, גם אם `Y` יורשת מ-`X`. אין המרה או השמה ביניהם, בשני הכיוונים.\nהתשובה היא אף תשובה אינה נכונה (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key d. clang++ run: `A<X> = A<Y>` and `A<Y> = A<X>` both fail (different, unrelated instantiations). Agrees.",
+   "contextId": "notes",
+   "correctId": "d",
+   "lockOrder": true
+  },
+  {
+   "num": 25,
+   "topic": "stl_exceptions",
+   "question": "איזו פעולה איטרטור (iterator) לא יודע לעשות (כלומר לא מוגדרת במחלקה שלו)?\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התקדמות לאיבר הבא"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הסרת האיבר המוצבע"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "איחזור ערך האיבר המוצבע"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "השוואה עם איטרטור אחר"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "איטרטור יודע להתקדם (`++it`), לאחזר את הערך (`*it`) ולהשוות (`==`). הסרת האיבר נעשית דרך המכל, `v.erase(it)`, ואינה פעולה של האיטרטור.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Official key b. clang++ run: `++it`, `*it` and `it == it2` compile on a vector iterator; `it.erase()` does not (removal is done by the container, `v.erase(it)`). Agrees.",
+   "contextId": "notes",
+   "correctId": "b"
+  }
+ ]
+}
