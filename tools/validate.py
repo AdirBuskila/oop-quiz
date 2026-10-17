@@ -9,6 +9,7 @@ Exit code 1 if any PROBLEM is found. Prints ASCII only.
 import json, pathlib, re, sys, collections, unicodedata
 
 TOOLS = pathlib.Path(__file__).resolve().parent
+EXAM_RE = re.compile(r"^(\d{2}[A-Z]-[A-Z]|SAMP-\d+|DEMO-[A-Z])\.json$")  # only real exam files; tmp_*/_verify_*/_blind_* are ignored
 RAW = TOOLS / "raw"
 ROOT = TOOLS.parent
 
@@ -311,7 +312,7 @@ def main():
             p = pathlib.Path(a)
             files.append(p if p.suffix == ".json" else RAW / f"{a}.json")
     else:
-        files = [p for p in sorted(RAW.glob("*.json")) if not p.name.startswith("_")]
+        files = [p for p in sorted(RAW.glob("*.json")) if EXAM_RE.match(p.name)]
     total, all_p, all_w, topics = 0, [], [], collections.Counter()
     for fp in files:
         if not fp.is_file():

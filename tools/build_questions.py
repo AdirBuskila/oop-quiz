@@ -24,6 +24,7 @@ import collections, glob, hashlib, html, json, pathlib, re, subprocess, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 TOOLS = pathlib.Path(__file__).resolve().parent
+EXAM_RE = re.compile(r"^(\d{2}[A-Z]-[A-Z]|SAMP-\d+|DEMO-[A-Z])\.json$")  # only real exam files; tmp_*/_verify_*/_blind_* are ignored
 RAW = TOOLS / "raw"
 OUT = TOOLS.parent
 
@@ -336,7 +337,7 @@ def exam_order(code):
 
 # ---------------------------------------------------------------- main
 def main():
-    raw_files = [p for p in sorted(RAW.glob("*.json")) if not p.name.startswith("_")]
+    raw_files = [p for p in sorted(RAW.glob("*.json")) if EXAM_RE.match(p.name)]
     bank = MathBank()
     math_errors = []
     contexts, questions, problems = {}, [], []
