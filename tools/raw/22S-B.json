@@ -1,0 +1,501 @@
+{
+ "examCode": "22S-B",
+ "examLabel": "2022 סמסטר קיץ מועד ב",
+ "year": 2022,
+ "examDate": "25.10.2022",
+ "sourceFile": "2022/סמ׳ ג מועד ב + פתרון.pdf",
+ "keyFile": "none (no answer source in the file; keys derived by clang++ runs, tools/verify/22S-B/)",
+ "questions": [
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "איזה בין הטענות הבאות **הטענה הנכונה**? נא לבחור תשובה אחד בלבד!\nמה מדפיסה התוכנית הבאה:\n```cpp\n#include <iostream>\nusing std::cout;\n\nint f(int &x, int c) {\n    c = c - 1;\n    if (c == 0) return 1;\n    x = x + 1;\n    return f(x, c) * x;\n}\n\nvoid main() {\n    int p = 5;\n    cout << f(p, p);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "6561"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "3024"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "5544"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה."
+    }
+   ],
+   "note": "No key in the source; clang++ run decides.",
+   "hold": "unspecified-evaluation-order: clang++ 6561 (a) vs right-to-left compilers 3024 (b); no key in source"
+  },
+  {
+   "num": 2,
+   "topic": "construction_order",
+   "question": "מה יודפס בקטע קוד הבא ?\n```cpp\nclass A {\npublic:\n    A(int i) {\n        cout << \"A's Constructor\" << i << endl;\n    }\n    A(const A & other) {\n        cout << \"A's copy Constructor\" << endl;\n    }\n    A& operator=(A& other) {\n        cout << \"A=\" << endl;\n        return *this;\n    }\n    virtual void f(int i = 7) const {\n        cout << \"A's f\" << i << endl;\n    }\n};\nclass B:public A {\npublic:\n    B() : A(2) {\n        cout << \"B's default Constructor\" << endl;\n    }\n    B(int i,int j) : A(i) {\n        cout << \"B's parameter Constructor\" << i << j << endl;\n    }\n    virtual ~B() {\n        cout << \"B's Destructor\" << endl;\n    }\n    void f(int k = 9,int q = 10) const {\n        cout << \"B's f\" << k << q << endl;\n        A::f(q);\n    }\n};\nint main() {\n    B b1(19,20);\n    A a1 = b1;\n    A* p;\n    p = new B[2];\n    p[0] = b1;\n    p[0].f(2,3);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "A's Constructor19\nB's parameter Constructor1920\nA's copy Constructor\nA's Constructor2\nB's default Constructor\nA's Constructor2\nB's default Constructor\nA=\nB’s f23\nB’s f3\nB's Destructor"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "B's parameter Constructor1920\nA's Constructor19\nA's copy Constructor\nB's default Constructor\nA's Constructor2\nA's Constructor2\nB's default Constructor\nA=\nB’s f23\nB’s f3\nB's Destructor"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "A's Constructor19\nB's parameter Constructor1920\nA's copy Constructor\nB's default Constructor\nA's Constructor2\nA's Constructor2\nB's default Constructor\nB's Destructor\nA=\nB’s f23\nB’s f3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התוכנית לא מתקמפלת"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הקוד מגיע לשורה `p[0].f(2,3)`, ושם `p` הוא מצביע מטיפוס `A*`, ולכן `p[0]` הוא אובייקט מטיפוס `A`. בשפה הפונקציה שנקראת נבחרת לפי הטיפוס הסטטי: ב-`A` הפונקציה `f` מקבלת ארגומנט אחד (`int i = 7`), והקריאה שולחת שניים. ההגדרה `f(int k, int q)` של `B` לא נראית דרך `A`. זו שגיאת קומפילציה (clang++: too many arguments to function call), ולכן התוכנית אינה מתקמפלת (תשובה ד) ואף פלט אינו מודפס. שלוש האפשרויות האחרות מתארות הרצה שלא מתרחשת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 3,
+   "topic": "virtual_polymorphism",
+   "question": "איזה בין הטענות הבאות **הטענה הנכונה**? נא לבחור תשובה אחד בלבד!\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ה- `virtual table` נוצרת עבור האובייקט של המחלקה המכילה לפחות פונקציה וירטואלית אחת"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ה- `virtual table` נוצרת עבור כל אובייקט ב- C++"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "ה- `virtual table` מציינת מצביע עבור כל הפונקציות ותכונות במחלקה וירטואלית"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ה- `virtual table` נוצרת עבור כל מחלקה ב- C++"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "ה-vtable נוצרת פעם אחת לכל מחלקה שיש בה (או בבסיס שלה) לפחות פונקציה וירטואלית, ולא לכל מחלקה (ד שגויה) ולא לכל אובייקט (ב שגויה). כל אובייקט של מחלקה כזו מחזיק רק מצביע (`vptr`) אל ה-vtable של המחלקה שלו. הטענה ג שגויה כי ה-vtable מכילה מצביעים לפונקציות הוירטואליות בלבד, לא לתכונות. נשארת א כטענה הקרובה ביותר לנכון: ה-vtable קיימת עבור מחלקה שמכילה לפחות פונקציה וירטואלית אחת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule."
+  },
+  {
+   "num": 4,
+   "topic": "construction_order",
+   "question": "מה יודפס בקטע הקוד הבא?\n```cpp\nclass A {\npublic:\n    int x;\n    A() {\n        x = 6;\n        cout << \"A's Constructor \" << x << endl;\n    }\n    A(int i) {\n        cout << \"A's Constructor \" << i << endl;\n        x = i;\n    }\n    A(const A& other) {\n        cout << \"A's copy Constructor \" << endl;\n    }\n    A& operator=(A& other) {\n        cout << \"A= \" << other.x << endl;\n        return *this;\n    }\n    void virtual f(int i = 8) const {\n        cout << \"A's f \" << i << endl;\n    }\n};\nvoid main(){\n    A arr[3];\n    arr[0] = arr[1];\n    arr[0].f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "A's Constructor 6\nA's Constructor 6\nA's Constructor 6\nA= 6\nA's f 8"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "A's Constructor 6\nA's Constructor 6\nA's Constructor 6\nA's f 8\nA= 6"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "A's Constructor 6\nA's Constructor 6\nA's f 8\nA's Constructor 6\nA= 6"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התוכנית תקרוס תוך כדי ריצה"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההצהרה `A arr[3]` מפעילה את בנאי ברירת המחדל שלוש פעמים, ומדפיסה שלוש שורות `A's Constructor 6`. אחר כך `arr[0] = arr[1]` קוראת לאופרטור ההשמה ומדפיסה `A= 6` (`other.x` הוא 6). לבסוף `arr[0].f()` מדפיסה `A's f 8` (ערך ברירת המחדל). הפלט הוא האפשרות א. בשתי האפשרויות האחרות הסדר שגוי, ואין קריסה בהרצה (הרצת clang++ הדפיסה בדיוק את הפלט של א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 5,
+   "topic": "friend_this_static",
+   "question": "איזה בין הטענות הבאות **הטענה הנכונה**? נא לבחור תשובה אחד בלבד!\nהפונקציה החברה (`friend`) היא:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "פונקציה הנחתמת בגוף המחלקה כולל תכונת `friend`, אבל לא שייכת למחלקה והיא פונקציה גלובלית."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פונקציה של מחלקה אחרת הנחתמת במחלקה הנוכחית עם תכונת `friend`."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציה של המחלקה כולל תכונת `friend`."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הפונקציה של המחלקה הנוכחית שנחתמת במחלקה אחרת."
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "פונקציה חברה (`friend`) מוצהרת בתוך גוף המחלקה עם המילה `friend`, אבל היא אינה חלק מהמחלקה (אינה פונקציה חברה-מחלקה) ולכן היא פונקציה גלובלית שמותר לה לגשת לחברים הפרטיים. זו האפשרות א. האפשרות ג שגויה כי `friend` אינה פונקציה של המחלקה, וד הפוכה מההגדרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule."
+  },
+  {
+   "num": 6,
+   "topic": "inheritance_access",
+   "question": "איזה בין הטענות הבאות **הטענה הנכונה**? נא לבחור תשובה אחד בלבד!\nהרשאה `protected` במחלקה מאפשרת:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "תכונות ופונקציות של המחלקה ניתן לזמן גם בתוך המחלקה וגם להשתמש בהם מחוץ למחלקה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "תכונות ופונקציות של המחלקה ניתן לזמן אך ורק בתוך המחלקה או במחלקות נגזרות (יורשות) ממנה."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תכונות ופונקציות של המחלקה ניתן לזמן אך ורק בתוך המחלקה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף טענה לא נכונה."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הרשאת `protected` מאפשרת גישה לחברים רק מתוך המחלקה עצמה ומתוך מחלקות שיורשות ממנה, ולא מבחוץ. זו האפשרות ב. א מתארת את `public`, ג מתארת את `private`, ולכן ד שגויה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule."
+  },
+  {
+   "num": 7,
+   "topic": "templates",
+   "question": "מה יודפס ?\n```cpp\ntemplate<class T>class Counter\n{\n    static int counter;\n    const int id;\npublic:\n    Counter() :id(++counter) {}\n    int getId() { return id; }\n    static int getCounter() { return counter; }\n};\nclass B : public Counter<B> {};\nclass C : public Counter<C> {};\ntemplate<class T>\nint Counter<T>::counter = 0;\nC c;\nint main()\n{\n    B b;\n    static C c;\n    cout << B::getCounter() << b.getId() ; cout << C::getCounter();\n    C* pc = new C();\n    cout << B::getCounter() ;\n    cout << C::getCounter()  << pc->getId() ;\n    return 1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התוכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "התוכנית זורקת הודעת חריגה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "112133"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "111223"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ל-`Counter<B>` ול-`Counter<C>` יש `counter` סטטי נפרד לכל אחד, כי כל מופע של התבנית הוא מחלקה נפרדת. האובייקט הגלובלי `C c` נבנה לפני `main` ומקדם את מונה `C` ל-1. ב-`main`: `B b` מקדם את מונה `B` ל-1 (`id` 1), ו-`static C c` מקדם את מונה `C` ל-2. ההדפסה הראשונה: `B::getCounter()` הוא 1, `b.getId()` הוא 1, `C::getCounter()` הוא 2, כלומר `112`. אחר כך `new C()` מקדם את מונה `C` ל-3 (`id` 3): `1`, `3`, `3`, כלומר `133`. הפלט `112133` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 8,
+   "topic": "construction_order",
+   "question": "מה יודפס ?\n```cpp\nclass A {\npublic: A() { cout << \"ea\"; }\n    ~A() { cout << \"A\"; }\n};\nclass C {\npublic: C() { cout << \"c\"; }\n    ~C() { cout << \"C\"; }\n};\nclass B :public A {\npublic:\n    C c;\n    B() {\n        cout << \"eb\";\n    }\n    ~B() { cout << \"B\"; }\n};\nB b;\nint main()\n{\n    A a;\n    C c;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התוכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "acbaceacCACBA"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "eacebeacCABCA"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "eacaccabCCAAB"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האובייקט הגלובלי `b` נבנה לפני `main`: קודם הבסיס `A` (`ea`), אחר כך החבר `C c` (`c`), ואז גוף הבנאי של `B` (`eb`), כלומר `eaceb`. ב-`main` נבנים `a` (`ea`) ו-`c` (`c`): `eac`. בסיום `main` הם נהרסים בסדר הפוך: `C` ואז `A`. לבסוף, בסיום התוכנית, נהרס `b`: קודם גוף `~B` (`B`), אחר כך החבר `c` (`C`), ואז הבסיס (`A`). הפלט הוא `eacebeacCABCA` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 9,
+   "topic": "templates",
+   "question": "מה יודפס בקטע קוד הבא ?\n```cpp\ntemplate <typename T>\nclass C {\n    template <typename S>\n    friend ostream& operator<<(ostream& out, C<S> c1) {\n        out << c1.data;\n        return out;\n    }\nprivate:\n    T data;\npublic:\n    C(T d) {\n        data = d;\n    }\n    C(const C& other) {\n        data = other.data;\n    }\n    C operator+(C<T>& other) {\n        C res(data + other.data);\n        return res;\n    }\n    bool operator!=(C& other) {\n        return data != other.data;\n    }\n    int f(int x) {\n        if (x < 0)\n            return x;\n        return x + data;\n    }\n};\n\nint main() {\n    C<int> c1(4), c2(5);\n    cout << c1;\n    c1 = c1 + c2;\n    cout << c1;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "94"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "49"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "904"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "409"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההדפסה הראשונה `cout << c1` מדפיסה 4. אחרי `c1 = c1 + c2` הערך הוא 4+5=9, וההדפסה השנייה מדפיסה 9. הפלט הוא `49` (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 10,
+   "topic": "templates",
+   "question": "מה יודפס באותו קטע קוד לעייל (שאלה 9) כאשר נריץ את פונקציית `main` הבאה:\n```cpp\ntemplate <typename T>\nclass C {\n    template <typename S>\n    friend ostream& operator<<(ostream& out, C<S> c1) {\n        out << c1.data;\n        return out;\n    }\nprivate:\n    T data;\npublic:\n    C(T d) {\n        data = d;\n    }\n    C(const C& other) {\n        data = other.data;\n    }\n    C operator+(C<T>& other) {\n        C res(data + other.data);\n        return res;\n    }\n    bool operator!=(C& other) {\n        return data != other.data;\n    }\n    int f(int x) {\n        if (x < 0)\n            return x;\n        return x + data;\n    }\n};\n\nint main() {\n    vector<C<double>> v;\n    C<double> c1(4.2);\n    v.push_back(c1);\n    C<double> c2(5.1);\n    v.push_back(c2);\n    cout << (v[0]+v[1]).f(10) << endl;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "38"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "83"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "19"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התוכנית לא עוברת קומפילציה"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`v[0]+v[1]` הוא `C<double>` שערכו 4.2+5.1=9.3. הפונקציה `f(10)` מחזירה `int`, והביטוי `x + data` הוא `10 + 9.3 = 19.3` שנחתך להמרה ל-`int`, כלומר 19. הפלט הוא `19` (תשובה ג), וכך גם הרצת clang++. התוכנית מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 11,
+   "topic": "construction_order",
+   "question": "מה יודפס בקטע קוד הבא ?\n```cpp\nclass A\n{\n    int x;\npublic:\n    A(int x) : x(x) { cout << \"A: \" << x << \"\\n\"; }\n    A(const A& other) : x(other.x) { cout << \"A (copy)\\n\"; }\n    ~A() { cout << \"~A \" << x << \"\\n\"; }\n    virtual void toOs(ostream& os) const {}\n    friend ostream& operator<<(ostream& os, const A& a)\n    {\n        os << a.x;\n        a.toOs(os);\n        return os;\n    }\n};\ntemplate<class T>\nclass B : public A\n{\n    T val;\npublic:\n    B(const T& t, int x = 3) : A(x), val(t)\n    {\n        cout << \"B: \" << val << \"\\n\";\n    }\n    B(const B& other) : A(other), val(other.val)\n    {\n        cout << \"B (copy)\\n\";\n    }\n    ~B() { cout << \"~B: \" << val << \"\\n\"; }\n    virtual void toOs(ostream& os) const override\n    {\n        os << \" \" << val << endl;\n    }\n};\nvoid main()\n{\n    B<const char*> b1(\"hi\", 8);\n    B<const char*> b2(b1);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אין תשובה נכונה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "A: 8\nB: hi\nA (Copy)\nB (Copy)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התוכנית לא מתקמפלת"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "A (Copy)\nB (Copy)\nA: 8\nB: hi"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בהרצה מודפס: `A: 8`, `B: hi`, אחר כך בנאי ההעתקה `A (copy)` ו-`B (copy)` (באותיות קטנות), ובסוף יוצאים מ-`main` וההורסים מדפיסים `~B: hi`, `~A 8` פעמיים. בתשובה ב חסרות שורות ההורסים, והמילה `Copy` נכתבה באות גדולה, ולכן היא אינה הפלט. לכן אין תשובה נכונה (תשובה א). התוכנית כן מתקמפלת, וגם סדר הבנייה בתשובה ד שגוי.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 12,
+   "topic": "friend_this_static",
+   "question": "מה יודפס בקטע קוד הבא ?\n```cpp\nclass A\n{\n    static int counter;\n    int x;\npublic:\n    A(int x = ++counter) : x(x) { cout << \"c'tor x=\" << x << endl; }\n    A(const A& other) : x(other.x) { cout << \"copy x=\" << x << endl; }\n    static int getCounter() { return counter; }\n    friend ostream& operator<<(ostream& os, const A& a)\n    {\n        os << a.x << \" \" << a.counter << endl;\n        return os;\n    }\n};\nint A::counter = 0;\nvoid main()\n{\n    vector<A> arr;\n    A a1(1);\n    cout << A::getCounter() << endl;\n    arr.push_back(A());\n    arr.push_back(a1);\n    cout << A::getCounter() << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "c'tor x=1\n2\nc'tor x=1\ncopy x=1\ncopy x=1\nc'tor x=1\n1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "c'tor x=1\n0\nc'tor x=1\ncopy x=1\ncopy x=1\ncopy x=1\n1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "c'tor x=1\n1\nc'tor x=1\ncopy x=1\ncopy x=1\n0"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התוכנית תופסק בזמן ריצה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`A a1(1)` מדפיס `c'tor x=1` ואינו מקדם את `counter` (ארגומנט ברירת המחדל לא מחושב), ולכן `getCounter()` מדפיס `0`. `A()` מחשב את ארגומנט ברירת המחדל `++counter` (מגיע ל-1) ומדפיס `c'tor x=1`. `push_back` של הזמני יוצר עותק (`copy x=1`). `push_back(a1)` גורם להגדלת הווקטור: מועתק האיבר הקיים ונוצר עותק של `a1`, כלומר עוד שני עותקים. בסך הכול שלושה `copy x=1`, ובסוף `getCounter()` הוא `1`. זו תשובה ב, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 13,
+   "topic": "operator_overloading",
+   "question": "בחר את ההגדרה **המתאימה ביותר** ל – `overloading` של `postfix ++` , בהנחה של `Class` קוראים `T` :",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`T operator ++`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`T operator++(int)`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`T& operator++()`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`T& operator++(int)`"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "העמסת האופרטור הפוסטפיקס `++` מזוהה על ידי פרמטר `int` מדומה, והוא מחזיר את הערך הישן **לפי ערך** (עותק), בניגוד לפרפיקס שמחזיר הפניה. לכן `T operator++(int)` (תשובה ב). א חסרה את הפרמטר, ג היא פרפיקס, ו-ד מחזירה הפניה לאובייקט זמני שהוא ערך ישן, מה שאינו תקין.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule."
+  },
+  {
+   "num": 14,
+   "topic": "templates",
+   "question": "לפניך ההגדרה הבאה:\n```cpp\ntemplate <class T>\nclass abc{\n    void f();\n};\n```\nבחר את הגדרה הנכונה למימוש הפונקציה (מתודה) `f` :",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```cpp\ntemplate <class T>\nvoid abc<T>::f() { }\n```"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```cpp\ntemplate<class T>\nvoid abc::f() { }\n```"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```cpp\ntemplate<T>\nvoid abc<class T>::f() { }\n```"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "```cpp\ntemplate<T>\nvoid abc<T>::f() { }\n```"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "מימוש פונקציה חברה של תבנית מחוץ למחלקה דורש להצהיר מחדש `template <class T>` ולציין `abc<T>::`. זו האפשרות א, והיא מתקמפלת. בב חסר `<T>` בשם המחלקה, ובג ובד התחביר `template<T>` אינו חוקי (חסר `class` או `typename`). כל שלוש האפשרויות האלה נכשלות בקומפילציה (נבדק עם clang++).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; compile-checked."
+  },
+  {
+   "num": 15,
+   "topic": "classes_ctor_dtor",
+   "question": "איזה בין הגדרות הבאות של המחלקות `A` ו-`B` מעודפת:\n```cpp\nclass A {\npublic:\n    void f1(){\n        //code\n    }\n};\nclass B {\npublic:\n    void f1();\n};\nvoid B::f1(){\n    //code\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`class A`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`class B`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אין הבדל"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תלוי בקוד"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "פונקציה שמוגדרת בתוך גוף המחלקה היא `inline` באופן מרומז, והקומפיילר יכול להטמיע את הגוף במקום הקריאה. הפונקציה `B::f1` מוגדרת מחוץ למחלקה בלי המילה `inline`, ולכן אינה כזו. בגלל זה `class A` מועדפת (תשובה א). שים לב שהשאלה מנוסחת באופן לא חד ('מעודפת'), ולכן הביטחון בתשובה בינוני.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule."
+  }
+ ]
+}

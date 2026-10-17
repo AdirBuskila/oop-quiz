@@ -1,0 +1,505 @@
+{
+ "examCode": "23B-B",
+ "examLabel": "2023 סמסטר ב מועד ב",
+ "year": 2023,
+ "examDate": "13.07.2023",
+ "sourceFile": "2023/סמ׳ א מועד א_.pdf",
+ "keyFile": "none (no answer source in the file; keys derived by clang++ runs, tools/verify/23B-B/)",
+ "questions": [
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nfloat f(float x) {\n    return x + 1;\n}\nint f(float x, float y = 2) {\n    int z = x + (int)y;\n    return z;\n}\nint f(float x, int y, int z = 8) {\n    int w = (int) x + y + z;\n    return w;\n}\nint main()\n{\n    float x = 5.5, y = 2.5;\n    int z = 3;\n    cout << f(5) << endl;\n    cout << f(5,6) << endl;\n    cout << f(5,6,7) << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הקריאה `f(5)` עמומה: גם `f(float)` וגם `f(float, float = 2)` מתאימות לארגומנט אחד (שתיהן דורשות המרה מ-`int` ל-`float`), ולכן יש שגיאת קומפילציה בשורה הזאת. הקריאה `f(5,6)` תקינה: ב-`f(float, int, int = 8)` הארגומנט השני מתאים בדיוק (`int`), ולכן היא עדיפה על `f(float, float = 2)`. `f(5,6,7)` מתאימה רק לגרסה בעלת שלושה פרמטרים. בסך הכול שגיאה בשורה אחת (תשובה ב), וזה גם מה ש-clang++ מדווח.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 2,
+   "topic": "friend_this_static",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    A(int i) {x = i; y++;}\n    ~A() {y--;}\n    static int f() { A a3(4); y = y + a3.x; return y; }\n    int x;\npublic:\n    static int y;\n};\nint A::y = 0;\nint main() {\n    A a1(1), a2(2);\n    cout << a1.f();\n    cout << a2.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "611"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "610"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "711"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`A a1(1), a2(2)` מגדילים את `y` ל-2. `a1.f()` היא פונקציה סטטית: נוצר `a3` (`y` הופך 3), `y = y + a3.x` נותן 7, והערך 7 מוחזר (אחר כך `a3` נהרס ו-`y` יורד ל-6). בקריאה `a2.f()`: `a3` מעלה את `y` ל-7, אחרי החיבור הוא 11 והערך 11 מוחזר. ההדפסה היא `7` ואחריה `11`, כלומר `711` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 3,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass X {\npublic:\n    int n1;\n};\nclass Y : protected X {\npublic:\n    int n2;\n};\nclass Z : public Y {\npublic:\n    int n3;\n    friend void g();\n    void f() {\n        n3 = n1;\n        n3 = n2;\n    }\n};\nvoid g() { Y y1; Z z1;\n    y1.n1 = 0;\n    y1.n2 = 0;\n    z1.n1 = 0;\n    z1.n2 = 0;\n}\nint main() {\n    Z z1;\n    z1.n2 = 0;\n    z1.n1 = 0;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`Y` יורשת מ-`X` ירושה `protected`, ולכן `n1` מוגן ב-`Y` ובכל יורשיה. הפונקציה `g` היא חברה של `Z` בלבד: דרך אובייקט `Z` (`z1.n1`) מותר לה לגשת ל-`n1`, אבל דרך אובייקט `Y` (`y1.n1`) לא, ולכן זו שגיאה. ב-`main` הגישה `z1.n1` נחסמת (שדה מוגן, ו-`main` אינה חברה). שאר השורות תקינות (`n2` ציבורי, והפונקציה `f` של `Z` רשאית לגשת ל-`n1`). שתי שורות שגויות (תשובה ג), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 4,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass X {\npublic:\n    int n1;\n    virtual void f() { cout << \"X\"; }\n};\nclass Y : public X {\npublic:\n    int n2;\n    void f() { cout << \"Y\"; }\n};\nclass Z : public X {\npublic:\n    int n3;\n    void f() { cout << \"Z\"; }\n};\nclass W : public Z {\n    int n4;\n    void f() { cout << \"W\"; }\n};\nvoid g(X &x);\nvoid main()\n{\n    X* x[4];\n    x[0] = new X();\n    x[1] = new Y();\n    x[2] = new Z();\n    x[3] = new W();\n    X* x1 = (X *) x[3];\n    for (int i = 0; i < 4; i++) { g(*x[i]); };\n    g(*x1);\n}\nvoid g(X & x) {\n    x.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "XYZWX"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "XXZWY"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "XYZWW"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f` וירטואלית במחלקת הבסיס `X`, וכל המחלקות הנגזרות דורסות אותה, ולכן הקריאה דרך הפניה `X&` נבחרת לפי הטיפוס הדינמי. ארבעת האובייקטים מדפיסים `X`, `Y`, `Z`, `W`. `x1` מצביע על האובייקט `W` (ההמרה `(X*)` היא רק המרה למצביע בסיס), ולכן הקריאה האחרונה מדפיסה `W` שוב. הפלט `XYZWW` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 5,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    int n1;\n    A(int i = 0) { n1 = i; }\n    operator int() { return n1; }\n};\ntemplate <class X, class Y>\nvoid f(X i, Y j) {\n    cout << i;\n    cout << j;\n}\ntemplate<>\nvoid f(int x, char c) {\n    cout << c;\n    cout << x;\n}\nint main() {\n    int i = 6;\n    char c = 'd';\n    A a1(5);\n    f<A, int>(a1, i);\n    f<int, char>(i, c);\n    f<char, int>(c, i);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "566dd6"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "56d6d6"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "56d66d"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "656dd6"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בקריאה `f<A,int>(a1, i)` נבחרת התבנית הכללית: `cout << i` מפעילה את `operator int` של `A` ומדפיסה 5, ואז מודפס `j` שהוא 6: `56`. בקריאה `f<int,char>(i, c)` קיימת התמחות מפורשת `f(int x, char c)` שמדפיסה קודם את התו ואחר כך את המספר: `d6`. הקריאה `f<char,int>(c, i)` חוזרת לתבנית הכללית עם `c` ו-`i`: `d6`. הפלט `56d6d6` (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 6,
+   "topic": "classes_ctor_dtor",
+   "question": "להלן הצהרה של המחלקה הבאה:\n```cpp\nclass A {\n    int x;\npublic:\n    int f() { return x;}\n    int& g() {return x;}\n    int* h()  {return &x;}\n};\n```\nכמה מבין הפונקציות של המחלקה הנ\"ל ממומשות באופן שנוגד עקרונות תכנות נכון?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "העיקרון הוא הסתרת מידע: פונקציות גישה לא אמורות לחשוף את השדה הפרטי לשינוי חופשי. `f` מחזירה עותק של `x`, ולכן היא תקינה. `g` מחזירה הפניה (`int&`) ל-`x`, ו-`h` מחזירה מצביע (`int*`) אליו: דרכן אפשר לשנות את השדה הפרטי בלי שהמחלקה תשלוט בכך. לכן שתי פונקציות סותרות את העיקרון (תשובה ג). השאלה עוסקת בעיקרון תכנות ולא בהרצה, והתשובה נקבעה לפי כלל זה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule."
+  },
+  {
+   "num": 7,
+   "topic": "friend_this_static",
+   "question": "כמה מהמשפטים הבאים נכונים:\nא. מחלקה `A` יכולה לתת חברות (`friendship`) לחלק מהפונקציות של מחלקה `B`.\nב. אם מחלקה `A` נותנת חברות (`friendship`) למחלקה `B`, אז היא לא יכולה להגביל את החברות רק לחלק מהפונקציות של מחלקה `B`.\nג. אם מחלקה `A` נותנת חברות (`friendship`) לפונקציה גלובלית בשם `f` אזי היא לא יכולה לתת חברות (`friendship`) לפונקציה של מחלקה `B` בשם `f`.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "טענה א נכונה: אפשר לתת חברות לפונקציה חברה בודדת של `B`, למשל `friend void B::f();` (נבדק בקומפילציה, ופונקציה אחרת של `B` לא קיבלה גישה). טענה ב לכן שגויה. טענה ג שגויה: פונקציה גלובלית `f` ופונקציה `B::f` הן שתי פונקציות שונות, ואפשר להצהיר על שתיהן כחברות באותה מחלקה. רק טענה אחת נכונה (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 8,
+   "topic": "classes_ctor_dtor",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nchar c;\nclass X {\n    char c;\npublic:\n    class Y {\n    public:\n        void f(char r) {\n            X t;\n            ::c = t.X::c = c = r;\n        }\n    private:\n        char c;\n    };\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המחלקה `Y` מקוננת בתוך `X`, ובמחלקה מקוננת מותר לגשת לחברים הפרטיים של המחלקה העוטפת. בביטוי `::c = t.X::c = c = r`: `::c` הוא המשתנה הגלובלי, `t.X::c` הוא השדה הפרטי של `X` (מותר מתוך `Y`), ו-`c` לבדו הוא `Y::c`. כל ההשמות חוקיות והקוד מתקמפל בלי אף שגיאה (תשובה א), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 9,
+   "topic": "copy_control",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass T{\nprivate:\n    int a;\npublic:\n    static int n;\n    int b;\n    T(int i, int j) { a = i; b = j; }\n    T(const T &r){\n        a = r.a; b = r.b;\n        n++;\n    }\n};\nint T::n = 0;\nT ret_obj(const T& t){\n    return t;\n}\nvoid pass_obj(T t){\n    ;\n}\nint main(){\n    T t1(1, 2), t2(3, 4);\n    ret_obj(t1);\n    pass_obj(t1);\n    cout << T::n;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי ההעתקה מקדם את `T::n`. `ret_obj(t1)` מחזירה את `t` לפי ערך, וזה יוצר עותק אחד (גם אם התוצאה לא נשמרת). `pass_obj(t1)` מקבלת את הארגומנט לפי ערך ויוצרת עותק נוסף. סך הכול `n = 2`, והפלט `2` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 10,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    int a;\n    A() { a = 0; }\n    A(int i) { a = i; }\n    virtual void f() const { cout << \" A.f \"; }\n    void g() const { cout << \" A.g \"; }\n};\nclass B : public A{\npublic:\n    B(int i) : A(i) {}\n};\nclass C : public A{\npublic:\n    void f() const { cout << \" C.f \"; }\n    void g() const { cout << \" C.g \"; }\n};\nvoid t(A* p){\n    p->f();\n    p->g();\n}\nint main(){\n    B b(10);\n    C c;\n    cout << b.a + c.a << \" \";\n    t(&c);\n    return 0;\n}\n```\nבתשובה ד. הנ\"ל המספר -858993450 הוא מספר שלם אקראי כלשהו שהתכנית מדפיסה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "10  C.f  A.g"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "10  C.f  C.g"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "10  C.f  C.g"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "-858993450  C.f  C.g"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`b.a + c.a` הוא 10+0, ולכן מודפס `10` ואחריו רווח. ב-`t(&c)` הפונקציה `f` וירטואלית ולכן נקראת הגרסה של `C` (` C.f `), אבל `g` אינה וירטואלית, ולכן נבחרת לפי הטיפוס הסטטי `A*`: ` A.g `. הפלט `10  C.f  A.g` (תשובה א), וכך גם הרצת clang++. בתשובות ב ו-ג, שהן זהות בדפוס, מודפס `C.g`, וזה לא קורה. הערך האקראי בתשובה ד אינו אפשרי כי `A()` מאתחל את `a` ל-0.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 11,
+   "topic": "templates",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A{\npublic:\n    void p() const { cout << \"p\\n\"; }\n};\ntemplate <typename T> class B{\nprivate:\n    T x;\npublic:\n    int k;\n    B(T y) : x(y), k(2) { x.p(); }\n};\nvoid f(B &r){\n    std::cout << r.k;\n}\nint main(){\n    A a;\n    B<A*> b(&a);\n    f(b);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "בתבנית `B<A*>` השדה `x` הוא מצביע (`A*`), ולכן `x.p()` שגויה (צריך `x->p()`): שגיאה אחת בשורת הבנאי. הכותרת `void f(B &r)` שגויה כי `B` היא תבנית ודורשת ארגומנט (`B<A*>&`): שגיאה שנייה. הקריאה `f(b)` נכשלת רק כתוצאה מההצהרה השגויה של `f`, ולכן לא נספרת כשורה נפרדת. שתי שורות (תשובה ג). clang++ מדווח גם על שורת הקריאה כשגיאה נגררת, ולכן הביטחון בינוני.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 12,
+   "topic": "const_references",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint f(int x) { return 1; }\nint f(int& x) { return 3; }\nint f(const int& x) { return 4; }\nclass C {\npublic:\n    int f(int x) const { return 5; }\n    int f(int x) { return 6; }\n};\nint main()\n{\n    const C c;\n    int y = 7;\n    cout << c.f(y);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "7"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "6"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "5"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האובייקט `c` הוא `const`, ולכן על אובייקט כזה אפשר לקרוא רק לפונקציות חברות שהן `const`: נבחרת `int f(int) const` שמחזירה 5. שלוש הפונקציות הגלובליות לא מעורבות כלל, כי הקריאה היא קריאה לפונקציה חברה. הפלט `5` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 13,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass CD{\npublic:\n    CD(int value) :data(value) { cout << \"+\" << data; }\n    ~CD() { cout << \"-\"<< data; }\nprivate:\n    int data;\n};\nvoid create(void);\nCD first(1);\nint main() {\n    cout << \"main\";\n    CD second(2);\n    static CD third(3);\n    create();\n    CD fourth(4);\n    return 0;\n}\nvoid create(void){\n    CD fifth(5);\n    static CD sixth(6);\n    CD seventh(7);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "main+1+2+3+5+6+7-7-5+4-4-2-6-3-1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "+1main+2+3+5+6+7-7-5+4-4-2-6-3-1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "+1main+2+3+5+6+7-7-5+4-4-1-2-6-3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "משתנה גלובלי נבנה לפני `main`: `+1`. אחר כך `main` מדפיסה `main`, נבנה `second` (`+2`), נבנה המשתנה הסטטי `third` (`+3`), ובתוך `create` נבנים `fifth` (`+5`), הסטטי `sixth` (`+6`) ו-`seventh` (`+7`). בסיום `create` נהרסים רק המשתנים האוטומטיים בסדר הפוך: `-7-5`. נבנה `fourth` (`+4`), ובסיום `main` נהרסים `fourth` ו-`second`: `-4-2`. לבסוף נהרסים הסטטיים והגלובליים בסדר הפוך לבנייה: `-6-3-1`. הפלט `+1main+2+3+5+6+7-7-5+4-4-2-6-3-1` (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; clang++ run decides."
+  },
+  {
+   "num": 14,
+   "topic": "cpp_basics_refs",
+   "question": "כמה מבין המשפטים הבאים **אינם** נכונים:\nב- `structure` ב-C++ כל השדות הם מסוג `public`.\n`structure` ב-C++ לא יכול להכיל מטודות (`member functions`).\nכאשר מכריזים על משתנה מסוג `structure` ב-C++ חייבים להוסיף את המילה `struct` לפני ההכרזה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "שלושת המשפטים אינם נכונים. ב-`struct` ברירת המחדל היא `public`, אבל אפשר להגדיר גם שדות `private` או `protected` (נבדק בקומפילציה), ולכן 'כל השדות הם `public`' אינו נכון. ל-`struct` ב-C++ יכולות להיות פונקציות חברות (נבדק). ו-C++ אינה דורשת את המילה `struct` בהכרזת משתנה (זו דרישת C). לכן 3 משפטים אינם נכונים (תשובה ד). הקריאה של המשפט הראשון היא קריאה מילולית, ולכן הביטחון בינוני.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule."
+  },
+  {
+   "num": 15,
+   "topic": "classes_ctor_dtor",
+   "question": "מה קורה כאשר כל הבנאים של מחלקה `C` מוכרזים `private`?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מתקבלת שגיאת קומפילציה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לא ניתן ליצור אוביקטים של המחלקה `C`."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שתי התשובות א ו ב לא נכונות."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שתי התשובות א ו ב נכונות."
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "הצהרה של בנאים `private` אינה שגיאה בפני עצמה: מחלקה כזו מתקמפלת (נבדק), והשגיאה מתקבלת רק כשמנסים ליצור אובייקט מבחוץ. לכן א אינה נכונה בכלליות. גם ב אינה נכונה: פונקציה סטטית של המחלקה או פונקציה חברה (`friend`) יכולות ליצור אובייקטים (נבדק עם `static C make()`), כמו בתבנית Singleton. לכן שתי התשובות א ו-ב אינן נכונות (תשובה ג). זו שאלת ניסוח ולכן הביטחון בינוני.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule."
+  }
+ ]
+}

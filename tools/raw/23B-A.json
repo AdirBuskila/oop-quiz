@@ -1,0 +1,505 @@
+{
+ "examCode": "23B-A",
+ "examLabel": "2023 סמסטר ב מועד א",
+ "year": 2023,
+ "examDate": "22.06.2023",
+ "sourceFile": "2023/סמ׳ א מועד א + פתרון.pdf",
+ "keyFile": "same file: the grader's marks on the answer grid of page 1 (graded student copy), cross-checked with clang++ (tools/verify/23B-A/)",
+ "questions": [
+  {
+   "num": 1,
+   "topic": "inheritance_access",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass C {\npublic:\n    void f() { cout << \"C\"; }\n};\n\nclass B : public C {};\n\nclass A : public B {\npublic:\n    void f() { cout << \"A\"; }\n};\n\nint main() {\n    A a; B b;\n    a.f(); a.B::f(); a.C::f(); b.f();\n    b.C::f();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "AACCC"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ACCCC"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "CCCCC"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ל-`B` אין `f` משלה, ולכן `b.f()` וגם `a.B::f()` מגיעות ל-`C::f` שבבסיס, ומדפיסות `C`. רק `a.f()` מוצאת את `A::f` (ה-`f` של `A` מסתירה את הבסיס) ומדפיסה `A`. `a.C::f()` ו-`b.C::f()` מציינות במפורש את `C`. הפלט `ACCCC` (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: ACCCC. Agrees."
+  },
+  {
+   "num": 2,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass D {\npublic:\n    int n1;\n};\n\nclass C : private D {\npublic:\n    int n2;\n    int f1() { return n1; }\n};\n\nclass B : public C {\npublic:\n    int n3;\n    void f2() {\n        cout << n1;\n        cout << n2;\n    }\n};\n\nclass A : private B {\npublic:\n    int n4;\n    int f2() {\n        B b1;\n        cout << n2;\n        cout << b1.n1;\n    }\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`C` יורשת מ-`D` ירושה `private`, ולכן `n1` פרטי ב-`C` ואינו נגיש ביורשות שלה. ב-`B::f2` השורה `cout << n1` שגויה, ו-`cout << n2` תקינה (`n2` ציבורי). ב-`A` (ירושה פרטית מ-`B`) הגישה ל-`n2` תקינה מבפנים, אבל `b1.n1` שגויה כי `n1` אינו נגיש. שתי שורות שגויות (תשובה ג), וכך גם clang++. בקוד המודפס מופיע פסיק במקום נקודה-פסיק אחרי `n1` ו-`n2`, והשאלה מורה להתעלם מכך.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). Printed `int n1,` / `int n2,` read as `;`. clang++: 2 error lines. Agrees."
+  },
+  {
+   "num": 3,
+   "topic": "cpp_basics_refs",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nint& f(int& x, int& y, int& z)\n{\n    if (x == 1) return y;\n    return z;\n}\n\nint main()\n{\n    int a = 1, b = 2, c = 3;\n    f(a, b, c)++;\n    a++;\n    f(a, b, c)++\n    int& d = f(a, b, c);\n    d++;\n    cout << b << c << d;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "334"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "444"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "355"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה מחזירה הפניה ל-`y` כש-`x == 1`, ואחרת הפניה ל-`z`. בקריאה הראשונה `a = 1`, ולכן `f(a,b,c)++` מגדילה את `b` ל-3. אחרי `a++` מתקבל `a = 2`, ולכן הקריאה השנייה מחזירה הפניה ל-`c`, ו-`++` מגדיל אותו ל-4. `d` הוא כינוי ל-`c`, ו-`d++` מעלה אותו ל-5. ההדפסה `b c d` נותנת `3`, `5`, `5`, כלומר `355` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). Printed `f(a, b, c)++` without `;` (the exam's note says to ignore it); run with `;`: 355. Agrees."
+  },
+  {
+   "num": 4,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n    A(int i) { this->i = i; }\n    ~A() { cout << i; }\nprivate:\n    int i;\n};\n\nvoid f() {\n    static A a1(1);\n    A a2(2);\n}\nA a3(3);\nA a7(7);\n\nint main()\n{\n    static A a4(4);\n    A a5(5);\n    f();\n    A a6(6);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "2651473"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2654137"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2561743"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "6254137"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הגלובליים `a3` ו-`a7` נבנים לפני `main`. ב-`main` נבנים הסטטי `a4` והאוטומטי `a5`, אחר כך נקראת `f` שבונה את הסטטי `a1` ואת האוטומטי `a2`. בסיום `f` נהרס `a2`: `2`. אחר כך נבנה `a6`. בסיום `main` נהרסים האוטומטיים בסדר הפוך: `a6` ואז `a5`: `65`. לבסוף נהרסים הסטטיים והגלובליים בסדר הפוך לבנייתם: `a1`, `a4`, `a7`, `a3`: `1473`. הפלט `2651473` (תשובה א), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: 2651473. Agrees."
+  },
+  {
+   "num": 5,
+   "topic": "inheritance_access",
+   "question": "אילו מאפיינים של תכנות מונחה עצמים (`OOP`) ממומשים בקטע הקוד הבא:\n```cpp\nclass student { int marks; };\n\nclass topper : public student {\n    int age;\n    topper(int age) {\n        this->age = age;\n    }\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הסתרת מידע (`Encapsulation`) והורשה (`Inheritance`)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "הורשה (`Inheritance`) ורב צורתיות (`Polymorphism`)."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "רב צורתיות (`Polymorphism`)."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הורשה (`Inheritance`)."
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "med",
+   "explanation": "השדות `marks` ו-`age` פרטיים, כלומר המידע מוסתר (`Encapsulation`), והמחלקה `topper` יורשת מ-`student` (`Inheritance`). אין פונקציות וירטואליות ולכן אין רב-צורתיות. לכן התשובה היא א. זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Concept question (no run): private members = encapsulation, `: public student` = inheritance, no virtual functions = no polymorphism."
+  },
+  {
+   "num": 6,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <vector>\nint main()\n{\n    vector <int> v1;\n    v1.push_back(8);\n    v1.push_back(9);\n    vector <int> v2;\n    v2.push_back(-8);\n    v2.push_back(5);\n    v2.push_back(51);\n    v2.push_back(3);\n    vector<vector<int> > A;\n    A.push_back(v1);\n    A.push_back(v2);\n    A.push_back(v1);\n    v2.push_back(10);\n    vector<int>::iterator i;\n    for (i = A[1].begin(); i != A[1].end(); i+=2)\n        cout << *i << \" \";\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "-8 51 10"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "-8 5 51 3"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "-8 51"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "-8 5 51 3 19 20"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`push_back` שומר עותקים: `A[1]` הוא עותק של `v2` ברגע ההוספה, כלומר `-8 5 51 3`, והוספת 10 אחר כך אל `v2` לא משפיעה עליו. הלולאה מקדמת את האיטרטור בשניים: מדפיסה `-8` (מקום 0) ו-`51` (מקום 2), ואז מגיעה בדיוק ל-`end()` ונעצרת. הפלט `-8 51` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). clang++ run: `-8 51 `. Agrees."
+  },
+  {
+   "num": 7,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nconst int DefaultSize = 10;\ntemplate <class T>\nclass Array{\npublic:\n    Array(int itsSize = DefaultSize);\n    ~Array() { delete[] pType; }\n    T& operator[](int offSet) { return pType[offSet]; }\n    const T& operator[](int offSet) const {\n        return pType[offSet];\n    }\n    int GetSize() const { return itsSize; }\n    template <class NET>\n      friend void infiltrate(const Array<NET> &);\nprivate:\n    T* pType;\n    int  itsSize;\n};\ntemplate <class WWW>\nvoid infiltrate(const Array<WWW> &theArray) {\n    for (int i = 0; i < theArray.itsSize; i++)\n        cout <<  theArray.pType[i] << \"; \";\n    cout << \"\\n\"; }\ntemplate <class T>\nArray<T>::Array(int size):itsSize(size){\n    pType = new T[size];\n    for (int i = 0; i < size; i++)\n        pType[i] = 0;\n}\nint main(){\n    Array<int> theArray(3);\n    Array<double> theArrayD(2);\n    for (int i = 0; i < theArray.GetSize(); i++){\n        theArray[i] = i * 2;\n    }\n    for (int i = 0; i < theArrayD.GetSize(); i++) {\n        theArrayD[i] = i / 2.0;\n    }\n    infiltrate(theArray);\n    infiltrate(theArrayD);  return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0; 2; 4;\n0; 0;"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "0; 2; 4;\n0; 0.5"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "בהפעלת התכנית מתקבלת שגיאת זמן ריצה."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ב-`Array<int>(3)` האיברים הם `0, 2, 4`, וב-`Array<double>(2)` האיברים הם `0, 0.5` (כי `i / 2.0`). הפונקציה `infiltrate` היא תבנית חברה של המחלקה ולכן מותר לה לגשת לשדות הפרטיים. כל איבר מודפס ואחריו `; `, ולכן השורה הראשונה `0; 2; 4;` והשנייה `0; 0.5;`. התוכנית מתקמפלת ורצה בלי שגיאה. התשובה המתאימה היא ב (בהרצה מופיע `;` גם בסוף השורה השנייה, ובתשובה ב הוא לא מודפס, אבל זו האפשרות היחידה שמתאימה לערכים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: `0; 2; 4; ` / `0; 0.5; ` (option b prints no trailing `;` on line 2, as printed). Agrees with b."
+  },
+  {
+   "num": 8,
+   "topic": "abstract_multiple",
+   "question": "עבור התכנית הבאה מתקיים:\n```cpp\nclass A{\npublic:\n    virtual void f1(void) { cout << \"A\"; };\n};\nclass B : virtual public A{\npublic:\n    void f1(void) { cout << \"B\"; };\n};\nclass C : virtual public A{\npublic:\n    void f1(void) { cout << \"C\"; };\n};\nclass D : public C, public B{\npublic:\n    void f1(void) { cout << \"D\"; };\n};\nint main(){\n    A* pa;\n    pa = new A;\n    pa->f1();\n    pa = new B;\n    pa->f1();\n    pa = new C;\n    pa->f1();\n    pa = new D::B;\n    pa->f1();\n    pa = new D::C;\n    pa->f1();\n    pa = new D;\n    pa->f1();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "יש שגיאת קומפילציה בשורה אחת."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "יש שגיאת קומפילציה ביותר משורה אחת."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אין שגיאת קומפילציה והתכנית מדפיסה `ABCACD`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אין שגיאת קומפילציה והתכנית מדפיסה `ABCBCD`"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`new D::B` ו-`new D::C` יוצרים אובייקטים מטיפוס `B` ו-`C` (השם `D::B` הוא שם המחלקה `B` שבבסיס, דרך שם המחלקה היורשת). הקוד מתקמפל: לאחר ירושה וירטואלית מ-`A`, הקריאה `pa->f1()` נבחרת לפי הטיפוס האמיתי. הפלט הוא: `A` עבור `new A`, `B` עבור `new B`, `C` עבור `new C`, `B` עבור `new D::B`, `C` עבור `new D::C`, ו-`D` עבור `new D`. כלומר `ABCBCD` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: ABCBCD. Agrees."
+  },
+  {
+   "num": 9,
+   "topic": "classes_ctor_dtor",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass TestClass\n{\npublic:\n    TestClass() :x(0) { cout<<x<<\" \"; }\n    TestClass(int a) :x(a) { cout<<x<<\" \"; }\n    void printValue()\n    {\n        cout << \"Value: \" << x <<\" \";\n    }\nprivate:\n    int x;\n};\n\nint main()\n{\n    TestClass s1(100);\n    TestClass s2;\n    TestClass s3 = 100;\n    TestClass obj();\n    obj.printValue();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "100 0 100"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "100"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "100 0 100 0 0"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "השורה `TestClass obj();` אינה יוצרת אובייקט: היא מצהירה על **פונקציה** בשם `obj` שמחזירה `TestClass` (the most vexing parse). לכן `obj.printValue()` היא שגיאת קומפילציה (clang++: base of member reference is a function). התוכנית אינה מתקמפלת (תשובה ד), ואף אחת משלוש האפשרויות האחרות אינה פלט אפשרי. בסריקה יש קשקוש בצבע כחול על מחרוזת בתוך `printValue`, והוא אינו משפיע על התשובה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). clang++: compile error (`TestClass obj();` declares a function). Agrees with d. The scan has a scribbled-over string in printValue, read as `Value: `."
+  },
+  {
+   "num": 10,
+   "topic": "virtual_polymorphism",
+   "question": "על פי רוב עדיף שפונקציה וירטואלית תהיה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`public`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`private`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`protected`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`default`"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "med",
+   "explanation": "פונקציה וירטואלית היא ממשק שנקרא דרך מצביע או הפניה לבסיס, ולכן על פי רוב מגדירים אותה `public`. אפשר להגדיר גם `private` או `protected` (בתבנית NVI למשל), ולכן השאלה מנוסחת 'על פי רוב'. `default` אינו מפרט גישה ב-C++. התשובה לפי סימון הבודק היא א. זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Concept question (no run)."
+  },
+  {
+   "num": 11,
+   "topic": "abstract_multiple",
+   "question": "כיצד ניתן להתגבר על בעית המעוין (`diamond`) של הורשה מרובה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להשתמש במחלקות נגזרות נפרדות."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להשתמש במילה השמורה `virtual`."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בלתי אפשרי."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להשתמש בשם מחלקה נוסף (`alias`)."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "med",
+   "explanation": "בעיית המעוין היא מצב שבו מחלקה יורשת פעמיים מאותו בסיס דרך שתי מחלקות ביניים, ומקבלת שני עותקים שלו. הפתרון הוא ירושה **וירטואלית** (`virtual`) של הבסיס בשתי מחלקות הביניים, כך שיש רק עותק אחד (התשובה ב). זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Concept question (no run)."
+  },
+  {
+   "num": 12,
+   "topic": "classes_ctor_dtor",
+   "question": "מה קורה כאשר קוראים לבנאי (`constructor`) ?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לא קורה כלום."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "נוצר מצביע לאוביקט של מחלקה."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "נוצר אוביקט של מחלקה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "נוצר `reference` לאוביקט של מחלקה שכבר קיים."
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "קריאה לבנאי יוצרת אובייקט של המחלקה (תשובה ג), ולא רק מצביע או הפניה אליו. זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the examinee's marked option, ticked by the grader (graded copy). Concept question (no run)."
+  },
+  {
+   "num": 13,
+   "topic": "operator_overloading",
+   "question": "נניח ש `a1` ו- `a2` הם שני אובייקטים של מחלקה.\nכמה מהמשפטים הבאים נכונים:\nא. שתי השורות הבאות שקולות (מבצעות את אותה פעולה):\n```cpp\ncout << a1;\noperator<<(cout,a1);\n```\nב. שתי השורות הבאות שקולות (מבצעות את אותה פעולה):\n```cpp\ncin >> a1;\noperator>>(a1,cin);\n```\nג. שתי השורות הבאות שקולות (מבצעות את אותה פעולה):\n```cpp\ncout<<a1<<a2;\noperator<<(operator<<(cout, a1), a2);\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "correctId": "c",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "טענה א נכונה: `cout << a1` הוא קיצור לקריאה `operator<<(cout, a1)` של האופרטור הגלובלי. טענה ב שגויה: ל-`cin >> a1` מתאימה הקריאה `operator>>(cin, a1)`, כלומר הזרם הוא הארגומנט הראשון, ואילו בשורה המודפסת הסדר הפוך (נבדק: היא אינה מתקמפלת). טענה ג נכונה: `cout << a1 << a2` שקול לקריאה מקוננת, כי האופרטור מחזיר את הזרם (נבדק: אותו פלט). שתי טענות נכונות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Rule + clang++ check of the three equivalences (tools/verify/23B-A/check.py)."
+  },
+  {
+   "num": 14,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B {\npublic:\n    ~B() { cout << \"B dtor; \";}\n};\n\nclass C:public B{\npublic:\n    ~C() { cout << \"C dtor; \"; }\n};\n\nclass D :public C {\npublic:\n    ~D() { cout << \"D dtor; \"; }\n};\n\nint main(){\n    D d;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "B dtor;"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "D dtor;"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "B dtor; C dtor; D dtor;"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "D dtor; C dtor; B dtor;"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההורסים נקראים בסדר הפוך לבנאים: קודם ההורס של המחלקה הנגזרת ביותר, ואחר כך הורסי הבסיסים בסדר עולה בשרשרת. לכן `D dtor; C dtor; B dtor; ` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). clang++ run: `D dtor; C dtor; B dtor; `. Agrees."
+  },
+  {
+   "num": 15,
+   "topic": "friend_this_static",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות?\n```cpp\nclass M\n{\n    float a;\n    int b;\npublic:\n    M() {\n        a = 50;\n        b = -100;\n    }\n    M(int p, int q) {\n        a = p;\n        b = q;\n    }\n    friend M operator+(M);\n    void output()\n    {\n        cout << \"a=\" << a << \"b=\" << b;\n    }\n};\n\nM operator+(M t) {\n    M res;\n    res.a = a + t.a;\n    res.b = b + t.b;\n    return res;\n}\n\nint main()\n{\n    M d1(10, 20);\n    M d2, d3;\n    d3 = d1 + d3;\n    d3.output();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה `operator+(M t)` מוגדרת עם פרמטר אחד, כלומר זהו `+` אונרי ולא בינארי. בנוסף היא פונקציה חברה (`friend`) ולא חבר, ולכן בתוכה השמות `a` ו-`b` לא מוגדרים (שגיאות בשתי שורות), והשורה `d3 = d1 + d3` נכשלת כי אין `operator+` בינארי. סך הכול שלוש שורות שגויות, כלומר יותר מ-2 (תשובה ד), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy)."
+  }
+ ]
+}

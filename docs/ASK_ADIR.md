@@ -69,4 +69,25 @@ Open questions for Adir. One entry per item; the orchestrator moves it to Resolv
 - Needed: the intended answers for Q6 and Q13, or leave them out.
 - Status: hold
 
+### 22S-B Q1 - unspecified evaluation order (hold)
+- Path: sitting 22S-B (summer 2022 moed B, 25.10.2022), question paper
+- Page: 3
+- Question: `return f(x, c) * x;` with `x` a reference: the operand order of `*` is unspecified. clang++ gives 6561 (option a); a right-to-left compiler (the exam's MSVC style `void main`) would give 3024 (option b). The file has no answer source.
+- Needed: the intended answer (a or b), or leave it out.
+- Status: hold
+
+### 23S-A Q13 - answer depends on the C++ standard (hold)
+- Path: sitting 23S-A (summer 2023 moed A, 13.09.2023), question paper
+- Page: 11
+- Question: `A(A& a)` (non-const copy ctor) cannot bind a temporary. clang++ -std=c++17 counts 0 error lines, -std=c++14 counts 1 (`A a1 = 1;`), and MSVC accepts temporary-to-`A&` as an extension. The file has no answer source.
+- Needed: the intended count (0, 1 or 2), or leave it out.
+- Status: hold
+
+### 22S-B, 23B-B, 23S-A, 23B-A - keys are run/rule-derived
+- Path: sittings 22S-B, 23B-B, 23S-A (no key in the files), 23B-A (graded copy, grader marks agree with clang++ on every code question)
+- Page: all
+- Question: keys for the first three come from clang++ runs or language rules, stored official:false. Judgement calls kept at confidence med: 22S-B Q3, Q5, Q15; 23B-B Q6, Q11 (the call `f(b)` is also reported as a cascade error), Q14, Q15; 23S-A Q3 (assumes iostream alone), Q4 (0 compile errors but a link error).
+- Needed: confirm run-derived keys are acceptable for these items.
+- Status: info
+
 ## Resolved
