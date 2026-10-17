@@ -1,0 +1,630 @@
+{
+ "examCode": "20B-A",
+ "examLabel": "2020 סמסטר ב מועד א",
+ "year": 2020,
+ "examDate": "2020",
+ "sourceFile": "2020/מבחן מועד א 2020.pdf",
+ "keyFile": "same PDF: box drawn round one option per question (not treated as an official key; re-derived by clang++ runs)",
+ "questions": [
+  {
+   "num": 1,
+   "topic": "templates",
+   "question": "במידה ושני אוביקטים (עצמים) שונים נוצרו מתוך אותה תבנית (template) יכול להיות להם משתנה static משותף במידה ו-:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "במידה והם נוצרו תוך שימוש באותם שמות של מחלקות ביצירת העצמים מהתבנית (template)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "המשתנים הסטטיים משותפים רק עבור פונקציות וירטואליות טהורות (pure virtual)"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "לא יכול להיות בכלל."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תלוי אם נעשה שימוש, בקובץ שמכיל את הגדרת התבנית, ב פקודה #pragma once או לא."
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "המשתנים הסטטיים משותפים לכל העצמים שנבנים מאותה התבנית."
+    }
+   ],
+   "confidence": "low",
+   "explanation": "משתנה סטטי בתבנית מחלקה שייך לכל מופע (instantiation) של התבנית בנפרד. עצמים מאותו מופע, למשל שני `X<int>`, חולקים אותו משתנה סטטי, אבל `X<int>` ו-`X<double>` הם מחלקות שונות עם משתנים סטטיים נפרדים (בהרצה גם הכתובות שונות). לכן ההצהרה שהמשתנה משותף לכל העצמים שנבנו מהתבנית (ה) אינה נכונה בכללותה, והנכונה היא שהמשתנה משותף כאשר נוצרו באותם שמות מחלקה, כלומר אותו מופע (א). הסימון בדף (ה) שונה מתוצאת ההרצה ולכן השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Held. The boxed option is e (statics shared by all objects built from the template). clang++ run: a static member of a class template is shared only within one instantiation (X<int> objects share, X<double> has its own, different address), so e as written is false and a (same class names = same instantiation) is the true statement.",
+   "hold": "Box (option e) disagrees with the run: statics are shared only per template instantiation, which is option a."
+  },
+  {
+   "num": 2,
+   "topic": "copy_control",
+   "question": "נתונה התכנית הבאה:\n```cpp\nclass X {\npublic:\n    X(int i = 0) {\n        p = new int[1];\n        *p = i;\n    }\n    ~X() { delete p; }\n    int* p;\n    int f(X x) { return *(x.p); }\n};\nint main() {\n    X x1(1); X x2(2); int k;\n    x2 = x1;\n    k = x2.f(x1);\n}\n```\nניתן לדאוג לכך שהתכנית תתקמפל ותרוץ ללא שגיאות:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "ע\"י הוספת העמסת אופרטורים לאופרטור = במחלקה X."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ע\"י הוספת copy constructor במחלקה X והוספת העמסת אופרטורים לאופרטור = במחלקה X."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ע\"י הוספת copy constructor במחלקה X."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "במחלקה יש מצביע שמוקצה בבנאי ומשוחרר בהורס, ולכן ההעתקה ברירת המחדל (shallow) יוצרת שני אובייקטים שמחזיקים אותו מצביע, והשחרור כפול. יש שני מקומות שבהם קורית העתקה: ההשמה `x2 = x1` והעברה לפי ערך `f(x1)` או `x2.f(x1)`, שקוראת לבנאי ההעתקה. בהרצה, תיקון רק של ההשמה או רק של בנאי ההעתקה עדיין שחרר את אותו מצביע פעמיים, ורק הוספת שניהם עבדה נכון (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++ run with a double-delete detector (pointer freed twice): the unchanged class, assignment-only and copy-ctor-only versions all free the same pointer twice (crash); only the version with both a copy constructor and operator= is clean. Box agrees. Screenshot shows four options."
+  },
+  {
+   "num": 3,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\ntemplate <class T, class U>\nclass X {\npublic:\n    X(T,U) { cout << 1; }\n};\ntemplate <>\nclass X <int,char> {\npublic:\n    X(int i,char c) { cout << 2; }\n};\nint main()\n{\n    int i = 5; char c = 'a'; double d = 7.5;\n    X<int, char> x1(i,c);\n    X<char, int> x2(c,i);\n    X<double, char> x3(d,c);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "211"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "221"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "111"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`X<int, char>` הוא ההתמחות המלאה ולכן מדפיסה 2. `X<char, int>` ו-`X<double, char>` משתמשים בתבנית הכללית ומדפיסים 1 כל אחד. הפלט `211` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option a. clang++ run printed 211 (x1 uses the full specialization, x2 and x3 the generic template). Box agrees."
+  },
+  {
+   "num": 4,
+   "topic": "copy_control",
+   "question": "להלן הגדרה של מחלקה. המשפטים הבאים מתייחסים להגדרה זו :\n```text\n1  class Home {\n2  public:\n3      Home(const int &i)  { num1 = num2 = i; }\n4      Home(const int *i)  { num1 = num2 = *i; }\n5      Home(const Home &h) { num1 = num2 = h.num1; }\n6      Home(Home &h)       { num1 = num2 = h.num1; }\n7  private :\n8      int num1;\n9      double num2;\n10 };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הבנאי בשורה 4 שגוי כי יש שימוש במצביע מסוג const כדי לאתחל משתנה שאיננו מסוג const"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "יש עמימות (ambiguity) בין הגדרות הבנאים בשורה 5 ובשורה 6."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הבנאי בשורה 3 שגוי כי יש שימוש במשתנה מסוג const להצבה במשתנה מסוג private ."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "כל ההגדרות תקינות"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "בנאי ההעתקה בשורה 5 שגוי כי הוא לא רשאי לגשת למשתנה הפנימי h.num1"
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הבנאים בשורות 3 ו-4 מקבלים הפניה או מצביע ל-const ומעתיקים ערך, וזה חוקי (קריאה מ-const תמיד מותרת). בשורות 5 ו-6 יש שני בנאי העתקה, אחד עם `const` ואחד בלי: אובייקט const בוחר את הראשון ואובייקט רגיל את השני, ולכן אין עמימות. גם הגישה ל-`h.num1` של אובייקט אחר מאותה מחלקה מותרת. כל ההגדרות תקינות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option d. clang++: the class compiles; copy-initialising from a const Home picks line 5 and from a non-const Home picks line 6 (no ambiguity). Box agrees."
+  },
+  {
+   "num": 5,
+   "topic": "copy_control",
+   "question": "להלן הגדרה של מחלקה. המשפטים הבאים מתייחסים להגדרה זו :\n```cpp\nclass Memory {\npublic:\n    Memory(int i = 0) { this->i = j = i; }\n    Memory(double j) { this->j = i = j + 1; }\n    Memory(const Memory& m) { j = i = m.i = m.j; }\nprivate:\n    int i, j;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "לא ניתן להגדיר שני בנאים שונים לאותה מחלקה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בנאי ההעתקה שגוי בשל סתירה פנימית בהגדרת הבנאי"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "יש עמימות (ambiguity) בין שני הבנאים"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ההגדרה תקינה לחלוטין"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "בנאי ההעתקה שגוי כי הוא לא יכול לגשת למשתנה private של אובייקט אחר."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בבנאי ההעתקה `m` הוא `const Memory&`, ולכן ההשמה `m.i = ...` לשדה של `m` אסורה (שגיאת קומפילציה). זו הסתירה בהגדרה (תשובה ב). שני בנאים שונים מותרים (א שגויה), הקריאה ל-`Memory(3)` אינה עמומה כי `int` מתאים בדיוק (ג שגויה), וגישה לשדה פרטי של אובייקט אחר מאותה מחלקה מותרת (ה שגויה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++: the copy constructor assigns to `m.i` although `m` is `const Memory&` (error); without that assignment the class compiles, two constructors are allowed and calling Memory(3) is not ambiguous. Box agrees."
+  },
+  {
+   "num": 6,
+   "topic": "cpp_basics_refs",
+   "question": "ניתן להשתמש בשתיים או יותר הגדרות שונות לפונקציה בעלות אותו שם באותה מחלקה כאשר יש להן הגדרות שונות של סוג הפרמטר המוחזר.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף פעם לא נכון."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "יכול להיות אפשרי אם יש גם הבדלים בסוגי הפרמטרים המועברים לפונקציה או בכמותם"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "נכון רק עבור פונקציה וירטואלית."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "נכון תמיד"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "נכון רק עבור פונקציה שאיננה וירטואלית."
+    }
+   ],
+   "confidence": "low",
+   "explanation": "בשתי פונקציות חברות עם אותו שם ואותה רשימת פרמטרים שנבדלות רק בסוג ההחזרה הקומפיילר לא יכול להבחין ביניהן, וזו שגיאת קומפילציה (גם בפונקציות וירטואליות). כשהפרמטרים שונים אין בעיה, אך אז ההבדל הוא בפרמטרים ולא בסוג ההחזרה. לכן ״נכון תמיד״ (ד) אינה נכונה, והאפשרות הסבירה היא ב. הסימון בדף (ד) שונה, ולכן השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Held. The boxed option is d ('always true'). clang++: two members that differ only in return type do not compile (virtual or not); with different parameters they do. So 'always true' is false and b (possible only if the parameters also differ) is the defensible choice.",
+   "hold": "Box (option d, always true) disagrees with C++ (clang++: members differing only in return type are an error); defensible answer is b."
+  },
+  {
+   "num": 7,
+   "topic": "cpp_basics_refs",
+   "question": "להלן קטע קוד ובו הגדרה חסרה מסומנת בקו תחתון. מה צריך להיות במקום הקו התחתון על מנת שהתוצאה של ההדפסה תהיה 2\n```cpp\nint f1(int& i, int j = 1) { return i + j; }\nint f1(double& i, int j = 1) { return i * j; }\nvoid main() {\n    double k = 2;\n    int l = 1;\n    cout << f1(________________);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "k,l"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "l,k"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "k&"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "l*"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "l*k"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "אפשרות `k,l`: `k` הוא `double` ולכן נבחרת `f1(double&, int)` שמחזירה `i*j` = 2*1 = 2 (תשובה א). אפשרות `l,k`: נבחרת `f1(int&, int)` כש-`k` מומר ל-2, והתוצאה `1+2` = 3. האפשרויות `k&`, `l*` ו-`l*k` אינן ביטויים חוקיים בקריאה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option a. clang++ run of each option: `k,l` prints 2 (f1(double&, int) -> 2*1), `l,k` prints 3 (f1(int&, int) with k converted to 2 -> 1+2), the other three do not compile. Box agrees."
+  },
+  {
+   "num": 8,
+   "topic": "friend_this_static",
+   "question": "אילו סוגים של פונקציות (method) של מחלקה  לא יכולות להיות מסוג static",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "רק פונקציות וירטואליות שאינן וירטואליות טהורות (pure virtual)."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אין שום מגבלה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציות שיש להן overloading (כלומר שתי פונקציות בעלות אותו שם אבל עם פרמטרים שונים)."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "פונקציות מסוג const"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "כל הפונקציות הוירטואליות"
+    }
+   ],
+   "correctId": "e",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "פונקציה סטטית אינה קשורה לאובייקט מסוים, ולכן אין לה `this` ואי אפשר להפוך אותה לווירטואלית (בלי קשר אם היא טהורה). לכן אף פונקציה וירטואלית לא יכולה להיות סטטית (תשובה ה). overloading מותר גם בפונקציות סטטיות. פונקציה חברה מסוג `const` (שמצהירה שהיא לא משנה את `this`) גם היא לא יכולה להיות סטטית, אבל אם הכוונה לפונקציה שמחזירה `const` היא כן יכולה, ולכן הבחירה היא ה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option e. clang++ compile tests: `static virtual` (pure or not) is rejected, overloaded static members are fine. Option d (const) is also true for a const-qualified member function (`static void f() const` is rejected), though a function that merely returns const can be static; the box keeps e. Confidence med because of that ambiguity in option d."
+  },
+  {
+   "num": 9,
+   "topic": "abstract_multiple",
+   "question": "מה נדרש לשנות בקטע הקוד הבא כדי שהוא יעבור הידור (קומפילציה)\n```cpp\nclass MyClass { virtual int f() = 0; };\nclass MyClass1 : public MyClass {\n};\nclass Myclass2 :public MyClass {\n};\nclass MyClass3 :public MyClass {\n};\nconst MyClass * f1(const MyClass1&, const Myclass2 ) {return new MyClass3();}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f גם עבור המחלקה MyClass1 וגם עבור MyClass3"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f גם עבור המחלקה MyClass2 וגם עבור MyClass3 ."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f רק עבור מחלקה MyClass2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f רק עבור מחלקה MyClass1"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "להגדיר מימוש של הפונקציה f רק עבור MyClass3"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`MyClass3` נוצרת עם `new`, ולכן חייבת לממש את `f` (אחרת היא אבסטרקטית). הפרמטר השני מועבר לפי ערך, וגם אותו אי אפשר לקבל כסוג אבסטרקטי, ולכן גם המחלקה שלו חייבת לממש את `f`. הפרמטר הראשון מועבר בהפניה, ושם מחלקה אבסטרקטית מותרת. בהרצה רק צירוף המימושים בשתי המחלקות האלה התקמפל (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++: `new MyClass3()` needs MyClass3 to implement f; the second parameter is an abstract class passed BY VALUE, so MyClass2 must implement f as well; the first parameter is a reference and needs nothing. Of the five option sets only {MyClass2, MyClass3} compiles (the class is spelled `Myclass2` in the screenshot, both in its header and in the parameter; transcribed as printed). Box agrees."
+  },
+  {
+   "num": 10,
+   "topic": "friend_this_static",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\nclass X {\npublic:\n    X() {}\n    static int i;\n};\nint X::i = 0;\nint main() {\n    X x1; X x2;\n    x1.i = 2;\n    x2.i = 3;\n    cout << x1.i << x2.i;\n    X::i++;\n    cout << X::i;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "334"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "331"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "231"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה `i` סטטי ולכן משותף לכל העצמים. `x1.i = 2` ואז `x2.i = 3` כותבים לאותו משתנה (נשאר 3), ולכן ההדפסה הראשונה היא `33`. אחרי `X::i++` הערך 4. הפלט `334` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++ run printed 334 (one shared static: 3 3, then 4). Box agrees."
+  },
+  {
+   "num": 11,
+   "topic": "inheritance_access",
+   "question": "בפרויקט מסוים יש ליצג את האובייקטים הבאים בעולם האמיתי: תפוזים (Orange), לימונים (Lemon), תפוחים (Apple), ומלפפונים (Cucumber). איזה ארגון של מחלקות יתאים ביותר לפרויקט?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "למחלקה מסוג Fruit יש שני Data Members האחד מסוג Orange והשני מסוג Vegetable"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "Orange Lemon ו-Apple יורשים מ-Fruit (פרי) ו-Cucumber יורש מ-Vegetable (ירק). Fruit ו-Vegetable יורשים מ-Food (מאכל)."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אם יש בתכנית מחלקה מסוג Food היא בהכרח אבסטרקטית."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן ליצור עץ ירושות שמתאים לפרויקט שתואר."
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "למחלקה מסוג Food יש ירושה כפולה גם מהמחלקה Fruit וגם מהמחלקה Vegetable."
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "יחס של `is-a` (תפוז הוא פרי) מתבטא בירושה ולא בהכלה (א שגויה). הארגון הטבעי: `Orange`, `Lemon`, `Apple` יורשים מ-`Fruit`, `Cucumber` יורש מ-`Vegetable`, ושתיהן יורשות מ-`Food` (תשובה ב). אין צורך שהמחלקה `Food` תהיה אבסטרקטית (ג), אפשר ליצור עץ ירושה מתאים (ד), ו-`Food` היא הבסיס ולא יורשת מאף אחת (ה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. Class-design question, not runnable; the boxed hierarchy (leaf fruits derive from Fruit, Cucumber from Vegetable, both from Food) is the only coherent one (a uses data members for an is-a relation, c is not forced, d is false, e reverses the direction). Key kept, confidence med."
+  },
+  {
+   "num": 12,
+   "topic": "cpp_basics_refs",
+   "question": "להלן קטע קוד ובו הגדרה חסרה מסומנת בקו תחתון. מה צריך להיות במקום הקו התחתון על מנת שהתוצאה של ההדפסה תהיה 7\n```cpp\ndouble m1(int i = 0) { return i + 1; }\nint m1(double d = 0) { return d + 2; }\nint m2(______________) { return i + 2 * d; }\nint m2(int i) { return 7; }\nint main()\n{\n    int i = 1;\n    std::cout << m2(1.0+m1(i));\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "int i , double d"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "double d, int i=1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "double d=0, int i=1"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "double d, int i"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "כל התשובות נכונות"
+    }
+   ],
+   "correctId": "e",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בכל ארבע האפשרויות הפלט הוא 7. הביטוי `m1(i)` מחזיר `double` ולכן `1.0+m1(i)` הוא `double`. כשחתימת `m2` הנוספת דורשת שני ארגומנטים (`int i, double d` או `double d, int i`), היא לא מתאימה לקריאה עם ארגומנט אחד ונבחרת `m2(int)` שמחזירה 7. כשיש ערך ברירת מחדל (`double d, int i=1` או `double d=0, int i=1`) היא מתאימה בדיוק, והתוצאה `1 + 2*3.0` = 7. לכן כל התשובות נכונות (ה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option e. clang++ run of each of the four blanks: all print 7 (with two required parameters the new m2 is not viable for the one-argument call, so m2(int) returns 7; with a defaulted int i=1 the double overload is chosen and 1 + 2*3.0 = 7). Box agrees."
+  },
+  {
+   "num": 13,
+   "topic": "inheritance_access",
+   "question": "התבקשת לכתוב תוכנה למעקב אחר בדיקות. קיימות בדיקות מסוגים שונים – בדיקות דם (Blood Test), בדיקות נשימה (Breath Test), בדיקות רנטגן (Xray Test). לכל בדיקה יש תאריך שבו התבצעה הבדיקה וכן התאריך שבו פוענחה הבדיקה. יש צורך לשמור את מספר הבדיקות הכולל שבוצעו וכן את מספר הבדיקות לפי סוג בדיקה. לבדיקות דם יש לשמור את מספר המבחנות שנלקחו (יכול להיות שונה בין בדיקות דם שונות). לבדיקות נשימה יש לשמור את משך זמן ביצוע הבדיקה בפועל (בדקות שלמות). לבדיקות רנטגן אין לשמור נתונים נוספים.\nמבנה המחלקות המתאים ביותר יהיה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "מגדירים מחלקה GeneralTest שמכילה משתנים סטטים ורגילים. בונים מחלקות BloodTest, XRayTest, BreathTest שלא יורשות מאף מחלקה אחרת. מגדירים לכל אחת מהמחלקות אובייקט פנימי מסוג GeneralTest. BloodTest ו-BreathTest מכילות בנוסף גם משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה בנוסף רק משתנה סטטי אחד."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "בונים מחלקות BloodTest, XRayTest, BreathTest שלא יורשות מאף מחלקה אחרת. BloodTest ו-BreathTest מכילות משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה רק משתנה סטטי אחד. מגדירים מחלקה מסוג GeneralTest שיורשת מכל המחלקות שהוגדרו קודם לכן."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "בונים מחלקות BloodTest, XRayTest, BreathTest שלא יורשות מאף מחלקה אחרת. כל אחת מהמחלקות BloodTest ו-BreathTest מכילה גם משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה רק משתנה סטטי אחד."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "הבעיה שתוארה מסובכת מדי ולא מתאימה לתכנות בשפה מונחית עצמים. יותר מתאים לתכנת אותה בשפה פרוצדורלית (למשל C)."
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "BloodTest, XRayTest, BreathTest יורשים מ-GeneralTest. GeneralTest היא מחלקה וירטואלית טהורה והיא מכילה משתנים רגילים ומשתנים סטטיים. כל אחת מהמחלקות BloodTest ו-BreathTest מכילה גם משתנים סטטיים וגם משתנים שאינם סטטיים. המחלקה XrayTest מכילה רק משתנה סטטי אחד."
+    }
+   ],
+   "correctId": "e",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "מחלקות הבדיקה חולקות נתונים משותפים (תאריך ביצוע, תאריך פענוח, מספר כולל של בדיקות), ולכן מגדירים להן מחלקת בסיס `GeneralTest` שמכילה אותם, בנוסף למשתנים סטטיים למעקב אחר המספרים. המחלקה היא וירטואלית טהורה כי אין בדיקה כללית שנוצרת בפני עצמה. `BloodTest` ו-`BreathTest` מוסיפות כל אחת את המשתנים הרגילים והסטטיים שלה, ו-`XRayTest` רק משתנה סטטי (תשובה ה). אפשרויות א-ג משכפלות או מחברות את הנתונים הכלליים בדרך גרועה, ו-ד שגויה כי זו בדיוק בעיה שמתאימה לשפה מונחית עצמים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option e. Class-design question, not runnable. e is the one that shares the common fields once in an abstract base GeneralTest and gives each test its own extras; a/c duplicate the common fields or give no common base, b inverts inheritance, d is wrong. Key kept, confidence med."
+  },
+  {
+   "num": 14,
+   "topic": "virtual_polymorphism",
+   "question": "בהינתן מצביע מסוג `myEx2 *ptr;` יתכן שהפעולה `ptr->myRun();` לא תמיד תפעיל את אותה הפונקציה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "רק כאשר הפונקציות סטטיות."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "רק כאשר השיטה myRun מוגדרת virtual במחלקה שיורשת מהמחלקה myEx2."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "רק כאשר המחלקה myEx2 יורשת משתי מחלקות שונות שיש להן מימושים שונים של השיטה (Method) myRun()."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "כאשר השיטה (Method) myRun מוגדרת וירטואלית במחלקה myEx2 וקיימת לפחות מחלקה אחת אחרת שיורשת מ-myEx2 שיש לה מימוש שונה של ()myRun."
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "רק כאשר השיטה myEx2::myRun() הינה וירטואלית טהורה."
+    }
+   ],
+   "correctId": "d",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפעלת `ptr->myRun()` נבחרת בזמן ריצה לפי הטיפוס האמיתי רק כשהפונקציה וירטואלית ב-`myEx2` ויש מחלקה יורשת שדורסת אותה (תשובה ד). אם היא לא וירטואלית, הקריאה תמיד מפעילה את הגרסה של `myEx2` (בהרצה נדפס `BB`). אם וירטואלית רק במחלקה היורשת, גם אז הקריאה דרך `myEx2*` לא משתנה. ירושה משתי מחלקות עם אותו שם פונקציה גורמת לעמימות ולא לבחירה דינמית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option d. clang++ runs: with a non-virtual myRun the call always runs the pointer type's version; with myRun virtual in myEx2 and overridden in a derived class the version depends on the dynamic type; virtual only in a derived class does not change calls through myEx2*; calling a method defined in two bases is ambiguous (does not compile). Box agrees."
+  },
+  {
+   "num": 15,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה:\n```cpp\nclass X {\npublic:\n    X() { }\n    virtual void f() { cout << 1; }\n    void f1() { cout << 2; }\n};\nclass Y : public X {\npublic:\n    Y() {}\n    void f() { cout << 3; }\n    virtual void f1() { cout << 4; }\n};\nint main() {\n    X* a[2];\n    X x1;   Y y1;\n    a[0] = &x1; a[1] = &y1;\n    for (int i = 0; i < 2; i++) {\n        a[i]->f();\n        a[i]->f1();\n    }\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1232"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1234"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "1212"
+    }
+   ],
+   "correctId": "b",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`f` וירטואלית ב-`X`. עבור `a[0]` (אובייקט `X`) מודפס 1 ואז `f1` של `X`: 2. עבור `a[1]` (אובייקט `Y` דרך מצביע `X*`) הקריאה הוירטואלית `f` מפעילה את `Y::f` ומדפיסה 3. `f1` לא וירטואלית ב-`X` (ההצהרה `virtual` ב-`Y` לא משפיעה על מצביע `X*`), ולכן מופעל `X::f1` ומודפס 2. הפלט `1232` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option b. clang++ run printed 1232 (f is virtual in X so a[1]->f() prints 3; f1 is not virtual in X so a[1]->f1() prints X's 2). Box agrees."
+  },
+  {
+   "num": 16,
+   "topic": "construction_order",
+   "question": "בשאלה אחרת בבחינה זו מופיעה הגדרה של המחלקה Home ודרוש להשיב האם ההגדרה תקינה. להלן ההגדרה של המחלקה Home:\n```cpp\nclass Home {\npublic:\n    Home(const int &i)  { num1 = num2 = i; }\n    Home(const int *i)  { num1 = num2 = *i; }\n    Home(const Home &h) { num1 = num2 = h.num1; }\n    Home(Home &h)       { num1 = num2 = h.num1; }\nprivate :\n    int num1;\n    double num2;\n};\n```\nבהינתן מחלקה Room שיורשת באופן public מהמחלקה Home הנ\"ל (בהנחה שהגדרה תוקנה במידת הצורך) - ניתן לכתוב בנאי ()Room שיאתחל את ערכו של num1 ל-3 באופן הבא:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `Room() : Home(3) { }`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `Room() : num1=3 { }`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אפשרי (לא ברשימת האיתחול) באופן הבא: `Room(): {(Home)(*this).num1 = 3; }`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לא ניתן"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `Room() : num1(3) { }`"
+    }
+   ],
+   "correctId": "a",
+   "answerSource": "highlighted-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה `num1` הוא `private` ב-`Home`, ולכן מחלקה יורשת לא יכולה לגשת אליו ישירות: לא ברשימת האיתחול ולא בגוף הבנאי. הדרך היחידה היא להפעיל בנאי של `Home` ברשימת האיתחול, כמו `Home(3)` (תשובה א). `Home(3)` בוחר את `Home(const int&)`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option a. clang++ compile tests: `Room() : Home(3) {}` compiles; `num1=3`, `num1(3)` and `((Home)*this).num1 = 3` fail (num1 is private to Home). Box agrees."
+  },
+  {
+   "num": 17,
+   "topic": "construction_order",
+   "question": "בהינתן מחלקה RAM שיורשת באופן public מהמחלקה Memory שמתוארת להלן (מחלקה זו מופיעה בשאלה אחרת והניחו שבמידה ויש בה שגיאה היא תוקנה) - ניתן לכתוב בנאי ()RAM שיאתחל את ערכו של i ל-3 באופן הבא :\n```cpp\nclass Memory {\npublic:\n    Memory(int i = 0) { this->i = j = i; }\n    Memory(double j) { this->j = i = j + 1; }\n    Memory(const Memory& m) { j = i = m.i = m.j; }\nprivate:\n    int i, j;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `RAM() : Memory(3) { }`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לא ניתן"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `RAM() : i(3) { };`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אפשרי (לא ברשימת האיתחול) באופן הבא: `RAM(): {Memory::i=3 }`"
+    },
+    {
+     "id": "e",
+     "type": "text",
+     "value": "אפשרי ברשימת האיתחול באופן הבא: `RAM() : i=3{ };`"
+    }
+   ],
+   "confidence": "low",
+   "explanation": "המשתנה `i` פרטי ב-`Memory`, ולכן אי אפשר לגשת אליו ישירות מהמחלקה `RAM`. אבל אפשר להפעיל את בנאי הבסיס ברשימת האיתחול: `RAM() : Memory(3) {}` מתקמפל, והבנאי `Memory(int)` מציב `i` = 3. לכן הדרך הראשונה אפשרית, והאפשרות ״לא ניתן״ שסומנה בדף אינה מתאימה להרצה. השאלה מוחזקת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Held. The boxed option is b ('not possible', with a handwritten 'private' note beside it). clang++: with the copy constructor repaired, `RAM() : Memory(3) {}` compiles and leaves i == 3 (the base constructor Memory(int) sets i), so option a works; the other three fail because i is private. Box disagrees with the run.",
+   "hold": "Box (option b, not possible) disagrees with the run: RAM() : Memory(3) {} compiles and sets i to 3 (option a)."
+  }
+ ]
+}
