@@ -1,0 +1,512 @@
+{
+ "examCode": "22B-B",
+ "examLabel": "2022 סמסטר ב מועד ב",
+ "year": 2022,
+ "examDate": "19.07.2022",
+ "sourceFile": "2022/סמ׳ ב מועד ב + פתרון.pdf (graded student scan, page 1 not used)",
+ "keyFile": "student-solution-1 (graded copy: the grader's red corrections on the answer sheet; all keys re-checked with clang++, tools/verify/22B-B)",
+ "contexts": {
+  "notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`.\nבכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט `#include` בתחילת קטע הקוד/התכנית.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```\nבכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-`#include` הנדרשים להרצת קטע הקוד."
+  }
+ },
+ "questions": [
+  {
+   "num": 1,
+   "topic": "const_references",
+   "question": "בכמה שורות בפונקציה main בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i = 0) { nA = i; }\n    const A& f() const\n    {\n        return *this;\n    }\n    void g() {}\n    int nA;\n};\n\nint main()\n{\n    const A a(2);\n    a.f().g();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האובייקט `a` הוא `const`, ולכן אפשר לקרוא עליו רק למתודות const. `f()` היא const ומחזירה `const A&`. אבל `g()` אינה const, והקריאה `a.f().g()` מפעילה אותה על הפניה ל-const, וזו שגיאה אחת.\nהתשובה היא ב. הרצה אישרה שגיאה בשורה זו בלבד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student b). clang++: one error (`g()` is not const, but `a.f()` returns `const A&`).",
+   "correctId": "b"
+  },
+  {
+   "num": 2,
+   "topic": "inheritance_access",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B {\npublic:\n        void print(int n) const;\n};\n\nvoid B::print(int n) const {\n        cout << n << \"\\n\";\n}\n\nclass D : public B {\npublic:\n        void print(int n) const;\n};\n\nvoid D::print(int n) const {\n        if (n <= 1) B::print(n);\n        else if (n % 2 == 0) print(n / 2);\n        else print(3 * n + 1);\n}\n\nint main() {\n        D d;\n        d.print(3);\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`3`"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הקריאה `d.print(3)` מפעילה את `D::print` (הפונקציה אינה וירטואלית, אבל הקריאה היא על אובייקט `D`). 3 הוא אי-זוגי, ולכן נקרא `print(10)`, אחר כך 5, 16, 8, 4, 2, 1. כשמגיעים ל-1 נקרא `B::print(1)` שמדפיס את `1`.\nרק הערך האחרון מודפס: `1` (תשובה ב). הרצה אישרה. תשובה ג מניחה שמדפיסים את הערך הראשון.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student b). clang++ run printed `1` (the Collatz chain 3,10,5,16,8,4,2,1 ends in `B::print(1)`; `print` is non-virtual and the recursive calls resolve to `D::print`).",
+   "correctId": "b"
+  },
+  {
+   "num": 3,
+   "topic": "copy_control",
+   "question": "הארגומנטים של בנאי העתקה",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "חייבים להיות מועברים `by reference`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "חייבים להיות מועברים `by value`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "יכולים להיות מועברים `by reference` או `by value`"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי העתקה חייב לקבל את הארגומנט בהפניה. אם הוא היה מקבל by value, כדי להעביר את הארגומנט היה צריך לקרוא שוב לבנאי ההעתקה, וכך הלאה בלי סוף. לכן הקומפיילר אוסר זאת (בהרצה: `A(A a)` נדחה).\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student a). clang++ probe: a copy constructor taking its parameter by value is rejected (`A(A a)`).",
+   "correctId": "a"
+  },
+  {
+   "num": 4,
+   "topic": "templates",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\ntemplate <class T, int max> int arrMin(T arr[], int n)\n{\n    int m = max;\n    for (int i = 0; i < n; i++)\n        if (arr[i] < m)\n            m = arr[i];\n    return m;\n}\n\nint main()\n{\n    int arr1[] = { 10, 20, 15, 12 };\n    int n1 = sizeof(arr1) / sizeof(arr1[0]);\n\n    char arr2[] = { 1, 2, 3 };\n    int n2 = sizeof(arr2) / sizeof(arr2[0]);\n\n    // Second template parameter to arrMin must be a\n    // constant\n    cout << arrMin<int, 10000>(arr1, n1) << endl;\n    cout << arrMin<char, 256>(arr2, n2);\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`10`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\n10\n1\n```"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה מחפשת מינימום ומתחילה מערך ההתחלה `max`. במערך `{10,20,15,12}` עם `max=10000` המינימום הוא 10. במערך ה-`char` `{1,2,3}` עם `max=256` המינימום הוא 1 (ההשוואה נעשית כ-`int`).\nהפלט: `10` ובשורה הבאה `1` (תשובה ג). הרצה אישרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student c). clang++ run printed `10` then `1`.",
+   "correctId": "c"
+  },
+  {
+   "num": 5,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass B {\npublic:\n        B(int i) { nB = i; }\n        int nB;\n};\nclass A : public B {\npublic:\n        A(int i = 1, int j = 2) { nA = 1; nB = j; }\n        A(const A& a) {\n                this->nA = a.nA + 1; this->nB = a.nB + 2;\n        }\n        int nA;\n};\n\nint main() {\n        A a1(1, 2);\n        A a2 = a1;\n        cout << a2.nA << a2.nB;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`14`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`24`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`23`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי של `A` לא מזכיר את בנאי הבסיס בצורה מפורשת, ולכן הקומפיילר מנסה לקרוא לבנאי ברירת המחדל של `B`. אבל ל-`B` יש רק `B(int i)` ואין בנאי ברירת מחדל, ולכן שני הבנאים של `A` (הרגיל ובנאי ההעתקה) נכשלים בקומפילציה.\nהתשובה היא ד. הרצה אישרה את שגיאת הקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Student marked b; the grader's red mark corrects it to d. clang++: compile errors in both `A` constructors (`B` has no default constructor and neither initializer list calls `B(int)`).",
+   "correctId": "d"
+  },
+  {
+   "num": 6,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות מבין 4 השורות האחרונות בפונקציה `f` בקטע הקוד הבא יש שגיאות:\n```cpp\nclass A {\npublic:\n        A(int i = 0) { nap = i; }\n        int nA;\n};\n\nclass B : protected A {\npublic:\n        B(int i = 0) { nB = i; }\n        int nB;\n};\n\nclass C : public B {\npublic:\n        C(int i = 0) { nC = i; }\n        int nC;\n};\n\nvoid f() {\n        B b1;\n        C c1;\n        b1.nA = 8;\n        b1.nB = 9;\n        c1.nA = 10;\n        c1.nB = 11;\n}\n\nint main() {\n        f();\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "המחלקה `B` יורשת את `A` בירושה `protected`, ולכן החבר `nA` נגיש רק בתוך `B` ובנגזרות שלה, לא מבחוץ (מתוך `f`). שורות `b1.nA = 8;` ו-`c1.nA = 10;` שגויות. השדות `nB` הם ציבוריים ולכן תקינים.\nשתי שגיאות (תשובה ג). שים לב: בקטע הנסרק בנאי `A` כתוב עם `nap` (שגיאת הקלדה), אבל ההתייחסות היא לארבע השורות האחרונות בלבד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student c). The printed constructor of A reads `nap = i` (a typo in the paper, transcribed as printed); the keyed count is for the four lines of `f` and the harness uses `nA`. clang++: errors on `b1.nA = 8;` and `c1.nA = 10;` (protected after `protected A`) -> 2.",
+   "correctId": "c"
+  },
+  {
+   "num": 7,
+   "topic": "abstract_multiple",
+   "question": "בכמה שורות בפונקציה main בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n        A(int i = 0) { nA = i; }\n        int nA;\n        void f() { cout << \"abc\"; }\n};\n\nclass B : virtual public A {\npublic:\n        B(int i = 0) { nB = i; }\n        int nB;\n};\n\nclass C : virtual public A {\npublic:\n        C(int i = 0) { nC = i; }\n        int nC;\n};\n\nclass D : virtual public A {\npublic:\n        D(int i = 0) { nD = i; }\n        int nD;\n};\n\nclass E : public B, C, D {\npublic:\n        E(int i = 0) { nE = i; }\n        int nE;\n};\n\nint main() {\n        E e1;\n        e1.f();\n        cout << e1.nA;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "שלושת המחלקות `B`, `C`, `D` יורשות את `A` בירושה וירטואלית, ולכן ב-`E` יש עותק אחד בלבד של `A` והגישה ל-`nA` ול-`f` חד-משמעית. הנתיב דרך `B` ציבורי, ולכן הגישה מותרת גם אם `C` ו-`D` נורשות באופן פרטי.\nאין שגיאות (תשובה א). הרצה הדפיסה `abc0`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Student marked b; the grader's red mark corrects it to a. clang++: compiles and prints `abc0` (single shared virtual `A`; the public path through `B` makes `f` and `nA` accessible).",
+   "correctId": "a"
+  },
+  {
+   "num": 8,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass My {\npublic:\n    ~My() {\n        std::cout << \"Hello from ~My()\" << std::endl;\n    }\n};\nclass Derived : public My {\npublic:\n    ~Derived() {\n        std::cout << \"Hello from ~Derived()\" << std::endl;\n    }\n};\nint main() {\n    My* obj = new Derived();\n    delete obj;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`Hello from ~Derived()`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`Hello from ~My()`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nHello from ~Derived()\nHello from ~My()\n```"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ההורס של `My` אינו וירטואלי, ולכן `delete obj` דרך מצביע מסוג `My*` קורא רק להורס של `My`. ההורס של `Derived` לא נקרא (בפועל זו התנהגות לא מוגדרת, אך כך מתנהגת ההרצה).\nהפלט הוא `Hello from ~My()` (תשובה ב). לא היו מודפסות שתי השורות אילו ההורס היה וירטואלי.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Student marked c; the grader's red mark corrects it to b. clang++ run printed only `Hello from ~My()` (non-virtual destructor, deleting through the base pointer; formally undefined behaviour).",
+   "correctId": "b"
+  },
+  {
+   "num": 9,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\n#include <vector>\n\nint main()\n{\n    vector<int> v{ 1, 2, 3, 4, 5 };\n    vector<int>::iterator it;\n\n    it = v.begin();\n    it++;\n    v.erase(it);\n\n    for (vector<int>::iterator it = v.begin(); it != v.end(); ++it)\n        cout << ' ' << *it;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`2 3 4 5`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1 2 4 5`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`1 3 4 5`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הווקטור הוא `{1,2,3,4,5}`. האיטרטור מצביע על האיבר השני (`2`) ואחר כך `erase` מוחק אותו, ונשאר `{1,3,4,5}`. ההדפסה מוסיפה רווח לפני כל מספר.\nהפלט `1 3 4 5` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student c). clang++ run printed ` 1 3 4 5` (each number preceded by a space; the second element is erased). The options are printed without the leading spaces.",
+   "correctId": "c"
+  },
+  {
+   "num": 10,
+   "topic": "classes_ctor_dtor",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n        A() { x = 2; y = 5; };\n        A(int x=3, int y = 6) { this->x = x; this->y = y; }\n        int x = 8;\n        int y = 10;\n};\n\nint main() {\n        A a1;\n        cout << a1.x << a1.y << endl;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`25`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`36`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`810`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ב-`A` יש שני בנאים שאפשר לקרוא להם בלי ארגומנטים: `A()` ו-`A(int x=3, int y=6)` (כל הפרמטרים עם ברירת מחדל). ההגדרה `A a1;` דו-משמעית, ולכן יש שגיאת קומפילציה.\nהתשובה היא ד. הרצה אישרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student d). clang++: compile error, `A a1;` is ambiguous between `A()` and `A(int=3, int=6)`.",
+   "correctId": "d"
+  },
+  {
+   "num": 11,
+   "topic": "operator_overloading",
+   "question": "מה מדפיסה התכנית הבאה?\n```cpp\nclass A {\npublic:\n        int num;\n        A(int i = 0) {\n                num = i;\n        }\n};\n\nA& operator++(A& a) {\n        a.num++;\n        return a;\n}\n\nA operator++(A& a, int) {\n        A temp = a;\n        a.num += 2;\n        return temp;\n}\n\nA operator+(const A& a1, const A& a2) {\n        A temp;\n        temp.num = a1.num + a2.num;\n        return temp;\n}\n\nint main()\n{\n        A a1(1), a2(2), a3, a4;\n        a3 = a1++ + ++a2;\n        a4 = operator++(a1, 0) + operator++(a2);\n        cout << a3.num << a4.num;\n        return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`47`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`46`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`36`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`56`"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "מתחילים עם `a1=1`, `a2=2`. בשורה הראשונה: `a1++` מחזיר עותק ישן (1) ומגדיל את `a1` ב-2 (ל-3). `++a2` מגדיל ל-3. לכן `a3 = 1 + 3 = 4`.\nבשורה השנייה: `operator++(a1, 0)` מחזיר 3 ומגדיל את `a1` ל-5; `operator++(a2)` מגדיל ל-4. לכן `a4 = 3 + 4 = 7`.\nהפלט הוא `47` (תשובה א). הרצה אישרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student a). clang++ run printed `47` (a3 = 1 + 3 = 4; then a1: 3 -> returns 3, a2 becomes 4, so a4 = 3 + 4 = 7).",
+   "correctId": "a"
+  },
+  {
+   "num": 12,
+   "topic": "copy_control",
+   "question": "כיצד ניתן לגרום לכך שכל אוביקט של מחלקה `A` יהיה בלתי ניתן להעתקה?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "להגדיר את בנאי ההעתקה של המחלקה `A` כ- `private`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "להגדיר את אופרטור ההשמה (האופרטור `=`) במחלקה `A` כ- `private`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "להגדיר את בנאי ההעתקה של המחלקה `A` כ- `private` ולהגדיר את אופרטור ההשמה במחלקה `A` כ- `private`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "corrected-key",
+   "official": false,
+   "confidence": "high",
+   "explanation": "כדי שאי אפשר יהיה להעתיק אובייקט צריך לחסום שני דברים: יצירה בהעתקה (בנאי העתקה) והשמה (`operator=`). אם רק אחד מהם פרטי, האחר עדיין מאפשר להעתיק. בהרצה: עם בנאי העתקה פרטי בלבד ההשמה עדיין עבדה, ועם השמה פרטית בלבד בנאי ההעתקה עדיין עבד.\nהתשובה היא ג (שניהם פרטיים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Student marked d; the grader's red mark corrects it to c. clang++ probes: with only the copy constructor private, assignment still works; with only `operator=` private, copy construction still works; both private blocks both.",
+   "correctId": "c"
+  },
+  {
+   "num": 13,
+   "topic": "composition",
+   "question": "כמה משפטים מבין שלושת המשפטים הבאים נכונים:\n1. יחס `IS-A` בין מחלקות מתקיים כאשר ישנה הורשה בין המחלקות.\n2. יחס `IS-A` בין מחלקות מתקיים כאשר ישנה הכלה בין המחלקות.\n3. שימוש ברב צורתיות (`polymorphism`) מתבצע כאשר מתקיים יחס `IS-A` בין מחלקות שקשורות לשימוש זה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "יחס `IS-A` מתקיים בהורשה (טענה 1 נכונה). בהכלה מתקיים יחס `HAS-A`, לא `IS-A` (טענה 2 שגויה). פולימורפיזם מתבצע על מחלקות הקשורות ביחס `IS-A` בהורשה (טענה 3 נכונה).\nשתי טענות נכונות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student c). Concept question: statements 1 and 3 are true, 2 is false (containment is HAS-A).",
+   "correctId": "c"
+  },
+  {
+   "num": 14,
+   "topic": "friend_this_static",
+   "question": "כמה משפטים מבין שלושת המשפטים הבאים נכונים (עבור שפת C++):\n1. במילת המפתח `friend` ניתן להשתמש בתוך הגדרת מחלקה כדי לאפשר גישה למחלקה אחרת.\n2. במילת המפתח `friend` ניתן להשתמש בחלק ה- `public` של הגדרת המחלקה.\n3. במילת המפתח `friend` ניתן להשתמש בחלק ה- `private` של הגדרת המחלקה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "המילה `friend` מופיעה בתוך הגדרת המחלקה כדי להעניק גישה לפונקציה או למחלקה אחרת. אין חשיבות לאזור הגישה (`public` או `private`) שבו היא כתובה: ההצהרה נכונה בשניהם. בהרצה, הצהרות `friend` בשני האזורים התקמפלו ופעלו.\nכל שלוש הטענות נכונות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student d). clang++ probe: `friend` declarations (class and function) inside the public section and inside the private section both compile and work.",
+   "correctId": "d"
+  },
+  {
+   "num": 15,
+   "topic": "operator_conversions",
+   "question": "בכמה שורות בפונקציה main בקטע הקוד הבא יש שגיאות?\n```cpp\nclass A {\npublic:\n    A(int i = 0) { nA = i; }\n    int nA;\n};\n\nclass B {\npublic:\n    B(int i = 0) { nB = i; }\n    operator A() { ... // קטע קוד תקין כלשהו }\n    int nB;\n};\n\nint main() {\n    A a1;\n    B b1;\n    a1 = b1;\n    b1 = a1;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "השורה `a1 = b1;` תקינה: אופרטור ההמרה `operator A()` ממיר `B` ל-`A`. השורה `b1 = a1;` שגויה: אין המרה מ-`A` ל-`B` (הבנאי של `B` מקבל `int`, ול-`A` אין אופרטור המרה ל-`int`).\nשגיאה אחת (תשובה ב). הרצה אישרה (עם גוף תקין ל-`operator A()`).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct (student b). clang++ (with a valid body for `operator A()`): `a1 = b1;` is fine through the conversion operator; `b1 = a1;` fails (no conversion from `A` to `B` or to `int`) -> 1.",
+   "correctId": "b"
+  }
+ ]
+}

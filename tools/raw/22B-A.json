@@ -1,0 +1,499 @@
+{
+ "examCode": "22B-A",
+ "examLabel": "2022 סמסטר ב מועד א",
+ "year": 2022,
+ "examDate": "19.06.2022",
+ "sourceFile": "2022/סמ׳ ב מועד א_.pdf",
+ "keyFile": "none (answers derived by compiling/running with clang++, tools/verify/22B-A)",
+ "contexts": {
+  "notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`.\nבכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט `#include` בתחילת קטע הקוד/התכנית.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```\nבכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-`#include` הנדרשים להרצת קטע הקוד."
+  }
+ },
+ "questions": [
+  {
+   "num": 1,
+   "topic": "classes_ctor_dtor",
+   "question": "להלן הגדרה חלקית של מחלקה `X`:\n```cpp\nclass X {\npublic:\n     int nx;\n     X(int i) : nx(i) {}\n     X() {}\n     ...\n};\n```\nהשורה `X(){}` בהגדרה הנ\"ל, נחוצה",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "כדי לאפשר להגדיר `X x1;`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "כדי לאפשר ליצור מערך של אובייקטים של המחלקה `X` בעזרת האופרטור `new`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "תשובות א ו-ב נכונות."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הבנאי `X(int i)` מוגדר, ולכן הקומפיילר לא מייצר בנאי ברירת מחדל. בלי `X(){}` שתי הפעולות נכשלות: `X x1;` (אין בנאי בלי פרמטרים) ו-`new X[3]` (גם הוא דורש בנאי ברירת מחדל לכל איבר).\nהרצה עם clang++ אישרה ששתי השורות נכשלות בלי `X(){}` ומתקמפלות איתו. לכן התשובה היא ג (גם א וגם ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: without `X(){}` both `X x1;` and `new X[3]` fail to compile; with it both compile -> c.",
+   "correctId": "c"
+  },
+  {
+   "num": 2,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass B{\npublic:\n     B();\n     virtual void p() const;\n     void q() const;\n};\nB::B() {}\nvoid B::p() const{\n     cout << \"B::p\\n\";\n}\nvoid B::q() const{\n     cout << \"B::q\\n\";\n}\n\nclass D : public B{\npublic:\n     D();\n     virtual void p() const;\n     void q() const;\n};\nD::D(){\n}\nvoid D::p() const{\n     cout << \"D::p\\n\";\n}\nvoid D::q() const{\n     cout << \"D::q\\n\";\n}\nint main(){\n     B b;\n     D d;\n     B* pb = new B;\n     B* pd = new D;\n     D* pd2 = new D;\n     b.p(); b.q();\n     d.p(); d.q();\n     pb->p(); pb->q();\n     pd->p(); pd->q();\n     pd2->p(); pd2->q();\n     return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אף תשובה אינה נכונה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nB::p\nB::q\nD::p\nD::q\nB::p\nB::q\nD::p\nB::q\nD::p\nD::q\n```"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה `p` וירטואלית, ולכן קריאה דרך `B*` לאובייקט מטיפוס `D` מפעילה את `D::p`. הפונקציה `q` אינה וירטואלית, ולכן הקריאה נקבעת לפי הטיפוס הסטטי של המצביע.\n- `b`: `B::p B::q`.\n- `d`: `D::p D::q`.\n- `pb` (מצביע ל-B שמצביע ל-B): `B::p B::q`.\n- `pd` (`B*` שמצביע ל-D): `D::p` (וירטואלית) ואז `B::q` (לא וירטואלית).\n- `pd2` (`D*`): `D::p D::q`.\nזה בדיוק הרצף בתשובה ג. הרצה אישרה זאת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed exactly the listing of option c (the only virtual call through B* that reaches D is `pd->p()`; `pd->q()` is non-virtual and prints B::q).",
+   "correctId": "c"
+  },
+  {
+   "num": 3,
+   "topic": "virtual_polymorphism",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass Base {\n     virtual void method() { std::cout << \"from Base\" << std::endl; }\npublic:\n     virtual ~Base() { method(); }\n     void baseMethod() { method(); }\n};\nclass A : public Base {\n     void method() { std::cout << \"from A\" << std::endl; }\npublic:\n     ~A() { method(); }\n};\nint main(void) {\n     Base* base = new A;\n     base->baseMethod();\n     delete base;\n     return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```\nfrom A\nfrom A\nfrom Base\n```"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```\nfrom A\nfrom Base\nfrom Base\n```"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nfrom Base\nfrom A\nfrom Base\n```"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הפונקציה `method` וירטואלית, והקריאה `baseMethod()` מפעילה אותה על אובייקט `A`, ולכן מודפס `from A`.\nב-`delete base` ההורס וירטואלי: קודם `~A`, שקורא ל-`method()` של `A` (`from A`). אחר כך `~Base`: בזמן הרצת ההורס של הבסיס חלק ה-`A` כבר הושמד, ולכן קריאה וירטואלית בתוך ההורס מגיעה ל-`Base::method` (`from Base`).\nהפלט הוא `from A / from A / from Base` (תשובה א). הרצה אישרה זאת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `from A / from A / from Base` (option a).",
+   "correctId": "a"
+  },
+  {
+   "num": 4,
+   "topic": "copy_control",
+   "question": "נניח ש- `p1,p2,p3` הם מצביעים לאובייקטים של המחלקה `A`. נניח שבבנאי המחלקה `A` יש הקצאות זיכרון דינאמיות. כדי שאפשר יהיה לבצע השמה מהסוג:\n`*p1=*p2=*p2`",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "רצוי להגדיר פונקציה `A& operator=(const A& a)` במחלקה `A`."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "רצוי להגדיר פונקציה `A* operator=(const A& a)` במחלקה `A`."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אין צורך להגדיר העמסת אופרטורים להשמה בין שני אוביקטים של המחלקה `A`."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "כדי שהשרשור `*p1=*p2=*p2` יעבוד, `operator=` צריך להחזיר הפניה לאובייקט (`A&`), כך שתוצאת ההשמה הפנימית היא אובייקט שאפשר להשים ממנו שוב. עם החזרת `A*` ההשמה השנייה מנסה להשים מצביע לתוך אובייקט ולא מתקמפלת (נבדק).\nמכיוון שיש הקצאות דינמיות, אסור להסתמך על ההשמה המובנית: היא רדודה ומובילה למחיקה כפולה (נבדק: שחרור כפול).\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probes: with `A& operator=` the chain compiles and (with a deep copy) no double delete; with `A* operator=` the chain does not compile (the middle result is a pointer); with no operator= it compiles but the shallow copy double-deletes the array.",
+   "correctId": "a"
+  },
+  {
+   "num": 5,
+   "topic": "inheritance_access",
+   "question": "נניח שקיימות 4 מחלקות לא אבסטרקטיות, שיחסי הירושה ביניהן הם כפי שמתואר להלן:\n```cpp\nclass X {... };\nclass Y : public X {... };\nclass Z : private Y {... };\nclass W : public Z {... };\n```\nנניח שבמחלקה `X` מוגדרת פונקציה ציבורית (`public`) בשם `f()` שאינה מוגדרת באף אחת מהמחלקות האחרות. נניח שבפונקציה חברה (`member function`) של המחלקה `W` מגדירים אובייקט של המחלקה `W` בשם `w1` ולאחר מכן מבצעים את המשפט:\n`w1.f();`",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "המשפט `w1.f()` יגרום לשגיאת קומפילציה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "המשפט `w1.f()` יגרום לשגיאת זמן ריצה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "המשפט `w1.f()` תקין ולא יגרום לשגיאות כלל"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`Z` יורשת את `Y` בירושה `private`, ולכן כל החברים של `Y` (כולל `f` שירשה מ-`X`) הופכים לפרטיים ב-`Z`. מחלקה `W`, שיורשת מ-`Z`, אינה יכולה לגשת אליהם, ולכן `w1.f()` נכשלת, גם מתוך פונקציה חברה של `W`.\nזו שגיאת קומפילציה (תשובה א), לא שגיאת זמן ריצה. הקומפילציה בהרצה אכן נכשלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: compile error (`f` became private in Z through `private Y`, so it is inaccessible in W).",
+   "correctId": "a"
+  },
+  {
+   "num": 6,
+   "topic": "copy_control",
+   "question": "להלן הצהרות של 6 פונקציות:\n```cpp\nvoid f1(Person &p);\nvoid f2(Person p);\nvoid f3(Person *p);\nPerson f4();\nPerson &f5();\nPerson *f6();\n```\nנניח שמפעילים (דהינו מבצעים קריאה) את כל אחת מ- 6 הפונקציות הנ\"ל. בכמה מההפעלות האלה יהיה בהכרח שימוש בבנאי ההעתקה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "4"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "6"
+    }
+   ],
+   "contextId": "notes",
+   "explanation": "",
+   "note": "Held. Probe (q06.cpp): only f2 (by-value parameter) always copies; f4 (by-value return) copies only with -fno-elide-constructors, so 'necessarily' reads as 1 (default clang++) or 2 (language semantics). The paper gives no function bodies and no key.",
+   "hold": "no-key: the answer (1 vs 2) depends on whether a by-value return counts as a necessary copy (copy elision); no key and the run cannot decide"
+  },
+  {
+   "num": 7,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass B{\npublic:\n     B();\n     B(int n);\n};\nB::B(){\n     cout << \"B::B()\\n\";\n}\nB::B(int n){ cout << \"B::B(\" << n << \")\\n\"; }\n\nclass D : public B{\npublic:\n     D();\n     D(int n);\nprivate:\n     B b;\n};\nD::D(){ cout << \"D::D()\\n\"; }\nD::D(int n) : B(n){\n     b = B(-n);\n     cout << \"D::D(\" << n << \")\\n\";\n}\nint main(){\n     D d(3);\n     return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```\nB::B(3)\nB::B()\nB::B(-3)\nD::D(3)\n```"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```\nB::B(3)\nB::B(-3)\nD::D(3)\n```"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nB::B()\nB::B(-3)\nD::D(3)\n```"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יש שגיאות בתכנית"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "סדר הבנייה: קודם הבסיס `B(n)` עם `n=3` (`B::B(3)`), אחר כך החברים לפי סדר ההצהרה: `b` נבנה בבנאי ברירת מחדל (`B::B()`), כי הוא לא מופיע ברשימת האתחול. רק אחר כך מתחיל גוף הבנאי של `D`.\nבגוף הבנאי השורה `b = B(-n)` יוצרת זמני `B(-3)` (`B::B(-3)`) ומשימה אותו ל-`b`. לבסוף מודפס `D::D(3)`.\nהפלט הוא תשובה א. תשובה ב מפספסת את בניית `b` לפני גוף הבנאי.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed option a (base `B(3)`, then the member `b` default-constructed, then the temporary `B(-3)` for the assignment, then the body of D).",
+   "correctId": "a"
+  },
+  {
+   "num": 8,
+   "topic": "abstract_multiple",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות ?\n```cpp\nclass A {\npublic: A(int _x = 0) { x = _x; }\n     virtual void f() {};\nprotected: int x;\n};\nclass B : public A {\npublic: void AddB(int y) { x += y; }\n};\nclass C : public A {\npublic: void AddC(int y) { x += y; }\n};\nclass D : public B, public C {\npublic: void ShowX() { cout << \"x = \" << x << endl; }\n};\nint main() {\n     D d;\n     d.ShowX();\n     d.AddB(10); d.ShowX();\n     d.AddC(5); d.ShowX();\n     d.f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "ל-`D` יש שני עותקי `A` (ירושה לא וירטואלית דרך `B` ודרך `C`). לכן:\n- `cout << x` בתוך `ShowX` דו-משמעי (איזה `x`?) ולכן שגיאה.\n- `d.f()` דו-משמעי, שגיאה.\n- הקריאות `AddB` ו-`AddC` תקינות (כל אחת פועלת על ה-`A` של מחלקת האב שלה).\nשתי שורות שגויות (תשובה ג). הרצה אישרה שהשגיאות בשתי השורות האלה בלבד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: errors on exactly two lines: `cout << x` in `D::ShowX` (ambiguous `x`, two A subobjects) and `d.f()` in main (ambiguous `f`); `AddB`/`AddC` are fine.",
+   "correctId": "c"
+  },
+  {
+   "num": 9,
+   "topic": "operator_overloading",
+   "question": "נניח שהוגדרה מחלקה `A` כלשהי. עבור איזה אופרטורים אי אפשר לבצע העמסה על ידי שימוש ב- `member function` של המחלקה `A`:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "עבור אופרטורים שהאופרנד הראשון שלהם הוא אוביקט של מחלקה כלשהי"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "עבור אופרטורים שהאופרנד הראשון שלהם הוא אוביקט של המחלקה `A`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "עבור אופרטורים שהאופרנד הראשון שלהם אינו אוביקט של המחלקה `A`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לכל האופרטורים אפשר לבצע העמסה על ידי שימוש ב- `member function` של המחלקה `A`"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "אופרטור שמוגדר כפונקציה חברה של `A` תמיד מקבל אובייקט `A` כאופרנד השמאלי (`this`). לכן אי אפשר להעמיס כך אופרטורים שהאופרנד הראשון שלהם אינו `A`, כמו `5 + a` או `cout << a`.\nבהרצה: `a + 5` עם חבר התקמפל, `5 + a` לא התקמפל, ו-`cout << a` עם `operator<<` חבר לא התקמפל.\nהתשובה היא ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probes: a member `operator+(int)` works for `a + 5` and fails for `5 + a`; a member `operator<<(ostream&)` fails for `cout << a` (the left operand must be an `A`).",
+   "correctId": "c"
+  },
+  {
+   "num": 10,
+   "topic": "templates",
+   "question": "בכמה שורות בקטע הקוד הבא יש שגיאות ?\n```cpp\ntemplate<class T, class U> void f(const T& a, const U& b)\n{}\n\nint main() {\n     int a[2] = { 1,2 };\n     int b[3] = { 1,2,3 };\n     f(a, b);\n     f(&a, &b);\n     f(*a, *b);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ- 2"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "התבנית מקבלת את שני הארגומנטים בהפניה ל-const, ולכן כל הקריאות חוקיות:\n- `f(a, b)`: `T=int[2]`, `U=int[3]` (מערכים לא דועכים כשמקבלים בהפניה).\n- `f(&a, &b)`: מצביעים למערכים (זמניים), נקשרים ל-`const T&`.\n- `f(*a, *b)`: `int` ו-`int`.\nאין שגיאות (תשובה א). הקומפילציה בהרצה עברה ללא שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++: compiles with no errors (T and U deduce as `int[2]`/`int[3]` for the by-reference arrays, as pointers-to-array for `&a`/`&b` and as `int` for `*a`/`*b`).",
+   "correctId": "a"
+  },
+  {
+   "num": 11,
+   "topic": "construction_order",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass X {\npublic:\n     X(int i = 0) : nx(i) { cout << nx; }\n     virtual ~X() { cout << nx; }\n     int nx;\n     virtual void f() { cout << nx; }\n};\nclass Y : public X {\npublic:\n     Y(int i=0, int j=0) : ny(i), X(j) { cout << ny; }\n     ~Y() { cout << ny; }\n     int ny;\n     X Xy;\n     void f() { X::f();   cout << nx << Xy.nx; }\n};\nint main() {\n     Y y1(4, 8);\n     y1.X::f();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`8048408`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`0848480`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`0848480`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "סדר ההדפסה:\n- בנייה של `y1(4, 8)`: בסיס `X(8)` מדפיס `8`; החבר `Xy` נבנה בבנאי ברירת מחדל ומדפיס `0`; גוף `Y` מדפיס `4`.\n- `y1.X::f()` קורא ישירות ל-`X::f` ומדפיס `nx` שהוא `8`.\n- הריסה בסדר הפוך: `~Y` מדפיס `4`, אחר כך החבר `Xy` (`0`), אחר כך `~X` של הבסיס (`8`).\nהפלט `8048408` (תשובה א). שים לב שתשובות ב ו-ג כתובות באותו אופן בשאלה, ושתיהן שגויות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `8048408`. Options b and c are printed identically (`0848480`) in the source; both are wrong. Order: base X(8) prints 8; member Xy (default 0) prints 0; Y body prints 4; `y1.X::f()` prints 8; then ~Y prints 4, member Xy destroyed prints 0, ~X prints 8.",
+   "correctId": "a"
+  },
+  {
+   "num": 12,
+   "topic": "operator_overloading",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\nclass X {\npublic:\n     int x;\n     X(int i = 0) :x(i) {}\n     X& operator+=(const X b) {\n          this->x += b.x;\n          return *this;\n     }\n};\n\nclass Y : public X {\npublic:\n     int y;\n     Y(int i = 0, int j = 0) :y(i), X(j) {}\n     Y& operator+=(const Y a) {\n          (X&)(*this) += (const X)a;\n          this->y += a.y;\n          return *this;\n     }\n     void print() {\n          cout << this->y << this ->x;\n     }\n};\n\nint main() {\n     X x1(1), x2(2);\n     Y y1(10, 6), y2(20, 5);\n     x2 += x1;\n     (X&)y2 = x2;\n     y2.print();\n     y2 += y1;\n     y2.print();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`106206`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`203309`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`106306`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "השורה `x2 += x1` נותנת `x2.x = 3`. `(X&)y2 = x2` מעתיקה רק את חלק ה-`X` של `y2`: `y2.x = 3`, ו-`y2.y` נשאר 20. ההדפסה הראשונה (`y` ואז `x`): `203`.\nאחרי `y2 += y1`: חלק `X` נעשה `3+6=9` ו-`y` נעשה `20+10=30`: `309`.\nהפלט `203309` (תשובה ב). תשובות א ו-ג מניחות ש-`y` הוחלף.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed `203309`: x2 becomes 3, `(X&)y2 = x2` copies only the X part (y2.x = 3, y stays 20) -> `203`; `y2 += y1` gives x=9, y=30 -> `309`.",
+   "correctId": "b"
+  },
+  {
+   "num": 13,
+   "topic": "stl_exceptions",
+   "question": "מה מדפיסה התכנית הבאה ?\n```cpp\n# include <vector>\n\nint main() {\n     int a[6] = { 10, 20, 30, 40, 50, 60 };\n     vector<int> v(a+1, a + 5);\n     a[2] = 20;\n     vector<int>::iterator it;\n     it = v.begin();\n     it++;\n     it++;\n     int total = 0;\n     while (it != v.end()) {\n          total += *it;\n          it++;\n     }\n     cout << total << endl;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`70`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`50`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`90`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "התכנית לא עוברת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הווקטור `v` נבנה כעותק של `a[1]..a[4]` = `{20,30,40,50}`. השינוי `a[2] = 20` אחרי הבנייה לא משפיע על `v`, כי הנתונים הועתקו.\nהאיטרטור מתקדם פעמיים ומצביע על `40`, והלולאה מסכמת `40 + 50 = 90`.\nהתשובה היא ג. תשובה א (70) מניחה ש-`v` משתנה עם `a`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. clang++ run printed 90: `v` is a copy of {20,30,40,50}, so `a[2] = 20` does not affect it; the loop sums elements 2 and 3 (40+50).",
+   "correctId": "c"
+  },
+  {
+   "num": 14,
+   "topic": "classes_ctor_dtor",
+   "question": "כדי לדאוג שלא ניתן יהיה ליצור אובייקטים של מחלקה `A` בפונקציות שאינן פונקציות חברות (`member functions`) או בפונקציות שאינן פונקציות `friend` של המחלקה:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "יש לדאוג לכך שהבנאי של מחלקה `A` (`constructor`) יהיה פרטי (`private`)"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "יש לדאוג לכך שהבנאי וההורס (`destructor`) של המחלקה `A` יהיו פרטיים"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "יש לדאוג לכך שהבנאי, ההורס ובנאי ההעתקה של המחלקה `A` יהיו פרטיים"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יש לדאוג לכך שהבנאי ובנאי ההעתקה של מחלקה `A` יהיו פרטיים"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "אם הבנאי פרטי, אי אפשר ליצור אובייקט מחוץ למחלקה (פרט לפונקציות חברות ול-friend): גם `A a1;` וגם `new A` נכשלים בקומפילציה (נבדק). הבנאי הפרטי מספיק, ואין צורך להפוך פרטיים גם את ההורס ואת בנאי ההעתקה, כי אי אפשר להשיג אובייקט קיים להעתיק ממנו.\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probe: with only the default constructor private, `A a1;` and `new A` in main both fail to compile (an `A` can only come from a member/friend), so the private constructor alone is sufficient; the extra private members in b-d are not needed. Reading of 'sufficient' is the paper's, not compiler-checkable beyond that.",
+   "correctId": "a"
+  },
+  {
+   "num": 15,
+   "topic": "abstract_multiple",
+   "question": "נניח שקיימות 4 מחלקות לא אבסטרקטיות, שיחסי הירושה ביניהן הם כפי שמתואר להלן:\n```cpp\nclass X { int x; };\nclass Y : public X { int y;... };\nclass Z : public X { int z;... };\nclass W : public Y, public Z { int w;... };\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אובייקט של המחלקה `W` מכיל בדיוק אוביקט אחד של המחלקה `X`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "אובייקט של המחלקה `W` מכיל שני אוביקטים זהים של המחלקה `X`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "אובייקט של המחלקה `W` מכיל שני אוביקטים לא בהכרח זהים של המחלקה `X`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אובייקט של המחלקה `W` מכיל יותר משני אוביקטים של המחלקה `X`"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "ירושה \"יהלום\" לא וירטואלית: `W` יורשת מ-`Y` ומ-`Z`, שכל אחת יורשת מ-`X`, ולכן `W` מכילה שני עותקים נפרדים של `X`. הם נפרדים בזיכרון ויכולים להחזיק ערכים שונים.\nבהרצה קיבלנו שתי כתובות שונות לשני חלקי ה-`X`, והצבנו בהם ערכים שונים (1 ו-2). לכן הטענה הנכונה היא ג (שני אובייקטים לא בהכרח זהים). א שגויה ו-ב מדויקת פחות (הם לא תמיד זהים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probe: `W` has two distinct `X` subobjects (two different addresses, sizeof(W)=20) that hold different values (1 and 2); so 'two, not necessarily identical' is the accurate statement.",
+   "correctId": "c"
+  }
+ ]
+}

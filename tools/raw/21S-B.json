@@ -1,0 +1,691 @@
+{
+ "examCode": "21S-B",
+ "examLabel": "2021 סמסטר קיץ מועד ב",
+ "year": 2021,
+ "examDate": "07.11.2021",
+ "sourceFile": "2021/סמ׳ ג מועד ב + פתרון.pdf (graded student scan, page 1 not used)",
+ "keyFile": "graded-student marks for Q3,4,6,8,9,15,16; the rest derived by compiling/running with clang++ (tools/verify/21S-B)",
+ "contexts": {
+  "notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`. בנוסף לכך בכל השאלות מהסוג הזה ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```"
+  }
+ },
+ "questions": [
+  {
+   "num": 1,
+   "topic": "cpp_basics_refs",
+   "question": "איזה מהבאים הוא תחביר (`syntax`) הנכון אם ברצוננו ליצור משתנה `reference` למשתנה `int` קיים?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`int a = 10; int r = &a;`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`int a = 10; int &r = a;`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`int a = 10; int & r = & a;`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`int a = 10; int &r; r = a;`"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "כדי ליצור משתנה הפניה (reference) כותבים `int &r = a;`: ההפניה חייבת להיות מאותחלת בהצהרה.\n- א ו-ג: `&a` הוא כתובת (מצביע) ולא ניתן לאתחל בה `int` או הפניה.\n- ד: הפניה חייבת אתחול ואי אפשר להשים אליה אחר כך.\nבהרצה רק אפשרות ב התקמפלה. התשובה היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student. clang++: only option b compiles; a, c, d are errors.",
+   "correctId": "b"
+  },
+  {
+   "num": 2,
+   "topic": "friend_this_static",
+   "question": "כמה שגיאות יש בתוכנית הבאה?\n```cpp\nclass Sample {\n    static int count;\n\npublic:\n    Sample()\n    {\n        count++;\n    }\n\n    void sayHello()\n    {\n        cout << \"Hello, \";\n    }\n    static void printTotalObj()\n    {\n        sayHello();\n        cout << count << endl;\n    }\n};\n\nint Sample::count = 0;\n\nint main()\n{\n    Sample S1;\n    Sample S2;\n    Sample.printTotalObj();\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "יש שתי שגיאות:\n- בפונקציה הסטטית `printTotalObj` נקראת `sayHello()` שהיא פונקציה לא סטטית, ובפונקציה סטטית אין אובייקט (`this`).\n- הקריאה `Sample.printTotalObj()` שגויה, כי מפעילים פונקציה סטטית דרך שם המחלקה עם `::` (או דרך אובייקט), לא עם נקודה על שם המחלקה.\nהתשובה היא 2 (ג). הרצה הראתה שגיאות בשתי השורות האלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked b). clang++: errors on exactly two lines: `sayHello();` inside the static function (no object) and `Sample.printTotalObj();` (class name needs `::`).",
+   "correctId": "c"
+  },
+  {
+   "num": 3,
+   "topic": "friend_this_static",
+   "question": "אילו מהטענות הבאות נכונות לגבי השימוש במילת המפתח \"this\"?\n1. מצביע המשמש להצביע על פונקציות וירטואליות.\n2. מצביע המכיל את ההפניה לאובייקט הנוכחי.\n3. מצביע שניתן להשתמש בו במחלקה בלבד.\n4. מצביע שניתן להשתמש בו בתוך המחלקה וגם מחוצה לה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1 ו-3."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2 ו-3."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1, 2 ו-4."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "1, 2 ו-3."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "הטענות הנכונות: `this` הוא מצביע שמכיל את כתובת האובייקט הנוכחי (2), ושימושי רק בתוך פונקציות חברות של המחלקה (3).\nטענה 1 שגויה (`this` אינו קשור לפונקציות וירטואליות), וטענה 4 שגויה (מחוץ למחלקה אין `this`; בהרצה הדבר לא התקמפל).\nהתשובה היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer b). clang++ probes agree: `this` returned from a member equals the object's address; using `this` in `main` does not compile.",
+   "correctId": "b"
+  },
+  {
+   "num": 4,
+   "topic": "stl_exceptions",
+   "question": "אילו מהפעולות 1-4 הבאות הן פעולות הנתמכות על ידי איטרטורים?\n1. פעולות קריאה\n2. פעולות כתיבה\n3. פעולות הגדלה\n4. פעולות השוואה",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1, 2"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1, 3"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "1, 2, 3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "1, 2, 3, 4"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "med",
+   "explanation": "איטרטור תומך בקריאת הערך (`*it`), בכתיבה (`*it = v`), בהגדלה (`++it`) ובהשוואה (`it != end`, `it == end`). לכן כל ארבע הפעולות נתמכות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer d). Concept question; an iterator supports `*it` (read), `*it = v` (write), `++it` and `it != end`.",
+   "correctId": "d"
+  },
+  {
+   "num": 5,
+   "topic": "const_references",
+   "question": "כמה מהטענות הבאות הינן נכונות לגבי שימוש במתודה שמוגדרת כקבועה?\n1. ניתן לגשת ולא לשנות רק ל-`data members` אשר מוגדרים כקבועים.\n2. ניתן לגשת ולא לשנות לכל ה-`data members`: גם קבועים וגם לא קבועים.\n3. ניתן לשנות את כל ה-`data members`, חוץ מאשר `data members` אשר מוגדרים כקבועים.\n4. לא ניתן לגשת אף `data member` של המחלקה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "4"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "במתודה const אפשר לקרוא כל `data member` (גם קבוע וגם לא קבוע), אבל אי אפשר לשנות אף אחד מהם (חוץ מ-`mutable`). הרצה הראתה ששתי ההשמות בתוך מתודה const (לחבר קבוע ולחבר לא קבוע) נכשלות בקומפילציה.\nמבין הטענות רק טענה 2 נכונה: 1 שגויה (אפשר לגשת גם ללא קבועים), 3 שגויה (אי אפשר לשנות), 4 שגויה (אפשר לגשת).\nהשאלה שואלת כמה טענות נכונות: אחת (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked 2). clang++ probe: a const method reads const and non-const members, and assigning to either kind is an error; so only statement 2 is true -> one true statement -> a.",
+   "correctId": "a"
+  },
+  {
+   "num": 6,
+   "topic": "classes_ctor_dtor",
+   "question": "מה היא ההגדרה הנכונה עבור פונקציה בונה ברירת מחדל (`default constructor`) למחלקה הבאה?\n```cpp\nclass sample\n{\n   private:\n      int x,y;\n};\n```\n",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`public: sample(){}`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`public: sample(){ x=0; y=0;}`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`public: sample(int a, int b){ x=a; y=b;}`"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "תשובות א' ו-ב'."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי ברירת מחדל הוא בנאי שאפשר לקרוא לו בלי ארגומנטים. גם `sample(){}` וגם `sample(){ x=0; y=0; }` הם כאלה. `sample(int a, int b)` דורש שני ארגומנטים ולכן אינו בנאי ברירת מחדל.\nהתשובה היא ד (גם א וגם ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer d). Both a and b are constructors callable without arguments.",
+   "correctId": "d"
+  },
+  {
+   "num": 7,
+   "topic": "friend_this_static",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass Sample {\nprivate:\n   int var;\npublic:\n   Sample() {\n      var = 10;\n   }\n   friend void fun();\n};\nfriend void fun(){\n   Sample S;\n   cout << S.var << endl;\n}\nint main()\n{\n   fun();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`10`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "שגיאת קומפילציה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת זמן ריצה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`0`"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המילה `friend` מופיעה רק בהצהרה בתוך המחלקה. בהגדרה של `fun` מחוץ למחלקה אסור לכתוב `friend`, וזו שגיאת קומפילציה (בהרצה אכן נכשלה).\nהתשובה היא ב. לא מגיעים לשלב הריצה ולכן `10` אינו נכון.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked a). clang++: compile error (`friend` may appear only inside a class, here on the out-of-class definition).",
+   "correctId": "b"
+  },
+  {
+   "num": 8,
+   "topic": "copy_control",
+   "question": "אילו מהפונקציות הבאות \"חייבות\" להשתמש ב-`reference`:",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "אופרטור השוואה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פונקציה בונה מעתיקה"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "פונקציה הורסת"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "פונקציה בונה עם פרמטרים."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "בנאי העתקה חייב לקבל את הפרמטר בהפניה (`const A&`). אם יקבל by value, ההעברה של הארגומנט עצמה תקרא לבנאי ההעתקה שוב ושוב, ללא סוף.\nשאר הפונקציות (אופרטור השוואה, הורס, בנאי עם פרמטרים) יכולות לעבוד גם בלי הפניה. התשובה היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer b). A copy constructor must take its parameter by reference (by value would recurse forever).",
+   "correctId": "b"
+  },
+  {
+   "num": 9,
+   "topic": "operator_overloading",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass Sample {\nprivate:\n   int number;\npublic:\n   Sample(){\n      number = 10;\n   }\n   void operator++(){\n      number = number + 1;\n   }\n   void Display() const {\n      cout << number << endl;\n   }\n};\nint main(){\n   Sample S;\n   S++;\n   S++;\n   S.Display();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`12`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`10`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת תחביר (`syntax`)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ערך אשפה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "האופרטור `operator++()` ללא פרמטר מעמיס רק את ההגדלה הקדמית (`++S`). הביטוי `S++` הוא הגדלה אחורית ודורש `operator++(int)`, ולכן יש שגיאת קומפילציה בשתי השורות.\nהתשובה היא ג (שגיאת תחביר). בהרצה אכן נכשלו שתי השורות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer c). clang++: compile errors on both `S++;` lines (postfix needs `operator++(int)`).",
+   "correctId": "c"
+  },
+  {
+   "num": 10,
+   "topic": "cpp_basics_refs",
+   "question": "אילו מהאפשרויות הבאות בתכנות מונחה עצמים מתאימה ביותר עבור נושא של העמסת פונקציות (`function overloading`) ופרמטרים ברירת מחדל (`default arguments`):",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "הורשה"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "פולימורפיזם"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "הסתרת מידע"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יצירת עצמים"
+    }
+   ],
+   "contextId": "notes",
+   "explanation": "",
+   "note": "Held: concept question with no code to run. The student's marking on the page circles both b and c; it was graded wrong, and the scan does not show which of the two counts.",
+   "hold": "no-key: concept question, the graded student answer is unreadable (b or c) and was marked wrong; no official key"
+  },
+  {
+   "num": 11,
+   "topic": "abstract_multiple",
+   "question": "אילו מהטענות הבאות נכונות עבור מחלקה אבסטרקטית ב-C++?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "(1) ניתן לייצר מצביע מסוג המחלקה האבסטרקטית אך לא ניתן לייצר אובייקט של מחלקה אבסטרקטית."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "(2) מחלקה אבסטרקטית יכולה להכיל משתנים, פונקציות וירטואליות טהורות, ופונקציות אחרות נוספות."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שתי התשובות (1) ו-(2) הינן נכונות."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "אף אחת מהתשובות אינה נכונה."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "שתי הטענות נכונות. אפשר להכריז על מצביע (או הפניה) מטיפוס מחלקה אבסטרקטית, אבל לא ליצור ממנה אובייקט (הרצה: שגיאת קומפילציה). מחלקה אבסטרקטית יכולה להכיל גם משתנים וגם פונקציות רגילות לצד הפונקציה הוירטואלית הטהורה.\nהתשובה היא ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked a). clang++ probes: a pointer to the abstract type compiles, an object does not; a class with data members, a pure virtual and a normal function compiles.",
+   "correctId": "c"
+  },
+  {
+   "num": 12,
+   "topic": "abstract_multiple",
+   "question": "איך \"מכריחים\" מחלקה נגזרת ממשית (`concrete derived class`) להגדיר (`to define`) מתודה וירטואלית?",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "על ידי הגדרת פונקציה וירטואלית טהורה ב-`base class`."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "לא ניתן לאלץ מחלקה נגזרת להגדיר מתודה וירטואלית."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "כל הורשה מחייבת את המחלקה הנגזרת להגדיר את כל המתודות הוירטואליות."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "לדרוס (`override`) את הפונקציה במחלקה נגזרת."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "med",
+   "explanation": "כדי להכריח מחלקה נגזרת ממשית לממש פונקציה, מגדירים אותה בבסיס כוירטואלית טהורה (`= 0`). אם הנגזרת לא תממש, היא עצמה נשארת אבסטרקטית ואי אפשר ליצור ממנה אובייקט (נבדק בהרצה: ההצהרה על אובייקט מהנגזרת שלא מימשה נכשלה).\nב שגויה (אפשר להכריח). ג שגויה (הירושה לא מחייבת מימוש). ד היא מה שהנגזרת עושה, לא האמצעי שמכריח.\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked c). clang++ probe: a derived class that does not define the pure virtual function stays abstract (cannot be instantiated), so a pure virtual function is the mechanism that forces it; d only restates what the derived class does.",
+   "correctId": "a"
+  },
+  {
+   "num": 13,
+   "topic": "templates",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\ntemplate <class T, int b>\nclass Sample {\n   T a;\npublic:\n   Sample(T a) {\n      this->a = a;\n   }\n   void print() const {\n      cout << a << \" \" << b << endl;\n   }\n};\nint main(){\n   Sample<int, 20> S(10);\n   S.print();\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`10 20`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "ערכי זבל"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת תחביר (`syntax`)"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שגיאה בזמן ריצה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "התבנית מקבלת סוג `T` וערך שלם `b` כפרמטרים. עם `Sample<int, 20>` הערך `a` הוא 10 ו-`b` הוא 20. הפונקציה `print` היא `const` וקוראת רק, ולכן תקינה.\nהפלט `10 20` (תשובה א). הרצה אישרה זאת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked c). clang++ run printed `10 20`.",
+   "correctId": "a"
+  },
+  {
+   "num": 14,
+   "topic": "construction_order",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass Base {\npublic:\n   Base(){\n      cout << \"Base Ctor Called\" << endl;\n   }\n   ~Base(){\n      cout << \"Base Dtor Called\" << endl;\n   }\n};\nclass Derived : Base {\npublic:\n   Derived(){\n      cout << \"Derived Ctor Called\" << endl;\n   }\n   ~Derived(){\n      cout << \"Derived Dtor Called\" << endl;\n   }\n};\nint main(){\n   Base *B;\n   B=new Derived;\n   delete B;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```\nBase Ctor Called\nDerived Ctor Called\nBase Dtor Called\nDerived Dtor Called\n```"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```\nBase Ctor Called\nDerived Ctor Called\nDerived Dtor Called\nBase Dtor Called\n```"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nBase Ctor Called\nDerived Ctor Called\nBase Dtor Called\n```"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שגיאת זמן קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`Derived` יורשת מ-`Base` בלי מילת הגישה, ולכן בירושה של `class` זו ירושה `private`. ההמרה מ-`Derived*` ל-`Base*` בהשמה `B=new Derived` אסורה מחוץ למחלקה.\nזו שגיאת קומפילציה (תשובה ד). בהרצה הקומפילציה אכן נכשלה. תשובה ג (שאולי מסמנים כי אין הורס וירטואלי) תהיה נכונה רק אם הירושה הייתה `public`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked c). clang++: compile error, because `class Derived : Base` inherits privately (default for `class`), so the conversion `B = new Derived` to `Base*` is inaccessible.",
+   "correctId": "d"
+  },
+  {
+   "num": 15,
+   "topic": "virtual_polymorphism",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass ClassA {\npublic:\n        void display() { cout << \"Displaying Class A\"; }\n};\n\nclass ClassB : public ClassA {\npublic:\n        void jump(int num) { cout << \"Jumping \" << num << endl; }\n        void display() { ClassA::display();  cout << \"Displaying Class B\" << endl; }\n};\n\nvoid main(){\n        ClassA *aPtr;\n        ClassB b;\n        aPtr->jump(3);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`Jumping 3` - בגלל שמצביעים לאובייקט מסוג `ClassB`."
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`Jumping 3` – בגלל שהמצביע הוא מסוג `ClassA` והאובייקט הוא מסוג מחלקה יורשת."
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת קומפילציה."
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "ניתן היה להריץ את התכנית אם `void jump` הייתה מוגדרת כמתודה וירטואלית במחלקה `ClassB` בלבד."
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`aPtr` הוא מצביע ל-`ClassA`, ולמחלקה `ClassA` אין פונקציה בשם `jump` (היא קיימת רק ב-`ClassB`). הקומפיילר בודק לפי הטיפוס הסטטי של המצביע, ולכן הקריאה `aPtr->jump(3)` היא שגיאת קומפילציה.\nהתשובה היא ג. גם אם `jump` הייתה וירטואלית רק ב-`ClassB` זה לא עוזר, כי היא צריכה להיות מוצהרת בבסיס (אפשרות ד שגויה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer c). clang++: `jump` is not a member of `ClassA` -> compile error on `aPtr->jump(3)` (with `main` made `int main()`; `void main` itself is rejected by clang++).",
+   "correctId": "c"
+  },
+  {
+   "num": 16,
+   "topic": "operator_overloading",
+   "question": "כמה שגיאות יש בתוכנית הבאה?\n```cpp\nclass A {\n   int n;\npublic:\n   A(int nn = 0) { n = nn; }\n   A &operator ++() { ++n; return *this; }\n};\nint main()\n{\n   A a(5);\n   A b=++a;\n   A c(a++);\n   cout << a;\n   return 1;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solution-pdf",
+   "official": false,
+   "confidence": "high",
+   "explanation": "יש רק `operator++()` קדמי. השורה `A b=++a;` תקינה. השורה `A c(a++);` שגויה (אין `operator++(int)`). השורה `cout << a;` שגויה (אין `operator<<` למחלקה). `return 1;` תקין.\nשתי שגיאות (תשובה ג). הרצה הראתה שגיאות בשתי השורות האלה בדיוק.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded correct for the student (answer c). clang++: errors on `A c(a++);` (no postfix operator++) and `cout << a;` (no operator<<) -> 2.",
+   "correctId": "c"
+  },
+  {
+   "num": 17,
+   "topic": "templates",
+   "question": "כמה שגיאות יש בקטע הקוד הבא?\n```cpp\ntemplate <class T>\nclass A{\npublic:\n   A(int i = 0) { ii = i; }\n   A(const A& rhs);\n   ~A() { ; }\n   A& operator=(const A& rhs) { ii = rhs.ii; return *this; };\n   friend ostream& operator<< (ostream&, A<T>&);\nprivate:\n   int ii;\n};\ntemplate <class T>\nostream& operator<< (ostream& output, A<T>& arg){\n   output << arg.ii << endl;\n   return output;\n}\ntemplate <class U> A<U>::A(const A& rhs){\n   ii = rhs.ii;\n}\nint main(){\n   A<int> aa;\n   aa = 5;\n   cout <<endl << aa << endl;\n   return aa;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר משתיים"
+    }
+   ],
+   "contextId": "notes",
+   "explanation": "",
+   "note": "Held: clang++ reports one compile-error line (`return aa;`). With that line fixed the program still fails to LINK, because the friend declaration is a non-template function that is never defined. The student's answer (more than two) was graded wrong; the intended count (1 or 2) cannot be settled.",
+   "hold": "no-key: clang++ counts 1 compile error plus a link error (undefined non-template friend operator<<); intended answer 1 vs 2 unclear, student answer d graded wrong"
+  },
+  {
+   "num": 18,
+   "topic": "stl_exceptions",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\n#include <vector>\nvoid func(){\n   vector<int> v(5, 3);\n   for (int i=0;i<v.size();i++)\n      cout << v[i];\n}\nvoid main(){\n   func();\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`555`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`33333`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת קומפילציה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`53`"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "`vector<int> v(5, 3)` יוצר חמישה איברים שערכם 3, והלולאה מדפיסה אותם ברצף: `33333`.\nהתשובה היא ב. `555` מבלבל בין הכמות לערך, ו-`53` מניח שהמספרים הם הערך והגודל.\nשים לב: ב-clang `void main` נדחה, לכן הבדיקה בוצעה עם `int main`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked c). clang++ run (with `main` made `int main()`) printed `33333`; `vector<int> v(5, 3)` is five elements of value 3.",
+   "correctId": "b"
+  },
+  {
+   "num": 19,
+   "topic": "templates",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\ntemplate <typename T>\nvoid fun(const T&x){\n   static int count = 0;\n   cout << \"x = \" << x << \" count = \" << count << endl;\n   ++count;\n   return;\n}\nint main(){\n   fun<int> (1);\n   cout << endl;\n   fun<int>(1);\n   cout << endl;\n   fun<double>(1.1);\n   cout << endl;\n   return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```\nx = 1 count = 0\nx = 1 count = 1\nx = 1.1 count = 0\n```"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```\nx = 1 count = 0\nx = 1 count = 0\nx = 1.1 count = 0\n```"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nx = 1 count = 0\nx = 1 count = 1\nx = 1.1 count = 2\n```"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שגיאת קומפילציה"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה `static int count` הוא אחד לכל מופע של התבנית. `fun<int>` נקראת פעמיים, ולכן הספירה שלה 0 ואז 1. `fun<double>` היא מופע נפרד עם משתנה סטטי נפרד, ולכן הספירה שלו מתחילה מ-0.\nהפלט: `x = 1 count = 0`, `x = 1 count = 1`, `x = 1.1 count = 0` (תשובה א). תשובה ג מניחה משתנה סטטי משותף לכל המופעים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student (marked d). clang++ run: x = 1 count = 0 / x = 1 count = 1 / x = 1.1 count = 0 (blank lines between), i.e. option a: one static per instantiation.",
+   "correctId": "a"
+  },
+  {
+   "num": 20,
+   "topic": "friend_this_static",
+   "question": "מה הפלט הנכון של הקוד הנתון?\n```cpp\nclass X {\npublic:\n   X(int num = 0)\n   {\n      static int counter = 0;\n      cout << num + ++counter;\n   }\n};\nvoid main() {\n   X a;\n   X b(1);\n   X c = b;\n   X d(c);\n   c = X(3);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`136`"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`025`"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "שגיאת קומפילציה"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`123`"
+    }
+   ],
+   "contextId": "notes",
+   "answerSource": "solved",
+   "official": false,
+   "confidence": "high",
+   "explanation": "המשתנה הסטטי `counter` משותף לכל הקריאות לבנאי. `X a;` מדפיס `0+1=1`, `X b(1);` מדפיס `1+2=3`. `X c = b;` ו-`X d(c);` משתמשים בבנאי ההעתקה המובנה שלא מדפיס כלום. `c = X(3);` יוצר זמני: `3+3=6`.\nהפלט `136` (תשובה א). תשובה ב מניחה שגם ההעתקות מדפיסות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Graded wrong for the student. clang++ run (with `main` made `int main()`) printed `136`: copies (`X c = b`, `X d(c)`) do not print; a=0+1, b=1+2, `X(3)`=3+3.",
+   "correctId": "a"
+  }
+ ]
+}
