@@ -762,3 +762,9 @@ pre.code-block{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   padding:.6em .85em;margin:.5em 0;font-size:.88em;line-height:1.55;tab-size:4}
 pre.code-block code{font:inherit;white-space:pre;direction:ltr;text-align:left;background:none;
   border:0;padding:0;border-radius:0}
+
+/* inline figure inside rich text (a line of exactly ![alt](images/exams/<file>.png)) */
+.rt-fig{margin:.7rem auto;max-width:100%;text-align:center}
+.rt-fig img{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:8px;
+  background:#fff;cursor:zoom-in}
+.rt-fig figcaption{margin-top:.3rem;font-size:.78rem;color:var(--muted);overflow-wrap:anywhere}

@@ -97,14 +97,48 @@ def split_fences(s):
         yield "text", "\n".join(buf)
 
 
+IMG_LINE = re.compile(r"^!\[([^\]\n]*)\]\((images/exams/[A-Za-z0-9._-]+\.png)\)[ \t]*$")
+
+
+def split_images(s):
+    """Yield ('text', str) | ('image', (alt, src)). An image is a line consisting only of
+    ![alt text](images/exams/<file>.png)."""
+    s = str(s)
+    if "![" not in s:
+        yield "text", s
+        return
+    buf = []
+    for ln in s.replace("\r\n", "\n").split("\n"):
+        m = IMG_LINE.match(ln)
+        if not m:
+            buf.append(ln)
+            continue
+        if buf:
+            yield "text", "\n".join(buf)
+            buf = []
+        yield "image", (m.group(1), m.group(2))
+    if buf:
+        yield "text", "\n".join(buf)
+
+
+def figure_html(alt, src):
+    a = html.escape(alt, quote=True)
+    return (f'<figure class="rt-fig"><img src="{html.escape(src, quote=True)}" alt="{a}" loading="lazy">'
+            f'<figcaption>{html.escape(alt, quote=False)}</figcaption></figure>')
+
+
 def split_rich(s):
-    """Yield (kind, payload) for kind in text|imath|dmath|code|fence|unclosed. Literal \\$ -> '$'.
+    """Yield (kind, payload) for kind in text|imath|dmath|code|fence|image|unclosed. Literal \\$ -> '$'.
     Fenced blocks (a line of ```lang ... a line of ```) are literal: payload (lang, body)."""
     for fk, fp in split_fences(s):
         if fk != "text":
             yield fk, fp
-        else:
-            yield from _split_inline(fp)
+            continue
+        for ik, ip in split_images(fp):
+            if ik == "image":
+                yield "image", ip
+            else:
+                yield from _split_inline(ip)
 
 
 def _split_inline(s):
@@ -215,6 +249,13 @@ def rich_html(s, bank, where, math_errors):
             lang, body = p
             la = f' data-lang="{html.escape(lang, quote=True)}"' if lang else ""
             fences.append(f'<pre class="code-block" dir="ltr"{la}><code>{html.escape(body, quote=False)}</code></pre>')
+            out.append(f"\x01F{len(fences) - 1}\x01")
+        elif kind == "image":
+            alt, src = p
+            if not (OUT / src).is_file():
+                math_errors.append((where, src, "image file missing"))
+                continue
+            fences.append(figure_html(alt, src))
             out.append(f"\x01F{len(fences) - 1}\x01")
         elif kind == "unclosed":
             math_errors.append((where, p[:40], "unclosed ``` code fence"))

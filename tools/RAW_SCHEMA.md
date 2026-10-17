@@ -49,6 +49,7 @@ lists them (id + reason) in `build_report.md`.
   **No Hebrew inside `$…$`** (split: `השפה $L$ ניתנת להכרעה`).
 - `**bold**`, `` `code` `` (LTR), `\n` = line break. Literal `$` → `\$`.
 - **Fenced code block** (multi-line code: C, MIPS, C++): a line that is exactly three backticks (optionally followed by a short language tag: `c`, `cpp`, `asm`) opens it and a line that is exactly three backticks closes it. The content is literal: HTML-escaped only, no `$` math, no `**`, no backtick parsing, indentation and blank lines preserved. It renders as an LTR, left-aligned `<pre class="code-block">` that scrolls sideways by itself. An unclosed fence fails `validate.py` and the build, naming the item id. Never write multi-line code as one `` `backtick span` `` per line.
+- **Inline figure** (a plot or sketch inside a solution, explanation or brief): a line consisting only of `![alt text](images/exams/<file>.png)`. It renders as `<figure class="rt-fig"><img ...><figcaption>alt text</figcaption></figure>` (responsive, click to zoom). The file must exist under `images/exams/` (crop it with `tools/crop.py`); a missing file fails `validate.py`, the build and `course_lint.js`, naming the item id. The alt text is shown as the caption and goes through the `redact.txt` check. Any other use of `![` is an error.
 - Roman-numeral claims (I / II) stay as plain text lines.
 
 ## Notation

@@ -456,7 +456,7 @@ function bindGlobal(){
   $("#resetProgress").onclick=()=>{ if(confirm("לאפס את כל ההתקדמות וההיסטוריה?")){ P=freshProgress(); saveProgress(); renderTopStats(); renderTopicGrid(); updatePoolInfo(); } };
   // click any figure (question / context / learn) to zoom
   document.addEventListener("click", e=>{
-    const img=e.target.closest(".q-img, .learn-fig img"); if(!img) return;
+    const img=e.target.closest(".q-img, .learn-fig img, .rt-fig img"); if(!img) return;
     openLightbox(img.src, img.alt);
   });
   const lb=$("#lightbox");

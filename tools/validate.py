@@ -104,6 +104,7 @@ def redact_problems(data, code, qid_of, names):
     return out
 
 
+IMG_LINE = re.compile(r"^!\[([^\]\n]*)\]\((images/exams/[A-Za-z0-9._-]+\.png)\)[ \t]*$")
 FENCE_OPEN = re.compile(r"^```([A-Za-z0-9+#_-]{0,12})[ \t]*$")
 FENCE_CLOSE = re.compile(r"^```[ \t]*$")
 
@@ -147,6 +148,18 @@ def rich_problems(s, where):
                 out.append(f"{where}: unclosed ``` code fence (close it with a line that is exactly ```)")
             elif fk == "text":
                 keep.append(fp)
+        s = "\n".join(keep)
+    if "![" in str(s):
+        keep = []
+        for ln in str(s).replace("\r\n", "\n").split("\n"):
+            m = IMG_LINE.match(ln)
+            if m:
+                if not (ROOT / m.group(2)).is_file():
+                    out.append(f"{where}: image file missing {m.group(2)}")
+            elif ln.lstrip().startswith("!["):
+                out.append(f"{where}: an inline figure must be a line of exactly ![alt](images/exams/<file>.png)")
+            else:
+                keep.append(ln)
         s = "\n".join(keep)
     s = str(s).replace("\\$", "")
     for part in TOKEN.split(s):

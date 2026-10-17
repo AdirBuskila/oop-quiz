@@ -391,6 +391,22 @@ for (const c of Object.values(D.contexts || {})) if (c.image) refs.push(c.image)
 const missing = refs.filter(r => !fs.existsSync(path.join(ROOT, r)));
 assert(missing.length === 0, `all ${refs.length} image refs exist${missing.length ? " MISSING: " + missing.join(", ") : ""}`);
 
+// inline figures in rich text (![alt](images/exams/x.png) lines) render as clickable .rt-fig
+{
+  const figQ = QS.filter(q => /rt-fig/.test(JSON.stringify(q)));
+  if (!figQ.length) console.log("inline figures: none in the bank (skipped)");
+  else {
+    const holder = doc.createElement("div");
+    holder.innerHTML = figQ[0].explanationHtml || figQ[0].questionHtml || "";
+    const fimg = holder.querySelector(".rt-fig img");
+    assert(!!fimg && !!fimg.getAttribute("src") && !!holder.querySelector(".rt-fig figcaption"), `${figQ[0].id}: .rt-fig renders an img with a caption`);
+    assert(fimg && fs.existsSync(path.join(ROOT, fimg.getAttribute("src"))), `${figQ[0].id}: the figure file exists on disk`);
+    doc.body.appendChild(holder);
+    if (fimg) { fimg.click(); assert(visible($("#lightbox")), "clicking an inline figure opens the lightbox"); $("#lightboxClose").click(); }
+    holder.remove();
+  }
+}
+
 assert(errors.length === 0, `no JS errors${errors.length ? ":\n    " + errors.join("\n    ") : ""}`);
 console.log(fail === 0 ? "\nDOM VERIFY PASSED" : `\nDOM VERIFY FAILED (${fail})`);
 process.exit(fail === 0 ? 0 : 1);

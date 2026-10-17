@@ -98,6 +98,17 @@ function mathChecks(w, p, s) {
     }
     s = keep.join("\n");
   }
+  // inline figures: a line of exactly ![alt](images/exams/<file>.png); the file must exist
+  if (s.includes("![")) {
+    const keep = [];
+    for (const ln of s.replace(/\r\n/g, "\n").split("\n")) {
+      const im = /^!\[([^\]\n]*)\]\((images\/exams\/[A-Za-z0-9._-]+\.png)\)[ \t]*$/.exec(ln);
+      if (im) { if (!fs.existsSync(path.join(ROOT, im[2]))) ERR(w, `${p}: image file missing ${im[2]}`); }
+      else if (/^\s*!\[/.test(ln)) ERR(w, `${p}: an inline figure must be a line of exactly ![alt](images/exams/<file>.png)`);
+      else keep.push(ln);
+    }
+    s = keep.join("\n");
+  }
   let m; MATH.lastIndex = 0;
   while ((m = MATH.exec(s))) {
     const tex = m[1] != null ? m[1] : m[2];

@@ -159,6 +159,32 @@ def linkify_qids(h, known, where):
     return re.sub(r"<code>(" + QID + r")</code>", sub, h)
 
 
+IMG_LINE = re.compile(r"^!\[([^\]\n]*)\]\((images/exams/[A-Za-z0-9._-]+\.png)\)[ \t]*$")
+
+
+def check_images(where, body):
+    """![alt](images/exams/<file>.png) lines (outside ``` fences) must point at an existing file."""
+    for is_code, chunk in split_code_fences(body):
+        if is_code:
+            continue
+        for ln in chunk.split("\n"):
+            m = IMG_LINE.match(ln)
+            if m:
+                if not (ROOT / m.group(2)).is_file():
+                    fail(f"{where}: image file missing {m.group(2)}")
+            elif ln.lstrip().startswith("!["):
+                fail(f"{where}: an inline figure must be a line of exactly ![alt](images/exams/<file>.png)")
+
+
+def figures(h):
+    """<p><img alt src></p> (a line that was only an image) -> the rich-text figure markup."""
+    def sub(m):
+        alt, src = m.group(1), m.group(2)
+        return (f'<figure class="rt-fig"><img src="{src}" alt="{alt}" loading="lazy">'
+                f'<figcaption>{alt}</figcaption></figure>')
+    return re.sub(r'<p><img alt="([^"]*)" src="([^"]*)"\s*/?></p>', sub, h)
+
+
 def wrap_tables(h):
     """Tables scroll inside their own box; --cols lets CSS give wide tables a min width."""
     def sub(m):
@@ -259,6 +285,7 @@ def main():
 
     store, staged = [], []
     for cid, topic, kind, title, body in briefs:
+        check_images(cid, body)
         prepared = extract_math(body, store, cid)
         prepared = normalize_lists(wikilinks(prepared, set(ids), titles, cid))
         staged.append((cid, topic, kind, title, prepared))
@@ -269,6 +296,7 @@ def main():
     for cid, topic, kind, title, prepared in staged:
         md.reset()
         h = md.convert(prepared)
+        h = figures(h)
         h = wrap_tables(h)
         h = tag_callouts(h)
         h = linkify_qids(h, known, cid)
