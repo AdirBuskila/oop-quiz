@@ -1,0 +1,114 @@
+{
+ "examCode": "25S-A",
+ "scope": "Q2-Q17 explanations + keys",
+ "agree": 15,
+ "disagree": 0,
+ "unclear": 0,
+ "items": {
+  "Q2": {
+   "verdict": "agree",
+   "myAnswer": "c",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q3": {
+   "verdict": "agree",
+   "myAnswer": "a",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q4": {
+   "verdict": "agree",
+   "myAnswer": "c",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q5": {
+   "verdict": "agree",
+   "myAnswer": "d",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q6": {
+   "verdict": "agree",
+   "myAnswer": "b",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q7": {
+   "verdict": "agree",
+   "myAnswer": "a",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q8": {
+   "verdict": "agree",
+   "myAnswer": "d (3 as written; c if B complete)",
+   "explanation": "agree",
+   "steps": "n/a (mcq)",
+   "note": "Incomplete B in A::f: clang stops at the parameter (1 error) but every body access is invalid; with B complete only protB/privB fail (2). Both accepted by sheet; explanation matches both runs."
+  },
+  "Q9": {
+   "verdict": "agree",
+   "myAnswer": "c",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q10": {
+   "verdict": "agree",
+   "myAnswer": "d",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q11": {
+   "verdict": "agree",
+   "myAnswer": "a/c (identical text)",
+   "explanation": "agree",
+   "steps": "n/a (mcq)",
+   "note": "Options a and c have identical text; both accepted. Not a key error, a source flaw."
+  },
+  "Q12": {
+   "verdict": "agree",
+   "myAnswer": "c",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q13": {
+   "verdict": "agree",
+   "myAnswer": "d",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q14": {
+   "verdict": "agree",
+   "myAnswer": "b",
+   "explanation": "agree",
+   "steps": "n/a (mcq)",
+   "note": "Compiles, prints option b. Explicit specialization belongs to h(T) (h<const char*>(s) prints C-string). Sheet accepts a,c,d too, which are factually wrong (a/c print differently, d compiles); key b and explanation are right."
+  },
+  "Q15": {
+   "verdict": "agree",
+   "myAnswer": "b",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q16": {
+   "verdict": "agree",
+   "myAnswer": "b",
+   "explanation": "agree",
+   "steps": "n/a (mcq)"
+  },
+  "Q17": {
+   "verdict": "agree",
+   "myAnswer": "b",
+   "explanation": "agree",
+   "steps": "n/a (mcq)",
+   "note": "Rule confirmed by clang (\"differ only in their return type\"). Sheet also accepts a,d, factually wrong; key b right."
+  },
+  "Q1": {
+   "verdict": "skipped",
+   "reason": "held by orchestrator"
+  }
+ },
+ "files": "tools/verify/25S-A/refute_*"
+}
