@@ -48,4 +48,25 @@ Open questions for Adir. One entry per item; the orchestrator moves it to Resolv
 - Needed: confirm that run-derived keys are acceptable for these items.
 - Status: info
 
+### 19A-C Q6 - no highlighted option, no option compiles (hold)
+- Path: sitting 19A-C, question paper
+- Page: 3
+- Question: "what to write on line 4 so the program compiles and prints 1" (`new X` / `X()` / `this` / `*this`). Nothing is highlighted, and `&x == x.f()` compares an X* with an X&, so all four options fail to compile under clang++ (the intended expression is probably `&x == &x.f()` with `*this`).
+- Needed: the intended key, or confirm it stays out of the bank.
+- Status: hold
+
+### 20B-A - boxes are not an official key; Q1, Q6, Q17 held
+- Path: sitting 20B-A (2020 quiz PDF of screenshots)
+- Page: Q1 p.1, Q6 p.4, Q17 p.10 (whole file pp.1-10)
+- Question: each question has one boxed option plus hand-drawn X marks and handwriting, so the boxes look like a person's answers, not an official key. All 17 keys were re-derived (clang++ where runnable, reasoning for the class-design Q11 and Q13) and stored official:false. Three boxes disagree with the run and are held: Q1 (box: statics shared by all objects of the template; run: only per instantiation), Q6 (box: "always true" for overloads that differ in return type; C++ rejects it), Q17 (box: "not possible"; `RAM() : Memory(3) {}` compiles and sets i to 3).
+- Needed: confirm the run-derived keys for Q1/Q6/Q17 (a / b / a), or say the boxes are the lecturer's key; the exact exam date is not printed in the file.
+- Status: hold
+
+### 21B-A Q6 and Q13 - undefined behaviour (hold)
+- Path: sitting 21B-A (version 1), question paper
+- Page: Q6 p.6, Q13 p.12
+- Question: no official key exists (only hand-marked student sheets); 18 of 20 keys come from clang++ runs and match the sheet. Q6: the double delete happens during the third call f(a1), not before it (student marks c); Q13: `ia[20] = 3` writes past a 12-int array: prints 3 at -O0, garbage at -O2 (student marks b, MSVC debug would stop).
+- Needed: the intended answers for Q6 and Q13, or leave them out.
+- Status: hold
+
 ## Resolved
