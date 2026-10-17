@@ -1,0 +1,883 @@
+{
+ "meta": {
+  "generated": "tools/build_questions.py",
+  "exams": [
+   {
+    "examCode": "25S-A",
+    "examLabel": "2025 סמסטר קיץ מועד א",
+    "year": 2025,
+    "source": "exam",
+    "examDate": "30.09.2025"
+   }
+  ],
+  "topics": [
+   {
+    "key": "cpp_basics_refs",
+    "label": "הפניות והעמסת פונקציות"
+   },
+   {
+    "key": "classes_ctor_dtor",
+    "label": "מחלקות, בנאים והורסים"
+   },
+   {
+    "key": "copy_control",
+    "label": "בנאי העתקה והשמה"
+   },
+   {
+    "key": "const_references",
+    "label": "const והפניות"
+   },
+   {
+    "key": "friend_this_static",
+    "label": "friend, this ו-static"
+   },
+   {
+    "key": "composition",
+    "label": "הכלה וסדר אתחול"
+   },
+   {
+    "key": "operator_overloading",
+    "label": "העמסת אופרטורים"
+   },
+   {
+    "key": "operator_conversions",
+    "label": "אופרטורי המרה"
+   },
+   {
+    "key": "inheritance_access",
+    "label": "ירושה והרשאות גישה"
+   },
+   {
+    "key": "construction_order",
+    "label": "סדר בנייה והריסה"
+   },
+   {
+    "key": "virtual_polymorphism",
+    "label": "וירטואליות ופולימורפיזם"
+   },
+   {
+    "key": "abstract_multiple",
+    "label": "מופשטות וירושה מרובה"
+   },
+   {
+    "key": "templates",
+    "label": "תבניות"
+   },
+   {
+    "key": "stl_exceptions",
+    "label": "STL ושגיאות"
+   }
+  ],
+  "title": "תכנות מונחה עצמים",
+  "accent": "#38bdf8",
+  "accent2": "#7c3aed",
+  "storePrefix": "oop",
+  "needHelp": [
+   {
+    "id": "copy_control",
+    "titleHe": "בנאי העתקה והשמה",
+    "icon": "📋",
+    "topic": "copy_control",
+    "entryLabelHe": "צריך עזרה בבנאי העתקה והשמה?"
+   },
+   {
+    "id": "virtual",
+    "titleHe": "פונקציות וירטואליות ופולימורפיזם",
+    "icon": "🎭",
+    "topic": "virtual_polymorphism",
+    "entryLabelHe": "צריך עזרה בוירטואליות ופולימורפיזם?"
+   },
+   {
+    "id": "ctor_order",
+    "titleHe": "סדר בנייה והריסה",
+    "icon": "🏗️",
+    "topic": "construction_order",
+    "entryLabelHe": "צריך עזרה בסדר בנייה והריסה?"
+   },
+   {
+    "id": "operators",
+    "titleHe": "העמסת אופרטורים והמרות",
+    "icon": "➕",
+    "topic": "operator_overloading",
+    "entryLabelHe": "צריך עזרה בהעמסת אופרטורים והמרות?"
+   }
+  ],
+  "counts": {
+   "total": 16,
+   "unique": 16,
+   "contexts": 1,
+   "math": 0
+  }
+ },
+ "contexts": {
+  "25S-A-notes": {
+   "kind": "text",
+   "title": "הערות משותפות לגבי התוכן של כל השאלות",
+   "text": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה `main`.\nבכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט `#include` בתחילת קטע הקוד/התכנית.\nבכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.\nבכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.\nכאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.\nבכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.\nבכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:\n```cpp\n#include <iostream>\nusing namespace std;\n```\nבכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-`#include` הנדרשים להרצת קטע הקוד.",
+   "id": "25S-A-notes",
+   "textHtml": "בכל שאלה שבה נדרש לרשום בכמה שורות יש שגיאות בקטע הקוד, יש להסתכל על כל הקוד גם זה שלפני הפונקציה <code class=\"tok\" dir=\"ltr\">main</code>.<br>בכל השאלות שבהן נדרש לרשום כמה שגיאות יש בקטע הקוד או מה מדפיסה התכנית הבאה, ניתן להניח שאין שגיאה מהסוג של רווח מיותר, או חוסר ברווח, וכן אין שגיאה מהסוג של נקודה פסיק מיותרת או חוסר בנקודה פסיק, וכן אין שגיאה שנובעת מכך שחסר משפט <code class=\"tok\" dir=\"ltr\">#include</code> בתחילת קטע הקוד/התכנית.<br>בכל שאלה שבה יש תשובה: \"אף תשובה אינה נכונה\" הכוונה שמבין התשובות האחרות אף תשובה אינה נכונה.<br>בכל שאלה יש רק תשובה אחת נכונה ביותר. אם יש שתי תשובות נכונות יש לסמן את התשובה הנכונה ביותר מבין השתיים.<br>כאשר נתון קטע קוד ולאחריו מספר משפטים, יש לסמן את המשפט הנכון ביותר בהקשר לקטע הקוד הנתון.<br>בכל שאלה מהסוג \"מה מדפיסה התכנית הבאה\", יש לקרוא את הפלט שמצוין בתשובות משמאל לימין.<br>בכל אחד מקטעי הקוד הבאים יש להניח ששתי השורות הבאות קיימות בתחילת הקטע:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;</code></pre>בכל אחד מקטעי הקוד הבאים, ניתן להניח שהוספו כל משפטי ה-<code class=\"tok\" dir=\"ltr\">#include</code> הנדרשים להרצת קטע הקוד.",
+   "titleHtml": "הערות משותפות לגבי התוכן של כל השאלות"
+  }
+ },
+ "questions": [
+  {
+   "num": 2,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות (מהשורות המסומנות ב- `//line 1` ... `//line 4`) בתכנית הבאה יש שגיאות קומפילציה ?\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass B {\npublic: B(int b = 0) :b(b) {};\nprivate:\n      int b;\n\n};\n\nclass D : public B {\npublic: D(int b = 0, int d = 0) : B(b), d(d) {}\n      int d;\n};\n\nint main() {\n     B b1, b2;\n     D d1, d2;\n\n     B* bptr1 = &d1; // line 1\n     D* dptr2 = &b2; // line 2\n     b1 = d1;        // line 3\n     d2 = b2;        // line 4\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key c. clang++ run: errors on line 2 (base pointer to derived pointer) and line 4 (no D = B), none on lines 1 and 3 -> 2. Agrees.",
+   "correctId": "c",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q2",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בכמה שורות (מהשורות המסומנות ב- <code class=\"tok\" dir=\"ltr\">//line 1</code> ... <code class=\"tok\" dir=\"ltr\">//line 4</code>) בתכנית הבאה יש שגיאות קומפילציה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nclass B {\npublic: B(int b = 0) :b(b) {};\nprivate:\n      int b;\n\n};\n\nclass D : public B {\npublic: D(int b = 0, int d = 0) : B(b), d(d) {}\n      int d;\n};\n\nint main() {\n     B b1, b2;\n     D d1, d2;\n\n     B* bptr1 = &amp;d1; // line 1\n     D* dptr2 = &amp;b2; // line 2\n     b1 = d1;        // line 3\n     d2 = b2;        // line 4\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "0b192984d3a6cd7e"
+  },
+  {
+   "num": 3,
+   "topic": "virtual_polymorphism",
+   "question": "מהו הפלט של התכנית הבאה:\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass B {\npublic:\n    B(int b) : b(b) {};\n    virtual int f() { return b; }\nprivate:\n    int b;\n};\n\nclass D : public B {\npublic:\n    D(int b, int d) : B(b), d(d) {};\n    int f() { return d; }\nprivate:\n    int d;\n};\n\nint main() {\n    B* bptr1 = new B(1);\n    B* bptr2 = new D(2, 3);\n    cout << bptr1->f() << \" \" << bptr2->f() << \" \" <<\n        bptr2->B::f() << endl;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1 3 2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 3 2</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1 2 2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2 2</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`1 2 3`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2 3</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`2 2 3`",
+     "html": "<code class=\"tok\" dir=\"ltr\">2 2 3</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key a. clang++ run printed `1 3 2`. Agrees.",
+   "correctId": "a",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q3",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "וירטואליות ופולימורפיזם",
+   "questionHtml": "מהו הפלט של התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nclass B {\npublic:\n    B(int b) : b(b) {};\n    virtual int f() { return b; }\nprivate:\n    int b;\n};\n\nclass D : public B {\npublic:\n    D(int b, int d) : B(b), d(d) {};\n    int f() { return d; }\nprivate:\n    int d;\n};\n\nint main() {\n    B* bptr1 = new B(1);\n    B* bptr2 = new D(2, 3);\n    cout &lt;&lt; bptr1-&gt;f() &lt;&lt; \" \" &lt;&lt; bptr2-&gt;f() &lt;&lt; \" \" &lt;&lt;\n        bptr2-&gt;B::f() &lt;&lt; endl;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "ef72afbe63d2a44b"
+  },
+  {
+   "num": 4,
+   "topic": "abstract_multiple",
+   "question": "בכמה שורות (מהשורות המסומנות ב- `//line 1` ... `//line 3`) בתכנית הבאה יש שגיאות קומפילציה ?\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass B {\npublic:\n    B(int b) : b(b) {};\n    virtual int f() = 0;\nprivate:\n    int b;\n};\n\nclass D1 : public B {\npublic:\n    D1(int b, int d) : B(b), d(d) {};\nprivate:\n    int d;\n};\n\nclass D2 : public B {\npublic:\n    D2(int b, int d) : B(b), d(d) {};\n    int f() { return d; }\nprivate:\n    int d;\n};\n\nint main() {\n    B* b1 = new B(1, 2);  // line 1\n    B* b2 = new D1(3, 4); // line 2\n    B* b3 = new D2(5, 6); // line 3\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key c. clang++ run: errors on line 1 and line 2 (abstract class instantiation; line 1 also has no B(int,int) constructor) -> 2. Agrees.",
+   "correctId": "c",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q4",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "בכמה שורות (מהשורות המסומנות ב- <code class=\"tok\" dir=\"ltr\">//line 1</code> ... <code class=\"tok\" dir=\"ltr\">//line 3</code>) בתכנית הבאה יש שגיאות קומפילציה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nclass B {\npublic:\n    B(int b) : b(b) {};\n    virtual int f() = 0;\nprivate:\n    int b;\n};\n\nclass D1 : public B {\npublic:\n    D1(int b, int d) : B(b), d(d) {};\nprivate:\n    int d;\n};\n\nclass D2 : public B {\npublic:\n    D2(int b, int d) : B(b), d(d) {};\n    int f() { return d; }\nprivate:\n    int d;\n};\n\nint main() {\n    B* b1 = new B(1, 2);  // line 1\n    B* b2 = new D1(3, 4); // line 2\n    B* b3 = new D2(5, 6); // line 3\n    return 0;\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "e7b4b8764bfc71e8"
+  },
+  {
+   "num": 5,
+   "topic": "construction_order",
+   "question": "מהו הפלט של התכנית הבאה:\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass B {\npublic:\n    B() { cout << \"B \"; }\n    virtual ~B() { cout << \"~B \"; }\n};\n\nclass D : public B {\npublic:\n    D() { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\n\nint main() {\n    B* b = new D();\n    delete b;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`B D ~B`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B D ~B</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`D B ~B ~D`",
+     "html": "<code class=\"tok\" dir=\"ltr\">D B ~B ~D</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`B D ~D`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B D ~D</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`B D ~D ~B`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B D ~D ~B</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key d. clang++ run printed `B D ~D ~B`. Agrees.",
+   "correctId": "d",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q5",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מהו הפלט של התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nclass B {\npublic:\n    B() { cout &lt;&lt; \"B \"; }\n    virtual ~B() { cout &lt;&lt; \"~B \"; }\n};\n\nclass D : public B {\npublic:\n    D() { cout &lt;&lt; \"D \"; }\n    ~D() { cout &lt;&lt; \"~D \"; }\n};\n\nint main() {\n    B* b = new D();\n    delete b;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "60b74b439a1f5443"
+  },
+  {
+   "num": 6,
+   "topic": "construction_order",
+   "question": "מהו הפלט של התכנית הבאה:\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass B1 {\npublic:\n    B1() { cout << \"B1 \"; }\n    ~B1() { cout << \"~B1 \"; }\n};\n\nclass B2 {\npublic:\n    B2() { cout << \"B2 \"; }\n    ~B2() { cout << \"~B2 \"; }\n};\n\nclass D : public B1, public B2 {\npublic:\n    D() { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\n\nint main() {\n    D d;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`D B1 B2 ~B2 ~B1 ~D`",
+     "html": "<code class=\"tok\" dir=\"ltr\">D B1 B2 ~B2 ~B1 ~D</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`B1 B2 D ~D ~B2 ~B1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B1 B2 D ~D ~B2 ~B1</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`B1 B2 D ~B1 ~B2 ~D`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B1 B2 D ~B1 ~B2 ~D</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`B1 D B2 ~B2 ~D ~B1`",
+     "html": "<code class=\"tok\" dir=\"ltr\">B1 D B2 ~B2 ~D ~B1</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key b. clang++ run printed `B1 B2 D ~D ~B2 ~B1`. Agrees.",
+   "correctId": "b",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q6",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "סדר בנייה והריסה",
+   "questionHtml": "מהו הפלט של התכנית הבאה:<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nclass B1 {\npublic:\n    B1() { cout &lt;&lt; \"B1 \"; }\n    ~B1() { cout &lt;&lt; \"~B1 \"; }\n};\n\nclass B2 {\npublic:\n    B2() { cout &lt;&lt; \"B2 \"; }\n    ~B2() { cout &lt;&lt; \"~B2 \"; }\n};\n\nclass D : public B1, public B2 {\npublic:\n    D() { cout &lt;&lt; \"D \"; }\n    ~D() { cout &lt;&lt; \"~D \"; }\n};\n\nint main() {\n    D d;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "ee29698123915370"
+  },
+  {
+   "num": 7,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות (מהשורות המסומנות ב- `//line 1` ... `//line 6`) בתכנית הבאה יש שגיאות קומפילציה ?\n```cpp\nclass A\n{\npublic:     void pubA() {};\nprotected:  void protA() {};\nprivate:    void privA() {};\n};\n\nclass B : protected A {\npublic:\n    void accessA() {\n        pubA();   // line 1\n        protA();  // line 2\n        privA();  // line 3\n    }\n};\n\n\nint main()\n{\n     B b;\n     b.pubA(); // line 4\n     b.protA();// line 5\n     b.privA();// line 6\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "4",
+     "html": "4"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key a. clang++ run: errors on lines 3, 4, 5, 6 -> 4. Agrees.",
+   "correctId": "a",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q7",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בכמה שורות (מהשורות המסומנות ב- <code class=\"tok\" dir=\"ltr\">//line 1</code> ... <code class=\"tok\" dir=\"ltr\">//line 6</code>) בתכנית הבאה יש שגיאות קומפילציה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A\n{\npublic:     void pubA() {};\nprotected:  void protA() {};\nprivate:    void privA() {};\n};\n\nclass B : protected A {\npublic:\n    void accessA() {\n        pubA();   // line 1\n        protA();  // line 2\n        privA();  // line 3\n    }\n};\n\n\nint main()\n{\n     B b;\n     b.pubA(); // line 4\n     b.protA();// line 5\n     b.privA();// line 6\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "d7f84601d4eb712b"
+  },
+  {
+   "num": 8,
+   "topic": "inheritance_access",
+   "question": "בכמה שורות (מהשורות המסומנות ב- `//line 1` ... `//line 3`) בתכנית הבאה יש שגיאות קומפילציה ?\n```cpp\nclass B;\nclass A\n{\n    void f(B b) {\n        b.pubB = 1;   // line 1\n        b.protB = 2;  // line 2\n        b.privB = 3;  // line 3\n    }\n};\n\nclass B : public A {\npublic:     int pubB;\nprotected:  int protB;\nprivate:    int privB;\n};\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official sheet (version 1) highlights c and d (both accepted); correctId set to d. clang++: B is incomplete inside A::f (error at the parameter, so all three member accesses are invalid: 3); with B complete (q08_complete.cpp) only lines 2 and 3 fail: 2. Consistent with the accepted pair.",
+   "correctId": "d",
+   "acceptedIds": [
+    "d",
+    "c"
+   ],
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q8",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "ירושה והרשאות גישה",
+   "questionHtml": "בכמה שורות (מהשורות המסומנות ב- <code class=\"tok\" dir=\"ltr\">//line 1</code> ... <code class=\"tok\" dir=\"ltr\">//line 3</code>) בתכנית הבאה יש שגיאות קומפילציה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class B;\nclass A\n{\n    void f(B b) {\n        b.pubB = 1;   // line 1\n        b.protB = 2;  // line 2\n        b.privB = 3;  // line 3\n    }\n};\n\nclass B : public A {\npublic:     int pubB;\nprotected:  int protB;\nprivate:    int privB;\n};</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "e5af757bff165c88"
+  },
+  {
+   "num": 9,
+   "topic": "friend_this_static",
+   "question": "בכמה שורות (מהשורות המסומנות ב- `//line 1` ... `//line 6`) בתכנית הבאה יש שגיאות קומפילציה ?\n```cpp\nclass A\n{\npublic:     int pubA;\nprotected:  int protA;\nprivate:    int privA;\n};\n\nclass B : public A {\n    friend void funB(B& b, A& a);\n};\n\nvoid funB(B& b, A& a)\n{\n    b.pubA = 1;    // line 1\n    b.protA = 2;   // line 2\n    b.privA = 3;   // line 3\n    a.pubA = 4;    // line 4\n    a.protA = 5;   // line 5\n    a.privA = 6;   // line 6\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-3",
+     "html": "יותר מ-3"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key c. clang++ run: errors on lines 3, 5, 6 -> 3. Agrees.",
+   "correctId": "c",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q9",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "friend, this ו-static",
+   "questionHtml": "בכמה שורות (מהשורות המסומנות ב- <code class=\"tok\" dir=\"ltr\">//line 1</code> ... <code class=\"tok\" dir=\"ltr\">//line 6</code>) בתכנית הבאה יש שגיאות קומפילציה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class A\n{\npublic:     int pubA;\nprotected:  int protA;\nprivate:    int privA;\n};\n\nclass B : public A {\n    friend void funB(B&amp; b, A&amp; a);\n};\n\nvoid funB(B&amp; b, A&amp; a)\n{\n    b.pubA = 1;    // line 1\n    b.protA = 2;   // line 2\n    b.privA = 3;   // line 3\n    a.pubA = 4;    // line 4\n    a.protA = 5;   // line 5\n    a.privA = 6;   // line 6\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "d78f66dfe0b08d42"
+  },
+  {
+   "num": 10,
+   "topic": "abstract_multiple",
+   "question": "מהו הפלט של התכנית הבאה ?\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass B { virtual void f() {}; };\nclass D1 : virtual public B {};\nclass D2 : virtual public B {};\nclass D3 : public D1, public D2 {};\n\nint main() {\n     D3* d3ptr = new D3;\n     B* b3ptr = dynamic_cast<B*> (d3ptr);\n     if (b3ptr != nullptr) { cout << \"0 \"; }\n\n     B* bptr = dynamic_cast<B*>\n(dynamic_cast<D1*>(d3ptr));\n     if (bptr != nullptr) { cout << \"1 \"; }\n\n     D1* d1ptr = dynamic_cast<D1*>(bptr);\n     if (d1ptr != nullptr) { cout << \"2 \"; }\n\n     D2* d2ptr = dynamic_cast<D2*>(bptr);\n     if (d2ptr != nullptr) { cout << \"3 \"; }\n\n     D3* d3ptr2 = dynamic_cast<D3*>(bptr);\n     if (d3ptr2 != nullptr) { cout << \"4 \"; }\n\n     return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1 2 3 4`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2 3 4</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1 2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`1 2 3`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2 3</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`0 1 2 3 4`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0 1 2 3 4</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key d. clang++ run printed `0 1 2 3 4`. Agrees.",
+   "correctId": "d",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q10",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "מהו הפלט של התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nclass B { virtual void f() {}; };\nclass D1 : virtual public B {};\nclass D2 : virtual public B {};\nclass D3 : public D1, public D2 {};\n\nint main() {\n     D3* d3ptr = new D3;\n     B* b3ptr = dynamic_cast&lt;B*&gt; (d3ptr);\n     if (b3ptr != nullptr) { cout &lt;&lt; \"0 \"; }\n\n     B* bptr = dynamic_cast&lt;B*&gt;\n(dynamic_cast&lt;D1*&gt;(d3ptr));\n     if (bptr != nullptr) { cout &lt;&lt; \"1 \"; }\n\n     D1* d1ptr = dynamic_cast&lt;D1*&gt;(bptr);\n     if (d1ptr != nullptr) { cout &lt;&lt; \"2 \"; }\n\n     D2* d2ptr = dynamic_cast&lt;D2*&gt;(bptr);\n     if (d2ptr != nullptr) { cout &lt;&lt; \"3 \"; }\n\n     D3* d3ptr2 = dynamic_cast&lt;D3*&gt;(bptr);\n     if (d3ptr2 != nullptr) { cout &lt;&lt; \"4 \"; }\n\n     return 0;\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "29eb553e1e7479ff"
+  },
+  {
+   "num": 11,
+   "topic": "abstract_multiple",
+   "question": "מהו הפלט של התכנית הבאה ?\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass B { virtual void f() {}; };\nclass D1 : virtual public B {};\nclass D2 : virtual public B {};\nclass D3 : public D1, public D2 {};\n\nint main() {\n     D1* d1ptr = new D1;\n     B* bptr = dynamic_cast<B*> (d1ptr);\n     if (bptr != nullptr) { cout << \"1 \"; }\n\n     d1ptr = dynamic_cast<D1*>(bptr);\n     if (d1ptr != nullptr) { cout << \"2 \"; }\n\n     D2* d2ptr = dynamic_cast<D2*>(bptr);\n     if (d2ptr != nullptr) { cout << \"3 \"; }\n\n     D3* d3ptr2 = dynamic_cast<D3*>(bptr);\n     if (d3ptr2 != nullptr) { cout << \"4 \"; }\n\n     return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`1 2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`1 2 3 4`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2 3 4</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`1 2`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`1 2 3`",
+     "html": "<code class=\"tok\" dir=\"ltr\">1 2 3</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official sheet highlights a and c. Options a and c are both printed as `1 2` (identical text), so both are accepted. clang++ run printed `1 2`. Agrees.",
+   "correctId": "a",
+   "acceptedIds": [
+    "a",
+    "c"
+   ],
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q11",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "מופשטות וירושה מרובה",
+   "questionHtml": "מהו הפלט של התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nclass B { virtual void f() {}; };\nclass D1 : virtual public B {};\nclass D2 : virtual public B {};\nclass D3 : public D1, public D2 {};\n\nint main() {\n     D1* d1ptr = new D1;\n     B* bptr = dynamic_cast&lt;B*&gt; (d1ptr);\n     if (bptr != nullptr) { cout &lt;&lt; \"1 \"; }\n\n     d1ptr = dynamic_cast&lt;D1*&gt;(bptr);\n     if (d1ptr != nullptr) { cout &lt;&lt; \"2 \"; }\n\n     D2* d2ptr = dynamic_cast&lt;D2*&gt;(bptr);\n     if (d2ptr != nullptr) { cout &lt;&lt; \"3 \"; }\n\n     D3* d3ptr2 = dynamic_cast&lt;D3*&gt;(bptr);\n     if (d3ptr2 != nullptr) { cout &lt;&lt; \"4 \"; }\n\n     return 0;\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "7f0700a7e942cf89"
+  },
+  {
+   "num": 12,
+   "topic": "stl_exceptions",
+   "question": "כמה שגיאות יש בקוד הבא?\n```cpp\n#include <vector>\n#include <iostream>\nusing namespace std;\n\nint main() {\n    vector<int> v;\n\n    v.push_back(10);\n    int p = &v[0];\n    int it = v.begin();\n\n    v.push_back(20);\n\n    v.insert(v.begin(), 5);\n\n    cout << p << \" \" << it << \" \" << v[0] << \"\\n\";\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "יותר מ-2",
+     "html": "יותר מ-2"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key c. clang++ run: 2 compile errors (`int p = &v[0];` and `int it = v.begin();`). Agrees.",
+   "correctId": "c",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q12",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "STL ושגיאות",
+   "questionHtml": "כמה שגיאות יש בקוד הבא?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;vector&gt;\n#include &lt;iostream&gt;\nusing namespace std;\n\nint main() {\n    vector&lt;int&gt; v;\n\n    v.push_back(10);\n    int p = &amp;v[0];\n    int it = v.begin();\n\n    v.push_back(20);\n\n    v.insert(v.begin(), 5);\n\n    cout &lt;&lt; p &lt;&lt; \" \" &lt;&lt; it &lt;&lt; \" \" &lt;&lt; v[0] &lt;&lt; \"\\n\";\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "b4421993930dd604"
+  },
+  {
+   "num": 13,
+   "topic": "templates",
+   "question": "מהו הפלט של התכנית הבאה ?\n```cpp\n#include <iostream>\nusing namespace std;\n\ntemplate <class T = int, int size = 1>\nclass A {\npublic:\n    A(T init = 0) { for (int i = 0; i < size; i++) arr[i] = init; };\n    friend ostream& operator<<(ostream& os, const A<T, size>& a) {\n        for (int i = 0; i < size; i++) os << a.arr[i];\n        return os;\n    }\nprivate: T arr[size];\n};\n\nint main() {\n    A<> a0;\n    A<char> a1('A');\n    A<int, 2> a2(2);\n    cout << a0 << \" \" << a1 << \" \" << a2 << endl;\n    return 0;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "`0 A 222`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0 A 222</code>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "`0 1 333`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0 1 333</code>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "`0 11 222`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0 11 222</code>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "`0 A 22`",
+     "html": "<code class=\"tok\" dir=\"ltr\">0 A 22</code>"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key d. clang++ run printed `0 A 22`. Agrees.",
+   "correctId": "d",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q13",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מהו הפלט של התכנית הבאה ?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\ntemplate &lt;class T = int, int size = 1&gt;\nclass A {\npublic:\n    A(T init = 0) { for (int i = 0; i &lt; size; i++) arr[i] = init; };\n    friend ostream&amp; operator&lt;&lt;(ostream&amp; os, const A&lt;T, size&gt;&amp; a) {\n        for (int i = 0; i &lt; size; i++) os &lt;&lt; a.arr[i];\n        return os;\n    }\nprivate: T arr[size];\n};\n\nint main() {\n    A&lt;&gt; a0;\n    A&lt;char&gt; a1('A');\n    A&lt;int, 2&gt; a2(2);\n    cout &lt;&lt; a0 &lt;&lt; \" \" &lt;&lt; a1 &lt;&lt; \" \" &lt;&lt; a2 &lt;&lt; endl;\n    return 0;\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "ee563a2455b4cf8d"
+  },
+  {
+   "num": 14,
+   "topic": "templates",
+   "question": "מה יודפס?\n```cpp\n#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nvoid h(T) { cout << \"by value\\n\"; }\n\ntemplate <typename T>\nvoid h(T*) { cout << \"ptr to T\\n\"; }\n\ntemplate <typename T>\nvoid h(const T*) { cout << \"ptr to const T\\n\"; }\n\ntemplate <>\nvoid h<const char*>(const char*) { cout << \"C-string\\n\"; }\n\nint main() {\n    int x = 10;\n    const int cx = 20;\n    int* px = &x;\n    const int* pcx = &cx;\n    const char* s = \"abc\";\n\n    h(x);\n    h(px);\n    h(pcx);\n    h(\"abc\");\n    h(s);\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "```\nby value\nptr to T\nptr to const T\nC-string\nC-string\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>by value\nptr to T\nptr to const T\nC-string\nC-string</code></pre>"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "```\nby value\nptr to T\nptr to const T\nptr to const T\nptr to const T\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>by value\nptr to T\nptr to const T\nptr to const T\nptr to const T</code></pre>"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "```\nby value\nptr to T\nptr to const T\nptr to T\nC-string\n```",
+     "html": "<pre class=\"code-block\" dir=\"ltr\"><code>by value\nptr to T\nptr to const T\nptr to T\nC-string</code></pre>"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "שגיאת קומפילציה",
+     "html": "שגיאת קומפילציה"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "",
+   "note": "The official sheet (version 1) highlights all four options (a, b, c, d), i.e. every answer is accepted. The program compiles under clang++ and prints exactly option b (the explicit specialization h<const char*> specializes the by-value template, so it never wins; `h(s)` picks `const T*`), so b is the verified answer. Option d is printed at the top of the next page in the source.",
+   "correctId": "b",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q14",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "תבניות",
+   "questionHtml": "מה יודפס?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\ntemplate &lt;typename T&gt;\nvoid h(T) { cout &lt;&lt; \"by value\\n\"; }\n\ntemplate &lt;typename T&gt;\nvoid h(T*) { cout &lt;&lt; \"ptr to T\\n\"; }\n\ntemplate &lt;typename T&gt;\nvoid h(const T*) { cout &lt;&lt; \"ptr to const T\\n\"; }\n\ntemplate &lt;&gt;\nvoid h&lt;const char*&gt;(const char*) { cout &lt;&lt; \"C-string\\n\"; }\n\nint main() {\n    int x = 10;\n    const int cx = 20;\n    int* px = &amp;x;\n    const int* pcx = &amp;cx;\n    const char* s = \"abc\";\n\n    h(x);\n    h(px);\n    h(pcx);\n    h(\"abc\");\n    h(s);\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "92ff3ebaa3410259"
+  },
+  {
+   "num": 15,
+   "topic": "const_references",
+   "question": "כמה שגיאות יש בקוד הבא?\n```cpp\n#include <iostream>\nusing namespace std;\n\nstruct T {\n    T() { cout << \"def\\n\"; }\n    T(T& c) { cout << \"copy\\n\"; }\n};\n\nint main() {\n    T a;\n    const T ca;\n\n    T b = a;\n    T c = ca;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key b. clang++ run: 1 error (`T c = ca;` -- T(T&) cannot bind a const object). Agrees.",
+   "correctId": "b",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q15",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "const והפניות",
+   "questionHtml": "כמה שגיאות יש בקוד הבא?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nstruct T {\n    T() { cout &lt;&lt; \"def\\n\"; }\n    T(T&amp; c) { cout &lt;&lt; \"copy\\n\"; }\n};\n\nint main() {\n    T a;\n    const T ca;\n\n    T b = a;\n    T c = ca;\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "23a8d768f53fc0b6"
+  },
+  {
+   "num": 16,
+   "topic": "operator_overloading",
+   "question": "כמה שגיאות יש בקוד הבא?\n```cpp\n#include <iostream>\nusing namespace std;\n\nstruct Num {\n    int v;\n    Num(int x = 0) : v(x) {}\n\n    Num& operator++() {\n        cout << \"pre&\\n\";\n        ++v;\n        return *this;\n    }\n\n    Num operator++(int){\n        cout << \"post&\\n\";\n        Num tmp = *this;\n        ++v;\n        return tmp;\n    }\n};\n\nint main() {\n    Num a(2);\n    ++a;\n    a++;\n    ++Num(3);\n    Num(6)++;\n    const Num ca(5);\n    ++ca;\n}\n```",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "0",
+     "html": "0"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "high",
+   "explanation": "",
+   "note": "Official key b. clang++ run: 1 error (`++ca;` on a const object; ++Num(3) and Num(6)++ are legal member calls on temporaries). Agrees.",
+   "correctId": "b",
+   "contextId": "25S-A-notes",
+   "id": "25S-A-Q16",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "העמסת אופרטורים",
+   "questionHtml": "כמה שגיאות יש בקוד הבא?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nstruct Num {\n    int v;\n    Num(int x = 0) : v(x) {}\n\n    Num&amp; operator++() {\n        cout &lt;&lt; \"pre&amp;\\n\";\n        ++v;\n        return *this;\n    }\n\n    Num operator++(int){\n        cout &lt;&lt; \"post&amp;\\n\";\n        Num tmp = *this;\n        ++v;\n        return tmp;\n    }\n};\n\nint main() {\n    Num a(2);\n    ++a;\n    a++;\n    ++Num(3);\n    Num(6)++;\n    const Num ca(5);\n    ++ca;\n}</code></pre>",
+   "explanationHtml": "",
+   "dedupKey": "af88f52d4269f238"
+  },
+  {
+   "num": 17,
+   "topic": "cpp_basics_refs",
+   "question": "האם שתי פונקציות עמוסות (overloaded functions) יכולות להיות שונות בסוג ההחזרה שלהן ב-C++?\n\n1: כן, C++ מאפשרת העמסת פונקציות על סמך סוגי החזרה.\n2: לא, C++ לא מאפשרת העמסת פונקציות על סמך סוגי החזרה.\n3: זה תלוי בקומפיילר C++ שבו נעשה שימוש.\n4: אף אחת מההצהרות אינה נכונה.",
+   "options": [
+    {
+     "id": "a",
+     "type": "text",
+     "value": "1",
+     "html": "1"
+    },
+    {
+     "id": "b",
+     "type": "text",
+     "value": "2",
+     "html": "2"
+    },
+    {
+     "id": "c",
+     "type": "text",
+     "value": "3",
+     "html": "3"
+    },
+    {
+     "id": "d",
+     "type": "text",
+     "value": "4",
+     "html": "4"
+    }
+   ],
+   "answerSource": "highlighted-pdf",
+   "official": true,
+   "confidence": "med",
+   "explanation": "",
+   "note": "The official sheet (version 1) highlights a, b and d; the language rule (and the clang++ run: 'functions that differ only in their return type cannot be overloaded') gives statement 2, which is option b, so b is used as the single answer. In the source the options are labelled ה, ו, ז, ח (statements 1-4); recorded here as a-d in the same order.",
+   "correctId": "b",
+   "id": "25S-A-Q17",
+   "examCode": "25S-A",
+   "examLabel": "2025 סמסטר קיץ מועד א",
+   "year": 2025,
+   "source": "exam",
+   "topicLabel": "הפניות והעמסת פונקציות",
+   "questionHtml": "האם שתי פונקציות עמוסות (overloaded functions) יכולות להיות שונות בסוג ההחזרה שלהן ב-C++?<br><br>1: כן, C++ מאפשרת העמסת פונקציות על סמך סוגי החזרה.<br>2: לא, C++ לא מאפשרת העמסת פונקציות על סמך סוגי החזרה.<br>3: זה תלוי בקומפיילר C++ שבו נעשה שימוש.<br>4: אף אחת מההצהרות אינה נכונה.",
+   "explanationHtml": "",
+   "dedupKey": "83da9fb7a9ddcaec"
+  }
+ ]
+}

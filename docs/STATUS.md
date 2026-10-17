@@ -1,6 +1,6 @@
 # STATUS - oop
 
-Resume here: phase 0 - not started
+Resume here: phase 2 - flagship 25S-A transcribed (17 items, 16 in bank, Q1 held); steps n/a (mcq); waiting for Adir to try it (GATE 2)
 Opus sessions: 0 of 2
 Engine: mcq   Format: unknown   Cutoff: unknown
 
@@ -17,10 +17,10 @@ Gates 1, 2 and 7 always stop for Adir.
   - [ ] Adir approved
   - [ ] config.overlay.json written, app repo scaffolded (triage stays in the factory)
 - [ ] Phase 2 - flagship  (GATE 2: Adir tries it in the browser)
-  - [ ] topic taxonomy chosen
-  - [ ] flagship sitting transcribed + validated
+  - [x] topic taxonomy chosen
+  - [x] flagship sitting transcribed + validated (25S-A, 30.09.2025, official answer sheet v1; all code questions run with clang++)
   - [ ] steps (if open questions) + refuter pass
-  - [ ] smoke / verify_dom green, running locally
+  - [x] smoke / verify_dom green, running locally
   - [ ] Adir tried it
 - [ ] Phase 3 - bank
   - [ ] all in-scope sittings transcribed (batches of <=4)
