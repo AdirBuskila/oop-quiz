@@ -18,7 +18,7 @@ from course_config import load as _load_cfg  # noqa: E402
 # Closed topic list comes from course.config.json (single source).
 TOPICS = {k for k, _ in _load_cfg()["topics"]}
 OPT_TYPES = {"text", "math", "image"}
-OPT_IDS = {"a", "b", "c", "d", "e", "f"}
+OPT_IDS = {"a", "b", "c", "d", "e", "f", "g", "h"}
 CONFIDENCE = {"high", "med", "low"}
 ANSWER_SOURCES = {"solution-pdf", "highlighted-pdf", "corrected-key", "letter-table",
                   "explanation-inferred", "solved"}
@@ -258,7 +258,7 @@ def check_file(fp):
         for o in opts:
             w = f"{tag} opt {o.get('id')}"
             if o.get("id") not in OPT_IDS:
-                P(f"{w}: option id must be one of a..f")
+                P(f"{w}: option id must be one of a..h")
             t = o.get("type", "text")
             if t not in OPT_TYPES:
                 P(f"{w}: bad type {t}")

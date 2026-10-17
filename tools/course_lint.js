@@ -28,7 +28,7 @@ const HEB = /[֐-׿]/;
 const nonblank = x => typeof x === "string" && x.trim().length > 0;
 const isInt = x => Number.isInteger(x);
 const SOURCES = new Set(["ai-draft", "ai-verified"]);
-const OPT_IDS = ["a", "b", "c", "d", "e", "f"], OPT_TYPES = new Set(["text", "math", "image"]);
+const OPT_IDS = ["a", "b", "c", "d", "e", "f", "g", "h"], OPT_TYPES = new Set(["text", "math", "image"]);
 const LEVEL_KEYS = new Set(["id", "order", "icon", "title", "goal", "boss", "source", "lesson", "questions"]);
 const OWN_KEYS = new Set(["id", "question", "options", "correctId", "acceptedIds", "explanation", "recap", "image"]);
 const BANK_KEYS = new Set(["bankId", "recap"]);
@@ -143,14 +143,14 @@ function lintQuestion(w, q, i, ctx) {
   else ctx.qids.add(q.id);
   if (!nonblank(q.question)) ERR(qw, `question ${label}: empty question`);
   const opts = Array.isArray(q.options) ? q.options : [];
-  if (opts.length < 2 || opts.length > 6) ERR(qw, `question ${label}: needs 2-6 options (has ${opts.length})`);
+  if (opts.length < 2 || opts.length > 8) ERR(qw, `question ${label}: needs 2-8 options (has ${opts.length})`);
   const ids = opts.map(o => o && o.id);
   if (new Set(ids).size !== ids.length) ERR(qw, `question ${label}: duplicate option ids [${ids}]`);
   opts.forEach(o => {
     const ow = `question ${label} option ${o && o.id}`;
     if (!o || typeof o !== "object") return ERR(qw, `${ow}: must be an object`);
     for (const k of Object.keys(o)) if (!["id", "type", "value"].includes(k)) ERR(qw, `${ow}: unknown key '${k}'`);
-    if (!OPT_IDS.includes(o.id)) ERR(qw, `${ow}: option id must be one of a..f`);
+    if (!OPT_IDS.includes(o.id)) ERR(qw, `${ow}: option id must be one of a..h`);
     if (o.type != null && !OPT_TYPES.has(o.type)) ERR(qw, `${ow}: bad type '${o.type}'`);
     if (!nonblank(o.value)) ERR(qw, `${ow}: blank value`);
     else if (o.type === "math" && HEB.test(o.value)) ERR(qw, `${ow}: Hebrew inside a math option`);
