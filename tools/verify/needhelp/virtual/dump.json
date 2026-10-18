@@ -1,0 +1,910 @@
+{
+ "courseId": "virtual",
+ "levels": [
+  {
+   "id": "C01",
+   "order": 1,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C01-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { void f() { cout << \"A \"; } };\nstruct B : A { void f() { cout << \"B \"; } };\nint main() {\n    B b;\n    A* p = &b;\n    B* q = &b;\n    p->f();\n    q->f();\n    b.f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B B B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A A A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`A A B`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q2",
+     "question": "עכשיו `f` מוגדרת `virtual` באב. מה מדפיסה התכנית?\n```cpp\nstruct A { virtual void f() { cout << \"A \"; } };\nstruct B : A { void f() { cout << \"B \"; } };\nint main() {\n    B b;\n    A* p = &b;\n    B* q = &b;\n    p->f();\n    q->f();\n    b.f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B B B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A A B`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`A A A`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A {\n    virtual void f() { cout << \"Af \"; }\n    void g() { cout << \"Ag \"; }\n};\nstruct B : A {\n    void f() { cout << \"Bf \"; }\n    void g() { cout << \"Bg \"; }\n};\nint main() {\n    A a;\n    B b;\n    A* arr[2] = { &a, &b };\n    for (int i = 0; i < 2; i++) {\n        arr[i]->f();\n        arr[i]->g();\n    }\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Af Ag Bf Ag`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`Af Ag Bf Bg`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`Af Ag Af Ag`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Af Bg Bf Bg`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q4",
+     "question": "הפעם `virtual` מופיעה רק במחלקה היורשת. מה מדפיסה התכנית?\n```cpp\nstruct A { void f() { cout << \"A \"; } };\nstruct B : A { virtual void f() { cout << \"B \"; } };\nint main() {\n    B b;\n    A* p = &b;\n    B* q = &b;\n    p->f();\n    q->f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B A`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q5",
+     "question": "בכל התוכניות `f` היא וירטואלית ב-`A`, ו-`B` יורשת מ-`A` ודורסת אותה. באיזו שורה הקריאה ל-`f` נבחרת לפי הטיפוס האמיתי של האובייקט בזמן ריצה?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A* p = &b; p->f();`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`A a = b; a.f();`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`b.A::f();`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`A* p = &b; p->A::f();`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C02",
+   "order": 2,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C02-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct X { virtual void f() { cout << \"X \"; } };\nstruct Y : X { void f() { cout << \"Y \"; } };\nstruct Z : Y { void f() { cout << \"Z \"; } };\nint main() {\n    Z z;\n    X* a = &z;\n    Y* b = &z;\n    a->f();\n    b->f();\n    z.f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Z Z Z`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`X Y Z`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`X X Z`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Z Y X`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct X { virtual void f() { cout << \"X \"; } };\nstruct Y : X { void f() { cout << \"Y \"; } };\nstruct Z : Y { };\nint main() {\n    X* p = new Z;\n    Y* q = new Z;\n    p->f();\n    q->f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Y Y`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`X Y`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`X X`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Y X`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { virtual void f() { cout << \"A \"; } };\nstruct B : A {\n    void f() { A::f(); cout << \"B \"; }\n};\nint main() {\n    A* p = new B;\n    p->f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B A`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`A`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A {\n    void run() { step(); cout << \"end \"; }\n    virtual void step() { cout << \"A \"; }\n};\nstruct B : A {\n    void step() { cout << \"B \"; }\n};\nint main() {\n    B b;\n    b.run();\n    A a;\n    a.run();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B end A end`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`A end A end`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B end B end`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`A end B end`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct S { virtual int v() { return 1; } };\nstruct T : S { int v() { return 2; } };\nstruct U : S { int v() { return 3; } };\nint main() {\n    S s; T t; U u;\n    S* a[4] = { &u, &s, &t, &u };\n    int num = 0;\n    for (int i = 0; i < 4; i++)\n        num = num * 10 + a[i]->v();\n    cout << num;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`3123`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`1111`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`1233`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`3213`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C03",
+   "order": 3,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C03-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { virtual void f() { cout << \"A \"; } };\nstruct B : A { void f() { cout << \"B \"; } };\nvoid g(A& a) { a.f(); }\nvoid h(A* a) { a->f(); }\nvoid k(A a) { a.f(); }\nint main() {\n    B b;\n    g(b);\n    h(&b);\n    k(b);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B B A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B B B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A A A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B A A`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { virtual string name() { return \"A\"; } };\nstruct B : A { string name() { return \"B\"; } };\nint main() {\n    vector<A> v;\n    v.push_back(B());\n    vector<A*> w;\n    w.push_back(new B);\n    cout << v[0].name() << \" \" << w[0]->name();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B A`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A {\n    int x = 1;\n    virtual int get() { return x; }\n};\nstruct B : A {\n    int y = 2;\n    int get() { return x + y; }\n};\nint main() {\n    B b;\n    A a = b;\n    A& r = b;\n    cout << a.get() << \" \" << r.get();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`1 3`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`3 3`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`1 1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`3 1`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { virtual void f() { cout << \"A\"; } };\nstruct B : A { void f() { cout << \"B\"; } };\nA make() {\n    B b;\n    return b;\n}\nint main() {\n    A a = make();\n    a.f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`AB`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`BA`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { virtual void f() { cout << \"A \"; } };\nstruct B : A { void f() { cout << \"B \"; } };\nint main() {\n    B b;\n    A a;\n    a = b;\n    A* p = &a;\n    p->f();\n    p = &b;\n    p->f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B A`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C04",
+   "order": 4,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C04-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { virtual void f() const { cout << \"A \"; } };\nstruct B : A { void f() { cout << \"B \"; } };\nint main() {\n    B b;\n    A* p = &b;\n    p->f();\n    b.f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B A`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { virtual void f(int) { cout << \"A \"; } };\nstruct B : A { void f(double) { cout << \"B \"; } };\nint main() {\n    B b;\n    A* p = &b;\n    p->f(1);\n    b.f(1);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B A`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q3",
+     "question": "מה קורה בקומפילציה של הקוד הבא?\n```cpp\nstruct A { virtual void f(int) { } };\nstruct B : A {\n    void f(long) override { }\n};\nint main() {\n    B b;\n    b.f(1);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "שגיאת קומפילציה, כי `B::f(long)` לא דורסת שום פונקציה של `A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "הקוד מתקמפל, ו-`override` מתעלמת מהבדל הטיפוס"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "הקוד מתקמפל עם אזהרה בלבד"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "הקוד מתקמפל, ושגיאה תתרחש בזמן ריצה"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A {\n    virtual void f(int i = 7) { cout << \"A\" << i << \" \"; }\n};\nstruct B : A {\n    void f(int i = 9) { cout << \"B\" << i << \" \"; }\n};\nint main() {\n    B b;\n    A* p = &b;\n    p->f();\n    b.f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B7 B9`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B9 B9`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A7 B9`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B7 B7`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q5",
+     "question": "מה קורה בקומפילציה של הקוד הבא?\n```cpp\nstruct X {\n    virtual void f(int) { cout << \"X1 \"; }\n    virtual void f(int, int) { cout << \"X2 \"; }\n};\nstruct Y : X {\n    void f(int) { cout << \"Y1 \"; }\n};\nint main() {\n    Y y;\n    y.f(1, 2);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "שגיאת קומפילציה, כי `Y::f` מסתירה את `f(int, int)` של `X`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "מודפס `X2`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "מודפס `Y1 X2`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "מודפס `Y1`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q6",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct X {\n    virtual void f(int) { cout << \"X1 \"; }\n    virtual void f(int, int) { cout << \"X2 \"; }\n};\nstruct Y : X {\n    void f(int) { cout << \"Y1 \"; }\n};\nint main() {\n    Y y;\n    X* p = &y;\n    p->f(1);\n    p->f(1, 2);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Y1 X2`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`Y1 Y1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`X1 X2`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Y1 Y2`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C05",
+   "order": 5,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C05-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B { virtual ~B() { cout << \"~B \"; } };\nstruct D : B { ~D() { cout << \"~D \"; } };\nint main() {\n    B* p = new D;\n    delete p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`~D ~B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`~B ~D`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`~B`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`~D`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B {\n    B() { cout << \"B \"; }\n    virtual ~B() { cout << \"~B \"; }\n};\nstruct D : B {\n    D() { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\nint main() {\n    B* p = new D;\n    delete p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B D ~D ~B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`D B ~D ~B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B D ~B ~D`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B D ~B`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B {\n    B() { f(); }\n    virtual void f() { cout << \"Bf \"; }\n};\nstruct D : B {\n    D() { f(); }\n    void f() { cout << \"Df \"; }\n};\nint main() {\n    D d;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Bf Df`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`Df Df`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`Df Bf`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Bf Bf`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B {\n    virtual void f() { cout << \"Bf \"; }\n    virtual ~B() { f(); }\n};\nstruct D : B {\n    void f() { cout << \"Df \"; }\n    ~D() { f(); }\n};\nint main() {\n    {\n        D d;\n    }\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Df Bf`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`Df Df`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`Bf Bf`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Bf Df`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q5",
+     "question": "מחלקה `Base` ללא הורס וירטואלי, ו-`Derived` יורשת ממנה ומנהלת זיכרון. מה אומר התקן על `Base* p = new Derived; delete p;`?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "התנהגות לא מוגדרת (UB)"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "נקרא רק ההורס של `Derived`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "נקראים שני ההורסים בסדר הנכון"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "שגיאת קומפילציה"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q6",
+     "question": "במחלקה `Shape` יש `virtual double area()`, וקוד מוחק עצמים של `Circle` דרך `Shape*`. מה צריך להוסיף כדי שהמחיקה תהיה תקינה?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`virtual ~Shape() {}` ב-`Shape`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`virtual ~Circle()` רק ב-`Circle`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`override` על `area` ב-`Circle`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "בנאי וירטואלי ב-`Shape`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C06",
+   "order": 6,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C06-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { virtual void f() { cout << \"A \"; } };\nstruct B : A { void f() { cout << \"B \"; } };\nint main() {\n    A* p = new B;\n    p->f();\n    p->A::f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`A B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B B`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`A A`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct X { virtual void f() { cout << \"1 \"; } };\nstruct Y : X { void f() { cout << \"2 \"; } };\nstruct Z : Y { void f() { cout << \"3 \"; } };\nint main() {\n    Z* p = new Z;\n    p->X::f();\n    p->Y::f();\n    p->f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`1 2 3`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`3 3 3`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`3 2 1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`1 1 3`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q3",
+     "question": "איזו מהפונקציות הבאות **אי אפשר** להגדיר כוירטואלית?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "בנאי"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "הורס"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "פונקציה חבר `const`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "פונקציה חבר שמחזירה `void`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct Shape {\n    virtual int area() { return 0; }\n    int twice() { return 2 * area(); }\n};\nstruct Sq : Shape {\n    int s;\n    Sq(int s) : s(s) {}\n    int area() { return s * s; }\n};\nint main() {\n    Shape* p = new Sq(3);\n    cout << p->area() << \" \" << p->twice() << \" \";\n    Shape sh = *p;\n    cout << sh.twice();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`9 18 0`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`9 18 18`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`0 0 0`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`9 9 0`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q5",
+     "question": "במצביע `Shape* s;` ובפונקציה `draw`, מתי הקריאה `s->draw()` עשויה להפעיל גרסאות שונות בריצות שונות של אותה שורה?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "כש-`draw` וירטואלית ב-`Shape`, ו-`s` יכול להצביע על אובייקטים מנגזרות שונות"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "כשיש ל-`draw` ערך ברירת מחדל"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "כש-`draw` מוגדרת `const`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "כש-`draw` אינה וירטואלית ויש יותר מנגזרת אחת"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C07",
+   "order": 7,
+   "boss": true,
+   "questions": [
+    {
+     "id": "bank:19A-B-Q5",
+     "bankId": "19A-B-Q5"
+    },
+    {
+     "id": "bank:24B-A-Q1",
+     "bankId": "24B-A-Q1"
+    },
+    {
+     "id": "bank:20B-A-Q15",
+     "bankId": "20B-A-Q15"
+    },
+    {
+     "id": "bank:25S-A-Q3",
+     "bankId": "25S-A-Q3"
+    },
+    {
+     "id": "bank:21B-B-Q20",
+     "bankId": "21B-B-Q20"
+    },
+    {
+     "id": "bank:24B-B-Q8",
+     "bankId": "24B-B-Q8"
+    }
+   ]
+  }
+ ]
+}
