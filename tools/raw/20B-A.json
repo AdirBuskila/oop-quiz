@@ -297,8 +297,12 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "med",
-   "explanation": "פונקציה סטטית אינה קשורה לאובייקט מסוים, ולכן אין לה `this` ואי אפשר להפוך אותה לווירטואלית (בלי קשר אם היא טהורה). לכן אף פונקציה וירטואלית לא יכולה להיות סטטית (תשובה ה). overloading מותר גם בפונקציות סטטיות. פונקציה חברה מסוג `const` (שמצהירה שהיא לא משנה את `this`) גם היא לא יכולה להיות סטטית, אבל אם הכוונה לפונקציה שמחזירה `const` היא כן יכולה, ולכן הבחירה היא ה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
-   "note": "Boxed option e. clang++ compile tests: `static virtual` (pure or not) is rejected, overloaded static members are fine. Option d (const) is also true for a const-qualified member function (`static void f() const` is rejected), though a function that merely returns const can be static; the box keeps e. Confidence med because of that ambiguity in option d."
+   "explanation": "פונקציה סטטית אינה קשורה לאובייקט מסוים, ולכן אין לה `this` ואי אפשר להפוך אותה לווירטואלית (בלי קשר אם היא טהורה). לכן אף פונקציה וירטואלית לא יכולה להיות סטטית (תשובה ה). overloading מותר גם בפונקציות סטטיות. פונקציה חברה מסוג `const` (שמצהירה שהיא לא משנה את `this`) גם היא לא יכולה להיות סטטית, אבל אם הכוונה לפונקציה שמחזירה `const` היא כן יכולה, ולכן הבחירה היא ה.\nהערה: `static void f() const;` נדחה בקומפילציה, כלומר פונקציה חברה מסוג `const` לא יכולה להיות סטטית, ולכן גם תשובה ד מתקבלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Boxed option e. clang++ compile tests: `static virtual` (pure or not) is rejected, overloaded static members are fine. Option d (const) is also true for a const-qualified member function (`static void f() const` is rejected), though a function that merely returns const can be static; the box keeps e. Confidence med because of that ambiguity in option d. Arbiter (2026-10-18): d accepted as well (a const member function cannot be static).",
+   "acceptedIds": [
+    "e",
+    "d"
+   ]
   },
   {
    "num": 9,

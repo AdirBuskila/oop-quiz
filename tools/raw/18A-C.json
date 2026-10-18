@@ -792,10 +792,14 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "הביטוי `std::cin >> x` דורש `operator>>` שהאופרנד השמאלי שלה הוא `istream`, ולכן היא לא יכולה להיות חבר ב-`X`. צריך פונקציה חיצונית. כאן פונקציה חיצונית רגילה מספיקה, כי אין גישה לשדות פרטיים (פונקציה friend עובדת גם כן). התשובה ב נבחרה בהתאם למפתח של שאלה דומה במבחן אחר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
-   "note": "Key b by analogy with the official key of 18A-B Q23 (same options, `cout <<`); the clang++ run shows that a free non-friend `operator>>(istream&, X&)` compiles, and so does a friend one (option c), while a member function does not. The student's box agrees with b.",
+   "explanation": "הביטוי `std::cin >> x` דורש `operator>>` שהאופרנד השמאלי שלה הוא `istream`, ולכן היא לא יכולה להיות חבר ב-`X`. צריך פונקציה חיצונית. כאן פונקציה חיצונית רגילה מספיקה, כי אין גישה לשדות פרטיים (פונקציה friend עובדת גם כן). התשובה ב נבחרה בהתאם למפתח הרשמי של שאלה דומה במבחן אחר (עם `cout <<`), שמסמן את ב כתשובה הנכונה ביותר.\nהערה: גם פונקציה חיצונית שהיא friend (תשובה ג) מתקמפלת בהרצה, ולכן גם ג מתקבלת. ב נכונה יותר כי אין צורך ב-friend.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "Key b by analogy with the official key of 18A-B Q23 (same options, `cout <<`); the clang++ run shows that a free non-friend `operator>>(istream&, X&)` compiles, and so does a friend one (option c), while a member function does not. The student's box agrees with b. Arbiter (2026-10-18): c also compiles, so it is accepted alongside b (the official key of 18A-B Q23 marks b as the best answer).",
    "contextId": "notes",
-   "correctId": "b"
+   "correctId": "b",
+   "acceptedIds": [
+    "b",
+    "c"
+   ]
   },
   {
    "num": 24,

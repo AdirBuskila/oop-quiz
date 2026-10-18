@@ -111,9 +111,13 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "כדי ש-`cout << a` יעבוד, האופרטור צריך לקבל את `ostream` כארגומנט שמאלי, ולכן אי אפשר שהוא יהיה פונקציה חברה של `A`. נדרשת פונקציה חיצונית, אבל היא לא חייבת להיות `friend`: אם היא משתמשת רק בחברים ציבוריים (או בפונקציית עזר ציבורית) היא מתקמפלת.\nבהרצה: גרסה חיצונית שאינה friend התקמפלה ופעלה, וגרסה חברה לא התקמפלה עבור `cout << a`.\nהתשובה היא ב. תשובה א דורשת friend יותר מדי, ותשובות ג ו-ד כוללות פונקציה חברה שאינה אפשרית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
-   "note": "No key. Probes: a non-friend external `operator<<(ostream&, const A&)` compiles and runs (so a and c are wrong); a member `operator<<` cannot take `cout` on the left (`cout << a` does not compile), so d is wrong. -> b.",
-   "correctId": "b"
+   "explanation": "כדי ש-`cout << a` יעבוד, האופרטור צריך לקבל את `ostream` כארגומנט שמאלי, ולכן אי אפשר שהוא יהיה פונקציה חברה של `A`. נדרשת פונקציה חיצונית, אבל היא לא חייבת להיות `friend`: אם היא משתמשת רק בחברים ציבוריים (או בפונקציית עזר ציבורית) היא מתקמפלת.\nבהרצה: גרסה חיצונית שאינה friend התקמפלה ופעלה, וגרסה חברה לא התקמפלה עבור `cout << a`.\nהתשובה היא ב. תשובה א דורשת friend יותר מדי, ותשובה ג כוללת פונקציה חברה שאינה אפשרית לפלט ל-`cout`.\nהערה: השאלה לא מזכירה `ostream`. אופרטור `<<` שהוא פונקציה חברה של המחלקה (למשל `a << 3`) הוא גם העמסה חוקית של `<<` עבור `A` ומתקמפל, ולכן גם תשובה ד מתקבלת. כוונת השאלה (כמו במפתח הרשמי של שאלה דומה על `>>` במבחן אחר) היא אופרטור פלט לזרם, ולכן ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Probes: a non-friend external `operator<<(ostream&, const A&)` compiles and runs (so a and c are wrong); a member `operator<<` cannot take `cout` on the left (`cout << a` does not compile), so d is wrong. -> b. Arbiter (2026-10-18): the stem names no ostream, and a member `operator<<` (`a << x`) also overloads << for A and compiles, so d is accepted too; b matches the intent of the official key of 19A-C Q8 (stream operator outside the class, friend not required).",
+   "correctId": "b",
+   "acceptedIds": [
+    "b",
+    "d"
+   ]
   },
   {
    "num": 4,

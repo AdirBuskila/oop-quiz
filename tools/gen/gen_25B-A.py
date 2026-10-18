@@ -48,7 +48,9 @@ questions.append(Q(1, "friend_this_static",
     "2. נניח שלא קימת במחלקה A מטודה (member function) שמשנה את הערך של השדה x. נניח שבפונקציה חיצונית שאינה friend של המחלקה A, מגדירים אובייקט של המחלקה A. אזי בהמשך הפונקציה הזו לא ניתן לשנות את הערך של השדה x של האובייקט.\n"
     "3. נניח שבפונקציה חיצונית שאינה friend של המחלקה A, מגדירים אובייקט של המחלקה A. בהמשך הפונקציה, כדי לשנות את הערך של השדה x של האובייקט חייבים לבצע לפחות קריאה אחת למטודה (member function) ציבורית של המחלקה A.",
     txt(*CNT), "a",
-    "Concept question, no code to run. Key = the examinee's answer (a), ticked by the grader (16 of 17 right, only Q2 wrong). The numbering 1-3 is added; the paper uses bullets. All three statements are false: a public setter changes x (1), and the implicit copy assignment `a1 = a2` changes x without any member function being written or called (2, 3).",
+    "Concept question, no code to run. Key = the examinee's answer (a), ticked by the grader (16 of 17 right, only Q2 wrong). The numbering 1-3 is added; the paper uses bullets. All three statements are false: a public setter changes x (1), and the implicit copy assignment `a1 = a2` changes x without any member function being written in the class (2, 3). Arbiter (2026-10-18): the refuter notes the implicit operator= is itself a public member, "
+    "making 3 true -> b; but under that reading the premise of 2 (no member changes x) also excludes operator=, making 2 true too (-> c). Only the reading 'member function = written in the class' "
+    "is consistent, and it matches the grader's tick, so a stays.",
     source="solution-pdf", conf="med"))
 
 # 2
@@ -464,7 +466,7 @@ int main() {
     "clang++: exactly 1 error, `obj1.modify()` (non-const method on a const object); `obj1.show()` is a const method and is fine."))
 
 EXPL = {
-    1: "אף אחד מהמשפטים אינו נכון, ולכן תשובה א. משפט 1 שגוי: פונקציה חיצונית יכולה לשנות את `x` בעקיפין, למשל דרך מתודה ציבורית (setter). משפטים 2 ו-3 שגויים בגלל השמה: `a1 = a2` מפעילה את אופרטור ההשמה שמוגדר אוטומטית, והוא מעתיק גם את `x` הפרטי, בלי שנכתבה מתודה ששינתה אותו ובלי קריאה למתודה ציבורית של הפונקציה החיצונית. זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.",
+    1: "אף אחד מהמשפטים אינו נכון, ולכן תשובה א. משפט 1 שגוי: פונקציה חיצונית יכולה לשנות את `x` בעקיפין, למשל דרך מתודה ציבורית (setter). משפטים 2 ו-3 שגויים בגלל השמה: `a1 = a2` מפעילה את אופרטור ההשמה שמוגדר אוטומטית, והוא מעתיק גם את `x` הפרטי, בלי שנכתבה במחלקה מתודה ששינתה אותו ובלי לקרוא למתודה ציבורית שהמתכנת כתב. זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.\nהערה: מבחינה טכנית אופרטור ההשמה שהקומפיילר יוצר הוא בעצמו מתודה ציבורית של `A`, ולפי קריאה זו משפט 3 נכון. אבל אז גם ההנחה של משפט 2 (שאין מתודה שמשנה את `x`) שוללת אותו, ומשפט 2 הופך לנכון. הקריאה העקבית, שגם תואמת את סימון הבודק, היא שמתודה פירושה מתודה שנכתבה במחלקה, ולכן תשובה א.",
     2: "הצהרת `friend` כתבנית (`template<typename U> friend void f(U);`) הופכת כל התמחות של `f` לחברה של כל התמחות של `A`. לכן `f` רשאית לגשת ל-`x` הפרטי גם של `A<int>` וגם של `A<U>`. אין שגיאות (תשובה א): בהרצה מתקבל `53.145test`.",
     3: "ב-`class` ברירת המחדל היא `private`, ולכן הבנאי `A() {}` פרטי. הקוד `A a;` ב-`main` נכשל. אפשר ליצור אובייקט גם מתוך פונקציה סטטית של המחלקה עצמה, ולכן המשפט 'רק פונקציות friend' אינו מדויק (ג). מחלקה יורשת גם היא לא יכולה לגשת לבנאי פרטי (ב). לכן אף תשובה מהראשונות אינה נכונה: תשובה ד. זו שאלת מושגים, ובדקנו את הטענות בקומפילציה.",
     4: "`f(*a, 5, 7)` ו-`f(*b, 6, 8)` מתאימות רק לפונקציה בעלת שלושה פרמטרים. `f(*a, 9)` ו-`f(*b, 10)` מתאימות לשתי הפונקציות (הראשונה עם `y` ברירת מחדל, השנייה עם שני פרמטרים), ולכן הקריאה דו-משמעית (שגיאה). סך הכול שתי שורות שגויות (תשובה ג). הקומפיילר דיווח בדיוק על שתי הקריאות האלה.",

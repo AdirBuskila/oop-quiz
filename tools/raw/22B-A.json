@@ -460,9 +460,9 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "אם הבנאי פרטי, אי אפשר ליצור אובייקט מחוץ למחלקה (פרט לפונקציות חברות ול-friend): גם `A a1;` וגם `new A` נכשלים בקומפילציה (נבדק). הבנאי הפרטי מספיק, ואין צורך להפוך פרטיים גם את ההורס ואת בנאי ההעתקה, כי אי אפשר להשיג אובייקט קיים להעתיק ממנו.\nהתשובה היא א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
-   "note": "No key. Probe: with only the default constructor private, `A a1;` and `new A` in main both fail to compile (an `A` can only come from a member/friend), so the private constructor alone is sufficient; the extra private members in b-d are not needed. Reading of 'sufficient' is the paper's, not compiler-checkable beyond that.",
-   "correctId": "a"
+   "explanation": "אם רק הבנאי פרטי, `A a1;` ו-`new A` אכן נכשלים מחוץ למחלקה, אבל עדיין אפשר ליצור אובייקט חדש בהעתקה: אם פונקציה חברה (למשל סטטית) מחזירה אובייקט קיים, `A b(A::get());` ב-`main` מתקמפל, כי בנאי ההעתקה שנוצר אוטומטית הוא ציבורי (נבדק). לכן צריך להפוך פרטיים גם את הבנאי וגם את בנאי ההעתקה (וכך גם לא נוצר בנאי הזזה אוטומטי). ההורס אינו קשור ליצירה, ולכן אין צורך להפוך אותו לפרטי.\nהתשובה היא ד. תשובה א אינה מספיקה בגלל ההעתקה, ותשובות ב ו-ג כוללות את ההורס שאינו נחוץ (ותשובה ב גם לא חוסמת העתקה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key. Arbiter (2026-10-18): with only the default constructor private, `A a1;` and `new A` fail in main, but a copy still works: `A b(A::get());` compiles when a static member hands out an object (clang++ c++11/20). Making the copy constructor private too blocks it (and suppresses the implicit move ctor), so d is the minimal sufficient set; the private destructor in b/c is not needed.",
+   "correctId": "d"
   },
   {
    "num": 15,

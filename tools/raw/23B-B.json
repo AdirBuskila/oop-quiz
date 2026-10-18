@@ -230,12 +230,16 @@
      "value": "3"
     }
    ],
-   "correctId": "b",
+   "correctId": "c",
    "answerSource": "solved",
    "official": false,
-   "confidence": "high",
-   "explanation": "טענה א נכונה: אפשר לתת חברות לפונקציה חברה בודדת של `B`, למשל `friend void B::f();` (נבדק בקומפילציה, ופונקציה אחרת של `B` לא קיבלה גישה). טענה ב לכן שגויה. טענה ג שגויה: פונקציה גלובלית `f` ופונקציה `B::f` הן שתי פונקציות שונות, ואפשר להצהיר על שתיהן כחברות באותה מחלקה. רק טענה אחת נכונה (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
-   "note": "No key in the source; clang++ run decides."
+   "confidence": "med",
+   "explanation": "טענה א נכונה: אפשר לתת חברות לפונקציה חברה בודדת של `B`, למשל `friend void B::f();` (נבדק בקומפילציה, ופונקציה אחרת של `B` לא קיבלה גישה). טענה ב נכונה: הצהרה `friend class B;` נותנת חברות לכל הפונקציות של `B`, ואי אפשר לצמצם אותה לחלק מהן (מי שרוצה רק חלק מצהיר על כל פונקציה בנפרד, כמו בטענה א). טענה ג שגויה: פונקציה גלובלית `f` ופונקציה `B::f` הן שתי פונקציות שונות, ואפשר להצהיר על שתיהן כחברות באותה מחלקה. שתי טענות נכונות (תשובה ג).\nהערה: טענה ב דו-משמעית. אם קוראים אותה כטענה שמחלקה `A` לא יכולה לתת חברות רק לחלק מהפונקציות של `B`, היא שגויה (בגלל טענה א), ואז רק טענה אחת נכונה. לכן גם תשובה ב מתקבלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "note": "No key in the source; language rule (friend void B::f(A&) grants only that member). Arbiter (2026-10-18): statement B is ambiguous. Read literally (`friend class B;` befriends all of B and cannot be narrowed) it is true -> 2 true -> c; read as 'A cannot befriend only part of B' it is false -> 1 -> b. The conditional wording points to the literal reading, so key c, b also accepted.",
+   "acceptedIds": [
+    "c",
+    "b"
+   ]
   },
   {
    "num": 8,
