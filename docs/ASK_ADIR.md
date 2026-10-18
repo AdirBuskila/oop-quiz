@@ -2,6 +2,25 @@
 
 Open questions for Adir. One entry per item; the orchestrator moves it to Resolved when answered.
 
+## HELD FOR ADIR: 16 questions, all excluded from the shipped bank (406 ship)
+
+Each needs only one decision: give the intended answer (the entry below says what it hinges on) or leave it out. Details per item further down.
+
+1. 18A-A Q19 - cancelled on the paper, no option correct
+2. 21B-A Q6 - undefined behaviour (double delete), c or d
+3. 21B-A Q13 - out-of-bounds write, b / c / d
+4. 21S-B Q17 - 1 or 2 errors (does the link error count)
+5. 22S-B Q1 - unspecified evaluation order of `*`, a or b
+6. 23S-A Q13 - depends on C++ standard, a (C++17) or b (C++14)
+7. 24B-A Q7 - graded key b disagrees with the language rules (c)
+8. 24B-A Q14 - graded key vs a second true statement
+9. 24B-B Q14 - key d vs clang++ default (string literal to `char*`)
+10. 25B-B Q5 - double `delete[]`, b or c
+11. 25S-A Q1 - official key accepts b and c but the program is ambiguous and does not compile
+12. SAMP-18 Q4 (UB), Q8, Q17 (no option compiles), Q11, Q13 (no option matches): 5 items, sample exam has no key
+
+Also note for Adir (info only, nothing blocks): run-derived (`official:false`) keys ship labelled for 18A-C, 19A-A Q7, 21B-A, 22S-B, 23B-B, 23S-A and the 2024-2025 sittings; one first-name entry in tools/redact.txt is also a common Hebrew word ("ספירה"), so a raw substring grep of the built files shows false hits; validate.py is the real check.
+
 ## Open
 
 <!-- Entry format:

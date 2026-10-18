@@ -533,6 +533,7 @@ math .ovl{border-top:.065em solid currentColor;padding-top:.07em;margin-top:.06e
 .feedback .expl-none{color:var(--muted);font-size:.85rem}
 .feedback .accept-note{display:block;margin-top:.45rem;font-size:.8rem;color:var(--ink);font-weight:600}
 .opt .txt{overflow-wrap:anywhere;line-height:1.6}
+.opt .tok,.crs-opt .tok{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%}
 .ctx-fig .q-img{margin:.2rem auto}
 .empty-state{text-align:center;padding:1.2rem .6rem;border:1px dashed var(--line-strong);
   border-radius:var(--radius-sm);margin:0 0 1.1rem;color:var(--muted)}

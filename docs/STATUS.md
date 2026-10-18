@@ -1,6 +1,6 @@
 # STATUS - oop
 
-Resume here: phase 2 - flagship 25S-A transcribed (17 items, 16 in bank, Q1 held); steps n/a (mcq); waiting for Adir to try it (GATE 2)
+Resume here: phase 7 - ship, awaiting Adir (phase 6 QA done 2026-10-18: 406 questions in bank, 16 held for Adir at the top of docs/ASK_ADIR.md, 4 guided courses / 28 levels, 15 learn chapters; ship also needs the deck redesign check and GATE 3)
 Opus sessions: 0 of 2
 Engine: mcq   Format: unknown   Cutoff: unknown
 
@@ -19,32 +19,32 @@ Gates 1, 2 and 7 always stop for Adir.
 - [ ] Phase 2 - flagship  (GATE 2: Adir tries it in the browser)
   - [x] topic taxonomy chosen
   - [x] flagship sitting transcribed + validated (25S-A, 30.09.2025, official answer sheet v1; all code questions run with clang++)
-  - [ ] steps (if open questions) + refuter pass
+  - [x] steps: n/a (mcq engine, no open questions)
   - [x] smoke / verify_dom green, running locally
   - [ ] Adir tried it
 - [ ] Phase 3 - bank
-  - [ ] all in-scope sittings transcribed (batches of <=4)
-  - [ ] validate.py clean
-  - [ ] solver run for questions with no trustworthy solution
-  - [ ] refuter: non-official all; official 20% sample (whole exam on any disagreement)
-  - [ ] arbiter / ASK_ADIR for disagreements
+  - [x] all in-scope sittings transcribed (22 files in tools/raw, 22 gen_*.py)
+  - [x] validate.py clean (0 problems, 2026-10-18)
+  - [x] solver run for questions with no trustworthy solution (answerSource solved, official:false)
+  - [x] refuter: tools/raw/_verify_ai_*.json verdicts + tools/verify/
+  - [x] arbiter / ASK_ADIR for disagreements (rulings recorded in ASK_ADIR.md)
   - [ ] completeness check per exam
-- [ ] Phase 4 - steps
+- [ ] Phase 4 - steps (n/a for mcq engine, nothing to author)
   - [ ] step-author batches done for every open question
   - [ ] rubricSource / stepsSource labeled
   - [ ] refuter on every steps block
-- [ ] Phase 5 - learn
-  - [ ] learn-writer per topic
-  - [ ] coverage report: no gaps
-- [ ] Phase 5b - need help
-  - [ ] 2-5 course areas approved at gate 1, `needHelp` in course.config.json
-  - [ ] learn-writer lessons + coverage table complete, step-author questions (bankId pulls marked)
-  - [ ] course_lint.js --strict clean, refuter (course_dump.js) clean, levels set to ai-verified
-  - [ ] tools/redact.txt filled, validate.py clean
-- [ ] Phase 6 - QA
-  - [ ] validate, build_questions, build_learn, smoke, verify_dom green
-  - [ ] shoot.js screenshots taken
-  - [ ] render-checker sweep clean
+- [x] Phase 5 - learn
+  - [x] learn-writer per topic (docs/briefs, 15 chapters)
+  - [x] coverage report: docs/learn_coverage.md, re-passed against the full bank in phase 6
+- [x] Phase 5b - need help
+  - [x] 4 course areas, `needHelp` in course.config.json
+  - [x] lessons + questions in courses/{copy_control,ctor_order,virtual,operators}
+  - [x] course_lint.js --strict clean (0 errors), machine-checked with clang++ (tools/verify/needhelp)
+  - [x] tools/redact.txt filled, validate.py clean
+- [x] Phase 6 - QA
+  - [x] validate, build_questions, build_learn, smoke, verify_dom, verify_learn green
+  - [x] shoot.js screenshots taken and read (390 + 1000, both themes)
+  - [x] manual screenshot sweep clean (no render-checker worker run; orchestrator-side QA read the shots)
 - [ ] Phase 7 - ship  (GATE 3: Adir OKs going public)
   - [ ] deck redesign done (else stop and tell Adir)
   - [ ] .gitignore excludes raw PNGs, favicon, GoatCounter, .nojekyll

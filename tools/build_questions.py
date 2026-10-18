@@ -268,6 +268,8 @@ def rich_html(s, bank, where, math_errors):
     # bold may wrap math/code placeholders too: re-run across the joined string
     h = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", h, flags=re.S)
     h = h.replace("\r\n", "\n").replace("\n", "<br>")
+    # the AI-label footer "_(...)_" is an italic note, not literal underscores
+    h = re.sub(r"(^|<br>|\s)_(\([^\n]+?\))_(?=$|<br>|\s)", r"\1<em>\2</em>", h)
     return re.sub(r"\x01F(\d+)\x01", lambda m: fences[int(m.group(1))], h)
 
 
