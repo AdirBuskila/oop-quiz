@@ -1,0 +1,164 @@
+{
+ "code": "22B-A",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/22B-A/refute_ai/), derived before reading claims",
+ "agree": 14,
+ "disagree": 1,
+ "unclear": 0,
+ "items": {
+  "1": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "2": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "3": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "4": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "5": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "6": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "notes": "only f2 necessarily copies; f4 copies only with -fno-elide-constructors (var_q6.cpp)",
+   "flag": "depends on reading 'necessarily' as excluding elided returns"
+  },
+  "7": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "8": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "9": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "10": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "11": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "flag": "options b and c are textually identical (0848480), both wrong; a is right"
+  },
+  "12": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "13": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "14": {
+   "mine": [
+    "d"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "disagree",
+   "firstDivergence": "a private default ctor alone does not stop a non-member creating an A by copy: with only A() private and the copy ctor implicit/public, `A b(a)` in main compiles when `a` was handed out by a member (var_q14.cpp). Private ctor + private copy ctor (d) is the minimal set that blocks it; the key (a) holds only if no existing object can ever be obtained"
+  },
+  "15": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  }
+ }
+}

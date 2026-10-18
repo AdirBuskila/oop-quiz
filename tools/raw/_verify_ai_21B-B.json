@@ -1,0 +1,215 @@
+{
+ "code": "21B-B",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/21B-B/refute_ai/), derived before reading claims",
+ "agree": 19,
+ "disagree": 0,
+ "unclear": 1,
+ "items": {
+  "1": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree",
+   "flag": "class members are private in the printed code so unusable as written; answered on the rule of three"
+  },
+  "2": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "3": {
+   "mine": [
+    "b",
+    "d"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "unclear",
+   "reason": "stem names no ostream; a member operator<< (a << x) also overloads << for A and compiles (var_q3.cpp), so strictly d (member OR non-friend external) is the full 'must add' disjunction; b holds only if cout << a is assumed",
+   "notes": "stem names no ostream; a member operator<< (a << x) also overloads << for A and compiles (var_q3.cpp), so strictly d (member OR non-friend external) is the full 'must add' disjunction; b holds only if cout << a is assumed"
+  },
+  "4": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "5": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "6": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "7": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "8": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "9": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "10": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "11": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "12": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "13": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "flag": "design question, judged by reasoning"
+  },
+  "14": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "15": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "16": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "17": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "18": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "19": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "20": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  }
+ }
+}

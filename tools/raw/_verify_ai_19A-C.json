@@ -1,0 +1,22 @@
+{
+ "code": "19A-C",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/19A-C/refute_ai/), derived before reading claims",
+ "agree": 1,
+ "disagree": 0,
+ "items": {
+  "6": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree",
+   "notes": "as printed no option compiles (private f, X* vs X&); with public + &x.f() only *this compiles and prints 1",
+   "flag": "printed code uncompilable for every option; key d is the only repair that works"
+  }
+ },
+ "unclear": 0
+}

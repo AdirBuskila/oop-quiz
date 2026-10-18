@@ -1,0 +1,2 @@
+{"1":"b","2":"c","3":"b","4":"d","5":["a","'how many' read as a count: only statement 2 true -> 1 -> option a"],"6":"d","7":"b","8":"b","9":["c","clang and MSVC 2022 cl both reject S++ with only prefix operator++ (C2676)"],"10":"b","11":"c","12":"a","13":"a","14":"d","15":"c","16":"c","18":"b","19":"a","20":"a",
+"_flags":{"4":"concept question, judged","10":"concept question, judged (b over c ambiguous in the scan)","12":"concept question, judged"}}

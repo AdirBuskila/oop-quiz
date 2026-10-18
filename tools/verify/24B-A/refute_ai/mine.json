@@ -1,0 +1,2 @@
+{"1":"c","2":"d","3":["b","h() returns a const int& bound to a temporary x+i (dangling, only a warning); the counted error is line 11"],"4":"d","5":"b","6":"b","8":"c","9":"a","10":"c","11":"d","12":"b","13":"c","15":"d","16":"b","17":["a","concept; friends can also access protected, but a is the only true statement among the options"],
+"_flags":{"5":"statements numbered 1-3 added by transcriber, judged by compile","17":"concept"}}

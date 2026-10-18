@@ -1,0 +1,205 @@
+{
+ "code": "21S-B",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/21S-B/refute_ai/), derived before reading claims",
+ "agree": 19,
+ "disagree": 0,
+ "unclear": 0,
+ "items": {
+  "1": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "2": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "3": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "4": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree",
+   "flag": "concept question, judged"
+  },
+  "5": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "notes": "'how many' read as a count: only statement 2 true -> 1 -> option a"
+  },
+  "6": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "7": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "8": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "9": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree",
+   "notes": "clang and MSVC 2022 cl both reject S++ with only prefix operator++ (C2676)"
+  },
+  "10": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree",
+   "flag": "concept question, judged (b over c ambiguous in the scan)"
+  },
+  "11": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "12": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "flag": "concept question, judged"
+  },
+  "13": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "14": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "15": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "16": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "18": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "19": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "20": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  }
+ }
+}

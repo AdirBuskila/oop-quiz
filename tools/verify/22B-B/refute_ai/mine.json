@@ -1,0 +1,2 @@
+{"1":"b","2":"b","3":"a","4":"c","5":"d","6":["c","ctor of A prints 'nap' typo (undeclared identifier line 3) is outside the 4 counted lines; counted lines give 2"],"7":"a","8":["b","non-virtual dtor delete via base: formally UB, observed output only ~My"],"9":["c","actual output has a leading space before each number; options printed without"],"10":"d","11":"a","12":"c","13":"c","14":"d","15":"b",
+"_flags":{"13":"concept, judged","14":"concept, judged; friend access-section independence verified by compile"}}

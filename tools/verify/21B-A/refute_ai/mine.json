@@ -1,0 +1,2 @@
+{"1":"d","2":"a","3":"c","4":"b","5":"d","7":"a","8":"d","9":"b","10":"a","11":"a","12":"c","14":["b","design: raw new[] never freed, vector RAII"],"15":"a","16":"c","17":"b","18":["b","abab on clang++ c++14/17/20, but strcat overruns s1's 2-byte buffer by one byte (UB); b is the practical output"],"19":"d","20":"c",
+"_flags":{"14":"judged by reasoning, no compiler check of 'better'","18":"UB heap overrun, d (runtime error) is a conceivable alternative reading; output abab observed","20":"UB via non-virtual dtor; judged"}}

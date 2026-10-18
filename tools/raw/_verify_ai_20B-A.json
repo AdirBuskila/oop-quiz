@@ -1,0 +1,187 @@
+{
+ "code": "20B-A",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/20B-A/refute_ai/), derived before reading claims",
+ "agree": 17,
+ "disagree": 0,
+ "items": {
+  "1": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "notes": "static of class template is per-instantiation; a states same template arguments; e overclaims across instantiations"
+  },
+  "2": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "3": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "4": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "5": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "6": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "7": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "8": {
+   "mine": [
+    "d",
+    "e"
+   ],
+   "key": "e",
+   "acceptedIds": [
+    "e"
+   ],
+   "verdict": "agree",
+   "notes": "static virtual and static const-qualified member both rejected by clang++ (var_q8_*); static overloaded fine",
+   "altsIssue": "options ['d'] also correct by my runs but not in acceptedIds",
+   "flag": "option d (const member functions) is also a correct 'cannot be static' by my compile; key e only"
+  },
+  "9": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "10": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "11": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree",
+   "flag": "design question, judged by reasoning not compiler"
+  },
+  "12": {
+   "mine": [
+    "e"
+   ],
+   "key": "e",
+   "acceptedIds": [
+    "e"
+   ],
+   "verdict": "agree"
+  },
+  "13": {
+   "mine": [
+    "e"
+   ],
+   "key": "e",
+   "acceptedIds": [
+    "e"
+   ],
+   "verdict": "agree",
+   "flag": "design question, judged by reasoning not compiler"
+  },
+  "14": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "15": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "16": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "17": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  }
+ },
+ "unclear": 0
+}

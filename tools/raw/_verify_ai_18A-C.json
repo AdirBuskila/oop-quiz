@@ -1,0 +1,245 @@
+{
+ "code": "18A-C",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/18A-C/refute_ai/), derived before reading claims",
+ "agree": 23,
+ "disagree": 0,
+ "items": {
+  "1": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "2": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "3": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "4": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "5": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "6": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "7": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "8": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "9": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "10": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "11": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "12": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree",
+   "notes": "MFC fact, not runnable; consistent with WM_INITDIALOG/WM_PAINT vs mouse click",
+   "flag": "unverifiable by compiler; accepted on MFC knowledge"
+  },
+  "13": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "14": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "16": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "17": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "18": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "19": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "21": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "22": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "23": {
+   "mine": [
+    "b",
+    "c"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree",
+   "notes": "free non-friend operator>> (b) and friend operator>> (c) both compile at 14/17/20; member does not",
+   "altsIssue": "options ['c'] also correct by my runs but not in acceptedIds"
+  },
+  "24": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "25": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  }
+ },
+ "unclear": 0
+}

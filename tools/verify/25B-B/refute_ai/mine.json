@@ -1,0 +1,2 @@
+{"1":"d","2":"a","3":"b","4":"a","6":"b","7":"d","8":"d","9":["a","printed C::speak has a stray apostrophe/missing semicolon, read as typo"],"10":"b","11":"b","12":["b","only statement 3 true: pure virtual may have a body, derived may stay abstract, dtor may be pure virtual if defined"],"13":"b","14":"c","15":"b","16":"d","17":["b","returns reference to the by-value parameter (dangling); i is never written, prints 10"],
+"_flags":{"11":"concept","12":"concept, judged","13":"concept","14":"concept"}}

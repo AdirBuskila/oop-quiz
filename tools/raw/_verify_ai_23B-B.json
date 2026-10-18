@@ -1,0 +1,174 @@
+{
+ "code": "23B-B",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/23B-B/refute_ai/), derived before reading claims",
+ "agree": 14,
+ "disagree": 0,
+ "unclear": 1,
+ "items": {
+  "1": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree",
+   "notes": "f(5) ambiguous (line 16 only); f(5,6) resolves to the (float,int,int=8) overload"
+  },
+  "2": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "3": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "4": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "5": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "6": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree",
+   "notes": "f() fine; g() returns int& and h() returns int* to private x: judged by principle",
+   "flag": "principle question"
+  },
+  "7": {
+   "mine": [
+    "b",
+    "c"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "unclear",
+   "reason": "statement A true (var_q7ok.cpp: friend void B::f(A&) grants only that member, var_q7bad.cpp); C false (global f and B::f are different functions, both allowed). B is the swing: read literally ('if A befriends class B it cannot restrict to some of B's functions') it is true -> 2 true statements (c); the key treats it as false -> 1 (b)",
+   "notes": "statement A true (var_q7ok.cpp: friend void B::f(A&) grants only that member, var_q7bad.cpp); C false (global f and B::f are different functions, both allowed). B is the swing: read literally ('if A befriends class B it cannot restrict to some of B's functions') it is true -> 2 true statements (c); the key treats it as false -> 1 (b)",
+   "flag": "statement B ambiguous"
+  },
+  "8": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "notes": "nested class Y may access X's private c (C++11 and later); in C++98 it would be an error"
+  },
+  "9": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "10": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "notes": "options b and c are textually identical"
+  },
+  "11": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree",
+   "notes": "genuine independent errors: line 10 (x.p() with T=A*) and line 12 (B needs template args); line 18 f(b) fails only as follow-on of line 12; clang prints 3 lines",
+   "flag": "d if every clang error line is counted"
+  },
+  "12": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "13": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "14": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree",
+   "notes": "judged: struct fields default public (not necessarily), struct may have methods, struct keyword not required",
+   "flag": "principle question"
+  },
+  "15": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree",
+   "notes": "private ctors compile; static/friend can still create objects (var_q15.cpp)"
+  }
+ }
+}

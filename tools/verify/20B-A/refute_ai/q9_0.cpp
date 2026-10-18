@@ -1,0 +1,8 @@
+class MyClass { virtual int f() = 0; };
+class MyClass1 : public MyClass {
+};
+class Myclass2 :public MyClass {
+};
+class MyClass3 :public MyClass {
+};
+const MyClass * f1(const MyClass1&, const Myclass2 ) {return new MyClass3();}

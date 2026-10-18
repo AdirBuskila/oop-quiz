@@ -1,0 +1,186 @@
+{
+ "code": "25B-A",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/25B-A/refute_ai/), derived before reading claims",
+ "agree": 16,
+ "disagree": 0,
+ "unclear": 1,
+ "items": {
+  "1": {
+   "mine": [
+    "a",
+    "b"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "unclear",
+   "reason": "statement 1 false (setter / assignment); statement 2 false (implicit copy assignment changes x with no user-written member); statement 3 is TRUE: the implicitly declared operator= is itself a public member function (var_q1.cpp takes &A::operator= and changes x through it). So 1 true statement -> b; key a (0) holds only if implicit members are not counted as member functions. Key note's claim 'without any member function called' is inaccurate",
+   "notes": "statement 1 false (setter / assignment); statement 2 false (implicit copy assignment changes x with no user-written member); statement 3 is TRUE: the implicitly declared operator= is itself a public member function (var_q1.cpp takes &A::operator= and changes x through it). So 1 true statement -> b; key a (0) holds only if implicit members are not counted as member functions. Key note's claim 'without any member function called' is inaccurate"
+  },
+  "2": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "3": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree",
+   "flag": "concept + compile"
+  },
+  "4": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "5": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "6": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "7": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "8": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "9": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "10": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree",
+   "notes": "non-virtual dtor delete via base: formally UB, observed output matches b"
+  },
+  "11": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "12": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree"
+  },
+  "13": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "14": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "15": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree",
+   "flag": "concept, judged: only statement 3 true"
+  },
+  "16": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "17": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  }
+ }
+}

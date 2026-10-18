@@ -1,0 +1,20 @@
+{
+ "code": "19A-A",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/19A-A/refute_ai/), derived before reading claims",
+ "agree": 1,
+ "disagree": 0,
+ "items": {
+  "7": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  }
+ },
+ "unclear": 0
+}

@@ -1,0 +1,1 @@
+{"6":["d","as printed no option compiles (private f, X* vs X&); with public + &x.f() only *this compiles and prints 1"],"_flags":{"6":"printed code uncompilable for every option; key d is the only repair that works"}}

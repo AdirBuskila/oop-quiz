@@ -1,0 +1,159 @@
+{
+ "code": "22S-B",
+ "scope": "AI-keyed (official:false) mcq items",
+ "method": "own clang++ runs at c++11/14/17/20 (see tools/verify/22S-B/refute_ai/), derived before reading claims",
+ "agree": 14,
+ "disagree": 0,
+ "unclear": 0,
+ "items": {
+  "2": {
+   "mine": [
+    "d"
+   ],
+   "key": "d",
+   "acceptedIds": [
+    "d"
+   ],
+   "verdict": "agree",
+   "notes": "p is A*, A::f takes one argument; p[0].f(2,3) is 'too many arguments' on every std"
+  },
+  "3": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "flag": "language-rule concept; a is the closest of four"
+  },
+  "4": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "5": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "flag": "concept"
+  },
+  "6": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "7": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "8": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "9": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "10": {
+   "mine": [
+    "c"
+   ],
+   "key": "c",
+   "acceptedIds": [
+    "c"
+   ],
+   "verdict": "agree"
+  },
+  "11": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "notes": "program also prints destructor lines (~B: hi, ~A 8 twice) and uses lowercase '(copy)'; option b lacks both, d has wrong order -> none matches",
+   "flag": "key 'none correct' relies on b differing only by missing dtor lines and capital C"
+  },
+  "12": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree",
+   "notes": "copy count (3) depends on vector reallocation 1->2 with copy-only A; same on clang libc++-less MSVC STL used here",
+   "flag": "vector growth policy dependent"
+  },
+  "13": {
+   "mine": [
+    "b"
+   ],
+   "key": "b",
+   "acceptedIds": [
+    "b"
+   ],
+   "verdict": "agree"
+  },
+  "14": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree"
+  },
+  "15": {
+   "mine": [
+    "a"
+   ],
+   "key": "a",
+   "acceptedIds": [
+    "a"
+   ],
+   "verdict": "agree",
+   "notes": "in-class definition is implicitly inline, out-of-class non-inline definition in a header risks ODR; no behavioural difference in a single TU, so subjective",
+   "flag": "subjective wording, med confidence"
+  }
+ }
+}
