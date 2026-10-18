@@ -75,7 +75,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "השורות עם שגיאה הן 2 ו-4.\n- שורה 1: `B* = &d1` תקין, כי מצביע לנגזרת הומר אוטומטית למצביע לבסיס.\n- שורה 2: `D* = &b2` שגיאה, כי אין המרה משתמעת מבסיס לנגזרת.\n- שורה 3: `b1 = d1` תקין (slicing), כי `D` הוא `B`.\n- שורה 4: `d2 = b2` שגיאה, כי אין השמה של `B` לתוך `D`.\nהתשובה הנכונה היא 2. הבחירה ב-3 מתעלמת מכך ששורה 2 שגויה, והבחירה ב-1 מפספסת את שורה 4.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "השורות עם שגיאה הן 2 ו-4.\n- שורה 1: `B* = &d1` תקין, כי מצביע לנגזרת הומר אוטומטית למצביע לבסיס.\n- שורה 2: `D* = &b2` שגיאה, כי אין המרה משתמעת מבסיס לנגזרת.\n- שורה 3: `b1 = d1` תקין (slicing), כי `D` הוא `B`.\n- שורה 4: `d2 = b2` שגיאה, כי אין השמה של `B` לתוך `D`.\nהתשובה הנכונה היא 2. הבחירה `1`-3 מתעלמת מכך ששורה 2 שגויה, והבחירה `1`-1 מפספסת את שורה 4.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: errors on line 2 (base pointer to derived pointer) and line 4 (no D = B), none on lines 1 and 3 -> 2. Agrees.",
    "correctId": "c",
    "contextId": "notes"
@@ -109,7 +109,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`f` וירטואלית, לכן `bptr2->f()` נקראת לפי הטיפוס הדינמי `D` ומחזירה `d`=3. `bptr1->f()` מחזירה 1. הקריאה `bptr2->B::f()` מבטלת את הפנייה הווירטואלית ומריצה את גרסת `B`, שמחזירה `b`=2.\nהפלט הוא `1 3 2` (תשובה א). התשובה המפתה `1 2 2` מניחה שאין דריסה, אבל `f` נדרסת ב-`D`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f` וירטואלית, לכן `bptr2->f()` נקראת לפי הטיפוס הדינמי `D` ומחזירה `d`=3. `bptr1->f()` מחזירה 1. הקריאה `bptr2->B::f()` מבטלת את הפנייה הווירטואלית ומריצה את גרסת `B`, שמחזירה `b`=2.\nהפלט הוא `1 3 2`. התשובה המפתה `1 2 2` מניחה שאין דריסה, אבל `f` נדרסת ב-`D`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run printed `1 3 2`. Agrees.",
    "correctId": "a",
    "contextId": "notes"
@@ -143,7 +143,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שגיאות בשורות 1 ו-2 בלבד.\n- שורה 1: `B` אבסטרקטית (`f()=0`) ואי אפשר ליצור ממנה אובייקט (וגם אין בנאי `B(int,int)`).\n- שורה 2: `D1` לא דורסת את `f`, ולכן גם היא אבסטרקטית.\n- שורה 3: `D2` דורסת את `f`, ולכן ניתן ליצור אותה.\nהתשובה היא 2. הבחירה ב-1 שוכחת ש-`D1` יורשת את הפונקציה הטהורה בלי לממש אותה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שגיאות בשורות 1 ו-2 בלבד.\n- שורה 1: `B` אבסטרקטית (`f()=0`) ואי אפשר ליצור ממנה אובייקט (וגם אין בנאי `B(int,int)`).\n- שורה 2: `D1` לא דורסת את `f`, ולכן גם היא אבסטרקטית.\n- שורה 3: `D2` דורסת את `f`, ולכן ניתן ליצור אותה.\nהתשובה היא 2. הבחירה `1`-1 שוכחת ש-`D1` יורשת את הפונקציה הטהורה בלי לממש אותה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: errors on line 1 and line 2 (abstract class instantiation; line 1 also has no B(int,int) constructor) -> 2. Agrees.",
    "correctId": "c",
    "contextId": "notes"
@@ -177,7 +177,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בבנייה הבסיס נבנה לפני הנגזרת: `B D`. בגלל ש-`~B` וירטואלי, `delete b` מפעיל את ההורס של הטיפוס הדינמי `D` קודם, ואז את זה של `B`: `~D ~B`.\nהפלט הוא `B D ~D ~B` (תשובה ד). בלי `virtual` על ההורס היה מודפס רק `~B` (התנהגות לא מוגדרת), וזו הסיבה שתשובה א מפתה אך שגויה כאן.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בבנייה הבסיס נבנה לפני הנגזרת: `B D`. בגלל ש-`~B` וירטואלי, `delete b` מפעיל את ההורס של הטיפוס הדינמי `D` קודם, ואז את זה של `B`: `~D ~B`.\nהפלט הוא `B D ~D ~B`. בלי `virtual` על ההורס היה מודפס רק `~B` (התנהגות לא מוגדרת), וזו הסיבה שתשובה `B D ~B` מפתה אך שגויה כאן.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run printed `B D ~D ~B`. Agrees.",
    "correctId": "d",
    "contextId": "notes"
@@ -211,7 +211,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "סדר הבנייה הוא לפי סדר הרישום ב-`: public B1, public B2`: קודם `B1`, אחר כך `B2`, ולבסוף גוף `D`. ההריסה הפוכה בדיוק: `~D ~B2 ~B1`.\nהפלט הוא `B1 B2 D ~D ~B2 ~B1` (תשובה ב). תשובה ג הפוכה בסדר ההריסה, ותשובה א מתחילה ב-`D` כאילו הנגזרת נבנית לפני הבסיסים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "סדר הבנייה הוא לפי סדר הרישום ב-`: public B1, public B2`: קודם `B1`, אחר כך `B2`, ולבסוף גוף `D`. ההריסה הפוכה בדיוק: `~D ~B2 ~B1`.\nהפלט הוא `B1 B2 D ~D ~B2 ~B1`. תשובה `B1 B2 D ~B1 ~B2 ~D` הפוכה בסדר ההריסה, ותשובה `D B1 B2 ~B2 ~B1 ~D` מתחילה ב-`D` כאילו הנגזרת נבנית לפני הבסיסים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run printed `B1 B2 D ~D ~B2 ~B1`. Agrees.",
    "correctId": "b",
    "contextId": "notes"
@@ -245,7 +245,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בירושה `protected` חברי `public` ו-`protected` של `A` הופכים ל-`protected` ב-`B`, ו-`private` נשאר בלתי נגיש.\n- שורה 1 ו-2: תקינות בתוך מתודה של `B`.\n- שורה 3: `privA` פרטי ב-`A`, שגיאה.\n- שורה 4: `pubA` הפך ל-protected ולכן אסור מבחוץ, שגיאה.\n- שורות 5 ו-6: שגיאות.\nסה\"כ 4 שגיאות (תשובה א). הטעות הנפוצה היא להניח ש-`pubA` נשאר ציבורי, ואז מקבלים 3.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בירושה `protected` חברי `public` ו-`protected` של `A` הופכים ל-`protected` ב-`B`, ו-`private` נשאר בלתי נגיש.\n- שורה 1 ו-2: תקינות בתוך מתודה של `B`.\n- שורה 3: `privA` פרטי ב-`A`, שגיאה.\n- שורה 4: `pubA` הפך ל-protected ולכן אסור מבחוץ, שגיאה.\n- שורות 5 ו-6: שגיאות.\nסה\"כ 4 שגיאות. הטעות הנפוצה היא להניח ש-`pubA` נשאר ציבורי, ואז מקבלים 3.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: errors on lines 3, 4, 5, 6 -> 4. Agrees.",
    "correctId": "a",
    "contextId": "notes"
@@ -279,7 +279,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הפונקציה `A::f` מקבלת `B` by value בזמן ש-`B` עדיין מחלקה לא שלמה (רק הצהרה מקדימה). לכן הקומפיילר דוחה את הגישה לשלושת השדות (3 שגיאות; תשובה ד). אם `B` הייתה שלמה היו רק 2 שגיאות (`protB` ו-`privB`, שאינם נגישים ל-`A` שהיא הבסיס), וזו תשובה ג.\nהדף הרשמי מכיר בשתי התשובות. בהרצה בפועל התוצאה היא 3.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה `A::f` מקבלת `B` by value בזמן ש-`B` עדיין מחלקה לא שלמה (רק הצהרה מקדימה). לכן הקומפיילר דוחה את הגישה לשלושת השדות (3 שגיאות; תשובה `3`). אם `B` הייתה שלמה היו רק 2 שגיאות (`protB` ו-`privB`, שאינם נגישים ל-`A` שהיא הבסיס), וזו תשובה `2`.\nהדף הרשמי מכיר בשתי התשובות. בהרצה בפועל התוצאה היא 3.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official sheet (version 1) highlights c and d (both accepted); correctId set to d. clang++: B is incomplete inside A::f (error at the parameter, so all three member accesses are invalid: 3); with B complete (q08_complete.cpp) only lines 2 and 3 fail: 2. Consistent with the accepted pair.",
    "correctId": "d",
    "acceptedIds": [
@@ -317,7 +317,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`funB` היא friend של `B` בלבד, לא של `A`. דרך `b` (מטיפוס `B`) יש לה גישה לחברי `A` הציבוריים והמוגנים, אבל לא לפרטיים.\n- שורות 1 ו-2: תקינות.\n- שורה 3: `privA` פרטי, שגיאה.\n- שורה 4: `a.pubA` תקין.\n- שורות 5 ו-6: דרך `A&` אין גישה ל-`protected` ו-`private`, שגיאות.\nסה\"כ 3 שגיאות (תשובה ג). אי אפשר להניח ש-friendship ל-`B` נותנת גישה גם דרך אובייקט `A`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`funB` היא friend של `B` בלבד, לא של `A`. דרך `b` (מטיפוס `B`) יש לה גישה לחברי `A` הציבוריים והמוגנים, אבל לא לפרטיים.\n- שורות 1 ו-2: תקינות.\n- שורה 3: `privA` פרטי, שגיאה.\n- שורה 4: `a.pubA` תקין.\n- שורות 5 ו-6: דרך `A&` אין גישה ל-`protected` ו-`private`, שגיאות.\nסה\"כ 3 שגיאות. אי אפשר להניח ש-friendship ל-`B` נותנת גישה גם דרך אובייקט `A`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: errors on lines 3, 5, 6 -> 3. Agrees.",
    "correctId": "c",
    "contextId": "notes"
@@ -351,7 +351,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "ל-`B` יש פונקציה וירטואלית, לכן המחלקה פולימורפית ו-`dynamic_cast` עובד. `D3` יורשת וירטואלית (diamond) מ-`B`, לכן יש בסיס `B` יחיד.\n- `D3*` ל-`B*`: upcast, מצליח (0).\n- `D3*` ל-`D1*` ואז ל-`B*`: מצליח (1).\n- מ-`B*` (שמצביע בפועל על אובייקט `D3`) ל-`D1*` ול-`D2*` ול-`D3*`: downcast דינמי, מצליח כי הטיפוס הדינמי הוא `D3` (2, 3, 4).\nהפלט `0 1 2 3 4` (תשובה ד). הרצת הקוד הניבה את אותו הפלט.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ל-`B` יש פונקציה וירטואלית, לכן המחלקה פולימורפית ו-`dynamic_cast` עובד. `D3` יורשת וירטואלית (diamond) מ-`B`, לכן יש בסיס `B` יחיד.\n- `D3*` ל-`B*`: upcast, מצליח (0).\n- `D3*` ל-`D1*` ואז ל-`B*`: מצליח (1).\n- מ-`B*` (שמצביע בפועל על אובייקט `D3`) ל-`D1*` ול-`D2*` ול-`D3*`: downcast דינמי, מצליח כי הטיפוס הדינמי הוא `D3` (2, 3, 4).\nהפלט `0 1 2 3 4`. הרצת הקוד הניבה את אותו הפלט.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run printed `0 1 2 3 4`. Agrees.",
    "correctId": "d",
    "contextId": "notes"
@@ -385,7 +385,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "האובייקט בפועל הוא `D1`. המרה ל-`B*` מצליחה (1) והחזרה ל-`D1*` מצליחה (2). המרה ל-`D2*` נכשלת (מחזירה `nullptr`) כי האובייקט אינו `D2`, וכך גם ל-`D3*` כי הוא אינו `D3`.\nהפלט הוא `1 2`. אפשרויות א ו-ג זהות והדף הרשמי מכיר בשתיהן. תשובה ב שגויה כי היא מניחה שההמרה למחלקות אחיות או יורשות מצליחה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "האובייקט בפועל הוא `D1`. המרה ל-`B*` מצליחה (1) והחזרה ל-`D1*` מצליחה (2). המרה ל-`D2*` נכשלת (מחזירה `nullptr`) כי האובייקט אינו `D2`, וכך גם ל-`D3*` כי הוא אינו `D3`.\nהפלט הוא `1 2`. שתי האפשרויות `1 2` זהות והדף הרשמי מכיר בשתיהן. תשובה `1 2 3 4` שגויה כי היא מניחה שההמרה למחלקות אחיות או יורשות מצליחה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official sheet highlights a and c. Options a and c are both printed as `1 2` (identical text), so both are accepted. clang++ run printed `1 2`. Agrees.",
    "correctId": "a",
    "acceptedIds": [
@@ -423,7 +423,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שתי שורות לא מתקמפלות:\n- `int p = &v[0];` מנסה להכניס `int*` ל-`int`.\n- `int it = v.begin();` מנסה להכניס איטרטור ל-`int`.\nשאר הקוד תקין מבחינת קומפילציה (שימוש באיטרטור אחרי `push_back` הוא בעיית ריצה, לא שגיאת קומפילציה). לכן התשובה 2 (ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שתי שורות לא מתקמפלות:\n- `int p = &v[0];` מנסה להכניס `int*` ל-`int`.\n- `int it = v.begin();` מנסה להכניס איטרטור ל-`int`.\nשאר הקוד תקין מבחינת קומפילציה (שימוש באיטרטור אחרי `push_back` הוא בעיית ריצה, לא שגיאת קומפילציה). לכן התשובה 2.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: 2 compile errors (`int p = &v[0];` and `int it = v.begin();`). Agrees.",
    "correctId": "c",
    "contextId": "notes"
@@ -457,7 +457,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`A<>` משתמשת בברירות המחדל: `T=int`, `size=1`, ומאותחלת ל-0, ולכן מודפס `0`. `A<char>('A')` עם `size=1` מדפיסה `A`. `A<int,2>(2)` מדפיסה את שני האיברים `2` ו-`2`, כלומר `22`.\nהפלט `0 A 22` (תשובה ד). תשובה א מוסיפה איבר שלישי שאינו קיים, כי `size` הוא 2 ולא 3.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`A<>` משתמשת בברירות המחדל: `T=int`, `size=1`, ומאותחלת ל-0, ולכן מודפס `0`. `A<char>('A')` עם `size=1` מדפיסה `A`. `A<int,2>(2)` מדפיסה את שני האיברים `2` ו-`2`, כלומר `22`.\nהפלט `0 A 22`. תשובה `0 A 222` מוסיפה איבר שלישי שאינו קיים, כי `size` הוא 2 ולא 3.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run printed `0 A 22`. Agrees.",
    "correctId": "d",
    "contextId": "notes"
@@ -491,7 +491,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "med",
-   "explanation": "הקוד מתקמפל ומדפיס בדיוק את אפשרות ב (נבדק בהרצה).\n- `h(x)`: `int` מתאים רק ל-`h(T)`, ולכן `by value`.\n- `h(px)`: `int*` מתאים ל-`h(T*)` טוב יותר מ-`h(T)`, ולכן `ptr to T`.\n- `h(pcx)`: `const int*` מתאים ל-`h(const T*)`, שהיא המתמחה יותר, ולכן `ptr to const T`.\n- `h(\"abc\")` ו-`h(s)`: הארגומנט מטיפוס `const char*` (המערך דועך למצביע), ולכן נבחרת `h(const T*)`.\nההתמחות המפורשת `h<const char*>` שייכת לתבנית `h(T)` (by value), ולכן לא נבחרת מעולם: `C-string` אינו מודפס, ולכן אפשרויות א ו-ג לא מדויקות.\nהדף הרשמי סימן את כל האפשרויות כמתקבלות (כנראה בעקבות ערעור), אבל התשובה הנכונה לפי הקומפילציה וההרצה היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הקוד מתקמפל ומדפיס בדיוק את האפשרות שבה מופיע `ptr to const T` שלוש פעמים (נבדק בהרצה).\n- `h(x)`: `int` מתאים רק ל-`h(T)`, ולכן `by value`.\n- `h(px)`: `int*` מתאים ל-`h(T*)` טוב יותר מ-`h(T)`, ולכן `ptr to T`.\n- `h(pcx)`: `const int*` מתאים ל-`h(const T*)`, שהיא המתמחה יותר, ולכן `ptr to const T`.\n- `h(\"abc\")` ו-`h(s)`: הארגומנט מטיפוס `const char*` (המערך דועך למצביע), ולכן נבחרת `h(const T*)`.\nההתמחות המפורשת `h<const char*>` שייכת לתבנית `h(T)` (by value), ולכן לא נבחרת מעולם: `C-string` אינו מודפס, ולכן האפשרויות שבהן מודפס `C-string` לא מדויקות.\nהדף הרשמי סימן את כל האפשרויות כמתקבלות (כנראה בעקבות ערעור), אבל התשובה הנכונה לפי הקומפילציה וההרצה היא זו עם `ptr to const T` שלוש פעמים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "The official sheet (version 1) highlights all four options (a, b, c, d), i.e. every answer is accepted. The program compiles under clang++ and prints exactly option b (the explicit specialization h<const char*> specializes the by-value template, so it never wins; `h(s)` picks `const T*`), so b is the verified answer. Option d is printed at the top of the next page in the source.",
    "correctId": "b",
    "acceptedIds": [
@@ -531,7 +531,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בנאי ההעתקה הוא `T(T& c)` ולא `T(const T&)`, ולכן הוא לא יכול לקבל אובייקט `const`.\n- `T b = a;` תקין, כי `a` אינו const.\n- `T c = ca;` שגיאה, כי `ca` הוא `const T` ולא ניתן לקשור אותו ל-`T&`.\nיש שגיאה אחת (תשובה ב). שגיאה בשורת `const T ca;` אינה קיימת, כי ל-`T` יש בנאי ברירת מחדל מוגדר על ידי המשתמש.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בנאי ההעתקה הוא `T(T& c)` ולא `T(const T&)`, ולכן הוא לא יכול לקבל אובייקט `const`.\n- `T b = a;` תקין, כי `a` אינו const.\n- `T c = ca;` שגיאה, כי `ca` הוא `const T` ולא ניתן לקשור אותו ל-`T&`.\nיש שגיאה אחת. שגיאה בשורת `const T ca;` אינה קיימת, כי ל-`T` יש בנאי ברירת מחדל מוגדר על ידי המשתמש.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: 1 error (`T c = ca;` -- T(T&) cannot bind a const object). Agrees.",
    "correctId": "b",
    "contextId": "notes"
@@ -565,7 +565,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "כל הקריאות ל-`operator++` הן פונקציות חבר לא-const.\n- `++a` ו-`a++` תקינים.\n- `++Num(3)` ו-`Num(6)++` תקינים: קריאה למתודה לא-const על זמני (rvalue) מותרת.\n- `++ca` שגיאה, כי `ca` const והמתודה אינה const.\nיש שגיאה אחת (תשובה ב). הטעות הנפוצה היא לחשוב שאי אפשר להפעיל `++` על זמני, ואז מקבלים 3.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "כל הקריאות ל-`operator++` הן פונקציות חבר לא-const.\n- `++a` ו-`a++` תקינים.\n- `++Num(3)` ו-`Num(6)++` תקינים: קריאה למתודה לא-const על זמני (rvalue) מותרת.\n- `++ca` שגיאה, כי `ca` const והמתודה אינה const.\nיש שגיאה אחת. הטעות הנפוצה היא לחשוב שאי אפשר להפעיל `++` על זמני, ואז מקבלים 3.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: 1 error (`++ca;` on a const object; ++Num(3) and Num(6)++ are legal member calls on temporaries). Agrees.",
    "correctId": "b",
    "contextId": "notes"
@@ -599,7 +599,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "med",
-   "explanation": "בשפת C++ אי אפשר להעמיס פונקציות לפי סוג ההחזרה בלבד, כי הקומפיילר מבחין בין העמסות לפי רשימת הפרמטרים (ובמקרה של מתודות, גם לפי const), ולא לפי הערך המוחזר. ניסיון להגדיר שתי פונקציות שנבדלות רק בסוג ההחזרה נכשל בקומפילציה (`functions that differ only in their return type cannot be overloaded`).\nלכן הטענה הנכונה היא 2 (אפשרות ב). בדף הרשמי סומנו כמתקבלות גם אפשרויות א ו-ד (כנראה בעקבות ערעור), אבל לפי השפה ולפי הקומפילציה ב היא הנכונה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בשפת C++ אי אפשר להעמיס פונקציות לפי סוג ההחזרה בלבד, כי הקומפיילר מבחין בין העמסות לפי רשימת הפרמטרים (ובמקרה של מתודות, גם לפי const), ולא לפי הערך המוחזר. ניסיון להגדיר שתי פונקציות שנבדלות רק בסוג ההחזרה נכשל בקומפילציה (`functions that differ only in their return type cannot be overloaded`).\nלכן הטענה הנכונה היא 2. בדף הרשמי סומנו כמתקבלות גם אפשרויות `1` ו-`4` (כנראה בעקבות ערעור), אבל לפי השפה ולפי הקומפילציה `2` היא הנכונה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "The official sheet (version 1) highlights a, b and d; the language rule (and the clang++ run: 'functions that differ only in their return type cannot be overloaded') gives statement 2, which is option b, so b is used as the single answer. In the source the options are labelled ה, ו, ז, ח (statements 1-4); recorded here as a-d in the same order.",
    "correctId": "b",
    "acceptedIds": [

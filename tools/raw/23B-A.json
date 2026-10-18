@@ -36,7 +36,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "ל-`B` אין `f` משלה, ולכן `b.f()` וגם `a.B::f()` מגיעות ל-`C::f` שבבסיס, ומדפיסות `C`. רק `a.f()` מוצאת את `A::f` (ה-`f` של `A` מסתירה את הבסיס) ומדפיסה `A`. `a.C::f()` ו-`b.C::f()` מציינות במפורש את `C`. הפלט `ACCCC` (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ל-`B` אין `f` משלה, ולכן `b.f()` וגם `a.B::f()` מגיעות ל-`C::f` שבבסיס, ומדפיסות `C`. רק `a.f()` מוצאת את `A::f` (ה-`f` של `A` מסתירה את הבסיס) ומדפיסה `A`. `a.C::f()` ו-`b.C::f()` מציינות במפורש את `C`. הפלט `ACCCC`, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: ACCCC. Agrees."
   },
   {
@@ -69,7 +69,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "`C` יורשת מ-`D` ירושה `private`, ולכן `n1` פרטי ב-`C` ואינו נגיש ביורשות שלה. ב-`B::f2` השורה `cout << n1` שגויה, ו-`cout << n2` תקינה (`n2` ציבורי). ב-`A` (ירושה פרטית מ-`B`) הגישה ל-`n2` תקינה מבפנים, אבל `b1.n1` שגויה כי `n1` אינו נגיש. שתי שורות שגויות (תשובה ג), וכך גם clang++. בקוד המודפס מופיע פסיק במקום נקודה-פסיק אחרי `n1` ו-`n2`, והשאלה מורה להתעלם מכך.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`C` יורשת מ-`D` ירושה `private`, ולכן `n1` פרטי ב-`C` ואינו נגיש ביורשות שלה. ב-`B::f2` השורה `cout << n1` שגויה, ו-`cout << n2` תקינה (`n2` ציבורי). ב-`A` (ירושה פרטית מ-`B`) הגישה ל-`n2` תקינה מבפנים, אבל `b1.n1` שגויה כי `n1` אינו נגיש. שתי שורות שגויות, וכך גם clang++. בקוד המודפס מופיע פסיק במקום נקודה-פסיק אחרי `n1` ו-`n2`, והשאלה מורה להתעלם מכך.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the examinee's marked option, ticked by the grader (graded copy). Printed `int n1,` / `int n2,` read as `;`. clang++: 2 error lines. Agrees."
   },
   {
@@ -102,7 +102,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "הפונקציה מחזירה הפניה ל-`y` כש-`x == 1`, ואחרת הפניה ל-`z`. בקריאה הראשונה `a = 1`, ולכן `f(a,b,c)++` מגדילה את `b` ל-3. אחרי `a++` מתקבל `a = 2`, ולכן הקריאה השנייה מחזירה הפניה ל-`c`, ו-`++` מגדיל אותו ל-4. `d` הוא כינוי ל-`c`, ו-`d++` מעלה אותו ל-5. ההדפסה `b c d` נותנת `3`, `5`, `5`, כלומר `355` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה מחזירה הפניה ל-`y` כש-`x == 1`, ואחרת הפניה ל-`z`. בקריאה הראשונה `a = 1`, ולכן `f(a,b,c)++` מגדילה את `b` ל-3. אחרי `a++` מתקבל `a = 2`, ולכן הקריאה השנייה מחזירה הפניה ל-`c`, ו-`++` מגדיל אותו ל-4. `d` הוא כינוי ל-`c`, ו-`d++` מעלה אותו ל-5. ההדפסה `b c d` נותנת `3`, `5`, `5`, כלומר `355`, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the examinee's marked option, ticked by the grader (graded copy). Printed `f(a, b, c)++` without `;` (the exam's note says to ignore it); run with `;`: 355. Agrees."
   },
   {
@@ -135,7 +135,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "הגלובליים `a3` ו-`a7` נבנים לפני `main`. ב-`main` נבנים הסטטי `a4` והאוטומטי `a5`, אחר כך נקראת `f` שבונה את הסטטי `a1` ואת האוטומטי `a2`. בסיום `f` נהרס `a2`: `2`. אחר כך נבנה `a6`. בסיום `main` נהרסים האוטומטיים בסדר הפוך: `a6` ואז `a5`: `65`. לבסוף נהרסים הסטטיים והגלובליים בסדר הפוך לבנייתם: `a1`, `a4`, `a7`, `a3`: `1473`. הפלט `2651473` (תשובה א), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הגלובליים `a3` ו-`a7` נבנים לפני `main`. ב-`main` נבנים הסטטי `a4` והאוטומטי `a5`, אחר כך נקראת `f` שבונה את הסטטי `a1` ואת האוטומטי `a2`. בסיום `f` נהרס `a2`: `2`. אחר כך נבנה `a6`. בסיום `main` נהרסים האוטומטיים בסדר הפוך: `a6` ואז `a5`: `65`. לבסוף נהרסים הסטטיים והגלובליים בסדר הפוך לבנייתם: `a1`, `a4`, `a7`, `a3`: `1473`. הפלט `2651473`, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: 2651473. Agrees."
   },
   {
@@ -168,7 +168,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "med",
-   "explanation": "השדות `marks` ו-`age` פרטיים, כלומר המידע מוסתר (`Encapsulation`), והמחלקה `topper` יורשת מ-`student` (`Inheritance`). אין פונקציות וירטואליות ולכן אין רב-צורתיות. לכן התשובה היא א. זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "השדות `marks` ו-`age` פרטיים, כלומר המידע מוסתר (`Encapsulation`), והמחלקה `topper` יורשת מ-`student` (`Inheritance`). אין פונקציות וירטואליות ולכן אין רב-צורתיות. לכן התשובה היא \"הסתרת מידע (`Encapsulation`) והורשה (`Inheritance`).\". זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Concept question (no run): private members = encapsulation, `: public student` = inheritance, no virtual functions = no polymorphism."
   },
   {
@@ -201,7 +201,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "high",
-   "explanation": "`push_back` שומר עותקים: `A[1]` הוא עותק של `v2` ברגע ההוספה, כלומר `-8 5 51 3`, והוספת 10 אחר כך אל `v2` לא משפיעה עליו. הלולאה מקדמת את האיטרטור בשניים: מדפיסה `-8` (מקום 0) ו-`51` (מקום 2), ואז מגיעה בדיוק ל-`end()` ונעצרת. הפלט `-8 51` (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`push_back` שומר עותקים: `A[1]` הוא עותק של `v2` ברגע ההוספה, כלומר `-8 5 51 3`, והוספת 10 אחר כך אל `v2` לא משפיעה עליו. הלולאה מקדמת את האיטרטור בשניים: מדפיסה `-8` (מקום 0) ו-`51` (מקום 2), ואז מגיעה בדיוק ל-`end()` ונעצרת. הפלט `-8 51`, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). clang++ run: `-8 51 `. Agrees."
   },
   {
@@ -234,7 +234,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "ב-`Array<int>(3)` האיברים הם `0, 2, 4`, וב-`Array<double>(2)` האיברים הם `0, 0.5` (כי `i / 2.0`). הפונקציה `infiltrate` היא תבנית חברה של המחלקה ולכן מותר לה לגשת לשדות הפרטיים. כל איבר מודפס ואחריו `; `, ולכן השורה הראשונה `0; 2; 4;` והשנייה `0; 0.5;`. התוכנית מתקמפלת ורצה בלי שגיאה. התשובה המתאימה היא ב (בהרצה מופיע `;` גם בסוף השורה השנייה, ובתשובה ב הוא לא מודפס, אבל זו האפשרות היחידה שמתאימה לערכים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ב-`Array<int>(3)` האיברים הם `0, 2, 4`, וב-`Array<double>(2)` האיברים הם `0, 0.5` (כי `i / 2.0`). הפונקציה `infiltrate` היא תבנית חברה של המחלקה ולכן מותר לה לגשת לשדות הפרטיים. כל איבר מודפס ואחריו `; `, ולכן השורה הראשונה `0; 2; 4;` והשנייה `0; 0.5;`. התוכנית מתקמפלת ורצה בלי שגיאה. התשובה המתאימה היא זו שבה השורה השנייה היא `0; 0.5` (בהרצה מופיע `;` גם בסוף השורה השנייה, ובתשובה הזו הוא לא מודפס, אבל זו האפשרות היחידה שמתאימה לערכים).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: `0; 2; 4; ` / `0; 0.5; ` (option b prints no trailing `;` on line 2, as printed). Agrees with b."
   },
   {
@@ -267,7 +267,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "`new D::B` ו-`new D::C` יוצרים אובייקטים מטיפוס `B` ו-`C` (השם `D::B` הוא שם המחלקה `B` שבבסיס, דרך שם המחלקה היורשת). הקוד מתקמפל: לאחר ירושה וירטואלית מ-`A`, הקריאה `pa->f1()` נבחרת לפי הטיפוס האמיתי. הפלט הוא: `A` עבור `new A`, `B` עבור `new B`, `C` עבור `new C`, `B` עבור `new D::B`, `C` עבור `new D::C`, ו-`D` עבור `new D`. כלומר `ABCBCD` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`new D::B` ו-`new D::C` יוצרים אובייקטים מטיפוס `B` ו-`C` (השם `D::B` הוא שם המחלקה `B` שבבסיס, דרך שם המחלקה היורשת). הקוד מתקמפל: לאחר ירושה וירטואלית מ-`A`, הקריאה `pa->f1()` נבחרת לפי הטיפוס האמיתי. הפלט הוא: `A` עבור `new A`, `B` עבור `new B`, `C` עבור `new C`, `B` עבור `new D::B`, `C` עבור `new D::C`, ו-`D` עבור `new D`. כלומר `ABCBCD`, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the examinee's marked option, ticked by the grader (graded copy). clang++ run: ABCBCD. Agrees."
   },
   {
@@ -300,7 +300,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "high",
-   "explanation": "השורה `TestClass obj();` אינה יוצרת אובייקט: היא מצהירה על **פונקציה** בשם `obj` שמחזירה `TestClass` (the most vexing parse). לכן `obj.printValue()` היא שגיאת קומפילציה (clang++: base of member reference is a function). התוכנית אינה מתקמפלת (תשובה ד), ואף אחת משלוש האפשרויות האחרות אינה פלט אפשרי. בסריקה יש קשקוש בצבע כחול על מחרוזת בתוך `printValue`, והוא אינו משפיע על התשובה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "השורה `TestClass obj();` אינה יוצרת אובייקט: היא מצהירה על **פונקציה** בשם `obj` שמחזירה `TestClass` (the most vexing parse). לכן `obj.printValue()` היא שגיאת קומפילציה (clang++: base of member reference is a function). התוכנית אינה מתקמפלת, ואף אחת משלוש האפשרויות האחרות אינה פלט אפשרי. בסריקה יש קשקוש בצבע כחול על מחרוזת בתוך `printValue`, והוא אינו משפיע על התשובה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). clang++: compile error (`TestClass obj();` declares a function). Agrees with d. The scan has a scribbled-over string in printValue, read as `Value: `."
   },
   {
@@ -333,7 +333,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "med",
-   "explanation": "פונקציה וירטואלית היא ממשק שנקרא דרך מצביע או הפניה לבסיס, ולכן על פי רוב מגדירים אותה `public`. אפשר להגדיר גם `private` או `protected` (בתבנית NVI למשל), ולכן השאלה מנוסחת 'על פי רוב'. `default` אינו מפרט גישה ב-C++. התשובה לפי סימון הבודק היא א. זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "פונקציה וירטואלית היא ממשק שנקרא דרך מצביע או הפניה לבסיס, ולכן על פי רוב מגדירים אותה `public`. אפשר להגדיר גם `private` או `protected` (בתבנית NVI למשל), ולכן השאלה מנוסחת 'על פי רוב'. `default` אינו מפרט גישה ב-C++. התשובה לפי סימון הבודק היא `public`. זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Concept question (no run)."
   },
   {
@@ -366,7 +366,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "med",
-   "explanation": "בעיית המעוין היא מצב שבו מחלקה יורשת פעמיים מאותו בסיס דרך שתי מחלקות ביניים, ומקבלת שני עותקים שלו. הפתרון הוא ירושה **וירטואלית** (`virtual`) של הבסיס בשתי מחלקות הביניים, כך שיש רק עותק אחד (התשובה ב). זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בעיית המעוין היא מצב שבו מחלקה יורשת פעמיים מאותו בסיס דרך שתי מחלקות ביניים, ומקבלת שני עותקים שלו. הפתרון הוא ירושה **וירטואלית** (`virtual`) של הבסיס בשתי מחלקות הביניים, כך שיש רק עותק אחד. זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Concept question (no run)."
   },
   {
@@ -399,7 +399,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "med",
-   "explanation": "קריאה לבנאי יוצרת אובייקט של המחלקה (תשובה ג), ולא רק מצביע או הפניה אליו. זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "קריאה לבנאי יוצרת אובייקט של המחלקה, ולא רק מצביע או הפניה אליו. זו שאלת מושגים בלי הרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the examinee's marked option, ticked by the grader (graded copy). Concept question (no run)."
   },
   {
@@ -432,7 +432,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "high",
-   "explanation": "טענה א נכונה: `cout << a1` הוא קיצור לקריאה `operator<<(cout, a1)` של האופרטור הגלובלי. טענה ב שגויה: ל-`cin >> a1` מתאימה הקריאה `operator>>(cin, a1)`, כלומר הזרם הוא הארגומנט הראשון, ואילו בשורה המודפסת הסדר הפוך (נבדק: היא אינה מתקמפלת). טענה ג נכונה: `cout << a1 << a2` שקול לקריאה מקוננת, כי האופרטור מחזיר את הזרם (נבדק: אותו פלט). שתי טענות נכונות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "טענה `0` נכונה: `cout << a1` הוא קיצור לקריאה `operator<<(cout, a1)` של האופרטור הגלובלי. טענה `1` שגויה: ל-`cin >> a1` מתאימה הקריאה `operator>>(cin, a1)`, כלומר הזרם הוא הארגומנט הראשון, ואילו בשורה המודפסת הסדר הפוך (נבדק: היא אינה מתקמפלת). טענה `2` נכונה: `cout << a1 << a2` שקול לקריאה מקוננת, כי האופרטור מחזיר את הזרם (נבדק: אותו פלט). שתי טענות נכונות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). Rule + clang++ check of the three equivalences (tools/verify/23B-A/check.py)."
   },
   {
@@ -465,7 +465,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "high",
-   "explanation": "ההורסים נקראים בסדר הפוך לבנאים: קודם ההורס של המחלקה הנגזרת ביותר, ואחר כך הורסי הבסיסים בסדר עולה בשרשרת. לכן `D dtor; C dtor; B dtor; ` (תשובה ד), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ההורסים נקראים בסדר הפוך לבנאים: קודם ההורס של המחלקה הנגזרת ביותר, ואחר כך הורסי הבסיסים בסדר עולה בשרשרת. לכן `D dtor; C dtor; B dtor; `, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy). clang++ run: `D dtor; C dtor; B dtor; `. Agrees."
   },
   {
@@ -498,7 +498,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "high",
-   "explanation": "הפונקציה `operator+(M t)` מוגדרת עם פרמטר אחד, כלומר זהו `+` אונרי ולא בינארי. בנוסף היא פונקציה חברה (`friend`) ולא חבר, ולכן בתוכה השמות `a` ו-`b` לא מוגדרים (שגיאות בשתי שורות), והשורה `d3 = d1 + d3` נכשלת כי אין `operator+` בינארי. סך הכול שלוש שורות שגויות, כלומר יותר מ-2 (תשובה ד), וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה `operator+(M t)` מוגדרת עם פרמטר אחד, כלומר זהו `+` אונרי ולא בינארי. בנוסף היא פונקציה חברה (`friend`) ולא חבר, ולכן בתוכה השמות `a` ו-`b` לא מוגדרים (שגיאות בשתי שורות), והשורה `d3 = d1 + d3` נכשלת כי אין `operator+` בינארי. סך הכול שלוש שורות שגויות, כלומר יותר מ-2, וכך גם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the option circled in red by the grader after a wrong examinee answer (graded copy)."
   }
  ]

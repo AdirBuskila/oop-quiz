@@ -41,7 +41,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "משתנה סטטי בתבנית מחלקה משותף לכל העצמים של אותו מופע (instantiation) של התבנית, כלומר לעצמים שנוצרו עם אותם שמות מחלקות כארגומנטים לתבנית: שני `X<int>` חולקים אותו משתנה, ולכן תשובה א נכונה. `X<int>` ו-`X<double>` הן מחלקות שונות עם משתנים סטטיים נפרדים (בהרצה גם הכתובות שונות), ולכן תשובה ה (משותף לכל העצמים מאותה תבנית) שגויה. ג שגויה כי שיתוף כן אפשרי, וב ו-ד אינן קשורות לשאלה (פונקציות וירטואליות טהורות ו-`#pragma once` לא משפיעים על כך). בקובץ המקורי מסומנת תשובה ה, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "משתנה סטטי בתבנית מחלקה משותף לכל העצמים של אותו מופע (instantiation) של התבנית, כלומר לעצמים שנוצרו עם אותם שמות מחלקות כארגומנטים לתבנית: שני `X<int>` חולקים אותו משתנה, ולכן תשובה \"במידה והם נוצרו תוך שימוש באותם שמות של מחלקות ביצירת העצמים מהתבנית (template).\" נכונה. `X<int>` ו-`X<double>` הן מחלקות שונות עם משתנים סטטיים נפרדים (בהרצה גם הכתובות שונות), ולכן תשובה \"המשתנים הסטטיים משותפים לכל העצמים שנבנים מאותה התבנית.\" (משותף לכל העצמים מאותה תבנית) שגויה. התשובה \"לא יכול להיות בכלל.\" שגויה כי שיתוף כן אפשרי, ושתי התשובות על פונקציות וירטואליות טהורות ועל `#pragma once` אינן קשורות לשאלה (פונקציות וירטואליות טהורות ו-`#pragma once` לא משפיעים על כך). בקובץ המקורי מסומנת תשובה \"המשתנים הסטטיים משותפים לכל העצמים שנבנים מאותה התבנית.\", אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Arbiter ruling 2026-10-18 (was held): clang++ shows a static member of a class template is shared per instantiation only (X<int> objects share it, X<double> has its own), which is option a; the box (e) is not an official key. Med: wording of a."
   },
   {
@@ -74,7 +74,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "במחלקה יש מצביע שמוקצה בבנאי ומשוחרר בהורס, ולכן ההעתקה ברירת המחדל (shallow) יוצרת שני אובייקטים שמחזיקים אותו מצביע, והשחרור כפול. יש שני מקומות שבהם קורית העתקה: ההשמה `x2 = x1` והעברה לפי ערך `f(x1)` או `x2.f(x1)`, שקוראת לבנאי ההעתקה. בהרצה, תיקון רק של ההשמה או רק של בנאי ההעתקה עדיין שחרר את אותו מצביע פעמיים, ורק הוספת שניהם עבדה נכון (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "במחלקה יש מצביע שמוקצה בבנאי ומשוחרר בהורס, ולכן ההעתקה ברירת המחדל (shallow) יוצרת שני אובייקטים שמחזיקים אותו מצביע, והשחרור כפול. יש שני מקומות שבהם קורית העתקה: ההשמה `x2 = x1` והעברה לפי ערך `f(x1)` או `x2.f(x1)`, שקוראת לבנאי ההעתקה. בהרצה, תיקון רק של ההשמה או רק של בנאי ההעתקה עדיין שחרר את אותו מצביע פעמיים, ורק הוספת שניהם עבדה נכון.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option b. clang++ run with a double-delete detector (pointer freed twice): the unchanged class, assignment-only and copy-ctor-only versions all free the same pointer twice (crash); only the version with both a copy constructor and operator= is clean. Box agrees. Screenshot shows four options."
   },
   {
@@ -107,7 +107,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "`X<int, char>` הוא ההתמחות המלאה ולכן מדפיסה 2. `X<char, int>` ו-`X<double, char>` משתמשים בתבנית הכללית ומדפיסים 1 כל אחד. הפלט `211` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`X<int, char>` הוא ההתמחות המלאה ולכן מדפיסה 2. `X<char, int>` ו-`X<double, char>` משתמשים בתבנית הכללית ומדפיסים 1 כל אחד. הפלט `211`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option a. clang++ run printed 211 (x1 uses the full specialization, x2 and x3 the generic template). Box agrees."
   },
   {
@@ -145,7 +145,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "הבנאים בשורות 3 ו-4 מקבלים הפניה או מצביע ל-const ומעתיקים ערך, וזה חוקי (קריאה מ-const תמיד מותרת). בשורות 5 ו-6 יש שני בנאי העתקה, אחד עם `const` ואחד בלי: אובייקט const בוחר את הראשון ואובייקט רגיל את השני, ולכן אין עמימות. גם הגישה ל-`h.num1` של אובייקט אחר מאותה מחלקה מותרת. כל ההגדרות תקינות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הבנאים בשורות 3 ו-4 מקבלים הפניה או מצביע ל-const ומעתיקים ערך, וזה חוקי (קריאה מ-const תמיד מותרת). בשורות 5 ו-6 יש שני בנאי העתקה, אחד עם `const` ואחד בלי: אובייקט const בוחר את הראשון ואובייקט רגיל את השני, ולכן אין עמימות. גם הגישה ל-`h.num1` של אובייקט אחר מאותה מחלקה מותרת. כל ההגדרות תקינות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option d. clang++: the class compiles; copy-initialising from a const Home picks line 5 and from a non-const Home picks line 6 (no ambiguity). Box agrees."
   },
   {
@@ -183,7 +183,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "בבנאי ההעתקה `m` הוא `const Memory&`, ולכן ההשמה `m.i = ...` לשדה של `m` אסורה (שגיאת קומפילציה). זו הסתירה בהגדרה (תשובה ב). שני בנאים שונים מותרים (א שגויה), הקריאה ל-`Memory(3)` אינה עמומה כי `int` מתאים בדיוק (ג שגויה), וגישה לשדה פרטי של אובייקט אחר מאותה מחלקה מותרת (ה שגויה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בבנאי ההעתקה `m` הוא `const Memory&`, ולכן ההשמה `m.i = ...` לשדה של `m` אסורה (שגיאת קומפילציה). זו הסתירה בהגדרה. שני בנאים שונים מותרים (התשובה \"לא ניתן להגדיר שני בנאים שונים לאותה מחלקה\" שגויה), הקריאה ל-`Memory(3)` אינה עמומה כי `int` מתאים בדיוק (התשובה \"יש עמימות (ambiguity) בין שני הבנאים\" שגויה), וגישה לשדה פרטי של אובייקט אחר מאותה מחלקה מותרת (התשובה על גישה למשתנה private של אובייקט אחר שגויה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option b. clang++: the copy constructor assigns to `m.i` although `m` is `const Memory&` (error); without that assignment the class compiles, two constructors are allowed and calling Memory(3) is not ambiguous. Box agrees."
   },
   {
@@ -221,7 +221,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "העמסת פונקציות נקבעת לפי רשימת הפרמטרים ולא לפי סוג ההחזרה, ולכן שתי הגדרות עם אותו שם וסוגי החזרה שונים אפשריות רק אם הן נבדלות גם בסוג הפרמטרים או במספרם (תשובה ב). שתי פונקציות שנבדלות רק בסוג ההחזרה הן שגיאת קומפילציה (clang++: functions that differ only in their return type cannot be overloaded), וזה נכון גם לפונקציות וירטואליות וגם לפונקציות רגילות, ולכן ג, ד וה שגויות. א שגויה כי עם פרמטרים שונים זה כן אפשרי. בקובץ המקורי מסומנת תשובה ד, אך הסימון אינו מפתח רשמי ואינו מתיישב עם השפה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "העמסת פונקציות נקבעת לפי רשימת הפרמטרים ולא לפי סוג ההחזרה, ולכן שתי הגדרות עם אותו שם וסוגי החזרה שונים אפשריות רק אם הן נבדלות גם בסוג הפרמטרים או במספרם. שתי פונקציות שנבדלות רק בסוג ההחזרה הן שגיאת קומפילציה (clang++: functions that differ only in their return type cannot be overloaded), וזה נכון גם לפונקציות וירטואליות וגם לפונקציות רגילות, ולכן התשובות \"נכון רק עבור פונקציה וירטואלית.\", \"נכון תמיד\" ו-\"נכון רק עבור פונקציה שאיננה וירטואלית.\" שגויות. התשובה \"אף פעם לא נכון.\" שגויה כי עם פרמטרים שונים זה כן אפשרי. בקובץ המקורי מסומנת תשובה \"נכון תמיד\", אך הסימון אינו מפתח רשמי ואינו מתיישב עם השפה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Arbiter ruling 2026-10-18 (was held): clang++ rejects members differing only in return type (virtual or not) and accepts them when the parameters differ -> b; the box (d) is not an official key. Med: concept wording."
   },
   {
@@ -259,7 +259,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "אפשרות `k,l`: `k` הוא `double` ולכן נבחרת `f1(double&, int)` שמחזירה `i*j` = 2*1 = 2 (תשובה א). אפשרות `l,k`: נבחרת `f1(int&, int)` כש-`k` מומר ל-2, והתוצאה `1+2` = 3. האפשרויות `k&`, `l*` ו-`l*k` אינן ביטויים חוקיים בקריאה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "אפשרות `k,l`: `k` הוא `double` ולכן נבחרת `f1(double&, int)` שמחזירה `i*j` = 2*1 = 2. אפשרות `l,k`: נבחרת `f1(int&, int)` כש-`k` מומר ל-2, והתוצאה `1+2` = 3. האפשרויות `k&`, `l*` ו-`l*k` אינן ביטויים חוקיים בקריאה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option a. clang++ run of each option: `k,l` prints 2 (f1(double&, int) -> 2*1), `l,k` prints 3 (f1(int&, int) with k converted to 2 -> 1+2), the other three do not compile. Box agrees."
   },
   {
@@ -297,7 +297,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "med",
-   "explanation": "פונקציה סטטית אינה קשורה לאובייקט מסוים, ולכן אין לה `this` ואי אפשר להפוך אותה לווירטואלית (בלי קשר אם היא טהורה). לכן אף פונקציה וירטואלית לא יכולה להיות סטטית (תשובה ה). overloading מותר גם בפונקציות סטטיות. פונקציה חברה מסוג `const` (שמצהירה שהיא לא משנה את `this`) גם היא לא יכולה להיות סטטית, אבל אם הכוונה לפונקציה שמחזירה `const` היא כן יכולה, ולכן הבחירה היא ה.\nהערה: `static void f() const;` נדחה בקומפילציה, כלומר פונקציה חברה מסוג `const` לא יכולה להיות סטטית, ולכן גם תשובה ד מתקבלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "פונקציה סטטית אינה קשורה לאובייקט מסוים, ולכן אין לה `this` ואי אפשר להפוך אותה לווירטואלית (בלי קשר אם היא טהורה). לכן אף פונקציה וירטואלית לא יכולה להיות סטטית. overloading מותר גם בפונקציות סטטיות. פונקציה חברה מסוג `const` (שמצהירה שהיא לא משנה את `this`) גם היא לא יכולה להיות סטטית, אבל אם הכוונה לפונקציה שמחזירה `const` היא כן יכולה, ולכן הבחירה היא \"כל הפונקציות הוירטואליות\".\nהערה: `static void f() const;` נדחה בקומפילציה, כלומר פונקציה חברה מסוג `const` לא יכולה להיות סטטית, ולכן גם תשובה \"פונקציות מסוג const\" מתקבלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option e. clang++ compile tests: `static virtual` (pure or not) is rejected, overloaded static members are fine. Option d (const) is also true for a const-qualified member function (`static void f() const` is rejected), though a function that merely returns const can be static; the box keeps e. Confidence med because of that ambiguity in option d. Arbiter (2026-10-18): d accepted as well (a const member function cannot be static).",
    "acceptedIds": [
     "e",
@@ -339,7 +339,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "`MyClass3` נוצרת עם `new`, ולכן חייבת לממש את `f` (אחרת היא אבסטרקטית). הפרמטר השני מועבר לפי ערך, וגם אותו אי אפשר לקבל כסוג אבסטרקטי, ולכן גם המחלקה שלו חייבת לממש את `f`. הפרמטר הראשון מועבר בהפניה, ושם מחלקה אבסטרקטית מותרת. בהרצה רק צירוף המימושים בשתי המחלקות האלה התקמפל (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`MyClass3` נוצרת עם `new`, ולכן חייבת לממש את `f` (אחרת היא אבסטרקטית). הפרמטר השני מועבר לפי ערך, וגם אותו אי אפשר לקבל כסוג אבסטרקטי, ולכן גם המחלקה שלו חייבת לממש את `f`. הפרמטר הראשון מועבר בהפניה, ושם מחלקה אבסטרקטית מותרת. בהרצה רק צירוף המימושים בשתי המחלקות האלה התקמפל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option b. clang++: `new MyClass3()` needs MyClass3 to implement f; the second parameter is an abstract class passed BY VALUE, so MyClass2 must implement f as well; the first parameter is a reference and needs nothing. Of the five option sets only {MyClass2, MyClass3} compiles (the class is spelled `Myclass2` in the screenshot, both in its header and in the parameter; transcribed as printed). Box agrees."
   },
   {
@@ -372,7 +372,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "המשתנה `i` סטטי ולכן משותף לכל העצמים. `x1.i = 2` ואז `x2.i = 3` כותבים לאותו משתנה (נשאר 3), ולכן ההדפסה הראשונה היא `33`. אחרי `X::i++` הערך 4. הפלט `334` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המשתנה `i` סטטי ולכן משותף לכל העצמים. `x1.i = 2` ואז `x2.i = 3` כותבים לאותו משתנה (נשאר 3), ולכן ההדפסה הראשונה היא `33`. אחרי `X::i++` הערך 4. הפלט `334`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option b. clang++ run printed 334 (one shared static: 3 3, then 4). Box agrees."
   },
   {
@@ -410,7 +410,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "med",
-   "explanation": "יחס של `is-a` (תפוז הוא פרי) מתבטא בירושה ולא בהכלה (א שגויה). הארגון הטבעי: `Orange`, `Lemon`, `Apple` יורשים מ-`Fruit`, `Cucumber` יורש מ-`Vegetable`, ושתיהן יורשות מ-`Food` (תשובה ב). אין צורך שהמחלקה `Food` תהיה אבסטרקטית (ג), אפשר ליצור עץ ירושה מתאים (ד), ו-`Food` היא הבסיס ולא יורשת מאף אחת (ה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "יחס של `is-a` (תפוז הוא פרי) מתבטא בירושה ולא בהכלה (התשובה על שני Data Members בהכלה שגויה). הארגון הטבעי: `Orange`, `Lemon`, `Apple` יורשים מ-`Fruit`, `Cucumber` יורש מ-`Vegetable`, ושתיהן יורשות מ-`Food`. אין צורך שהמחלקה `Food` תהיה אבסטרקטית, אפשר ליצור עץ ירושה מתאים, ו-`Food` היא הבסיס ולא יורשת מאף אחת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option b. Class-design question, not runnable; the boxed hierarchy (leaf fruits derive from Fruit, Cucumber from Vegetable, both from Food) is the only coherent one (a uses data members for an is-a relation, c is not forced, d is false, e reverses the direction). Key kept, confidence med."
   },
   {
@@ -448,7 +448,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "בכל ארבע האפשרויות הפלט הוא 7. הביטוי `m1(i)` מחזיר `double` ולכן `1.0+m1(i)` הוא `double`. כשחתימת `m2` הנוספת דורשת שני ארגומנטים (`int i, double d` או `double d, int i`), היא לא מתאימה לקריאה עם ארגומנט אחד ונבחרת `m2(int)` שמחזירה 7. כשיש ערך ברירת מחדל (`double d, int i=1` או `double d=0, int i=1`) היא מתאימה בדיוק, והתוצאה `1 + 2*3.0` = 7. לכן כל התשובות נכונות (ה).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בכל ארבע האפשרויות הפלט הוא 7. הביטוי `m1(i)` מחזיר `double` ולכן `1.0+m1(i)` הוא `double`. כשחתימת `m2` הנוספת דורשת שני ארגומנטים (`int i, double d` או `double d, int i`), היא לא מתאימה לקריאה עם ארגומנט אחד ונבחרת `m2(int)` שמחזירה 7. כשיש ערך ברירת מחדל (`double d, int i=1` או `double d=0, int i=1`) היא מתאימה בדיוק, והתוצאה `1 + 2*3.0` = 7. לכן כל התשובות נכונות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option e. clang++ run of each of the four blanks: all print 7 (with two required parameters the new m2 is not viable for the one-argument call, so m2(int) returns 7; with a defaulted int i=1 the double overload is chosen and 1 + 2*3.0 = 7). Box agrees."
   },
   {
@@ -486,7 +486,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "med",
-   "explanation": "מחלקות הבדיקה חולקות נתונים משותפים (תאריך ביצוע, תאריך פענוח, מספר כולל של בדיקות), ולכן מגדירים להן מחלקת בסיס `GeneralTest` שמכילה אותם, בנוסף למשתנים סטטיים למעקב אחר המספרים. המחלקה היא וירטואלית טהורה כי אין בדיקה כללית שנוצרת בפני עצמה. `BloodTest` ו-`BreathTest` מוסיפות כל אחת את המשתנים הרגילים והסטטיים שלה, ו-`XRayTest` רק משתנה סטטי (תשובה ה). אפשרויות א-ג משכפלות או מחברות את הנתונים הכלליים בדרך גרועה, ו-ד שגויה כי זו בדיוק בעיה שמתאימה לשפה מונחית עצמים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "מחלקות הבדיקה חולקות נתונים משותפים (תאריך ביצוע, תאריך פענוח, מספר כולל של בדיקות), ולכן מגדירים להן מחלקת בסיס `GeneralTest` שמכילה אותם, בנוסף למשתנים סטטיים למעקב אחר המספרים. המחלקה היא וירטואלית טהורה כי אין בדיקה כללית שנוצרת בפני עצמה. `BloodTest` ו-`BreathTest` מוסיפות כל אחת את המשתנים הרגילים והסטטיים שלה, ו-`XRayTest` רק משתנה סטטי. האפשרויות שמגדירות את המחלקות בלי בסיס משותף, או עם ירושה הפוכה, משכפלות או מחברות את הנתונים הכלליים בדרך גרועה, והאפשרות \"הבעיה שתוארה מסובכת מדי ולא מתאימה לתכנות בשפה מונחית עצמים\" שגויה כי זו בדיוק בעיה שמתאימה לשפה מונחית עצמים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option e. Class-design question, not runnable. e is the one that shares the common fields once in an abstract base GeneralTest and gives each test its own extras; a/c duplicate the common fields or give no common base, b inverts inheritance, d is wrong. Key kept, confidence med."
   },
   {
@@ -524,7 +524,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "הפעלת `ptr->myRun()` נבחרת בזמן ריצה לפי הטיפוס האמיתי רק כשהפונקציה וירטואלית ב-`myEx2` ויש מחלקה יורשת שדורסת אותה (תשובה ד). אם היא לא וירטואלית, הקריאה תמיד מפעילה את הגרסה של `myEx2` (בהרצה נדפס `BB`). אם וירטואלית רק במחלקה היורשת, גם אז הקריאה דרך `myEx2*` לא משתנה. ירושה משתי מחלקות עם אותו שם פונקציה גורמת לעמימות ולא לבחירה דינמית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפעלת `ptr->myRun()` נבחרת בזמן ריצה לפי הטיפוס האמיתי רק כשהפונקציה וירטואלית ב-`myEx2` ויש מחלקה יורשת שדורסת אותה. אם היא לא וירטואלית, הקריאה תמיד מפעילה את הגרסה של `myEx2` (בהרצה נדפס `BB`). אם וירטואלית רק במחלקה היורשת, גם אז הקריאה דרך `myEx2*` לא משתנה. ירושה משתי מחלקות עם אותו שם פונקציה גורמת לעמימות ולא לבחירה דינמית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option d. clang++ runs: with a non-virtual myRun the call always runs the pointer type's version; with myRun virtual in myEx2 and overridden in a derived class the version depends on the dynamic type; virtual only in a derived class does not change calls through myEx2*; calling a method defined in two bases is ambiguous (does not compile). Box agrees."
   },
   {
@@ -557,7 +557,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "`f` וירטואלית ב-`X`. עבור `a[0]` (אובייקט `X`) מודפס 1 ואז `f1` של `X`: 2. עבור `a[1]` (אובייקט `Y` דרך מצביע `X*`) הקריאה הוירטואלית `f` מפעילה את `Y::f` ומדפיסה 3. `f1` לא וירטואלית ב-`X` (ההצהרה `virtual` ב-`Y` לא משפיעה על מצביע `X*`), ולכן מופעל `X::f1` ומודפס 2. הפלט `1232` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f` וירטואלית ב-`X`. עבור `a[0]` (אובייקט `X`) מודפס 1 ואז `f1` של `X`: 2. עבור `a[1]` (אובייקט `Y` דרך מצביע `X*`) הקריאה הוירטואלית `f` מפעילה את `Y::f` ומדפיסה 3. `f1` לא וירטואלית ב-`X` (ההצהרה `virtual` ב-`Y` לא משפיעה על מצביע `X*`), ולכן מופעל `X::f1` ומודפס 2. הפלט `1232`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option b. clang++ run printed 1232 (f is virtual in X so a[1]->f() prints 3; f1 is not virtual in X so a[1]->f1() prints X's 2). Box agrees."
   },
   {
@@ -595,7 +595,7 @@
    "answerSource": "highlighted-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "המשתנה `num1` הוא `private` ב-`Home`, ולכן מחלקה יורשת לא יכולה לגשת אליו ישירות: לא ברשימת האיתחול ולא בגוף הבנאי. הדרך היחידה היא להפעיל בנאי של `Home` ברשימת האיתחול, כמו `Home(3)` (תשובה א). `Home(3)` בוחר את `Home(const int&)`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המשתנה `num1` הוא `private` ב-`Home`, ולכן מחלקה יורשת לא יכולה לגשת אליו ישירות: לא ברשימת האיתחול ולא בגוף הבנאי. הדרך היחידה היא להפעיל בנאי של `Home` ברשימת האיתחול, כמו `Home(3)`. `Home(3)` בוחר את `Home(const int&)`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Boxed option a. clang++ compile tests: `Room() : Home(3) {}` compiles; `num1=3`, `num1(3)` and `((Home)*this).num1 = 3` fail (num1 is private to Home). Box agrees."
   },
   {
@@ -633,7 +633,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "אפשר להפעיל את בנאי הבסיס ברשימת האיתחול: `RAM() : Memory(3) {}` מתקמפל, והבנאי `Memory(int)` מציב `i` = 3 (תשובה א, נבדק בהרצה). המשתנה `i` פרטי ב-`Memory`, ולכן הניסיונות לגשת אליו ישירות מ-`RAM`, `i(3)`, `i=3` או `Memory::i=3`, נכשלים בקומפילציה. האפשרות ״לא ניתן״ (ב) שגויה, כי הגישה עוברת דרך הבנאי של הבסיס ולא דרך השדה. בקובץ המקורי מסומנת תשובה ב, אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "אפשר להפעיל את בנאי הבסיס ברשימת האיתחול: `RAM() : Memory(3) {}` מתקמפל, והבנאי `Memory(int)` מציב `i` = 3 (נבדק בהרצה). המשתנה `i` פרטי ב-`Memory`, ולכן הניסיונות לגשת אליו ישירות מ-`RAM`, `i(3)`, `i=3` או `Memory::i=3`, נכשלים בקומפילציה. האפשרות ״לא ניתן״ שגויה, כי הגישה עוברת דרך הבנאי של הבסיס ולא דרך השדה. בקובץ המקורי מסומנת תשובה \"לא ניתן\", אך הסימון אינו מפתח רשמי ואינו מתיישב עם ההרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Arbiter ruling 2026-10-18 (was held): clang++ with the copy ctor repaired: `RAM() : Memory(3) {}` compiles and leaves i == 3; c, d, e fail (i is private). The box (b) is not an official key."
   }
  ]

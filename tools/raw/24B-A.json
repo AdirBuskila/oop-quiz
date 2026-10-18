@@ -43,7 +43,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`f` וירטואלית ב-`B`, ו-`A::f` דורסת אותה (גם כשהיא `private`, הגישה נבדקת לפי הטיפוס הסטטי `B`). `c1` ו-`e1` מצביעים על `b1` (`B`) ולכן מדפיסים `A`, ו-`d1` ו-`f1` מצביעים על `a1` (`A`) ולכן מדפיסים `B`. הפלט `ABAB` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f` וירטואלית ב-`B`, ו-`A::f` דורסת אותה (גם כשהיא `private`, הגישה נבדקת לפי הטיפוס הסטטי `B`). `c1` ו-`e1` מצביעים על `b1` (`B`) ולכן מדפיסים `A`, ו-`d1` ו-`f1` מצביעים על `a1` (`A`) ולכן מדפיסים `B`. הפלט `ABAB`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `ABAB` (A::f is private but overrides the virtual B::f; the calls go through B references/pointers).",
    "correctId": "c"
   },
@@ -77,7 +77,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`B` יורשת פרטית מ-`A`, ולכן `x` (פרטי ב-`A`) אינו נגיש ב-`B`: השורה `x = i` שגויה. `C` יורשת מ-`B`, ולכן `y` (פרטי ב-`B`) ו-`x` אינם נגישים בה: `y = j` ו-`x = k` שגויות. שלוש שורות שגויות, כלומר יותר מ-2 (תשובה ד), וכך גם בקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`B` יורשת פרטית מ-`A`, ולכן `x` (פרטי ב-`A`) אינו נגיש ב-`B`: השורה `x = i` שגויה. `C` יורשת מ-`B`, ולכן `y` (פרטי ב-`B`) ו-`x` אינם נגישים בה: `y = j` ו-`x = k` שגויות. שלוש שורות שגויות, כלומר יותר מ-2, וכך גם בקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: 3 error lines (`x = i` in B: x is private in A; `y = j` and `x = k` in C: y is private in B and x is not accessible).",
    "correctId": "d"
   },
@@ -111,7 +111,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`g()` מחזירה הפניה לא-קבועה, ולכן `a1.g() = 5` תקינה. `h()` מחזירה `const int&`, ולכן `a1.h(3) = 6` שגויה: אי אפשר להשים להפניה קבועה. זו שורה שגויה אחת (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`g()` מחזירה הפניה לא-קבועה, ולכן `a1.g() = 5` תקינה. `h()` מחזירה `const int&`, ולכן `a1.h(3) = 6` שגויה: אי אפשר להשים להפניה קבועה. זו שורה שגויה אחת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: 1 error line, `a1.h(3) = 6` (assignment through a const reference).",
    "correctId": "b"
   },
@@ -145,7 +145,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`static int x = i` מאותחל פעם אחת בלבד, בקריאה הראשונה, ל-5. הקריאה הראשונה מעלה ל-6 ומדפיסה `6`. השנייה מעלה ל-7, ו-`f(5)++` מדפיסה את הערך `7` לפני ההגדלה ל-8 (ההפניה מחזירה את `x` עצמו). אחר כך `f(3) = 4` מציבה 4 ב-`x`, והקריאה האחרונה מעלה ל-5 ומדפיסה `5`. הפלט `675` (תשובה ד), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`static int x = i` מאותחל פעם אחת בלבד, בקריאה הראשונה, ל-5. הקריאה הראשונה מעלה ל-6 ומדפיסה `6`. השנייה מעלה ל-7, ו-`f(5)++` מדפיסה את הערך `7` לפני ההגדלה ל-8 (ההפניה מחזירה את `x` עצמו). אחר כך `f(3) = 4` מציבה 4 ב-`x`, והקריאה האחרונה מעלה ל-5 ומדפיסה `5`. הפלט `675`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `675` (the static x is initialized once to 5; f returns a reference to it, so f(3)=4 sets it to 4 and the last call gives 5).",
    "correctId": "d"
   },
@@ -179,7 +179,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "רק משפט 1 נכון. בתוך `A` אפשר להגדיר גם בנאי המרה מ-`B` ל-`A` וגם אופרטור המרה `operator B()` מ-`A` ל-`B`. משפט 2 שגוי: מספיק שהמרה אחת מוגדרת במקום אחד. משפט 3 שגוי: אפשר להגדיר גם את ההמרה ההפוכה. תשובה ב. בדקנו בקומפילציה את כל המקרים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "רק משפט 1 נכון. בתוך `A` אפשר להגדיר גם בנאי המרה מ-`B` ל-`A` וגם אופרטור המרה `operator B()` מ-`A` ל-`B`. משפט 2 שגוי: מספיק שהמרה אחת מוגדרת במקום אחד. משפט 3 שגוי: אפשר להגדיר גם את ההמרה ההפוכה. תשובה `1`. בדקנו בקומפילציה את כל המקרים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ compile checks: a conversion constructor A(const B&) plus `operator B()` in A compile together (1 true); `operator B()` in A alone is enough (2 false); both directions can be defined at once (3 false). The numbering 1-3 is added (the paper lists א-ג).",
    "correctId": "b"
   },
@@ -213,7 +213,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הסדר בבנייה: קודם הבסיסים לפי סדר הרישום, `A` ואז `B`, אחר כך החברים לפי סדר ההצהרה, `b1` ואז `a1`, ולבסוף גוף הבנאי `C`. הפלט `ABBAC`. ההריסה בסדר הפוך: `~C`, אחר כך החברים `~A` (`a1`) ו-`~B` (`b1`), ואז הבסיסים `~B` ו-`~A`: `~C~A~B~B~A`. תשובה ב, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הסדר בבנייה: קודם הבסיסים לפי סדר הרישום, `A` ואז `B`, אחר כך החברים לפי סדר ההצהרה, `b1` ואז `a1`, ולבסוף גוף הבנאי `C`. הפלט `ABBAC`. ההריסה בסדר הפוך: `~C`, אחר כך החברים `~A` (`a1`) ו-`~B` (`b1`), ואז הבסיסים `~B` ו-`~A`: `~C~A~B~B~A`. תשובה `ABBAC~C~A~B~B~A`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `ABBAC~C~A~B~B~A` (bases A then B, then members b1 then a1, then the body; destruction in exact reverse).",
    "correctId": "b"
   },
@@ -278,7 +278,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "ההמרה מנגזרת לבסיס (`B* q1 = &a1`) תקינה. ההמרה מבסיס לנגזרת אסורה בלי המרה מפורשת: `A* p1 = &b1` שגויה, וגם `p2 = q2` שגויה. `q2 = p2` תקינה, ו-`p2 = (A*)q2` תקינה (המרה מפורשת). שתי שורות שגויות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ההמרה מנגזרת לבסיס (`B* q1 = &a1`) תקינה. ההמרה מבסיס לנגזרת אסורה בלי המרה מפורשת: `A* p1 = &b1` שגויה, וגם `p2 = q2` שגויה. `q2 = p2` תקינה, ו-`p2 = (A*)q2` תקינה (המרה מפורשת). שתי שורות שגויות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: 2 error lines, `A* p1=&b1;` and `p2 = q2;` (no implicit base-to-derived pointer conversion); the explicit cast is fine.",
    "correctId": "c"
   },
@@ -312,7 +312,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`a1.f(11)` מחזירה `11 + 10 = 21`. עבור `A<B>` הפעולה `y + z` קוראת ל-`B::operator+`, שמחשבת `3 + 0 + 1 = 4`. הפלט `21` ואחריו `4`, כלומר `214` (תשובה א), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`a1.f(11)` מחזירה `11 + 10 = 21`. עבור `A<B>` הפעולה `y + z` קוראת ל-`B::operator+`, שמחשבת `3 + 0 + 1 = 4`. הפלט `21` ואחריו `4`, כלומר `214`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `214` (21, then B(3)+B(0)+1 = 4).",
    "correctId": "a"
   },
@@ -346,7 +346,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הלולאה מחליפה בין האיטרטור הרגיל לאיטרטור ההפוך שלוש פעמים (n/2), כלומר מהפכת את הווקטור: `5 4 3 2 1 0`. ההדפסה היא `543210` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הלולאה מחליפה בין האיטרטור הרגיל לאיטרטור ההפוך שלוש פעמים (n/2), כלומר מהפכת את הווקטור: `5 4 3 2 1 0`. ההדפסה היא `543210`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run: `543210` (the first half is swapped with the second half, i.e. the vector is reversed).",
    "correctId": "c"
   },
@@ -380,7 +380,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "בתבנית `F1(T a, T b)` שני הארגומנטים חייבים להיות מאותו טיפוס. הקריאות עם `char` ו-`int`, עם `int` ו-`long`, ועם `long` ו-`float` מסיקות שני טיפוסים שונים ל-`T` ונכשלות. שלוש הקריאות הללו שגויות, כלומר יותר מ-2 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בתבנית `F1(T a, T b)` שני הארגומנטים חייבים להיות מאותו טיפוס. הקריאות עם `char` ו-`int`, עם `int` ו-`long`, ועם `long` ו-`float` מסיקות שני טיפוסים שונים ל-`T` ונכשלות. שלוש הקריאות הללו שגויות, כלומר יותר מ-2.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: 3 error lines (F1(c1,n1), F1(n2,n3), F1(n3,n4): the two arguments deduce different T).",
    "correctId": "d"
   },
@@ -414,7 +414,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`A a2(a1)` ו-`A a3 = a1` מפעילות שתיהן את בנאי ההעתקה, ולכן הוא מופעל פעמיים (תשובה ב). `A a1(10)` קוראת לבנאי הרגיל. בהרצה, עם הדפסה בבנאי ההעתקה, התקבל `CC`. (`void main` בשאלה הוא סגנון MSVC.)\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`A a2(a1)` ו-`A a3 = a1` מפעילות שתיהן את בנאי ההעתקה, ולכן הוא מופעל פעמיים. `A a1(10)` קוראת לבנאי הרגיל. בהרצה, עם הדפסה בבנאי ההעתקה, התקבל `CC`. (`void main` בשאלה הוא סגנון MSVC.)\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ run (the copy constructor given a marker print, `void main` run as `int main`): 2 copies (`A a2(a1)` and `A a3 = a1`).",
    "correctId": "b"
   },
@@ -448,7 +448,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`getX` מוגדרת `const`, אבל היא משנה את השדה `x_` (`x_ += 2`), וזו שגיאה. השורה השגויה היחידה היא שורה 4 (תשובה ג), וכך גם בקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`getX` מוגדרת `const`, אבל היא משנה את השדה `x_` (`x_ += 2`), וזו שגיאה. השורה השגויה היחידה היא שורה 4, וכך גם בקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: the only error is line 4 (`x_ += 2` inside a const method).",
    "correctId": "c"
   },
@@ -513,7 +513,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הבנאי `Box(Box b)` מקבל את הארגומנט לפי ערך, וזה אסור: בנאי העתקה חייב לקבל הפניה, אחרת העתקת הארגומנט תקרא לו שוב ושוב. הקומפיילר דוחה זאת (`copy constructor must pass its first argument by reference`). התכנית אינה מתקמפלת (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הבנאי `Box(Box b)` מקבל את הארגומנט לפי ערך, וזה אסור: בנאי העתקה חייב לקבל הפניה, אחרת העתקת הארגומנט תקרא לו שוב ושוב. הקומפיילר דוחה זאת (`copy constructor must pass its first argument by reference`). התכנית אינה מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++: error `copy constructor must pass its first argument by reference` (`Box(Box b)`).",
    "correctId": "d"
   },
@@ -547,7 +547,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`f1` היא פונקציה `const` שמחזירה `const int&`. `int y = a1.f1(5)` תקינה (העתקה). `a1.f1(5) = 7` שגויה, כי אי אפשר להשים להפניה קבועה. שורה שגויה אחת (תשובה ב). `void main` הוא סגנון MSVC ואינו נחשב כאן.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f1` היא פונקציה `const` שמחזירה `const int&`. `int y = a1.f1(5)` תקינה (העתקה). `a1.f1(5) = 7` שגויה, כי אי אפשר להשים להפניה קבועה. שורה שגויה אחת. `void main` הוא סגנון MSVC ואינו נחשב כאן.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. clang++ (with `void main` read as `int main`): 1 error, `a1.f1(5) = 7` (assignment through a const reference).",
    "correctId": "b"
   },
@@ -581,7 +581,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "משפט א נכון: חברי `protected` הם כמו `private`, למעט העובדה שפונקציות חברות של מחלקה יורשת (ישירה) יכולות לגשת אליהם. משפט ב שגוי: הם לא נגישים מבחוץ כמו `public`. משפט ג שגוי: מחלקה יורשת היא מחלקה אחרת ויש לה גישה. תשובה א. בדקנו בקומפילציה: מחלקה לא קשורה מקבלת שגיאה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המשפט \"Protected members של מחלקה A הם כמו private members למעט...\" נכון: חברי `protected` הם כמו `private`, למעט העובדה שפונקציות חברות של מחלקה יורשת (ישירה) יכולות לגשת אליהם. המשפט \"...כמו public members למעט...\" שגוי: הם לא נגישים מבחוץ כמו `public`. המשפט \"...לא ניתנים לגישה על ידי פונקציות של מחלקות אחרות\" שגוי: מחלקה יורשת היא מחלקה אחרת ויש לה גישה. בדקנו בקומפילציה: מחלקה לא קשורה מקבלת שגיאה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key = the graded copy's circled answer (full marks), confirmed by clang++. Concept question; clang++ confirms: a derived member function reads a protected member, while an unrelated class or main gets `'p' is a protected member of 'A'` (so b is false). Statement c is false because derived classes are 'other classes' that can access it.",
    "correctId": "a"
   }

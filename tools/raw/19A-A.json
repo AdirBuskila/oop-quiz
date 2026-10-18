@@ -42,7 +42,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הקוד מתקמפל: `r` ו-`s` הן הפניות מאותחלות ל-`x`, וההשמות דרכן תקינות. (בשורה 5 מודפס בדף `s = 7` בלי נקודה-פסיק, כנראה טעות דפוס, ואם משלימים אותה אין שגיאה באף שורה.)\nהתשובה היא אף שורה (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הקוד מתקמפל: `r` ו-`s` הן הפניות מאותחלות ל-`x`, וההשמות דרכן תקינות. (בשורה 5 מודפס בדף `s = 7` בלי נקודה-פסיק, כנראה טעות דפוס, ואם משלימים אותה אין שגיאה באף שורה.)\nהתשובה היא אף שורה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: the snippet is printed with no `;` after `s = 7` on line 5 (a typo; with the `;` added there is no error on any line). Agrees with the key on that reading.",
    "contextId": "notes",
    "correctId": "a"
@@ -76,7 +76,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בקריאה `f(x,x)` הפרמטר `x` הוא הפניה ל-`x` של `main`, ו-`y` הוא עותק. `x = --y` נותן `y` = 3 ו-`x` = 3, והפונקציה מחזירה הפניה ל-`x`. הביטוי `f(x,x)++` מדפיס את הערך 3 ואז מגדיל את `x` ל-4. אחר כך `++x` מדפיס 5.\nהפלט הוא `35` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בקריאה `f(x,x)` הפרמטר `x` הוא הפניה ל-`x` של `main`, ו-`y` הוא עותק. `x = --y` נותן `y` = 3 ו-`x` = 3, והפונקציה מחזירה הפניה ל-`x`. הביטוי `f(x,x)++` מדפיס את הערך 3 ואז מגדיל את `x` ל-4. אחר כך `++x` מדפיס 5.\nהפלט הוא `35`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: prints 35 (y is a copy: x = 3, f returns x, post-increment prints 3, then ++x prints 5). Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -110,7 +110,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הקריאה `funC()` דו-משמעית: היא מתאימה גם ל-`funC()` וגם ל-`funC(int i=10)` עם ערך ברירת המחדל. הקומפיילר מדווח על שגיאה.\nהתשובה היא שהתכנית לא עוברת קומפילציה (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הקריאה `funC()` דו-משמעית: היא מתאימה גם ל-`funC()` וגם ל-`funC(int i=10)` עם ערך ברירת המחדל. הקומפיילר מדווח על שגיאה.\nהתשובה היא שהתכנית לא עוברת קומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: `funC()` is ambiguous between `funC()` and `funC(int i=10)`: compile error. Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -144,7 +144,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "המשתנה `r` סטטי ושומר את ערכו בין קריאות. הקריאה הראשונה מוסיפה 5 ל-`r` (5) ומחזירה הפניה אליו, ו-`+= i` מעלה אותו ל-10. הקריאה השנייה מוסיפה עוד 5 ומדפיסה 15.\nהפלט הוא `15` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המשתנה `r` סטטי ושומר את ערכו בין קריאות. הקריאה הראשונה מוסיפה 5 ל-`r` (5) ומחזירה הפניה אליו, ו-`+= i` מעלה אותו ל-10. הקריאה השנייה מוסיפה עוד 5 ומדפיסה 15.\nהפלט הוא `15`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: prints 15 (r = 5, then `+= i` makes it 10, the second call adds 5 more). Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -178,7 +178,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "ההצהרה `friend class A;` בתוך `B` נותנת למחלקה `A` גישה לכל החברים של `B`, כולל הפרטיים. הידידות חד-כיוונית, ולכן ל-`B` אין גישה אוטומטית לחברי `A`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ההצהרה `friend class A;` בתוך `B` נותנת למחלקה `A` גישה לכל החברים של `B`, כולל הפרטיים. הידידות חד-כיוונית, ולכן ל-`B` אין גישה אוטומטית לחברי `A`.\nהתשובה היא \"למחלקה `A` מותר לגשת לכל משתני המחלקה `B`\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: with `friend class A;` inside B, A's members read B's private fields; B cannot read A's private fields. Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -247,7 +247,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הסדר: המשתנה הגלובלי `x2(2)` נבנה קודם (2), ואז `x3(3)` ב-`main` (3). הקריאה ל-`f` בונה את `x1` (1), מעתיקה את `n`, והורסת את `x1` (1) לפני שהערך המוחזר מודפס (1). אחר כך נבנה הסטטי `x4(4)` (4). בסיום `main` נהרס `x3` (3), ואחריו הסטטי `x4` (4) והגלובלי `x2` (2), בסדר הפוך לבנייה.\nהפלט הוא `231114342` (תשובה א). בדף לא סומנה תשובה לשאלה זו, והתשובה נקבעה מהרצת הקוד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הסדר: המשתנה הגלובלי `x2(2)` נבנה קודם (2), ואז `x3(3)` ב-`main` (3). הקריאה ל-`f` בונה את `x1` (1), מעתיקה את `n`, והורסת את `x1` (1) לפני שהערך המוחזר מודפס (1). אחר כך נבנה הסטטי `x4(4)` (4). בסיום `main` נהרס `x3` (3), ואחריו הסטטי `x4` (4) והגלובלי `x2` (2), בסדר הפוך לבנייה.\nהפלט הוא `231114342`. בדף לא סומנה תשובה לשאלה זו, והתשובה נקבעה מהרצת הקוד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No highlight on the paper for this question. Key derived from the clang++ run: 231114342 (x2, x3, then f: x1 ctor 1, x1 dtor 1, prints 1; x4 ctor 4; at exit x3, x4, x2 destroyed: 3 4 2). Option a matches exactly.",
    "contextId": "notes",
    "correctId": "a"
@@ -281,7 +281,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הקומפיילר מייצר למחלקה ריקה בנאי, אופרטור השמה והורס. הוא לא מייצר אופרטור השוואה `==`, ולכן `a == b` לא מתקמפל.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הקומפיילר מייצר למחלקה ריקה בנאי, אופרטור השמה והורס. הוא לא מייצר אופרטור השוואה `==`, ולכן `a == b` לא מתקמפל.\nהתשובה היא \"אופרטור השוואה (`==`)\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run on `class A{};`: construction, assignment and destruction compile; `a == b` does not. Agrees (the paper prints `A{};` without `class`).",
    "contextId": "notes",
    "correctId": "c"
@@ -350,7 +350,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הפונקציה מחזירה `int*` והיא `const`, ולכן `K` הוא `const int` בתוכה. רק `new int(*k+K)` מחזיר `int*`. הביטוי `this->K` הוא `int`, ואילו `K+k` ו-`k` הם `const int*` שלא ניתן להמיר ל-`int*`.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה מחזירה `int*` והיא `const`, ולכן `K` הוא `const int` בתוכה. רק `new int(*k+K)` מחזיר `int*`. הביטוי `this->K` הוא `int`, ואילו `K+k` ו-`k` הם `const int*` שלא ניתן להמיר ל-`int*`.\nהתשובה היא `new int(*k+K)`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: only `new int(*k+K)` compiles (returns `int*`); `this->K` is an int, `K+k` and `k` are `const int*` and cannot convert to `int*`. Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -384,7 +384,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שדה `const` אי אפשר להשים אליו מאף מקום, לא מ-`main`, לא ממתודה ולא מגוף הבנאי. אפשר רק לאתחל אותו ברשימת האתחול של הבנאי.\nהתשובה היא אף תשובה אינה נכונה (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שדה `const` אי אפשר להשים אליו מאף מקום, לא מ-`main`, לא ממתודה ולא מגוף הבנאי. אפשר רק לאתחל אותו ברשימת האתחול של הבנאי.\nהתשובה היא אף תשובה אינה נכונה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: assignment to a const member fails in main, in a member function and in a constructor body (only initialization in the init list is allowed). Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -418,7 +418,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שלושת המקרים דורשים רשימת אתחול: שדה `const` חייב אתחול, שדה הפניה חייב אתחול, ומחלקת בסיס בלי בנאי ברירת מחדל דורשת קריאה מפורשת לבנאי שלה. כל שלוש התלמידות צדקו.\nהתשובה היא `3` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שלושת המקרים דורשים רשימת אתחול: שדה `const` חייב אתחול, שדה הפניה חייב אתחול, ומחלקת בסיס בלי בנאי ברירת מחדל דורשת קריאה מפורשת לבנאי שלה. כל שלוש התלמידות צדקו.\nהתשובה היא `3`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: with an empty init list each of the three situations fails to compile. Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -452,7 +452,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "המשתנה הגלובלי `a` נבנה לפני `main` (`a`). בתוך `main` נבנים `c` ואז `b`. ההריסה בסדר הפוך: `b` (`B`), `c` (`C`), ובסוף הגלובלי (`A`).\nהפלט הוא `acbBCA` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המשתנה הגלובלי `a` נבנה לפני `main` (`a`). בתוך `main` נבנים `c` ואז `b`. ההריסה בסדר הפוך: `b` (`B`), `c` (`C`), ובסוף הגלובלי (`A`).\nהפלט הוא `acbBCA`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: prints acbBCA (global a first; locals c, b; destroyed b, c, then the global). Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -486,7 +486,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בעומס יתר לפי `const`, אובייקט לא-const קורא לגרסה הלא-const (`n*2`), ואובייקט `const` קורא לגרסת ה-`const`. `x1.f()` מדפיס 4, ו-`x2.f()` מדפיס 3.\nהפלט הוא `43` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בעומס יתר לפי `const`, אובייקט לא-const קורא לגרסה הלא-const (`n*2`), ואובייקט `const` קורא לגרסת ה-`const`. `x1.f()` מדפיס 4, ו-`x2.f()` מדפיס 3.\nהפלט הוא `43`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: prints 43 (non-const object picks the non-const f: 2*2; the const object picks the const f: 3). Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -520,7 +520,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "- שורה 13: `this->X::f()` תקינה.\n- שורה 19: `y1.X::f()` תקינה.\n- שורה 20: `X::f()` ב-`main` קוראת לפונקציה לא סטטית בלי אובייקט, שגיאה.\n- שורה 21: `y1.f()` תקינה, כי `f` עוברת בירושה.\n- שורה 22: `y1.X::h()` שגויה, כי `h` שייכת ל-`Y` ולא ל-`X`.\nהתשובה היא שורות 20 ו-22 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "- שורה 13: `this->X::f()` תקינה.\n- שורה 19: `y1.X::f()` תקינה.\n- שורה 20: `X::f()` ב-`main` קוראת לפונקציה לא סטטית בלי אובייקט, שגיאה.\n- שורה 21: `y1.f()` תקינה, כי `f` עוברת בירושה.\n- שורה 22: `y1.X::h()` שגויה, כי `h` שייכת ל-`Y` ולא ל-`X`.\nהתשובה היא שורות 20 ו-22.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: errors on lines 20 (`X::f()` without an object) and 22 (`h` is not a member of X); lines 13, 19 and 21 compile. Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -554,7 +554,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "המשתנה הגלובלי `b(3)` נבנה לפני `main`: קודם הבסיס `A()` מדפיס `A empty`, ואז `B int`. ב-`main` נבנה `A a(3)` ומדפיס `A int`, ובסוף `main` ההורס שלו מדפיס `destroy A`. בסיום התכנית נהרס הגלובלי: `destroy B` ואז `destroy A`.\nהפלט הוא הפלט שבתשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המשתנה הגלובלי `b(3)` נבנה לפני `main`: קודם הבסיס `A()` מדפיס `A empty`, ואז `B int`. ב-`main` נבנה `A a(3)` ומדפיס `A int`, ובסוף `main` ההורס שלו מדפיס `destroy A`. בסיום התכנית נהרס הגלובלי: `destroy B` ואז `destroy A`.\nהפלט הוא הפלט שבתשובה `A empty B int A int destroy A destroy B destroy A`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run (curly quotes of the source replaced by ASCII quotes): the output, with runs of spaces collapsed, is exactly option a. Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -588,7 +588,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הפונקציה `f` אינה וירטואלית, לכן הקריאה דרך הפניה מטיפוס `A&` נקשרת סטטית ל-`A::f`.\nהפלט הוא `A` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה `f` אינה וירטואלית, לכן הקריאה דרך הפניה מטיפוס `A&` נקשרת סטטית ל-`A::f`.\nהפלט הוא `A`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: prints A (`f` is not virtual, so the call through `A&` binds to A::f). Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -622,7 +622,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בקריאות דרך `d` ודרך `pd` (טיפוס `D`) נבחרת `D::disp`. הקריאה דרך `pb` מטיפוס `B*` נקשרת ל-`B::disp`, כי הפונקציה אינה וירטואלית.\nהפלט הוא `DDB` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בקריאות דרך `d` ודרך `pd` (טיפוס `D`) נבחרת `D::disp`. הקריאה דרך `pb` מטיפוס `B*` נקשרת ל-`B::disp`, כי הפונקציה אינה וירטואלית.\nהפלט הוא `DDB`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: prints DDB (static binding by pointer type). Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -656,7 +656,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "ההשמה `x2 = x1` היא השמה רדודה: המצביע `p` מועתק, כך שהבלוק של `x2` דולף ושני האובייקטים מצביעים לאותו בלוק. בסוף `main` ההורס של כל אחד מהם מבצע `delete` לאותו בלוק, וההרצה קורסת בתוך ההורס.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ההשמה `x2 = x1` היא השמה רדודה: המצביע `p` מועתק, כך שהבלוק של `x2` דולף ושני האובייקטים מצביעים לאותו בלוק. בסוף `main` ההורס של כל אחד מהם מבצע `delete` לאותו בלוק, וההרצה קורסת בתוך ההורס.\nהתשובה היא \"מתקבלת שגיאה בזמן ביצוע שורת קוד של ה-destructor\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: the default assignment copies the pointer, so at the end both objects `delete` the same block; the double delete aborts the program from inside the destructor. Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -725,7 +725,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "כדי להתנהג כמו `int` (שבו `(a = b) = c` ו-`a = b = c` חוקיים), אופרטור ההשמה מקבל `const C &` ומחזיר `C &` לא קבועה. החזרת `const C &` חוסמת את `(a = b) = c`, פרמטר לא קבוע לא מקבל אובייקט `const`, ואופרטור `const` לא יכול לשנות את האובייקט.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "כדי להתנהג כמו `int` (שבו `(a = b) = c` ו-`a = b = c` חוקיים), אופרטור ההשמה מקבל `const C &` ומחזיר `C &` לא קבועה. החזרת `const C &` חוסמת את `(a = b) = c`, פרמטר לא קבוע לא מקבל אובייקט `const`, ואופרטור `const` לא יכול לשנות את האובייקט.\nהתשובה היא `C &operator=( const C & )`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: like `int`, the chained forms `(a = b) = c` and `a = b = c` compile only with a non-const reference result; the other declarations return const (no `(a = b) = c`) or are const members that cannot modify the object. Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -759,7 +759,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בקריאה `f(5)` הטיפוס `T` מוסק כ-`int`, והקוד תקין. בקריאה `g(5)` אין פרמטר מטיפוס `T`, ולכן הקומפיילר לא יכול להסיק אותו, והשורה שגויה.\nהתשובה היא שורה 5 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בקריאה `f(5)` הטיפוס `T` מוסק כ-`int`, והקוד תקין. בקריאה `g(5)` אין פרמטר מטיפוס `T`, ולכן הקומפיילר לא יכול להסיק אותו, והשורה שגויה.\nהתשובה היא שורה 5.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: line 5 fails (`T` cannot be deduced for `g`); line 4 compiles. Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -863,7 +863,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "איטרטור יודע להתקדם (`++it`), לאחזר את הערך (`*it`) ולהשוות (`==`). הסרת האיבר נעשית דרך המכל, `v.erase(it)`, ואינה פעולה של האיטרטור.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "איטרטור יודע להתקדם (`++it`), לאחזר את הערך (`*it`) ולהשוות (`==`). הסרת האיבר נעשית דרך המכל, `v.erase(it)`, ואינה פעולה של האיטרטור.\nהתשובה היא \"הסרת האיבר המוצבע\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: `++it`, `*it` and `it == it2` compile on a vector iterator; `it.erase()` does not (removal is done by the container, `v.erase(it)`). Agrees.",
    "contextId": "notes",
    "correctId": "b"

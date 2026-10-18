@@ -44,7 +44,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "הפונקציה `f` מקבלת `int&`, כלומר הפניה לערך שמאלי. `f(i)` תקין. `f(i+j)`, `f(5)` ו-`f(i + 1)` מעבירים ערכים זמניים (rvalue) שאי אפשר לקשור להפניה לא-const. שלוש שגיאות, ולכן התשובה היא יותר מ-2 (ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה `f` מקבלת `int&`, כלומר הפניה לערך שמאלי. `f(i)` תקין. `f(i+j)`, `f(5)` ו-`f(i + 1)` מעבירים ערכים זמניים (rvalue) שאי אפשר לקשור להפניה לא-const. שלוש שגיאות, ולכן התשובה היא יותר מ-2.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): errors on f(i+j), f(5), f(i + 1) -> 3."
   },
   {
@@ -78,7 +78,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "בפרמטרים של פונקציה, אחרי פרמטר עם ערך ברירת מחדל (`int y=3`) כל הפרמטרים הבאים חייבים גם הם לקבל ערך ברירת מחדל. כאן `int z` בלי ערך ברירת מחדל, ולכן ההגדרה עצמה שגויה והתכנית לא מתקמפלת (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בפרמטרים של פונקציה, אחרי פרמטר עם ערך ברירת מחדל (`int y=3`) כל הפרמטרים הבאים חייבים גם הם לקבל ערך ברירת מחדל. כאן `int z` בלי ערך ברירת מחדל, ולכן ההגדרה עצמה שגויה והתכנית לא מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): error 'missing default argument on parameter z'."
   },
   {
@@ -112,7 +112,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "למחלקה יש בנאי יחיד `A(int a, int b = 3)`, ולכן אין בנאי ברירת מחדל. `A a1;` שגוי. `A a2(2)` ו-`A a3(2,3)` תקינים. `A a4(2,3,4)` שגוי (יותר מדי ארגומנטים). `A a5=a3` ו-`a3 = a2` משתמשים בבנאי ההעתקה ובהשמה שנוצרו אוטומטית. שתי שגיאות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "למחלקה יש בנאי יחיד `A(int a, int b = 3)`, ולכן אין בנאי ברירת מחדל. `A a1;` שגוי. `A a2(2)` ו-`A a3(2,3)` תקינים. `A a4(2,3,4)` שגוי (יותר מדי ארגומנטים). `A a5=a3` ו-`a3 = a2` משתמשים בבנאי ההעתקה ובהשמה שנוצרו אוטומטית. שתי שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): errors on `A a1;` (no default constructor) and `A a4(2, 3, 4);` -> 2."
   },
   {
@@ -146,7 +146,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "יש שתי גרסאות של `f`, אחת רגילה ואחת `const`, ולכן הקריאה `a2.f()` על אובייקט קבוע בוחרת את הגרסה ה-`const`. `setX` אינה `const`, ולכן הקריאה `a2.setX(5)` על אובייקט קבוע שגויה. כל שאר השורות תקינות, כולל `A a3 = a2` (בנאי העתקה אוטומטי). שגיאה אחת (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "יש שתי גרסאות של `f`, אחת רגילה ואחת `const`, ולכן הקריאה `a2.f()` על אובייקט קבוע בוחרת את הגרסה ה-`const`. `setX` אינה `const`, ולכן הקריאה `a2.setX(5)` על אובייקט קבוע שגויה. כל שאר השורות תקינות, כולל `A a3 = a2` (בנאי העתקה אוטומטי). שגיאה אחת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): only `a2.setX(5);` fails (non-const member on a const object)."
   },
   {
@@ -180,7 +180,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "`f` מחזירה הפניה `A&` ו-`g` מחזירה מצביע `A*`. `a1.f(5).g(4)` תקין. `(&a1)->g(3).x` שגוי כי `g` מחזירה מצביע ויש להשתמש ב-`->`. `a1.f(2)->x` שגוי כי `f` מחזירה הפניה ויש להשתמש ב-`.`. `a1.f(2).x.g(2)` שגוי כי `x` הוא `int` ואין לו פונקציה `g`. `a1.g(3)->f(4)` תקין. שלוש שגיאות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f` מחזירה הפניה `A&` ו-`g` מחזירה מצביע `A*`. `a1.f(5).g(4)` תקין. `(&a1)->g(3).x` שגוי כי `g` מחזירה מצביע ויש להשתמש ב-`->`. `a1.f(2)->x` שגוי כי `f` מחזירה הפניה ויש להשתמש ב-`.`. `a1.f(2).x.g(2)` שגוי כי `x` הוא `int` ואין לו פונקציה `g`. `a1.g(3)->f(4)` תקין. שלוש שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): errors on `(&a1)->g(3).x`, `a1.f(2)->x` and `a1.f(2).x.g(2)` -> 3."
   },
   {
@@ -246,7 +246,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "`A a2=i;` תקין כי הבנאי `A(int)` אינו `explicit`. `i=a1` תקין כי יש אופרטור המרה `operator int()`. `i=(int) a1` תקין, וגם `a1=(A)i` תקין. אין שגיאות (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`A a2=i;` תקין כי הבנאי `A(int)` אינו `explicit`. `i=a1` תקין כי יש אופרטור המרה `operator int()`. `i=(int) a1` תקין, וגם `a1=(A)i` תקין. אין שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): no errors."
   },
   {
@@ -280,7 +280,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "הבנאי של `A` קורא ל-`B(x)` עם הפרמטר `x=7` (הפרמטר מסתיר את השדה), ולכן נבחר `B(int)` שמדפיס 2. אחר כך גוף הבנאי של `A` מדפיס 3, מציב `y=5` ו-`x=8`. הפונקציה `f` מדפיסה `x` ואז `y`: `85`. הפלט `2385` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הבנאי של `A` קורא ל-`B(x)` עם הפרמטר `x=7` (הפרמטר מסתיר את השדה), ולכן נבחר `B(int)` שמדפיס 2. אחר כך גוף הבנאי של `A` מדפיס 3, מציב `y=5` ו-`x=8`. הפונקציה `f` מדפיסה `x` ואז `y`: `85`. הפלט `2385`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): printed 2385."
   },
   {
@@ -314,7 +314,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "ב-`B` הירושה מ-`A` היא `private`, אבל `na` מוגן ב-`A`, ולכן `B::f` יכולה להחזיר אותו. ב-`C` הירושה מ-`B` היא `private`, ו-`nb` מוגן ב-`B` ולכן קריאתו תקינה. אבל `na` בתוך `B` הפך ל-`private` (בגלל הירושה הפרטית), ולכן `C` לא יכולה לגשת אליו. שגיאה אחת, `return na;` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ב-`B` הירושה מ-`A` היא `private`, אבל `na` מוגן ב-`A`, ולכן `B::f` יכולה להחזיר אותו. ב-`C` הירושה מ-`B` היא `private`, ו-`nb` מוגן ב-`B` ולכן קריאתו תקינה. אבל `na` בתוך `B` הפך ל-`private` (בגלל הירושה הפרטית), ולכן `C` לא יכולה לגשת אליו. שגיאה אחת, `return na;`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): only `return na;` in C::f fails (na became private in B)."
   },
   {
@@ -348,7 +348,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "ל-`B` אין אופרטור השמה משלה, ולכן הקומפיילר יוצר אחד שמעתיק כל שדה ל-`nb` ומפעיל את `A::operator=` על החלק של הבסיס. `A::operator=` מציב `na = a.na * 2` = 2*2 = 4. השדה `nb` מועתק ל-1. ההדפסה היא `14` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ל-`B` אין אופרטור השמה משלה, ולכן הקומפיילר יוצר אחד שמעתיק כל שדה ל-`nb` ומפעיל את `A::operator=` על החלק של הבסיס. `A::operator=` מציב `na = a.na * 2` = 2*2 = 4. השדה `nb` מועתק ל-1. ההדפסה היא `14`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): printed 14."
   },
   {
@@ -382,7 +382,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "הקוד מתקמפל. ב-`A` מוגדרת `f1` משלה, ולכן `object.f1()` אינה עמומה למרות ש-`Y` ו-`Z` מגדירות כל אחת `f1`. גם `Y::key` ו-`Z::key` מציינים במפורש איזה עותק של `key` נקרא (ל-`A` יש שני עותקים של `X`). הפלט `object.key = 13` ואחריו `f1 from A`. לכן אין צורך לתקן שגיאות (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הקוד מתקמפל. ב-`A` מוגדרת `f1` משלה, ולכן `object.f1()` אינה עמומה למרות ש-`Y` ו-`Z` מגדירות כל אחת `f1`. גם `Y::key` ו-`Z::key` מציינים במפורש איזה עותק של `key` נקרא (ל-`A` יש שני עותקים של `X`). הפלט `object.key = 13` ואחריו `f1 from A`. לכן אין צורך לתקן שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): the code compiles and prints `object.key = 13` and `f1 from A` (A::f1 hides the two inherited f1; Y::key and Z::key are named explicitly)."
   },
   {
@@ -416,7 +416,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "`ci = 13` שגוי כי `ci` הוא `const`. `i = 10` תקין. `*ip3 = 10` שגוי כי `ip3` מצביע ל-`const int`. שתי שגיאות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`ci = 13` שגוי כי `ci` הוא `const`. `i = 10` תקין. `*ip3 = 10` שגוי כי `ip3` מצביע ל-`const int`. שתי שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): `ci = 13;` and `*ip3 = 10;` fail -> 2."
   },
   {
@@ -482,7 +482,7 @@
    "official": false,
    "confidence": "med",
    "contextId": "notes",
-   "explanation": "הקוד בשלוש השורות הראשונות מקצה מערך עם `new[]` ולא משחרר אותו אף פעם (דליפת זיכרון). הווקטור בשלוש השורות האחרונות מנהל את הזיכרון בעצמו ומשחרר אותו כשהוא יוצא מהתחום, והוא גם יודע את גודלו. בהרצה נספר בלוק אחד שלא שוחרר בגרסה הראשונה ואפס בגרסה השנייה. לכן הקוד האחרון טוב יותר (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הקוד בשלוש השורות הראשונות מקצה מערך עם `new[]` ולא משחרר אותו אף פעם (דליפת זיכרון). הווקטור בשלוש השורות האחרונות מנהל את הזיכרון בעצמו ומשחרר אותו כשהוא יוצא מהתחום, והוא גם יודע את גודלו. בהרצה נספר בלוק אחד שלא שוחרר בגרסה הראשונה ואפס בגרסה השנייה. לכן הקוד האחרון טוב יותר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from reasoning plus a run (student sheet agrees): an allocation counter shows the raw `new int[12]` is never freed (1 live block after its scope) while the vector releases its memory (0). The printed question has no stem line. Design/style question, so confidence med."
   },
   {
@@ -516,7 +516,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "`A a1(5);` ו-`A a2;` תקינים (יש ערך ברירת מחדל `m = 0`). `A a3();` אינו הגדרת אובייקט אלא הצהרה על פונקציה בשם `a3` שמחזירה `A`, וזה תקין. אין שגיאות (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`A a1(5);` ו-`A a2;` תקינים (יש ערך ברירת מחדל `m = 0`). `A a3();` אינו הגדרת אובייקט אלא הצהרה על פונקציה בשם `a3` שמחזירה `A`, וזה תקין. אין שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): no errors (`A a3();` is a function declaration)."
   },
   {
@@ -550,7 +550,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "ההשמה `b = d` מבצעת חיתוך (slicing): `b` הוא אובייקט מטיפוס `B` שמקבל רק את חלק הבסיס של `d`, כולל `n = 10` (כי `D::setN(5)` הציבה `2*5`). הקריאה `b.getN()` על אובייקט מטיפוס `B` מפעילה את `B::getN` שמחזירה `n`, כלומר 10. הפלט `10` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ההשמה `b = d` מבצעת חיתוך (slicing): `b` הוא אובייקט מטיפוס `B` שמקבל רק את חלק הבסיס של `d`, כולל `n = 10` (כי `D::setN(5)` הציבה `2*5`). הקריאה `b.getN()` על אובייקט מטיפוס `B` מפעילה את `B::getN` שמחזירה `n`, כלומר 10. הפלט `10`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): printed 10 (slicing: b is a B holding n == 10)."
   },
   {
@@ -584,7 +584,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "הקריאה `f(i)` מתאימה לתבנית `f(T t)` עם `T=int`. `f(d)` מתאימה לאותה תבנית עם `T=double`, כלומר פונקציה אחרת. `f(p)` עם מצביע `int*` מתאימה טוב יותר לתבנית המתמחה `f(T* t)` עם `T=int`. בהרצה הודפסו שלוש חתימות שונות. שלוש הקריאות הן לשלוש פונקציות שונות וללא שגיאה (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הקריאה `f(i)` מתאימה לתבנית `f(T t)` עם `T=int`. `f(d)` מתאימה לאותה תבנית עם `T=double`, כלומר פונקציה אחרת. `f(p)` עם מצביע `int*` מתאימה טוב יותר לתבנית המתמחה `f(T* t)` עם `T=int`. בהרצה הודפסו שלוש חתימות שונות. שלוש הקריאות הן לשלוש פונקציות שונות וללא שגיאה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): compiles; the three calls instantiate f<int>(int), f<double>(double) and f<int>(int*) (three different functions)."
   },
   {
@@ -618,7 +618,7 @@
    "official": false,
    "confidence": "med",
    "contextId": "notes",
-   "explanation": "`strcat(s1.s_, s2.s_)` מדביק את `\"b\"` לתוך המחרוזת של `s1` (המאגר שלה מכיל רק מקום ל-`\"a\"`, גלישה של בית אחד שלא גורמת לקריסה בפועל) ומחזיר מצביע אליו. `temp` מצביע לאותה מחרוזת `\"ab\"`. ההדפסה של `p` ושל `temp` (דרך אופרטור ההמרה) נותנת `ab` פעמיים, כלומר `abab` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`strcat(s1.s_, s2.s_)` מדביק את `\"b\"` לתוך המחרוזת של `s1` (המאגר שלה מכיל רק מקום ל-`\"a\"`, גלישה של בית אחד שלא גורמת לקריסה בפועל) ומחזיר מצביע אליו. `temp` מצביע לאותה מחרוזת `\"ab\"`. ההדפסה של `p` ושל `temp` (דרך אופרטור ההמרה) נותנת `ab` פעמיים, כלומר `abab`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): printed abab. strcat appends into s1's 2-byte buffer (a one-byte heap overrun that does not crash in practice); both prints give the same string through the conversion operator."
   },
   {
@@ -652,7 +652,7 @@
    "official": false,
    "confidence": "high",
    "contextId": "notes",
-   "explanation": "`name = that.name;` שגוי כי אי אפשר להשים מערך למערך. `Record r1;` ו-`Record r3;` שגויות כי הוגדר בנאי העתקה ולכן לא נוצר בנאי ברירת מחדל. `Record r2 = r1` ו-`r3 = r2 = r1` תקינות מבחינת קומפילציה. שלוש שגיאות (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`name = that.name;` שגוי כי אי אפשר להשים מערך למערך. `Record r1;` ו-`Record r3;` שגויות כי הוגדר בנאי העתקה ולכן לא נוצר בנאי ברירת מחדל. `Record r2 = r1` ו-`r3 = r2 = r1` תקינות מבחינת קומפילציה. שלוש שגיאות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run (student sheet agrees): errors on `name = that.name;` (arrays are not assignable), `Record r1;` and `Record r3;` (no default constructor) -> 3."
   },
   {
@@ -686,7 +686,7 @@
    "official": false,
    "confidence": "med",
    "contextId": "notes",
-   "explanation": "הקוד מתקמפל: בנאי העתקה ואופרטור השמה נוצרים אוטומטית ולא נדרשים, ולכן א ו-ב שגויות. אבל `Base` לא מגדירה הורס וירטואלי, ולכן `delete bp` על אובייקט `Derived` מפעיל רק את `~Base` וההתנהגות אינה מוגדרת (בהרצה נדפס רק `B`). זו שגיאה עקרונית של המתכנת (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הקוד מתקמפל: בנאי העתקה ואופרטור השמה נוצרים אוטומטית ולא נדרשים, ולכן שתי התשובות על שגיאת קומפילציה שגויות. אבל `Base` לא מגדירה הורס וירטואלי, ולכן `delete bp` על אובייקט `Derived` מפעיל רק את `~Base` וההתנהגות אינה מוגדרת (בהרצה נדפס רק `B`). זו שגיאה עקרונית של המתכנת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Key from the clang++ run plus a trace (student sheet agrees): the program compiles (so a, b are wrong), but deleting a Derived through a Base* whose destructor is not virtual runs only ~Base (trace printed `B`): undefined behaviour, i.e. a conceptual error (c). Confidence med because 'other errors' is judged, not run."
   }
  ]

@@ -42,7 +42,7 @@ public:
         { id: "c", value: "`double operator Temp() const { return c; }`" },
         { id: "d", value: "`Temp operator double() const { return *this; }`" }],
       correctId: "a",
-      explanation: "כדי להמיר `Temp` ל-`double` כותבים `operator double()`, בלי טיפוס החזרה. עוד בנאי ממיר בכיוון ההפוך (אל `Temp`) ולכן לא עוזר. בשתי האפשרויות האחרונות יש טיפוס החזרה לפני המילה `operator`, וזה אסור באופרטור המרה.",
+      explanation: "כדי להמיר `Temp` ל-`double` כותבים `operator double()`, בלי טיפוס החזרה. עוד בנאי ממיר בכיוון ההפוך (אל `Temp`) ולכן לא עוזר. באפשרויות `double operator Temp() const { return c; }` ו-`Temp operator double() const { return *this; }` יש טיפוס החזרה לפני המילה `operator`, וזה אסור באופרטור המרה.",
       recap: "operator double() const — בלי טיפוס החזרה" },
     { id: "C06-Q3", question: "למחלקה `S` מוגדר `explicit operator bool() const`. `s` הוא אובייקט מטיפוס `S`. איזו שורה **לא** מתקמפלת?",
       options: [

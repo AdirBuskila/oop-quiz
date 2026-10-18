@@ -77,7 +77,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`operator+` מוגדרת כ-`friend` בשתי המחלקות, ולכן יש לה גישה לשדות הפרטיים `length` ו-`count`. החישוב הוא `10 + 5`, והפלט `Length: 15` (תשובה א). בקוד שהורץ התקבל בדיוק הפלט הזה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`operator+` מוגדרת כ-`friend` בשתי המחלקות, ולכן יש לה גישה לשדות הפרטיים `length` ו-`count`. החישוב הוא `10 + 5`, והפלט `Length: 15`. בקוד שהורץ התקבל בדיוק הפלט הזה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: `Length: 15`. The friend function reads the private fields of both classes.",
    "correctId": "a"
   },
@@ -111,7 +111,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`count` הוא משתנה סטטי משותף לכל האובייקטים: `c1` ו-`c2` מעלים אותו ל-2, ו-`c3` ל-3. ההורס של `Counter` לא מוגדר ולכן לא מקטין את `count`, ולכן אחרי `delete c3` הערך נשאר 3 (תשובה ב). בהרצה: `After delete, count is: 3`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`count` הוא משתנה סטטי משותף לכל האובייקטים: `c1` ו-`c2` מעלים אותו ל-2, ו-`c3` ל-3. ההורס של `Counter` לא מוגדר ולכן לא מקטין את `count`, ולכן אחרי `delete c3` הערך נשאר 3. בהרצה: `After delete, count is: 3`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: last line `After delete, count is: 3` (nothing decrements the static counter on delete).",
    "correctId": "b"
   },
@@ -145,7 +145,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`++a` מעלה את `a` ל-6 ומחזירה הפניה אליו. `b++` מחזיר עותק של הערך הישן 3, ו-`b` הופך ל-4. `+=` מוסיף 3 ל-`a` (9) ומחזיר הפניה אל `a`. האופרטור הפוסטפיקסי האחרון `++` מעלה את `a` ל-10. הפלט `Value: 10` ו-`Value: 4` (תשובה א), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`++a` מעלה את `a` ל-6 ומחזירה הפניה אליו. `b++` מחזיר עותק של הערך הישן 3, ו-`b` הופך ל-4. `+=` מוסיף 3 ל-`a` (9) ומחזיר הפניה אל `a`. האופרטור הפוסטפיקסי האחרון `++` מעלה את `a` ל-10. הפלט `Value: 10` ו-`Value: 4`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: `Value: 10` / `Value: 4`. ++a gives 6, b++ yields a copy of 3 (b becomes 4), += gives 9, the outer postfix ++ makes a 10.",
    "correctId": "a"
   },
@@ -210,7 +210,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הווקטור משתנה כך: `1.1 2.2 3.3`, אחרי `insert` בתחילה `0 1.1 2.2 3.3`, אחרי `erase` של האיבר השני `0 2.2 3.3`, ואחרי ההשמה לאיבר האחרון `0 2.2 9.9`. הלולאה עוברת באיטרטור הפוך ולכן מדפיסה `9.9 2.2 0` (תשובה ב). בהרצה: `9.9 2.2 0`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הווקטור משתנה כך: `1.1 2.2 3.3`, אחרי `insert` בתחילה `0 1.1 2.2 3.3`, אחרי `erase` של האיבר השני `0 2.2 3.3`, ואחרי ההשמה לאיבר האחרון `0 2.2 9.9`. הלולאה עוברת באיטרטור הפוך ולכן מדפיסה `9.9 2.2 0`. בהרצה: `9.9 2.2 0`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: `9.9 2.2 0`. The vector goes 1.1 2.2 3.3 -> 0 1.1 2.2 3.3 -> 0 2.2 3.3 -> 0 2.2 9.9, printed in reverse. Grader tick agrees.",
    "correctId": "b"
   },
@@ -244,7 +244,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "ב-`MyCollection<SomeClass>` הבנאי מבצע `new T[capacity]`, וזה דורש בנאי ברירת מחדל של `T`. ל-`SomeClass` יש רק בנאי שמקבל `int`, ולכן הקומפיילר מדווח שגיאה (`no matching constructor`). התכנית אינה מתקמפלת (תשובה ד), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ב-`MyCollection<SomeClass>` הבנאי מבצע `new T[capacity]`, וזה דורש בנאי ברירת מחדל של `T`. ל-`SomeClass` יש רק בנאי שמקבל `int`, ולכן הקומפיילר מדווח שגיאה (`no matching constructor`). התכנית אינה מתקמפלת, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++: no matching constructor for `new T[capacity]` with T=SomeClass (SomeClass has no default constructor), reported at both `new T[...]` lines. Grader circled d.",
    "correctId": "d"
   },
@@ -278,7 +278,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`print` ב-`Base` אינה וירטואלית, ולכן הקריאה `b.print()` דרך הפניה ל-`Base` מפעילה תמיד את `Base::print` (קישור סטטי). הבנייה היא בסדר `Base` ואז `Derived`, וההריסה בסדר הפוך: `Derived` ואז `Base`. תשובה ד, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`print` ב-`Base` אינה וירטואלית, ולכן הקריאה `b.print()` דרך הפניה ל-`Base` מפעילה תמיד את `Base::print` (קישור סטטי). הבנייה היא בסדר `Base` ואז `Derived`, וההריסה בסדר הפוך: `Derived` ואז `Base`. התשובה היא הפלט עם `Base::print` ואחריו `Derived destructor` ו-`Base destructor`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: Base constructor, Derived constructor, Base::print (print is not virtual), Derived destructor, Base destructor. Grader circled d.",
    "correctId": "d"
   },
@@ -312,7 +312,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "הבסיס הווירטואלי `A` נבנה פעם אחת ולפני כולם: `A`, ואחריו `B`, `C`, `D`. `speak` וירטואלית ולכן הקריאה דרך `A*` מפעילה את `D::speak` (ל-`D` יש דריסה, מה שפותר את העמימות בין `B` ל-`C`). `A` יש הורס וירטואלי, ולכן `delete a` מפעיל את שרשרת ההריסה המלאה בסדר הפוך: `D C B A`. תשובה א, וכך גם בהרצה. בקוד המודפס יש גרש במקום מירכאות ב-`C::speak`, וזו נראית טעות דפוס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הבסיס הווירטואלי `A` נבנה פעם אחת ולפני כולם: `A`, ואחריו `B`, `C`, `D`. `speak` וירטואלית ולכן הקריאה דרך `A*` מפעילה את `D::speak` (ל-`D` יש דריסה, מה שפותר את העמימות בין `B` ל-`C`). `A` יש הורס וירטואלי, ולכן `delete a` מפעיל את שרשרת ההריסה המלאה בסדר הפוך: `D C B A`. התשובה היא הפלט עם `D speaks` ושרשרת ההריסה המלאה `D C B A`, וכך גם בהרצה. בקוד המודפס יש גרש במקום מירכאות ב-`C::speak`, וזו נראית טעות דפוס.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run (typo corrected): the virtual base A is built once and first, then B, C, D; destruction is the exact reverse. The printed paper has `\"C speaks\\n'  }` (a stray apostrophe and no semicolon) in C::speak, read as a typo; the grader ticked a.",
    "correctId": "a"
   },
@@ -346,7 +346,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "בקריאה `func(3.14)` הארגומנט הוא `double`, והתבנית מתאימה בדיוק עם `T=double`, ולכן היא עדיפה על ההמרה ל-`int`. ב-`func(int(3.14))` הארגומנט הוא `int`, ושתי הפונקציות מתאימות בדיוק, ופונקציה רגילה עדיפה על תבנית. הפלט `Generic template` ואחריו `Non-template overload` (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בקריאה `func(3.14)` הארגומנט הוא `double`, והתבנית מתאימה בדיוק עם `T=double`, ולכן היא עדיפה על ההמרה ל-`int`. ב-`func(int(3.14))` הארגומנט הוא `int`, ושתי הפונקציות מתאימות בדיוק, ופונקציה רגילה עדיפה על תבנית. הפלט `Generic template` ואחריו `Non-template overload`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: `Generic template` then `Non-template overload`. func(3.14) deduces T=double (exact match beats the int conversion); func(int(...)) prefers the non-template.",
    "correctId": "b"
   },
@@ -380,7 +380,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "פונקציה לא וירטואלית נקבעת בזמן קומפילציה לפי טיפוס המצביע, כלומר המחלקה הבסיסית. לכן יופעל המימוש של המחלקה הבסיסית (תשובה ב), גם אם המצביע מצביע בפועל על אובייקט נגזר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "פונקציה לא וירטואלית נקבעת בזמן קומפילציה לפי טיפוס המצביע, כלומר המחלקה הבסיסית. לכן יופעל המימוש של המחלקה הבסיסית, גם אם המצביע מצביע בפועל על אובייקט נגזר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Concept question. Key from the grader's tick (b); static binding.",
    "correctId": "b"
   },
@@ -414,7 +414,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "high",
-   "explanation": "רק משפט 3 נכון. משפט 1 שגוי: לפונקציה וירטואלית טהורה אפשר לתת גוף מחוץ למחלקה. משפט 2 שגוי: המחלקה היורשת יכולה להישאר אבסטרקטית ולא לממש. משפט 3 נכון: בנאי אינו יכול להיות וירטואלי בכלל. משפט 4 שגוי: הורס יכול להיות וירטואלי טהור, ובלבד שמוגדר לו גוף. סך הכול משפט אחד (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "רק משפט 3 נכון. משפט 1 שגוי: לפונקציה וירטואלית טהורה אפשר לתת גוף מחוץ למחלקה. משפט 2 שגוי: המחלקה היורשת יכולה להישאר אבסטרקטית ולא לממש. משפט 3 נכון: בנאי אינו יכול להיות וירטואלי בכלל. משפט 4 שגוי: הורס יכול להיות וירטואלי טהור, ובלבד שמוגדר לו גוף. סך הכול משפט אחד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Concept question. Key from the grader's circle (b = 1 true statement): only statement 3 is true (a pure virtual may have a body, a derived class may stay abstract, a destructor can be pure virtual if defined). The numbering 1-4 is added; the paper uses bullets.",
    "correctId": "b"
   },
@@ -448,7 +448,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "כשמחלקה יורשת פעמיים מאותו בסיס דרך שתי מחלקות ביניים נוצרים בה שני עותקים של הבסיס (בעיית היהלום). ירושה וירטואלית מבטיחה עותק אחד משותף. תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "כשמחלקה יורשת פעמיים מאותו בסיס דרך שתי מחלקות ביניים נוצרים בה שני עותקים של הבסיס (בעיית היהלום). ירושה וירטואלית מבטיחה עותק אחד משותף. תשובה \"בעית היהלום/מעוין (Diamond problem).\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Concept question. Key from the grader's tick (b).",
    "correctId": "b"
   },
@@ -482,7 +482,7 @@
    "answerSource": "corrected-key",
    "official": false,
    "confidence": "high",
-   "explanation": "קישור מתודות בזמן ריצה (דינמי) מתבצע באמצעות פונקציות וירטואליות. תבניות ו-`inline` נפתרות בזמן קומפילציה, ו-`friend` קשור להרשאות גישה בלבד. תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "קישור מתודות בזמן ריצה (דינמי) מתבצע באמצעות פונקציות וירטואליות. תבניות ו-`inline` נפתרות בזמן קומפילציה, ו-`friend` קשור להרשאות גישה בלבד. תשובה \"פונקציות וירטואליות.\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Concept question. Key from the grader's circle (c).",
    "correctId": "c"
   },
@@ -516,7 +516,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הפלט צריך להיות 1. `cout<<a2+a1` מפעיל את `operator+` החבר ומדפיס `-4`. `cout<<+a2` מפעיל את `operator+` האונרי הגלובלי: `++counter` נותן 2 ועם `a.value` שהוא -1 מתקבל 1. `cout<<a1 + -3` מפעיל את `operator+(int)` ונותן `-6`. תשובה ב, וכך גם בהרצות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפלט צריך להיות 1. `cout<<a2+a1` מפעיל את `operator+` החבר ומדפיס `-4`. `cout<<+a2` מפעיל את `operator+` האונרי הגלובלי: `++counter` נותן 2 ועם `a.value` שהוא -1 מתקבל 1. `cout<<a1 + -3` מפעיל את `operator+(int)` ונותן `-6`. תשובה `cout<<+a2;`, וכך גם בהרצות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ runs: `a2+a1` prints -4, `+a2` prints 1 (global unary +: ++counter=2 plus -1), `a1 + -3` prints -6. Grader tick agrees.",
    "correctId": "b"
   },
@@ -550,7 +550,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הבנאי `A(A other)` מקבל את הארגומנט לפי ערך, וזה אסור: קבלת פרמטר מסוג המחלקה עצמה בבנאי העתקה הייתה גורמת לרקורסיה אינסופית, ולכן הקומפיילר דוחה זאת (`copy constructor must pass its first argument by reference`). התכנית אינה מתקמפלת (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הבנאי `A(A other)` מקבל את הארגומנט לפי ערך, וזה אסור: קבלת פרמטר מסוג המחלקה עצמה בבנאי העתקה הייתה גורמת לרקורסיה אינסופית, ולכן הקומפיילר דוחה זאת (`copy constructor must pass its first argument by reference`). התכנית אינה מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++: error `copy constructor must pass its first argument by reference` (ill-formed in the standard). The grader marked the examinee's a wrong and circled d.",
    "correctId": "d"
   },
@@ -584,7 +584,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "`num` מועבר לפי ערך, ולכן ההפניה שמוחזרת מצביעה על העותק המקומי של הפונקציה ולא על `i`. ההשמה `= 7` לא משנה את `i`, והוא נשאר 10 (תשובה ב). בהרצה (גם עם אופטימיזציה) מודפס `10`. ההפניה תלויה (dangling), וזו סיבה שהתשובה נשארת ברמת ביטחון בינונית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`num` מועבר לפי ערך, ולכן ההפניה שמוחזרת מצביעה על העותק המקומי של הפונקציה ולא על `i`. ההשמה `= 7` לא משנה את `i`, והוא נשאר 10. בהרצה (גם עם אופטימיזציה) מודפס `10`. ההפניה תלויה (dangling), וזו סיבה שהתשובה נשארת ברמת ביטחון בינונית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run (-O0 and -O2): 10. The parameter is passed by value, so the returned reference never aliases i (it dangles into the callee's copy; i itself is never written). Grader tick agrees.",
    "correctId": "b"
   }

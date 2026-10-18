@@ -2508,10 +2508,10 @@ window.COURSES = {
        }
       ],
       "correctId": "a",
-      "explanation": "רק הורס וירטואלי באב גורם ל-`delete` דרך מצביע לאב לבחור את ההורס של הסוג האמיתי. בנאי אי אפשר להצהיר כ-`virtual` (שגיאת קומפילציה), ולכן ב ו-ד אינן אפשריות. מחיקת ההורס של `D` לא משנה כלום: ההורס של `B` נשאר לא וירטואלי.",
+      "explanation": "רק הורס וירטואלי באב גורם ל-`delete` דרך מצביע לאב לבחור את ההורס של הסוג האמיתי. בנאי אי אפשר להצהיר כ-`virtual` (שגיאת קומפילציה), ולכן ההצעות להוסיף `virtual` לבנאי של `D` או לבנאי של `B` אינן אפשריות. מחיקת ההורס של `D` לא משנה כלום: ההורס של `B` נשאר לא וירטואלי.",
       "recap": "מוסיפים virtual להורס של האב. בנאי לא יכול להיות וירטואלי",
       "questionHtml": "ההורס של <code class=\"tok\" dir=\"ltr\">B</code> לא וירטואלי, ובתכנית נכתב <code class=\"tok\" dir=\"ltr\">B* p = new D; delete p;</code>. איזה שינוי תקין מבטיח שבזמן <code class=\"tok\" dir=\"ltr\">delete p</code> יופעל גם ההורס של <code class=\"tok\" dir=\"ltr\">D</code>?",
-      "explanationHtml": "רק הורס וירטואלי באב גורם ל-<code class=\"tok\" dir=\"ltr\">delete</code> דרך מצביע לאב לבחור את ההורס של הסוג האמיתי. בנאי אי אפשר להצהיר כ-<code class=\"tok\" dir=\"ltr\">virtual</code> (שגיאת קומפילציה), ולכן ב ו-ד אינן אפשריות. מחיקת ההורס של <code class=\"tok\" dir=\"ltr\">D</code> לא משנה כלום: ההורס של <code class=\"tok\" dir=\"ltr\">B</code> נשאר לא וירטואלי.",
+      "explanationHtml": "רק הורס וירטואלי באב גורם ל-<code class=\"tok\" dir=\"ltr\">delete</code> דרך מצביע לאב לבחור את ההורס של הסוג האמיתי. בנאי אי אפשר להצהיר כ-<code class=\"tok\" dir=\"ltr\">virtual</code> (שגיאת קומפילציה), ולכן ההצעות להוסיף <code class=\"tok\" dir=\"ltr\">virtual</code> לבנאי של <code class=\"tok\" dir=\"ltr\">D</code> או לבנאי של <code class=\"tok\" dir=\"ltr\">B</code> אינן אפשריות. מחיקת ההורס של <code class=\"tok\" dir=\"ltr\">D</code> לא משנה כלום: ההורס של <code class=\"tok\" dir=\"ltr\">B</code> נשאר לא וירטואלי.",
       "recapHtml": "מוסיפים virtual להורס של האב. בנאי לא יכול להיות וירטואלי"
      },
      {
@@ -2944,10 +2944,10 @@ window.COURSES = {
        }
       ],
       "correctId": "a",
-      "explanation": "הפונקציה חיצונית ולכן אינה רואה את `w` הפרטי. כדי שתתקמפל צריך להצהיר עליה כ-`friend` בתוך `Box`, או לגשת לערך דרך פונקציה ציבורית. האפשרות האחרונה שגויה: `==` יכול להיות חיצוני. רק `=`, `[]`, `()` ו-`->` חייבים להיות חברים.",
+      "explanation": "הפונקציה חיצונית ולכן אינה רואה את `w` הפרטי. כדי שתתקמפל צריך להצהיר עליה כ-`friend` בתוך `Box`, או לגשת לערך דרך פונקציה ציבורית. האפשרות \"שגיאת קומפילציה: אופרטור `==` חייב להיות פונקציה חברה\" שגויה: `==` יכול להיות חיצוני. רק `=`, `[]`, `()` ו-`->` חייבים להיות חברים.",
       "recap": "פונקציה חיצונית בלי friend לא ניגשת לשדות פרטיים",
       "questionHtml": "מה קורה בתכנית הבאה?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>class Box {\n    int w;\npublic:\n    Box(int x) : w(x) {}\n};\nbool operator==(const Box&amp; a, const Box&amp; b) { return a.w == b.w; }\nint main() {\n    Box p(1), q(1);\n    cout &lt;&lt; (p == q);\n}</code></pre>",
-      "explanationHtml": "הפונקציה חיצונית ולכן אינה רואה את <code class=\"tok\" dir=\"ltr\">w</code> הפרטי. כדי שתתקמפל צריך להצהיר עליה כ-<code class=\"tok\" dir=\"ltr\">friend</code> בתוך <code class=\"tok\" dir=\"ltr\">Box</code>, או לגשת לערך דרך פונקציה ציבורית. האפשרות האחרונה שגויה: <code class=\"tok\" dir=\"ltr\">==</code> יכול להיות חיצוני. רק <code class=\"tok\" dir=\"ltr\">=</code>, <code class=\"tok\" dir=\"ltr\">[]</code>, <code class=\"tok\" dir=\"ltr\">()</code> ו-<code class=\"tok\" dir=\"ltr\">-&gt;</code> חייבים להיות חברים.",
+      "explanationHtml": "הפונקציה חיצונית ולכן אינה רואה את <code class=\"tok\" dir=\"ltr\">w</code> הפרטי. כדי שתתקמפל צריך להצהיר עליה כ-<code class=\"tok\" dir=\"ltr\">friend</code> בתוך <code class=\"tok\" dir=\"ltr\">Box</code>, או לגשת לערך דרך פונקציה ציבורית. האפשרות \"שגיאת קומפילציה: אופרטור <code class=\"tok\" dir=\"ltr\">==</code> חייב להיות פונקציה חברה\" שגויה: <code class=\"tok\" dir=\"ltr\">==</code> יכול להיות חיצוני. רק <code class=\"tok\" dir=\"ltr\">=</code>, <code class=\"tok\" dir=\"ltr\">[]</code>, <code class=\"tok\" dir=\"ltr\">()</code> ו-<code class=\"tok\" dir=\"ltr\">-&gt;</code> חייבים להיות חברים.",
       "recapHtml": "פונקציה חיצונית בלי friend לא ניגשת לשדות פרטיים"
      },
      {
@@ -3066,10 +3066,10 @@ window.COURSES = {
        }
       ],
       "correctId": "a",
-      "explanation": "`cout << p` מדפיס `(1,2)` ומחזיר את `cout`, ואז `<< q` מדפיס `(3,4)` מיד אחריו, בלי רווח (האופרטור לא מוסיף רווחים). לכן `(1,2)(3,4)`. הסדר הפוך הוא טעות בכיוון השרשור. התשובה עם הרווח מוסיפה רווח שאף שורה לא מדפיסה. התשובה האחרונה מניחה שהשרשור נקטע.",
+      "explanation": "`cout << p` מדפיס `(1,2)` ומחזיר את `cout`, ואז `<< q` מדפיס `(3,4)` מיד אחריו, בלי רווח (האופרטור לא מוסיף רווחים). לכן `(1,2)(3,4)`. הסדר הפוך הוא טעות בכיוון השרשור. התשובה עם הרווח מוסיפה רווח שאף שורה לא מדפיסה. התשובה `(1,2)` מניחה שהשרשור נקטע.",
       "recap": "cout << p << q: ההדפסה הראשונה מחזירה את cout",
       "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct P { int a, b; };\nostream&amp; operator&lt;&lt;(ostream&amp; os, const P&amp; p) {\n    return os &lt;&lt; \"(\" &lt;&lt; p.a &lt;&lt; \",\" &lt;&lt; p.b &lt;&lt; \")\";\n}\nint main() {\n    P p{1, 2}, q{3, 4};\n    cout &lt;&lt; p &lt;&lt; q &lt;&lt; endl;\n}</code></pre>",
-      "explanationHtml": "<code class=\"tok\" dir=\"ltr\">cout &lt;&lt; p</code> מדפיס <code class=\"tok\" dir=\"ltr\">(1,2)</code> ומחזיר את <code class=\"tok\" dir=\"ltr\">cout</code>, ואז <code class=\"tok\" dir=\"ltr\">&lt;&lt; q</code> מדפיס <code class=\"tok\" dir=\"ltr\">(3,4)</code> מיד אחריו, בלי רווח (האופרטור לא מוסיף רווחים). לכן <code class=\"tok\" dir=\"ltr\">(1,2)(3,4)</code>. הסדר הפוך הוא טעות בכיוון השרשור. התשובה עם הרווח מוסיפה רווח שאף שורה לא מדפיסה. התשובה האחרונה מניחה שהשרשור נקטע.",
+      "explanationHtml": "<code class=\"tok\" dir=\"ltr\">cout &lt;&lt; p</code> מדפיס <code class=\"tok\" dir=\"ltr\">(1,2)</code> ומחזיר את <code class=\"tok\" dir=\"ltr\">cout</code>, ואז <code class=\"tok\" dir=\"ltr\">&lt;&lt; q</code> מדפיס <code class=\"tok\" dir=\"ltr\">(3,4)</code> מיד אחריו, בלי רווח (האופרטור לא מוסיף רווחים). לכן <code class=\"tok\" dir=\"ltr\">(1,2)(3,4)</code>. הסדר הפוך הוא טעות בכיוון השרשור. התשובה עם הרווח מוסיפה רווח שאף שורה לא מדפיסה. התשובה <code class=\"tok\" dir=\"ltr\">(1,2)</code> מניחה שהשרשור נקטע.",
       "recapHtml": "cout &lt;&lt; p &lt;&lt; q: ההדפסה הראשונה מחזירה את cout"
      },
      {
@@ -3102,10 +3102,10 @@ window.COURSES = {
        }
       ],
       "correctId": "a",
-      "explanation": "רק הגרסה החיצונית שמחזירה `ostream&` מאפשרת שרשור: התוצאה של `cout << a` היא `cout`, והיא האופרנד השמאלי של `<< b`. עם `void` ההדפסה השנייה לא מתקמפלת. הגרסה החברה מתאימה ל-`a << cout` ולא ל-`cout << a`. הגרסה האחרונה מעבירה ומחזירה את הזרם לפי ערך, וזרם אי אפשר להעתיק.",
+      "explanation": "רק הגרסה החיצונית שמחזירה `ostream&` מאפשרת שרשור: התוצאה של `cout << a` היא `cout`, והיא האופרנד השמאלי של `<< b`. עם `void` ההדפסה השנייה לא מתקמפלת. הגרסה החברה מתאימה ל-`a << cout` ולא ל-`cout << a`. הגרסה `ostream operator<<(ostream os, const X& x)` מעבירה ומחזירה את הזרם לפי ערך, וזרם אי אפשר להעתיק.",
       "recap": "חיצוני, ostream& בפרמטר ובהחזרה",
       "questionHtml": "<code class=\"tok\" dir=\"ltr\">a</code> ו-<code class=\"tok\" dir=\"ltr\">b</code> הם אובייקטים מטיפוס <code class=\"tok\" dir=\"ltr\">X</code>. איזו חתימה של <code class=\"tok\" dir=\"ltr\">operator&lt;&lt;</code> (כפונקציה בעלת גוף תקין) גורמת לשורה <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a &lt;&lt; b;</code> להתקמפל?",
-      "explanationHtml": "רק הגרסה החיצונית שמחזירה <code class=\"tok\" dir=\"ltr\">ostream&amp;</code> מאפשרת שרשור: התוצאה של <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a</code> היא <code class=\"tok\" dir=\"ltr\">cout</code>, והיא האופרנד השמאלי של <code class=\"tok\" dir=\"ltr\">&lt;&lt; b</code>. עם <code class=\"tok\" dir=\"ltr\">void</code> ההדפסה השנייה לא מתקמפלת. הגרסה החברה מתאימה ל-<code class=\"tok\" dir=\"ltr\">a &lt;&lt; cout</code> ולא ל-<code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a</code>. הגרסה האחרונה מעבירה ומחזירה את הזרם לפי ערך, וזרם אי אפשר להעתיק.",
+      "explanationHtml": "רק הגרסה החיצונית שמחזירה <code class=\"tok\" dir=\"ltr\">ostream&amp;</code> מאפשרת שרשור: התוצאה של <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a</code> היא <code class=\"tok\" dir=\"ltr\">cout</code>, והיא האופרנד השמאלי של <code class=\"tok\" dir=\"ltr\">&lt;&lt; b</code>. עם <code class=\"tok\" dir=\"ltr\">void</code> ההדפסה השנייה לא מתקמפלת. הגרסה החברה מתאימה ל-<code class=\"tok\" dir=\"ltr\">a &lt;&lt; cout</code> ולא ל-<code class=\"tok\" dir=\"ltr\">cout &lt;&lt; a</code>. הגרסה <code class=\"tok\" dir=\"ltr\">ostream operator&lt;&lt;(ostream os, const X&amp; x)</code> מעבירה ומחזירה את הזרם לפי ערך, וזרם אי אפשר להעתיק.",
       "recapHtml": "חיצוני, ostream&amp; בפרמטר ובהחזרה"
      },
      {
@@ -3684,10 +3684,10 @@ window.COURSES = {
        }
       ],
       "correctId": "a",
-      "explanation": "כדי להמיר `Temp` ל-`double` כותבים `operator double()`, בלי טיפוס החזרה. עוד בנאי ממיר בכיוון ההפוך (אל `Temp`) ולכן לא עוזר. בשתי האפשרויות האחרונות יש טיפוס החזרה לפני המילה `operator`, וזה אסור באופרטור המרה.",
+      "explanation": "כדי להמיר `Temp` ל-`double` כותבים `operator double()`, בלי טיפוס החזרה. עוד בנאי ממיר בכיוון ההפוך (אל `Temp`) ולכן לא עוזר. באפשרויות `double operator Temp() const { return c; }` ו-`Temp operator double() const { return *this; }` יש טיפוס החזרה לפני המילה `operator`, וזה אסור באופרטור המרה.",
       "recap": "operator double() const — בלי טיפוס החזרה",
       "questionHtml": "במחלקה <code class=\"tok\" dir=\"ltr\">Temp</code> יש בנאי <code class=\"tok\" dir=\"ltr\">Temp(double)</code> ושדה פרטי <code class=\"tok\" dir=\"ltr\">double c</code>. מה צריך להוסיף למחלקה כדי שהשורה <code class=\"tok\" dir=\"ltr\">Temp t(3); double d = t;</code> תתקמפל?",
-      "explanationHtml": "כדי להמיר <code class=\"tok\" dir=\"ltr\">Temp</code> ל-<code class=\"tok\" dir=\"ltr\">double</code> כותבים <code class=\"tok\" dir=\"ltr\">operator double()</code>, בלי טיפוס החזרה. עוד בנאי ממיר בכיוון ההפוך (אל <code class=\"tok\" dir=\"ltr\">Temp</code>) ולכן לא עוזר. בשתי האפשרויות האחרונות יש טיפוס החזרה לפני המילה <code class=\"tok\" dir=\"ltr\">operator</code>, וזה אסור באופרטור המרה.",
+      "explanationHtml": "כדי להמיר <code class=\"tok\" dir=\"ltr\">Temp</code> ל-<code class=\"tok\" dir=\"ltr\">double</code> כותבים <code class=\"tok\" dir=\"ltr\">operator double()</code>, בלי טיפוס החזרה. עוד בנאי ממיר בכיוון ההפוך (אל <code class=\"tok\" dir=\"ltr\">Temp</code>) ולכן לא עוזר. באפשרויות <code class=\"tok\" dir=\"ltr\">double operator Temp() const { return c; }</code> ו-<code class=\"tok\" dir=\"ltr\">Temp operator double() const { return *this; }</code> יש טיפוס החזרה לפני המילה <code class=\"tok\" dir=\"ltr\">operator</code>, וזה אסור באופרטור המרה.",
       "recapHtml": "operator double() const — בלי טיפוס החזרה"
      },
      {

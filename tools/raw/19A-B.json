@@ -36,7 +36,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שתי הקריאות: `f(x,'x')` מתאימה במדויק ל-`f(int&, char)` (הפניה ל-`x`), שמעלה את `x` ל-5 ומחזירה אותו. `f('x',x)` מתאימה במדויק ל-`f(char, int)`, שמחזירה את `i++` כלומר 5 (הערך לפני ההגדלה).\nהפלט הוא `55` (תשובה ד). `45` ו-`44` מניחים שאחת הקריאות נבחרת אחרת, והתכנית כן עוברת קומפילציה כי אין עמימות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שתי הקריאות: `f(x,'x')` מתאימה במדויק ל-`f(int&, char)` (הפניה ל-`x`), שמעלה את `x` ל-5 ומחזירה אותו. `f('x',x)` מתאימה במדויק ל-`f(char, int)`, שמחזירה את `i++` כלומר 5 (הערך לפני ההגדלה).\nהפלט הוא `55`. `45` ו-`44` מניחים שאחת הקריאות נבחרת אחרת, והתכנית כן עוברת קומפילציה כי אין עמימות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run printed 55. Agrees."
   },
   {
@@ -69,7 +69,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בקוד כתוב `funcC()` (עם c נוסף) ואילו הפונקציה מוגדרת בשם `funC`. השם `funcC` לא מוכר, ולכן שגיאת קומפילציה (תשובה א). גם אם מתקנים את שגיאת ההקלדה, הקריאה `funC()` עמומה בין `funC(int i=10)` לבין `funC()`, ולכן הקוד לא מתקמפל בכל מקרה. הפלטים `89`, `88` ו-`99` מניחים שהתכנית מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בקוד כתוב `funcC()` (עם c נוסף) ואילו הפונקציה מוגדרת בשם `funC`. השם `funcC` לא מוכר, ולכן שגיאת קומפילציה. גם אם מתקנים את שגיאת ההקלדה, הקריאה `funC()` עמומה בין `funC(int i=10)` לבין `funC()`, ולכן הקוד לא מתקמפל בכל מקרה. הפלטים `89`, `88` ו-`99` מניחים שהתכנית מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++: compile error (funcC undeclared). With the typo fixed the call funC() is still ambiguous (also a compile error). Agrees."
   },
   {
@@ -102,7 +102,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הקריאה `f(i, j)` עם שני `int` דורשת המרה אחת בכל אחת משתי ההעמסות: בהעמסה הראשונה `j` הופך ל-`double`, בשנייה `i` הופך ל-`double`. אף העמסה לא טובה יותר בשני הארגומנטים, ולכן הקריאה עמומה (ambiguous) והתכנית לא מתקמפלת (תשובה ד). `12`, `21` ו-`1221` מניחים שנבחרה העמסה אחת או ששתיהן רצות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הקריאה `f(i, j)` עם שני `int` דורשת המרה אחת בכל אחת משתי ההעמסות: בהעמסה הראשונה `j` הופך ל-`double`, בשנייה `i` הופך ל-`double`. אף העמסה לא טובה יותר בשני הארגומנטים, ולכן הקריאה עמומה (ambiguous) והתכנית לא מתקמפלת. `12`, `21` ו-`1221` מניחים שנבחרה העמסה אחת או ששתיהן רצות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++: call to 'f' is ambiguous. Agrees."
   },
   {
@@ -135,7 +135,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`f` מחזירה הפניה ל-`n`, ו-`j` הוא כינוי ל-`n` של `x1`. הפעולה `j += 2` משנה את `n` ל-7, ולכן גם `j` וגם `x1.f()` מציגים 7. הפלט הוא `77` (תשובה ב). `57` ו-`75` מניחים ש-`j` הוא עותק ולא הפניה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f` מחזירה הפניה ל-`n`, ו-`j` הוא כינוי ל-`n` של `x1`. הפעולה `j += 2` משנה את `n` ל-7, ולכן גם `j` וגם `x1.f()` מציגים 7. הפלט הוא `77`. `57` ו-`75` מניחים ש-`j` הוא עותק ולא הפניה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run printed 77. Agrees."
   },
   {
@@ -168,7 +168,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הפונקציה `g` מקבלת `A` לפי ערך, ולכן `b` מועתק ל-`A` ונחתך (slicing): נשאר אובייקט מטיפוס `A` בלבד. הקריאה `a.f()` על אובייקט (לא על הפניה או מצביע) נפתרת לפי הטיפוס `A`, ולכן מודפס `A` (תשובה א). הדפסת `B` הייתה קורית רק אם `g` הייתה מקבלת הפניה או מצביע.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה `g` מקבלת `A` לפי ערך, ולכן `b` מועתק ל-`A` ונחתך (slicing): נשאר אובייקט מטיפוס `A` בלבד. הקריאה `a.f()` על אובייקט (לא על הפניה או מצביע) נפתרת לפי הטיפוס `A`, ולכן מודפס `A`. הדפסת `B` הייתה קורית רק אם `g` הייתה מקבלת הפניה או מצביע.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run printed A (slicing). Agrees."
   },
   {
@@ -235,7 +235,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בפונקציה חברה שמוגדרת `const`, `this` הוא מצביע לאובייקט קבוע: `const A*`. לכן התשובה ד. `A*` הוא הטיפוס של `this` בפונקציה שאינה `const`, `this` הוא מצביע ולא הפניה (ג שגויה), ו-`A` לבדו אינו מצביע.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בפונקציה חברה שמוגדרת `const`, `this` הוא מצביע לאובייקט קבוע: `const A*`. לכן התשובה `const A*`. `A*` הוא הטיפוס של `this` בפונקציה שאינה `const`, `this` הוא מצביע ולא הפניה (התשובה `const A&` שגויה), ו-`A` לבדו אינו מצביע.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ static_assert on decltype(this) inside a const member: const A* accepted, A*, A& and A rejected. Agrees."
   },
   {
@@ -268,7 +268,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "לכל מופע של התבנית (`X<0>`, `X<1>`) יש משתנה סטטי `d` נפרד. `a` ו-`b` הם מטיפוס `X<0>` ולכן חולקים את אותו `d`, שגדל ל-2. `c` מטיפוס `X<1>` ויש לו `d` משלו, שגדל ל-1. ההדפסה היא `a.d` אחרי שנבנו כולם: `2`, `2`, `1`, כלומר `221` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "לכל מופע של התבנית (`X<0>`, `X<1>`) יש משתנה סטטי `d` נפרד. `a` ו-`b` הם מטיפוס `X<0>` ולכן חולקים את אותו `d`, שגדל ל-2. `c` מטיפוס `X<1>` ויש לו `d` משלו, שגדל ל-1. ההדפסה היא `a.d` אחרי שנבנו כולם: `2`, `2`, `1`, כלומר `221`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run printed 221. Agrees."
   },
   {
@@ -301,7 +301,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`disp` וירטואלית ב-`B` ו-`D` דורסת אותה. הקריאה דרך האובייקט `d.disp()` מדפיסה `D`, דרך מצביע `D*` מדפיסה `D`, ודרך מצביע `B*` שמצביע על אובייקט מטיפוס `D` נבחרת הגרסה לפי הטיפוס הדינמי, כלומר `D`. הפלט `DDD` (תשובה ג). `DDB` ו-`BBB` מניחים שאין קריאה וירטואלית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`disp` וירטואלית ב-`B` ו-`D` דורסת אותה. הקריאה דרך האובייקט `d.disp()` מדפיסה `D`, דרך מצביע `D*` מדפיסה `D`, ודרך מצביע `B*` שמצביע על אובייקט מטיפוס `D` נבחרת הגרסה לפי הטיפוס הדינמי, כלומר `D`. הפלט `DDD`. `DDB` ו-`BBB` מניחים שאין קריאה וירטואלית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run printed DDD. Agrees."
   },
   {
@@ -334,7 +334,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "ל-`B` ול-`C` יש בסיס וירטואלי `A` משותף, ולכן הם תורמים ל-`E` עותק אחד של `A::x`. `D` יורשת את `A` ירושה רגילה ומוסיפה עותק נוסף. בסך הכול שני שדות `int` (תשובה ב). בהרצה הכתובות של `e.B::x` ושל `e.C::x` זהות, וזו של `e.D::x` שונה; הגישה הפשוטה `e.x` עמומה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ל-`B` ול-`C` יש בסיס וירטואלי `A` משותף, ולכן הם תורמים ל-`E` עותק אחד של `A::x`. `D` יורשת את `A` ירושה רגילה ומוסיפה עותק נוסף. בסך הכול שני שדות `int`. בהרצה הכתובות של `e.B::x` ושל `e.C::x` זהות, וזו של `e.D::x` שונה; הגישה הפשוטה `e.x` עמומה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: &e.B::x == &e.C::x (shared virtual A) and &e.D::x differs -> 2 distinct int fields; plain e.x is ambiguous. Agrees."
   },
   {
@@ -367,7 +367,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "ב-`B` הירושה היא `protected`, ולכן החבר הציבורי `I` של `A` הופך ל-`protected` ב-`B` ואי אפשר לגשת אליו מחוץ למחלקה. שורה 6 (`t.I`, אובייקט מטיפוס `A`) תקינה. שורה 7 (`tt.I`) שגויה. שורות 2 ו-5 תקינות. לכן רק שורה 7 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ב-`B` הירושה היא `protected`, ולכן החבר הציבורי `I` של `A` הופך ל-`protected` ב-`B` ואי אפשר לגשת אליו מחוץ למחלקה. שורה 6 (`t.I`, אובייקט מטיפוס `A`) תקינה. שורה 7 (`tt.I`) שגויה. שורות 2 ו-5 תקינות. לכן רק שורה 7.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run (lines tagged): only line 7 fails (protected inheritance hides I). Agrees."
   },
   {
@@ -400,7 +400,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בתוך `main` השם `K` מתייחס למשתנה הגלובלי, שנשאר 1. `c.K` ו-`A::K` הם אותו משתנה סטטי של `A`, שהתחיל ב-1 ועלה ל-2 כשנבנה `a`. הפלט `1` ואז `2` ואז `2`, כלומר `122` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בתוך `main` השם `K` מתייחס למשתנה הגלובלי, שנשאר 1. `c.K` ו-`A::K` הם אותו משתנה סטטי של `A`, שהתחיל ב-1 ועלה ל-2 כשנבנה `a`. הפלט `1` ואז `2` ואז `2`, כלומר `122`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run printed 122. Agrees."
   },
   {
@@ -433,7 +433,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הפונקציה `f` היא `const`, ולכן בתוכה `K` נחשב `const int`. הביטוי `&K` הוא `const int*`, בדיוק טיפוס ההחזרה, ולכן מתקמפל (תשובה ג). `this->K` ו-`*k` הם `int` ולא מצביע, ו-`K+*k` הוא `int`. כל אחד מהם גורם לשגיאת המרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה `f` היא `const`, ולכן בתוכה `K` נחשב `const int`. הביטוי `&K` הוא `const int*`, בדיוק טיפוס ההחזרה, ולכן מתקמפל. `this->K` ו-`*k` הם `int` ולא מצביע, ו-`K+*k` הוא `int`. כל אחד מהם גורם לשגיאת המרה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ compile test of each option: only `&K` compiles. Agrees."
   },
   {
@@ -466,7 +466,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`A a(3)` מדפיס ` A int `. `new B()` בונה קודם את הבסיס בבנאי ברירת המחדל שלו (כי `B()` לא מציין בנאי אחר): `A empty `, ואז `B empty `. `delete ap` על מצביע `A*` כשההורס אינו וירטואלי מפעיל רק את `~A`: ` destroy A`. בסוף `main` נהרס `a`: ` destroy A`. הפלט הוא ` A int A empty B empty  destroy A destroy A` (תשובה ב). `~B` לא רץ בכלל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`A a(3)` מדפיס ` A int `. `new B()` בונה קודם את הבסיס בבנאי ברירת המחדל שלו (כי `B()` לא מציין בנאי אחר): `A empty `, ואז `B empty `. `delete ap` על מצביע `A*` כשההורס אינו וירטואלי מפעיל רק את `~A`: ` destroy A`. בסוף `main` נהרס `a`: ` destroy A`. הפלט הוא ` A int A empty B empty  destroy A destroy A`. `~B` לא רץ בכלל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run printed ` A int A empty B empty  destroy A destroy A`. Agrees. (The exam prints curly quotes in the string literals; straight quotes were used to compile.)"
   },
   {
@@ -499,7 +499,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`X` מופשטת (`f()=0`), ולכן אסור ליצור ממנה אובייקט: שורה 17 (`new X(1)`) ושורה 19 (`X x2(2)`) הן שגיאות. מצביע ל-`X` (שורה 16) תקין, ו-`new Y(2,3)` (שורה 18) תקין כי `Y` ממשת את `f`. התשובה היא שורות 17,19 (ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`X` מופשטת (`f()=0`), ולכן אסור ליצור ממנה אובייקט: שורה 17 (`new X(1)`) ושורה 19 (`X x2(2)`) הן שגיאות. מצביע ל-`X` (שורה 16) תקין, ו-`new Y(2,3)` (שורה 18) תקין כי `Y` ממשת את `f`. התשובה היא שורות 17,19.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run (lines tagged): errors on 17 and 19 only (abstract X). Agrees."
   },
   {
@@ -532,7 +532,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בבנאי של `Y`, השדה `onx` נבנה קודם ברשימת האיתחול בבנאי ברירת המחדל של `X` (מדפיס `1`), ואז `X(i)` יוצר זמני שמדפיס `1` נוסף, ומועתק ל-`onx`. בסך הכול `11` (תשובה ב). השורה `y1.onx.nx = 3` לא מדפיסה דבר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בבנאי של `Y`, השדה `onx` נבנה קודם ברשימת האיתחול בבנאי ברירת המחדל של `X` (מדפיס `1`), ואז `X(i)` יוצר זמני שמדפיס `1` נוסף, ומועתק ל-`onx`. בסך הכול `11`. השורה `y1.onx.nx = 3` לא מדפיסה דבר.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run printed 11. Agrees."
   },
   {
@@ -565,7 +565,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "פונקציה `const` אפשר להפעיל גם על אובייקט `const` וגם על אובייקט רגיל, ולכן טענות 1 ו-2 נכונות. בתוך פונקציה `const` אי אפשר לשנות אף שדה (גם לא שדה שאינו `const`, אלא אם הוא `mutable`), ולכן טענה 4 שגויה, וגם טענה 3 שגויה (שדה `const` אי אפשר לשנות בשום פונקציה). בסך הכול שתי טענות (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "פונקציה `const` אפשר להפעיל גם על אובייקט `const` וגם על אובייקט רגיל, ולכן טענות 1 ו-2 נכונות. בתוך פונקציה `const` אי אפשר לשנות אף שדה (גם לא שדה שאינו `const`, אלא אם הוא `mutable`), ולכן טענה 4 שגויה, וגם טענה 3 שגויה (שדה `const` אי אפשר לשנות בשום פונקציה). בסך הכול שתי טענות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ compile tests: statements 1 and 2 hold; modifying a const field (3) or a plain field inside a const member (4) is an error. Agrees."
   },
   {
@@ -598,7 +598,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`p` הוא `int*` ו-`q` הוא `const int*`. `p = &a` תקין. `p = &b` שגוי, כי `b` קבוע ו-`int*` אינו יכול להצביע על קבוע. `q = &a` ו-`q = &b` תקינים (מצביע לקבוע יכול להצביע גם על לא קבוע). שורה אחת (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`p` הוא `int*` ו-`q` הוא `const int*`. `p = &a` תקין. `p = &b` שגוי, כי `b` קבוע ו-`int*` אינו יכול להצביע על קבוע. `q = &a` ו-`q = &b` תקינים (מצביע לקבוע יכול להצביע גם על לא קבוע). שורה אחת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run (lines tagged): only `p = &b;` fails. Agrees."
   },
   {
@@ -631,7 +631,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`p = &b` תקין (מצביע לנגזרת הומר למצביע לבסיס). `q = &a` שגוי (אין המרה מבסיס לנגזרת). `a = b` תקין (slicing). `b = a` שגוי (אין השמה של `A` לתוך `B`). שתי שורות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`p = &b` תקין (מצביע לנגזרת הומר למצביע לבסיס). `q = &a` שגוי (אין המרה מבסיס לנגזרת). `a = b` תקין (slicing). `b = a` שגוי (אין השמה של `A` לתוך `B`). שתי שורות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run (lines tagged): `q = &a;` and `b = a;` fail. Agrees."
   },
   {
@@ -664,7 +664,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שורה 7: `d.C::x` מציין במפורש את ה-`x` של התת-אובייקט `C` בתוך `d`, ולכן תקינה ומשנה אותו. שורה 9: ההמרה ל-`C*` מצביעה על התת-אובייקט `C` של `d`, ולכן גם היא תקינה ומשנה אותו. שורה 8: `(C)d` יוצר עותק זמני, ושינוי שדה שלו אינו חוקי (clang מדווח `expression is not assignable`), ובכל מקרה לא היה משנה את `d`. לכן 2 שורות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שורה 7: `d.C::x` מציין במפורש את ה-`x` של התת-אובייקט `C` בתוך `d`, ולכן תקינה ומשנה אותו. שורה 9: ההמרה ל-`C*` מצביעה על התת-אובייקט `C` של `d`, ולכן גם היא תקינה ומשנה אותו. שורה 8: `(C)d` יוצר עותק זמני, ושינוי שדה שלו אינו חוקי (clang מדווח `expression is not assignable`), ובכל מקרה לא היה משנה את `d`. לכן 2 שורות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: line 7 and line 9 compile and set the C::x subobject of d to 42; line 8 does not compile under clang++ (assignment to a member of a temporary copy `(C)d`: expression is not assignable), and would only change a copy anyway. -> 2. Agrees."
   },
   {
@@ -697,7 +697,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "השדות מאותחלים לפי סדר ההצהרה במחלקה ולא לפי סדר רשימת האיתחול: קודם `x` (מקבל 1) ואז `y` (מקבל 2). ההדפסה `x` ואז `y`: `12` (תשובה ב). `21` הייתה נכונה אילו האיתחול היה לפי סדר הרשימה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "השדות מאותחלים לפי סדר ההצהרה במחלקה ולא לפי סדר רשימת האיתחול: קודם `x` (מקבל 1) ואז `y` (מקבל 2). ההדפסה `x` ואז `y`: `12`. `21` הייתה נכונה אילו האיתחול היה לפי סדר הרשימה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run printed 12 (members are initialised in declaration order, x before y). Agrees."
   },
   {
@@ -730,7 +730,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "אופרטור בינארי שמוגדר כפונקציה חברה ב-`X` נקרא על האופרנד השמאלי, ולכן האופרנד השמאלי חייב להיות מטיפוס `X` (התשובה ג). הטיפוס של האופרנד הימני אינו מוגבל. בהרצה `x + 1` ו-`x + x` מתקמפלים, ו-`1 + x` לא.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "אופרטור בינארי שמוגדר כפונקציה חברה ב-`X` נקרא על האופרנד השמאלי, ולכן האופרנד השמאלי חייב להיות מטיפוס `X`. הטיפוס של האופרנד הימני אינו מוגבל. בהרצה `x + 1` ו-`x + x` מתקמפלים, ו-`1 + x` לא.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ compile tests with a member operator+: `x + 1` and `x + x` compile, `1 + x` does not. Agrees."
   },
   {
@@ -763,7 +763,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "האופרטור `<<` לפלט (`cout << x`) חייב להיות פונקציה חיצונית, כי האופרנד השמאלי הוא `ostream`. אם הפונקציה משתמשת רק בחברים ציבוריים אין צורך ב-`friend` (תשובה ג). `friend` נדרש רק כשצריך גישה לחברים פרטיים. גרסה חברה בתוך `X` הייתה מאפשרת רק `x << cout`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "האופרטור `<<` לפלט (`cout << x`) חייב להיות פונקציה חיצונית, כי האופרנד השמאלי הוא `ostream`. אם הפונקציה משתמשת רק בחברים ציבוריים אין צורך ב-`friend`. `friend` נדרש רק כשצריך גישה לחברים פרטיים. גרסה חברה בתוך `X` הייתה מאפשרת רק `x << cout`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ compile tests: a member operator<< does not make `cout << x` compile; a free function using only public members compiles without friend. Agrees."
   },
   {
@@ -830,7 +830,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בווקטור ריק `begin()` ו-`end()` שווים, ולכן `v.end()==v.begin()+0` נכון תמיד (תשובה א). `v.begin()+1` הוא מעבר לסוף, כך ששתי הטענות האחרות שגויות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בווקטור ריק `begin()` ו-`end()` שווים, ולכן `v.end()==v.begin()+0` נכון תמיד. `v.begin()+1` הוא מעבר לסוף, כך ששתי הטענות האחרות שגויות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: v.end()==v.begin()+0 is true for an empty vector. Agrees."
   }
  ]

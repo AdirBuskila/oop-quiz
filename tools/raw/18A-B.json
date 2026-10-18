@@ -42,7 +42,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "ההשמה `f() = 5` דורשת שהקריאה תחזיר ערך שמאלי (lvalue). רק הפניה (`int&`) מקיימת זאת, והיא מצביעה על המשתנה הסטטי `x`. החזרה לפי ערך (`int`) מחזירה זמני שאי אפשר להשים אליו, ב-`int*` ה-`return x` לא מתקמפל, ו-`T` אינו מוגדר.\nהתשובה היא `int&` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ההשמה `f() = 5` דורשת שהקריאה תחזיר ערך שמאלי (lvalue). רק הפניה (`int&`) מקיימת זאת, והיא מצביעה על המשתנה הסטטי `x`. החזרה לפי ערך (`int`) מחזירה זמני שאי אפשר להשים אליו, ב-`int*` ה-`return x` לא מתקמפל, ו-`T` אינו מוגדר.\nהתשובה היא `int&`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: only `int&` compiles (`f() = 5` needs an lvalue); `int` and `int*` are rejected, `T` is undeclared. Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -76,7 +76,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`g` מקבלת את `x` לפי ערך, כלומר עותק, ולכן השינוי ל-5 נעשה על העותק בלבד. ב-`main` נשאר `x.f` = 3.\nהפלט הוא `3` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`g` מקבלת את `x` לפי ערך, כלומר עותק, ולכן השינוי ל-5 נעשה על העותק בלבד. ב-`main` נשאר `x.f` = 3.\nהפלט הוא `3`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: prints 3 (`g` gets a copy). Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -110,7 +110,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "המשתנה הגלובלי `a(1)` נבנה לפני תחילת `main` ומדפיס `1`. אחר כך נבנים המקומיים בסדר ההצהרה: `a(2)` ואז `b(3)`. הבנאי מדפיס, וההורס לא מדפיס כלום.\nהפלט הוא `123` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המשתנה הגלובלי `a(1)` נבנה לפני תחילת `main` ומדפיס `1`. אחר כך נבנים המקומיים בסדר ההצהרה: `a(2)` ואז `b(3)`. הבנאי מדפיס, וההורס לא מדפיס כלום.\nהפלט הוא `123`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: prints 123 (the global is constructed before main, then the locals in order). Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -144,7 +144,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "- שורה 3: `X() : x(1) {}` תקינה, כי השדה ה-`const` מאותחל ברשימת האתחול.\n- שורה 4: `x = 1` בגוף הבנאי היא השמה לשדה `const`, שגיאה.\n- שורה 5: הבנאי לא מאתחל את `x`, ולשדה `const` חייב להיות אתחול, שגיאה.\nהתשובה היא שורות 4 ו-5 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "- שורה 3: `X() : x(1) {}` תקינה, כי השדה ה-`const` מאותחל ברשימת האתחול.\n- שורה 4: `x = 1` בגוף הבנאי היא השמה לשדה `const`, שגיאה.\n- שורה 5: הבנאי לא מאתחל את `x`, ולשדה `const` חייב להיות אתחול, שגיאה.\nהתשובה היא שורות 4 ו-5.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: errors on lines 4 (assignment to a const member in the body) and 5 (const member not initialized); line 3 is fine. Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -178,7 +178,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בשורה 4 השם `Y` עדיין לא מוכר (המחלקה `Y` מוגדרת רק אחרי `X`), ולכן `void f(Y y)` לא מתקמפל. שורה 8 תקינה: `Y` היא friend של `X`, ולכן יש לה גישה ל-`x.a`.\nהתשובה היא שורה 4 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בשורה 4 השם `Y` עדיין לא מוכר (המחלקה `Y` מוגדרת רק אחרי `X`), ולכן `void f(Y y)` לא מתקמפל. שורה 8 תקינה: `Y` היא friend של `X`, ולכן יש לה גישה ל-`x.a`.\nהתשובה היא שורה 4.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: only line 4 is an error (`Y` is not a complete type there, and X is not a friend of Y); line 8 is fine because Y is X's friend. Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -281,7 +281,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "השורה `X x = 5;` היא אתחול ולא השמה, ולכן אופרטור `=` לא רלוונטי. כדי שהיא תתקמפל צריך בנאי המרה `X(int)`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "השורה `X x = 5;` היא אתחול ולא השמה, ולכן אופרטור `=` לא רלוונטי. כדי שהיא תתקמפל צריך בנאי המרה `X(int)`.\nהתשובה היא \"להגדיר בנאי (constructor) במחלקה `X`\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: `X x = 5;` compiles with a converting constructor `X(int)`; an `operator=` (member or free) does not help, it is initialization, not assignment. Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -315,7 +315,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הביטוי `x(5)` קורא לאובייקט `x` כמו לפונקציה, ולכן צריך להגדיר במחלקה אופרטור קריאה `operator()` שמקבל פרמטר אחד.\nהתשובה היא תשובה ב. בנאי לא עוזר כי `x` כבר נוצר, ופונקציה חיצונית אינה מאפשרת את התחביר `x(5)`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הביטוי `x(5)` קורא לאובייקט `x` כמו לפונקציה, ולכן צריך להגדיר במחלקה אופרטור קריאה `operator()` שמקבל פרמטר אחד.\nהתשובה היא \"להגדיר אופרטור `()` שמקבל פרמטר אחד\". בנאי לא עוזר כי `x` כבר נוצר, ופונקציה חיצונית אינה מאפשרת את התחביר `x(5)`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: a member `operator()(int)` makes `x(5)` compile; a constructor or a free function does not. Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -349,7 +349,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שדה `public` נגיש מכל מקום בתכנית, גם מ-`main`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שדה `public` נגיש מכל מקום בתכנית, גם מ-`main`.\nהתשובה היא \"לשדה `f` אפשר לגשת מכל מקום בתכנית\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: a public field is reachable from `main`. Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -383,7 +383,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שדה `private` נגיש רק מתוך המחלקה עצמה (ומ-friend), ולא ממחלקות יורשות.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שדה `private` נגיש רק מתוך המחלקה עצמה (ומ-friend), ולא ממחלקות יורשות.\nהתשובה היא \"לשדה `f` אפשר לגשת רק מתוך המחלקה `X`\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: access from `X` compiles; from `main` or a derived class it does not. Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -451,7 +451,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הפונקציה `f` ב-`X` אינה וירטואלית (ה-`virtual` מופיע רק ב-`Y`). לכן הקריאה דרך מצביע `X*` נקשרת בזמן הקומפילציה ל-`X::f`.\nהפלט הוא `1` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה `f` ב-`X` אינה וירטואלית (ה-`virtual` מופיע רק ב-`Y`). לכן הקריאה דרך מצביע `X*` נקשרת בזמן הקומפילציה ל-`X::f`.\nהפלט הוא `1`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: prints 1 (`f` is not virtual in X, so the call is bound statically to X::f). Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -485,7 +485,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "האובייקט נוצר ב-`new Y`, ולכן הבנאים רצים בסדר `1` ואז `3`. אין `delete`, ולכן ההורסים לא רצים בכלל.\nהפלט הוא `13` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "האובייקט נוצר ב-`new Y`, ולכן הבנאים רצים בסדר `1` ואז `3`. אין `delete`, ולכן ההורסים לא רצים בכלל.\nהפלט הוא `13`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: prints 13 (no delete, so no destructor runs). Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -519,7 +519,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "med",
-   "explanation": "קריאה ל-`Invalidate` מסמנת את החלון כדורש ציור מחדש, ו-MFC קוראת בעקבות זה ל-`OnPaint`. התשובה היא ב, לפי המפתח הרשמי.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "explanation": "קריאה ל-`Invalidate` מסמנת את החלון כדורש ציור מחדש, ו-MFC קוראת בעקבות זה ל-`OnPaint`. התשובה היא `OnPaint`, לפי המפתח הרשמי.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
    "note": "Official key b (highlight). MFC concept question, no code to run; not verified by compile (MFC is not available here).",
    "contextId": "notes",
    "correctId": "b"
@@ -553,7 +553,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`X` אבסטרקטית בגלל `= 0`, ולכן אי אפשר ליצור ממנה אובייקט. `Y` ממשת את `f`, ולכן אפשר ליצור ממנה אובייקט, וכך גם מ-`Z` שיורשת ממנה.\nהתשובה היא תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`X` אבסטרקטית בגלל `= 0`, ולכן אי אפשר ליצור ממנה אובייקט. `Y` ממשת את `f`, ולכן אפשר ליצור ממנה אובייקט, וכך גם מ-`Z` שיורשת ממנה.\nהתשובה היא \"ניתן ליצור אובייקט מטיפוסים `Y` ו-`Z` אבל לא מטיפוס `X`\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: `X x;` fails (abstract), `Y y;` and `Z z;` compile. Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -587,7 +587,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "- שורה 3: `f(4)` תקינה, `T` מוסק כ-`int`.\n- שורה 4: `f(int)` מעבירה טיפוס במקום ערך, שגיאה.\n- שורה 5: `f<int>()` חסר ארגומנט, שגיאה.\n- שורה 6: `f<int>(4)` תקינה.\nהתשובה היא שורות 4 ו-5 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "- שורה 3: `f(4)` תקינה, `T` מוסק כ-`int`.\n- שורה 4: `f(int)` מעבירה טיפוס במקום ערך, שגיאה.\n- שורה 5: `f<int>()` חסר ארגומנט, שגיאה.\n- שורה 6: `f<int>(4)` תקינה.\nהתשובה היא שורות 4 ו-5.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: errors on lines 4 (`f(int)` passes a type) and 5 (`f<int>()` has no argument); lines 3 and 6 compile. Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -621,7 +621,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "אחרי שלוש ההוספות הווקטור הוא `0 1 2`. `insert(v.begin() + 1, 9)` מוסיף 9 לפני האיבר באינדקס 1, ומתקבל `0 9 1 2`.\nהפלט הוא `0912` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "אחרי שלוש ההוספות הווקטור הוא `0 1 2`. `insert(v.begin() + 1, 9)` מוסיף 9 לפני האיבר באינדקס 1, ומתקבל `0 9 1 2`.\nהפלט הוא `0912`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: prints 0912. Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -655,7 +655,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "רק שורה 3 שגויה: הפניה (`int &m;`) חייבת להיות מאותחלת. משתנה `int` ומצביע בלי אתחול מתקמפלים.\nהתשובה היא שורה 3 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "רק שורה 3 שגויה: הפניה (`int &m;`) חייבת להיות מאותחלת. משתנה `int` ומצביע בלי אתחול מתקמפלים.\nהתשובה היא שורה 3.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: only line 3 (`int &m;`, reference without initializer) is an error. Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -689,7 +689,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "med",
-   "explanation": "לפי המפתח הרשמי, ציור קו ב-MFC דורש שתי פונקציות: `MoveTo` להזזת נקודת ההתחלה ו-`LineTo` לציור הקו. מלבן ואליפסה מצוירים בפונקציה אחת. התשובה היא א.\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
+   "explanation": "לפי המפתח הרשמי, ציור קו ב-MFC דורש שתי פונקציות: `MoveTo` להזזת נקודת ההתחלה ו-`LineTo` לציור הקו. מלבן ואליפסה מצוירים בפונקציה אחת. התשובה היא \"קו\".\n\n_(הסבר שנכתב בעזרת AI; השאלה אינה ניתנת להרצה ולכן נשענת על המפתח הרשמי)_",
    "note": "Official key a (highlight). MFC concept question, no code to run; not verified by compile (MFC is not available here).",
    "contextId": "notes",
    "correctId": "a"
@@ -723,7 +723,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "האופרטור `it++` מחזיר את הערך הישן של האיטרטור, ולכן `*(it++)` הוא האיבר הראשון, `1`, ורק אחר כך האיטרטור מתקדם.\nהפלט הוא `1` (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "האופרטור `it++` מחזיר את הערך הישן של האיטרטור, ולכן `*(it++)` הוא האיבר הראשון, `1`, ורק אחר כך האיטרטור מתקדם.\nהפלט הוא `1`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: prints 1 (post-increment returns the old iterator). Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -757,7 +757,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בביטוי `x + y` האופרנד השמאלי הוא `x` מטיפוס `X`, ולכן אופרטור `+` חבר ב-`X` שמקבל פרמטר `Y` מתאים. אופרטור חבר מקבל רק פרמטר אחד (הנוסף הוא `this`), ולכן אפשרויות עם שני פרמטרים שגויות, ואופרטור ב-`Y` מתאים לביטוי `y + x`.\nהתשובה היא תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בביטוי `x + y` האופרנד השמאלי הוא `x` מטיפוס `X`, ולכן אופרטור `+` חבר ב-`X` שמקבל פרמטר `Y` מתאים. אופרטור חבר מקבל רק פרמטר אחד (הנוסף הוא `this`), ולכן אפשרויות עם שני פרמטרים שגויות, ואופרטור ב-`Y` מתאים לביטוי `y + x`.\nהתשובה היא \"להגדיר במחלקה `X` אופרטור `+` שמקבל פרמטר מטיפוס `Y`\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key a. clang++ run: member `X::operator+(Y)` compiles; `Y::operator+(X)` is the wrong direction and a member operator+ with two parameters is invalid. Agrees.",
    "contextId": "notes",
    "correctId": "a"
@@ -791,7 +791,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "med",
-   "explanation": "ההדפסה `std::cout << x` דורשת פונקציה `operator<<` שהאופרנד השמאלי שלה הוא `ostream`, ולכן היא לא יכולה להיות חבר ב-`X`. צריך פונקציה חיצונית. בתכנית הזו פונקציה חיצונית רגילה מספיקה, כי אין גישה לשדות פרטיים (פונקציה friend עובדת גם כן).\nהתשובה לפי המפתח היא ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ההדפסה `std::cout << x` דורשת פונקציה `operator<<` שהאופרנד השמאלי שלה הוא `ostream`, ולכן היא לא יכולה להיות חבר ב-`X`. צריך פונקציה חיצונית. בתכנית הזו פונקציה חיצונית רגילה מספיקה, כי אין גישה לשדות פרטיים (פונקציה friend עובדת גם כן).\nהתשובה לפי המפתח היא \"להגדיר פונקציה חדשה מחוץ למחלקה שאיננה חברה של המחלקה `X`\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: a free `operator<<(ostream&, const X&)` compiles, with or without friend (so option c also works for this program; the key marks only b and the instructions ask for the best answer). A member function cannot do it (it would need `x << cout`).",
    "contextId": "notes",
    "correctId": "b"
@@ -825,7 +825,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שדה סטטי בתבנית משותף לכל האובייקטים של אותו מופע של התבנית. `X<int>` מדפיסה `1` ו-`2`, ו-`X<double>` היא מופע נפרד עם ספירה משלו ומדפיסה `1`.\nהפלט הוא `121` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שדה סטטי בתבנית משותף לכל האובייקטים של אותו מופע של התבנית. `X<int>` מדפיסה `1` ו-`2`, ו-`X<double>` היא מופע נפרד עם ספירה משלו ומדפיסה `1`.\nהפלט הוא `121`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: prints 121 (each instantiation has its own static). Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -859,7 +859,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "המתודה `g` אינה `const`, ולכן שורה 7 (`x = 1`) תקינה. שורה 8 (`y = 1`) משנה שדה `const`, שגיאה.\nהתשובה היא שורה 8 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המתודה `g` אינה `const`, ולכן שורה 7 (`x = 1`) תקינה. שורה 8 (`y = 1`) משנה שדה `const`, שגיאה.\nהתשובה היא שורה 8.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: only line 8 fails (`y` is const; `g` is not a const method so `x = 1` is fine). Agrees.",
    "contextId": "notes",
    "correctId": "c"

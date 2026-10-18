@@ -43,7 +43,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "med",
-   "explanation": "אף אחד מהמשפטים אינו נכון, ולכן תשובה א. משפט 1 שגוי: פונקציה חיצונית יכולה לשנות את `x` בעקיפין, למשל דרך מתודה ציבורית (setter). משפטים 2 ו-3 שגויים בגלל השמה: `a1 = a2` מפעילה את אופרטור ההשמה שמוגדר אוטומטית, והוא מעתיק גם את `x` הפרטי, בלי שנכתבה במחלקה מתודה ששינתה אותו ובלי לקרוא למתודה ציבורית שהמתכנת כתב. זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.\nהערה: מבחינה טכנית אופרטור ההשמה שהקומפיילר יוצר הוא בעצמו מתודה ציבורית של `A`, ולפי קריאה זו משפט 3 נכון. אבל אז גם ההנחה של משפט 2 (שאין מתודה שמשנה את `x`) שוללת אותו, ומשפט 2 הופך לנכון. הקריאה העקבית, שגם תואמת את סימון הבודק, היא שמתודה פירושה מתודה שנכתבה במחלקה, ולכן תשובה א.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "אף אחד מהמשפטים אינו נכון, ולכן תשובה `0`. משפט 1 שגוי: פונקציה חיצונית יכולה לשנות את `x` בעקיפין, למשל דרך מתודה ציבורית (setter). משפטים 2 ו-3 שגויים בגלל השמה: `a1 = a2` מפעילה את אופרטור ההשמה שמוגדר אוטומטית, והוא מעתיק גם את `x` הפרטי, בלי שנכתבה במחלקה מתודה ששינתה אותו ובלי לקרוא למתודה ציבורית שהמתכנת כתב. זו שאלת מושגים (בלי הרצה), והתשובה נקבעה לפי סימון הבודק בטופס.\nהערה: מבחינה טכנית אופרטור ההשמה שהקומפיילר יוצר הוא בעצמו מתודה ציבורית של `A`, ולפי קריאה זו משפט 3 נכון. אבל אז גם ההנחה של משפט 2 (שאין מתודה שמשנה את `x`) שוללת אותו, ומשפט 2 הופך לנכון. הקריאה העקבית, שגם תואמת את סימון הבודק, היא שמתודה פירושה מתודה שנכתבה במחלקה, ולכן תשובה `0`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Concept question, no code to run. Key = the examinee's answer (a), ticked by the grader (16 of 17 right, only Q2 wrong). The numbering 1-3 is added; the paper uses bullets. All three statements are false: a public setter changes x (1), and the implicit copy assignment `a1 = a2` changes x without any member function being written in the class (2, 3). Arbiter (2026-10-18): the refuter notes the implicit operator= is itself a public member, making 3 true -> b; but under that reading the premise of 2 (no member changes x) also excludes operator=, making 2 true too (-> c). Only the reading 'member function = written in the class' is consistent, and it matches the grader's tick, so a stays.",
    "correctId": "a"
   },
@@ -77,7 +77,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הצהרת `friend` כתבנית (`template<typename U> friend void f(U);`) הופכת כל התמחות של `f` לחברה של כל התמחות של `A`. לכן `f` רשאית לגשת ל-`x` הפרטי גם של `A<int>` וגם של `A<U>`. אין שגיאות (תשובה א): בהרצה מתקבל `53.145test`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הצהרת `friend` כתבנית (`template<typename U> friend void f(U);`) הופכת כל התמחות של `f` לחברה של כל התמחות של `A`. לכן `f` רשאית לגשת ל-`x` הפרטי גם של `A<int>` וגם של `A<U>`. אין שגיאות: בהרצה מתקבל `53.145test`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: compiles and prints `53.145test`. The friend template declaration makes every specialization of f a friend of every A<T>. The examinee answered c and the grader marked it wrong.",
    "correctId": "a"
   },
@@ -111,7 +111,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "ב-`class` ברירת המחדל היא `private`, ולכן הבנאי `A() {}` פרטי. הקוד `A a;` ב-`main` נכשל. אפשר ליצור אובייקט גם מתוך פונקציה סטטית של המחלקה עצמה, ולכן המשפט 'רק פונקציות friend' אינו מדויק (ג). מחלקה יורשת גם היא לא יכולה לגשת לבנאי פרטי (ב). לכן אף תשובה מהראשונות אינה נכונה: תשובה ד. זו שאלת מושגים, ובדקנו את הטענות בקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ב-`class` ברירת המחדל היא `private`, ולכן הבנאי `A() {}` פרטי. הקוד `A a;` ב-`main` נכשל. אפשר ליצור אובייקט גם מתוך פונקציה סטטית של המחלקה עצמה, ולכן המשפט 'רק פונקציות friend' אינו מדויק. מחלקה יורשת גם היא לא יכולה לגשת לבנאי פרטי. לכן אף אחת מהתשובות האחרות אינה נכונה, והתשובה \"אף אחת מהתשובות אינה נכונה.\" היא הנכונה. זו שאלת מושגים, ובדקנו את הטענות בקומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++: `class A { A() {} };` has a private constructor (class default access): `A a;` in main fails, a static member function can create objects (so c is incomplete), and a derived class cannot either. Key d = the examinee's ticked answer.",
    "correctId": "d"
   },
@@ -145,7 +145,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`f(*a, 5, 7)` ו-`f(*b, 6, 8)` מתאימות רק לפונקציה בעלת שלושה פרמטרים. `f(*a, 9)` ו-`f(*b, 10)` מתאימות לשתי הפונקציות (הראשונה עם `y` ברירת מחדל, השנייה עם שני פרמטרים), ולכן הקריאה דו-משמעית (שגיאה). סך הכול שתי שורות שגויות (תשובה ג). הקומפיילר דיווח בדיוק על שתי הקריאות האלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f(*a, 5, 7)` ו-`f(*b, 6, 8)` מתאימות רק לפונקציה בעלת שלושה פרמטרים. `f(*a, 9)` ו-`f(*b, 10)` מתאימות לשתי הפונקציות (הראשונה עם `y` ברירת מחדל, השנייה עם שני פרמטרים), ולכן הקריאה דו-משמעית (שגיאה). סך הכול שתי שורות שגויות. הקומפיילר דיווח בדיוק על שתי הקריאות האלה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: 2 errors, `f(*a,9)` and `f(*b,10)` are ambiguous (both overloads accept A& and one int). The three-argument calls are fine.",
    "correctId": "c"
   },
@@ -179,7 +179,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "סדר ההריסה הפוך לסדר הבנייה. `I` מקומי ב-`func` ולכן נהרס ראשון: `A(I)`. אחר כך נהרס `x` ב-`main`: קודם גוף `~C` (`C(x)`), אחר כך החברים (`b`: `B(C->B)`) ולבסוף הבסיס (`A(C->A)`). לבסוף נהרסים האובייקטים הסטטיים והגלובליים בסדר הפוך לבנייתם: `s`, אחר כך `g`, ואז `sg`. הפלט `A(I) C(x) B(C->B) A(C->A) A(s) A(g) A(sg)` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "סדר ההריסה הפוך לסדר הבנייה. `I` מקומי ב-`func` ולכן נהרס ראשון: `A(I)`. אחר כך נהרס `x` ב-`main`: קודם גוף `~C` (`C(x)`), אחר כך החברים (`b`: `B(C->B)`) ולבסוף הבסיס (`A(C->A)`). לבסוף נהרסים האובייקטים הסטטיים והגלובליים בסדר הפוך לבנייתם: `s`, אחר כך `g`, ואז `sg`. הפלט `A(I) C(x) B(C->B) A(C->A) A(s) A(g) A(sg)`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: `A(I) C(x) B(C->B) A(C->A) A(s) A(g) A(sg) `. I dies at the end of func, then x (C, then member b, then base A), then the statics/globals in reverse construction order s, g, sg.",
    "correctId": "c"
   },
@@ -213,7 +213,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`B` היא `friend` של `A`, ולכן `showValue` רשאית לקרוא את `value` הפרטי של `A`. הערך 42 מאותחל בבנאי של `A`, והפלט `42` (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`B` היא `friend` של `A`, ולכן `showValue` רשאית לקרוא את `value` הפרטי של `A`. הערך 42 מאותחל בבנאי של `A`, והפלט `42`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: 42 (B is a friend of A, so it may read the private field).",
    "correctId": "b"
   },
@@ -247,7 +247,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "האופרטור `+` מוגדר כפונקציה `friend` ולכן ניגש לשדות הפרטיים. `(3,4) + (1,2) = (4,6)`, והפלט `4 + 6i` (תשובה א), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "האופרטור `+` מוגדר כפונקציה `friend` ולכן ניגש לשדות הפרטיים. `(3,4) + (1,2) = (4,6)`, והפלט `4 + 6i`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: `4 + 6i`.",
    "correctId": "a"
   },
@@ -281,7 +281,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "המחלקה `F` היא פונקטור (אובייקט עם `operator()`) שמחזיר אמת למספרים שליליים. הלולאה הראשונה מעתיקה ל-`y` את השליליים לפי הסדר: `-5 -1 -2`. הלולאה השנייה מדפיסה את `y` באיטרטור הפוך, ולכן `-2 -1 -5` (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המחלקה `F` היא פונקטור (אובייקט עם `operator()`) שמחזיר אמת למספרים שליליים. הלולאה הראשונה מעתיקה ל-`y` את השליליים לפי הסדר: `-5 -1 -2`. הלולאה השנייה מדפיסה את `y` באיטרטור הפוך, ולכן `-2 -1 -5`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: `-2 -1 -5 ` (the negatives -5 -1 -2 in order, printed in reverse).",
    "correctId": "b"
   },
@@ -315,7 +315,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`Multiplier` מגדירה `operator()`, ולכן אפשר לקרוא לאובייקט כמו לפונקציה. `triple(4) = 12` ו-`doubleIt(5) = 10`, והפלט `12 10` (תשובה א), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`Multiplier` מגדירה `operator()`, ולכן אפשר לקרוא לאובייקט כמו לפונקציה. `triple(4) = 12` ו-`doubleIt(5) = 10`, והפלט `12 10`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: `12 10` (function-call operator).",
    "correctId": "a"
   },
@@ -349,7 +349,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "`show` וירטואלית, לכן `b->show()` מפעילה את `Derived::show`. ההורס `~Base` אינו וירטואלי, ולכן `delete b` דרך `Base*` מפעיל רק את `~Base` (`DesBase`), בלי `~Derived`. פורמלית זו התנהגות לא מוגדרת, אבל זו התוצאה המתוכננת והנצפית: `Base Derived Derived Show DesBase` (תשובה ב). בהרצה: אותו פלט.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`show` וירטואלית, לכן `b->show()` מפעילה את `Derived::show`. ההורס `~Base` אינו וירטואלי, ולכן `delete b` דרך `Base*` מפעיל רק את `~Base` (`DesBase`), בלי `~Derived`. פורמלית זו התנהגות לא מוגדרת, אבל זו התוצאה המתוכננת והנצפית: `Base Derived Derived Show DesBase`. בהרצה: אותו פלט.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: `Base Derived Derived Show DesBase `. show is virtual (dynamic), the destructor is not, so only ~Base runs; deleting a Derived through a Base* without a virtual destructor is formally undefined behaviour, but this is the exam's intended outcome and the observed one.",
    "correctId": "b"
   },
@@ -383,7 +383,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`obj.f()` מגדילה את `obj.x` ל-11 ומחזירה העתק של `*this` לפי ערך (בנאי ההעתקה נותן `x = 12` לעותק). הקריאה השנייה `.f()` פועלת על העותק הזמני ולא על `obj`, ולכן `obj.x` נשאר 11 (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`obj.f()` מגדילה את `obj.x` ל-11 ומחזירה העתק של `*this` לפי ערך (בנאי ההעתקה נותן `x = 12` לעותק). הקריאה השנייה `.f()` פועלת על העותק הזמני ולא על `obj`, ולכן `obj.x` נשאר 11, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: 11. obj.f() increments obj to 11 and returns a copy (the copy constructor gives 12); the second f() acts on that temporary, not on obj.",
    "correctId": "b"
   },
@@ -417,7 +417,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "ל-`C` יש שתי פונקציות `display` שנורשות מ-`A` ומ-`B`, והקריאה `obj.display()` דו-משמעית. הקומפיילר מדווח על שגיאה (`member 'display' found in multiple base classes`). לכן התכנית לא עוברת קומפילציה (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ל-`C` יש שתי פונקציות `display` שנורשות מ-`A` ומ-`B`, והקריאה `obj.display()` דו-משמעית. הקומפיילר מדווח על שגיאה (`member 'display' found in multiple base classes`). לכן התכנית לא עוברת קומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++: `member 'display' found in multiple base classes of different types` (ambiguous call).",
    "correctId": "d"
   },
@@ -451,7 +451,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`printValue` היא פונקציה סטטית, ולכן אין לה `this` והיא לא יכולה לגשת לשדה הלא-סטטי `value`. זו שגיאת קומפילציה (`invalid use of member 'value' in static member function`), תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`printValue` היא פונקציה סטטית, ולכן אין לה `this` והיא לא יכולה לגשת לשדה הלא-סטטי `value`. זו שגיאת קומפילציה (`invalid use of member 'value' in static member function`), תשובה \"התכנית לא עוברת קומפילציה.\".\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++: `invalid use of member 'value' in static member function`.",
    "correctId": "c"
   },
@@ -485,7 +485,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`A` ריקה, והקומפיילר מייצר לה בנאי ברירת מחדל, בנאי העתקה ואופרטור השמה. `A b = a;` ו-`A c(b);` קוראות לבנאי ההעתקה, ו-`a = b;` להשמה. אין אף שגיאה (תשובה א), והקוד מתקמפל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`A` ריקה, והקומפיילר מייצר לה בנאי ברירת מחדל, בנאי העתקה ואופרטור השמה. `A b = a;` ו-`A c(b);` קוראות לבנאי ההעתקה, ו-`a = b;` להשמה. אין אף שגיאה, והקוד מתקמפל.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++: compiles with 0 errors (implicit default/copy constructor and copy assignment).",
    "correctId": "a"
   },
@@ -519,7 +519,7 @@
    "answerSource": "solution-pdf",
    "official": false,
    "confidence": "high",
-   "explanation": "רק משפט 3 נכון. משפט 1 שגוי: ב-C++ מותרת הורשה מרובה. משפט 2 שגוי: הורשה מרובה קיימת בשפה הסטנדרטית. משפט 3 נכון: אם יש פונקציה באותו שם בשני הבסיסים, קריאה אליה דרך האובייקט הנגזר דו-משמעית (ראו את השאלה על `display`). משפט 4 שגוי: אם לבסיסים יש בנאי ברירת מחדל, הוא נקרא אוטומטית ולא חייבים לקרוא להם במפורש. תשובה ב.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "רק משפט 3 נכון. משפט 1 שגוי: ב-C++ מותרת הורשה מרובה. משפט 2 שגוי: הורשה מרובה קיימת בשפה הסטנדרטית. משפט 3 נכון: אם יש פונקציה באותו שם בשני הבסיסים, קריאה אליה דרך האובייקט הנגזר דו-משמעית (ראו את השאלה על `display`). משפט 4 שגוי: אם לבסיסים יש בנאי ברירת מחדל, הוא נקרא אוטומטית ולא חייבים לקרוא להם במפורש. תשובה `1`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Concept question. Key = the examinee's answer (b), ticked by the grader: only statement 3 is true (Q12 shows the ambiguity). The numbering 1-4 is added; the paper uses bullets.",
    "correctId": "b"
   },
@@ -553,7 +553,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`f` וירטואלית ב-`A`, ו-`B::f` דורסת אותה (המילה `virtual` ב-`B` אינה חובה). `g` מקבלת הפניה ל-`A`, והקריאה `x.f()` נקבעת לפי הטיפוס האמיתי של האובייקט, שהוא `B` בכל שלוש הקריאות. הפלט `BBB` (תשובה ג), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f` וירטואלית ב-`A`, ו-`B::f` דורסת אותה (המילה `virtual` ב-`B` אינה חובה). `g` מקבלת הפניה ל-`A`, והקריאה `x.f()` נקבעת לפי הטיפוס האמיתי של האובייקט, שהוא `B` בכל שלוש הקריאות. הפלט `BBB`, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++ run: BBB. f is virtual in A, so B::f overrides it (the `virtual` keyword is optional in B) and all three calls dispatch to B.",
    "correctId": "c"
   },
@@ -587,7 +587,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "`obj1` הוא `const`, ולכן מותר לקרוא עליו רק למתודות `const`. `obj1.show()` תקינה כי היא `const`. `obj1.modify()` אינה `const`, ולכן זו שגיאה. `obj2` אינו `const` ושתי הקריאות אליו תקינות. יש בדיוק שגיאה אחת (תשובה ב), וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`obj1` הוא `const`, ולכן מותר לקרוא עליו רק למתודות `const`. `obj1.show()` תקינה כי היא `const`. `obj1.modify()` אינה `const`, ולכן זו שגיאה. `obj2` אינו `const` ושתי הקריאות אליו תקינות. יש בדיוק שגיאה אחת, וכך גם בהרצה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "clang++: exactly 1 error, `obj1.modify()` (non-const method on a const object); `obj1.show()` is a const method and is fine.",
    "correctId": "b"
   }

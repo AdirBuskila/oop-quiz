@@ -42,7 +42,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "רק שורה 4 גורמת לשגיאה: `int &r;` מצהירה על הפניה בלי אתחול, וזה אסור. שורה 2 (מצביע לא מאותחל) ושורה 5 (הפניה מאותחלת ב-`x`) תקינות.\nלכן התשובה היא שורה 4 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "רק שורה 4 גורמת לשגיאה: `int &r;` מצהירה על הפניה בלי אתחול, וזה אסור. שורה 2 (מצביע לא מאותחל) ושורה 5 (הפניה מאותחלת ב-`x`) תקינות.\nלכן התשובה היא שורה 4.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c (highlight). clang++ run (snippet wrapped in a function): the only error is line 4 (`int &r;` reference without initializer). Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -76,7 +76,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בקריאה `f(3)` הפרמטר `x` מקבל 3 והפרמטר `y` לוקח את ערך ברירת המחדל 5, ולכן מודפס `35` (תשובה ג). התשובה `45` מניחה שערך ברירת המחדל של `x` נשאר בתוקף.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בקריאה `f(3)` הפרמטר `x` מקבל 3 והפרמטר `y` לוקח את ערך ברירת המחדל 5, ולכן מודפס `35`. התשובה `45` מניחה שערך ברירת המחדל של `x` נשאר בתוקף.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run (`void main` rewritten to `int main`, which Visual Studio accepts): prints 35. Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -110,7 +110,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "המשתנים המקומיים נהרסים בסדר הפוך לסדר היצירה: קודם `c` (3) ואז `b` (2). המשתנה הסטטי `a` נהרס רק בסיום התכנית, אחרון (1).\nהפלט הוא `321` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "המשתנים המקומיים נהרסים בסדר הפוך לסדר היצירה: קודם `c` (3) ואז `b` (2). המשתנה הסטטי `a` נהרס רק בסיום התכנית, אחרון (1).\nהפלט הוא `321`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: prints 321 (c, then b at the end of main, then the static a at program exit). Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -144,7 +144,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "- שורה 3: `X a;` יוצרת אובייקט.\n- שורה 4: `X b();` היא הצהרה על פונקציה בשם `b` שמחזירה `X`, ולא אובייקט.\n- שורה 5: `X c = X;` שגיאת קומפילציה, כי `X` הוא שם של טיפוס ולא ביטוי.\n- שורה 6: `X d = X();` יוצרת אובייקט.\nהשורות שלא יוצרות אובייקט הן 4 ו-5 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "- שורה 3: `X a;` יוצרת אובייקט.\n- שורה 4: `X b();` היא הצהרה על פונקציה בשם `b` שמחזירה `X`, ולא אובייקט.\n- שורה 5: `X c = X;` שגיאת קומפילציה, כי `X` הוא שם של טיפוס ולא ביטוי.\n- שורה 6: `X d = X();` יוצרת אובייקט.\nהשורות שלא יוצרות אובייקט הן 4 ו-5.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: line 5 is a compile error; line 4 declares a function `b` (static_assert that decltype(b) is a function type passes), so no object; lines 3 and 6 create objects. Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -178,7 +178,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`f(X x)` מוצהרת כ-friend ולכן מותרת בה גישה לשדה הפרטי `b` (שורה 10 תקינה). ההעמסה `f(X x, int k)` היא פונקציה אחרת שאינה friend, ולכן הגישה ל-`b` בשורה 14 גורמת לשגיאה.\nהתשובה היא שורה 14 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f(X x)` מוצהרת כ-friend ולכן מותרת בה גישה לשדה הפרטי `b` (שורה 10 תקינה). ההעמסה `f(X x, int k)` היא פונקציה אחרת שאינה friend, ולכן הגישה ל-`b` בשורה 14 גורמת לשגיאה.\nהתשובה היא שורה 14.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: only line 14 is an error (the overload `f(X, int)` is not a friend). Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -212,7 +212,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בתוך מתודה שהיא `const` הטיפוס של `this` הוא `const X *`. רק הטיפוס הזה מתקבל בהצבה `x = this`. הטיפוסים `X` ו-`X*` מורידים את ה-const, והפניה `const X &` לא יכולה להיקשר למצביע.\nהתשובה היא `const X *` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בתוך מתודה שהיא `const` הטיפוס של `this` הוא `const X *`. רק הטיפוס הזה מתקבל בהצבה `x = this`. הטיפוסים `X` ו-`X*` מורידים את ה-const, והפניה `const X &` לא יכולה להיקשר למצביע.\nהתשובה היא `const X *`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: of the four, only `const X *` compiles (in a const method `this` is `const X*`). Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -246,7 +246,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "רוצים שהשמה ל-`p` (שורה 4) תיכשל אבל השמה ל-`*p` (שורה 5) תצליח: המצביע עצמו קבוע, והערך שאליו הוא מצביע ניתן לשינוי. זה בדיוק `int * const`.\n- `int*`: שתי השורות תקינות.\n- `const int *`: שורה 5 נכשלת.\n- `const int * const`: שתי השורות נכשלות.\nהתשובה היא תשובה ג.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "רוצים שהשמה ל-`p` (שורה 4) תיכשל אבל השמה ל-`*p` (שורה 5) תצליח: המצביע עצמו קבוע, והערך שאליו הוא מצביע ניתן לשינוי. זה בדיוק `int * const`.\n- `int*`: שתי השורות תקינות.\n- `const int *`: שורה 5 נכשלת.\n- `const int * const`: שתי השורות נכשלות.\nהתשובה היא `int * const`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: with `int * const` line 4 fails and line 5 compiles; `int*` compiles both, `const int *` fails only line 5, `const int * const` fails both. Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -280,7 +280,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "כדי ש-`x = 5` תתקמפל צריך אופרטור השמה שמקבל `int`, כלומר פונקציית חבר שאינה בנאי ומקבלת פרמטר אחד (תשובה ב). בנאי `X(int)` לבדו לא מספיק, כי אז גם נעלם בנאי ברירת המחדל ו-`X x;` נכשל. את `operator=` אי אפשר להגדיר מחוץ למחלקה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "כדי ש-`x = 5` תתקמפל צריך אופרטור השמה שמקבל `int`, כלומר פונקציית חבר שאינה בנאי ומקבלת פרמטר אחד. בנאי `X(int)` לבדו לא מספיק, כי אז גם נעלם בנאי ברירת המחדל ו-`X x;` נכשל. את `operator=` אי אפשר להגדיר מחוץ למחלקה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: a member `operator=(int)` makes it compile; only a constructor `X(int)` is not enough (then `X x;` has no default constructor), and `operator=` cannot be a free function. Option b is loosely worded (it means the member assignment operator). Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -314,7 +314,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "הביטוי `x++` (פוסטפיקס) מתקמפל כשמוגדר אופרטור `++` כפונקציית חבר עם פרמטר `int` אחד, שמשמש רק להבחנה (תשובה ג). אופרטור חבר בלי פרמטרים הוא הפרפיקס `++x`. פונקציה חיצונית עם פרמטר אחד (`X&`) היא גם פרפיקס, ופוסטפיקס חיצוני דורש שני פרמטרים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הביטוי `x++` (פוסטפיקס) מתקמפל כשמוגדר אופרטור `++` כפונקציית חבר עם פרמטר `int` אחד, שמשמש רק להבחנה. אופרטור חבר בלי פרמטרים הוא הפרפיקס `++x`. פונקציה חיצונית עם פרמטר אחד (`X&`) היא גם פרפיקס, ופוסטפיקס חיצוני דורש שני פרמטרים.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: the postfix `x++` compiles with member `operator++(int)` (one parameter). A member with no parameters is the prefix form and does not match `x++`. A free function with one parameter of type X only defines the prefix form. Agrees with the key.",
    "contextId": "notes",
    "correctId": "c"
@@ -348,7 +348,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בירושה `protected` השדה הציבורי `f` נעשה מוגן ב-`Y`. לכן `Y` וכל מחלקה שיורשת ממנה יכולות לגשת אליו, ואילו קוד חיצוני כמו `main` לא יכול.\nהתשובה היא תשובה ד. תשובה א שגויה כי השדה כבר לא ציבורי דרך `Y`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בירושה `protected` השדה הציבורי `f` נעשה מוגן ב-`Y`. לכן `Y` וכל מחלקה שיורשת ממנה יכולות לגשת אליו, ואילו קוד חיצוני כמו `main` לא יכול.\nהתשובה היא \"לשדה `f` אפשר לגשת מהמחלקה `Y` ומכל מחלקה שיורשת מ-`Y`\". תשובה \"לשדה `f` אפשר לגשת מכל מקום בתכנית\" שגויה כי השדה כבר לא ציבורי דרך `Y`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: with protected inheritance `f` is protected in `Y`, so `Y` and its derived classes reach it, `main` does not. Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -382,7 +382,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בבנייה הבסיס נבנה לפני הנגזרת: `1` ואז `3`. בהריסה הסדר הפוך: קודם ההורס של `Y` (`4`) ואז של `X` (`2`).\nהפלט הוא `1342` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בבנייה הבסיס נבנה לפני הנגזרת: `1` ואז `3`. בהריסה הסדר הפוך: קודם ההורס של `Y` (`4`) ואז של `X` (`2`).\nהפלט הוא `1342`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: prints 1342. Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -416,7 +416,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "שדה `protected` נגיש מתוך המחלקה עצמה ומתוך מחלקות שיורשות ממנה, אבל לא מקוד חיצוני. לכן תשובה ד נכונה. תשובה ג שגויה כי גם `X` עצמה יכולה לגשת לשדה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "שדה `protected` נגיש מתוך המחלקה עצמה ומתוך מחלקות שיורשות ממנה, אבל לא מקוד חיצוני. לכן תשובה \"לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` וגם מ-`X` עצמה\" נכונה. תשובה \"לשדה `f` אפשר לגשת רק מתוך המחלקות שיורשות מהמחלקה `X` אבל לא מ-`X` עצמה\" שגויה כי גם `X` עצמה יכולה לגשת לשדה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: access from `X` and from a derived class compiles, access from `main` and from an unrelated class does not. Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -518,7 +518,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "`f` וירטואלית, ולכן הקריאה דרך מצביע `X*` לאובייקט מטיפוס `Y` מפעילה את הגרסה של `Y`. הפלט הוא `2` (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "`f` וירטואלית, ולכן הקריאה דרך מצביע `X*` לאובייקט מטיפוס `Y` מפעילה את הגרסה של `Y`. הפלט הוא `2`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: prints 2 (dynamic dispatch). Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -552,7 +552,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "ההורס של `X` אינו וירטואלי, ולכן `delete x` דרך מצביע `X*` מפעיל רק את `~X`. הבנאים רצו לפי הסדר `1` ואז `3`, וההורס מדפיס `2`: הפלט `132` (תשובה ג). מבחינה פורמלית זו התנהגות לא מוגדרת, אך זה מה שהקוד מדפיס. ההורס `~Y` לא רץ, ולכן `1342` שגויה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ההורס של `X` אינו וירטואלי, ולכן `delete x` דרך מצביע `X*` מפעיל רק את `~X`. הבנאים רצו לפי הסדר `1` ואז `3`, וההורס מדפיס `2`: הפלט `132`. מבחינה פורמלית זו התנהגות לא מוגדרת, אך זה מה שהקוד מדפיס. ההורס `~Y` לא רץ, ולכן `1342` שגויה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: prints 132 (the destructor of X is not virtual, so only ~X runs; formally undefined behaviour, but this is what the run prints). Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -586,7 +586,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "כדי לקרוא לגרסה של המחלקה הבסיסית צריך לציין אותה במפורש: `X::f()`. הפלט הוא `12` (תשובה ב).\n- `this()` ו-`x.f()` לא מתקמפלות.\n- `this->f()` קוראת שוב ל-`Y::f` ונכנסת לרקורסיה אינסופית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "כדי לקרוא לגרסה של המחלקה הבסיסית צריך לציין אותה במפורש: `X::f()`. הפלט הוא `12`.\n- `this()` ו-`x.f()` לא מתקמפלות.\n- `this->f()` קוראת שוב ל-`Y::f` ונכנסת לרקורסיה אינסופית.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: with `X::f()` it prints 12; `this()` and `x.f()` do not compile and `this->f()` recurses forever. Agrees.",
    "contextId": "notes",
    "correctId": "b"
@@ -620,7 +620,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "אחרי שלוש ההוספות הווקטור הוא `0 1 2`. `erase(v.begin())` מוחק את האיבר הראשון, ונשאר `1 2`. לכן `v[1]` הוא `2` (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "אחרי שלוש ההוספות הווקטור הוא `0 1 2`. `erase(v.begin())` מוחק את האיבר הראשון, ונשאר `1 2`. לכן `v[1]` הוא `2`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: prints 2. Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -687,7 +687,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "לשדה מסוג הפניה (`int &c`) אין ערך התחלתי, ולכן בנאי ברירת המחדל שהקומפיילר היה יוצר נמחק והשורה `X x;` נכשלת. הסרת `int &c` פותרת את הבעיה (תשובה ד). הסרת `a` או `b` לא עוזרת, כי ההפניה נשארת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "לשדה מסוג הפניה (`int &c`) אין ערך התחלתי, ולכן בנאי ברירת המחדל שהקומפיילר היה יוצר נמחק והשורה `X x;` נכשלת. הסרת `int &c` פותרת את הבעיה. הסרת `a` או `b` לא עוזרת, כי ההפניה נשארת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: removing `int &c` makes it compile; the reference member has no initializer, so the default constructor is deleted. Removing a or b does not help. Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -721,7 +721,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "אחרי `push_back(0)` הווקטור הוא `0`. `insert(v.begin(), 1)` מוסיף `1` בתחילתו, והווקטור הוא `1 0`. לכן `v[1]` הוא `0` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "אחרי `push_back(0)` הווקטור הוא `0`. `insert(v.begin(), 1)` מוסיף `1` בתחילתו, והווקטור הוא `1 0`. לכן `v[1]` הוא `0`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: prints 0 (v becomes 1, 0). Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -755,7 +755,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "בביטוי `std::cout << x << x` התוצאה של ההדפסה הראשונה היא האופרנד השמאלי של השנייה, ולכן האופרטור חייב להחזיר `std::ostream&`. בכל טיפוס אחר (`int`, `void`, `X`) ההדפסה השנייה לא מתקמפלת. התשובה היא ד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בביטוי `std::cout << x << x` התוצאה של ההדפסה הראשונה היא האופרנד השמאלי של השנייה, ולכן האופרטור חייב להחזיר `std::ostream&`. בכל טיפוס אחר (`int`, `void`, `X`) ההדפסה השנייה לא מתקמפלת. התשובה היא `std::ostream&`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run (body `{...}` replaced by a matching return statement for each option): only `std::ostream&` compiles, because the result of the first `<<` is the left operand of the second. Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -789,7 +789,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "לכל מופע של התבנית (`int`, `double`) יש משתנה סטטי `x` משלו. שתי הקריאות ל-`f<int>` מחזירות 1 ואז 2, והקריאה היחידה ל-`f<double>` מחזירה 1.\nהפלט הוא `121` (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "לכל מופע של התבנית (`int`, `double`) יש משתנה סטטי `x` משלו. שתי הקריאות ל-`f<int>` מחזירות 1 ואז 2, והקריאה היחידה ל-`f<double>` מחזירה 1.\nהפלט הוא `121`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key c. clang++ run: prints 121 (each instantiation has its own static x). Agrees.",
    "contextId": "notes",
    "correctId": "c"
@@ -823,7 +823,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "במתודה `const` אי אפשר לשנות שדות. שורה 7 משנה את `x`, ושורה 8 משנה את `y` (שהוא גם `const`), ושתיהן שגיאות.\nהתשובה היא שורות 7 ו-8 (תשובה ד).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "במתודה `const` אי אפשר לשנות שדות. שורה 7 משנה את `x`, ושורה 8 משנה את `y` (שהוא גם `const`), ושתיהן שגיאות.\nהתשובה היא שורות 7 ו-8.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key d. clang++ run: errors on lines 7 and 8. Agrees.",
    "contextId": "notes",
    "correctId": "d"
@@ -857,7 +857,7 @@
    "answerSource": "highlighted-pdf",
    "official": true,
    "confidence": "high",
-   "explanation": "במתודה `const` המצביע `p` הופך ל-`int * const`: אי אפשר לשנות אותו, ולכן שורה 7 (`p = &x`) שגויה. שורה 8 (`*p = 1`) כותבת לערך שהמצביע מצביע עליו, והוא אינו `const`, ולכן תקינה.\nהתשובה היא שורה 7 (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "במתודה `const` המצביע `p` הופך ל-`int * const`: אי אפשר לשנות אותו, ולכן שורה 7 (`p = &x`) שגויה. שורה 8 (`*p = 1`) כותבת לערך שהמצביע מצביע עליו, והוא אינו `const`, ולכן תקינה.\nהתשובה היא שורה 7.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "Official key b. clang++ run: only line 7 fails (p becomes `int* const`; `*p = 1` writes through the pointer and is legal). Agrees.",
    "contextId": "notes",
    "correctId": "b"

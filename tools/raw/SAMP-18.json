@@ -42,7 +42,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "הפונקציה `f` היא חברה במחלקה `C`, ולכן מותר לה לגשת לשדה הפרטי `y`. הפונקציה `g` היא פונקציה חיצונית ו-`c.y` פונה לשדה פרטי, ולכן רק היא גורמת לשגיאה. (בקטע המודפס חסר `;` אחרי סגירת המחלקה, וזו שגיאה תחבירית נפרדת שאינה שייכת לאף אחת מהפונקציות.) התשובה היא `g` בלבד (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה `f` היא חברה במחלקה `C`, ולכן מותר לה לגשת לשדה הפרטי `y`. הפונקציה `g` היא פונקציה חיצונית ו-`c.y` פונה לשדה פרטי, ולכן רק היא גורמת לשגיאה. (בקטע המודפס חסר `;` אחרי סגירת המחלקה, וזו שגיאה תחבירית נפרדת שאינה שייכת לאף אחת מהפונקציות.) התשובה היא `g` בלבד.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++: the only access error is `c.y` in g (line 14); `f` may touch the private `y` of its own class. The paper prints no `;` after the class (line 10): clang reports that separately and recovers; with the `;` added the only error is still g. Intended key c; confidence med because of the printed typo.",
    "contextId": "notes",
    "correctId": "c"
@@ -76,7 +76,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "האובייקט `a` נבנה (נקודה) ונהרס בסוף `main` (נקודה). האובייקט `*b` נוצר ב-`new` ומודפסת נקודה בבנאי, אבל אין `delete`, ולכן ההורס לא נקרא. בסך הכול 3 נקודות (תשובה ב), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "האובייקט `a` נבנה (נקודה) ונהרס בסוף `main` (נקודה). האובייקט `*b` נוצר ב-`new` ומודפסת נקודה בבנאי, אבל אין `delete`, ולכן ההורס לא נקרא. בסך הכול 3 נקודות, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++ run prints 3 dots (a: ctor + dtor, *b: ctor only, never deleted).",
    "contextId": "notes",
    "correctId": "b"
@@ -110,7 +110,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "בביטוי `++x` נקרא `operator++` ללא פרמטר מלאכותי: כחבר במחלקה (בלי פרמטרים) או כפונקציה חיצונית שמקבלת את האובייקט כפרמטר אחד. תשובה א נכונה. גם תשובה ד (פונקציה חיצונית עם פרמטר אחד) מתקמפלת בפועל, ולכן היא מתקבלת. תשובה ב לא מתקמפלת, ותשובה ג (חבר עם פרמטר אחד) היא הצורה של `x++` ולא של `++x`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בביטוי `++x` נקרא `operator++` ללא פרמטר מלאכותי: כחבר במחלקה (בלי פרמטרים) או כפונקציה חיצונית שמקבלת את האובייקט כפרמטר אחד. תשובה \"להגדיר אופרטור `++` שלא מקבל פרמטרים במחלקה `X`\" נכונה. גם תשובה \"להגדיר אופרטור `++` שמקבל פרמטר אחד מחוץ למחלקה `X`\" (פונקציה חיצונית עם פרמטר אחד) מתקמפלת בפועל, ולכן היא מתקבלת. תשובה \"להגדיר אופרטור `++` שלא מקבל פרמטרים מחוץ למחלקה `X`\" לא מתקמפלת, ותשובה \"להגדיר אופרטור `++` שמקבל פרמטר אחד במחלקה `X`\" (חבר עם פרמטר אחד) היא הצורה של `x++` ולא של `++x`.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++: both (a) member `operator++()` and (d) free `operator++(X&)` make `++x` compile; (b) and (c) do not. The official key of the same question in 19A-C is a; d is also accepted because it compiles.",
    "contextId": "notes",
    "correctId": "a",
@@ -178,7 +178,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "האובייקט `a` הוא `const`, ולכן אפשר לקרוא עליו רק לפונקציות `const`. שורה 9 (`a.f()`) קוראת לפונקציה שאינה `const` ולכן שגויה. שורה 10 תקינה כי `g` היא `const`. על האובייקט הלא קבוע `b` מותר לקרוא לשתי הפונקציות. רק שורה 9 גורמת לשגיאה (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "האובייקט `a` הוא `const`, ולכן אפשר לקרוא עליו רק לפונקציות `const`. שורה 9 (`a.f()`) קוראת לפונקציה שאינה `const` ולכן שגויה. שורה 10 תקינה כי `g` היא `const`. על האובייקט הלא קבוע `b` מותר לקרוא לשתי הפונקציות. רק שורה 9 גורמת לשגיאה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++ (c++11/14/17/20): the only error is line 9 (`a.f()` non-const method on a const object).",
    "contextId": "notes",
    "correctId": "a"
@@ -212,7 +212,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "med",
-   "explanation": "כדי שההשמה `int n = x` תתקמפל צריך להמיר אובייקט `X` ל-`int`, וזה נעשה באמצעות אופרטור המרה `operator int()`, שהוא פונקציה חברה שאינה בנאי. בנאי במחלקה `X` ממיר אל `X` ולא ממנה, ופונקציית `friend` לא משפיעה על המרה. נבדק עם clang++: רק אופרטור ההמרה החבר מאפשר קומפילציה (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "כדי שההשמה `int n = x` תתקמפל צריך להמיר אובייקט `X` ל-`int`, וזה נעשה באמצעות אופרטור המרה `operator int()`, שהוא פונקציה חברה שאינה בנאי. בנאי במחלקה `X` ממיר אל `X` ולא ממנה, ופונקציית `friend` לא משפיעה על המרה. נבדק עם clang++: רק אופרטור ההמרה החבר מאפשר קומפילציה.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++: a member `operator int()` makes it compile; a constructor `X(int)` and a friend function do not. The official key of the same question in 19A-C is b (a non-constructor member function = the conversion operator).",
    "contextId": "notes",
    "correctId": "b"
@@ -246,7 +246,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "למחלקה `X` אין בנאי ברירת מחדל, ולכן השדה `x` חייב להיות מאותחל ברשימת האתחול של הבנאי של `Y`: `Y() : x(2) {}` (שורה 7). שורה 8 מנסה לאתחל מחלקת בסיס שאינה קיימת, שורה 9 מגדירה משתנה מקומי בלבד, ושורה 10 היא השמה לשדה שכבר נבנה בלי בנאי ברירת מחדל. נבדק עם clang++: רק שורה 7 מתקמפלת (תשובה א).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "למחלקה `X` אין בנאי ברירת מחדל, ולכן השדה `x` חייב להיות מאותחל ברשימת האתחול של הבנאי של `Y`: `Y() : x(2) {}` (שורה 7). שורה 8 מנסה לאתחל מחלקת בסיס שאינה קיימת, שורה 9 מגדירה משתנה מקומי בלבד, ושורה 10 היא השמה לשדה שכבר נבנה בלי בנאי ברירת מחדל. נבדק עם clang++: רק שורה 7 מתקמפלת.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++, each constructor alone: only line 7 (member initializer list) compiles; X has no default constructor.",
    "contextId": "notes",
    "correctId": "a"
@@ -310,7 +310,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "זו אותה שאלה כמו שאלה 3 (השורות ממוספרות 3-4). `++x` מתקמפל אם מוגדר `operator++` כחבר ללא פרמטרים (תשובה א), וגם אם מוגדר כפונקציה חיצונית עם פרמטר אחד (תשובה ד, שמתקמפלת בפועל ולכן מתקבלת). אופרטור חיצוני בלי פרמטרים וחבר עם פרמטר אחד לא יתקמפלו.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "זו אותה שאלה כמו שאלה 3 (השורות ממוספרות 3-4). `++x` מתקמפל אם מוגדר `operator++` כחבר ללא פרמטרים, וגם אם מוגדר כפונקציה חיצונית עם פרמטר אחד (תשובה \"להגדיר אופרטור `++` שמקבל פרמטר אחד מחוץ למחלקה `X`\", שמתקמפלת בפועל ולכן מתקבלת). אופרטור חיצוני בלי פרמטרים וחבר עם פרמטר אחד לא יתקמפלו.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); Same printed question as Q3 (the lines are numbered 3-4). clang++: (a) and (d) compile; 19A-C official key a.",
    "contextId": "notes",
    "correctId": "a",
@@ -348,7 +348,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "בפונקציה סטטית אין `this`, ולכן היא יכולה לגשת רק לשדות סטטיים. שורה 10 (`y = 1` בתוך `g`) פונה לשדה לא סטטי ולכן שגויה. שורה 5 תקינה (שדה סטטי בפונקציה רגילה), שורה 6 תקינה, שורה 9 תקינה, וההגדרה `int X::x;` תקינה. נבדק עם clang++: רק שורה 10 (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בפונקציה סטטית אין `this`, ולכן היא יכולה לגשת רק לשדות סטטיים. שורה 10 (`y = 1` בתוך `g`) פונה לשדה לא סטטי ולכן שגויה. שורה 5 תקינה (שדה סטטי בפונקציה רגילה), שורה 6 תקינה, שורה 9 תקינה, וההגדרה `int X::x;` תקינה. נבדק עם clang++: רק שורה 10.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++ (c++11/14/17/20): the only error is line 10 (non-static `y` inside a static method).",
    "contextId": "notes",
    "correctId": "c"
@@ -412,7 +412,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "ההפניה `X &x = y` קושרת אובייקט מטיפוס `Y` להפניה למחלקה `X`, וזה אפשרי כש-`Y` יורשת מ-`X` ירושה ציבורית (המרה למחלקת בסיס). אם `X` הייתה יורשת מ-`Y`, או אם רק היה שדה מהטיפוס האחר, הקוד לא היה מתקמפל. נבדק עם clang++ (תשובה ב).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "ההפניה `X &x = y` קושרת אובייקט מטיפוס `Y` להפניה למחלקה `X`, וזה אפשרי כש-`Y` יורשת מ-`X` ירושה ציבורית (המרה למחלקת בסיס). אם `X` הייתה יורשת מ-`Y`, או אם רק היה שדה מהטיפוס האחר, הקוד לא היה מתקמפל. נבדק עם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++: it compiles when Y derives publicly from X; the other three relations (X derives Y, field of the other type) do not compile. Same as the official key b of 19A-C Q11.",
    "contextId": "notes",
    "correctId": "b"
@@ -476,7 +476,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הפונקציה `f` וירטואלית כבר ב-`X`, ולכן גם `Y::f` ו-`Z::f` וירטואליות. הקריאה `p->f()` דרך מצביע `Y*` לאובייקט `Z` נבחרת לפי הטיפוס הדינמי ומדפיסה 3 (תשובה ג), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפונקציה `f` וירטואלית כבר ב-`X`, ולכן גם `Y::f` ו-`Z::f` וירטואליות. הקריאה `p->f()` דרך מצביע `Y*` לאובייקט `Z` נבחרת לפי הטיפוס הדינמי ומדפיסה 3, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++ run prints 3: f is virtual from X on, so the call through Y* picks Z::f.",
    "contextId": "notes",
    "correctId": "c"
@@ -510,7 +510,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "בווקטור ריק `begin()` שווה ל-`end()`, ולכן טענה א נכונה. בווקטור עם איבר אחד הם שונים, ולכן טענה ב שגויה. `capacity()` היא הקיבולת שהוקצתה ויכולה להיות גדולה מכמות האיברים (`size()`), ולכן טענה ג שגויה. נבדק עם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בווקטור ריק `begin()` שווה ל-`end()`, ולכן טענה \"`v.begin()==v.end()` אם כמות האיברים בווקטור היא 0\" נכונה. בווקטור עם איבר אחד הם שונים, ולכן טענה \"`v.begin()==v.end()` אם כמות האיברים בווקטור היא 1\" שגויה. `capacity()` היא הקיבולת שהוקצתה ויכולה להיות גדולה מכמות האיברים (`size()`), ולכן טענה \"כמות האיברים בווקטור מוחזרת ע\"י `v.capacity()`\" שגויה. נבדק עם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++ run: an empty vector has begin()==end() (1); with one element it is 0; capacity() is the allocated size and can exceed size() in general, so c is wrong.",
    "contextId": "notes",
    "correctId": "a"
@@ -544,7 +544,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "במחלקה `Y` אין שדה או בסיס מטיפוס `X`, ולכן הבנאי של `X` לא נקרא כלל. נבנה רק `y` (מודפס 3) ובסוף `main` הוא נהרס (מודפס 4): `34` (תשובה א), וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "במחלקה `Y` אין שדה או בסיס מטיפוס `X`, ולכן הבנאי של `X` לא נקרא כלל. נבנה רק `y` (מודפס 3) ובסוף `main` הוא נהרס (מודפס 4): `34`, וכך גם הרצת clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++ run prints 34: Y has no X member and no X base, so X's constructor never runs.",
    "contextId": "notes",
    "correctId": "a"
@@ -642,7 +642,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "הפרמטר `n` מסתיר את השדה `n`, ולכן `n = n` משנה רק את הפרמטר והשדה נשאר לא מאותחל. `X::n` פונה לשדה של האובייקט הנוכחי ומדפיס 12 (תשובה ב). `x.n` לא מתקמפל כי `x` לא מוגדר בתוך הבנאי, ו-`this.n` לא מתקמפל כי `this` הוא מצביע (צריך `this->n`). נבדק עם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "הפרמטר `n` מסתיר את השדה `n`, ולכן `n = n` משנה רק את הפרמטר והשדה נשאר לא מאותחל. `X::n` פונה לשדה של האובייקט הנוכחי ומדפיס 12. `x.n` לא מתקמפל כי `x` לא מוגדר בתוך הבנאי, ו-`this.n` לא מתקמפל כי `this` הוא מצביע (צריך `this->n`). נבדק עם clang++.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++ runs: `n = n` assigns the parameter to itself (field stays uninitialised); `X::n` prints 12; `x.n` and `this.n` do not compile.",
    "contextId": "notes",
    "correctId": "b"
@@ -676,7 +676,7 @@
    "answerSource": "solved",
    "official": false,
    "confidence": "high",
-   "explanation": "בקטע הזה `X` היא תבנית ולכן חייבים לציין טיפוס. שורה 3 (`X x;`) חסרה ארגומנט לתבנית, שורה 4 (`X x(int);`) וגם שורה 5 (`X x<int>;`) אינן תחביר חוקי. שורה 6 (`X<int> x;`) תקינה. נבדק עם clang++ בכל התקנים (c++11 עד c++20): שורות 3, 4 ו-5 לא מתקמפלות (תשובה ג).\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
+   "explanation": "בקטע הזה `X` היא תבנית ולכן חייבים לציין טיפוס. שורה 3 (`X x;`) חסרה ארגומנט לתבנית, שורה 4 (`X x(int);`) וגם שורה 5 (`X x<int>;`) אינן תחביר חוקי. שורה 6 (`X<int> x;`) תקינה. נבדק עם clang++ בכל התקנים (c++11 עד c++20): שורות 3, 4 ו-5 לא מתקמפלות.\n\n_(הסבר שנכתב בעזרת AI ונבדק מול הרצת הקוד)_",
    "note": "No key in the source (sample exam); clang++ (c++11/14/17/20), each line alone in a function: lines 3, 4 and 5 fail, line 6 compiles (it only reports an error in the full program as a redeclaration of x). Official key of the same question in 19A-C is c.",
    "contextId": "notes",
    "correctId": "c"
