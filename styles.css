@@ -289,7 +289,7 @@ math .ovl{border-top:.065em solid currentColor;padding-top:.07em;margin-top:.06e
 /* inline code token inside stems / explanations (LTR-isolated) */
 .tok{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;direction:ltr;
   unicode-bidi:isolate;background:var(--card2);border:1px solid var(--line);
-  border-radius:5px;padding:.02em .34em;font-size:.88em;white-space:nowrap}
+  border-radius:5px;padding:.02em .34em;font-size:.88em;white-space:normal;overflow-wrap:anywhere}   /* a long token (an error message, a signature) wraps instead of running off a phone screen */
 
 .options-list{display:flex;flex-direction:column;gap:.6rem}
 .opt{

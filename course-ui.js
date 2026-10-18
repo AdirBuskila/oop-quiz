@@ -48,46 +48,90 @@
   const passedIn = (c, L) => ((c.prog.levels[L.id] || {}).best || 0) >= PASS;
   const recommendedIn = c => c.levels.find(L => !passedIn(c, L));
   const levelName = L => `שלב ${L.order} · ${L.title}`;
+  /* level title / goal as HTML: the goal's math is pre-rendered by build_courses.py (goalHtml); both get bidi isolates */
+  const titleH = L => isolate(esc(L.title || ""));
+  const goalH = L => isolate(L.goalHtml || esc(L.goal || ""));
+  const levelNameH = L => `שלב ${L.order} · ${titleH(L)}`;
 
-  /* ---------- bidi: isolate Latin/number runs inside Hebrew (ported from machine-learning-quiz c034e8f) ----------
-     The page is RTL, so "(2, 5) ו-(7, 1)" or "|7−2| = 5" inside Hebrew gets its parentheses and operands
-     reordered. Every maximal non-Hebrew run that holds a digit or a Latin letter is wrapped in an LTR
-     isolate. A run may span inline tags (<b>3</b>) as long as they open and close inside it; text inside
-     code / MathML / formulas / existing isolates is left alone. */
-  const INLINE = /^<\/?(b|strong|i|em|u|sub|sup|code)\b[^>]*>$/i;
-  const SKIP = /^<(code|bdi|pre|math)\b|class="[^"]*\b(lesson-formula|qref|math-inline|math-block|opt-ltr)\b|\bdir="ltr"/i;
-  const START = /[A-Za-z0-9(\[|√‖Σ∑−ŷȳα-ωΔΣθ]/, END = /[A-Za-z0-9)\]|²³‖%∞'"₀-₉ᵢⱼₙₖŷȳ̄α-ω]/;
-  const isTag = p => p[0] === "<", chr = p => (isTag(p) || p[0] === "&" && p.length > 1) ? "" : p;
-  function isolate(html){
+  /* ---------- bidi: isolate Latin/number runs inside Hebrew (the same isolate() as the open engine's normalize.js Bidi,
+     tested by its tools/test_bidi.js; ported from computer-systems-quiz 775f65b + the clause-boundary fix) ----------
+     The page is RTL, so "(2, 5) ו-(7, 1)" or "|7−2| = 5" inside Hebrew gets its parentheses and operands reordered.
+     Every non-Hebrew run that holds a digit or a Latin letter is wrapped in an LTR isolate. A run may span inline tags
+     (<b>3</b>) as long as they open and close inside it; text inside code / MathML / formulas / existing isolates is left
+     alone. A run ends at a clause / list boundary outside brackets (". " ", " "; " ": ") and at an RLM: one LTR
+     isolate across "TP = 44, FN = 6" or "Fetch; Decode" read the second piece first for an RTL reader. */
+  const B_INLINE = /^<\/?(b|strong|i|em|u|sub|sup|code)\b[^>]*>$/i;
+  const B_SKIP = /^<(code|bdi|pre|math)\b|class="[^"]*\b(lesson-formula|qref|math-inline|math-block|math-run|opt-ltr)\b|\bdir="ltr"/i;
+  const B_START = /[A-Za-z0-9$"(\[|\u221a\u2016\u03a3\u2211\u2212\u0177\u0233\u03b1-\u03c9\u0394\u03b8]/;
+  const B_END = /[A-Za-z0-9)\]|\u00b2\u00b3\u2016%\u221e'\u2032\u2033\u2019"\u2080-\u2089\u1d62\u2c7c\u2099\u2096\u0177\u0233\u0304\u03b1-\u03c9]/;
+  const B_OP = /^[·×+−=\/*…]$/;      // · × + − = / * …  (the ASCII hyphen is not one: "ו-y")
+  const bIsTag =p => p[0] === "<", bChr = p => (bIsTag(p) || p[0] === "&" && p.length > 1) ? "" : p;
+  function isolate(html) {
     const toks = String(html).match(/<[^>]+>|[^<]+/g) || [];
     let out = "", run = [], skip = 0;
-    const flush = () => {
-      if(!run.length) return;
-      const s = run.join("");
-      const parts = s.match(/<[^>]+>|&[#\w]+;|[^<]/g);   // a tag or an entity (&gt;) is one unit
+    const emit = parts => {
+      if (!parts.length) return "";
+      const s = parts.join("");
+      { const st = [];                                                 // a bracket whose partner is outside this run stays outside, so it pairs with it in RTL
+        for (let i = 0; i < parts.length; i++) { const c = bChr(parts[i]);
+          if (c === "(" || c === "[") st.push([i, c]);
+          else if (c === ")" || c === "]") { const top = st[st.length - 1];
+            if (top && top[1] === (c === ")" ? "(" : "[")) st.pop(); else return emit(parts.slice(0, i)) + parts[i] + emit(parts.slice(i + 1)); } }
+        if (st.length) { const i = st[st.length - 1][0]; return emit(parts.slice(0, i)) + parts[i] + emit(parts.slice(i + 1)); } }
+      // a clause / list boundary outside brackets (". " ", " "; " ": " "? " "! ") splits the run: "TP = 44, FN = 6" or
+      // "4: 79, 79" are separate LTR pieces that an RTL reader reads right to left. Checked after the bracket split above,
+      // so a bracket whose partner is outside the run ("(clang++ -fsyntax-only: 0 שגיאות)") does not hide the boundary,
+      // while "(3, 8, 2)" stays whole. "4! = 24" is one expression (a "!" before an operator is a factorial).
+      for (let i = 0, d = 0; i < parts.length; i++) {
+        const c = bChr(parts[i]);
+        if ("([{".includes(c) && c) d++;
+        else if (")]}".includes(c) && c) d = Math.max(0, d - 1);
+        else if (d === 0 && /^[.,;:!?]$/.test(c)) {
+          let k = i; while (k + 1 < parts.length && /^<\//.test(parts[k + 1])) k++;          // "<b>10.</b> 12": past the closing tag
+          const nx = parts[k + 1];
+          if ((nx === "&nbsp;" || /^\s$/.test(nx || "")) &&
+              !(c === "!" && /^\s*[=+−×·*\/<>≤≥≠-]/.test(parts.slice(k + 1).map(bChr).join(""))))
+            return emit(parts.slice(0, k + 1)) + emit(parts.slice(k + 1));
+        }
+      }
       let a = 0, b = parts.length - 1;
-      while(a <= b && !START.test(chr(parts[a]))) a++;
-      while(b >= a && !END.test(chr(parts[b]))) b--;
-      while(a > 0 && isTag(parts[a - 1]) && !/^<\//.test(parts[a - 1])) a--;     // pull in tags hugging the core: <b>3</b>
-      while(b < parts.length - 1 && /^<\//.test(parts[b + 1])) b++;
-      const core = parts.slice(a, b + 1), st = [];
-      let ok = a <= b && /[A-Za-z0-9]/.test(core.join(""));
-      for(const t of core){ if(!isTag(t) || !ok) continue;
-        const m = t.match(/^<(\/?)(\w+)/); if(m[1]){ if(st.pop() !== m[2].toLowerCase()) ok = false; } else st.push(m[2].toLowerCase()); }
-      if(ok && st.length) ok = false;
-      out += ok ? parts.slice(0, a).join("") + `<bdi class="ltr${core.join("").replace(/<[^>]+>/g, "").length <= 22 ? " nw" : ""}" dir="ltr">${core.join("")}</bdi>` + parts.slice(b + 1).join("") : s;
-      run = [];
+      while (a <= b && !B_START.test(bChr(parts[a]))) a++;
+      while (b >= a && !B_END.test(bChr(parts[b]))) b--;
+
+      if (a <= b) {
+        while (b + 1 < parts.length && bChr(parts[b + 1]) === "!" && /[A-Za-z0-9)\]]/.test(bChr(parts[b]))) b++;   // factorial: "4!" stays one run
+        while (b + 1 < parts.length && bChr(parts[b + 1]) === "*" && /[A-Za-z0-9)\]*]/.test(bChr(parts[b]))) b++;   // pointer stars: "Item**" keeps its stars
+        while (a > 0 && bChr(parts[a - 1]) === "*" && /[A-Za-z(]/.test(bChr(parts[a]))) a--;                          // ... and "*ptr" its star
+        for (let j = a; j > 0;) { let k = j - 1; while (k >= 0 && /^\s$/.test(parts[k])) k--;                       // arithmetic chain: leading operators join the run
+          if (k >= 0 && B_OP.test(bChr(parts[k]))) { a = k; j = k; } else break; }
+        for (let j = b; j < parts.length - 1;) { let k = j + 1; while (k < parts.length && /^\s$/.test(parts[k])) k++;  // ... and so do trailing ones
+          if (k < parts.length && B_OP.test(bChr(parts[k]))) { b = k; j = k; } else break; }
+      }
+      { const tail = parts.slice(b + 1).join(""); if (b >= a && /^[,;]?\s*(\.\.\.|…)$/.test(tail)) b = parts.length - 1; }   // a trailing ellipsis stays with its list
+      while (a > 0 && bIsTag(parts[a - 1]) && !/^<\//.test(parts[a - 1])) a--;     // pull in tags hugging the core: <b>3</b>
+      while (b < parts.length - 1 && /^<\//.test(parts[b + 1])) b++;
+      const balanced = arr => { const st = [];
+        for (const t of arr) { if (!bIsTag(t)) continue;
+          const m = t.match(/^<(\/?)(\w+)/); if (m[1]) { if (st.pop() !== m[2].toLowerCase()) return false; } else st.push(m[2].toLowerCase()); }
+        return !st.length; };
+      // a tag whose partner lies outside the run ("<b>10.</b> 12" cut after the period) stays outside the isolate
+      while (b > a && /^<\//.test(parts[b]) && !balanced(parts.slice(a, b + 1))) b--;
+      while (a < b && bIsTag(parts[a]) && !/^<\//.test(parts[a]) && !balanced(parts.slice(a, b + 1))) a++;
+      const core = parts.slice(a, b + 1);
+      const ok = a <= b && /[A-Za-z0-9]/.test(core.join("")) && balanced(core);
+      return ok ? parts.slice(0, a).join("") + `<bdi class="ltr${core.join("").replace(/<[^>]+>/g, "").length <= 22 ? " nw" : ""}" dir="ltr">${core.join("")}</bdi>` + parts.slice(b + 1).join("") : s;
     };
-    for(const t of toks){
-      if(t[0] === "<"){
-        if(skip){ out += t; if(/^<\//.test(t)) skip--; else if(!/\/>$|^<(br|img|hr|wbr)\b/i.test(t)) skip++; continue; }
-        if(SKIP.test(t)){ flush(); out += t; if(!/^<(br|img)\b/i.test(t)) skip = 1; continue; }
-        if(INLINE.test(t)){ run.push(t); continue; }
+    const flush = () => { if (run.length) out += emit(run.join("").match(/<[^>]+>|&[#\w]+;|[^<]/g)); run = []; };
+    for (const t of toks) {
+      if (t[0] === "<") {
+        if (skip) { out += t; if (/^<\//.test(t)) skip--; else if (!/\/>$|^<(br|img|hr|wbr)\b/i.test(t)) skip++; continue; }
+        if (B_SKIP.test(t)) { flush(); out += t; if (!/^<(br|img)\b/i.test(t)) skip = 1; continue; }
+        if (B_INLINE.test(t)) { run.push(t); continue; }
         flush(); out += t; continue;
       }
-      if(skip){ out += t; continue; }
-      for(const piece of t.match(/[֐-׿]+|[^֐-׿]+/g)){          // Hebrew text ends a run
-        if(/[֐-׿]/.test(piece)){ flush(); out += piece; } else run.push(piece);
+      if (skip) { out += t; continue; }
+      for (const piece of t.match(/[֐-׿\u200f]+|[^֐-׿\u200f]+/g)) {   // Hebrew text (or an RLM) ends a run
+        if (/[֐-׿\u200f]/.test(piece)) { flush(); out += piece; } else run.push(piece);
       }
     }
     flush();
@@ -122,8 +166,8 @@
         : ok ? `✓ עברת · שיא ${st.best}%` : `ניסיון אחרון ${st.last}% · שיא ${st.best}% (צריך ${PASS}%)`;
       return `<button class="${cls}" data-id="${esc(L.id)}" type="button">
         <span class="num">שלב ${L.order}${L.boss ? " · מבחן גמר" : ""}</span>
-        <span class="ttl">${esc(L.icon || "")} ${esc(L.title)}</span>
-        <span class="gl">${esc(L.goal || "")}</span>
+        <span class="ttl">${esc(L.icon || "")} ${titleH(L)}</span>
+        <span class="gl">${goalH(L)}</span>
         <span class="st">${status}</span></button>`;
     }).join("");
     $("#crsMap").querySelectorAll(".crs-lvl").forEach(b => b.onclick = () => openLesson(LV.find(L => L.id === b.dataset.id)));
@@ -138,7 +182,7 @@
     $("#crsLesson").innerHTML =
       `<div class="q-head"><span class="chip">שלב ${L.order} מתוך ${C.levels.length}</span>` +
       `<span class="chip soft">${L.questions.length} שאלות${nReal(L) ? ` · ${nReal(L)} מהמבחנים` : ""}</span></div>` +
-      `<h2 class="learn-h">${esc(L.icon || "")} ${esc(L.title)}</h2><p class="sub crs-goal">${esc(L.goal || "")}</p>` +
+      `<h2 class="learn-h">${esc(L.icon || "")} ${titleH(L)}</h2><p class="sub crs-goal">${goalH(L)}</p>` +
       `<div class="lesson-body">${lessonHtml(L)}</div>` +
       (NOTE[L.source] ? `<div class="crs-note">${NOTE[L.source]}</div>` : "");
     view("crsLessonView");
@@ -162,7 +206,7 @@
     const it = S.items[S.i], q = it.q, n = S.items.length;
     it.order = it.order || (q.lockOrder ? q.options.map(o => o.id) : APP.shuffle(q.options.map(o => o.id)));
     it.answered = false;
-    $("#crsQHead").innerHTML = `<span class="chip">${esc(levelName(S.L))}</span>` +
+    $("#crsQHead").innerHTML = `<span class="chip">${levelNameH(S.L)}</span>` +
       (it.bank ? `<span class="chip soft">${esc(APP.examLabelOf(q))}${Number.isInteger(q.num) ? ` · שאלה ${q.num}` : ""}</span><span class="chip official">מבחן אמיתי</span>` : "");
     $("#crsQContext").innerHTML = it.bank && q.contextId ? APP.contextHtml(APP.ctx(q.contextId)) : "";
     const qt = $("#crsQText");
@@ -197,7 +241,7 @@
       if(acc.includes(b.dataset.oid)) b.classList.add("correct");
       else if(b.dataset.oid === oid) b.classList.add("wrong");
     });
-    const expl = it.bank ? (q.explanationHtml || "") : html(q.explanationHtml || "");
+    const expl = html(q.explanationHtml || "");   // bank items too: same bidi isolates as in the bank
     const fb = $("#crsQBody .feedback");
     fb.className = "feedback " + (ok ? "good" : "bad");
     fb.innerHTML = `<div class="verdict">${ok ? "✓ נכון" : "✗ לא נכון"}</div>` +
@@ -224,14 +268,14 @@
     const wrong = S.items.filter(it => !S.run[it.key]);
     const hasReal = APP.topicCount(C.meta.topic) > 0;
     $("#crsSum").innerHTML =
-      `<div class="q-head" style="justify-content:center"><span class="chip">${esc(levelName(L))}</span></div>` +
-      `<div class="big">${pct}%</div><div><b>${correct} / ${total}</b> תשובות נכונות</div>` +
+      `<div class="q-head" style="justify-content:center"><span class="chip">${levelNameH(L)}</span></div>` +
+      `<div class="big">${pct}%</div><div><b><bdi dir="ltr">${correct} / ${total}</bdi></b> תשובות נכונות</div>` +
       `<p class="msg">${ok ? (L.boss ? `🏆 עברת את מבחן הגמר של ${esc(C.meta.titleHe)}` : "✓ עברת את השלב! אפשר להתקדם.") :
         `עוד לא ${PASS}%. כדאי לקרוא שוב את השיעור ולנסות שוב, זה בדיוק השלב שבו זה נבנה.`}</p>` +
       (wrong.length ? `<div class="crs-review"><div class="crs-review-t">כדאי לחזור על:</div>${
         wrong.map(it => `<div>• ${it.recap ? html(it.recap) : (it.bank ? APP.questionHtml(it.q) : html(it.q.questionHtml))}</div>`).join("")}</div>` : "") +
       `<div class="crs-actions">` +
-        (nextL ? `<button class="btn ${ok ? "primary" : "ghost"}" data-act="next">לשלב הבא: ${esc(nextL.title)} ⟵</button>` : "") +
+        (nextL ? `<button class="btn ${ok ? "primary" : "ghost"}" data-act="next">לשלב הבא: ${titleH(nextL)} ⟵</button>` : "") +
         ((L.boss || !nextL) && hasReal ? `<button class="btn primary" data-act="real">לשאלות האמיתיות מהמבחנים ⟵</button>` : "") +
         `<button class="btn ${ok ? "ghost" : "primary"}" data-act="retry">🔁 לנסות שוב</button>` +
         `<button class="btn ghost" data-act="lesson">📘 לשיעור</button>` +
