@@ -23,6 +23,7 @@ T a;       // D
 T b = a;   // C
 b = a;     // A</pre></div>
 <div class="lesson-trap">⚠️ <b>אם לא כתבתם בנאי העתקה</b>, הקומפיילר יוצר אחד בעצמו, והוא <b>לא מדפיס כלום</b>. העתקה שקרתה בשקט עדיין נחשבת העתקה.</div>
+<div class="lesson-trap">⚠️ בנאי העתקה נקרא גם כשמעבירים אובייקט <b>לפונקציה לפי ערך</b> (<code>void f(T t)</code> עם <code>f(a);</code>): הפרמטר <code>t</code> הוא אובייקט חדש שנבנה כהעתק של <code>a</code>. הפרטים בשלב הבא.</div>
 ` },
   questions: [
     { id: "C01-Q1", question: "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    T()                    { cout << \"D \"; }\n    T(const T&)            { cout << \"C \"; }\n    T& operator=(const T&) { cout << \"A \"; return *this; }\n};\nint main() {\n    T a;\n    T b = a;\n    T c(a);\n    c = a;\n}\n```",

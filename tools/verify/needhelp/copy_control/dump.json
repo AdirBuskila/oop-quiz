@@ -197,7 +197,7 @@
     },
     {
      "id": "C02-Q3",
-     "question": "מה מדפיסה התכנית?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nK id(K k) { return k; }\nint main() {\n    K a;\n    K b = id(a);\n    cout << K::n;\n}\n```",
+     "question": "בהנחה שהתכנית מתקמפלת ב-C++17, מה היא מדפיסה?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nK id(K k) { return k; }\nint main() {\n    K a;\n    K b = id(a);\n    cout << K::n;\n}\n```",
      "options": [
       {
        "id": "a",
@@ -249,7 +249,7 @@
     },
     {
      "id": "C02-Q5",
-     "question": "מה מדפיסה התכנית?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nvoid f1(K& k) {}\nvoid f2(K k) {}\nvoid f3(K* k) {}\nK    f4() { return K(); }\nK&   f5(K& k) { return k; }\nK*   f6(K* k) { return k; }\nint main() {\n    K a;\n    f1(a);\n    f2(a);\n    f3(&a);\n    f4();\n    f5(a);\n    f6(&a);\n    cout << K::n;\n}\n```",
+     "question": "בהנחה שהתכנית מתקמפלת ב-C++17, מה היא מדפיסה?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nvoid f1(K& k) {}\nvoid f2(K k) {}\nvoid f3(K* k) {}\nK    f4() { return K(); }\nK&   f5(K& k) { return k; }\nK*   f6(K* k) { return k; }\nint main() {\n    K a;\n    f1(a);\n    f2(a);\n    f3(&a);\n    f4();\n    f5(a);\n    f6(&a);\n    cout << K::n;\n}\n```",
      "options": [
       {
        "id": "a",

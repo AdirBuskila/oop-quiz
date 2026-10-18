@@ -1,0 +1,208 @@
+{
+ "courseId": "virtual",
+ "method": "predicted by hand first; run questions compiled and run with clang++ -std=c++17 and c++20 (c++11 not usable: toolchain STL headers need C++14); compile questions: every option compiled separately",
+ "questions": {
+  "C01-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q2": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C01-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q6": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q6": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  }
+ },
+ "boss": {
+  "19A-B-Q5": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "24B-A-Q1": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "20B-A-Q15": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "25S-A-Q3": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "21B-B-Q20": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "24B-B-Q8": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  }
+ },
+ "counts": {
+  "agree": 32,
+  "disagree": 0,
+  "unclear": 0
+ },
+ "fixes_and_flags": [
+  "C01-Q5 options b and d use slicing and a qualified name, taught only in C03/C06: added both to the C01 lesson (fixed).",
+  "C05-Q5 is about UB and the correct option says UB explicitly.",
+  "Boss: 21B-B-Q20 uses nonstandard 'void main' (key d unaffected); others fine."
+ ]
+}

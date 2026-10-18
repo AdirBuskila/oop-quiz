@@ -19,7 +19,7 @@ B b;
 A* p = &amp;b;
 p-&gt;f();   // B  (f virtual, real type B)
 p-&gt;g();   // a  (g not virtual, declared type A)</pre></div>
-<div class="lesson-trap">⚠️ קריאה על אובייקט עצמו (<code>b.f()</code>) תמיד לפי הטיפוס שלו, כי אין כאן מצביע ולכן אין מה לבחור בזמן ריצה.</div>
+<div class="lesson-trap">⚠️ קריאה על אובייקט עצמו (<code>b.f()</code>) תמיד לפי הטיפוס שלו, כי אין כאן מצביע ולכן אין מה לבחור בזמן ריצה. גם אובייקט שהועתק בערך (<code>A a = b;</code>) הוא כבר אובייקט <code>A</code> מלא, ולכן <code>a.f()</code> היא <code>A::f</code>. וכשכותבים שם מלא (<code>p-&gt;A::f()</code>) נבחרת תמיד הגרסה של <code>A</code>, גם אם <code>f</code> וירטואלית.</div>
 ` },
   questions: [
     { id: "C01-Q1", question: "מה מדפיסה התכנית?\n```cpp\nstruct A { void f() { cout << \"A \"; } };\nstruct B : A { void f() { cout << \"B \"; } };\nint main() {\n    B b;\n    A* p = &b;\n    B* q = &b;\n    p->f();\n    q->f();\n    b.f();\n}\n```",

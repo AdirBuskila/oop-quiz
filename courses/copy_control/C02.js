@@ -33,7 +33,7 @@ COURSE_LEVEL("copy_control", {
       correctId: "d",
       explanation: "ב-C++17 ההחזרה `return K();` וגם האתחול `K a = make();` בונים את האובייקט ישירות במקומו, בלי בנאי העתקה. לכן המונה נשאר 0. התשובות 2 ו-4 הן מה שסופרים לפי הכלל הישן, לפני ביטול ההעתקה.",
       recap: "ב-C++17 החזרה של ערך זמני לא מעתיקה" },
-    { id: "C02-Q3", question: "מה מדפיסה התכנית?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nK id(K k) { return k; }\nint main() {\n    K a;\n    K b = id(a);\n    cout << K::n;\n}\n```",
+    { id: "C02-Q3", question: "בהנחה שהתכנית מתקמפלת ב-C++17, מה היא מדפיסה?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nK id(K k) { return k; }\nint main() {\n    K a;\n    K b = id(a);\n    cout << K::n;\n}\n```",
       options: [
         { id: "a", value: "`0`" },
         { id: "b", value: "`1`" },
@@ -51,7 +51,7 @@ COURSE_LEVEL("copy_control", {
       correctId: "c",
       explanation: "הפרמטר הוא הפניה ולכן לא מעתיקים בכניסה, אבל טיפוס ההחזרה הוא `K` לפי ערך, ו-`return r;` מעתיק מהפניה. כל קריאה יוצרת עותק (גם אם התוצאה נזרקת), ולכן 2. התשובה 4 סופרת גם העתקה בכניסה שלא קיימת.",
       recap: "טיפוס החזרה חשוף = עותק בכל קריאה" },
-    { id: "C02-Q5", question: "מה מדפיסה התכנית?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nvoid f1(K& k) {}\nvoid f2(K k) {}\nvoid f3(K* k) {}\nK    f4() { return K(); }\nK&   f5(K& k) { return k; }\nK*   f6(K* k) { return k; }\nint main() {\n    K a;\n    f1(a);\n    f2(a);\n    f3(&a);\n    f4();\n    f5(a);\n    f6(&a);\n    cout << K::n;\n}\n```",
+    { id: "C02-Q5", question: "בהנחה שהתכנית מתקמפלת ב-C++17, מה היא מדפיסה?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nvoid f1(K& k) {}\nvoid f2(K k) {}\nvoid f3(K* k) {}\nK    f4() { return K(); }\nK&   f5(K& k) { return k; }\nK*   f6(K* k) { return k; }\nint main() {\n    K a;\n    f1(a);\n    f2(a);\n    f3(&a);\n    f4();\n    f5(a);\n    f6(&a);\n    cout << K::n;\n}\n```",
       options: [
         { id: "a", value: "`1`" },
         { id: "b", value: "`2`" },

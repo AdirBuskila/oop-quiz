@@ -1,0 +1,199 @@
+{
+ "courseId": "copy_control",
+ "method": "predicted by hand first; run questions compiled and run with clang++ -std=c++17 and c++20 (c++11 not usable: toolchain STL headers need C++14); compile questions: every option compiled separately",
+ "questions": {
+  "C01-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q3": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C01-Q4": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C01-Q5": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C02-Q1": {
+   "my_answer": "d",
+   "key": "d",
+   "verdict": "agree"
+  },
+  "C02-Q2": {
+   "my_answer": "d",
+   "key": "d",
+   "verdict": "agree"
+  },
+  "C02-Q3": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C02-Q4": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C02-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q1": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C03-Q2": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C03-Q3": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C03-Q4": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C03-Q5": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C04-Q1": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C04-Q2": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C04-Q3": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C04-Q4": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C04-Q5": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C05-Q1": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C05-Q2": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C05-Q3": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C05-Q4": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C05-Q5": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C05-Q6": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q1": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C06-Q2": {
+   "my_answer": "b",
+   "key": "b",
+   "verdict": "agree"
+  },
+  "C06-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q4": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  },
+  "C06-Q5": {
+   "my_answer": "c",
+   "key": "c",
+   "verdict": "agree"
+  }
+ },
+ "boss": {
+  "19A-A-Q9": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "19A-A-Q21": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "23S-A-Q2": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "23B-B-Q9": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "25B-A-Q11": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  }
+ },
+ "counts": {
+  "agree": 31,
+  "disagree": 0,
+  "unclear": 0
+ },
+ "fixes_and_flags": [
+  "C02-Q3 and C02-Q5 depended on copy elision (optional before C++17): stem now states C++17 (fixed).",
+  "C01-Q5 option d (pass by value) was taught only in C02: added a sentence to the C01 lesson (fixed).",
+  "C05-Q3/Q4 rely on double free / use after free: answers are conceptual and explicit, no code relies on UB.",
+  "Boss: all 5 ids exist, not held, no UB; 23S-A-Q2 and 25B-A-Q11 re-derived by hand (official:false in bank)."
+ ]
+}

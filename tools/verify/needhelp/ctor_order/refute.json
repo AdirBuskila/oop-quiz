@@ -1,0 +1,223 @@
+{
+ "courseId": "ctor_order",
+ "method": "predicted by hand first; run questions compiled and run with clang++ -std=c++17 and c++20 (c++11 not usable: toolchain STL headers need C++14); compile questions: every option compiled separately",
+ "questions": {
+  "C01-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C01-Q6": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C02-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C03-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C04-Q6": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q6": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C05-Q7": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q1": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q2": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q3": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q4": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q5": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  },
+  "C06-Q6": {
+   "my_answer": "a",
+   "key": "a",
+   "verdict": "agree"
+  }
+ },
+ "boss": {
+  "18A-A-Q11": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "22B-A-Q7": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "24B-A-Q6": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "24B-B-Q11": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "23B-B-Q13": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  },
+  "25B-A-Q5": {
+   "exists": true,
+   "held": false,
+   "verdict": "agree"
+  }
+ },
+ "counts": {
+  "agree": 35,
+  "disagree": 0,
+  "unclear": 0
+ },
+ "fixes_and_flags": [
+  "No standard-dependent output: every run question identical at c++17 and c++20.",
+  "C06-Q4 deals with non-virtual dtor only as a fix question, no UB program is run.",
+  "Boss: 18A-A-Q11 and 24B-B-Q11 official; 18A-A-Q11 uses nonstandard 'void main' (key b unaffected); all re-derived."
+ ]
+}
