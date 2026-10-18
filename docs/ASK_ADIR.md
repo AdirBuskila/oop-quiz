@@ -147,3 +147,10 @@ Open questions for Adir. One entry per item; the orchestrator moves it to Resolv
 - Question: of f1..f6, how many calls necessarily use the copy ctor? f2 (by-value parameter) does; f4 (by-value return) may be elided (guaranteed for a prvalue since C++17).
 - Needed: (done) override if the lecturer counts f4 (answer b).
 - Status: resolved (Arbiter ruling 2026-10-18): shipped a (1), confidence med.
+
+### SAMP-18 Q4, Q8, Q11, Q13, Q17 - held (sample exam has no key)
+- Path: sitting SAMP-18 (2018 sample exam, no date printed), question paper
+- Page: Q4 p.2, Q8 p.3, Q11 p.4, Q13 p.4, Q17 p.6
+- Question: Q4 shallow copy, the answer is the use-after-free itself (rule gives d; no ASan here). Q8 and Q17: the printed code compiles with no option (`&x == x.f()` compares X* with X&; `class Y` does not derive from X); same defects as 19A-C Q6 (arbiter shipped d) and 18A-A/B (Y : public X, answer d 1342). Q11: with the missing `;` added, A, B, C compile and D does not, which matches no option (nearest d). Q13: private inheritance leaves f reachable inside Y only, no option says that (nearest b).
+- Needed: apply the same repair rulings (Q4 d, Q8 d, Q17 d) and say what to do with Q11 and Q13, or keep them out of the bank.
+- Status: open
