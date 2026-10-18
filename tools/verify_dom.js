@@ -133,6 +133,8 @@ if (!QS.length) {
   const codes = $$("#examPick option").map(o => o.value).filter(Boolean);
   assert(codes.length >= 1, `exam picker lists ${codes.length} exam(s)`);
   const code = codes[0];
+  const shippedCodes = [...new Set(QS.map(x => x.examCode).filter(Boolean))];
+  assert(codes.length === shippedCodes.length && codes.every(c => shippedCodes.includes(c)), "exam picker lists only sittings with shipped questions: " + codes.join(","));
   $("#examPick").value = code; $("#examPick").dispatchEvent(new window.Event("change"));
   const paper = QS.filter(x => x.examCode === code).sort((a, b) => a.num - b.num);
   $("#startBtn").click();
