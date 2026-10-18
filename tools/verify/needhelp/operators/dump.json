@@ -1,0 +1,858 @@
+{
+ "courseId": "operators",
+ "levels": [
+  {
+   "id": "C01",
+   "order": 1,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C01-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct V {\n    int x;\n    V(int a) : x(a) {}\n    V operator+(const V& o) const { return V(x + o.x); }\n};\nint main() {\n    V a(3), b(4);\n    V c = a + b;\n    V d = a.operator+(c);\n    cout << c.x << \" \" << d.x;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`7 10`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`7 7`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`10 7`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`7 14`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct V {\n    int x;\n    V(int a = 0) : x(a) {}\n    V& operator+=(const V& o) { x += o.x; return *this; }\n};\nint main() {\n    V a(1), b(2), c(3);\n    (a += b) += c;\n    cout << a.x << b.x << c.x;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`623`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`323`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`633`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`126`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q3",
+     "question": "במחלקה `V` מוגדר בנאי `V(int)` (לא `explicit`) והאופרטור `V operator+(const V&) const` כפונקציה חברה. `a` ו-`b` הם אובייקטים מטיפוס `V`. איזו שורה **לא** מתקמפלת?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`V r = a + b;`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`V r = a + 5;`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`V r = 5 + a;`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`V r = a.operator+(b);`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q4",
+     "question": "`a` ו-`b` הם אובייקטים מטיפוס `V`. איזו הצהרה בתוך המחלקה `V` גורמת לשורה `V c = a * b;` להתקמפל? (בכל אפשרות הגוף תקין)",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`V operator*(const V& o) const`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`V operator*(const V& x, const V& y) const`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`V operator*() const`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`V operator*(int k) const`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct P {\n    string n;\n    P(string s) : n(s) {}\n    P operator-(const P& o) const {\n        cout << n << \"-\" << o.n << \" \";\n        return P(n + o.n);\n    }\n};\nint main() {\n    P a(\"a\"), b(\"b\"), c(\"c\");\n    P r = a - b - c;\n    cout << r.n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`a-b ab-c abc`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`b-c a-bc abc`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`a-b ab-c ab`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`a-b c-ab cab`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C02",
+   "order": 2,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C02-Q1",
+     "question": "במחלקה `V` אין בנאים נוספים, וההגדרה היחידה של חיבור היא הפונקציה החיצונית `V operator+(int k, const V& v)`. `a` הוא אובייקט מטיפוס `V`. איזה ביטוי מתקמפל?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`5 + a`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`a + 5`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`a + a`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`a.operator+(5)`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nclass Box {\n    int w;\npublic:\n    Box(int x) : w(x) {}\n    int get() const { return w; }\n    friend Box operator*(int k, const Box& b);\n};\nBox operator*(int k, const Box& b) { return Box(k * b.w); }\nint main() {\n    Box b(4);\n    cout << (3 * b).get() << \" \" << (2 * (3 * b)).get();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`12 24`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`12 12`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`7 9`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`12 8`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q3",
+     "question": "מה קורה בתכנית הבאה?\n```cpp\nclass Box {\n    int w;\npublic:\n    Box(int x) : w(x) {}\n};\nbool operator==(const Box& a, const Box& b) { return a.w == b.w; }\nint main() {\n    Box p(1), q(1);\n    cout << (p == q);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "שגיאת קומפילציה: הפונקציה החיצונית ניגשת לשדה פרטי ללא `friend`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "מודפס `1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "מודפס `0`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "שגיאת קומפילציה: אופרטור `==` חייב להיות פונקציה חברה"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q4",
+     "question": "במחלקה `V` מוצהרת (ומוגדרת) הפונקציה `friend V operator+(const V& a, const V& b);`. איזה ביטוי מתקמפל? (`a` ו-`b` הם `V`)",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`a + b`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`a.operator+(b)`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`V::operator+(a, b)`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`a.operator+(a, b)`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q5",
+     "question": "איזה מהאופרטורים הבאים **אי אפשר** להגדיר כפונקציה חיצונית (גלובלית) עבור מחלקה `V`?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`==`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`<<`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`=`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C03",
+   "order": 3,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C03-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct P { int a, b; };\nostream& operator<<(ostream& os, const P& p) {\n    return os << \"(\" << p.a << \",\" << p.b << \")\";\n}\nint main() {\n    P p{1, 2}, q{3, 4};\n    cout << p << q << endl;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`(1,2)(3,4)`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`(3,4)(1,2)`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`(1,2) (3,4)`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`(1,2)`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q2",
+     "question": "`a` ו-`b` הם אובייקטים מטיפוס `X`. איזו חתימה של `operator<<` (כפונקציה בעלת גוף תקין) גורמת לשורה `cout << a << b;` להתקמפל?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`ostream& operator<<(ostream& os, const X& x)`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`void operator<<(ostream& os, const X& x)`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "פונקציה חברה: `ostream& X::operator<<(ostream& os) const`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`ostream operator<<(ostream os, const X& x)`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct X {\n    int v;\n    ostream& operator<<(ostream& os) const { return os << \"X\" << v; }\n};\nint main() {\n    X x{5};\n    x << cout;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`X5`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "שגיאת קומפילציה"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`5`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "לא מודפס כלום"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct P { int a, b; };\nistream& operator>>(istream& is, P& p) {\n    return is >> p.a >> p.b;\n}\nint main() {\n    istringstream in(\"7 8 9 10\");\n    P p, q;\n    in >> p >> q;\n    cout << p.a << q.b;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`710`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`78`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`89`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`910`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q5",
+     "question": "במחלקה `X` שדה פרטי `v` ופונקציה ציבורית `int get() const`. אין הצהרות `friend`. מה אפשר לכתוב במקום `____` כדי שהפונקציה תתקמפל?\n```cpp\nostream& operator<<(ostream& os, const X& x) {\n    return os << ____;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`x.get()`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`x.v`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`v`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`X::v`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C04",
+   "order": 4,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C04-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct C {\n    int n;\n    C(int a) : n(a) {}\n    C& operator++() { ++n; return *this; }\n    C operator++(int) { C old = *this; ++n; return old; }\n};\nint main() {\n    C c(5);\n    C a = ++c;\n    C b = c++;\n    cout << a.n << b.n << c.n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`667`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`656`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`677`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`567`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q2",
+     "question": "במחלקה `C` מוגדר רק `C& operator++()` (חבר). `c` הוא אובייקט לא `const` מטיפוס `C`. איזו שורה **לא** מתקמפלת?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`++c;`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`c++;`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`++(++c);`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`c.operator++();`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct C {\n    int n;\n    C(int a) : n(a) {}\n    C operator++(int k) {\n        cout << \"k=\" << k << \" \";\n        C o = *this;\n        n += 1;\n        return o;\n    }\n};\nint main() {\n    C c(1);\n    c++;\n    c.operator++(7);\n    cout << c.n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`k=0 k=7 3`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`k=1 k=7 3`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`k=0 k=0 3`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`k=0 k=7 10`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct C {\n    int n;\n    C(int a) : n(a) {}\n    C& operator++() { ++n; return *this; }\n    C operator++(int) { C o = *this; ++n; return o; }\n};\nint main() {\n    C a(1);\n    ++(++a);\n    cout << a.n;\n    (a++)++;\n    cout << \" \" << a.n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`3 4`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`3 5`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`2 4`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`2 3`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct C { int n; };\nC& operator++(C& c) { c.n += 10; return c; }\nC operator++(C& c, int) { C o = c; c.n += 1; return o; }\nint main() {\n    C c{0};\n    C a = c++;\n    C b = ++c;\n    cout << a.n << \" \" << b.n << \" \" << c.n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`0 11 11`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`1 11 11`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`0 12 12`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`10 11 11`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C05",
+   "order": 5,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C05-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct X {\n    int v;\n    X(int a) { cout << \"ctor\" << a << \" \"; v = a; }\n};\nvoid f(X x) { cout << \"f\" << x.v; }\nint main() {\n    f(7);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`ctor7 f7`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`f7`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`ctor7`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "שגיאת קומפילציה"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q2",
+     "question": "במחלקה `X` הבנאי `explicit X(int a)`. איזו שורה **לא** מתקמפלת?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`X a(1);`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`X a = 1;`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`X a = X(1);`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`X a{1};`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct X {\n    int v;\n    X(int a = 0) : v(a) {}\n};\nX operator+(const X& a, const X& b) { return X(a.v + b.v); }\nint main() {\n    X a(2);\n    cout << (5 + a).v << (a + 5).v;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`77`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`75`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`7`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "שגיאת קומפילציה"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q4",
+     "question": "במחלקה `X` הבנאי `explicit X(int)`, והפונקציה `void f(X x)`. איזו קריאה מתקמפלת?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`f(X(5));`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`f(5);`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`f('a');`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`f(5.5);`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q5",
+     "question": "נתונות שתי מחלקות: `A` עם בנאי `A(int)` ו-`B` עם בנאי `B(const A&)`. שניהם לא `explicit`. איזו שורה **לא** מתקמפלת?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B b = 5;`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B b = A(5);`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B b(5);`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B b = B(A(5));`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C06",
+   "order": 6,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C06-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct M {\n    double v;\n    M(double a) : v(a) {}\n    operator int() const { return (int)v; }\n};\nint main() {\n    M m(3.9);\n    int n = m;\n    cout << n << \" \" << m + 1;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`3 4`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`3 4.9`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`4 5`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "שגיאת קומפילציה"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q2",
+     "question": "במחלקה `Temp` יש בנאי `Temp(double)` ושדה פרטי `double c`. מה צריך להוסיף למחלקה כדי שהשורה `Temp t(3); double d = t;` תתקמפל?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`operator double() const { return c; }`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`Temp(int x) { c = x; }` (עוד בנאי, הפעם מ-int)"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`double operator Temp() const { return c; }`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Temp operator double() const { return *this; }`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q3",
+     "question": "למחלקה `S` מוגדר `explicit operator bool() const`. `s` הוא אובייקט מטיפוס `S`. איזו שורה **לא** מתקמפלת?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`if (s) {}`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`bool b = s;`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`bool b = (bool)s;`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`bool b(s);`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct S {\n    int n;\n    operator int() const { return n * 2; }\n};\nint main() {\n    S s{4};\n    cout << s << \" \" << s + 1;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`8 9`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`4 5`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`8 5`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "שגיאת קומפילציה"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q5",
+     "question": "איזו הצהרה תקינה כאופרטור המרה ל-`int` בתוך מחלקה `S`?\n```cpp\nstruct S {\n    ____ { return 1; }\n};\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`operator int() const`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`int operator int() const`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`operator int(int k) const`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`void operator int() const`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C07",
+   "order": 7,
+   "boss": true,
+   "questions": [
+    {
+     "id": "bank:18A-B-Q7",
+     "bankId": "18A-B-Q7"
+    },
+    {
+     "id": "bank:19A-B-Q23",
+     "bankId": "19A-B-Q23"
+    },
+    {
+     "id": "bank:22B-B-Q11",
+     "bankId": "22B-B-Q11"
+    },
+    {
+     "id": "bank:21S-B-Q16",
+     "bankId": "21S-B-Q16"
+    },
+    {
+     "id": "bank:21B-A-Q7",
+     "bankId": "21B-A-Q7"
+    },
+    {
+     "id": "bank:22B-B-Q15",
+     "bankId": "22B-B-Q15"
+    }
+   ]
+  }
+ ]
+}
