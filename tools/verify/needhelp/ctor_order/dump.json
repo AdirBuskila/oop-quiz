@@ -1,0 +1,988 @@
+{
+ "courseId": "ctor_order",
+ "levels": [
+  {
+   "id": "C01",
+   "order": 1,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C01-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { A() { cout << \"A \"; }  ~A() { cout << \"~A \"; } };\nstruct B : A { B() { cout << \"B \"; }  ~B() { cout << \"~B \"; } };\nint main() {\n    B b;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B ~B ~A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B A ~A ~B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A B ~A ~B`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B A ~B ~A`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { A() { cout << \"A \"; }  ~A() { cout << \"~A \"; } };\nstruct B : A { B() { cout << \"B \"; }  ~B() { cout << \"~B \"; } };\nstruct C : B { C() { cout << \"C \"; }  ~C() { cout << \"~C \"; } };\nint main() {\n    C c;\n    cout << \"| \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B C | ~C ~B ~A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`C B A | ~A ~B ~C`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A B C | ~A ~B ~C`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`C | A B ~A ~B ~C`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { A() { cout << \"A \"; }  ~A() { cout << \"~A \"; } };\nstruct B : A { B() { cout << \"B \"; }  ~B() { cout << \"~B \"; } };\nint main() {\n    A a;\n    B b;\n    cout << \"end \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A A B end ~B ~A ~A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`A A B end ~A ~B ~A`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A B end ~B ~A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`A A B end ~A ~A ~B`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q4",
+     "question": "מה מדפיסה התכנית? שימו לב לפרמטר של הבנאי של `B`.\n```cpp\nstruct A { A() { cout << \"A \"; }  ~A() { cout << \"~A \"; } };\nstruct B : A {\n    B(int x) { cout << \"B\" << x << \" \"; }\n    ~B() { cout << \"~B \"; }\n};\nint main() {\n    B b(5);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B5 ~B ~A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B5 ~B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A5 B5 ~B ~A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B5 A ~A ~B`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A {\n    A() { cout << \"A() \"; }\n    A(int n) { cout << \"A(\" << n << \") \"; }\n};\nstruct B : A {\n    B() : A(7) { cout << \"B \"; }\n    B(int n) { cout << \"B\" << n << \" \"; }\n};\nint main() {\n    B x;\n    B y(4);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A(7) B A() B4`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`A(7) B A(4) B4`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A() B A() B4`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B A(7) B4 A()`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q6",
+     "question": "מה קורה בהידור של התכנית הבאה?\n```cpp\nstruct A {\n    A(int n) { cout << \"A \"; }\n};\nstruct B : A {\n    B() { cout << \"B \"; }\n};\nint main() {\n    B b;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "שגיאת קומפילציה: ל-`A` אין בנאי ברירת מחדל ו-`B` לא קוראת לבנאי אחר שלו"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "מודפס `A B`, כי הקומפיילר מעביר 0 לבנאי של `A`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "מודפס `B`, כי `A` לא יכול להיבנות בלי פרמטר"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "מודפס `B A`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C02",
+   "order": 2,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C02-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct M1 { M1() { cout << \"M1 \"; }  ~M1() { cout << \"~M1 \"; } };\nstruct M2 { M2() { cout << \"M2 \"; }  ~M2() { cout << \"~M2 \"; } };\nstruct D {\n    M1 a;\n    M2 b;\n    D()  { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\nint main() {\n    D d;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`M1 M2 D ~D ~M2 ~M1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`D M1 M2 ~M2 ~M1 ~D`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`M1 M2 D ~D ~M1 ~M2`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`M2 M1 D ~D ~M1 ~M2`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B { B() { cout << \"B \"; }  ~B() { cout << \"~B \"; } };\nstruct M { M() { cout << \"M \"; }  ~M() { cout << \"~M \"; } };\nstruct D : B {\n    M m;\n    D()  { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\nint main() {\n    D d;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B M D ~D ~M ~B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`M B D ~D ~B ~M`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B D M ~M ~D ~B`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B M D ~D ~B ~M`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A { A() { cout << \"A \"; }  ~A() { cout << \"~A \"; } };\nstruct B : A { B() { cout << \"B \"; }  ~B() { cout << \"~B \"; } };\nstruct C {\n    B b;\n    C()  { cout << \"C \"; }\n    ~C() { cout << \"~C \"; }\n};\nint main() {\n    C c;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A B C ~C ~B ~A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`C A B ~B ~A ~C`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B A C ~C ~A ~B`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`A B C ~A ~B ~C`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct P { P() { cout << \"P \"; }  ~P() { cout << \"~P \"; } };\nstruct Q { Q() { cout << \"Q \"; }  ~Q() { cout << \"~Q \"; } };\nstruct D {\n    P p;\n    D()  { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\nint main() {\n    Q q;\n    D d;\n    cout << \"end \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Q P D end ~D ~P ~Q`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`P D Q end ~Q ~D ~P`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`Q P D end ~Q ~D ~P`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Q D P end ~P ~D ~Q`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q5",
+     "question": "מה קורה בהידור של התכנית הבאה?\n```cpp\nstruct M {\n    M(int n) { cout << \"M \"; }\n};\nstruct D {\n    M m;\n    D() { cout << \"D \"; }\n};\nint main() {\n    D d;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "שגיאת קומפילציה: אין ל-`M` בנאי ברירת מחדל, והשדה `m` לא מאותחל ברשימת האתחול"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "מודפס `D`, כי `m` נשאר לא מאותחל"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "מודפס `M D`, כי `n` מקבל 0"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "מודפס `D M`, כי השדה נבנה אחרי הגוף"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C03",
+   "order": 3,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C03-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct P {\n    int id;\n    P(int i) : id(i) { cout << \"+\" << id << \" \"; }\n    ~P() { cout << \"-\" << id << \" \"; }\n};\nstruct H {\n    P x;\n    P y;\n    H() : y(2), x(1) { cout << \"H \"; }\n    ~H() { cout << \"~H \"; }\n};\nint main() {\n    H h;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+1 +2 H ~H -2 -1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+2 +1 H ~H -1 -2`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`+2 +1 H ~H -2 -1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+1 +2 H ~H -1 -2`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nint tr(const char* s, int v) { cout << s << \" \"; return v; }\nstruct S {\n    int a;\n    int b;\n    S() : b(tr(\"b\", 2)), a(tr(\"a\", 1)) { cout << \"body \"; }\n};\nint main() {\n    S s;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`a b body`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`b a body`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`body a b`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`a body b`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B1 { B1() { cout << \"B1 \"; }  ~B1() { cout << \"~B1 \"; } };\nstruct B2 { B2() { cout << \"B2 \"; }  ~B2() { cout << \"~B2 \"; } };\nstruct D : B2, B1 {\n    D() : B1(), B2() { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\nint main() {\n    D d;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B2 B1 D ~D ~B1 ~B2`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B1 B2 D ~D ~B2 ~B1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B2 B1 D ~D ~B2 ~B1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B1 B2 D ~D ~B1 ~B2`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct Base1 { Base1() { cout << \"Base1 \"; }  ~Base1() { cout << \"~Base1 \"; } };\nstruct Base2 { Base2() { cout << \"Base2 \"; }  ~Base2() { cout << \"~Base2 \"; } };\nstruct M1 { M1() { cout << \"M1 \"; }  ~M1() { cout << \"~M1 \"; } };\nstruct M2 { M2() { cout << \"M2 \"; }  ~M2() { cout << \"~M2 \"; } };\nstruct D : Base1, Base2 {\n    M2 m2;\n    M1 m1;\n    D() : m1(), m2(), Base2(), Base1() { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\nint main() {\n    D d;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Base1 Base2 M2 M1 D ~D ~M1 ~M2 ~Base2 ~Base1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`Base2 Base1 M1 M2 D ~D ~M2 ~M1 ~Base1 ~Base2`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`M1 M2 Base2 Base1 D ~D ~Base1 ~Base2 ~M2 ~M1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Base1 Base2 M1 M2 D ~D ~M2 ~M1 ~Base2 ~Base1`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B {\n    B()      { cout << \"B() \"; }\n    B(int n) { cout << \"B(\" << n << \") \"; }\n};\nstruct M {\n    M(int n) { cout << \"M\" << n << \" \"; }\n};\nstruct D : B {\n    M m1;\n    M m2;\n    D() : m2(2), B(9), m1(1) { cout << \"D \"; }\n};\nint main() {\n    D d;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B(9) M1 M2 D`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`M2 B(9) M1 D`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B() M1 M2 D`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B(9) M2 M1 D`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C04",
+   "order": 4,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C04-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nT g(1);\nint main() {\n    cout << \"main \";\n    T l(2);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+1 main +2 -2 -1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`main +1 +2 -2 -1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`+1 main +2 -1 -2`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`main +2 -2 +1 -1`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nT g1(1);\nT g2(2);\nint main() {\n    T l(3);\n    cout << \"end \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+1 +2 +3 end -3 -2 -1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+1 +2 +3 end -3 -1 -2`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`+3 +1 +2 end -2 -1 -3`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+2 +1 +3 end -3 -1 -2`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nint main() {\n    T a(1);\n    static T s(2);\n    T b(3);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+1 +2 +3 -3 -1 -2`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+1 +2 +3 -3 -2 -1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`+2 +1 +3 -3 -1 -2`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+1 +2 +3 -2 -3 -1`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nvoid f() {\n    T a(5);\n    static T s(6);\n}\nint main() {\n    f();\n    f();\n    cout << \"end \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+5 +6 -5 +5 -5 end -6`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+5 +6 -5 -6 +5 +6 -5 -6 end`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`+5 +6 -5 +5 +6 -5 end -6 -6`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+5 +6 -6 -5 +5 -5 end`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nvoid f() {\n    static T s(9);\n}\nT g(1);\nint main() {\n    T l(2);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+1 +2 -2 -1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+9 +1 +2 -2 -1 -9`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`+1 +2 +9 -2 -9 -1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+1 +2 -2 -1 -9`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q6",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nT g(1);\nvoid f() {\n    static T s(2);\n    T l(3);\n}\nint main() {\n    T a(4);\n    f();\n    static T b(5);\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+1 +4 +2 +3 -3 +5 -4 -5 -2 -1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+1 +4 +2 +3 -3 +5 -4 -1 -2 -5`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`+1 +4 +2 +3 -3 +5 -5 -4 -2 -1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+4 +2 +3 -3 +5 -4 +1 -1 -2 -5`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C05",
+   "order": 5,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C05-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nint main() {\n    cout << \"a \";\n    T(1);\n    cout << \"b \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`a +1 -1 b`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`a +1 b -1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`a b +1 -1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+1 a b -1`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nint main() {\n    const T& r = T(2);\n    cout << \"mid \";\n    T(3);\n    cout << \"end \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+2 mid +3 -3 end -2`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+2 -2 mid +3 -3 end`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`+2 mid +3 end -3 -2`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+2 mid +3 -3 -2 end`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nint counter = 0;\nstruct U {\n    int id;\n    U() : id(++counter) { cout << \"U\" << id << \" \"; }\n    ~U() { cout << \"~U\" << id << \" \"; }\n};\nint main() {\n    U arr[3];\n    cout << \"end \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`U1 U2 U3 end ~U3 ~U2 ~U1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`U3 U2 U1 end ~U1 ~U2 ~U3`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`U1 U2 U3 end ~U1 ~U2 ~U3`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`U1 end U2 end U3 end ~U3 ~U2 ~U1`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nint main() {\n    T* p = new T(5);\n    cout << \"x \";\n    delete p;\n    cout << \"y \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+5 x -5 y`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+5 x y -5`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`x +5 -5 y`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+5 x y`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nint main() {\n    T a(1);\n    T* p = new T(2);\n    cout << \"end \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+1 +2 end -1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+1 +2 end -2 -1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`+1 +2 end -1 -2`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+1 +2 end`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q6",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    int n;\n    T(int n) : n(n) { cout << \"+\" << n << \" \"; }\n    ~T() { cout << \"-\" << n << \" \"; }\n};\nvoid f(const T& t) { cout << \"in \"; }\nint main() {\n    f(T(3));\n    cout << \"after \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`+3 in -3 after`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`+3 in after -3`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`in +3 -3 after`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`+3 -3 in after`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q7",
+     "question": "מה מדפיסה התכנית?\n```cpp\nint counter = 0;\nstruct U {\n    int id;\n    U() : id(++counter) { cout << \"U\" << id << \" \"; }\n    ~U() { cout << \"~U\" << id << \" \"; }\n};\nint main() {\n    U* p = new U[2];\n    cout << \"mid \";\n    delete[] p;\n    cout << \"end \";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`U1 U2 mid ~U2 ~U1 end`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`U1 U2 mid ~U1 ~U2 end`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`U1 U2 mid end`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`mid U1 U2 ~U2 ~U1 end`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C06",
+   "order": 6,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C06-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B {\n    B() { cout << \"B \"; }\n    virtual ~B() { cout << \"~B \"; }\n};\nstruct D : B {\n    D() { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\nint main() {\n    B* p = new D;\n    delete p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B D ~D ~B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B D ~B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`D B ~B ~D`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B D ~B ~D`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B {\n    B() { cout << \"B \"; }\n    virtual ~B() { cout << \"~B \"; }\n};\nstruct M {\n    M() { cout << \"M \"; }\n    ~M() { cout << \"~M \"; }\n};\nstruct D : B {\n    M m;\n    D() { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\nint main() {\n    B* p = new D;\n    delete p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B M D ~D ~M ~B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B M D ~B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B M D ~D ~B ~M`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B D M ~M ~D ~B`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B {\n    B() { cout << \"B \"; }\n    virtual ~B() { cout << \"~B \"; }\n};\nstruct D : B {\n    D() { cout << \"D \"; }\n    ~D() { cout << \"~D \"; }\n};\nint main() {\n    B* arr[2] = { new D, new B };\n    delete arr[0];\n    delete arr[1];\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B D B ~D ~B ~B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B D B ~B ~B`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B D B ~D ~B`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B B D ~B ~D ~B`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q4",
+     "question": "ההורס של `B` לא וירטואלי, ובתכנית נכתב `B* p = new D; delete p;`. איזה שינוי תקין מבטיח שבזמן `delete p` יופעל גם ההורס של `D`?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "להוסיף `virtual` להורס של `B`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "להוסיף `virtual` לבנאי של `D`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "למחוק את ההורס של `D`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "להוסיף `virtual` לבנאי של `B`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B {\n    B() { f(); }\n    virtual void f() { cout << \"B::f \"; }\n    virtual ~B() {}\n};\nstruct D : B {\n    void f() { cout << \"D::f \"; }\n};\nint main() {\n    D d;\n    d.f();\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B::f D::f`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`D::f D::f`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`D::f`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B::f B::f`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q6",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct B {\n    B()  { cout << \"B() \";  whoAmI(); }\n    virtual ~B() { cout << \"~B() \"; whoAmI(); }\n    virtual void whoAmI() { cout << \"[B] \"; }\n};\nstruct D : B {\n    D()  { cout << \"D() \";  whoAmI(); }\n    ~D() { cout << \"~D() \"; whoAmI(); }\n    void whoAmI() { cout << \"[D] \"; }\n};\nint main() {\n    B* p = new D;\n    delete p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`B() [B] D() [D] ~D() [D] ~B() [B]`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`B() [D] D() [D] ~D() [D] ~B() [D]`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`B() [B] D() [D] ~D() [D] ~B() [D]`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`B() [B] D() [D] ~D() [B] ~B() [B]`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C07",
+   "order": 7,
+   "boss": true,
+   "questions": [
+    {
+     "id": "bank:18A-A-Q11",
+     "bankId": "18A-A-Q11"
+    },
+    {
+     "id": "bank:22B-A-Q7",
+     "bankId": "22B-A-Q7"
+    },
+    {
+     "id": "bank:24B-A-Q6",
+     "bankId": "24B-A-Q6"
+    },
+    {
+     "id": "bank:24B-B-Q11",
+     "bankId": "24B-B-Q11"
+    },
+    {
+     "id": "bank:23B-B-Q13",
+     "bankId": "23B-B-Q13"
+    },
+    {
+     "id": "bank:25B-A-Q5",
+     "bankId": "25B-A-Q5"
+    }
+   ]
+  }
+ ]
+}

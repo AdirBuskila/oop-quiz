@@ -1710,10 +1710,10 @@ window.COURSES = {
        }
       ],
       "correctId": "a",
-      "explanation": "`x` מוצהר לפני `y`, ולכן נבנה ראשון (`+1`) למרות שברשימת האתחול `y(2)` כתוב קודם. ההריסה הפוכה: `~H`, אחר כך `y` (`-2`) ואז `x` (`-1`). התשובות עם `+2 +1` מציית לסדר הכתיבה ברשימה.",
+      "explanation": "`x` מוצהר לפני `y`, ולכן נבנה ראשון (`+1`) למרות שברשימת האתחול `y(2)` כתוב קודם. ההריסה הפוכה: `~H`, אחר כך `y` (`-2`) ואז `x` (`-1`). התשובות שמתחילות ב-`+2` קוראות את סדר הכתיבה ברשימה.",
       "recap": "שדות נבנים לפי סדר ההצהרה",
       "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct P {\n    int id;\n    P(int i) : id(i) { cout &lt;&lt; \"+\" &lt;&lt; id &lt;&lt; \" \"; }\n    ~P() { cout &lt;&lt; \"-\" &lt;&lt; id &lt;&lt; \" \"; }\n};\nstruct H {\n    P x;\n    P y;\n    H() : y(2), x(1) { cout &lt;&lt; \"H \"; }\n    ~H() { cout &lt;&lt; \"~H \"; }\n};\nint main() {\n    H h;\n}</code></pre>",
-      "explanationHtml": "<code class=\"tok\" dir=\"ltr\">x</code> מוצהר לפני <code class=\"tok\" dir=\"ltr\">y</code>, ולכן נבנה ראשון (<code class=\"tok\" dir=\"ltr\">+1</code>) למרות שברשימת האתחול <code class=\"tok\" dir=\"ltr\">y(2)</code> כתוב קודם. ההריסה הפוכה: <code class=\"tok\" dir=\"ltr\">~H</code>, אחר כך <code class=\"tok\" dir=\"ltr\">y</code> (<code class=\"tok\" dir=\"ltr\">-2</code>) ואז <code class=\"tok\" dir=\"ltr\">x</code> (<code class=\"tok\" dir=\"ltr\">-1</code>). התשובות עם <code class=\"tok\" dir=\"ltr\">+2 +1</code> מציית לסדר הכתיבה ברשימה.",
+      "explanationHtml": "<code class=\"tok\" dir=\"ltr\">x</code> מוצהר לפני <code class=\"tok\" dir=\"ltr\">y</code>, ולכן נבנה ראשון (<code class=\"tok\" dir=\"ltr\">+1</code>) למרות שברשימת האתחול <code class=\"tok\" dir=\"ltr\">y(2)</code> כתוב קודם. ההריסה הפוכה: <code class=\"tok\" dir=\"ltr\">~H</code>, אחר כך <code class=\"tok\" dir=\"ltr\">y</code> (<code class=\"tok\" dir=\"ltr\">-2</code>) ואז <code class=\"tok\" dir=\"ltr\">x</code> (<code class=\"tok\" dir=\"ltr\">-1</code>). התשובות שמתחילות ב-<code class=\"tok\" dir=\"ltr\">+2</code> קוראות את סדר הכתיבה ברשימה.",
       "recapHtml": "שדות נבנים לפי סדר ההצהרה"
      },
      {
@@ -2587,6 +2587,50 @@ window.COURSES = {
       "recapHtml": "גם בהורס: הסוג הוא זה של ההורס שרץ כרגע"
      }
     ]
+   },
+   {
+    "id": "C07",
+    "order": 7,
+    "icon": "🏆",
+    "title": "מבחן גמר: סדר בנייה והריסה",
+    "goal": "לפתור שאלות אמיתיות מהמבחנים על סדר בנייה והריסה.",
+    "source": "ai-verified",
+    "boss": true,
+    "lesson": {
+     "html": "\n<p>בשאלות \"מה מדפיסה התכנית\" על סדר בנייה, רושמים רשימה אחת של כל האובייקטים לפי זמן הבנייה, ואז קוראים אותה הפוך כדי לקבל את ההריסה.</p>\n<ol>\n<li><b>גלובליים</b> לפי סדר הקובץ, לפני <code>main</code>.</li>\n<li>ב-<code>main</code> שורה אחרי שורה. לכל אובייקט: <b>אבות</b> (לפי רשימת הירושה), <b>שדות</b> (לפי ההצהרה), <b>גוף</b>. סטטי מקומי נכנס לרשימה רק כשמגיעים לשורה שלו, ופעם אחת.</li>\n<li>הריסה: מקומיים בסוף הבלוק בסדר הפוך, ואחריהם סטטיים וגלובליים בסדר הפוך לסיום בנייתם.</li>\n</ol>\n<div class=\"lesson-rule\">🔑 כותבים ליד כל אובייקט את שלוש הרמות (אב, שדה, גוף) ורק אז מדפיסים. רשימת האתחול לא משנה את הסדר.</div>\n<div class=\"lesson-trap\">⚠️ בשאלות על <code>delete</code> דרך מצביע לאב בלי <code>virtual</code> התנהגות התכנית לא מוגדרת. כאן נבחרו שאלות שבהן הפלט מוגדר היטב.</div>\n"
+    },
+    "questions": [
+     {
+      "bankId": "18A-A-Q11",
+      "recap": "אב ואז נגזרת; הריסה הפוכה.",
+      "recapHtml": "אב ואז נגזרת; הריסה הפוכה."
+     },
+     {
+      "bankId": "22B-A-Q7",
+      "recap": "אב, שדה (בנאי ברירת מחדל), ואחר כך זמני בהשמה בגוף.",
+      "recapHtml": "אב, שדה (בנאי ברירת מחדל), ואחר כך זמני בהשמה בגוף."
+     },
+     {
+      "bankId": "24B-A-Q6",
+      "recap": "אבות לפי רשימת הירושה, שדות לפי ההצהרה, גוף.",
+      "recapHtml": "אבות לפי רשימת הירושה, שדות לפי ההצהרה, גוף."
+     },
+     {
+      "bankId": "24B-B-Q11",
+      "recap": "גלובלי, מקומי עם שרשרת ירושה, וסטטי מקומי.",
+      "recapHtml": "גלובלי, מקומי עם שרשרת ירושה, וסטטי מקומי."
+     },
+     {
+      "bankId": "23B-B-Q13",
+      "recap": "גלובלי, main, מקומיים וסטטיים בפונקציות ובהריסה הפוכה.",
+      "recapHtml": "גלובלי, main, מקומיים וסטטיים בפונקציות ובהריסה הפוכה."
+     },
+     {
+      "bankId": "25B-A-Q5",
+      "recap": "גלובלי, סטטי, מקומי עם אב ושדה, והריסה הפוכה.",
+      "recapHtml": "גלובלי, סטטי, מקומי עם אב ושדה, והריסה הפוכה."
+     }
+    ]
    }
   ]
  },
@@ -2984,7 +3028,7 @@ window.COURSES = {
     "id": "C03",
     "order": 3,
     "icon": "🖨️",
-    "title": "אופרטורים << ו->>",
+    "title": "הדפסה וקלט בזרמים",
     "goal": "לכתוב ולזהות operator<< ו-operator>> תקינים, ולהסביר למה הם חיצוניים.",
     "source": "ai-verified",
     "boss": false,
@@ -3171,6 +3215,632 @@ window.COURSES = {
       "questionHtml": "במחלקה <code class=\"tok\" dir=\"ltr\">X</code> שדה פרטי <code class=\"tok\" dir=\"ltr\">v</code> ופונקציה ציבורית <code class=\"tok\" dir=\"ltr\">int get() const</code>. אין הצהרות <code class=\"tok\" dir=\"ltr\">friend</code>. מה אפשר לכתוב במקום <code class=\"tok\" dir=\"ltr\">____</code> כדי שהפונקציה תתקמפל?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>ostream&amp; operator&lt;&lt;(ostream&amp; os, const X&amp; x) {\n    return os &lt;&lt; ____;\n}</code></pre>",
       "explanationHtml": "הפונקציה חיצונית ואינה friend, ולכן היא יכולה להשתמש רק בממשק הציבורי: <code class=\"tok\" dir=\"ltr\">x.get()</code>. הגישה <code class=\"tok\" dir=\"ltr\">x.v</code> לשדה פרטי נכשלת. <code class=\"tok\" dir=\"ltr\">v</code> לבדו לא קיים בפונקציה חיצונית (אין <code class=\"tok\" dir=\"ltr\">this</code>). גם <code class=\"tok\" dir=\"ltr\">X::v</code> לא עוזר: השדה לא סטטי ופרטי.",
       "recapHtml": "בלי friend: רק דרך הפונקציות הציבוריות"
+     }
+    ]
+   },
+   {
+    "id": "C04",
+    "order": 4,
+    "icon": "⬆️",
+    "title": "++ לפני ואחרי",
+    "goal": "להבדיל בין ++x ל-x++ בהעמסה: החתימות, ערך ההחזרה והאפקט.",
+    "source": "ai-verified",
+    "boss": false,
+    "lesson": {
+     "html": "\n<p>ל-<code>++</code> יש שתי צורות, והקומפיילר מבחין ביניהן לפי <b>פרמטר <code>int</code> מדומה</b>:</p>\n<table>\n<thead><tr><th>הביטוי</th><th>החתימה (חבר)</th><th>מה מחזירים</th></tr></thead>\n<tbody>\n<tr><td><code>++x</code> (prefix)</td><td><code>X&amp; operator++()</code></td><td>את האובייקט עצמו, אחרי השינוי (בהפניה)</td></tr>\n<tr><td><code>x++</code> (postfix)</td><td><code>X operator++(int)</code></td><td>עותק של הערך <b>הישן</b> (לפי ערך)</td></tr>\n</tbody></table>\n<ul>\n<li>הפרמטר <code>int</code> של ה-postfix לא משמש לכלום, הקומפיילר מעביר אליו 0 רק כדי להבדיל בין החתימות.</li>\n<li>ה-postfix שומר עותק של הערך הישן, מגדיל את האובייקט, ומחזיר את העותק. לכן הוא מחזיר <b>לפי ערך</b>: אי אפשר להחזיר הפניה למשתנה מקומי.</li>\n<li>כפונקציה חיצונית: <code>X&amp; operator++(X&amp;)</code> ו-<code>X operator++(X&amp;, int)</code>.</li>\n<li>אם מוגדר רק <code>operator++()</code>, הביטוי <code>x++</code> לא מתקמפל, ולהפך.</li>\n</ul>\n<div class=\"lesson-rule\">🔑 <b>prefix: בלי פרמטר, מחזיר הפניה. postfix: <code>(int)</code>, מחזיר עותק של הערך הישן.</b></div>\n<div class=\"lesson-ex\">\n<pre>struct C {\n    int n;\n    C&amp; operator++()    { ++n; return *this; }\n    C  operator++(int) { C old = *this; ++n; return old; }\n};\nC c{5};\nC a = ++c;   // c.n = 6, a.n = 6\nC b = c++;   // b.n = 6 (הישן), c.n = 7</pre></div>\n"
+    },
+    "questions": [
+     {
+      "id": "C04-Q1",
+      "question": "מה מדפיסה התכנית?\n```cpp\nstruct C {\n    int n;\n    C(int a) : n(a) {}\n    C& operator++() { ++n; return *this; }\n    C operator++(int) { C old = *this; ++n; return old; }\n};\nint main() {\n    C c(5);\n    C a = ++c;\n    C b = c++;\n    cout << a.n << b.n << c.n;\n}\n```",
+      "options": [
+       {
+        "id": "a",
+        "value": "`667`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">667</code>"
+       },
+       {
+        "id": "b",
+        "value": "`656`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">656</code>"
+       },
+       {
+        "id": "c",
+        "value": "`677`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">677</code>"
+       },
+       {
+        "id": "d",
+        "value": "`567`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">567</code>"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "`++c` מעלה את `c` ל-6 ומחזיר אותו: `a.n = 6`. `c++` מחזיר עותק של הערך הישן (6), ואז מעלה את `c` ל-7: `b.n = 6`, `c.n = 7`. התשובה `677` נותנת ל-`b` את הערך החדש. `567` ו-`656` מתבססות על ערך התחלתי לא נכון או על ערך ישן ב-prefix.",
+      "recap": "prefix מחזיר את החדש, postfix את הישן",
+      "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct C {\n    int n;\n    C(int a) : n(a) {}\n    C&amp; operator++() { ++n; return *this; }\n    C operator++(int) { C old = *this; ++n; return old; }\n};\nint main() {\n    C c(5);\n    C a = ++c;\n    C b = c++;\n    cout &lt;&lt; a.n &lt;&lt; b.n &lt;&lt; c.n;\n}</code></pre>",
+      "explanationHtml": "<code class=\"tok\" dir=\"ltr\">++c</code> מעלה את <code class=\"tok\" dir=\"ltr\">c</code> ל-6 ומחזיר אותו: <code class=\"tok\" dir=\"ltr\">a.n = 6</code>. <code class=\"tok\" dir=\"ltr\">c++</code> מחזיר עותק של הערך הישן (6), ואז מעלה את <code class=\"tok\" dir=\"ltr\">c</code> ל-7: <code class=\"tok\" dir=\"ltr\">b.n = 6</code>, <code class=\"tok\" dir=\"ltr\">c.n = 7</code>. התשובה <code class=\"tok\" dir=\"ltr\">677</code> נותנת ל-<code class=\"tok\" dir=\"ltr\">b</code> את הערך החדש. <code class=\"tok\" dir=\"ltr\">567</code> ו-<code class=\"tok\" dir=\"ltr\">656</code> מתבססות על ערך התחלתי לא נכון או על ערך ישן ב-prefix.",
+      "recapHtml": "prefix מחזיר את החדש, postfix את הישן"
+     },
+     {
+      "id": "C04-Q2",
+      "question": "במחלקה `C` מוגדר רק `C& operator++()` (חבר). `c` הוא אובייקט לא `const` מטיפוס `C`. איזו שורה **לא** מתקמפלת?",
+      "options": [
+       {
+        "id": "a",
+        "value": "`++c;`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">++c;</code>"
+       },
+       {
+        "id": "b",
+        "value": "`c++;`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">c++;</code>"
+       },
+       {
+        "id": "c",
+        "value": "`++(++c);`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">++(++c);</code>"
+       },
+       {
+        "id": "d",
+        "value": "`c.operator++();`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">c.operator++();</code>"
+       }
+      ],
+      "correctId": "b",
+      "explanation": "הביטוי `c++` דורש `operator++(int)`, שלא הוגדר. `++c` תקין. `++(++c)` תקין כי `++c` מחזיר הפניה לאובייקט עצמו וגם אפשר להגדיל אותו שוב. `c.operator++()` היא הקריאה המפורשת ל-prefix.",
+      "recap": "x++ דורש operator++(int)",
+      "questionHtml": "במחלקה <code class=\"tok\" dir=\"ltr\">C</code> מוגדר רק <code class=\"tok\" dir=\"ltr\">C&amp; operator++()</code> (חבר). <code class=\"tok\" dir=\"ltr\">c</code> הוא אובייקט לא <code class=\"tok\" dir=\"ltr\">const</code> מטיפוס <code class=\"tok\" dir=\"ltr\">C</code>. איזו שורה <strong>לא</strong> מתקמפלת?",
+      "explanationHtml": "הביטוי <code class=\"tok\" dir=\"ltr\">c++</code> דורש <code class=\"tok\" dir=\"ltr\">operator++(int)</code>, שלא הוגדר. <code class=\"tok\" dir=\"ltr\">++c</code> תקין. <code class=\"tok\" dir=\"ltr\">++(++c)</code> תקין כי <code class=\"tok\" dir=\"ltr\">++c</code> מחזיר הפניה לאובייקט עצמו וגם אפשר להגדיל אותו שוב. <code class=\"tok\" dir=\"ltr\">c.operator++()</code> היא הקריאה המפורשת ל-prefix.",
+      "recapHtml": "x++ דורש operator++(int)"
+     },
+     {
+      "id": "C04-Q3",
+      "question": "מה מדפיסה התכנית?\n```cpp\nstruct C {\n    int n;\n    C(int a) : n(a) {}\n    C operator++(int k) {\n        cout << \"k=\" << k << \" \";\n        C o = *this;\n        n += 1;\n        return o;\n    }\n};\nint main() {\n    C c(1);\n    c++;\n    c.operator++(7);\n    cout << c.n;\n}\n```",
+      "options": [
+       {
+        "id": "a",
+        "value": "`k=0 k=7 3`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">k=0 k=7 3</code>"
+       },
+       {
+        "id": "b",
+        "value": "`k=1 k=7 3`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">k=1 k=7 3</code>"
+       },
+       {
+        "id": "c",
+        "value": "`k=0 k=0 3`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">k=0 k=0 3</code>"
+       },
+       {
+        "id": "d",
+        "value": "`k=0 k=7 10`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">k=0 k=7 10</code>"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "בביטוי `c++` הקומפיילר מעביר 0 לפרמטר המדומה, ובקריאה המפורשת `c.operator++(7)` מועבר 7 כפי שנכתב. בכל קריאה `n` גדל ב-1, ולכן בסוף `n = 3`. התשובה `k=1` ו-`k=0 k=0` מניחות ערכים אחרים לפרמטר. `10` מניחה שהערך 7 נכנס לשדה, אבל הפרמטר אינו בשימוש בגוף הפונקציה.",
+      "recap": "ב-x++ הקומפיילר מעביר 0 לפרמטר ה-int",
+      "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct C {\n    int n;\n    C(int a) : n(a) {}\n    C operator++(int k) {\n        cout &lt;&lt; \"k=\" &lt;&lt; k &lt;&lt; \" \";\n        C o = *this;\n        n += 1;\n        return o;\n    }\n};\nint main() {\n    C c(1);\n    c++;\n    c.operator++(7);\n    cout &lt;&lt; c.n;\n}</code></pre>",
+      "explanationHtml": "בביטוי <code class=\"tok\" dir=\"ltr\">c++</code> הקומפיילר מעביר 0 לפרמטר המדומה, ובקריאה המפורשת <code class=\"tok\" dir=\"ltr\">c.operator++(7)</code> מועבר 7 כפי שנכתב. בכל קריאה <code class=\"tok\" dir=\"ltr\">n</code> גדל ב-1, ולכן בסוף <code class=\"tok\" dir=\"ltr\">n = 3</code>. התשובה <code class=\"tok\" dir=\"ltr\">k=1</code> ו-<code class=\"tok\" dir=\"ltr\">k=0 k=0</code> מניחות ערכים אחרים לפרמטר. <code class=\"tok\" dir=\"ltr\">10</code> מניחה שהערך 7 נכנס לשדה, אבל הפרמטר אינו בשימוש בגוף הפונקציה.",
+      "recapHtml": "ב-x++ הקומפיילר מעביר 0 לפרמטר ה-int"
+     },
+     {
+      "id": "C04-Q4",
+      "question": "מה מדפיסה התכנית?\n```cpp\nstruct C {\n    int n;\n    C(int a) : n(a) {}\n    C& operator++() { ++n; return *this; }\n    C operator++(int) { C o = *this; ++n; return o; }\n};\nint main() {\n    C a(1);\n    ++(++a);\n    cout << a.n;\n    (a++)++;\n    cout << \" \" << a.n;\n}\n```",
+      "options": [
+       {
+        "id": "a",
+        "value": "`3 4`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">3 4</code>"
+       },
+       {
+        "id": "b",
+        "value": "`3 5`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">3 5</code>"
+       },
+       {
+        "id": "c",
+        "value": "`2 4`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">2 4</code>"
+       },
+       {
+        "id": "d",
+        "value": "`2 3`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">2 3</code>"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "`++a` מחזיר הפניה ל-`a` עצמו, ולכן `++(++a)` מעלה את `a` פעמיים: 3. ב-`(a++)++` הביטוי `a++` מעלה את `a` ל-4 ומחזיר עותק זמני של הערך הישן; ה-`++` השני מגדיל רק את העותק הזה, ו-`a` נשאר 4. לכן `3 4`. התשובה `3 5` מניחה ש-postfix מחזיר הפניה. `2 4` ו-`2 3` מניחות ש-prefix כפול מגדיל פעם אחת.",
+      "recap": "postfix מחזיר עותק: ++ על התוצאה לא משפיע על המקור",
+      "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct C {\n    int n;\n    C(int a) : n(a) {}\n    C&amp; operator++() { ++n; return *this; }\n    C operator++(int) { C o = *this; ++n; return o; }\n};\nint main() {\n    C a(1);\n    ++(++a);\n    cout &lt;&lt; a.n;\n    (a++)++;\n    cout &lt;&lt; \" \" &lt;&lt; a.n;\n}</code></pre>",
+      "explanationHtml": "<code class=\"tok\" dir=\"ltr\">++a</code> מחזיר הפניה ל-<code class=\"tok\" dir=\"ltr\">a</code> עצמו, ולכן <code class=\"tok\" dir=\"ltr\">++(++a)</code> מעלה את <code class=\"tok\" dir=\"ltr\">a</code> פעמיים: 3. ב-<code class=\"tok\" dir=\"ltr\">(a++)++</code> הביטוי <code class=\"tok\" dir=\"ltr\">a++</code> מעלה את <code class=\"tok\" dir=\"ltr\">a</code> ל-4 ומחזיר עותק זמני של הערך הישן; ה-<code class=\"tok\" dir=\"ltr\">++</code> השני מגדיל רק את העותק הזה, ו-<code class=\"tok\" dir=\"ltr\">a</code> נשאר 4. לכן <code class=\"tok\" dir=\"ltr\">3 4</code>. התשובה <code class=\"tok\" dir=\"ltr\">3 5</code> מניחה ש-postfix מחזיר הפניה. <code class=\"tok\" dir=\"ltr\">2 4</code> ו-<code class=\"tok\" dir=\"ltr\">2 3</code> מניחות ש-prefix כפול מגדיל פעם אחת.",
+      "recapHtml": "postfix מחזיר עותק: ++ על התוצאה לא משפיע על המקור"
+     },
+     {
+      "id": "C04-Q5",
+      "question": "מה מדפיסה התכנית?\n```cpp\nstruct C { int n; };\nC& operator++(C& c) { c.n += 10; return c; }\nC operator++(C& c, int) { C o = c; c.n += 1; return o; }\nint main() {\n    C c{0};\n    C a = c++;\n    C b = ++c;\n    cout << a.n << \" \" << b.n << \" \" << c.n;\n}\n```",
+      "options": [
+       {
+        "id": "a",
+        "value": "`0 11 11`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">0 11 11</code>"
+       },
+       {
+        "id": "b",
+        "value": "`1 11 11`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">1 11 11</code>"
+       },
+       {
+        "id": "c",
+        "value": "`0 12 12`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">0 12 12</code>"
+       },
+       {
+        "id": "d",
+        "value": "`10 11 11`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">10 11 11</code>"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "`c++` קורא לגרסה עם הפרמטר המדומה: מחזיר עותק של 0 ומעלה את `c` ל-1, ולכן `a.n = 0`. אחר כך `++c` קורא לגרסת ה-prefix ומוסיף 10: `c.n = 11` ו-`b.n = 11`. התשובה `1 11 11` נותנת ל-`a` את הערך החדש. `0 12 12` ו-`10 11 11` מערבבות בין שתי הגרסאות.",
+      "recap": "גם בצורה חיצונית: (C&, int) הוא postfix",
+      "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct C { int n; };\nC&amp; operator++(C&amp; c) { c.n += 10; return c; }\nC operator++(C&amp; c, int) { C o = c; c.n += 1; return o; }\nint main() {\n    C c{0};\n    C a = c++;\n    C b = ++c;\n    cout &lt;&lt; a.n &lt;&lt; \" \" &lt;&lt; b.n &lt;&lt; \" \" &lt;&lt; c.n;\n}</code></pre>",
+      "explanationHtml": "<code class=\"tok\" dir=\"ltr\">c++</code> קורא לגרסה עם הפרמטר המדומה: מחזיר עותק של 0 ומעלה את <code class=\"tok\" dir=\"ltr\">c</code> ל-1, ולכן <code class=\"tok\" dir=\"ltr\">a.n = 0</code>. אחר כך <code class=\"tok\" dir=\"ltr\">++c</code> קורא לגרסת ה-prefix ומוסיף 10: <code class=\"tok\" dir=\"ltr\">c.n = 11</code> ו-<code class=\"tok\" dir=\"ltr\">b.n = 11</code>. התשובה <code class=\"tok\" dir=\"ltr\">1 11 11</code> נותנת ל-<code class=\"tok\" dir=\"ltr\">a</code> את הערך החדש. <code class=\"tok\" dir=\"ltr\">0 12 12</code> ו-<code class=\"tok\" dir=\"ltr\">10 11 11</code> מערבבות בין שתי הגרסאות.",
+      "recapHtml": "גם בצורה חיצונית: (C&amp;, int) הוא postfix"
+     }
+    ]
+   },
+   {
+    "id": "C05",
+    "order": 5,
+    "icon": "🔁",
+    "title": "בנאי המרה ו-explicit",
+    "goal": "לזהות המרות אוטומטיות דרך בנאי, ולדעת מה explicit חוסם.",
+    "source": "ai-verified",
+    "boss": false,
+    "lesson": {
+     "html": "\n<p><b>בנאי המרה</b> הוא בנאי שאפשר לקרוא לו עם ארגומנט אחד (<code>X(int)</code>). הוא מגדיר גם <b>המרה אוטומטית</b> מ-<code>int</code> ל-<code>X</code>:</p>\n<ul>\n<li><code>X x = 5;</code> נקרא <code>X x(5)</code> בדרך עקיפה: ההמרה מתבצעת בשבילנו.</li>\n<li>העברת <code>5</code> לפונקציה <code>void f(X)</code> היא <code>f(X(5))</code>.</li>\n<li>בביטוי כמו <code>a + 5</code> אפשר להמיר את <code>5</code> ל-<code>X</code> כשהפרמטר הוא <code>X</code>. עם אופרטור <b>חיצוני</b> גם <code>5 + a</code> עובד (גם הפרמטר השמאלי עובר המרה), בניגוד לאופרטור חבר.</li>\n<li>בהמרה אוטומטית אחת בלבד: <code>B b = 5;</code> נכשל אם צריך <code>int</code> &larr; <code>A</code> &larr; <code>B</code> (שתי המרות מוגדרות על ידי המשתמש).</li>\n</ul>\n<p><b><code>explicit</code></b> לפני הבנאי מבטל את ההמרה האוטומטית: רק קריאה מפורשת עובדת.</p>\n<table>\n<thead><tr><th>הבנאי</th><th><code>X x = 5;</code></th><th><code>f(5)</code></th><th><code>X x(5);</code></th></tr></thead>\n<tbody>\n<tr><td><code>X(int)</code></td><td>תקין</td><td>תקין</td><td>תקין</td></tr>\n<tr><td><code>explicit X(int)</code></td><td>שגיאה</td><td>שגיאה</td><td>תקין</td></tr>\n</tbody></table>\n<div class=\"lesson-rule\">🔑 <b>בנאי עם ארגומנט אחד = המרה אוטומטית אל המחלקה. <code>explicit</code> = רק מפורש (<code>X(5)</code>, <code>X x(5)</code>, <code>static_cast&lt;X&gt;(5)</code>).</b></div>\n<div class=\"lesson-trap\">⚠️ <b>הכלל \"המרה אחת\"</b> חל על אתחול עם <code>=</code>. כשכותבים <code>B b(5);</code> (אתחול ישיר), הקומפיילר צריך להמיר רק את <code>5</code> לפרמטר של הבנאי <code>B(const A&amp;)</code>, וזו המרה אחת, ולכן זה כן מתקמפל.</div>\n"
+    },
+    "questions": [
+     {
+      "id": "C05-Q1",
+      "question": "מה מדפיסה התכנית?\n```cpp\nstruct X {\n    int v;\n    X(int a) { cout << \"ctor\" << a << \" \"; v = a; }\n};\nvoid f(X x) { cout << \"f\" << x.v; }\nint main() {\n    f(7);\n}\n```",
+      "options": [
+       {
+        "id": "a",
+        "value": "`ctor7 f7`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">ctor7 f7</code>"
+       },
+       {
+        "id": "b",
+        "value": "`f7`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">f7</code>"
+       },
+       {
+        "id": "c",
+        "value": "`ctor7`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">ctor7</code>"
+       },
+       {
+        "id": "d",
+        "value": "שגיאת קומפילציה",
+        "type": "text",
+        "html": "שגיאת קומפילציה"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "הבנאי `X(int)` אינו `explicit`, ולכן הארגומנט `7` מומר ל-`X` בקריאה `f(7)`: קודם נבנה `X` ומודפס `ctor7`, ורק אחר כך הפונקציה מדפיסה `f7`. התשובה `f7` שוכחת שההמרה קוראת לבנאי. `ctor7` שוכחת שהפונקציה רצה. שגיאת קומפילציה הייתה קורית רק עם `explicit`.",
+      "recap": "בנאי לא explicit ממיר ארגומנט אוטומטית",
+      "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct X {\n    int v;\n    X(int a) { cout &lt;&lt; \"ctor\" &lt;&lt; a &lt;&lt; \" \"; v = a; }\n};\nvoid f(X x) { cout &lt;&lt; \"f\" &lt;&lt; x.v; }\nint main() {\n    f(7);\n}</code></pre>",
+      "explanationHtml": "הבנאי <code class=\"tok\" dir=\"ltr\">X(int)</code> אינו <code class=\"tok\" dir=\"ltr\">explicit</code>, ולכן הארגומנט <code class=\"tok\" dir=\"ltr\">7</code> מומר ל-<code class=\"tok\" dir=\"ltr\">X</code> בקריאה <code class=\"tok\" dir=\"ltr\">f(7)</code>: קודם נבנה <code class=\"tok\" dir=\"ltr\">X</code> ומודפס <code class=\"tok\" dir=\"ltr\">ctor7</code>, ורק אחר כך הפונקציה מדפיסה <code class=\"tok\" dir=\"ltr\">f7</code>. התשובה <code class=\"tok\" dir=\"ltr\">f7</code> שוכחת שההמרה קוראת לבנאי. <code class=\"tok\" dir=\"ltr\">ctor7</code> שוכחת שהפונקציה רצה. שגיאת קומפילציה הייתה קורית רק עם <code class=\"tok\" dir=\"ltr\">explicit</code>.",
+      "recapHtml": "בנאי לא explicit ממיר ארגומנט אוטומטית"
+     },
+     {
+      "id": "C05-Q2",
+      "question": "במחלקה `X` הבנאי `explicit X(int a)`. איזו שורה **לא** מתקמפלת?",
+      "options": [
+       {
+        "id": "a",
+        "value": "`X a(1);`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">X a(1);</code>"
+       },
+       {
+        "id": "b",
+        "value": "`X a = 1;`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">X a = 1;</code>"
+       },
+       {
+        "id": "c",
+        "value": "`X a = X(1);`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">X a = X(1);</code>"
+       },
+       {
+        "id": "d",
+        "value": "`X a{1};`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">X a{1};</code>"
+       }
+      ],
+      "correctId": "b",
+      "explanation": "אתחול עם `=` ו-`5` ללא יצירה מפורשת דורש המרה אוטומטית, וזו בדיוק מה ש-`explicit` חוסם. `X a(1)`, `X a{1}` ו-`X a = X(1)` קוראים לבנאי במפורש.",
+      "recap": "explicit חוסם את X x = 1",
+      "questionHtml": "במחלקה <code class=\"tok\" dir=\"ltr\">X</code> הבנאי <code class=\"tok\" dir=\"ltr\">explicit X(int a)</code>. איזו שורה <strong>לא</strong> מתקמפלת?",
+      "explanationHtml": "אתחול עם <code class=\"tok\" dir=\"ltr\">=</code> ו-<code class=\"tok\" dir=\"ltr\">5</code> ללא יצירה מפורשת דורש המרה אוטומטית, וזו בדיוק מה ש-<code class=\"tok\" dir=\"ltr\">explicit</code> חוסם. <code class=\"tok\" dir=\"ltr\">X a(1)</code>, <code class=\"tok\" dir=\"ltr\">X a{1}</code> ו-<code class=\"tok\" dir=\"ltr\">X a = X(1)</code> קוראים לבנאי במפורש.",
+      "recapHtml": "explicit חוסם את X x = 1"
+     },
+     {
+      "id": "C05-Q3",
+      "question": "מה מדפיסה התכנית?\n```cpp\nstruct X {\n    int v;\n    X(int a = 0) : v(a) {}\n};\nX operator+(const X& a, const X& b) { return X(a.v + b.v); }\nint main() {\n    X a(2);\n    cout << (5 + a).v << (a + 5).v;\n}\n```",
+      "options": [
+       {
+        "id": "a",
+        "value": "`77`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">77</code>"
+       },
+       {
+        "id": "b",
+        "value": "`75`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">75</code>"
+       },
+       {
+        "id": "c",
+        "value": "`7`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">7</code>"
+       },
+       {
+        "id": "d",
+        "value": "שגיאת קומפילציה",
+        "type": "text",
+        "html": "שגיאת קומפילציה"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "האופרטור חיצוני עם שני פרמטרים מסוג `X`, ולכן כל אחד מהאופרנדים יכול לעבור המרה דרך `X(int)`. גם `5 + a` וגם `a + 5` נותנים 7. עם אופרטור חבר, `5 + a` לא היה מתקמפל. שגיאת קומפילציה היא התשובה הנכונה רק אם הבנאי היה `explicit`.",
+      "recap": "אופרטור חיצוני: שני האופרנדים עוברים המרה",
+      "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct X {\n    int v;\n    X(int a = 0) : v(a) {}\n};\nX operator+(const X&amp; a, const X&amp; b) { return X(a.v + b.v); }\nint main() {\n    X a(2);\n    cout &lt;&lt; (5 + a).v &lt;&lt; (a + 5).v;\n}</code></pre>",
+      "explanationHtml": "האופרטור חיצוני עם שני פרמטרים מסוג <code class=\"tok\" dir=\"ltr\">X</code>, ולכן כל אחד מהאופרנדים יכול לעבור המרה דרך <code class=\"tok\" dir=\"ltr\">X(int)</code>. גם <code class=\"tok\" dir=\"ltr\">5 + a</code> וגם <code class=\"tok\" dir=\"ltr\">a + 5</code> נותנים 7. עם אופרטור חבר, <code class=\"tok\" dir=\"ltr\">5 + a</code> לא היה מתקמפל. שגיאת קומפילציה היא התשובה הנכונה רק אם הבנאי היה <code class=\"tok\" dir=\"ltr\">explicit</code>.",
+      "recapHtml": "אופרטור חיצוני: שני האופרנדים עוברים המרה"
+     },
+     {
+      "id": "C05-Q4",
+      "question": "במחלקה `X` הבנאי `explicit X(int)`, והפונקציה `void f(X x)`. איזו קריאה מתקמפלת?",
+      "options": [
+       {
+        "id": "a",
+        "value": "`f(X(5));`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">f(X(5));</code>"
+       },
+       {
+        "id": "b",
+        "value": "`f(5);`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">f(5);</code>"
+       },
+       {
+        "id": "c",
+        "value": "`f('a');`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">f('a');</code>"
+       },
+       {
+        "id": "d",
+        "value": "`f(5.5);`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">f(5.5);</code>"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "עם `explicit` ההמרה האוטומטית מ-`int` ל-`X` אסורה, ולכן רק קריאה מפורשת `f(X(5))` עובדת. `f(5)`, `f('a')` ו-`f(5.5)` דורשות המרה אוטומטית ל-`X` (עם המרה סטנדרטית נוספת ל-`int`), ונכשלות.",
+      "recap": "עם explicit מפעילים את הבנאי בעצמנו",
+      "questionHtml": "במחלקה <code class=\"tok\" dir=\"ltr\">X</code> הבנאי <code class=\"tok\" dir=\"ltr\">explicit X(int)</code>, והפונקציה <code class=\"tok\" dir=\"ltr\">void f(X x)</code>. איזו קריאה מתקמפלת?",
+      "explanationHtml": "עם <code class=\"tok\" dir=\"ltr\">explicit</code> ההמרה האוטומטית מ-<code class=\"tok\" dir=\"ltr\">int</code> ל-<code class=\"tok\" dir=\"ltr\">X</code> אסורה, ולכן רק קריאה מפורשת <code class=\"tok\" dir=\"ltr\">f(X(5))</code> עובדת. <code class=\"tok\" dir=\"ltr\">f(5)</code>, <code class=\"tok\" dir=\"ltr\">f('a')</code> ו-<code class=\"tok\" dir=\"ltr\">f(5.5)</code> דורשות המרה אוטומטית ל-<code class=\"tok\" dir=\"ltr\">X</code> (עם המרה סטנדרטית נוספת ל-<code class=\"tok\" dir=\"ltr\">int</code>), ונכשלות.",
+      "recapHtml": "עם explicit מפעילים את הבנאי בעצמנו"
+     },
+     {
+      "id": "C05-Q5",
+      "question": "נתונות שתי מחלקות: `A` עם בנאי `A(int)` ו-`B` עם בנאי `B(const A&)`. שניהם לא `explicit`. איזו שורה **לא** מתקמפלת?",
+      "options": [
+       {
+        "id": "a",
+        "value": "`B b = 5;`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">B b = 5;</code>"
+       },
+       {
+        "id": "b",
+        "value": "`B b = A(5);`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">B b = A(5);</code>"
+       },
+       {
+        "id": "c",
+        "value": "`B b(5);`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">B b(5);</code>"
+       },
+       {
+        "id": "d",
+        "value": "`B b = B(A(5));`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">B b = B(A(5));</code>"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "ב-`B b = 5;` צריך שתי המרות מוגדרות על ידי המשתמש ברצף: `int` ל-`A` ואחר כך `A` ל-`B`, וזה אסור. ב-`B b = A(5);` יש המרה אחת (`A` ל-`B`). ב-`B b(5);` זה אתחול ישיר: ההמרה היחידה היא של `5` לפרמטר `A`. ב-`B(A(5))` הכול מפורש.",
+      "recap": "אתחול עם = מתיר המרה אחת מוגדרת-משתמש",
+      "questionHtml": "נתונות שתי מחלקות: <code class=\"tok\" dir=\"ltr\">A</code> עם בנאי <code class=\"tok\" dir=\"ltr\">A(int)</code> ו-<code class=\"tok\" dir=\"ltr\">B</code> עם בנאי <code class=\"tok\" dir=\"ltr\">B(const A&amp;)</code>. שניהם לא <code class=\"tok\" dir=\"ltr\">explicit</code>. איזו שורה <strong>לא</strong> מתקמפלת?",
+      "explanationHtml": "ב-<code class=\"tok\" dir=\"ltr\">B b = 5;</code> צריך שתי המרות מוגדרות על ידי המשתמש ברצף: <code class=\"tok\" dir=\"ltr\">int</code> ל-<code class=\"tok\" dir=\"ltr\">A</code> ואחר כך <code class=\"tok\" dir=\"ltr\">A</code> ל-<code class=\"tok\" dir=\"ltr\">B</code>, וזה אסור. ב-<code class=\"tok\" dir=\"ltr\">B b = A(5);</code> יש המרה אחת (<code class=\"tok\" dir=\"ltr\">A</code> ל-<code class=\"tok\" dir=\"ltr\">B</code>). ב-<code class=\"tok\" dir=\"ltr\">B b(5);</code> זה אתחול ישיר: ההמרה היחידה היא של <code class=\"tok\" dir=\"ltr\">5</code> לפרמטר <code class=\"tok\" dir=\"ltr\">A</code>. ב-<code class=\"tok\" dir=\"ltr\">B(A(5))</code> הכול מפורש.",
+      "recapHtml": "אתחול עם = מתיר המרה אחת מוגדרת-משתמש"
+     }
+    ]
+   },
+   {
+    "id": "C06",
+    "order": 6,
+    "icon": "🎯",
+    "title": "אופרטורי המרה",
+    "goal": "להגדיר המרה מהמחלקה אל טיפוס אחר, ולהבין מה explicit operator משנה.",
+    "source": "ai-verified",
+    "boss": false,
+    "lesson": {
+     "html": "\n<p>בנאי ממיר <b>אל</b> המחלקה. כדי להמיר <b>מ</b>המחלקה לטיפוס אחר כותבים <b>אופרטור המרה</b> בתוך המחלקה:</p>\n<pre>class M {\n    double v;\npublic:\n    M(double a) : v(a) {}\n    operator int() const { return (int)v; }   // M &rarr; int\n};</pre>\n<ul>\n<li>השם הוא <code>operator</code> ואחריו הטיפוס, ו<b>אין טיפוס החזרה</b> ואין פרמטרים. הטיפוס מופיע בשם.</li>\n<li>עכשיו <code>int n = m;</code>, <code>(int)m</code> ו-<code>m + 1</code> (חיבור <code>int</code>) מתקמפלים. גם <code>cout &lt;&lt; m</code> עובד, כי הוא מומר ל-<code>int</code> שאפשר להדפיס.</li>\n<li><code>explicit operator bool() const</code> מאפשר שימוש רק במקומות שבהם בכל מקרה מצפים לתנאי: <code>if (m)</code>, <code>while</code>, <code>!m</code>, <code>&amp;&amp;</code>, וגם המרה מפורשת <code>(bool)m</code>. אבל <code>bool b = m;</code> אסור.</li>\n</ul>\n<table>\n<thead><tr><th>מה רוצים</th><th>מה כותבים</th><th>איפה</th></tr></thead>\n<tbody>\n<tr><td><code>int</code> &rarr; <code>X</code></td><td>בנאי <code>X(int)</code></td><td>ב-<code>X</code></td></tr>\n<tr><td><code>X</code> &rarr; <code>int</code></td><td><code>operator int() const</code></td><td>ב-<code>X</code></td></tr>\n</tbody></table>\n<div class=\"lesson-rule\">🔑 <b>לכיוון אל המחלקה: בנאי. לכיוון החוצה: <code>operator T()</code> בלי טיפוס החזרה.</b></div>\n<div class=\"lesson-trap\">⚠️ אי אפשר להגדיר פונקציה בתוך <code>int</code>. כשרוצים לקבל <code>int</code> מאובייקט, ההגדרה תמיד נמצאת במחלקה שלנו.</div>\n"
+    },
+    "questions": [
+     {
+      "id": "C06-Q1",
+      "question": "מה מדפיסה התכנית?\n```cpp\nstruct M {\n    double v;\n    M(double a) : v(a) {}\n    operator int() const { return (int)v; }\n};\nint main() {\n    M m(3.9);\n    int n = m;\n    cout << n << \" \" << m + 1;\n}\n```",
+      "options": [
+       {
+        "id": "a",
+        "value": "`3 4`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">3 4</code>"
+       },
+       {
+        "id": "b",
+        "value": "`3 4.9`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">3 4.9</code>"
+       },
+       {
+        "id": "c",
+        "value": "`4 5`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">4 5</code>"
+       },
+       {
+        "id": "d",
+        "value": "שגיאת קומפילציה",
+        "type": "text",
+        "html": "שגיאת קומפילציה"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "`int n = m;` משתמש באופרטור ההמרה ו-`(int)3.9` נחתך ל-3. גם ב-`m + 1` האובייקט מומר ל-`int` (3), ואז מחברים 1 ומקבלים 4. התשובה `3 4.9` שוכחת שההמרה עוברת דרך `int`. `4 5` מניחה עיגול במקום חיתוך. אין שגיאת קומפילציה.",
+      "recap": "operator int ממיר את האובייקט ל-int בכל ביטוי חשבוני",
+      "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct M {\n    double v;\n    M(double a) : v(a) {}\n    operator int() const { return (int)v; }\n};\nint main() {\n    M m(3.9);\n    int n = m;\n    cout &lt;&lt; n &lt;&lt; \" \" &lt;&lt; m + 1;\n}</code></pre>",
+      "explanationHtml": "<code class=\"tok\" dir=\"ltr\">int n = m;</code> משתמש באופרטור ההמרה ו-<code class=\"tok\" dir=\"ltr\">(int)3.9</code> נחתך ל-3. גם ב-<code class=\"tok\" dir=\"ltr\">m + 1</code> האובייקט מומר ל-<code class=\"tok\" dir=\"ltr\">int</code> (3), ואז מחברים 1 ומקבלים 4. התשובה <code class=\"tok\" dir=\"ltr\">3 4.9</code> שוכחת שההמרה עוברת דרך <code class=\"tok\" dir=\"ltr\">int</code>. <code class=\"tok\" dir=\"ltr\">4 5</code> מניחה עיגול במקום חיתוך. אין שגיאת קומפילציה.",
+      "recapHtml": "operator int ממיר את האובייקט ל-int בכל ביטוי חשבוני"
+     },
+     {
+      "id": "C06-Q2",
+      "question": "במחלקה `Temp` יש בנאי `Temp(double)` ושדה פרטי `double c`. מה צריך להוסיף למחלקה כדי שהשורה `Temp t(3); double d = t;` תתקמפל?",
+      "options": [
+       {
+        "id": "a",
+        "value": "`operator double() const { return c; }`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">operator double() const { return c; }</code>"
+       },
+       {
+        "id": "b",
+        "value": "`Temp(int x) { c = x; }` (עוד בנאי, הפעם מ-int)",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">Temp(int x) { c = x; }</code> (עוד בנאי, הפעם מ-int)"
+       },
+       {
+        "id": "c",
+        "value": "`double operator Temp() const { return c; }`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">double operator Temp() const { return c; }</code>"
+       },
+       {
+        "id": "d",
+        "value": "`Temp operator double() const { return *this; }`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">Temp operator double() const { return *this; }</code>"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "כדי להמיר `Temp` ל-`double` כותבים `operator double()`, בלי טיפוס החזרה. עוד בנאי ממיר בכיוון ההפוך (אל `Temp`) ולכן לא עוזר. בשתי האפשרויות האחרונות יש טיפוס החזרה לפני המילה `operator`, וזה אסור באופרטור המרה.",
+      "recap": "operator double() const — בלי טיפוס החזרה",
+      "questionHtml": "במחלקה <code class=\"tok\" dir=\"ltr\">Temp</code> יש בנאי <code class=\"tok\" dir=\"ltr\">Temp(double)</code> ושדה פרטי <code class=\"tok\" dir=\"ltr\">double c</code>. מה צריך להוסיף למחלקה כדי שהשורה <code class=\"tok\" dir=\"ltr\">Temp t(3); double d = t;</code> תתקמפל?",
+      "explanationHtml": "כדי להמיר <code class=\"tok\" dir=\"ltr\">Temp</code> ל-<code class=\"tok\" dir=\"ltr\">double</code> כותבים <code class=\"tok\" dir=\"ltr\">operator double()</code>, בלי טיפוס החזרה. עוד בנאי ממיר בכיוון ההפוך (אל <code class=\"tok\" dir=\"ltr\">Temp</code>) ולכן לא עוזר. בשתי האפשרויות האחרונות יש טיפוס החזרה לפני המילה <code class=\"tok\" dir=\"ltr\">operator</code>, וזה אסור באופרטור המרה.",
+      "recapHtml": "operator double() const — בלי טיפוס החזרה"
+     },
+     {
+      "id": "C06-Q3",
+      "question": "למחלקה `S` מוגדר `explicit operator bool() const`. `s` הוא אובייקט מטיפוס `S`. איזו שורה **לא** מתקמפלת?",
+      "options": [
+       {
+        "id": "a",
+        "value": "`if (s) {}`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">if (s) {}</code>"
+       },
+       {
+        "id": "b",
+        "value": "`bool b = s;`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">bool b = s;</code>"
+       },
+       {
+        "id": "c",
+        "value": "`bool b = (bool)s;`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">bool b = (bool)s;</code>"
+       },
+       {
+        "id": "d",
+        "value": "`bool b(s);`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">bool b(s);</code>"
+       }
+      ],
+      "correctId": "b",
+      "explanation": "אופרטור המרה `explicit` לא משתתף באתחול עם `=`, ולכן `bool b = s;` נכשלת. בתנאי של `if` ההמרה מותרת (המרה מוקשרת להקשר), `(bool)s` היא המרה מפורשת, ו-`bool b(s)` היא אתחול ישיר.",
+      "recap": "explicit operator bool: מותר ב-if ובהמרה מפורשת, לא ב-bool b = s",
+      "questionHtml": "למחלקה <code class=\"tok\" dir=\"ltr\">S</code> מוגדר <code class=\"tok\" dir=\"ltr\">explicit operator bool() const</code>. <code class=\"tok\" dir=\"ltr\">s</code> הוא אובייקט מטיפוס <code class=\"tok\" dir=\"ltr\">S</code>. איזו שורה <strong>לא</strong> מתקמפלת?",
+      "explanationHtml": "אופרטור המרה <code class=\"tok\" dir=\"ltr\">explicit</code> לא משתתף באתחול עם <code class=\"tok\" dir=\"ltr\">=</code>, ולכן <code class=\"tok\" dir=\"ltr\">bool b = s;</code> נכשלת. בתנאי של <code class=\"tok\" dir=\"ltr\">if</code> ההמרה מותרת (המרה מוקשרת להקשר), <code class=\"tok\" dir=\"ltr\">(bool)s</code> היא המרה מפורשת, ו-<code class=\"tok\" dir=\"ltr\">bool b(s)</code> היא אתחול ישיר.",
+      "recapHtml": "explicit operator bool: מותר ב-if ובהמרה מפורשת, לא ב-bool b = s"
+     },
+     {
+      "id": "C06-Q4",
+      "question": "מה מדפיסה התכנית?\n```cpp\nstruct S {\n    int n;\n    operator int() const { return n * 2; }\n};\nint main() {\n    S s{4};\n    cout << s << \" \" << s + 1;\n}\n```",
+      "options": [
+       {
+        "id": "a",
+        "value": "`8 9`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">8 9</code>"
+       },
+       {
+        "id": "b",
+        "value": "`4 5`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">4 5</code>"
+       },
+       {
+        "id": "c",
+        "value": "`8 5`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">8 5</code>"
+       },
+       {
+        "id": "d",
+        "value": "שגיאת קומפילציה",
+        "type": "text",
+        "html": "שגיאת קומפילציה"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "אין `operator<<` למחלקה, אבל `cout << s` מתקמפל כי `s` מומר ל-`int` דרך אופרטור ההמרה, וההמרה מחזירה `n * 2 = 8`. גם `s + 1` ממיר ל-`int`: `8 + 1 = 9`. התשובה `4 5` מתעלמת מההמרה, ו-`8 5` מניחה שהחיבור משתמש בשדה `n`.",
+      "recap": "אופרטור המרה מאפשר שימוש באובייקט בכל מקום שמצפה ל-int",
+      "questionHtml": "מה מדפיסה התכנית?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct S {\n    int n;\n    operator int() const { return n * 2; }\n};\nint main() {\n    S s{4};\n    cout &lt;&lt; s &lt;&lt; \" \" &lt;&lt; s + 1;\n}</code></pre>",
+      "explanationHtml": "אין <code class=\"tok\" dir=\"ltr\">operator&lt;&lt;</code> למחלקה, אבל <code class=\"tok\" dir=\"ltr\">cout &lt;&lt; s</code> מתקמפל כי <code class=\"tok\" dir=\"ltr\">s</code> מומר ל-<code class=\"tok\" dir=\"ltr\">int</code> דרך אופרטור ההמרה, וההמרה מחזירה <code class=\"tok\" dir=\"ltr\">n * 2 = 8</code>. גם <code class=\"tok\" dir=\"ltr\">s + 1</code> ממיר ל-<code class=\"tok\" dir=\"ltr\">int</code>: <code class=\"tok\" dir=\"ltr\">8 + 1 = 9</code>. התשובה <code class=\"tok\" dir=\"ltr\">4 5</code> מתעלמת מההמרה, ו-<code class=\"tok\" dir=\"ltr\">8 5</code> מניחה שהחיבור משתמש בשדה <code class=\"tok\" dir=\"ltr\">n</code>.",
+      "recapHtml": "אופרטור המרה מאפשר שימוש באובייקט בכל מקום שמצפה ל-int"
+     },
+     {
+      "id": "C06-Q5",
+      "question": "איזו הצהרה תקינה כאופרטור המרה ל-`int` בתוך מחלקה `S`?\n```cpp\nstruct S {\n    ____ { return 1; }\n};\n```",
+      "options": [
+       {
+        "id": "a",
+        "value": "`operator int() const`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">operator int() const</code>"
+       },
+       {
+        "id": "b",
+        "value": "`int operator int() const`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">int operator int() const</code>"
+       },
+       {
+        "id": "c",
+        "value": "`operator int(int k) const`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">operator int(int k) const</code>"
+       },
+       {
+        "id": "d",
+        "value": "`void operator int() const`",
+        "type": "text",
+        "html": "<code class=\"tok\" dir=\"ltr\">void operator int() const</code>"
+       }
+      ],
+      "correctId": "a",
+      "explanation": "אופרטור המרה כתוב בלי טיפוס החזרה ובלי פרמטרים: `operator int()`. הטיפוס שמוחזר נקבע לפי השם. טיפוס החזרה מפורש (`int` או `void`) לפני `operator` אסור, ופרמטר לא מאפשר המרה אוטומטית.",
+      "recap": "אין טיפוס החזרה ואין פרמטרים באופרטור המרה",
+      "questionHtml": "איזו הצהרה תקינה כאופרטור המרה ל-<code class=\"tok\" dir=\"ltr\">int</code> בתוך מחלקה <code class=\"tok\" dir=\"ltr\">S</code>?<pre class=\"code-block\" dir=\"ltr\" data-lang=\"cpp\"><code>struct S {\n    ____ { return 1; }\n};</code></pre>",
+      "explanationHtml": "אופרטור המרה כתוב בלי טיפוס החזרה ובלי פרמטרים: <code class=\"tok\" dir=\"ltr\">operator int()</code>. הטיפוס שמוחזר נקבע לפי השם. טיפוס החזרה מפורש (<code class=\"tok\" dir=\"ltr\">int</code> או <code class=\"tok\" dir=\"ltr\">void</code>) לפני <code class=\"tok\" dir=\"ltr\">operator</code> אסור, ופרמטר לא מאפשר המרה אוטומטית.",
+      "recapHtml": "אין טיפוס החזרה ואין פרמטרים באופרטור המרה"
+     }
+    ]
+   },
+   {
+    "id": "C07",
+    "order": 7,
+    "icon": "🏆",
+    "title": "מבחן גמר: אופרטורים והמרות",
+    "goal": "לפתור שאלות אמיתיות מהמבחנים על העמסת אופרטורים והמרות.",
+    "source": "ai-verified",
+    "boss": true,
+    "lesson": {
+     "html": "\n<p>בשאלות המבחן על אופרטורים והמרות, ארבע שאלות מספיקות כדי לפתור כמעט הכול:</p>\n<ol>\n<li><b>מי האופרנד השמאלי?</b> אם הוא מהמחלקה: אפשר אופרטור חבר (פרמטר אחד). אם לא (<code>5 + x</code>, <code>cout &lt;&lt; x</code>): חובה פונקציה חיצונית.</li>\n<li><b>האם הפונקציה צריכה שדות פרטיים?</b> כן: <code>friend</code>. לא: פונקציה חיצונית רגילה מספיקה.</li>\n<li><b>prefix או postfix?</b> <code>++x</code> בלי פרמטר ומחזיר הפניה. <code>x++</code> עם <code>int</code> מדומה ומחזיר עותק של הערך הישן.</li>\n<li><b>לאיזה כיוון ההמרה?</b> אל המחלקה: בנאי עם ארגומנט אחד (<code>explicit</code> חוסם המרה אוטומטית). מהמחלקה: <code>operator T()</code> בלי טיפוס החזרה.</li>\n</ol>\n<div class=\"lesson-rule\">🔑 בשאלת \"כמה שגיאות\": בודקים כל שורה לחוד ושואלים איזה אופרטור או המרה היא דורשת, ואם הוא מוגדר.</div>\n<div class=\"lesson-trap\">⚠️ <b>המרה אוטומטית אחת בלבד</b> ברצף, ו-<code>cout &lt;&lt; x</code> חייב להיות פונקציה חיצונית גם כש<code>friend</code> לא נדרש.</div>\n"
+    },
+    "questions": [
+     {
+      "bankId": "18A-B-Q7",
+      "recap": "אופרנד שמאלי שאינו מהמחלקה: פונקציה חיצונית.",
+      "recapHtml": "אופרנד שמאלי שאינו מהמחלקה: פונקציה חיצונית."
+     },
+     {
+      "bankId": "19A-B-Q23",
+      "recap": "operator<< חיצוני; friend רק אם צריך שדות פרטיים.",
+      "recapHtml": "operator&lt;&lt; חיצוני; friend רק אם צריך שדות פרטיים."
+     },
+     {
+      "bankId": "22B-B-Q11",
+      "recap": "prefix מחזיר את החדש, postfix את הישן.",
+      "recapHtml": "prefix מחזיר את החדש, postfix את הישן."
+     },
+     {
+      "bankId": "21S-B-Q16",
+      "recap": "x++ דורש operator++(int); cout << a דורש operator<<.",
+      "recapHtml": "x++ דורש operator++(int); cout &lt;&lt; a דורש operator&lt;&lt;."
+     },
+     {
+      "bankId": "21B-A-Q7",
+      "recap": "בנאי לא explicit ו-operator int מאפשרים המרות בשני הכיוונים.",
+      "recapHtml": "בנאי לא explicit ו-operator int מאפשרים המרות בשני הכיוונים."
+     },
+     {
+      "bankId": "22B-B-Q15",
+      "recap": "operator A() ממיר מ-B ל-A, לא להפך.",
+      "recapHtml": "operator A() ממיר מ-B ל-A, לא להפך."
      }
     ]
    }
