@@ -52,7 +52,7 @@ function setMode(mode) {
   r.dispatchEvent(new window.Event("change", { bubbles: true }));
 }
 
-assert(scripts.join() === "questions.js,learn.js,courses.js,app.js,course-ui.js", `scripts loaded: ${scripts.join(", ")}`);
+assert(scripts.join() === "questions.js,learn.js,courses.js,app.js,feedback.js,course-ui.js", `scripts loaded: ${scripts.join(", ")}`);
 const D = window.CC_QUIZ;
 assert(D && Array.isArray(D.questions), "window.CC_QUIZ defined");
 const QS = D.questions;
@@ -407,6 +407,50 @@ assert(missing.length === 0, `all ${refs.length} image refs exist${missing.lengt
     if (fimg) { fimg.click(); assert(visible($("#lightbox")), "clicking an inline figure opens the lightbox"); $("#lightboxClose").click(); }
     holder.remove();
   }
+}
+
+// feedback links (feedback.js): footer line + per-question report links with the right mailto subjects (fresh page)
+console.log("feedback links");
+{
+  const errs = [];
+  const vcF = new VirtualConsole();
+  vcF.on("jsdomError", e => errs.push("jsdomError: " + (e.message || e)));
+  vcF.on("error", (...a) => errs.push("console.error: " + a.join(" ")));
+  const dF = new JSDOM(html, { pretendToBeVisual: true, runScripts: "outside-only", url: "http://localhost/index.html", virtualConsole: vcF });
+  const W = dF.window;
+  W.scrollTo = () => {}; W.HTMLElement.prototype.scrollIntoView = () => {}; W.confirm = () => true;
+  W.matchMedia = W.matchMedia || (q => ({ matches: false, media: q, addEventListener() {}, removeEventListener() {}, addListener() {}, removeListener() {} }));
+  for (const f of scripts) {
+    if (f === "learn.js" && !fs.existsSync(path.join(ROOT, f))) continue;
+    try { W.eval(fs.readFileSync(path.join(ROOT, f), "utf8")); } catch (e) { errs.push(`eval ${f}: ${e.message}`); }
+  }
+  const d = W.document, q$ = s => d.querySelector(s), q$$ = s => [...d.querySelectorAll(s)];
+  const mailParts = a => { const [head, qs] = a.getAttribute("href").split("?"); const p = new URLSearchParams(qs); return { to: head.replace(/^mailto:/, ""), subject: p.get("subject"), body: p.get("body") || "" }; };
+  const title = d.title;
+  const fl = q$("#feedbackLine a");
+  assert(!!fl && /^mailto:[^@?]+@[^@?]+\?/.test(fl.getAttribute("href")), "feedback: footer link is a mailto");
+  assert(fl && mailParts(fl).subject === title + " — משוב", "feedback: footer subject is '<title> — משוב': " + (fl && mailParts(fl).subject));
+  assert(fl && /מצאתם טעות\?.*📩 כתבו לי ואוסיף/.test(fl.textContent), "feedback: footer link text");
+  const lit = /[\w.-]+@[\w-]+\.\w+/;
+  assert(!lit.test(html) && !lit.test(fs.readFileSync(path.join(ROOT, "feedback.js"), "utf8")), "feedback: the address is never written out literally in index.html or feedback.js");
+  if (QS.length) {
+    q$("#startBtn").click();
+    const q = QS.find(x => x.id === q$("#questionText").dataset.qid);
+    const rl = q$("#qExtras + .reportrow a.reportlink");
+    assert(!!rl, "feedback: question view has a report link");
+    if (rl) {
+      const m = mailParts(rl);
+      assert(m.subject === `${title} — טעות בשאלה ${q.id}`, "feedback: report subject: " + m.subject);
+      assert(m.body.includes(q.id) && m.body.includes(q.examLabel || q.examCode || "") && m.body.includes("תחילת השאלה: "), "feedback: report body has id, exam label and a snippet");
+    }
+    const code = (D.meta && D.meta.exams || []).map(e => e.examCode).find(c => QS.some(x => x.examCode === c));
+    if (code) {
+      q$("#nextBtn").click();
+      const rl2 = q$("#qExtras + .reportrow a.reportlink");
+      assert(!!rl2 && q$$("#screen-quiz .reportrow").length === 1, "feedback: a single report link, refreshed on the next question");
+    }
+  }
+  assert(errs.length === 0, "feedback: no errors" + (errs.length ? ": " + errs.join(" | ") : ""));
 }
 
 assert(errors.length === 0, `no JS errors${errors.length ? ":\n    " + errors.join("\n    ") : ""}`);

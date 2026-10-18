@@ -99,6 +99,9 @@ function extrasHtml(q){
   return q.image ? `<figure class="q-fig"><img class="q-img" src="${escapeHtml(q.image)}" alt="" loading="lazy"></figure>` : "";
 }
 function questionHtml(q){ return q.questionHtml || escapeHtml(q.question||""); }
+/* feedback.js: "report a mistake" mailto link for a question (renders nothing if the helper is absent) */
+function reportData(q){ return {id:q.id, exam:examLabelOf(q), html:q.questionHtml || escapeHtml(q.question||"")}; }
+function reportRowHtml(q){ return window.Feedback ? window.Feedback.reportRow(reportData(q)) : ""; }
 function optionHtml(o){
   if(!o) return "";
   const type = o.type || "text";
@@ -269,6 +272,7 @@ function renderQuestion(){
   $("#questionText").innerHTML = questionHtml(q);
   $("#questionText").dataset.qid = q.id;   // read by tools/verify_dom.js / shoot.js
   $("#qExtras").innerHTML = extrasHtml(q);
+  if(window.Feedback) window.Feedback.slot($("#qExtras"), "q", reportData(q));
 
   $("#optionsList").innerHTML = v.order.map((oid,disp)=>
     `<button class="opt" data-disp="${disp}" data-oid="${escapeHtml(oid)}">
@@ -425,7 +429,7 @@ function renderResults(correct, byTopic, review){
       ${extrasHtml(v)}
       <div class="ra"><span class="${r.ok?"good":"miss"}">תשובתך: ${chosenTxt}</span>`+
       (r.ok?"":` · <span class="good">${acc.length>1?"נכונות":"הנכונה"}: ${correctTxt}</span>`)+
-      (v.explanationHtml?`<br>${v.explanationHtml}`:"")+(v.official?"":" (לא רשמי)")+`</div></div>`;
+      (v.explanationHtml?`<br>${v.explanationHtml}`:"")+(v.official?"":" (לא רשמי)")+`</div>${reportRowHtml(v)}</div>`;
   }).join("");
 }
 

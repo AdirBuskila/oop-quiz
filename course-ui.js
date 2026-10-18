@@ -170,6 +170,11 @@
     qt.dataset.key = it.key; qt.dataset.correct = q.correctId || "";
     if(it.bank) qt.dataset.bank = q.id; else delete qt.dataset.bank;
     $("#crsQExtras").innerHTML = APP.extrasHtml(q);
+    if(window.Feedback) window.Feedback.slot($("#crsQExtras"), "crs", {
+      id: `${C.id}-L${S.L.order}-Q${S.i + 1}`,
+      exam: `${C.meta.titleHe} · ${levelName(S.L)}` + (it.bank ? ` · ${APP.examLabelOf(q)} (${q.id})` : ""),
+      html: q.questionHtml || esc(q.question || "")
+    });
     const byId = id => q.options.find(o => o.id === id);
     $("#crsQBody").innerHTML =
       `<div class="options-list">` + it.order.map((oid, d) =>
