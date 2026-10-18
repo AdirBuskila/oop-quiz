@@ -1,0 +1,880 @@
+{
+ "courseId": "copy_control",
+ "levels": [
+  {
+   "id": "C01",
+   "order": 1,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C01-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    T()                    { cout << \"D \"; }\n    T(const T&)            { cout << \"C \"; }\n    T& operator=(const T&) { cout << \"A \"; return *this; }\n};\nint main() {\n    T a;\n    T b = a;\n    T c(a);\n    c = a;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`D C C A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`D C A A`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`D A C A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`D C C C`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    T()                    { cout << \"D \"; }\n    T(const T&)            { cout << \"C \"; }\n    T& operator=(const T&) { cout << \"A \"; return *this; }\n};\nint main() {\n    T a;\n    T b = a;\n    T c;\n    c = b;\n    T d(c);\n    cout << \"end\";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`D C D A C end`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`D C D C C end`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`D A D A C end`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`D C D A A end`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nint main() {\n    K a;\n    K b = a;\n    K c(a);\n    K d;\n    d = a;\n    b = c;\n    cout << K::n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`3`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`2`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`4`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`1`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q4",
+     "question": "מה מדפיסה התכנית? שימו לב שלמחלקה אין בנאי העתקה משלה.\n```cpp\nstruct T {\n    T() {}\n    T& operator=(const T&) { cout << \"A \"; return *this; }\n};\nint main() {\n    T a;\n    T b = a;\n    b = a;\n    T c(b);\n    c = b;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`A A`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A A A`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`A A A A`"
+      }
+     ]
+    },
+    {
+     "id": "C01-Q5",
+     "question": "באיזו שורה אחת **לא** נקרא בנאי העתקה של `T`? (`a` ו-`b` הוגדרו קודם כאובייקטים מטיפוס `T`)",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`T x = a;`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`T x(a);`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`b = a;`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "העברת `a` לפונקציה `void f(T t)` בקריאה `f(a);`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C02",
+   "order": 2,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C02-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nvoid f(K k) {}\nvoid g(const K& k) {}\nint main() {\n    K a;\n    f(a);\n    g(a);\n    f(a);\n    cout << K::n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`3`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`0`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`2`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q2",
+     "question": "בהנחה שהתכנית מתקמפלת ב-C++17, מה היא מדפיסה?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nK make() { return K(); }\nint main() {\n    K a = make();\n    K b = make();\n    cout << K::n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`4`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`2`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`0`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nK id(K k) { return k; }\nint main() {\n    K a;\n    K b = id(a);\n    cout << K::n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`0`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`2`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`3`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nK f(const K& r) { return r; }\nint main() {\n    K a;\n    f(a);\n    f(a);\n    cout << K::n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`0`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`2`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`4`"
+      }
+     ]
+    },
+    {
+     "id": "C02-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct K {\n    static int n;\n    K() {}\n    K(const K&) { n++; }\n};\nint K::n = 0;\nvoid f1(K& k) {}\nvoid f2(K k) {}\nvoid f3(K* k) {}\nK    f4() { return K(); }\nK&   f5(K& k) { return k; }\nK*   f6(K* k) { return k; }\nint main() {\n    K a;\n    f1(a);\n    f2(a);\n    f3(&a);\n    f4();\n    f5(a);\n    f6(&a);\n    cout << K::n;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`2`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`0`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`6`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C03",
+   "order": 3,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C03-Q1",
+     "question": "כמה מהבנאים הבאים, כשהם מוגדרים במחלקה `X`, הם בנאי העתקה חוקי?\n```cpp\nX(X x);\nX(X* x);\nX(const X& x);\nX(X& x);\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "1"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "2"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "3"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "4"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q2",
+     "question": "מה קורה בתכנית הבאה?\n```cpp\nstruct T {\n    T() {}\n    T(T&) { cout << \"c\"; }\n};\nint main() {\n    const T a;\n    T b = a;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "מודפס `c`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "לא מודפס כלום ואין שגיאה"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "שגיאת קומפילציה"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "שגיאה בזמן ריצה"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q3",
+     "question": "מה קורה בתכנית הבאה?\n```cpp\nstruct T {\n    int v;\n    T(int x = 0) : v(x) {}\n    void operator=(const T& o) { v = o.v; }\n};\nint main() {\n    T a(1), b(2), c(3);\n    a = b = c;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "התכנית מתקמפלת ו-`a`, `b`, `c` מקבלים כולם את הערך 3"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "שגיאת קומפילציה"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`b` מקבל 3 ו-`a` נשאר 1"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "שגיאה בזמן ריצה"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct N {\n    int v;\n    N(int x = 0) : v(x) {}\n    N& operator=(const N& o) { v = o.v; return *this; }\n};\nint main() {\n    N a(1), b(2), c(3);\n    a = b = c;\n    (a = N(8)).v = 9;\n    cout << a.v << b.v << c.v;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`333`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`933`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`833`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`988`"
+      }
+     ]
+    },
+    {
+     "id": "C03-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct T {\n    T() {}\n    T(const T&) { cout << \"C \"; }\n    T operator=(const T&) { cout << \"A \"; return *this; }\n};\nint main() {\n    T a, b;\n    a = b;\n    cout << \"end\";\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`A end`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`C A end`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`A C end`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`C end`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C04",
+   "order": 4,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C04-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct S {\n    int* p;\n    S(int v) : p(new int(v)) {}\n};\nint main() {\n    S a(5);\n    S b = a;\n    *b.p = 9;\n    cout << (a.p == b.p) << \" \" << *a.p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`0 5`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`1 9`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`0 9`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`1 5`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct S {\n    int* p;\n    S(int v) : p(new int(v)) {}\n};\nint main() {\n    S a(1), b(2);\n    a = b;\n    *b.p = 7;\n    cout << *a.p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`1`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`2`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`7`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`0`"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A {\n    int arr[3];\n};\nint main() {\n    A a;\n    a.arr[0] = 1;\n    A b = a;\n    b.arr[0] = 5;\n    cout << a.arr[0];\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`5`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`1`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`0`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "כתובת של המערך"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\n#include <vector>\nstruct V {\n    vector<int> v;\n};\nint main() {\n    V a;\n    a.v.push_back(1);\n    V b = a;\n    b.v[0] = 5;\n    cout << a.v[0];\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`5`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`0`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`1`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "שגיאה בזמן ריצה"
+      }
+     ]
+    },
+    {
+     "id": "C04-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct P {\n    int* p;\n    int n;\n    P() : p(new int(1)), n(1) {}\n};\nint main() {\n    P a;\n    P b = a;\n    b.n = 5;\n    *b.p = 5;\n    cout << a.n << *a.p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`11`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`15`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`55`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`51`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C05",
+   "order": 5,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C05-Q1",
+     "question": "בהנחה שהמחלקה `Deep` הבאה מוגדרת כך, מה מדפיסה התכנית?\n```cpp\nstruct Deep {\n    int* p;\n    Deep(int v) : p(new int(v)) {}\n    Deep(const Deep& o) : p(new int(*o.p)) {}\n    Deep& operator=(const Deep& o) {\n        if (this != &o) { delete p; p = new int(*o.p); }\n        return *this;\n    }\n    ~Deep() { delete p; }\n};\nint main() {\n    Deep a(5);\n    Deep b = a;\n    *b.p = 9;\n    cout << *a.p << *b.p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`99`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`55`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`59`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`95`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q2",
+     "question": "בהנחה שהמחלקה `Deep` הבאה מוגדרת כך, מה מדפיסה התכנית?\n```cpp\nstruct Deep {\n    int* p;\n    Deep(int v) : p(new int(v)) {}\n    Deep(const Deep& o) : p(new int(*o.p)) {}\n    Deep& operator=(const Deep& o) {\n        if (this != &o) { delete p; p = new int(*o.p); }\n        return *this;\n    }\n    ~Deep() { delete p; }\n};\nint main() {\n    Deep a(1), b(2);\n    a = b;\n    *b.p = 7;\n    cout << *a.p << *b.p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`77`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`27`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`17`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`22`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q3",
+     "question": "נתונה המחלקה הבאה, והתכנית משתמשת גם ב-`X b = a;` וגם ב-`c = a;` (כש-`c` כבר קיים). מה צריך להוסיף למחלקה כדי שלא ישוחרר אותו בלוק פעמיים?\n```cpp\nclass X {\npublic:\n    X(int i = 0) { p = new int(i); }\n    ~X() { delete p; }\n    int* p;\n};\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "רק בנאי העתקה עמוק"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "רק אופרטור השמה עמוק"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "גם בנאי העתקה עמוק וגם אופרטור השמה עמוק"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "אין צורך להוסיף כלום, ברירת המחדל מספיקה"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q4",
+     "question": "במחלקה עם מצביע כותבים את אופרטור ההשמה כך: קודם `delete p;` ואחר כך `p = new int(*o.p);`, **בלי** הבדיקה `if (this != &o)`. מה הבעיה בהשמה עצמית `a = a;`?",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "אין בעיה, ההשמה העצמית פשוט לא משנה כלום"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "הבלוק נמחק לפני שמעתיקים ממנו, ולכן מעתיקים נתונים ששוחררו"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "שגיאת קומפילציה"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "הבנאי נקרא פעם נוספת"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q5",
+     "question": "בהנחה שהמחלקה `Deep` הבאה מוגדרת כך, מה מדפיסה התכנית? (`allocs` סופר כמה בלוקים הוקצו.)\n```cpp\nstruct Deep {\n    static int allocs;\n    int* p;\n    Deep(int v) : p(new int(v)) { allocs++; }\n    Deep(const Deep& o) : p(new int(*o.p)) { allocs++; }\n    Deep& operator=(const Deep& o) {\n        if (this != &o) { delete p; p = new int(*o.p); allocs++; }\n        return *this;\n    }\n    ~Deep() { delete p; }\n};\nint Deep::allocs = 0;\nint main() {\n    Deep a(1);\n    Deep b = a;\n    Deep c(2);\n    c = a;\n    cout << Deep::allocs;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`2`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`3`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`4`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`5`"
+      }
+     ]
+    },
+    {
+     "id": "C05-Q6",
+     "question": "בהנחה שהמחלקה `Deep` הבאה מוגדרת כך, מה מדפיסה התכנית?\n```cpp\nstruct Deep {\n    int* p;\n    Deep(int v) : p(new int(v)) {}\n    Deep(const Deep& o) : p(new int(*o.p)) {}\n    Deep& operator=(const Deep& o) {\n        if (this != &o) { delete p; p = new int(*o.p); }\n        return *this;\n    }\n    ~Deep() { delete p; }\n};\nint main() {\n    Deep a(1), b(2), c(3);\n    a = b = c;\n    *c.p = 0;\n    cout << *a.p << *b.p << *c.p;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`330`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`000`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`123`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`333`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C06",
+   "order": 6,
+   "boss": false,
+   "questions": [
+    {
+     "id": "C06-Q1",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A {\n    A() { cout << \"Ad \"; }\n    A(const A&) { cout << \"Ac \"; }\n};\nstruct B : A {\n    B() {}\n    B(const B& o) { cout << \"Bc \"; }\n};\nint main() {\n    B b1;\n    B b2 = b1;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Ad Ac Bc`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`Ad Ad Bc`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`Ad Bc`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Ad Ad Ac Bc`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q2",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A {\n    A() { cout << \"Ad \"; }\n    A(const A&) { cout << \"Ac \"; }\n};\nstruct B : A {\n    B() {}\n    B(const B& o) : A(o) { cout << \"Bc \"; }\n};\nint main() {\n    B b1;\n    B b2 = b1;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`Ad Ad Bc`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`Ad Ac Bc`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`Ad Bc`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`Ac Bc`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q3",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct M {\n    M() { cout << \"m \"; }\n    M(const M&) { cout << \"mc \"; }\n};\nstruct W {\n    M m;\n    int x;\n};\nint main() {\n    W a;\n    W b = a;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`m mc`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`m m`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`m`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`mc`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q4",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct M {\n    M() { cout << \"m \"; }\n    M(const M&) { cout << \"mc \"; }\n};\nstruct W {\n    M m;\n    W() {}\n    W(const W& o) { cout << \"Wc \"; }\n};\nint main() {\n    W a;\n    W b = a;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`m mc Wc`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`m Wc`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`m m Wc`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`m Wc mc`"
+      }
+     ]
+    },
+    {
+     "id": "C06-Q5",
+     "question": "מה מדפיסה התכנית?\n```cpp\nstruct A {\n    int na;\n    A(int i) { na = i; }\n    A& operator=(const A& a) {\n        na = a.na + 10;\n        return *this;\n    }\n};\nstruct B : A {\n    int nb;\n    B(int i, int j) : A(j) { nb = i; }\n};\nint main() {\n    B b1(1, 2);\n    B b2(3, 4);\n    b2 = b1;\n    cout << b2.nb << b2.na;\n}\n```",
+     "options": [
+      {
+       "id": "a",
+       "type": "text",
+       "value": "`34`"
+      },
+      {
+       "id": "b",
+       "type": "text",
+       "value": "`12`"
+      },
+      {
+       "id": "c",
+       "type": "text",
+       "value": "`112`"
+      },
+      {
+       "id": "d",
+       "type": "text",
+       "value": "`312`"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C07",
+   "order": 7,
+   "boss": true,
+   "questions": [
+    {
+     "id": "bank:19A-A-Q9",
+     "bankId": "19A-A-Q9"
+    },
+    {
+     "id": "bank:19A-A-Q21",
+     "bankId": "19A-A-Q21"
+    },
+    {
+     "id": "bank:23S-A-Q2",
+     "bankId": "23S-A-Q2"
+    },
+    {
+     "id": "bank:23B-B-Q9",
+     "bankId": "23B-B-Q9"
+    },
+    {
+     "id": "bank:25B-A-Q11",
+     "bankId": "25B-A-Q11"
+    }
+   ]
+  }
+ ]
+}
