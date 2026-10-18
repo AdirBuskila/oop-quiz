@@ -19,9 +19,10 @@ const args = process.argv.slice(2);
 const STRICT = args.includes("--strict");
 const ONLY = args.find(a => !a.startsWith("--"));
 
-const errors = [], warns = [];
+const errors = [], warns = [], notes = [];
 const asc = s => String(s).replace(/[^\x20-\x7e]/g, c => "\\u" + c.charCodeAt(0).toString(16).padStart(4, "0"));
 const ERR = (w, m) => errors.push(`ERROR [${w}] ${asc(m)}`);
+const NOTE = (w, m) => notes.push(`WARN  [${w}] ${asc(m)}`); // advisory: printed, never fails --strict
 const WARN = (w, m) => warns.push(`WARN  [${w}] ${asc(m)}`);
 
 const HEB = /[֐-׿]/;
@@ -171,7 +172,7 @@ function lintQuestion(w, q, i, ctx) {
   opts.forEach(o => { if (o && (o.type || "text") === "text" && typeof o.value === "string") mathChecks(qw, `question ${label} option ${o.id}`, o.value); });
 }
 
-function lintLevel(courseId, L, file, seen) {
+function lintLevel(courseId, L, file, seen, isLast) {
   const w = `${courseId}/${(L && L.id) || path.basename(file, ".js")}`;
   if (!L || typeof L !== "object") return ERR(w, "level must be an object");
   for (const k of Object.keys(L)) if (!LEVEL_KEYS.has(k)) ERR(w, `unknown level key '${k}'`);
@@ -203,7 +204,8 @@ function lintLevel(courseId, L, file, seen) {
   qs.forEach((q, i) => lintQuestion(w, q, i, ctx));
   for (const [p, s] of strings(L, "")) textChecks(w, p, s);
   if (L.boss && ctx.bank === 0) ERR(w, "the boss level must be built from real exam questions (add {bankId: ...} questions)");
-  if (!L.boss && ctx.bank === 0) WARN(w, "no real exam question (bankId) in this level; each level should mix at least one in");
+  if (STRICT && (L.boss === true || isLast) && ctx.bank < 3) ERR(w, `the boss level needs >= 3 real exam questions (bankId, present in the bank and not held); has ${ctx.bank}`);
+  if (!L.boss && ctx.bank === 0) NOTE(w, "no real exam question (bankId) in this level; early levels are drills, only the boss must use real exam questions");
   return ctx;
 }
 
@@ -219,8 +221,8 @@ for (const courseId of Object.keys(byCourse).sort()) {
   if (ONLY && ONLY !== courseId) continue;
   const entries = byCourse[courseId];
   const seen = { ids: new Set(), orders: new Set(), qids: new Set() };
-  for (const e of entries) lintLevel(courseId, e.level, e.file, seen);
   const lv = entries.map(e => e.level).filter(l => l && isInt(l.order)).sort((a, b) => a.order - b.order);
+  for (const e of entries) lintLevel(courseId, e.level, e.file, seen, lv.length > 0 && e.level === lv[lv.length - 1]);
   const bosses = lv.filter(l => l.boss === true);
   if (bosses.length > 1) ERR(courseId, `more than one boss level (${bosses.map(b => b.id)})`);
   if (bosses.length === 1 && lv[lv.length - 1] !== bosses[0]) ERR(`${courseId}/${bosses[0].id}`, "the boss must be the last level of the course");
@@ -229,9 +231,10 @@ for (const courseId of Object.keys(byCourse).sort()) {
   if (lv.length < 6 || lv.length > 10) WARN(courseId, `${lv.length} levels (the design is 6-10 per course)`);
 }
 
+for (const m of notes) console.log(m);
 for (const m of warns) console.log(STRICT ? m.replace("WARN ", "ERROR") : m);
 for (const m of errors) console.log(m);
 const bad = errors.length + (STRICT ? warns.length : 0);
 const nQ = loaded.levels.reduce((s, e) => s + ((e.level && e.level.questions) || []).length, 0);
-console.log(`\ncourses: ${Object.keys(byCourse).length}, levels: ${loaded.levels.length}, questions: ${nQ}, errors: ${errors.length}, warnings: ${warns.length}`);
+console.log(`\ncourses: ${Object.keys(byCourse).length}, levels: ${loaded.levels.length}, questions: ${nQ}, errors: ${errors.length}, warnings: ${warns.length + notes.length}`);
 process.exit(bad ? 1 : 0);
