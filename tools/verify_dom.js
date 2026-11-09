@@ -52,7 +52,7 @@ function setMode(mode) {
   r.dispatchEvent(new window.Event("change", { bubbles: true }));
 }
 
-assert(scripts.join() === "questions.js,learn.js,courses.js,app.js,feedback.js,course-ui.js", `scripts loaded: ${scripts.join(", ")}`);
+assert(scripts.join() === "questions.js,learn.js,courses.js,navurl.js,app.js,feedback.js,course-ui.js", `scripts loaded: ${scripts.join(", ")}`);
 const D = window.CC_QUIZ;
 assert(D && Array.isArray(D.questions), "window.CC_QUIZ defined");
 const QS = D.questions;
